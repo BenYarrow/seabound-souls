@@ -9,7 +9,7 @@ function AboutUsRight(props) {
                 <h2 className="mb-8">
                     {props.title}
                 </h2>
-                <p className="font-light text-base text-right mb-4">
+                <p className="font-light text-base text-left mb-4">
                     {props.textOne}
                 </p>
                 <p className="font-light text-base text-left mb-4">
