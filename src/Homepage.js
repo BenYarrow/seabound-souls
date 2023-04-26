@@ -56,7 +56,7 @@ function Homepage() {
                         {(isHovered) => (
                         <>
                             <NavItem title='Destinations' onMouseEnter={''}/>
-                                <ul className='absolute z-10'>
+                                <ul className='absolute z-10 bg-white px-4 pb-4'>
                                     {isHovered && <li className='hover:underline hover:cursor-pointer text-slate-600 text-xl font-light bg-white'>
                                         <a href='src/Mauritius.js' onMouseEnter={handleMauritiusImage} onMouseLeave={handleHomeImage} >
                                             Mauritius
