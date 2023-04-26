@@ -32,31 +32,14 @@ function Homepage() {
 
     return(
 
-        <div className='h-screen w-screen flex-col absolute top-0' >
-            <div className='absolute top-0 left-0 w-full h-28 '>
-                <div className='flex justify-center'>
-                    <p className='text-xxl font-light translate-x-2/4 '>
-                        Y
-                    </p>
-                    <p className='text-xxl font-light -translate-x-2/4'>
-                        T
-                    </p>
-                    <div className='absolute h-full w-full flex items-end justify-center'>
-                        <p className='font-light text-base  border-x-2 border-slate-800 px-5'>
-                             Y a r r o w T r a v e l s 
-                        </p>
-                    </div>
-            </div>
-        </div>
-        <div className='flex justify-center z-10 pt-5 mx-48'>
-            <nav className='w-full mt-28 border-y-2 border-slate-800 py-5'>
-                <ul className='w-full h-full px-5 flex justify-between content-center'>
-                    <NavItem title='Our Story' to='/OurStory.js'/>
+        <div className='h-full w-full flex-col absolute top-0 left-0  bg-slate-200'  >
+            <nav className='w-auto h-auto flex justify-between items-center border-b-2 border-slate-800 mx-8 pt-4'>
+                <ul className='flex w-1/3 h-full justify-around content-end'>
                     <Dropdown>
                         {(isHovered) => (
                         <>
                             <NavItem title='Destinations' onMouseEnter={''}/>
-                                <ul className='absolute z-10 bg-white px-4 pb-4'>
+                                <ul className='absolute z-10 px-4 pb-4'>
                                     {isHovered && <li className='hover:underline hover:cursor-pointer text-slate-600 text-xl font-light bg-white'>
                                         <a href='src/Mauritius.js' onMouseEnter={handleMauritiusImage} onMouseLeave={handleHomeImage} >
                                             Mauritius
@@ -82,12 +65,31 @@ function Homepage() {
                         )}
                     </Dropdown>
                     <NavItem title='Gallery' to='Gallery.js'/>
+                </ul>
+                    
+                    <div className=''>
+                        <div className='flex w-full justify-center'>
+                            <p className='relative text-xxl font-light '>
+                                Y
+                            </p>
+                            <p className='relative text-xxl font-light'>
+                                T
+                            </p>
+                        </div>
+                         <div className='pb-4'>
+                            <p className='font-light text-base border-x-2 border-slate-800 px-5'>
+                                Y a r r o w T r a v e l s 
+                            </p>
+                        </div>
+                    </div>
+
+                <ul className='flex w-1/3 justify-around'>
                     <NavItem title='Portfolio' to='Portfolio.js'/>
+                    <NavItem title='Contact Us' to='ContactUs.js'/>
                     
                 </ul>
             </nav>        
 
-        </div>
         <div className='my-5 h-3/5 flex overflow-hidden'>
             <div className='w-full flex justify-center self-center'>
                 <img src={backImage}  width={'50%'}  className='p-5 border-x-2 border-slate-800'/>

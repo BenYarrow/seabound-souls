@@ -3,7 +3,7 @@ import FooterList from "./FooterList";
 
 function Footer() {
     return(
-        <div className="border-t-2 border-slate-800 bg-white mx-48 ">
+        <div className="border-t-2 border-slate-800 mx-48 ">
             <div className="flex justify-between h-16">
                 <ul className="list-none flex">
                     <FooterList title='Website by Benovate'/>
@@ -12,7 +12,6 @@ function Footer() {
                 </ul>
 
                 <ul className="list-none  flex ">
-                    <FooterList title='Contact Us'/>
                     <FooterList title='Sign Up'/>
                 </ul>
                 </div>
