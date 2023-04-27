@@ -11,16 +11,19 @@ function AboutUsLeft(props) {
                     alt='Mauritius wedding.' 
                     className="rounded-lg" 
                 />
-
+            
             </div>
             <div className="w-full mx-4 column content-between text-xxl text-right">
-                <h2 className="mb-8">
+                <h2 className="mb-6">
                     {props.title}
                 </h2>
-                <p className="font-light text-base text-right mb-4">
+                <p className="mb-6 text-xl text-left">
+                    {props.heading}
+                </p>
+                <p className="font-light text-base text-left mb-4">
                     {props.textOne}
                 </p>
-                <p className="font-light text-base text-right mb-4">
+                <p className="font-light text-base text-left mb-4">
                     {props.textTwo}
                 </p>
             </div>

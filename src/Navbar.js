@@ -1,36 +1,38 @@
 import React from 'react';
 import Dropdown from './DestinationDropdown';
-import NavItem from './NavItem';
+import { Link } from 'react-router-dom';
+
+
 
 
 function Navbar() {
     
     return(
     
-    <nav className='w-auto h-auto flex justify-between items-center border-b-2 border-slate-800 mx-8 pt-4 '>
+<nav className='w-full h-auto flex justify-between items-center border-b-2 border-slate-800  pt-4 '>
         <ul className='flex w-1/3 h-full justify-around content-end'>
             <Dropdown>
                 {(isHovered) => (
                 <>
-                    <NavItem title='Destinations' onMouseEnter={''}/>
+                    <li className='text-slate-800 text-xl hover:underline hover:cursor-pointer font-light' onMouseEnter={''}>Destinations</li>
                         <ul className='absolute z-10'>
                             {isHovered && <li className='hover:underline hover:cursor-pointer text-slate-600 text-xl font-light bg-white '>
-                                <a href='src/Mauritius.js'>
+                                <a href='/Mauritius'>
                                     Mauritius
                                 </a>
                             </li>}
                             {isHovered && <li className='hover:underline hover:cursor-pointer text-slate-600 text-xl font-light bg-white'>
-                                <a href='./Canada.js'>
+                                <a href='/Canada'>
                                     Canada
                                 </a>
                             </li>}
                             {isHovered && <li className='hover:underline hover:cursor-pointer text-slate-600 text-xl font-light bg-white'>
-                                <a href='./Greece.js'>
+                                <a href='/Greece'>
                                     Greece
                                 </a>
                             </li>}
                             {isHovered && <li className='hover:underline hover:cursor-pointer text-slate-600 text-xl font-light bg-white'>
-                                <a href='./Uk.js'>
+                                <a href='/Uk'>
                                     UK
                                 </a>
                             </li>}
@@ -38,10 +40,10 @@ function Navbar() {
                 </>
                 )}
             </Dropdown>
-            <NavItem title='Gallery' to='Gallery.js'/>
+            <Link to='/Gallery' className='text-slate-800 text-xl hover:underline hover:cursor-pointer font-light'>Gallery</Link>
         </ul>
             
-            <div className=''>
+            <Link to='/Homepage' className=''>
                 <div className='flex w-full justify-center'>
                     <p className='relative text-xxl font-light '>
                         Y
@@ -50,18 +52,22 @@ function Navbar() {
                         T
                     </p>
                 </div>
-                 <div className='pb-4'>
+                <div className='pb-4'>
                     <p className='font-light text-base border-x-2 border-slate-800 px-5'>
                         Y a r r o w T r a v e l s 
                     </p>
                 </div>
-            </div>
+            </Link>
 
         <ul className='flex w-1/3 justify-around'>
-            <NavItem title='Portfolio' to='Portfolio.js'/>
-            <NavItem title='Contact Us' to='ContactUs.js'/>
+            <Link to='/Portfolio' className='text-slate-800 text-xl hover:underline hover:cursor-pointer font-light'>Portfolio</Link>
+            <Link to='/ContactUs' className='text-slate-800 text-xl hover:underline hover:cursor-pointer font-light'>Contact Us</Link>
         </ul>
+
+
     </nav>        
+
+
 
     )
 }
