@@ -1,11 +1,11 @@
 .full-screen {
   height: auto;
   width: 100vw;
-  /* background-color: rgba(124, 255, 244, 0.714); */
+	background-image: url('/public/BackgroundImage.jpeg');
+  background-size: cover;
 }
 
 .app {
   margin-left: 5%;
   margin-right: 5%;
-
 }

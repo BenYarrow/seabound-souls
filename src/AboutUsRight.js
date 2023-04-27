@@ -4,15 +4,15 @@ import React from "react";
 
 function AboutUsRight(props) {
     return(
-        <div className="mx-8 w-auto h-auto flex justify-around items-center border-x-2 border-slate-800 my-20">
+        <div className="w-auto h-auto flex justify-around items-center border-x-2 border-slate-400 my-20">
             <div className="w-full h-full mx-4 column content-between text-xxl text-left">
-                <h2 className="mb-8">
+                <h2 className="mb-8 text-slate-100">
                     {props.title}
                 </h2>
-                <p className="font-light text-base text-left mb-4">
+                <p className="font-light text-base text-left text-slate-200 mb-4">
                     {props.textOne}
                 </p>
-                <p className="font-light text-base text-left mb-4">
+                <p className="font-light text-base text-left text-slate-200 mb-4">
                     {props.textTwo}
                 </p>
             </div>

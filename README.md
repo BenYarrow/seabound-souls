@@ -1,5 +1,3 @@
 # Yarrow Travels
 
-This is my website
-
-Make website *bold* _italics_
+This is my first portfolio piece.

@@ -6,7 +6,7 @@ function Homepage() {
     
     return(
         
-        <div className='relative w-full flex-col absolute top-0 left-0'  >
+        <div className='relative w-full flex-col absolute left-0'  >
             <div className='mt-20'>
                 <AboutUsLeft 
                     source='HomepageImage.jpeg' 
