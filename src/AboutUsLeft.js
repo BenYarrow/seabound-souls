@@ -4,14 +4,14 @@ import React from "react";
 
 function AboutUsLeft(props) {
     return(
-        <div className="relative w-auto h-auto flex justify-around items-center border-x-2 border-slate-400">
+        <div className="relative w-auto h-auto flex justify-around items-center border-x-2 border-slate-400 sm:flex-col">
             <div className="cursor-pointer  mx-4 drop-shadow-2xl ">
                 {/* <img 
                     src={props.source} 
                     alt='Mauritius wedding.' 
                     className="rounded-lg" 
                 /> */}
-                <iframe className="rounded-lg"
+                <iframe className="rounded-lg sm:w-auto sm:h-auto"
                     width="672" 
                     height="378" 
                     src="https://www.youtube.com/embed/vUo9_iPpqWE" 
@@ -21,8 +21,8 @@ function AboutUsLeft(props) {
                     allowfullscreen>
                 </iframe>
             </div>
-            <div className="w-full mx-4 column content-between ">
-                <h2 className="text-xxl text-right text-slate-100 mb-6">
+            <div className="w-full mx-4 flex-col content-between ">
+                <h2 className="text-xxl text-right text-slate-100 mb-6 sm:text-center  ">
                     {props.title}
                 </h2>
                 <p className="mb-6 text-xl text-left text-slate-100">

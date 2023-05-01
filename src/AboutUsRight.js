@@ -4,7 +4,7 @@ import React from "react";
 
 function AboutUsRight(props) {
     return(
-        <div className="w-auto h-auto flex justify-around items-center border-x-2 border-slate-400 my-20">
+        <div className="w-auto h-auto flex justify-around items-center border-x-2 border-slate-400 my-20 sm:flex-col">
             <div className="w-full h-full mx-4 column content-between text-xxl text-left">
                 <h2 className="mb-8 text-slate-100">
                     {props.title}

@@ -10,7 +10,7 @@ function Homepage() {
             <div className='mt-20'>
                 <AboutUsLeft 
                     source='HomepageImage.jpeg' 
-                    title='Hello, and welcome to Yarrow Travels!'
+                    title='Welcome to Yarrow Travels!'
                     heading='Who are we?'
                     textOne='We are Ben and Rachel Yarrow, a married couple based in the South East of England. We met in the summer of 2019 in Vassiliki, Greece where Rachel was working as a windsurfing instructor and Ben was visiting some friends on a windsurfing holiday.'
                     textTwo='Since then we have done our best to visit as many windsurfing destinations as possible, while filling in the gaps with trips such as snowboarding in Canada, road trips round Scotland and city breaks to the Prague.'

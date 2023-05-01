@@ -1,8 +1,6 @@
 import React, {useState} from 'react';
 
-
 const Dropdown = ({ children }) => {
-
         const [isHovered, setIsHovered] = useState(false);
       
         const handleMouseEnter = () => {
@@ -19,6 +17,7 @@ const Dropdown = ({ children }) => {
             onMouseLeave={handleMouseLeave}
             tabIndex={0} // Make the element focusable
             style={{
+              cursor: 'pointer',
               userSelect: 'none',
             }}
           >
@@ -26,7 +25,7 @@ const Dropdown = ({ children }) => {
           </div>
         );
       };
-      
+           
 
 
 export default Dropdown;
