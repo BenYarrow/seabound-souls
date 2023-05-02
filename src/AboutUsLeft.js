@@ -22,7 +22,7 @@ function AboutUsLeft(props) {
                 </iframe>
             </div>
             <div className="w-full mx-4 flex-col content-between ">
-                <h2 className="text-xxl text-right text-slate-100 mb-6 sm:text-center  ">
+                <h2 className="text-xxl text-right text-slate-100 mb-6 sm:text-center ">
                     {props.title}
                 </h2>
                 <p className="mb-6 text-xl text-left text-slate-100">

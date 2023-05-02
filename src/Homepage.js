@@ -6,7 +6,7 @@ function Homepage() {
     
     return(
         
-        <div className='relative w-full flex-col absolute left-0'  >
+        <div className='relative w-full flex-col absolute left-0 bg-gray-400 sm:bg-red-400 md:bg-blue-400 lg:bg-green-400 xl:bg-indigo-400'  >
             <div className='mt-20'>
                 <AboutUsLeft 
                     source='HomepageImage.jpeg' 

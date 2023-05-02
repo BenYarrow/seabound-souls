@@ -51,9 +51,9 @@ const portfolioWork = [
     },
 ];
 
-const PortfolioCard = ({videoSrc, title, location, description, visitSite, map   }) => {
+const PortfolioCard = ({videoSrc, title, location, description, visitSite, map}) => {
     return(
-            <div className=" bg-slate-400 rounded-lg p-2">
+            <div className="bg-slate-400 rounded-lg p-2">
                 <div className="rounded-lg bg-slate-200 h-80">
                     <video />
                 </div>
