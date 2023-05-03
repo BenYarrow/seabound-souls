@@ -13,3 +13,5 @@ module.exports = {
   plugins: [],
 }
 
+
+// bg-slate-400 sm:bg-red-400 md:bg-blue-400 lg:bg-green-400 xl:bg-indigo-400

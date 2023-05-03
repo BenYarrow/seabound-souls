@@ -14,7 +14,7 @@ function Navbar() {
             <Dropdown>
                 {(isHovered) => (
                 <div>
-                    <li className='text-slate-200 text-xl hover:underline hover:cursor-pointer font-light'>Destinations</li>
+                    <li className='text-slate-200 text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Destinations</li>
                         <ul className='absolute z-10 w-auto py-2'>
                             {isHovered && <li className='hover:underline hover:cursor-pointer text-slate-200 text-xl font-light'>
                                 <a href='/Mauritius'>
@@ -40,7 +40,7 @@ function Navbar() {
                 </div>
                 )}
             </Dropdown>
-            <Link to='/Gallery' className='text-slate-200 text-xl hover:underline hover:cursor-pointer font-light'>Gallery</Link>
+            <Link to='/Gallery' className='text-slate-200 text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Gallery</Link>
         </ul>
             
             <Link to='/Homepage' className='w-full sm:w-auto flex flex-col justify-center '>
@@ -60,8 +60,8 @@ function Navbar() {
             </Link>
 
         <ul className='hidden sm:flex w-1/3 justify-around '>
-            <Link to='/Portfolio' className='text-slate-200 text-xl hover:underline hover:cursor-pointer font-light'>Portfolio</Link>
-            <Link to='/ContactUs' className='text-slate-200 text-xl hover:underline hover:cursor-pointer font-light'>Contact Us</Link>
+            <Link to='/Portfolio' className='text-slate-200 text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Portfolio</Link>
+            <Link to='/ContactUs' className='text-slate-200 text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Contact Us</Link>
         </ul>
                     
 

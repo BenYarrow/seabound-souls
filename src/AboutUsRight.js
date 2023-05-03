@@ -4,20 +4,20 @@ import React from "react";
 
 function AboutUsRight(props) {
     return(
-        <div className="w-auto h-auto flex justify-around items-center border-x-2 border-slate-400 my-20 sm:flex-col">
-            <div className="w-full h-full mx-4 column content-between text-xxl text-left">
-                <h2 className="mb-8 text-slate-100">
+        <div className="relative w-full h-auto flex flex-col items-center md:flex-row ">
+            <div className="px-4 w-full h-full pb-4 ">
+                <h2 className="mb-4 text-slate-100 text-xl pb-4">
                     {props.title}
                 </h2>
-                <p className="font-light text-base text-left text-slate-200 mb-4">
+                <p className="font-light text-base text-left text-slate-200 pb-2 ">
                     {props.textOne}
                 </p>
-                <p className="font-light text-base text-left text-slate-200 mb-4">
+                <p className="font-light text-base text-left text-slate-200  pb-2">
                     {props.textTwo}
                 </p>
             </div>
-            <div className="w-full mx-4 cursor-pointer drop-shadow-2xl">
-                <img src={props.source} alt='Mauritius wedding.' className="rounded-lg"/>
+            <div className="w-5/6 md:w-full h-auto px-4 -order-1 md:order-last pb-4">
+                <img src={props.source} alt='' className="rounded-lg"/>
             </div>
         </div>
     )

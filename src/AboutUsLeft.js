@@ -4,16 +4,11 @@ import React from "react";
 
 function AboutUsLeft(props) {
     return(
-        <div className="relative w-auto h-auto flex justify-around items-center border-x-2 border-slate-400 sm:flex-col">
-            <div className="cursor-pointer  mx-4 drop-shadow-2xl ">
-                {/* <img 
-                    src={props.source} 
-                    alt='Mauritius wedding.' 
-                    className="rounded-lg" 
-                /> */}
-                <iframe className="rounded-lg sm:w-auto sm:h-auto"
-                    width="672" 
-                    height="378" 
+        <div className="relative w-full h-auto flex flex-col items-center md:flex-row ">
+            <div className="w-5/6 md:w-full h-full px-4 flex justify-center">
+                <iframe className="rounded-lg flex-1 aspect-video  "
+                    // width='560'
+                    // height='315'
                     src="https://www.youtube.com/embed/vUo9_iPpqWE" 
                     title="YouTube video player" 
                     frameborder="0" 
@@ -21,18 +16,15 @@ function AboutUsLeft(props) {
                     allowfullscreen>
                 </iframe>
             </div>
-            <div className="w-full mx-4 flex-col content-between ">
-                <h2 className="text-xxl text-right text-slate-100 mb-6 sm:text-center ">
-                    {props.title}
-                </h2>
-                <p className="mb-6 text-xl text-left text-slate-100">
+            <div className="px-4 w-full h-full bg-red-200">
+                <p className="text-slate-200 text-xl py-2 ">
                     {props.heading}
                 </p>
-                <div className="">
-                    <p className="font-light text-base text-left text-slate-200 mb-4">
+                <div className="text-slate-200 font-light text-base py-2">
+                    <p className="">
                         {props.textOne}
                     </p>
-                    <p className="font-light text-base text-left text-slate-200  mb-4">
+                    <p className="text-slate-200 font-light text-base py-2">
                         {props.textTwo}
                     </p>
                 </div>

@@ -33,41 +33,28 @@ const portfolioWork = [
         visitSite: 'https://safirhotels.com/en/hotel/dahab',
         map: '',
     }, 
-    {
-        videoSrc: '',
-        title: 'Cosmos',
-        location: 'Vassiliki, Greece',
-        description: 'Located at the windward end of the bay which is recognized for providing optimum conditions and longest sail time.',
-        visitSite: 'https://safirhotels.com/en/hotel/dahab',
-        map: '',
-    },
-    {
-        videoSrc: '',
-        title: 'Cosmos',
-        location: 'Vassiliki, Greece',
-        description: 'Located at the windward end of the bay which is recognized for providing optimum conditions and longest sail time.',
-        visitSite: 'https://safirhotels.com/en/hotel/dahab',
-        map: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3996.1735677315805!2d57.30896267560387!3d-20.45702215493683!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x217c6cf1d228212b%3A0x98e314dcba627bf3!2sLUX%20Le%20Morne!5e1!3m2!1sen!2suk!4v1682967932087!5m2!1sen!2suk',
-    },
 ];
 
 const PortfolioCard = ({videoSrc, title, location, description, visitSite, map}) => {
     return(
-            <div className="bg-slate-400 rounded-lg p-2">
-                <div className="rounded-lg bg-slate-200 h-80">
+            <div className="">
+            <div className="bg-slate-400 rounded-lg p-2 h-full">
+                <div className="rounded-lg bg-slate-200 aspect-[9/16]">
                     <video />
                 </div>
-                <div className="flex-col ">
-                    <h3 className="text-xl text-slate-800 pt-2">
+                <div className="flex-col w-full mt-2">
+                    <h3 className="text-xl text-slate-800 ">
                         {title}
                     </h3>
-                    <p className="text-slate-800 pt-2 text-right">
-                        {location} • <a href={visitSite} target='_blank' rel="noreferrer" className="text-slate-9   00 underline  ">Visit Site</a>
+                    <p className="text-slate-800 pt-2 text-right ">
+                        {location}
                     </p>
+                    <a href={visitSite} target='_blank' rel="noreferrer" className="text-slate-9 w-full underline flex justify-end ">Visit Site</a>
                     <p className="text-slate-800 pt-2">
                         {description}
                     </p>
                 </div>
+            </div>
             </div>
     )
 };
@@ -75,7 +62,7 @@ const PortfolioCard = ({videoSrc, title, location, description, visitSite, map})
 
 function Portfolio() {
     return(
-        <div className="mt-20 grid w-auto grid-cols-3 gap-4 px-4 border-x-2 border-slate-400 mb-20">
+        <div className="mt-4 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 mb-4 sm:mb-8 border-x-2 border-slate-400 px-4">
             {portfolioWork.map(work => <PortfolioCard {...work}/>)}
         </div>
     )
