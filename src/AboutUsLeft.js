@@ -16,7 +16,7 @@ function AboutUsLeft(props) {
                     allowfullscreen>
                 </iframe>
             </div>
-            <div className="px-4 w-full h-full bg-red-200">
+            <div className="px-4 w-full h-full">
                 <p className="text-slate-200 text-xl py-2 ">
                     {props.heading}
                 </p>
