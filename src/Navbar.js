@@ -1,5 +1,5 @@
 import React from 'react';
-import Dropdown from './DestinationDropdown';
+import Dropdown from './NavbarComponents/DestinationDropdown';
 import { Link } from 'react-router-dom';
 
 

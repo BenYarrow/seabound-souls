@@ -1,13 +1,13 @@
 import React from 'react';
-import AboutUsLeft from './AboutUsLeft';
-import AboutUsRight from './AboutUsRight';
+import AboutUsLeft from './HomepageComponents/AboutUsLeft';
+import AboutUsRight from './HomepageComponents/AboutUsRight';
 
 function Homepage() {
     
     return(
         
         <div className='relative w-full flex-col'  >
-            <h2 className="text-slate-200 md:text-xxl text-xxl mt-8 text-center ">
+            <h2 className="text-slate-200 md:text-xxl text-xl mt-8 text-center ">
                 Welcome to Yarrow Travels!
             </h2>
             <div className='my-8'>

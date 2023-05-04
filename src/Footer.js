@@ -1,5 +1,5 @@
 import React from "react";
-import FooterList from "./FooterList";
+import FooterList from "./FooterComponents/FooterList";
 
 function Footer() {
     return(
