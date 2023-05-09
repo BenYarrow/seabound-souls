@@ -33,6 +33,22 @@ const portfolioWork = [
         visitSite: 'https://safirhotels.com/en/hotel/dahab',
         map: '',
     }, 
+    {
+        videoSrc: '',
+        title: 'Cosmos',
+        location: 'Vassiliki, Greece',
+        description: 'Located at the windward end of the bay which is recognized for providing optimum conditions and longest sail time.',
+        visitSite: 'https://safirhotels.com/en/hotel/dahab',
+        map: '',
+    }, 
+    {
+        videoSrc: '',
+        title: 'Cosmos',
+        location: 'Vassiliki, Greece',
+        description: 'Located at the windward end of the bay which is recognized for providing optimum conditions and longest sail time.',
+        visitSite: 'https://safirhotels.com/en/hotel/dahab',
+        map: '',
+    }, 
 ];
 
 const PortfolioCard = ({videoSrc, title, location, description, visitSite, map}) => {
@@ -70,3 +86,6 @@ function Portfolio() {
 
 
 export default Portfolio;
+
+
+
