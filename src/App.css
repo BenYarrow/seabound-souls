@@ -1,11 +1,9 @@
+
+
+
 .full-screen {
   height: auto;
   width: 100vw;
-	background-image: url('/public/Wave-background.jpg');
-  background-size: cover;
+
 }
 
-.app {
-  margin-left: 5%;
-  margin-right: 5%;
-}

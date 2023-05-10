@@ -87,22 +87,3 @@ export default EgyptGallery;
 
 
 
-
-      {/* Previus Image */}
-      {/* {egyptImages.map((prevImage, prevIndex) => {
-        return(
-          <div className='' key={prevIndex-1}>
-          {prevIndex === currentIndex -1 && (<img width='800px' src={prevImage.imageSrc} alt={prevImage.imageAlt} className='w-1/6 rounded-lg'/>)}
-        </div>
-        )
-      })} */}
-
-
-            {/* Next Image */}
-      {/* {egyptImages.map((nextImage, nextIndex) => {
-              return(
-                <div className='' key={nextIndex+1}>
-                {nextIndex === currentIndex +1 && (<img width='800px' src={nextImage.imageSrc} alt={nextImage.imageAlt} className='w-1/6 rounded-lg'/>)}
-              </div>
-              )
-            })}    */}

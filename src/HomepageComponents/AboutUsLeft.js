@@ -17,14 +17,14 @@ function AboutUsLeft(props) {
                 </iframe>
             </div>
             <div className="px-4 w-full h-full">
-                <p className="text-slate-200 text-xl py-2 ">
+                <p className="text-xl py-2">
                     {props.heading}
                 </p>
-                <div className="text-slate-200 font-light text-base py-2">
-                    <p className="">
+                <div className="py-2">
+                    <p className="font-standard text-base">
                         {props.textOne}
                     </p>
-                    <p className="text-slate-200 font-light text-base py-2">
+                    <p className="font-standard  text-base py-2">
                         {props.textTwo}
                     </p>
                 </div>

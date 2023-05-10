@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        standard: "'Urbanist', sans-serif",
+      }
+    },
     fontSize: {
       sm: '0.8rem',
       base: '1rem',
