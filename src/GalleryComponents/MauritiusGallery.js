@@ -42,14 +42,29 @@ const MauritiusGallery = () => {
 console.log(currentIndex);
 
   return(
-    <div className='relative h-full w-full flex flex-col justify-evenly items-center my-8'>
-      <div>
-        <h1 className='text-xxl text-slate-200'>
-          Mauritius
-        </h1>
+    <div className='w-full h-auto flex justify-center'>
+      <div className='w-full md:w-full h-auto mx-8 sm:mx-4 flex justify-between items-center'>
+      <FaArrowAltCircleLeft className='text-icon text-slate-200 cursor-pointer' onClick={prevSlide} />
+
+      {/* Current Image */}
+      {mauritiusImages.map((image, index) => {
+          return(
+              <div className='w-auto' key={index}>
+                {index === currentIndex && (<img  src={image.imageSrc} alt={image.imageAlt} className='px-8'/>)}
+              </div>
+          )
+          })}
+
+      <FaArrowAltCircleRight className='text-icon text-slate-200 cursor-pointer' onClick={nextSlide} />
       </div>
-      <div className='relative h-full w-full flex flex-row justify-center items-center mt-8'>
-      <FaArrowAltCircleLeft className='cursor-pointer text-slate-200 text-xxl ' onClick={prevSlide} />
+    </div>
+  )
+}
+
+export default MauritiusGallery;
+
+
+
 
       {/* Previus Image */}
       {/* {mauritiusImages.map((prevImage, prevIndex) => {
@@ -60,16 +75,9 @@ console.log(currentIndex);
         )
       })} */}
 
-      {/* Current Image */}
-      {mauritiusImages.map((image, index) => {
-          return(
-              <div className='w-auto flex justify-center' key={index}>
-                {index === currentIndex && (<img width='1000px' src={image.imageSrc} alt={image.imageAlt} className='w-2/6 rounded-lg'/>)}
-              </div>
-          )
-          })}
 
-      {/* Next Image */}
+
+            {/* Next Image */}
       {/* {mauritiusImages.map((nextImage, nextIndex) => {
               return(
                 <div className='' key={nextIndex+1}>
@@ -77,13 +85,3 @@ console.log(currentIndex);
               </div>
               )
             })}    */}
-
-      <FaArrowAltCircleRight className=' cursor-pointer text-slate-200 text-xxl ' onClick={nextSlide} />
-      </div>
-      
-    </div>
-    
-  )
-}
-
-export default MauritiusGallery;

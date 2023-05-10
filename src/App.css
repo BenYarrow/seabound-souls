@@ -1,7 +1,7 @@
 .full-screen {
   height: auto;
   width: 100vw;
-	background-image: url('/public/BackgroundImage.jpeg');
+	background-image: url('/public/Wave-background.jpg');
   background-size: cover;
 }
 

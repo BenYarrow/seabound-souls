@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 
 
-
 function Navbar() {
     
     return(
@@ -59,6 +58,7 @@ function Navbar() {
                 </div>
             </Link>
 
+        
         <ul className='hidden sm:flex w-1/3 justify-around '>
             <Link to='/Portfolio' className='text-slate-200 text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Portfolio</Link>
             <Link to='/ContactUs' className='text-slate-200 text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Contact Us</Link>

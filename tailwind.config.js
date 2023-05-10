@@ -8,6 +8,8 @@ module.exports = {
       base: '1rem',
       xl: '1.5rem',
       xxl: '3rem',
+      mobileIcon:'8rem',
+      icon: '10rem',
      }
   },
   plugins: [],
