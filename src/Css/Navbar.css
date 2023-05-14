@@ -1,4 +1,5 @@
 #navbar {
-    background-image: url('/public/Wave-background.jpg');
-    background-size: cover;
+        background-image: url('/public/Background-Images/footer-background.jpg');
+        background-size: cover;
+        background-position: center bottom;
 }

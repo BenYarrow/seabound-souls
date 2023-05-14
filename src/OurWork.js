@@ -76,7 +76,7 @@ const PortfolioCard = ({videoSrc, title, location, description, visitSite, map})
 };
 
 
-function Portfolio() {
+function OurWork() {
     return(
         <div className="mt-4 sm:mt-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-4 mb-4 sm:mb-8 border-x-2 border-slate-400 px-4">
             {portfolioWork.map(work => <PortfolioCard {...work}/>)}
@@ -85,7 +85,7 @@ function Portfolio() {
 }
 
 
-export default Portfolio;
+export default OurWork;
 
 
 

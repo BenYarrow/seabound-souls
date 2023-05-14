@@ -4,15 +4,15 @@ import './Css/Footer.css'
 
 function Footer() {
     return(
-        <div id='footer' className="w-full border-t-2 border-slate-400 text-sm ">
-            <div className="flex justify-between h-16">
+        <div id='footer' className="w-full h-20 absolute text-base flex items-center">
+            <div className="flex justify-between content-center items-center">
                 <ul className="list-none flex">
                     <FooterList title='Website by Benovate'/>
                     <FooterList title='React'/>
                     <FooterList title='Tailwind CSS'/>
                 </ul>
 
-                <ul className="list-none flex ">
+                <ul className="list-none flex flex-end">
                     <FooterList title='Sign Up'/>
                 </ul>
                 </div>

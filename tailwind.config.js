@@ -5,6 +5,11 @@ module.exports = {
     extend: {
       fontFamily: {
         standard: "'Urbanist', sans-serif",
+      },
+      colors: {
+        'standard': '#FEFAF9',  
+        'turquiose': '#05748B',
+        'orange': '#F4A361',
       }
     },
     fontSize: {
