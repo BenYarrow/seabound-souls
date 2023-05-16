@@ -4,30 +4,29 @@ import React from "react";
 
 function AboutUsLeft(props) {
     return(
-        <div className="relative w-full h-auto flex flex-col items-center md:flex-row ">
-            <div className="w-5/6 md:w-full h-full px-4 flex justify-center">
-                <iframe className="rounded-lg flex-1 aspect-video  "
-                    // width='560'
-                    // height='315'
-                    src="https://www.youtube.com/embed/vUo9_iPpqWE" 
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    allowfullscreen>
-                </iframe>
+        <div className="relative w-auto h-auto flex flex-col items-center justify-center pb-8 lg:flex-row">
+            <div className="w-4/6 lg:w-3/6 ">
+                <img src={props.source} alt='' className="rounded-lg"/>
             </div>
-            <div className="px-4 w-full h-full">
-                <p className="text-xl py-2">
-                    {props.heading}
+            <div className="w-full lg:w-4/6 lg:pr-8 pt-8 lg:pt-0 ">
+                <h2 className="text-xl md:text-xxl text-center mb-8  ">
+                    {props.title}
+                </h2>
+                <p className="text-base text-center mb-4">
+                    {props.textOne}
                 </p>
-                <div className="py-2">
-                    <p className="font-standard text-base">
-                        {props.textOne}
-                    </p>
-                    <p className="font-standard  text-base py-2">
-                        {props.textTwo}
-                    </p>
-                </div>
+                <p className="text-base text-center mb-4">
+                    {props.textTwo}
+                </p>
+                <p className="text-base text-center mb-4">
+                    {props.textThree}
+                </p>
+                <p className="text-base text-center mb-4">
+                    {props.textFour}
+                </p>
+                <p className="text-base text-center ">
+                    {props.textFive}
+                </p>
             </div>
         </div>
     )

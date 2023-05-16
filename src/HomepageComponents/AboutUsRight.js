@@ -4,20 +4,29 @@ import React from "react";
 
 function AboutUsRight(props) {
     return(
-        <div className="relative w-full h-auto flex flex-col items-center md:flex-row ">
-            <div className="px-4 w-full h-full pb-4 ">
-                <h2 className="text-xl pb-8">
+        <div className="relative w-auto h-auto flex flex-col items-center justify-center pb-8 lg:flex-row">
+            <div className="w-4/6 lg:w-3/6 lg:order-last">
+                <img src={props.source} alt='' className="rounded-lg"/>
+            </div>
+            <div className="w-full lg:w-4/6 lg:pr-8 pt-8 lg:pt-0 ">
+                <h2 className="text-xl md:text-xxl text-center mb-8  ">
                     {props.title}
                 </h2>
-                <p className="text-base text-left pb-4 ">
+                <p className="text-base text-center mb-4">
                     {props.textOne}
                 </p>
-                <p className="text-base text-left pb-4">
+                <p className="text-base text-center mb-4">
                     {props.textTwo}
                 </p>
-            </div>
-            <div className="w-5/6 md:w-3/6 h-auto px-4 -order-1 md:order-last py-8">
-                <img src={props.source} alt='' className="rounded-lg"/>
+                <p className="text-base text-center mb-4">
+                    {props.textThree}
+                </p>
+                <p className="text-base text-center mb-4">
+                    {props.textFour}
+                </p>
+                <p className="text-base text-center ">
+                    {props.textFive}
+                </p>
             </div>
         </div>
     )

@@ -51,31 +51,21 @@ const EgyptGallery = () => {
     setCurrentIndex(currentIndex === length -1 ? 0 : currentIndex +1)
   }
 
-
-
-
   
-
-console.log(currentIndex);
-
   return(
-    <div className='w-full h-auto  flex justify-center'>
-      <div className='w-full md:w-full h-auto mx-8 sm:mx-4 flex justify-between items-center'>
-      <FaArrowAltCircleLeft className='text-icon text-slate-200 cursor-pointer' onClick={prevSlide} />
+    <div className='w-3/6 h-auto py-8 flex justify-center'>
+      <div className='w-full h-auto mx-8 sm:mx-4 flex justify-between items-center'>
+      <FaArrowAltCircleLeft className='text-icon text-turquoise cursor-pointer mx-4' onClick={prevSlide} />
 
+        {egyptImages.map((image, index) => {
+            return(
+                <div className='' key={index}>
+                  {index === currentIndex && (<img  src={image.imageSrc} alt={image.imageAlt} className='rounded-lg'/>)}
+                </div>
+            )
+            })}
 
-      {/* Current Image */}
-      {egyptImages.map((image, index) => {
-          return(
-              <div className='w-auto ' key={index}>
-                {index === currentIndex && (<img  src={image.imageSrc} alt={image.imageAlt} className='px-8'/>)}
-              </div>
-          )
-          })}
-
-
-
-      <FaArrowAltCircleRight className='text-icon text-slate-200 cursor-pointer' onClick={nextSlide} />
+      <FaArrowAltCircleRight className='text-icon text-turquoise cursor-pointer mx-4' onClick={nextSlide}/>
       </div>
       
     </div>

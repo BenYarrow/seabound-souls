@@ -10,7 +10,7 @@ function Navbar() {
     return(
     
 <nav id='navbar' className='w-full h-[8rem] flex justify-between items-center  py-4 '>
-    <Link to='/Homepage' className='w-full sm:w-auto flex flex-col justify-center ml-8 text-standard '>
+    <Link to='/Homepage' className='w-full sm:w-auto flex flex-col justify-center sm:ml-8 text-standard '>
                 <div className='flex w-full justify-center'>
                     <p className=' relative text-xxl font-light '>
                         Y
@@ -29,29 +29,29 @@ function Navbar() {
             <Dropdown>
                 {(isHovered) => (
                 <div>
-                    <li className='text-standard text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Destinations</li>
-                        <ul className='absolute z-10 w-auto py-2 bg-slate-200'>
-                            {isHovered && <li className='hover:underline hover:cursor-pointer text-xl font-light'>
+                    <li className='text-standard text-base md:text-xl hover:underline  hover:cursor-pointer font-light'>Destinations</li>
+                        <ul className='absolute z-10 md:w-[125px] w-[105px] bg-standard/90 '>
+                            {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
                                 <Link to='/Mauritius'>
                                     Mauritius
                                 </Link>
                             </li>}
-                            {isHovered && <li className='hover:underline hover:cursor-pointer text-xl font-light'>
+                            {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
                                 <a href='/Canada'>
                                     Canada
                                 </a>
                             </li>}
-                            {isHovered && <li className='hover:underline hover:cursor-pointer text-xl font-light'>
+                            {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
                                 <Link to='/Egypt'>
                                     Egypt
                                 </Link>
                             </li>}
-                            {isHovered && <li className='hover:underline hover:cursor-pointer text-xl font-light'>
+                            {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
                                 <a href='/Greece'>
                                     Greece
                                 </a>
                             </li>}
-                            {isHovered && <li className='hover:underline hover:cursor-pointer text-xl font-light'>
+                            {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
                                 <a href='/Uk'>
                                     UK
                                 </a>

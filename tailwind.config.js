@@ -4,21 +4,21 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        standard: "'Urbanist', sans-serif",
+        standard: "'Catamaran', sans-serif",
       },
       colors: {
         'standard': '#FEFAF9',  
-        'turquiose': '#05748B',
+        'turquoise': '#05748B',
         'orange': '#F4A361',
       }
     },
     fontSize: {
-      sm: '0.8rem',
-      base: '1rem',
+      sm: '1rem',
+      base: '1.2rem',
       xl: '1.5rem',
       xxl: '3rem',
       mobileIcon:'8rem',
-      icon: '10rem',
+      icon: '15rem',
      }
   },
   plugins: [],
