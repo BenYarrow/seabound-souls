@@ -1,30 +1,56 @@
 import React from 'react';
 import Dropdown from './NavbarComponents/DestinationDropdown';
-import './Css/Navbar.css'
+import './Css/Navbar.css';
 import { Link } from 'react-router-dom';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faBars , faXmark } from "@fortawesome/free-solid-svg-icons";
+import {useState} from 'react';
 
 
 
 function Navbar() {
-    
+
+    const [isHidden, setIsHidden] = useState(true)
+
+    const handleShow = () => {
+        setIsHidden(false)
+    }
+
+    const handleHide = () => {
+        setIsHidden(true)
+    }
+
     return(
     
 <nav id='navbar' className='w-full h-[8rem] flex justify-between items-center  py-4 '>
-    <Link to='/Homepage' className='w-full sm:w-auto flex flex-col justify-center sm:ml-8 text-standard '>
-                <div className='flex w-full justify-center'>
-                    <p className=' relative text-xxl font-light '>
-                        Y
-                    </p>
-                    <p className=' relative text-xxl font-light '>
-                        T
-                    </p>
-                </div>
-                <div className='flex justify-center'>
-                    <p className='sm:flex font-light  text-base border-x-2 border-standard px-2 '>
-                        Y a r r o w T r a v e l s 
-                    </p>
-                </div>
+    <div className='w-auto h-auto flex items-center justify-around ml-8'>
+        <Link to='/Homepage' className='w-full sm:px-8 text-standard '>
+            <div className='flex justify-center'>
+                <p className=' relative text-xxl font-light '>
+                    Y
+                </p>
+                <p className=' relative text-xxl font-light '>
+                    T
+                </p>
+            </div>
+            <div className='flex justify-center'>
+                <p className='sm:flex font-light  text-base border-x-2 border-standard px-2 '>
+                    Y a r r o w T r a v e l s 
+                </p>
+            </div>
+        </Link>
+        <div className='absolute right-0'>
+            <Link to='/MobileNav' onClick={handleShow}>
+                {<FontAwesomeIcon icon={faBars} className={isHidden === false ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'}/>}
             </Link>
+            <Link to='/Homepage' onClick={handleHide}>
+                {<FontAwesomeIcon icon={faXmark} className={isHidden === true ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'} />}
+            </Link>
+        </div>
+    </div>
+
+        
+
         <ul className='hidden sm:flex w-3/6 justify-around content-end mr-8'>
             <Dropdown>
                 {(isHovered) => (

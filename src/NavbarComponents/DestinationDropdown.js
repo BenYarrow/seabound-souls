@@ -20,6 +20,7 @@ const Dropdown = ({ children }) => {
               cursor: 'pointer',
               userSelect: 'none',
             }}
+            className=''
           >
             {children(isHovered)}
           </div>

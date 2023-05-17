@@ -7,6 +7,7 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import Mauritius from './Mauritius';
 import Egypt from './Egypt';
+import MobileNav from './MobileNav';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path='/ContactUs' element={<ContactUs />}/>
             <Route path='/Mauritius' element={<Mauritius />}/>
             <Route path='/Egypt' element={<Egypt />}/>
+            <Route path='/MobileNav' element={<MobileNav />}/>
           </Routes>
         <Footer />  
       </Router>
