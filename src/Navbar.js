@@ -26,10 +26,10 @@ function Navbar() {
     <div className='w-auto h-auto flex items-center justify-around ml-8'>
         <Link to='/Homepage' className='w-full sm:px-8 text-standard '>
             <div className='flex justify-center'>
-                <p className=' relative text-xxl font-light '>
+                <p className='relative text-xxl font-light '>
                     Y
                 </p>
-                <p className=' relative text-xxl font-light '>
+                <p className='relative text-xxl font-light '>
                     T
                 </p>
             </div>
@@ -63,9 +63,9 @@ function Navbar() {
                                 </Link>
                             </li>}
                             {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
-                                <a href='/Canada'>
+                                <Link to='/Canada'>
                                     Canada
-                                </a>
+                                </Link>
                             </li>}
                             {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
                                 <Link to='/Egypt'>
@@ -73,14 +73,14 @@ function Navbar() {
                                 </Link>
                             </li>}
                             {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
-                                <a href='/Greece'>
+                                <Link to='/Greece'>
                                     Greece
-                                </a>
+                                </Link>
                             </li>}
                             {isHovered && <li className='hover:underline hover:cursor-pointer hover:bg-turquoise hover:text-standard text-center py-4 text-xl font-light text-turquoise'>
-                                <a href='/Uk'>
+                                <Link to='/Uk'>
                                     UK
-                                </a>
+                                </Link>
                             </li>}
                         </ul>
                 </div>

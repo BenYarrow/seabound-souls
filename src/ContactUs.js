@@ -1,8 +1,9 @@
 import React from 'react';
+import './Css/Contact-Us.css';
 
 const ContactUs = () => {
   return (
-    <div className='w-full h-auto my-20 flex justify-center'>
+    <div id='contact-us' className='w-full bg-standard flex justify-center'>
       <div className='flex items-center'>
       <form
       action=''

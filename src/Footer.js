@@ -4,7 +4,7 @@ import './Css/Footer.css'
 
 function Footer() {
     return(
-        <div id='footer' className="w-full h-20 absolute text-base flex items-center">
+        <div id='footer' className="w-full h-[8rem] absolute text-base flex items-center">
             <div className="flex justify-between content-center items-center">
                 <ul className="list-none flex">
                     <FooterList title='Website by Benovate'/>
