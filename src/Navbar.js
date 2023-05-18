@@ -8,23 +8,34 @@ import {useState} from 'react';
 
 
 
-function Navbar() {
+const Navbar = () => {
 
-    const [isHidden, setIsHidden] = useState(true)
 
-    const handleShow = () => {
-        setIsHidden(false)
+    const [navIsHidden, setNavIsHidden] = useState(true)
+
+    const navMenuShow = () => {
+        setNavIsHidden(false)
+    }
+    const navMenuHide = () => {
+        setNavIsHidden(true)
     }
 
-    const handleHide = () => {
-        setIsHidden(true)
+    const [destNavIsHidden, setDestNavIsHidden] = useState(true)
+
+    const destNavShow = () => {
+        setDestNavIsHidden(false)
     }
+    const hideAllNav = () => {
+        setNavIsHidden(true)
+        setDestNavIsHidden(true)
+    }
+
 
     return(
-    
+<div>
 <nav id='navbar' className='w-full h-[8rem] flex justify-between items-center  py-4 '>
     <div className='w-auto h-auto flex items-center justify-around ml-8'>
-        <Link to='/Homepage' className='w-full sm:px-8 text-standard '>
+        <Link to='/Homepage' className='w-full sm:px-8 text-standard' onClick={hideAllNav}>
             <div className='flex justify-center'>
                 <p className='relative text-xxl font-light '>
                     Y
@@ -40,17 +51,12 @@ function Navbar() {
             </div>
         </Link>
         <div className='absolute right-0'>
-            <Link to='/MobileNav' onClick={handleShow}>
-                {<FontAwesomeIcon icon={faBars} className={isHidden === false ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'}/>}
+            <Link to='/' onClick={navMenuShow}>
+                {<FontAwesomeIcon icon={faBars} className={navIsHidden === false ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'}/>}
             </Link>
-            <Link to='/Homepage' onClick={handleHide}>
-                {<FontAwesomeIcon icon={faXmark} className={isHidden === true ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'} />}
-            </Link>
+                {<FontAwesomeIcon icon={faXmark} onClick={navMenuHide} className={navIsHidden === true ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'} />}
         </div>
     </div>
-
-        
-
         <ul className='hidden sm:flex w-3/6 justify-around content-end mr-8'>
             <Dropdown>
                 {(isHovered) => (
@@ -91,8 +97,31 @@ function Navbar() {
         </ul>        
                     
 
-    </nav>        
-
+    </nav> 
+    {navIsHidden === false &&  <div id='mobile-nav' className='w-full bg-standard'>
+                                    <ul className='w-full h-full flex flex-col justify-evenly items-center'>
+                                        <p className='font-standard text-turquoise text-xxl' onClick={destNavShow} >Destinations</p>
+                                        {destNavIsHidden === false && <div id='mobile-nav' className='w-full bg-standard'>
+                                            <ul className='w-full h-full flex flex-col justify-evenly items-center'>
+                                                <Link to='/Mauritius' className='font-standard text-turquoise text-xl' onClick={hideAllNav}>
+                                                    Mauritius
+                                                </Link>
+                                                <Link to='/Canada' className='font-standard text-turquoise text-xl' onClick={hideAllNav}>
+                                                    Canada
+                                                </Link>
+                                                <Link to='/Egypt' className='font-standard text-turquoise text-xl' onClick={hideAllNav}>
+                                                    Egypt
+                                                </Link>
+                                                <Link to='/Uk' className='font-standard text-turquoise text-xl' onClick={hideAllNav}>
+                                                    Uk
+                                                </Link>
+                                            </ul>
+                                        </div>}
+                                        <Link to='/OurWork' className='font-standard text-turquoise text-xxl' onClick={hideAllNav}>Our Work</Link>
+                                        <Link to='/ContactUs' className='font-standard text-turquoise text-xxl' onClick={hideAllNav}>Contact Us</Link>
+                                    </ul>
+                                </div>}
+    </div>                        
 
 
     )

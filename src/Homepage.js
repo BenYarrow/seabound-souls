@@ -23,7 +23,7 @@ function Homepage() {
                     </p>
                 </div>
                 <div className='w-full h-auto md:px-8 bg-turquoise font-standard text-standard '>
-                    <h2 className='text-xxl text-center py-4 lg:p-12 '>
+                    <h2 className='text-xxl text-center py-4 lg:p-12'>
                         About Us
                     </h2>
                     <AboutUsRight

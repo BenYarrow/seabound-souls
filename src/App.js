@@ -14,14 +14,14 @@ import MobileNav from './MobileNav';
 import MobileDestinations from './MobileDestinations';
 
 function App() {
+
+
+
   return (
     <div className='bg-standard'>
       <Router>
-        <div id='nav-bar'>
           <Navbar />
-        </div>
-          <Routes>
-            <Route path='/Navbar' element={<Navbar />}/>
+        <Routes>
             <Route index element={<Homepage />}/>
             <Route path='/Homepage' element={<Homepage />}/>
             <Route path='/OurWork' element={<OurWork />}/>
