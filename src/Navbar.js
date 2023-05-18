@@ -54,7 +54,7 @@ const Navbar = () => {
             <Link to='/' onClick={navMenuShow}>
                 {<FontAwesomeIcon icon={faBars} className={navIsHidden === false ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'}/>}
             </Link>
-                {<FontAwesomeIcon icon={faXmark} onClick={navMenuHide} className={navIsHidden === true ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'} />}
+                {<FontAwesomeIcon icon={faXmark} onClick={hideAllNav} className={navIsHidden === true ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'} />}
         </div>
     </div>
         <ul className='hidden sm:flex w-3/6 justify-around content-end mr-8'>
