@@ -10,8 +10,7 @@ import Egypt from './Egypt';
 import Canada from './Canada';
 import Greece from './Greece';
 import Uk from './Uk'
-import MobileNav from './MobileNav';
-import MobileDestinations from './MobileDestinations';
+
 
 function App() {
 
@@ -31,8 +30,6 @@ function App() {
             <Route path='/Canada' element={<Canada />}/>
             <Route path='/Uk' element={<Uk />}/>
             <Route path='/Greece' element={<Greece />}/>
-            <Route path='/MobileNav' element={<MobileNav />}/>
-            <Route path='/MobileDestinations' element={<MobileDestinations />} />
           </Routes>
         <Footer />  
       </Router>
