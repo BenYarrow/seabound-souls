@@ -9,29 +9,29 @@ import {useState} from 'react';
 
 
 
+
 const Navbar = () => {
 
 
-    const [navIsHidden, setNavIsHidden] = useState(true)
+    const [navIsHidden, setNavIsHidden] = useState(true);
 
     const navMenuShow = () => {
         setNavIsHidden(false)
-    }
+    };
 
     const navMenuHide = () => {
         setNavIsHidden(true)
-    }
+    };
 
-
-    const [destNavIsHidden, setDestNavIsHidden] = useState(true)
+    const [destNavIsHidden, setDestNavIsHidden] = useState(true);
 
     const destNavShow = () => {
         setDestNavIsHidden(!destNavIsHidden)
-    }
+    };
     const hideAllNav = () => {
         setNavIsHidden(true)
         setDestNavIsHidden(true)
-    }
+    };
 
 
     return(
