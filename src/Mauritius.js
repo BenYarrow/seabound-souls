@@ -1,17 +1,18 @@
 import React from 'react';
 import MauritiusGallery from './GalleryComponents/MauritiusGallery';
+import AboutUsLeft from './HomepageComponents/AboutInfoLeft';
+import AboutUsRight from './HomepageComponents/AboutInfoRight';
 
 
 function Mauritius() {
   return (
-    <div className='w-full h-auto flex flex-col items-center'>
-      <div className='bg-standard h-[8rem] w-full flex justify-center items-center'>
-        <h1 className='text-xxl text-turquoise '>Mauritius</h1>
+    <div className='w-full h-auto text-standard '>
+        <h1 className='text-xxl text-turquoise text-center py-8'>Mauritius</h1>
+      <div className='bg-turquoise text-standard'>
+        <AboutUsLeft />
       </div>
-      <div className='w-full bg-turquoise text-standard'>
-        <p className='text-base py-8'>
-          Mauritius is a beautiful island located on the east side of Africa in the Indian Ocean. It is home to one of the most beautiful sites in the world, The Underwater Waterfall.
-        </p>
+      <div className='bg-standard text-turquoise'>
+        <AboutUsRight />
       </div>
         <div className='w-full flex justify-center'>
           <MauritiusGallery />

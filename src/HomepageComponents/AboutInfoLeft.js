@@ -4,11 +4,11 @@ import React from "react";
 
 function AboutUsLeft(props) {
     return(
-        <div className="relative w-auto h-auto flex flex-col items-center justify-center pb-8 lg:flex-row">
+        <div className="relative w-full h-auto flex flex-col items-center justify-center pb-8 lg:flex-row">
             <div className="w-4/6 lg:w-3/6 ">
                 <img src={props.source} alt='' className="rounded-lg"/>
             </div>
-            <div className="w-full lg:w-4/6 lg:pr-8 pt-8 lg:pt-0 ">
+            <div className="w-full lg:w-4/6 lg:pl-8 pt-8 lg:pt-0 ">
                 <h2 className="text-xl md:text-xxl text-center mb-8  ">
                     {props.title}
                 </h2>
