@@ -4,27 +4,30 @@ import React from "react";
 
 function AboutUsLeft(props) {
     return(
-        <div className="relative w-full h-auto flex flex-col items-center justify-center pb-8 lg:flex-row">
-            <div className="w-4/6 lg:w-3/6 ">
+        <div className="relative w-auto h-auto flex flex-col items-center justify-center py-16 lg:flex-row">
+            <div className="w-4/6 lg:w-2/6 ">
                 <img src={props.source} alt='' className="rounded-lg"/>
             </div>
-            <div className="w-full lg:w-4/6 lg:pl-8 pt-8 lg:pt-0 ">
-                <h2 className="text-xl md:text-xxl text-center mb-8  ">
+            <div className="w-full h-full lg:w-4/6 lg:pl-8 px-8 text-center lg:text-left ">
+                <h2 className='text-xxl pb-4 '>
+                    {props.heading}      
+                </h2>
+                <h2 className="text-xl md:text-xl mb-8  ">
                     {props.title}
                 </h2>
-                <p className="text-base text-center mb-4">
+                <p className="text-base pb-4">
                     {props.textOne}
                 </p>
-                <p className="text-base text-center mb-4">
+                <p className="text-base pb-4">
                     {props.textTwo}
                 </p>
-                <p className="text-base text-center mb-4">
+                <p className="text-base pb-4">
                     {props.textThree}
                 </p>
-                <p className="text-base text-center mb-4">
+                <p className="text-base pb-4">
                     {props.textFour}
                 </p>
-                <p className="text-base text-center ">
+                <p className="text-base ">
                     {props.textFive}
                 </p>
             </div>

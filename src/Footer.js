@@ -7,22 +7,16 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 function Footer() {
     return(
-        <div id='footer' className="w-full h-[8rem] flex justify-between items-center px-8 lg:px-16 text-standard text-sm font-standard">
-            <div className="w-full h-full flex justify-start">
-                <ul className="h-full flex flex-col justify-evenly">
+        <div id='footer' className="w-full h-[8rem] flex justify-between items-center  text-standard text-sm font-standard">
+            <div className="w-full h-full flex justify-start ml-8 ">
+                <ul className="h-full w-full flex justify-start items-center">
                     <li className="">
                         Website by Yarrow Travels
-                    </li>
-                    <li className="">
-                        Developed with React
-                    </li>
-                    <li className="">
-                        Styled with Tailwind CSS
                     </li>
                 </ul>
             </div>
             <div className="w-full h-full flex justify-end text-xl ">
-                <ul className="h-full flex flex-col justify-evenly ">
+                <ul className="w-2/4 h-full flex justify-evenly items-center ">
                     <li>
                         <a href='https://www.instagram.com/yarrowtravels/' target='_blank' rel="noreferrer">
                             <FontAwesomeIcon icon={faInstagram} className='cursor-pointer'/>

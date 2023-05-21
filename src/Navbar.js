@@ -37,28 +37,16 @@ const Navbar = () => {
     return(
 <div>
 <nav id='navbar' className='w-full h-[8rem] flex justify-between items-center  py-4 '>
-    <div className='w-auto h-auto flex items-center justify-around ml-8'>
-        <Link to='/Homepage' className='w-full sm:px-8 text-standard' onClick={hideAllNav}>
-            <div className='flex justify-center'>
-                <p className='relative text-xxl font-light '>
-                    Y
-                </p>
-                <p className='relative text-xxl font-light '>
-                    T
-                </p>
-            </div>
-            <div className='flex justify-center'>
-                <p className='sm:flex font-light  text-base border-x-2 border-standard px-2 '>
-                    Y a r r o w T r a v e l s 
-                </p>
-            </div>
+    <div className='w-3/6 h-full flex items-center  ml-8'>
+        <Link to='/Homepage' className='' onClick={hideAllNav}>
+            <img src='/Personal-Images/yarrow-travels-logo.png' className='w-4/6 md:w-3/6 lg:w-2/6'/>
         </Link>
         <div className='absolute right-0'>
             {<FontAwesomeIcon icon={faBars} onClick={navMenuShow} className={navIsHidden === false ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'}/>}
             {<FontAwesomeIcon icon={faXmark} onClick={navMenuHide} className={navIsHidden === true ? 'hidden' : 'text-standard text-xxl flex sm:hidden mr-8'} />}
         </div>
     </div>
-        <ul className='hidden sm:flex w-3/6 justify-around content-end mr-8'>
+        <ul className='hidden sm:flex w-2/4 justify-around content-end mr-8'>
             <Dropdown>
                 {(isHovered) => (
                 <div>
