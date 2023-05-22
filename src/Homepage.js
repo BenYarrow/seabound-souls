@@ -12,13 +12,13 @@ function Homepage() {
             </div>
             <div className='w-full h-full '>
                 <div className='p-8 h-auto md:h-[30rem] font-standard flex flex-col items-center justify-around text-standard bg-turquoise '>
-                    <h1 className='text-sm md:text-xl text-center pb-4 md:pb-0 '>
+                    <h1 className='text-sm md:text-base text-center pb-4 md:pb-0 '>
                         Welcome to Yarrow Travels
                     </h1>
                     <p className='text-xl md:text-xxl text-center pb-4 md:pb-0'>
                         Where the wind meets the waves <br/> is where the memories are made
                     </p>
-                    <p className='text-sm md:text-xl  text-center'>
+                    <p className='text-sm md:text-base  text-center'>
                        Our aim is to help you have the <strong>best</strong> time on the water and showcase the very best watersports desinations <strong >around the world</strong>.
                     </p>
                 </div>
