@@ -52,9 +52,9 @@ const europeDestinations = [
 
 const northAmericaDestinations = [
   {
-    imageSrc: '',
-    imageAlt: '',
-    linkTo: '',
+    imageSrc: '/Destinations-Images/Canada.jpg',
+    imageAlt: 'Canada',
+    linkTo: '/Canada',
     availabilityStatus: true,
   },
 ]
