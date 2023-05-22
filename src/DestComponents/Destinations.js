@@ -7,7 +7,6 @@ const africaDestinations = [
     imageSrc: '/Destinations-Images/Egypt.jpg',
     imageAlt: 'Egypt',
     linkTo: '/Egypt',
-    availabilityStatus: 'true',
     availabilityStatus: true,
   },
   {
@@ -62,7 +61,7 @@ const northAmericaDestinations = [
 
 
 
-const DestinationCard = ({imageSrc, imageAlt, linkTo, availabilityStatus}) => {
+const DestinationCard = ({imageSrc, imageAlt, linkTo, availabilityStatus = false}) => {
 
   return(
     <div>
