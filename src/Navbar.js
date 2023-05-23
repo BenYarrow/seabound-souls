@@ -8,7 +8,6 @@ import {useState} from 'react';
 
 
 
-
 const Navbar = () => {
 
 
@@ -40,8 +39,6 @@ const Navbar = () => {
             <Link to='/OurWork' className='text-standard text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Our Work</Link>
             <Link to='/ContactUs' className='text-standard text-base md:text-xl hover:underline hover:cursor-pointer font-light'>Contact Us</Link>
         </ul>        
-                    
-
     </nav> 
     {navIsHidden === false &&  <div id='mobile-nav' className='w-full absolute top-[8rem] bg-standard/90 z-10 h-auto '>
                                     <ul className='w-full flex-col justify-evenly items-center py-4  px-8'>
