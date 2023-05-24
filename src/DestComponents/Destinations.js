@@ -1,78 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { continents } from '../Data/Continents'
 
-
-let continents = [
-  {
-    title: 'Arica',
-    countries: [
-      {
-        imageSrc: '/Destinations-Images/Egypt.jpg',
-        imageAlt: 'Egypt',
-        linkTo: '/Egypt',
-        isEnabled: false,
-      },
-      {
-        imageSrc: '/Destinations-Images/Mauritius.jpg',
-        imageAlt: 'Mauritius',
-        linkTo: '/Mauritius',
-        isEnabled: true,
-      },
-      {
-        imageSrc: '/Destinations-Images/South-Africa.jpg',
-        imageAlt: 'South Africa',
-        linkTo: '/SouthAfrica',
-        isEnabled: false,
-      },
-    ],
-  },
-  {
-    title: 'Europe',
-    countries: [
-      {
-        imageSrc: '/Destinations-Images/Czech-Republic.jpg',
-        imageAlt: 'Czech Republic',
-        linkTo: '/CzechRepublic',
-        isEnabled: true,
-      },
-      {
-        imageSrc: '/Destinations-Images/England.jpg',
-        imageAlt: 'England',
-        linkTo: '/England',
-        isEnabled: true,
-      },
-      {
-        imageSrc: '/Destinations-Images/Greece.jpg',
-        imageAlt: 'Greece',
-        linkTo: '/Greece',
-        isEnabled: true,
-      },
-      {
-        imageSrc: '/Destinations-Images/Iceland.jpg',
-        imageAlt: 'Iceland',
-        linkTo: '/Iceland',
-        isEnabled: true,
-      },
-      {
-        imageSrc: '/Destinations-Images/Wales.jpg',
-        imageAlt: 'Wales',
-        linkTo: '/Wales',
-        isEnabled: true,
-      },
-    ],
-  },
-  {
-    title: 'North America',
-    countries: [
-      {
-        imageSrc: '/Destinations-Images/Canada.jpg',
-        imageAlt: 'Canada',
-        linkTo: '/Canada',
-        isEnabled: false,
-      },
-    ],
-  },
-].map(l => {  
+let continentsList = continents.map(l => {  
   l.countries = l.countries.filter(d => d.isEnabled === true)
   return l
 }).filter(l => l.countries.length > 0)
@@ -111,7 +41,7 @@ const Destinations = () => {
       <div className='h-[8rem] flex justify-center items-center border-b-2 border-turquoise'>
         <h1 className='text-turquoise text-xxl'>Destinations</h1>
       </div> 
-      {continents.map(continent => {
+      {continentsList.map(continent => {
         return(
           <div className='border-b-2 border-turquoise'>
             <Continents
