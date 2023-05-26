@@ -8,7 +8,7 @@ function AboutUsLeft(props) {
             <div className="w-4/6 lg:w-2/6 ">
                 <img src={props.source} alt='' className="rounded-lg"/>
             </div>
-            <div className="w-full h-full lg:w-4/6 lg:pl-8 px-8 text-center lg:text-left ">
+            <div className="w-full h-full lg:w-4/6 lg:pl-8  text-center lg:text-left ">
                 <h2 className='text-xxl pb-4 '>
                     {props.heading}      
                 </h2>

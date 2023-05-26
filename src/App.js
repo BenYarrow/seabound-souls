@@ -5,7 +5,10 @@ import OurWork from './OurWork';
 import ContactUs from './ContactUs';
 import Navbar from './Navbar';
 import Footer from './Footer';
+
 import Mauritius from './DestComponents/Mauritius';
+  import WindsurfingInMauritius from './MauritiusComponents/WindsurfingInMauritius';
+
 import SouthAfrica from './DestComponents/SouthAfrica';
 import Egypt from './DestComponents/Egypt';
 import Canada from './DestComponents/Canada';
@@ -34,6 +37,7 @@ function App() {
             <Route path='/ContactUs' element={<ContactUs />}/>
           {/* DestinationComponents */}
             <Route path='/Mauritius' element={<Mauritius />}/>
+              <Route path='/WindsurfingInMauritius' element={<WindsurfingInMauritius />}/>
             <Route path='/SouthAfrica' element={<SouthAfrica />}/>
             <Route path='/Egypt' element={<Egypt />}/>
             <Route path='/Canada' element={<Canada />}/>
