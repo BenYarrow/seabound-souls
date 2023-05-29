@@ -1,15 +1,15 @@
 import React from 'react';
-import {blogLinks} from '../Data/Blogs'
+import {blogs} from '../Data/Blogs'
 import {Link} from 'react-router-dom'
 
-let mauritiusBlogs = blogLinks.filter(location => location.country === 'mauritius')
+let mauritiusBlogs = blogs.filter(location => location.country === 'mauritius')
 
 
 
 
 const BlogLink = () => {
   return(
-    <div className='grid grid-rows-1 md:grid-cols-3 gap-8 px-20 text-standard font-standard'>
+    <div className='grid grid-rows-1 md:grid-cols-3 gap-8 px-20 text-turquoise font-standard'>
 
       {mauritiusBlogs.map(blogLink => {
         return(
@@ -17,10 +17,10 @@ const BlogLink = () => {
             {blogLink.blogData.map(data => {
               return(
                 <Link to={data.linkTo}>
-                  <div className='flex flex-col w-full h-auto items-center bg-turquoise rounded-lg p-4' >
-                    <h2 className='py-4 text-xl'>{data.blogTitle}</h2>
-                    <img src={data.imgSrc} alt={data.imgAlt} className='py-4' width='100%'/>
-                    <p >{data.blogIntro} <a href={data.linkTo} className='underline'>Read more</a></p>
+                  <div className='flex flex-col w-full h-auto items-center  rounded-lg ' >
+                    <h2 className='text-xl text-center pb-4'>{data.title}</h2>
+                    <img src={data.imgSrc} alt={data.imgAlt} className='' width='100%'/>
+                    <p className='pt-6'>{data.blogIntro} <a href={data.linkTo} className='underline'>Read more</a></p>
                   </div>
                 </Link>
               )

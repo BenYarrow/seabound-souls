@@ -11,6 +11,20 @@ let continentsList = continents.map(continent => {
 
 
 
+
+
+// let continentsList = continents.map(continent => {
+//   return continent
+// }).map(country => {
+//   country.countries = country.countries.filter(l => l.isEnabled === true)
+//   return country
+// })
+
+
+
+
+
+
 const CountryLink = ({imageSrc, imageAlt, linkTo}) => {
 
   return(
@@ -56,7 +70,6 @@ const Destinations = () => {
         )})}  
 
       <div>
-
       </div>
     </div>
   )

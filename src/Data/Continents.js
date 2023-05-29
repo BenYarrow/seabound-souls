@@ -1,6 +1,6 @@
 export let continents = [
     {
-      title: 'Arica',
+      title: 'Africa',
       countries: [
         {
           imageSrc: '/Destinations-Images/Egypt.jpg',
@@ -16,9 +16,9 @@ export let continents = [
         },
         {
           imageSrc: '/Destinations-Images/South-Africa.jpg',
-          imageAlt: 'South Africa',
+          imageAlt: 'South Africa', 
           linkTo: '/SouthAfrica',
-          isEnabled: true,
+          isEnabled: false,
         },
       ],
     },
