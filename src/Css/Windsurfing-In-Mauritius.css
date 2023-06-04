@@ -1,0 +1,7 @@
+#mauritius-hero-section {
+    background-image: url('/public/Mauritius-Images/Ion-Club-1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: calc(100vh - 8rem);
+}

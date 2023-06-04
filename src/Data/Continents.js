@@ -19,6 +19,7 @@ export let continents = [
           imageAlt: 'South Africa', 
           linkTo: '/SouthAfrica',
           isEnabled: false,
+          test:'test'
         },
       ],
     },

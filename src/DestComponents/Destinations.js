@@ -4,6 +4,7 @@ import { continents } from '../Data/Continents'
 
 
 
+
 let continentsList = continents.map(continent => {  
   continent.countries = continent.countries.filter(country => country.isEnabled === true)
   return continent
@@ -11,26 +12,12 @@ let continentsList = continents.map(continent => {
 
 
 
-
-
-// let continentsList = continents.map(continent => {
-//   return continent
-// }).map(country => {
-//   country.countries = country.countries.filter(l => l.isEnabled === true)
-//   return country
-// })
-
-
-
-
-
-
 const CountryLink = ({imageSrc, imageAlt, linkTo}) => {
 
   return(
-    <div>   
+    <div className='shadow-2xl rounded-lg'>   
         <Link to={linkTo}>
-          <img src={imageSrc} alt={imageAlt} className='rounded-xl p-1 hover:bg-turquoise' />
+          <img src={imageSrc} alt={imageAlt} className='rounded-xl p-1 hover:bg-turquoise/60 duration-100 ease-out hover:ease-in' />
         </Link> 
     </div>
   )
@@ -40,7 +27,7 @@ const CountryLink = ({imageSrc, imageAlt, linkTo}) => {
 
 const Continents = (props) => {
   return(
-      <div className='w-full h-auto pb-20'>
+      <div className='w-full h-auto pb-20' >
         <div className='flex justify-center items-center md:justify-start py-8'>
           <h2 className='text-xl'>{props.title}</h2>
         </div>
@@ -59,17 +46,16 @@ const Destinations = () => {
       <div className='h-[8rem] flex justify-center items-center border-b-2 border-turquoise'>
         <h1 className='text-turquoise text-xxl'>Destinations</h1>
       </div> 
+      <div>
        {continentsList.map(continent => {
         return(
-          <div className='border-b-2 border-turquoise'>
+          <div className='border-b-2 border-turquoise '>
             <Continents
               countries={continent.countries}
               title={continent.title}
             />
           </div>
         )})}  
-
-      <div>
       </div>
     </div>
   )

@@ -18,7 +18,7 @@ module.exports = {
       xl: '1.5rem',
       xxl: '3rem',
       mobileIcon:'8rem',
-      icon: '15rem',
+      xxxl: '5rem',
      }
   },
   plugins: [],
