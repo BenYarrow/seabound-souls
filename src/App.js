@@ -8,6 +8,8 @@ import Footer from './Footer';
 
 import Mauritius from './DestComponents/Mauritius';
   import WindsurfingInMauritius from './MauritiusComponents/WindsurfingInMauritius';
+  import StayingAtLux from './MauritiusComponents/StayingAtLux';
+  import ThingsToDoInMauritius from './MauritiusComponents/ThingsToDoInMauritius';
 
 import SouthAfrica from './DestComponents/SouthAfrica';
 import Egypt from './DestComponents/Egypt';
@@ -38,6 +40,8 @@ function App() {
           {/* DestinationComponents */}
             <Route path='/Mauritius' element={<Mauritius />}/>
               <Route path='/WindsurfingInMauritius' element={<WindsurfingInMauritius />}/>
+              <Route path='/StayingAtLux' element={<StayingAtLux />}/>
+              <Route path='/ThingsToDoInMauritius' element={<ThingsToDoInMauritius />}/>
             <Route path='/SouthAfrica' element={<SouthAfrica />}/>
             <Route path='/Egypt' element={<Egypt />}/>
             <Route path='/Canada' element={<Canada />}/>
