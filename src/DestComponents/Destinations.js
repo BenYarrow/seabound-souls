@@ -3,13 +3,16 @@ import { Link } from 'react-router-dom'
 import { continents } from '../Data/Continents'
 
 
-
-
 let continentsList = continents.map(continent => {  
-  continent.countries = continent.countries.filter(country => country.isEnabled === true)
+  continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === true)))
   return continent
 }).filter(continents => continents.countries.length > 0);
 
+
+let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
+  continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
+  return continent
+})
 
 
 const CountryLink = ({imageSrc, imageAlt, linkTo}) => {
