@@ -4,7 +4,7 @@ import {blogs} from '../Data/Blogs'
 
 
 
-let stayingAtLux = blogs.filter(blog => blog.blogTitle === 'accomodation')
+let stayingAtLux = blogs.filter(blog => blog.blogTitle === 'staying at lux le morne')
 
 const StayingAtLux = () => {
   return (

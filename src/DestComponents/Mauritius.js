@@ -17,7 +17,7 @@ const BlogLink = () => {
             {blogLink.blogData.map(data => {
               return(
                 <Link to={data.linkTo}>
-                  <div className='flex flex-col w-full h-auto  rounded-lg ' >
+                  <div className='flex flex-col w-full h-auto rounded-lg ' >
                     <h2 className='text-xl text-center pb-4 font-bold'>{data.title}</h2>
                     <img src={data.blogLinkImgSrc} alt={data.blogLinkImgAlt} className='rounded-lg' width='100%'/>
                     <p className='pt-6 text-base text-center'>{data.blogIntro} <a href={data.linkTo} className='underline'>Read more</a></p>

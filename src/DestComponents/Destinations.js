@@ -9,10 +9,11 @@ let continentsList = continents.map(continent => {
 }).filter(continents => continents.countries.length > 0);
 
 
-let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
-  continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
-  return continent
-})
+// let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
+//   continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
+//   return continent.countries
+// })
+
 
 
 const CountryLink = ({imageSrc, imageAlt, linkTo}) => {
@@ -26,8 +27,6 @@ const CountryLink = ({imageSrc, imageAlt, linkTo}) => {
   )
 }
 
-
-
 const Continents = (props) => {
   return(
       <div className='w-full h-auto pb-20' >
@@ -40,6 +39,7 @@ const Continents = (props) => {
       </div>
   )
 }
+
 
 
 const Destinations = () => {
@@ -59,6 +59,9 @@ const Destinations = () => {
             />
           </div>
         )})}  
+      </div>
+      <div>
+
       </div>
     </div>
   )

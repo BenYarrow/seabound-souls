@@ -1,5 +1,177 @@
 export let blogs = [
     {
+        country: 'egypt',
+        blogTitle: 'windsurfing in egypt',
+        blogData: [
+            {
+                title: 'Windsurfing in Dahab',
+                linkTo: '/WindsurfingInEgypt',
+                blogLinkImgSrc: '',
+                blogLinkImgAlt: 'Windsurfing in Egypt',
+                blogIntro: `windsurfing in dahab blog intro `,
+                
+                    // Windsurfing Images
+                windsurfingImgOneSrc: ``,
+                windsurfingImgOneAlt: ``,
+                windsurfingImgTwoSrc: ``,
+                windsurfingImgTwoAlt: ``,
+                windsurfingImgThreeSrc: ``,
+                windsurfingImgThreeAlt: ``,
+                windsurfingImgFourSrc: ``,
+                windsurfingImgFourAlt: ``,
+                windsurfingImgFiveSrc: ``,
+                windsurfingImgFiveAlt: ``,
+                    // When to go
+                whenToGoTitle: `When to go?`,
+                whenToGoInfo: ``,
+                
+                    // Embed
+                embedSrc: `https://www.youtube.com/embed/IayVRvBMF_Q`,
+
+                    // Where to sail
+                whereToSailTitle: `Where to sail?`,
+                spotOneTitle: ``,
+                spotOneInfo: ``,
+                spotTwoTitle: ``,
+                spotTwoInfo: ``,
+                spotThreeTitle: ``,
+                spotThreeInfo: ``,
+                
+                    // What we did
+                whatWeDidTitle: `What we did`,
+                whatWeDidInfo: ``,
+                
+                    //Rental info
+                rentalTitle: `Equipment Rental`,    
+                rentalInfoOne: ``,
+                rentalInfoTwo: ``,
+                
+                    // Safety
+                safetyTitle: `Safety and Local Regulations`,
+                safetyInfo: ``,
+                safetyImgSrc: ``,
+                safetyImgAlt: ``,
+
+                    // Other Activities
+                otherActivitiesTitle: `Other Activities`,
+                otherActivitiesInfo: ``,
+                
+                    // Where to stay
+                whereToStayTitle: `Where to stay`,
+                whereToStayInfo: ``,
+                accomodationOneImgSrc: ``,
+                accomodationOneImgAlt: ``,
+                accomodationTwoImgSrc: ``,
+                accomodationTwoImgAlt: ``,
+                accomodationThreeImgSrc: ``,
+                accomodationThreeImgAlt: ``,
+
+                    // Outro
+                outro: `Remember to check with local authorities or tourism offices for any updates or specific guidelines related to windsurfing in Mauritius. Enjoy your windsurfing adventure in this beautiful tropical paradise!`
+            }
+        ]
+    },
+    {
+        country: 'egypt',
+        blogTitle: 'staying at the swiss resort',
+        blogData: [
+            {   
+
+                title: 'Staying at the Swiss Resort',
+                linkTo: `/StayingAtSwiss`,
+                blogLinkImgSrc: ``,
+                blogLinkImgAlt: 'Swiss Resort, Dahab',
+                blogIntro: `swiss hotel intro`,
+            }
+        ]
+    },
+    {
+        country: 'egypt',
+        blogTitle: 'things to do in egypt',
+        blogData: [
+            {   
+
+                title: 'Things to do in Dahab',
+                linkTo: `/ThingsToDoInEgypt`,
+                blogLinkImgSrc: ``,
+                blogLinkImgAlt: `Things to do in egypt`,
+                blogIntro: `things to do in dahab intro`,
+                
+                recomendationOneTitle: ``,
+                recomendationOneInfo: ``,
+                recomendationOneImgOneSrc: ``,
+                recomendationOneImgOneAlt: ``,
+                recomendationOneImgTwoSrc: ``,
+                recomendationOneImgTwoAlt: ``,
+                recomendationOneImgThreeSrc: ``,
+                recomendationOneImgThreeAlt: ``,
+
+                recomendationTwoTitle: ``,
+                recomendationTwoInfo: ``,
+                recomendationTwoImgOneSrc: ``,
+                recomendationTwoImgOneAlt: ``,
+                recomendationTwoImgTwoSrc: ``,
+                recomendationTwoImgTwoAlt: ``,
+                recomendationTwoImgThreeSrc: ``,
+                recomendationTwoImgThreeAlt: ``,
+
+                recomendationThreeTitle: ``,
+                recomendationThreeInfo: ``,
+                recomendationThreeImgOneSrc: ``,
+                recomendationThreeImgOneAlt: ``,
+                recomendationThreeImgTwoSrc: ``,
+                recomendationThreeImgTwoAlt: ``,
+                recomendationThreeImgThreeSrc: ``,
+                recomendationThreeImgThreeAlt: ``,
+
+                recomendationFourTitle: ``,
+                recomendationFourInfo: ``,
+                recomendationFourImgOneSrc: ``,
+                recomendationFourImgOneAlt: ``,
+                recomendationFourImgTwoSrc: ``,
+                recomendationFourImgTwoAlt: ``,
+                recomendationFourImgThreeSrc: ``,
+                recomendationFourImgThreeAlt: ``,
+
+                recomendationFiveTitle: ``,
+                recomendationFiveInfo: ``,
+                recomendationFiveImgOneSrc: ``,
+                recomendationFiveImgOneAlt: ``,
+                recomendationFiveImgTwoSrc: ``,
+                recomendationFiveImgTwoAlt: ``,
+                recomendationFiveImgThreeSrc: ``,
+                recomendationFiveImgThreeAlt: ``,
+
+                recomendationSixTitle: ``,
+                recomendationSixInfo: ``,
+                recomendationSixImgOneSrc: ``,
+                recomendationSixImgOneAlt: ``,
+                recomendationSixImgTwoSrc: ``,
+                recomendationSixImgTwoAlt: ``,
+                recomendationSixImgThreeSrc: ``,
+                recomendationSixImgThreeAlt: ``,
+
+                recomendationSevenTitle: ``,
+                recomendationSevenInfo: ``,
+                recomendationSevenImgOneSrc: ``,
+                recomendationSevenImgOneAlt: ``,
+                recomendationSevenImgTwoSrc: ``,
+                recomendationSevenImgTwoAlt: ``,
+                recomendationSevenImgThreeSrc: ``,
+                recomendationSevenImgThreeAlt: ``,
+
+                recomendationEightTitle: ``,
+                recomendationEightInfo: ``,
+                recomendationEightImgOneSrc: ``,
+                recomendationEightImgOneAlt: ``,
+                recomendationEightImgTwoSrc: ``,
+                recomendationEightImgTwoAlt: ``,
+                recomendationEightImgThreeSrc: ``,
+                recomendationEightImgThreeAlt: ``,
+            }
+        ]
+    },
+    {
         country: 'mauritius',
         blogTitle: 'windsurfing in mauritius',
         blogData: [
@@ -73,11 +245,11 @@ export let blogs = [
     },
     {
         country: 'mauritius',
-        blogTitle: 'accomodation',
+        blogTitle: 'staying at lux le morne',
         blogData: [
             {   
 
-                title: 'Lux, Le Morne',
+                title: 'Staying at Lux, Le Morne',
                 linkTo: `/StayingAtLux`,
                 blogLinkImgSrc: `/Mauritius-Images/Mauritius-Lux-3.jpg`,
                 blogLinkImgAlt: 'Lux, Le Morne Resort',
@@ -93,9 +265,10 @@ export let blogs = [
 
                 title: 'Things to do in Mauritius',
                 linkTo: `/ThingsToDoInMauritius`,
-                blogLinkimgSrc: ``,
-                blogLinkimgAlt: ``,
+                blogLinkImgSrc: `Mauritius-Images/mauritius-things-to-do-beach-2.jpg`,
+                blogLinkImgAlt: `Things to do in mauritius`,
                 blogIntro: `Mauritius is a small island nation with a lot to offer, from stunning beaches to thrilling activities and delicious food. If you're planning a trip to Mauritius, there are many things to do and see. Here are some of the best things we did during our time in Mauritius.`,
+                
                 recomendationOneTitle: `Head to the beach`,
                 recomendationOneInfo: `Mauritius is famous for its beautiful beaches. Some of the best beaches to visit include Flic en Flac, Belle Mare Plage, Trou aux Biches and Le Morne. You can relax on the sand, swim in the turquoise waters, and enjoy water sports like snorkeling, diving, and kayaking. Also many hotels offer free glass-bottom boat tours, so you can even see the underwater world without even getting wet.`,
                 recomendationOneImgOneSrc: `Mauritius-Images/mauritius-things-to-do-beach-1.jpg`,
@@ -107,38 +280,66 @@ export let blogs = [
 
                 recomendationTwoTitle: `Take a boat trip`,
                 recomendationTwoInfo: `Mauritius offers a variety of boat trips and tours to explore the beautiful islands and coastline. Some tour operators offer full-day cruises with BBQ lunches and opportunities to swim with dolphins. One popular boat trip is to snorkel around Crystal Rock, a large exposed fossilized coral reef, located in the South off the coast of Île aux Bénitiers.`,
-                recomendationTwoImgSrc: ``,
-                recomendationTwoImgAlt: ``,
+                recomendationTwoImgOneSrc: ``,
+                recomendationTwoImgOneAlt: ``,
+                recomendationTwoImgTwoSrc: ``,
+                recomendationTwoImgTwoAlt: ``,
+                recomendationTwoImgThreeSrc: ``,
+                recomendationTwoImgThreeAlt: ``,
 
                 recomendationThreeTitle: `See The Seven Colour Earth`,
                 recomendationThreeInfo: `Located in the Chamarel plain of the Rivière Noire District in south-western Mauritius, you can explore the geological formation known as the The Seven Coloured Earths. It is a relatively small area of colourful rolling sand dunes made up of seven distinct colours, including red, brown, violet, green, blue, purple, and yellow. Don't forget to check out the giant tortoises too!`,
-                recomendationThreeImgSrc: ``,
-                recomendationThreeImgAlt: ``,
+                recomendationThreeImgOneSrc: `Mauritius-Images/mauritius-things-to-do-earth-1.jpg`,
+                recomendationThreeImgOneAlt: `Seven Colored Earth`,
+                recomendationThreeImgTwoSrc: `Mauritius-Images/mauritius-things-to-do-earth-2.jpg`,
+                recomendationThreeImgTwoAlt: `Seven Colored Earth`,
+                recomendationThreeImgThreeSrc: `Mauritius-Images/mauritius-things-to-do-earth-3.jpg`,
+                recomendationThreeImgThreeAlt: `Seven Colored Earth`,
 
                 recomendationFourTitle: `Explore a waterfall`,
                 recomendationFourInfo: `Mauritius is home to several stunning waterfalls waiting to be explored. Each waterfall is unique and some require more effort to get to than others. The most beautiful waterfalls include the Eau Bleue Waterfalls, located in the village of Cluny in the southeast; the Cascade Mamzelle at Gris Gris Beach, located in the south of Mauritius; Cascade Vacoas in the Vallée des Couleurs Nature Park and Chamarel Waterfall, with a height of 100 meters, it's one of the highest waterfalls in Mauritius.`,
-                recomendationFourImgSrc: ``,
-                recomendationFourImgAlt: ``,
+                recomendationFourImgOneSrc: `Mauritius-Images/mauritius-waterfalls-1.jpg`,
+                recomendationFourImgOneAlt: `Mauritius waterfalls`,
+                // recomendationFourImgTwoSrc: `Mauritius-Images/mauritius-waterfalls-2.jpg`,
+                // recomendationFourImgTwoAlt: `Mauritius waterfalls`,
+                // recomendationFourImgThreeSrc: `Mauritius-Images/mauritius-waterfalls-3.jpg`,
+                // recomendationFourImgThreeAlt: `Mauritius waterfalls`,
 
                 recomendationFiveTitle: `Take a rum tour`,
                 recomendationFiveInfo: `Mauritius is known for its rum, and there are many distilleries you can visit. The Rhumerie de Chamarel is one of the most famous, where you can learn about the history of rum making in Mauritius, explore the beautiful lush grounds and sample some of the delicious rums on offer.`,
-                recomendationFiveImgSrc: ``,
-                recomendationFiveImgAlt: ``,
+                recomendationFiveImgOneSrc: ``,
+                recomendationFiveImgOneAlt: ``,
+                recomendationFiveImgTwoSrc: ``,
+                recomendationFiveImgTwoAlt: ``,
+                recomendationFiveImgThreeSrc: ``,
+                recomendationFiveImgThreeAlt: ``,
 
                 recomendationSixTitle: `Explore nature`,
                 recomendationSixInfo: `Black River Gorges National Park and Bras d'Eau National Park are two of the best nature reserves in Mauritius. If you're lucky, you might even spot the local troop of monkeys but be careful they don't steal your lunch!`,
-                recomendationSixImgSrc: ``,
-                recomendationSixImgAlt: ``,
+                recomendationSixImgOneSrc: `Mauritius-Images/mauritius-nature-1.jpg`,
+                recomendationSixImgOneAlt: `Mauritius nature`,
+                recomendationSixImgTwoSrc: `Mauritius-Images/mauritius-nature-2.jpg`,
+                recomendationSixImgTwoAlt: `Mauritius nature`,
+                // recomendationSixImgThreeSrc: `Mauritius-Images/mauritius-nature-3.jpg`,
+                // recomendationSixImgThreeAlt: `Maurituis-nature`,
 
                 recomendationSevenTitle: `Take a hike`,
                 recomendationSevenInfo: `If you're looking for adventure, there are many hiking trails in Mauritius that offer stunning views. The hike up Le Morne Brabant, a UNESCO World Heritage Site, is challenging and takes between three and four hours to complete. You can choose to hike independently or with a guided tour but you will need transport to get to and from the entrance. This historical site is also a symbol of freedom and hope as it was once a refuge for runaway slaves who used the mountain to escape their masters.`,
-                recomendationSevenImgSrc: ``,
-                recomendationSevenImgAlt: ``,
+                recomendationSevenImgOneSrc: ``,
+                recomendationSevenImgOneAlt: ``,
+                recomendationSevenImgTwoSrc: ``,
+                recomendationSevenImgTwoAlt: ``,
+                recomendationSevenImgThreeSrc: ``,
+                recomendationSevenImgThreeAlt: ``,
 
                 recomendationEightTitle: `Learn about the history and culture`,
                 recomendationEightInfo: `Mauritius has a rich history and culture, influenced by its diverse population. You can visit museums like the Aapravasi Ghat, a UNESCO World Heritage Site that tells the story of indentured laborers who came to Mauritius from India, or explore the colourful temples and mosques. Ganga Talao, also known as Grand Bassin, is a crater lake situated in a secluded mountain area in the district of Savanne, deep in the heart of Mauritius. It is considered the most sacred Hindu place in Mauritius and around half a million Hindus go on a pilgrimage to the lake during the Hindu festival of Maha Shivaratri.`,
-                recomendationEightImgSrc: ``,
-                recomendationEightImgAlt: ``,
+                recomendationEightImgOneSrc: ``,
+                recomendationEightImgOneAlt: ``,
+                recomendationEightImgTwoSrc: ``,
+                recomendationEightImgTwoAlt: ``,
+                recomendationEightImgThreeSrc: ``,
+                recomendationEightImgThreeAlt: ``,
             }
         ]
     },

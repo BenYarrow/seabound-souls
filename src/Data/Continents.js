@@ -6,7 +6,7 @@ export let continents = [
           imageSrc: '/Destinations-Images/Egypt.jpg',
           imageAlt: 'Egypt',
           linkTo: '/Egypt',
-          isEnabled: false,
+          isEnabled: true,
         },
         {
           imageSrc: '/Destinations-Images/Mauritius.jpg',
@@ -19,7 +19,6 @@ export let continents = [
           imageAlt: 'South Africa', 
           linkTo: '/SouthAfrica',
           isEnabled: false,
-          test:'test'
         },
       ],
     },
