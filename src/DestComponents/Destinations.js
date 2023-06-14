@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { continents } from '../Data/Continents'
-
+import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 let continentsList = continents.map(continent => {  
   continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === true)))
@@ -16,12 +17,26 @@ let continentsList = continents.map(continent => {
 
 
 
-const CountryLink = ({imageSrc, imageAlt, linkTo}) => {
+const CountryLink = ({location, area, imageSrc, linkTo}) => {
 
   return(
-    <div className='shadow-2xl shadow-turquoise/60 rounded-lg'>   
-        <Link to={linkTo}>
-          <img src={imageSrc} alt={imageAlt} className='rounded-lg p-2 hover:bg-turquoise/60 duration-100 ease-out hover:ease-in' />
+    <div className='shadow-2xl shadow-turquoise/60 rounded-lg group font-standard'>   
+        <Link to={linkTo} >
+          <div className='aspect-square rounded-lg' style={{
+          backgroundImage: `url(${imageSrc})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center',
+          }}>
+            <div className='w-full h-full group-hover:bg-standard/60 duration-200 ease-in-out rounded-lg flex flex-col justify-center items-center'>
+              <h1 className='text-xxxl w-5/6 h-5/6 xl:w-auto xl:h-auto xl:px-4 flex justify-center items-center text-standard bg-standard/40 rounded-lg text-center  group-hover:text-turquoise group-hover:bg-standard/0 duration-200 ease-in-out '>{location}</h1>
+              <div className='hidden xl:flex h-auto mx-8 p-4 justify-around items-center group-hover:bg-standard/80 group-hover:translate-y-8 duration-700 rounded-lg'>
+                <p className='w-4/6 text-base text-turquoise/0 group-hover:text-turquoise/100 '>While visiting {location} we stayed in {area}. Check out what we did! </p>
+                <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-xl text-turquoise/0 group-hover:text-turquoise/100'/>
+              </div>
+            </div>    
+            {/* <img src={imageSrc} alt={imageAlt} className='rounded-lg p-2  ' /> */}
+          </div>
         </Link> 
     </div>
   )
@@ -61,7 +76,6 @@ const Destinations = () => {
         )})}  
       </div>
       <div>
-
       </div>
     </div>
   )
