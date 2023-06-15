@@ -17,9 +17,10 @@ module.exports = {
       base: '1.2rem',
       xl: '1.5rem',
       xxl: '3rem',
-      mobileIcon:'8rem',
-      xxxl: '4rem',
-     }
+      xxxl: '4.5rem',
+      icon:'2.2rem',
+
+     },
   },
   plugins: [],
 }

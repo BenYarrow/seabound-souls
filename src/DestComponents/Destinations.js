@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import { continents } from '../Data/Continents'
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '../Css/Destinations.css'
+
 
 let continentsList = continents.map(continent => {  
   continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === true)))
@@ -10,10 +12,12 @@ let continentsList = continents.map(continent => {
 }).filter(continents => continents.countries.length > 0);
 
 
-// let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
-//   continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
-//   return continent.countries
-// })
+let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
+  continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
+  return continent
+})
+
+console.log(comingSoon.countries)
 
 
 
@@ -29,10 +33,12 @@ const CountryLink = ({location, area, imageSrc, linkTo}) => {
           backgroundPosition: 'center',
           }}>
             <div className='w-full h-full group-hover:bg-standard/60 duration-200 ease-in-out rounded-lg flex flex-col justify-center items-center'>
-              <h1 className='text-xxxl w-5/6 h-5/6 xl:w-auto xl:h-auto xl:px-4 flex justify-center items-center text-standard bg-standard/40 rounded-lg text-center  group-hover:text-turquoise group-hover:bg-standard/0 duration-200 ease-in-out '>{location}</h1>
-              <div className='hidden xl:flex h-auto mx-8 p-4 justify-around items-center group-hover:bg-standard/80 group-hover:translate-y-8 duration-700 rounded-lg'>
-                <p className='w-4/6 text-base text-turquoise/0 group-hover:text-turquoise/100 '>While visiting {location} we stayed in {area}. Check out what we did! </p>
-                <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-xl text-turquoise/0 group-hover:text-turquoise/100'/>
+              <div className='w-full h-3/4 flex justify-center items-center '>
+                <h1 id='location' className='xl:text-xxxl  text-xxl text-standard  group-hover:text-turquoise group-hover:bg-standard/0 duration-200 ease-in-out rounded-t-lg capitalize'>{location}</h1>
+              </div>
+              <div className='w-full h-1/4 mx-8 hidden xl:flex justify-around items-center  group-hover:bg-standard/80 duration-700 rounded-b-lg '>
+                <p className='w-4/6 text-base  text-turquoise/0 group-hover:text-turquoise/100'>While in {location} we stayed in {area}. Check out what we did! </p>
+                <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-icon text-turquoise/0 group-hover:text-turquoise/100 '/>
               </div>
             </div>    
             {/* <img src={imageSrc} alt={imageAlt} className='rounded-lg p-2  ' /> */}

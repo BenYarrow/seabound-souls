@@ -3,6 +3,8 @@ import AboutInfoLeft from './HomepageComponents/AboutInfoLeft';
 import AboutInfoRight from './HomepageComponents/AboutInfoRight';
 import './Css/Homepage.css';
 
+let vassBay = 'Background-Images/Vass-bay.jpg'
+
 function Homepage() {
     
     return(
@@ -11,7 +13,7 @@ function Homepage() {
             <div id='hero-section' className='absolute w-screen flex justify-center'>
             </div>
             <div className='w-full h-full '>
-                <div className='p-8 h-auto md:h-[30rem] font-standard flex flex-col items-center justify-around text-standard bg-turquoise '>
+                <div className='p-8 h-auto md:h-[20rem] font-standard flex flex-col items-center justify-around text-standard bg-turquoise '>
                     <h1 className='text-sm md:text-base text-center pb-4 md:pb-0 '>
                         Welcome to Yarrow Travels
                     </h1>
@@ -44,7 +46,14 @@ function Homepage() {
                         textThree="We have visited a lot of places in search for flat waters, warm wind and an empty playground. If you're interested in finding great places to get on the water, then you're in the right place. "
                     />
                 </div>
-                <div className='p-8 h-auto md:h-[30rem] font-standard flex flex-col items-center justify-around  text-turquoise'>
+
+                <div className='w-full h-[40rem]' style={{
+                    backgroundImage: `url(${vassBay})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
+                    }}>
+                <div className='p-8 h-auto md:h-80 font-standard flex flex-col items-center justify-around  text-turquoise bg-standard/60'>
                     <h1 className='text-sm md:text-xl text-center pb-4 md:pb-0'>
                         Addiction
                     </h1>
@@ -54,6 +63,8 @@ function Homepage() {
                     <p className='text-sm md:text-xl  text-center'>
                         We can help you decide.
                     </p>
+                </div>
+                    
                 </div>
             </div>
         </div>
