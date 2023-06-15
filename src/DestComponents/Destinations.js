@@ -36,9 +36,11 @@ const CountryLink = ({location, area, imageSrc, linkTo}) => {
               <div className='w-full h-3/4 flex justify-center items-center '>
                 <h1 id='location' className='xl:text-xxxl  text-xxl text-standard  group-hover:text-turquoise group-hover:bg-standard/0 duration-200 ease-in-out rounded-t-lg capitalize'>{location}</h1>
               </div>
-              <div className='w-full h-1/4 mx-8 hidden xl:flex justify-around items-center  group-hover:bg-standard/80 duration-700 rounded-b-lg '>
-                <p className='w-4/6 text-base  text-turquoise/0 group-hover:text-turquoise/100'>While in {location} we stayed in {area}. Check out what we did! </p>
-                <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-icon text-turquoise/0 group-hover:text-turquoise/100 '/>
+              <div className='w-full h-1/4 hidden xl:flex justify-between items-center  group-hover:bg-standard/80 duration-700 rounded-b-lg '>
+                <p className='px-4 text-base  text-turquoise/0 group-hover:text-turquoise/100'>While in {location} we stayed in {area}. Check out what we did! </p>
+                  <div className='w-2/4 h-full group-hover:bg-turquoise flex justify-center items-center'>
+                    <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-icon text-standard/0 group-hover:text-standard/100 '/>
+                  </div>
               </div>
             </div>    
             {/* <img src={imageSrc} alt={imageAlt} className='rounded-lg p-2  ' /> */}
