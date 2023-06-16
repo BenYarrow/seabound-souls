@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
+
 import { Link } from 'react-router-dom'
 import { continents } from '../Data/Continents'
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
@@ -13,30 +13,14 @@ let continentsList = continents.map(continent => {
 }).filter(continents => continents.countries.length > 0);
 
 
-let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
-  continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
-  return continent
-})
-
-console.log(comingSoon.countries)
-
-
+// let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
+//   continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
+//   return continent
+// })
 
 const CountryLink = ({location, area, imageSrc, linkTo}) => {
-
-  const [isHovered, setIsHovered] = useState(false)
-
-  const handleHoverTrue = () => {
-    setIsHovered(true)
-    console.log(isHovered)
-}
-
-  const handleHoverFalse = () => {
-    setIsHovered(false)
-  }
-
   return(
-    <div className='shadow-2xl shadow-turquoise/60 rounded-lg group font-standard' onMouseEnter={handleHoverTrue} onMouseLeave={handleHoverFalse}>   
+    <div className='shadow-2xl shadow-turquoise/60 rounded-lg group font-standard' >   
         <Link to={linkTo} >
           <div className='aspect-square rounded-lg' style={{
           backgroundImage: `url(${imageSrc})`,
@@ -45,13 +29,13 @@ const CountryLink = ({location, area, imageSrc, linkTo}) => {
           backgroundPosition: 'center',
           }}>
             <div className='w-full h-full group-hover:bg-standard/40 duration-700 ease-in-out rounded-lg flex flex-col justify-center items-center overflow-hidden'>
-              <div className={isHovered === false ? 'w-full h-full flex justify-center items-center xl:translate-y-8 transition duration-700' : 'w-full h-full flex justify-center items-center transition duration-700'}>
+              <div className= 'w-full h-full flex justify-center items-center xl:translate-y-8 group-hover:translate-y-0 transition duration-700 '>
                 <h1 id='location' className='xl:text-xxxl  text-xxl text-standard  group-hover:text-turquoise  duration-700 ease-in-out group-hover:rounded-t-lg capitalize'>{location}</h1>
               </div>
-              <div className={isHovered === false ? 'w-full h-1/4 xl:flex hidden justify-between items-center  bg-standard/0 xl:translate-y-full transition duration-700' : 'w-full h-1/4 xl:flex hidden justify-between items-center  group-hover:bg-standard/80 duration-700 ease-in-out group-hover:rounded-b-lg '}>
-                <p className={isHovered === false ? 'px-4 text-base text-standard/0' : 'px-4 text-base text-standard group-hover:text-turquoise/100 duration-700 ease-in-out '}>While in {location} we stayed in {area}. Check out what we did! </p>
-                  <div className={isHovered === false ? 'w-2/6 h-full flex justify-center items-center ' : 'w-2/6 h-full flex justify-center items-center group-hover:bg-turquoise/100 group-hover:rounded-br-lg duration-700 ease-in-out'}>
-                    <FontAwesomeIcon icon={faArrowAltCircleRight} className={isHovered === false ? 'text-icon text-standard/0' : 'text-icon group-hover:text-standard/100 duration-700 ease-in-out'}/>
+              <div className='w-full h-1/4 xl:flex hidden justify-between items-center  bg-standard/0 xl:translate-y-full transition  group-hover:bg-standard/80 group-hover:translate-y-0 duration-700 ease-in-out group-hover:rounded-b-lg '>
+                <p className='px-4 text-base text-standard/0 text-standard group-hover:text-turquoise/100 duration-700 ease-in-out '>While in {location} we stayed in {area}. Check out what we did! </p>
+                  <div className='w-2/6 h-full flex justify-center items-center group-hover:bg-turquoise/100 group-hover:rounded-br-lg duration-700 ease-in-out'>
+                    <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-icon text-standard/0  group-hover:text-standard/100 duration-700 ease-in-out'/>
                   </div>
               </div>
             </div>    
