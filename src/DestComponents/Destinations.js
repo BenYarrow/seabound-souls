@@ -1,4 +1,5 @@
 import React from 'react'
+import { useState } from 'react';
 import { Link } from 'react-router-dom'
 import { continents } from '../Data/Continents'
 import { faArrowAltCircleRight } from "@fortawesome/free-solid-svg-icons";
@@ -23,8 +24,19 @@ console.log(comingSoon.countries)
 
 const CountryLink = ({location, area, imageSrc, linkTo}) => {
 
+  const [isHovered, setIsHovered] = useState(false)
+
+  const handleHoverTrue = () => {
+    setIsHovered(true)
+    console.log(isHovered)
+}
+
+  const handleHoverFalse = () => {
+    setIsHovered(false)
+  }
+
   return(
-    <div className='shadow-2xl shadow-turquoise/60 rounded-lg group font-standard'>   
+    <div className='shadow-2xl shadow-turquoise/60 rounded-lg group font-standard' onMouseEnter={handleHoverTrue} onMouseLeave={handleHoverFalse}>   
         <Link to={linkTo} >
           <div className='aspect-square rounded-lg' style={{
           backgroundImage: `url(${imageSrc})`,
@@ -32,18 +44,17 @@ const CountryLink = ({location, area, imageSrc, linkTo}) => {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           }}>
-            <div className='w-full h-full group-hover:bg-standard/60 duration-200 ease-in-out rounded-lg flex flex-col justify-center items-center'>
-              <div className='w-full h-3/4 flex justify-center items-center '>
+            <div className='w-full h-full group-hover:bg-standard/60 ease-in-out rounded-lg flex flex-col justify-center items-center'>
+              <div className='w-full h-full flex justify-center items-center '>
                 <h1 id='location' className='xl:text-xxxl  text-xxl text-standard  group-hover:text-turquoise group-hover:bg-standard/0 duration-200 ease-in-out rounded-t-lg capitalize'>{location}</h1>
               </div>
-              <div className='w-full h-1/4 hidden xl:flex justify-between items-center  group-hover:bg-standard/80 duration-700 rounded-b-lg '>
-                <p className='px-4 text-base  text-turquoise/0 group-hover:text-turquoise/100'>While in {location} we stayed in {area}. Check out what we did! </p>
-                  <div className='w-2/4 h-full group-hover:bg-turquoise flex justify-center items-center'>
+              {isHovered === true && <div className='w-full h-1/4 xl:flex justify-between items-center  bg-standard/0 group-hover:bg-standard/80 duration-200 ease-in-out group-hover:rounded-b-lg '>
+                <p className='px-4 text-base text-standard  group-hover:text-turquoise/100 duration-200 ease-in-out '>While in {location} we stayed in {area}. Check out what we did! </p>
+                  <div className='w-2/6 h-full group-hover:bg-turquoise/100 duration-200  ease-in-out flex justify-center items-center group-hover:rounded-br-lg'>
                     <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-icon text-standard/0 group-hover:text-standard/100 '/>
                   </div>
-              </div>
+              </div>}
             </div>    
-            {/* <img src={imageSrc} alt={imageAlt} className='rounded-lg p-2  ' /> */}
           </div>
         </Link> 
     </div>
