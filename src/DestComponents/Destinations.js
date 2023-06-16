@@ -44,16 +44,16 @@ const CountryLink = ({location, area, imageSrc, linkTo}) => {
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'center',
           }}>
-            <div className='w-full h-full group-hover:bg-standard/60 ease-in-out rounded-lg flex flex-col justify-center items-center'>
-              <div className='w-full h-full flex justify-center items-center '>
-                <h1 id='location' className='xl:text-xxxl  text-xxl text-standard  group-hover:text-turquoise group-hover:bg-standard/0 duration-200 ease-in-out rounded-t-lg capitalize'>{location}</h1>
+            <div className='w-full h-full group-hover:bg-standard/40 duration-700 ease-in-out rounded-lg flex flex-col justify-center items-center overflow-hidden'>
+              <div className={isHovered === false ? 'w-full h-full flex justify-center items-center xl:translate-y-8 transition duration-700' : 'w-full h-full flex justify-center items-center transition duration-700'}>
+                <h1 id='location' className='xl:text-xxxl  text-xxl text-standard  group-hover:text-turquoise  duration-700 ease-in-out group-hover:rounded-t-lg capitalize'>{location}</h1>
               </div>
-              {isHovered === true && <div className='w-full h-1/4 xl:flex justify-between items-center  bg-standard/0 group-hover:bg-standard/80 duration-200 ease-in-out group-hover:rounded-b-lg '>
-                <p className='px-4 text-base text-standard  group-hover:text-turquoise/100 duration-200 ease-in-out '>While in {location} we stayed in {area}. Check out what we did! </p>
-                  <div className='w-2/6 h-full group-hover:bg-turquoise/100 duration-200  ease-in-out flex justify-center items-center group-hover:rounded-br-lg'>
-                    <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-icon text-standard/0 group-hover:text-standard/100 '/>
+              <div className={isHovered === false ? 'w-full h-1/4 xl:flex hidden justify-between items-center  bg-standard/0 xl:translate-y-16 transition duration-700' : 'w-full h-1/4 xl:flex hidden justify-between items-center  group-hover:bg-standard/80 duration-700 ease-in-out group-hover:rounded-b-lg '}>
+                <p className={isHovered === false ? 'px-4 text-base text-standard/0' : 'px-4 text-base text-standard group-hover:text-turquoise/100 duration-700 ease-in-out '}>While in {location} we stayed in {area}. Check out what we did! </p>
+                  <div className={isHovered === false ? 'w-2/6 h-full flex justify-center items-center ' : 'w-2/6 h-full flex justify-center items-center group-hover:bg-turquoise/100 group-hover:rounded-br-lg duration-700 ease-in-out'}>
+                    <FontAwesomeIcon icon={faArrowAltCircleRight} className={isHovered === false ? 'text-icon text-standard/0' : 'text-icon group-hover:text-standard/100 duration-700 ease-in-out'}/>
                   </div>
-              </div>}
+              </div>
             </div>    
           </div>
         </Link> 
