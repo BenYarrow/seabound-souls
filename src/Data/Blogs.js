@@ -11,6 +11,7 @@ export let blogs = [
                 blogIntro: `windsurfing in dahab blog intro `,
                 
                     // Windsurfing Images
+                heroImgSrc: ``,
                 windsurfingImgOneSrc: ``,
                 windsurfingImgOneAlt: ``,
                 windsurfingImgTwoSrc: ``,
@@ -26,7 +27,7 @@ export let blogs = [
                 whenToGoInfo: ``,
                 
                     // Embed
-                embedSrc: `https://www.youtube.com/embed/IayVRvBMF_Q`,
+                embedSrc: ``,
 
                     // Where to sail
                 whereToSailTitle: `Where to sail?`,
@@ -59,15 +60,29 @@ export let blogs = [
                     // Where to stay
                 whereToStayTitle: `Where to stay`,
                 whereToStayInfo: ``,
-                accomodationOneImgSrc: ``,
-                accomodationOneImgAlt: ``,
-                accomodationTwoImgSrc: ``,
-                accomodationTwoImgAlt: ``,
-                accomodationThreeImgSrc: ``,
-                accomodationThreeImgAlt: ``,
+                accomodation: [
+                    // {
+                    //     accomTitle: ``,
+                    //     accomImgSrc: ``,
+                    //     accomImgAlt: ``,
+                    //     accomLink: ``,
+                    // },
+                    // {
+                    //     accomTitle: ``,
+                    //     accomImgSrc: ``,
+                    //     accomImgAlt: ``,
+                    //     accomLink: ``,
+                    // },
+                    // {
+                    //     accomTitle: ``,
+                    //     accomImgSrc: ``,
+                    //     accomImgAlt: ``,
+                    //     accomLink: ``,
+                    // }
+                ],
 
                     // Outro
-                outro: `Remember to check with local authorities or tourism offices for any updates or specific guidelines related to windsurfing in Mauritius. Enjoy your windsurfing adventure in this beautiful tropical paradise!`
+                outroLocation: `Dahab`
             }
         ]
     },
@@ -183,6 +198,7 @@ export let blogs = [
                 blogIntro: `Mauritius is a fantastic destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds. Whether you're a beginner or an experienced windsurfer, there are plenty of spots around the island to enjoy this exhilarating water sport. `,
                 
                     // Windsurfing Images
+                heroImgSrc: `Mauritius-Images/Ion-Club-1.jpg`,
                 windsurfingImgOneSrc: `Mauritius-Images/Ion-Club-Windsurfing.jpg`,
                 windsurfingImgOneAlt: `Windsurfing in mauritius`,
                 windsurfingImgTwoSrc: `Mauritius-Images/Rachel-Windsurfing-1.jpg`,
@@ -217,7 +233,9 @@ export let blogs = [
                 rentalTitle: `Equipment Rental`,    
                 rentalInfoOne: `If you don't have your own windsurfing gear, you can easily rent equipment from various water sports centres located along the popular windsurfing beaches. These centres also offer lessons and coaching for beginners or those looking to improve their skills.`,
                 rentalInfoTwo: `Le Morne is particularly well known for its windsurfing school that caters to all levels. We hired kit from Ion club, Le Morne and were very impressed with their selection of boards and sails. Staff were super friendly and always on hand to help. They also cater for kite surfers and surfers.`,
-                
+                rentalImgSrc: `Mauritius-Images/Ion-Safety-Tower.jpg`,
+                rentalImgAlt: `Ion club Mauritius`,
+
                     // Safety
                 safetyTitle: `Safety and Local Regulations`,
                 safetyInfo: `It's essential to prioritise safety while windsurfing. Always check weather conditions, including wind strength and direction, before heading out. Respect any local regulations and be mindful of other water users. It's also recommended to wear appropriate gear and consider taking lessons if you're new to windsurfing. We’d recommend a long summer wetsuit and boots to help protect you if you fall on the reef.`,
@@ -231,15 +249,28 @@ export let blogs = [
                     // Where to stay
                 whereToStayTitle: `Where to stay`,
                 whereToStayInfo: `There are many beautiful and luxurious hotels located within walking distance of Le Morne’s windsurf centre. We stayed at LUX* Le Morne, you can read more about out stay here. `,
-                accomodationOneImgSrc: `/Mauritius-Images/Mauritius-Lux-3.jpg`,
-                accomodationOneImgAlt: 'Lux, Le Morne Resort',
-                accomodationTwoImgSrc: `/Mauritius-Images/JW-Marriott-1.jpg`,
-                accomodationTwoImgAlt: `JW Marriott Resort`,
-                accomodationThreeImgSrc: `/Mauritius-Images/Rui-1.jpg`,
-                accomodationThreeImgAlt: `Hotel Rui`,
-
+                accomodation: [
+                    {
+                        accomTitle: `Lux, Le Morne`,
+                        accomImgSrc: `/Mauritius-Images/Mauritius-Lux-3.jpg`,
+                        accomImgAlt: `Lux, Le Morne Resort`,
+                        accomLink: `https://www.luxresorts.com/en/mauritius/hotel/luxlemorne`,
+                    },
+                    {
+                        accomTitle: `JW Marriott`,
+                        accomImgSrc: `/Mauritius-Images/JW-Marriott-1.jpg`,
+                        accomImgAlt: `JW Marriott Resort`,
+                        accomLink: `https://www.marriott.com/en-us/hotels/mrujw-jw-marriott-mauritius-resort/overview/`,
+                    },
+                    {
+                        accomTitle: `Rui`,
+                        accomImgSrc: `/Mauritius-Images/Rui-1.jpg`,
+                        accomImgAlt: `Hotel Rui`,
+                        accomLink: `https://www.riu.com/en/hotel/mauritius-island/morne-brabant/index.jsp`,
+                    },
+                ],
                     // Outro
-                outro: `Remember to check with local authorities or tourism offices for any updates or specific guidelines related to windsurfing in Mauritius. Enjoy your windsurfing adventure in this beautiful tropical paradise!`
+                outroLocation: `Mauritius`
             }
         ]
     },

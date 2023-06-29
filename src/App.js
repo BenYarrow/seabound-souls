@@ -13,6 +13,7 @@ import Mauritius from './DestComponents/Mauritius';
 
 import SouthAfrica from './DestComponents/SouthAfrica';
 import Egypt from './DestComponents/Egypt';
+  import WindsurfingInEgypt from './EgyptComponents/WindsurfingInEgypt';
 import Canada from './DestComponents/Canada';
 import Greece from './DestComponents/Greece';
 import England from './DestComponents/England';
@@ -20,6 +21,7 @@ import Wales from './DestComponents/Wales';
 import Iceland from './DestComponents/Iceland';
 import CzechRepublic from './DestComponents/CzechRepublic';
 import Destinations from './DestComponents/Destinations';
+
 
 
 function App() {
@@ -44,6 +46,7 @@ function App() {
               <Route path='/ThingsToDoInMauritius' element={<ThingsToDoInMauritius />}/>
             <Route path='/SouthAfrica' element={<SouthAfrica />}/>
             <Route path='/Egypt' element={<Egypt />}/>
+              <Route path='/WindsurfingInEgypt' element={<WindsurfingInEgypt />}/>
             <Route path='/Canada' element={<Canada />}/>
             <Route path='/England' element={<England />}/>
             <Route path='/Wales' element={<Wales />}/>

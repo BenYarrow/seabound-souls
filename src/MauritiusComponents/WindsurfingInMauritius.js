@@ -1,6 +1,5 @@
 import React from 'react'
 import {blogs} from '../Data/Blogs'
-import '../Css/Windsurfing-In-Mauritius.css';
 import WindsurfingIn from '../DestComponents//BlogComponents/WindsurfingIn'
 
 

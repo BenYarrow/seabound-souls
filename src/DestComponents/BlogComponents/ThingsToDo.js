@@ -24,9 +24,9 @@ const ThingsToDo = ({content}) => {
                     {content.recomendationOneInfo}
                   </p>
                   <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-8 py-8'>
-                    <img src={content.recomendationOneImgOneSrc} alt={content.recomendationOneImgOneAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationOneImgTwoSrc} alt={content.recomendationOneImgTwoAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationOneImgThreeSrc} alt={content.recomendationOneImgThreeAlt} className='rounded-lg shadow-lg'/>
+                    <img src={content.recomendationOneImgOneSrc} alt={content.recomendationOneImgOneAlt} className='basis-1/3 rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationOneImgTwoSrc} alt={content.recomendationOneImgTwoAlt} className='basis-1/3 rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationOneImgThreeSrc} alt={content.recomendationOneImgThreeAlt} className='basis-1/3 rounded-lg shadow-lg shadow-turquoise/60'/>
                   </div>
                 </div>
                 <div className='w-full py-8 px-20 md:px-40 flex flex-col items-center'>
@@ -37,9 +37,9 @@ const ThingsToDo = ({content}) => {
                     {content.recomendationTwoInfo}
                   </p>
                   <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-8 py-8'>
-                    <img src={content.recomendationTwoImgOneSrc} alt={content.recomendationTwoImgOneAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationTwoImgTwoSrc} alt={content.recomendationTwoImgTwoAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationTwoImgThreeSrc} alt={content.recomendationTwoImgThreeAlt} className='rounded-lg shadow-lg'/>
+                    <img src={content.recomendationTwoImgOneSrc} alt={content.recomendationTwoImgOneAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationTwoImgTwoSrc} alt={content.recomendationTwoImgTwoAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationTwoImgThreeSrc} alt={content.recomendationTwoImgThreeAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
                   </div>
                 </div>
                 <div className='w-full py-8 px-20 md:px-40 flex flex-col items-center'>
@@ -50,9 +50,9 @@ const ThingsToDo = ({content}) => {
                     {content.recomendationThreeInfo}
                   </p>
                   <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-8 py-8'>
-                    <img src={content.recomendationThreeImgOneSrc} alt={content.recomendationThreeImgOneAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationThreeImgTwoSrc} alt={content.recomendationThreeImgTwoAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationThreeImgThreeSrc} alt={content.recomendationThreeImgThreeAlt} className='rounded-lg shadow-lg'/>
+                    <img src={content.recomendationThreeImgOneSrc} alt={content.recomendationThreeImgOneAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationThreeImgTwoSrc} alt={content.recomendationThreeImgTwoAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationThreeImgThreeSrc} alt={content.recomendationThreeImgThreeAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
                   </div>
                 </div>
                 <div className='w-full py-8 px-20 md:px-40 flex flex-col items-center'>
@@ -63,9 +63,9 @@ const ThingsToDo = ({content}) => {
                     {content.recomendationFourInfo}
                   </p>
                   <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-8 py-8'>
-                    <img src={content.recomendationFourImgOneSrc} alt={content.recomendationFourImgOneAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationFourImgTwoSrc} alt={content.recomendationFourImgTwoAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationFourImgThreeSrc} alt={content.recomendationFourImgThreeAlt} className='rounded-lg shadow-lg'/>
+                    <img src={content.recomendationFourImgOneSrc} alt={content.recomendationFourImgOneAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationFourImgTwoSrc} alt={content.recomendationFourImgTwoAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationFourImgThreeSrc} alt={content.recomendationFourImgThreeAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
                   </div>
                 </div>
                 <div className='w-full py-8 px-20 md:px-40 flex flex-col items-center'>
@@ -76,9 +76,9 @@ const ThingsToDo = ({content}) => {
                     {content.recomendationFiveInfo}
                   </p>
                   <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-8 py-8'>
-                    <img src={content.recomendationFiveImgOneSrc} alt={content.recomendationFiveImgOneAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationFiveImgTwoSrc} alt={content.recomendationFiveImgTwoAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationFiveImgThreeSrc} alt={content.recomendationFiveImgThreeAlt} className='rounded-lg shadow-lg'/>
+                    <img src={content.recomendationFiveImgOneSrc} alt={content.recomendationFiveImgOneAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationFiveImgTwoSrc} alt={content.recomendationFiveImgTwoAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationFiveImgThreeSrc} alt={content.recomendationFiveImgThreeAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
                   </div>
                 </div>
                 <div className='w-full py-8 px-20 md:px-40 flex flex-col items-center'>
@@ -89,9 +89,9 @@ const ThingsToDo = ({content}) => {
                     {content.recomendationSixInfo}
                   </p>
                   <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-8 py-8'>
-                    <img src={content.recomendationSixImgOneSrc} alt={content.recomendationSixImgOneAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationSixImgTwoSrc} alt={content.recomendationSixImgTwoAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationSixImgThreeSrc} alt={content.recomendationSixImgThreeAlt} className='rounded-lg shadow-lg'/>
+                    <img src={content.recomendationSixImgOneSrc} alt={content.recomendationSixImgOneAlt} className='rounded-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationSixImgTwoSrc} alt={content.recomendationSixImgTwoAlt} className='rounded-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationSixImgThreeSrc} alt={content.recomendationSixImgThreeAlt} className='rounded-lg shadow-turquoise/60'/>
                   </div>
                 </div>
                 <div className='w-full py-8 px-20 md:px-40 flex flex-col items-center'>
@@ -102,9 +102,9 @@ const ThingsToDo = ({content}) => {
                     {content.recomendationSevenInfo}
                   </p>
                   <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-8 py-8'>
-                    <img src={content.recomendationSevenImgOneSrc} alt={content.recomendationSevenImgOneAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationSevenImgTwoSrc} alt={content.recomendationSevenImgTwoAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationSevenImgThreeSrc} alt={content.recomendationSevenImgThreeAlt} className='rounded-lg shadow-lg'/>
+                    <img src={content.recomendationSevenImgOneSrc} alt={content.recomendationSevenImgOneAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationSevenImgTwoSrc} alt={content.recomendationSevenImgTwoAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationSevenImgThreeSrc} alt={content.recomendationSevenImgThreeAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
                   </div>
                 </div>
                 <div className='w-full py-8 px-20 md:px-40 flex flex-col items-center'>
@@ -115,9 +115,9 @@ const ThingsToDo = ({content}) => {
                     {content.recomendationEightInfo}
                   </p>
                   <div className='w-full grid grid-cols-1 md:grid-cols-3 gap-8 py-8'>
-                    <img src={content.recomendationEightImgOneSrc} alt={content.recomendationEightImgOneAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationEightImgTwoSrc} alt={content.recomendationEightImgTwoAlt} className='rounded-lg shadow-lg'/>
-                    <img src={content.recomendationEightImgThreeSrc} alt={content.recomendationEightImgThreeAlt} className='rounded-lg shadow-lg'/>
+                    <img src={content.recomendationEightImgOneSrc} alt={content.recomendationEightImgOneAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationEightImgTwoSrc} alt={content.recomendationEightImgTwoAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
+                    <img src={content.recomendationEightImgThreeSrc} alt={content.recomendationEightImgThreeAlt} className='rounded-lg shadow-lg shadow-turquoise/60'/>
                   </div>
                 </div>
             </div>

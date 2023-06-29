@@ -13,10 +13,10 @@ let continentsList = continents.map(continent => {
 }).filter(continents => continents.countries.length > 0);
 
 
-// let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
-//   continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
-//   return continent
-// })
+let comingSoon = JSON.parse(JSON.stringify(continents)).map(continent => {  
+  continent.countries = JSON.parse(JSON.stringify(continent.countries.filter(country => country.isEnabled === false)))
+  return continent
+})
 
 const CountryLink = ({location, area, imageSrc, linkTo}) => {
   return(
@@ -29,10 +29,10 @@ const CountryLink = ({location, area, imageSrc, linkTo}) => {
           backgroundPosition: 'center',
           }}>
             <div className='w-full h-full group-hover:bg-standard/40 duration-700 ease-in-out rounded-lg flex flex-col justify-center items-center overflow-hidden'>
-              <div className= 'w-full h-full flex justify-center items-center xl:translate-y-8 group-hover:translate-y-0 transition duration-700 '>
-                <h1 id='location' className='xl:text-xxxl  text-xxl text-standard  group-hover:text-turquoise  duration-700 ease-in-out group-hover:rounded-t-lg capitalize'>{location}</h1>
+              <div className= 'w-full h-full flex justify-center items-center '>
+                <h1 id='location' className='xl:text-xxxl  text-xxl text-standard xl:translate-y-1/4 group-hover:translate-y-0   group-hover:text-turquoise  duration-700 ease-in-out group-hover:rounded-t-lg capitalize'>{location}</h1>
               </div>
-              <div className='w-full h-1/4 xl:flex hidden justify-between items-center  bg-standard/0 xl:translate-y-full transition  group-hover:bg-standard/80 group-hover:translate-y-0 duration-700 ease-in-out group-hover:rounded-b-lg '>
+              <div className='w-full h-1/4 xl:flex  justify-between items-center  bg-standard/0 xl:translate-y-full transition  group-hover:bg-standard/80 group-hover:translate-y-0 duration-700 ease-in-out group-hover:rounded-b-lg '>
                 <p className='px-4 text-base text-standard/0 text-standard group-hover:text-turquoise/100 duration-700 ease-in-out '>While in {location} we stayed in {area}. Check out what we did! </p>
                   <div className='w-2/6 h-full flex justify-center items-center group-hover:bg-turquoise/100 group-hover:rounded-br-lg duration-700 ease-in-out'>
                     <FontAwesomeIcon icon={faArrowAltCircleRight} className='text-icon text-standard/0  group-hover:text-standard/100 duration-700 ease-in-out'/>

@@ -37,7 +37,8 @@ function Mauritius() {
   return (
     <div className='font-standard pb-8 '>
       <div className='py-8'>
-        <h1 className='lg:text-[5rem] text-xxl text-turquoise text-center '>Mauritius</h1>
+      <h1 className='lg:text-[5rem] text-xxl text-turquoise text-center '>Mauritius</h1>
+        <p className='text-xl text-turquoise/80 text-center '>Le Morne</p>
       </div>
       <div>
         <BlogLink />
