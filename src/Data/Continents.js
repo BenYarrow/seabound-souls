@@ -21,7 +21,7 @@ export let continents = [
           area: 'Langebaan',
           imageSrc: '/Destinations-Images/South-Africa.jpg',
           linkTo: '/SouthAfrica',
-          isEnabled: true,
+          isEnabled: false,
         },
       ],
     },

@@ -13,13 +13,9 @@ const Navbar = () => {
 
     const [navIsHidden, setNavIsHidden] = useState(true);
 
-    const navMenuShow = () => {
-        setNavIsHidden(false)
-    };
+    const navMenuShow = () => setNavIsHidden(false)
 
-    const navMenuHide = () => {
-        setNavIsHidden(true)
-    };
+    const navMenuHide = () => setNavIsHidden(true)
 
 
     return(
