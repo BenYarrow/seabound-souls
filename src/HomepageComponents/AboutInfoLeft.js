@@ -3,36 +3,37 @@ import React from "react";
 // Image on Left
 
 function AboutUsLeft(props) {
-    return(
-        <div className="relative w-auto h-auto flex flex-col items-center justify-center py-16 lg:flex-row">
-            <div className="w-4/6 lg:w-2/6 ">
-                <img src={props.source} alt='' className="rounded-lg"/>
+   
+    const textClasses = "text-base md:text-xl";
+
+    return (
+      <div className="container pb-20 pt-8 ">
+        {props.heading && (
+          <h2 className="text-xxxl pb-8 lg:pb-16 text-center ">
+            {props.heading}
+          </h2>
+        )}
+        {props.title && (
+          <h2 className="text-xl md:text-xl mb-8 ">{props.title}</h2>
+        )}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-h-screen">
+        {props.source && (
+            <div className="w-full object-cover object-center">
+              <img src={props.source} alt="" className="rounded-lg  " />
             </div>
-            <div className="w-full h-full lg:w-4/6 lg:pl-8  text-center lg:text-left ">
-                <h2 className='text-xxl pb-4 '>
-                    {props.heading}      
-                </h2>
-                <h2 className="text-xl md:text-xl mb-8  ">
-                    {props.title}
-                </h2>
-                <p className="text-base pb-4">
-                    {props.textOne}
-                </p>
-                <p className="text-base pb-4">
-                    {props.textTwo}
-                </p>
-                <p className="text-base pb-4">
-                    {props.textThree}
-                </p>
-                <p className="text-base pb-4">
-                    {props.textFour}
-                </p>
-                <p className="text-base ">
-                    {props.textFive}
-                </p>
-            </div>
+          )}
+          <div className="space-y-4 md:flex md:flex-col md:justify-between">
+            {props.textOne && <p className={textClasses}>{props.textOne}</p>}
+            {props.textTwo && <p className={textClasses}>{props.textTwo}</p>}
+            {props.textThree && <p className={textClasses}>{props.textThree}</p>}
+            {props.textFour && <p className={textClasses}>{props.textFour}</p>}
+            {props.textFive && <p className={textClasses}>{props.textFive}</p>}
+          </div>
+  
+
         </div>
-    )
+      </div>
+    );
 }
 
 export default AboutUsLeft;

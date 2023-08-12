@@ -13,16 +13,32 @@ module.exports = {
       }
     },
     fontSize: {
-      sm: '1rem',
-      base: '1.2rem',
+      sm: '0.8rem',
+      base: '1rem',
       xl: '1.5rem',
-      xxl: '3rem',
+      xxl: '2rem',
       xxxl: '4.5rem',
       icon:'2.2rem',
 
      },
   },
-  plugins: [],
+  plugins: [
+		({ addComponents, theme }) => {
+			addComponents({
+				// Extending container in the normal way does not allow for max widths to be changed
+				'.container': {
+					margin: '0 auto',
+					padding: '0 1rem',
+                    width: '100%',
+
+					'@screen lg': {
+						padding: '0 1.5rem'
+					}
+				}
+			}, ['responsive']);
+		}
+    ],
+
 }
 
 
