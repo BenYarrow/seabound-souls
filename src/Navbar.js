@@ -3,33 +3,45 @@ import { useState, useEffect } from "react";
 import "./Css/Navbar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faXmark,
-} from "@fortawesome/free-solid-svg-icons";
-
-
-
-
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { continents } from "./Data/Continents";
 
 const Navbar = () => {
+  const destinationsPage = [
+    {
+      title: "Destinations",
+      to: "/Destinations",
+    },
+  ];
+
+  const destinationDropdown = continents.map((continent) => {
+    return continent;
+  });
+
+  const [isHovered, setIshovered] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIshovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIshovered(false);
+  };
 
   const navListItems = [
     {
-      title: 'Destinations',
-      to: '/Destinations',
+      title: "Blog",
+      to: "/Blog",
     },
     {
-      title: 'Our work',
-      to: '/OurWork',
+      title: "About",
+      to: "/About",
     },
     {
-      title: 'Contact us',
-      to: '/ContactUs',
+      title: "Contact us",
+      to: "/ContactUs",
     },
-  ]
-
-
+  ];
 
   const [navIsHidden, setNavIsHidden] = useState(true);
 
@@ -37,23 +49,19 @@ const Navbar = () => {
 
   const navMenuHide = () => setNavIsHidden(true);
 
-  const [innerWidth, setInnerWidth] =  useState(window.innerWidth)
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-
     function handleResize() {
-      setInnerWidth(window.innerWidth)
+      setInnerWidth(window.innerWidth);
 
       if (innerWidth > 788) {
-        setNavIsHidden(true)
+        setNavIsHidden(true);
       }
-  
-    } 
+    }
 
-    window.addEventListener('resize', handleResize);
-
-  },[innerWidth])
-
+    window.addEventListener("resize", handleResize);
+  }, [innerWidth]);
 
   return (
     <div className="w-screen sticky left-0 z-20">
@@ -75,7 +83,7 @@ const Navbar = () => {
               icon={faBars}
               onClick={navMenuShow}
               className={
-                !navIsHidden 
+                !navIsHidden
                   ? "hidden"
                   : "text-standard text-5xl flex md:hidden "
               }
@@ -86,7 +94,7 @@ const Navbar = () => {
               icon={faXmark}
               onClick={navMenuHide}
               className={
-                navIsHidden 
+                navIsHidden
                   ? "hidden"
                   : "text-standard text-5xl flex md:hidden "
               }
@@ -94,21 +102,71 @@ const Navbar = () => {
           }
         </div>
 
-        <div className={navIsHidden ? 'hidden md:flex items-center space-x-2 lg:space-x-16 ' : 'w-full absolute top-32 bg-standard/90 z-10 h-auto md:hidden'}>
+        <div
+          className={
+            navIsHidden
+              ? "hidden md:flex items-center space-x-8 xl:space-x-16 pr-8 "
+              : "w-full absolute top-32 bg-standard/90 z-10 h-auto md:hidden"
+          }
+        >
+          {destinationsPage.map((destinations, index) => {
+            return (
+              <div
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                {" "}
+                <Link
+                  to={destinations.to}
+                  className={
+                    navIsHidden
+                      ? "text-standard font-navbar  text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide "
+                      : "block font-standard text-blue text-2xl py-4 border-b-2 border-blue"
+                  }
+                  key={index}
+                >
+                  {destinations.title}
+                </Link>
+                <div className=" hidden md:block absolute">
+                  {destinationDropdown.map((drop, index) => {
+                    return (
+                      <>
+                        {isHovered && (
+                          <ul className="bg-standard opacity-60" key={index}>
+                            <li className="py-4">
+                              <Link
+                                href=""
+                                className="text-blue font-navbar  text-xl md:text-3xl xl:text-4xl hover:cursor-pointer font-light uppercase tacking-wide  "
+                              >
+                                {drop.title}
+                              </Link>
+                            </li>
+                          </ul>
+                        )}
+                      </>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+
           {navListItems.map((listItem, index) => {
             return (
-              <Link 
-                to={listItem.to} 
-                className={navIsHidden ? "text-standard font-navbar pr-8 text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide" : "block font-standard text-blue text-2xl py-4 border-b-2 border-blue"}
+              <Link
+                to={listItem.to}
+                className={
+                  navIsHidden
+                    ? "text-standard font-navbar  text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide"
+                    : "block font-standard text-blue text-2xl py-4 border-b-2 border-blue"
+                }
                 key={index}
               >
                 {listItem.title}
               </Link>
-            )
+            );
           })}
         </div>
-
-
       </nav>
     </div>
   );

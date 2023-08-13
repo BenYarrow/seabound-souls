@@ -4,9 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        standard: "'Catamaran', sans-serif",
+        standard: "'Glacial Indifference', sans-serif",
         navbar: "Donau Neue",
-        destinations: "BlackBones",
+        destinations: "Black Bones Personal Use",
       },
       colors: {
         'standard': '#FEFAF9',  
@@ -36,4 +36,3 @@ module.exports = {
 }
 
 
-// bg-slate-400 sm:bg-red-400 md:bg-blue-400 lg:bg-green-400 xl:bg-indigo-400

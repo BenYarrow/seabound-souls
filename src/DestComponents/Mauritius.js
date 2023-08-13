@@ -22,7 +22,7 @@ const BlogLink = () => {
                     <img
                       src={data.blogLinkImgSrc}
                       alt={data.blogLinkImgAlt}
-                      className=""
+                      className="aspect-square object-cover"
                       width="100%"
                     />
                     <p className="pt-6 text-base text-left">
