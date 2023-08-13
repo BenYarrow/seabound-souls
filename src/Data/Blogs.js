@@ -1,5 +1,6 @@
 export let blogs = [
     {
+        continent: 'africa',
         country: 'egypt',
         blogTitle: 'windsurfing in egypt',
         blogData: [
@@ -87,6 +88,7 @@ export let blogs = [
         ]
     },
     {
+        continent: 'africa',
         country: 'egypt',
         blogTitle: 'staying at the swiss resort',
         blogData: [
@@ -101,6 +103,7 @@ export let blogs = [
         ]
     },
     {
+        continent: 'africa',
         country: 'egypt',
         blogTitle: 'things to do in egypt',
         blogData: [
@@ -187,6 +190,7 @@ export let blogs = [
         ]
     },
     {
+        continent: 'africa',
         country: 'mauritius',
         blogTitle: 'windsurfing in mauritius',
         blogData: [
@@ -275,6 +279,7 @@ export let blogs = [
         ]
     },
     {
+        continent: 'africa',
         country: 'mauritius',
         blogTitle: 'staying at lux le morne',
         blogData: [
@@ -289,6 +294,7 @@ export let blogs = [
         ]
     },
     {
+        continent: 'africa',
         country: 'mauritius',
         blogTitle: 'things to do in mauritius',
         blogData: [
