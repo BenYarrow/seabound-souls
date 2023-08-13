@@ -5,8 +5,8 @@ import {portfolioWork} from './Data/PortfolioData'
 const PortfolioCard = ({videoSrc, title, location, description, visitSite, map}) => {
     return(
             <div className="">
-            <div className="bg-slate-400 rounded-lg p-2 h-full">
-                <div className="rounded-lg bg-slate-200 aspect-[9/16]">
+            <div className="bg-slate-400  p-2 h-full">
+                <div className=" bg-slate-200 aspect-[9/16]">
                     <video />
                 </div>
                 <div className="flex-col w-full mt-2">

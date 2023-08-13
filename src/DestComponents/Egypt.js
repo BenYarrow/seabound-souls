@@ -13,13 +13,13 @@ const BlogLink = () => {
 
       {egyptBlogs.map(blogLink => {
         return(
-          <div className='shadow-2xl shadow-blue/60 p-4 rounded-lg  hover:bg-blue/60 hover:text-standard duration-200 ease-out hover:ease-in'>
+          <div className='shadow-2xl shadow-blue/60 p-4   hover:bg-blue/60 hover:text-standard duration-200 ease-out hover:ease-in'>
             {blogLink.blogData.map(data => {
               return(
                 <Link to={data.linkTo}>
-                  <div className='flex flex-col w-full h-auto rounded-lg ' >
+                  <div className='flex flex-col w-full h-auto  ' >
                     <h2 className='text-xl text-center pb-4 font-bold'>{data.title}</h2>
-                    <img src={data.blogLinkImgSrc} alt={data.blogLinkImgAlt} className='rounded-lg' width='100%'/>
+                    <img src={data.blogLinkImgSrc} alt={data.blogLinkImgAlt} className='' width='100%'/>
                     <p className='pt-6 text-base text-center'>{data.blogIntro} <a href={data.linkTo} className='underline'>Read more</a></p>
                   </div>
                 </Link>

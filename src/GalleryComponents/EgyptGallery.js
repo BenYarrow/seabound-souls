@@ -60,7 +60,7 @@ const EgyptGallery = () => {
         {egyptImages.map((image, index) => {
             return(
                 <div className='' key={index}>
-                  {index === currentIndex && (<img  src={image.imageSrc} alt={image.imageAlt} className='rounded-lg'/>)}
+                  {index === currentIndex && (<img  src={image.imageSrc} alt={image.imageAlt} className=''/>)}
                 </div>
             )
             })}

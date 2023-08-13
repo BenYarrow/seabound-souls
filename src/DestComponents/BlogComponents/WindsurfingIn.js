@@ -5,7 +5,7 @@ const WindsurfingIn = ({content}) => {
     <div>
                 <div>
                   <div className='w-full h-auto text-blue font-standard text-base '>
-                  <div className='aspect-square rounded-lg' style={{
+                  <div className='aspect-square ' style={{
                     backgroundImage: `url(${content.heroImgSrc})`,
                     backgroundSize: 'cover',
                     backgroundRepeat: 'no-repeat',
@@ -20,7 +20,7 @@ const WindsurfingIn = ({content}) => {
                       </div>
                     </div>
                     <div className='bg-blue flex justify-center p-8 '>
-                          <p className='text-center max-w-5xl py-4 rounded-lg text-standard text-xl'>
+                          <p className='text-center max-w-5xl py-4  text-standard text-xl'>
                             {content.blogIntro}
                           </p>
                     </div>
@@ -41,19 +41,19 @@ const WindsurfingIn = ({content}) => {
                           frameborder="0" 
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                           allowfullscreen
-                          className='rounded-lg shadow-lg shadow-blue/60'
+                          className=' shadow-lg shadow-blue/60'
                         >
                       </iframe>
                     </div>
                     <div className='p-8  md:px-40'>
-                        <img src={content.windsurfingImgThreeSrc} alt={content.windsurfingImgThreeAlt} className='rounded-lg shadow-lg shadow-blue/60 lg:hidden' />
+                        <img src={content.windsurfingImgThreeSrc} alt={content.windsurfingImgThreeAlt} className=' shadow-lg shadow-blue/60 lg:hidden' />
                       </div>
                     <div className='p-8 pb-20 md:px-40 bg-blue text-standard'>
                       <p className='text-3xl text-center'>
                         {content.whereToSailTitle}
                       </p>
                       <div className='grid grid-cols-1 lg:grid-cols-3  gap-8 pt-8'>
-                        <div className='flex flex-col items-center p-4 rounded-lg'>
+                        <div className='flex flex-col items-center p-4 '>
                           <p className='pb-4 text-xl font-bold '>
                             {content.spotOneTitle}
                           </p>
@@ -61,7 +61,7 @@ const WindsurfingIn = ({content}) => {
                             {content.spotOneInfo}
                           </p>
                         </div>
-                        <div className='flex flex-col items-center p-4 rounded-lg '>
+                        <div className='flex flex-col items-center p-4  '>
                           <p className='text-center pb-4 text-xl font-bold'>
                             {content.spotTwoTitle}
                           </p>
@@ -69,7 +69,7 @@ const WindsurfingIn = ({content}) => {
                             {content.spotTwoInfo}
                           </p>
                         </div>
-                        <div className='flex flex-col items-center p-4 rounded-lg'>
+                        <div className='flex flex-col items-center p-4 '>
                           <p className='text-center pb-4 text-xl font-bold'>
                             {content.spotThreeTitle}
                           </p>
@@ -80,7 +80,7 @@ const WindsurfingIn = ({content}) => {
                         </div>
                       </div>
                       <div className='w-full p-8 md:px-40 flex justify-center'>
-                        <img src={content.jwMarriottImg} alt={content.jwMarriottImgAlt} className='rounded-lg shadow-lg shadow-blue/60 ' />
+                        <img src={content.jwMarriottImg} alt={content.jwMarriottImgAlt} className=' shadow-lg shadow-blue/60 ' />
                       </div>
                       <div className='p-8 md:px-40 flex flex-col items-center'>
                         <p className='pb-4 text-3xl text-center'>
@@ -92,8 +92,8 @@ const WindsurfingIn = ({content}) => {
                       </div>
                       
                       <div className='w-full p-8 pb-20 md:px-40 grid grid-cols-1 lg:grid-cols-2 gap-8 px-20 center'>
-                          <img src={content.windsurfingImgTwoSrc} alt={content.windsurfingImgTwoAlt} className='rounded-lg shadow-lg shadow-blue/60' />
-                          <img src={content.windsurfingImgThreeSrc} alt={content.windsurfingImgThreeAlt} className='rounded-lg hidden lg:flex shadow-lg shadow-blue/60' />
+                          <img src={content.windsurfingImgTwoSrc} alt={content.windsurfingImgTwoAlt} className=' shadow-lg shadow-blue/60' />
+                          <img src={content.windsurfingImgThreeSrc} alt={content.windsurfingImgThreeAlt} className=' hidden lg:flex shadow-lg shadow-blue/60' />
                         </div>
                       <div className='w-full p-8 pb-20 md:px-40 bg-blue'>
                           <p className='text-3xl text-center text-standard'>
@@ -106,7 +106,7 @@ const WindsurfingIn = ({content}) => {
                             </p>
                           </div>
                           <div className='py-8 lg:py-0 '>
-                            <img src={content.rentalImgSrc} alt={content.rentalImgAlt} className='rounded-lg aspect-auto '/>
+                            <img src={content.rentalImgSrc} alt={content.rentalImgAlt} className=' aspect-auto '/>
                           </div>
                           <div>
                             <p className='text-base text-standard text-center'>
@@ -123,7 +123,7 @@ const WindsurfingIn = ({content}) => {
                           {content.safetyInfo}
                         </p>
                         <div className='w-full  flex justify-center py-8'>
-                          <img src={content.safetyImgSrc} alt={content.safetyImgAlt} className='rounded-lg w-full shadow-lg shadow-blue/60' />
+                          <img src={content.safetyImgSrc} alt={content.safetyImgAlt} className=' w-full shadow-lg shadow-blue/60' />
                         </div>
                       </div>
                       <div className='p-8  bg-blue text-standard  md:px-40 flex flex-col items-center'>
@@ -143,9 +143,9 @@ const WindsurfingIn = ({content}) => {
                           {content.accomodation.map(accom => {
                             return(
                               <div className='lg:py-0 p-8 min-w-4/6 group bg-standard '>
-                                  <a href={accom.accomLink} target='_blank' rel='noreferrer' className='flex flex-col items-center justify-center p-4 rounded-lg shadow-lg shadow-blue/60 group-hover:bg-blue/60 ease-in-out duration-500'>
+                                  <a href={accom.accomLink} target='_blank' rel='noreferrer' className='flex flex-col items-center justify-center p-4  shadow-lg shadow-blue/60 group-hover:bg-blue/60 ease-in-out duration-500'>
                                     <h1 className='pb-4 text-xl underline text-blue group-hover:text-standard ease-in-out duration-500'>{accom.accomTitle}</h1>
-                                    <img src={accom.accomImgSrc} alt={accom.accomImgSrc} className='rounded-lg' width='300px' />  
+                                    <img src={accom.accomImgSrc} alt={accom.accomImgSrc} className='' width='300px' />  
                                   </a>
                                 </div>
                             )

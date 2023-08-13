@@ -24,7 +24,7 @@ const StayingAtLux = () => {
                                         </div>         
                                     </div>
                                     <div className='bg-blue flex justify-center py-4 px-20 '>
-                                        <p className='text-center max-w-5xl py-4 rounded-lg text-standard text-xl'>
+                                        <p className='text-center max-w-5xl py-4  text-standard text-xl'>
                                             {content.blogIntro}
                                         </p>
                                     </div>

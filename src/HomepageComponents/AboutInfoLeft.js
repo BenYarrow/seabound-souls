@@ -19,7 +19,7 @@ function AboutUsLeft(props) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 max-h-screen">
         {props.source && (
             <div className="w-full object-cover object-center">
-              <img src={props.source} alt="" className="rounded-lg  " />
+              <img src={props.source} alt=""  />
             </div>
           )}
           <div className="space-y-4 md:flex md:flex-col md:justify-evenly">

@@ -27,7 +27,7 @@ function AboutUsRight(props) {
 
         {props.source && (
           <div className="w-full object-cover object-center">
-            <img src={props.source} alt="" className="rounded-lg  " />
+            <img src={props.source} alt=""  />
           </div>
         )}
       </div>

@@ -43,7 +43,7 @@ const ContactUs = () => {
           <input
             type="text"
             name="from_name"
-            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue rounded-lg"
+            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue "
             required
           />
         </div>
@@ -52,7 +52,7 @@ const ContactUs = () => {
           <input
             type="email"
             name="email"
-            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue rounded-lg"
+            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue "
             required
           />
         </div>
@@ -60,11 +60,11 @@ const ContactUs = () => {
           <label className="pb-1">Message:</label>
           <textarea
             name="message"
-            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue rounded-lg"
+            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue "
             required
           />
         </div>
-        <div className="text-center py-4 bg-blue rounded-lg text-standard text-xl cursor-pointer active:bg-blue/70 active:textblue">
+        <div className="text-center py-4 bg-blue  text-standard text-xl cursor-pointer active:bg-blue/70 active:textblue">
           <input type="submit" value="Send" />
         </div>
       </form>
