@@ -28,10 +28,10 @@ const ContactUs = () => {
   return (
     <div
       id="contact-us"
-      className="w-full flex flex-col justify-center items-center bg-standard font-standard text-turquoise text-sm"
+      className="w-full flex flex-col justify-center items-center bg-standard font-standard text-blue text-sm"
     >
       <div className="w-4/6 flex h-auto pb-4 flex-col items-center justify-center">
-        <h1 className="text-turquoise text-xxl ">Contact us!</h1>
+        <h1 className="text-blue text-3xl ">Contact us!</h1>
         <p className="text-center">
           If you would like to get in contact with us about anything on our
           page, please send us a message using the form below.
@@ -43,7 +43,7 @@ const ContactUs = () => {
           <input
             type="text"
             name="from_name"
-            className="w-full pl-2 py-1 text-standard bg-turquoise/50 focus:outline-turquoise rounded-lg"
+            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue rounded-lg"
             required
           />
         </div>
@@ -52,7 +52,7 @@ const ContactUs = () => {
           <input
             type="email"
             name="email"
-            className="w-full pl-2 py-1 text-standard bg-turquoise/50 focus:outline-turquoise rounded-lg"
+            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue rounded-lg"
             required
           />
         </div>
@@ -60,11 +60,11 @@ const ContactUs = () => {
           <label className="pb-1">Message:</label>
           <textarea
             name="message"
-            className="w-full pl-2 py-1 text-standard bg-turquoise/50 focus:outline-turquoise rounded-lg"
+            className="w-full pl-2 py-1 text-standard bg-blue/50 focus:outline-blue rounded-lg"
             required
           />
         </div>
-        <div className="text-center py-4 bg-turquoise rounded-lg text-standard text-xl cursor-pointer active:bg-turquoise/70 active:textturquoise">
+        <div className="text-center py-4 bg-blue rounded-lg text-standard text-xl cursor-pointer active:bg-blue/70 active:textblue">
           <input type="submit" value="Send" />
         </div>
       </form>

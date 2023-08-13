@@ -5,22 +5,16 @@ module.exports = {
     extend: {
       fontFamily: {
         standard: "'Catamaran', sans-serif",
+        navbar: "Donau Neue",
+        destinations: "BlackBones",
       },
       colors: {
         'standard': '#FEFAF9',  
-        'turquoise': '#05748B',
+        'blue': '#05748B',
         'orange': '#F4A361',
       }
     },
-    fontSize: {
-      sm: '0.8rem',
-      base: '1rem',
-      xl: '1.5rem',
-      xxl: '2rem',
-      xxxl: '4.5rem',
-      icon:'2.2rem',
 
-     },
   },
   plugins: [
 		({ addComponents, theme }) => {

@@ -223,7 +223,7 @@ export let blogs = [
                 spotTwoTitle: `Anse La Raie`,
                 spotTwoInfo: `Situated on the northern coast, Anse La Raie provides excellent windsurfing opportunities with consistent trade winds. The lagoon here is shallow and flat, making it ideal for beginners and freestyle enthusiasts.`,
                 spotThreeTitle: `Belle Mare`,
-                spotThreeInfo: `Found on the eastern coast, Belle Mare features a long stretch of white sandy beach and turquoise waters. The winds here are generally lighter than in other spots, making it suitable for beginners or those who prefer more relaxed windsurfing sessions.`,
+                spotThreeInfo: `Found on the eastern coast, Belle Mare features a long stretch of white sandy beach and blue waters. The winds here are generally lighter than in other spots, making it suitable for beginners or those who prefer more relaxed windsurfing sessions.`,
                 
                     // What we did
                 whatWeDidTitle: `What we did`,
@@ -301,7 +301,7 @@ export let blogs = [
                 blogIntro: `Mauritius is a small island nation with a lot to offer, from stunning beaches to thrilling activities and delicious food. If you're planning a trip to Mauritius, there are many things to do and see. Here are some of the best things we did during our time in Mauritius.`,
                 
                 recomendationOneTitle: `Head to the beach`,
-                recomendationOneInfo: `Mauritius is famous for its beautiful beaches. Some of the best beaches to visit include Flic en Flac, Belle Mare Plage, Trou aux Biches and Le Morne. You can relax on the sand, swim in the turquoise waters, and enjoy water sports like snorkeling, diving, and kayaking. Also many hotels offer free glass-bottom boat tours, so you can even see the underwater world without even getting wet.`,
+                recomendationOneInfo: `Mauritius is famous for its beautiful beaches. Some of the best beaches to visit include Flic en Flac, Belle Mare Plage, Trou aux Biches and Le Morne. You can relax on the sand, swim in the blue waters, and enjoy water sports like snorkeling, diving, and kayaking. Also many hotels offer free glass-bottom boat tours, so you can even see the underwater world without even getting wet.`,
                 recomendationOneImgOneSrc: `Mauritius-Images/mauritius-things-to-do-beach-1.jpg`,
                 recomendationOneImgOneAlt: `Mauritius Beach`,
                 recomendationOneImgTwoSrc: `Mauritius-Images/mauritius-things-to-do-beach-2.jpg`,

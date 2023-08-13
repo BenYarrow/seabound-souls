@@ -2,18 +2,18 @@ import React from 'react';
 import {blogs} from '../Data/Blogs'
 import {Link} from 'react-router-dom'
 
-let mauritiusBlogs = blogs.filter(location => location.country === 'egypt')
+let egyptBlogs = blogs.filter(location => location.country === 'egypt')
 
 
 
 
 const BlogLink = () => {
   return(
-    <div className='grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-20 text-turquoise font-standard mb-8'>
+    <div className='grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-20 text-blue font-standard mb-8'>
 
-      {mauritiusBlogs.map(blogLink => {
+      {egyptBlogs.map(blogLink => {
         return(
-          <div className='shadow-2xl shadow-turquoise/60 p-4 rounded-lg  hover:bg-turquoise/60 hover:text-standard duration-200 ease-out hover:ease-in'>
+          <div className='shadow-2xl shadow-blue/60 p-4 rounded-lg  hover:bg-blue/60 hover:text-standard duration-200 ease-out hover:ease-in'>
             {blogLink.blogData.map(data => {
               return(
                 <Link to={data.linkTo}>
@@ -37,8 +37,8 @@ function Egypt() {
   return (
     <div className='font-standard pb-8 '>
       <div className='py-8'>
-        <h1 className='lg:text-[5rem] text-xxl text-turquoise text-center '>Egypt</h1>
-        <p className='text-xl text-turquoise/80 text-center '>Dahab</p>
+        <h1 className='xl:text-8xl text-6xl py-8 text-blue text-center '>Egypt</h1>
+        <p className='text-xl text-blue/80 text-center'>Dahab</p>
       </div>
       <div>
         <BlogLink />

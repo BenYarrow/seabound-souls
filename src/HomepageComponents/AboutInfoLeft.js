@@ -9,7 +9,7 @@ function AboutUsLeft(props) {
     return (
       <div className="container pb-20 pt-8 ">
         {props.heading && (
-          <h2 className="text-xxxl pb-8 lg:pb-16 text-center ">
+          <h2 className="text-5xl pb-8 lg:pb-16 text-center ">
             {props.heading}
           </h2>
         )}
@@ -22,7 +22,7 @@ function AboutUsLeft(props) {
               <img src={props.source} alt="" className="rounded-lg  " />
             </div>
           )}
-          <div className="space-y-4 md:flex md:flex-col md:justify-between">
+          <div className="space-y-4 md:flex md:flex-col md:justify-evenly">
             {props.textOne && <p className={textClasses}>{props.textOne}</p>}
             {props.textTwo && <p className={textClasses}>{props.textTwo}</p>}
             {props.textThree && <p className={textClasses}>{props.textThree}</p>}

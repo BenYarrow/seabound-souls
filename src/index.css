@@ -1,25 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/d65e9c42e68e41f352814a95971b9ee2?family=Donau+Neue);
+@import url(https://db.onlinewebfonts.com/c/3770521e8aa0eea189fa45b737561720?family=Abys);
 
 @font-face {
   font-family: "BlackBones";
-  src: local("BlackBones"),
-    url("./Fonts/black-bones.ttf") format("truetype");
+  src: local("BlackBones"), url("./Fonts/black-bones.ttf") format("truetype");
   font-weight: normal;
+},
+ {
+  font-family: "Donau Neue";
+  src: url("https://db.onlinewebfonts.com/t/d65e9c42e68e41f352814a95971b9ee2.eot");
+  src: url("https://db.onlinewebfonts.com/t/d65e9c42e68e41f352814a95971b9ee2.eot?#iefix")
+      format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/d65e9c42e68e41f352814a95971b9ee2.woff2")
+      format("woff2"),
+    url("https://db.onlinewebfonts.com/t/d65e9c42e68e41f352814a95971b9ee2.woff")
+      format("woff"),
+    url("https://db.onlinewebfonts.com/t/d65e9c42e68e41f352814a95971b9ee2.ttf")
+      format("truetype"),
+    url("https://db.onlinewebfonts.com/t/d65e9c42e68e41f352814a95971b9ee2.svg#Donau Neue")
+      format("svg");
+},
+ {
+    font-family: "Abys";
+    src: url("https://db.onlinewebfonts.com/t/3770521e8aa0eea189fa45b737561720.eot");
+    src: url("https://db.onlinewebfonts.com/t/3770521e8aa0eea189fa45b737561720.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/3770521e8aa0eea189fa45b737561720.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/3770521e8aa0eea189fa45b737561720.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/3770521e8aa0eea189fa45b737561720.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/3770521e8aa0eea189fa45b737561720.svg#Abys")format("svg");
 }
-
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }

@@ -4,7 +4,7 @@ const WindsurfingIn = ({content}) => {
   return (
     <div>
                 <div>
-                  <div className='w-full h-auto text-turquoise font-standard text-base '>
+                  <div className='w-full h-auto text-blue font-standard text-base '>
                   <div className='aspect-square rounded-lg' style={{
                     backgroundImage: `url(${content.heroImgSrc})`,
                     backgroundSize: 'cover',
@@ -14,18 +14,18 @@ const WindsurfingIn = ({content}) => {
                     width: `100vw`,
                   }}>
                       <div className='w-full h-40 bg-standard/20 flex justify-center items-center '>
-                          <h2 className='text-standard text-xxxl'>
+                          <h2 className='text-standard text-4xl'>
                             {content.title}
                           </h2>
                       </div>
                     </div>
-                    <div className='bg-turquoise flex justify-center p-8 '>
+                    <div className='bg-blue flex justify-center p-8 '>
                           <p className='text-center max-w-5xl py-4 rounded-lg text-standard text-xl'>
                             {content.blogIntro}
                           </p>
                     </div>
                     <div className='w-full p-8  md:px-40 flex flex-col items-center'>
-                      <p className='pb-4 text-xxl'>
+                      <p className='pb-4 text-3xl'>
                         {content.whenToGoTitle}
                       </p>
                       <p className='max-w-5xl text-xl text-center'>
@@ -41,15 +41,15 @@ const WindsurfingIn = ({content}) => {
                           frameborder="0" 
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                           allowfullscreen
-                          className='rounded-lg shadow-lg shadow-turquoise/60'
+                          className='rounded-lg shadow-lg shadow-blue/60'
                         >
                       </iframe>
                     </div>
                     <div className='p-8  md:px-40'>
-                        <img src={content.windsurfingImgThreeSrc} alt={content.windsurfingImgThreeAlt} className='rounded-lg shadow-lg shadow-turquoise/60 lg:hidden' />
+                        <img src={content.windsurfingImgThreeSrc} alt={content.windsurfingImgThreeAlt} className='rounded-lg shadow-lg shadow-blue/60 lg:hidden' />
                       </div>
-                    <div className='p-8 pb-20 md:px-40 bg-turquoise text-standard'>
-                      <p className='text-xxl text-center'>
+                    <div className='p-8 pb-20 md:px-40 bg-blue text-standard'>
+                      <p className='text-3xl text-center'>
                         {content.whereToSailTitle}
                       </p>
                       <div className='grid grid-cols-1 lg:grid-cols-3  gap-8 pt-8'>
@@ -80,10 +80,10 @@ const WindsurfingIn = ({content}) => {
                         </div>
                       </div>
                       <div className='w-full p-8 md:px-40 flex justify-center'>
-                        <img src={content.jwMarriottImg} alt={content.jwMarriottImgAlt} className='rounded-lg shadow-lg shadow-turquoise/60 ' />
+                        <img src={content.jwMarriottImg} alt={content.jwMarriottImgAlt} className='rounded-lg shadow-lg shadow-blue/60 ' />
                       </div>
                       <div className='p-8 md:px-40 flex flex-col items-center'>
-                        <p className='pb-4 text-xxl text-center'>
+                        <p className='pb-4 text-3xl text-center'>
                           {content.whatWeDidTitle}
                         </p>
                         <p className='max-w-5xl text-xl text-center'>
@@ -92,11 +92,11 @@ const WindsurfingIn = ({content}) => {
                       </div>
                       
                       <div className='w-full p-8 pb-20 md:px-40 grid grid-cols-1 lg:grid-cols-2 gap-8 px-20 center'>
-                          <img src={content.windsurfingImgTwoSrc} alt={content.windsurfingImgTwoAlt} className='rounded-lg shadow-lg shadow-turquoise/60' />
-                          <img src={content.windsurfingImgThreeSrc} alt={content.windsurfingImgThreeAlt} className='rounded-lg hidden lg:flex shadow-lg shadow-turquoise/60' />
+                          <img src={content.windsurfingImgTwoSrc} alt={content.windsurfingImgTwoAlt} className='rounded-lg shadow-lg shadow-blue/60' />
+                          <img src={content.windsurfingImgThreeSrc} alt={content.windsurfingImgThreeAlt} className='rounded-lg hidden lg:flex shadow-lg shadow-blue/60' />
                         </div>
-                      <div className='w-full p-8 pb-20 md:px-40 bg-turquoise'>
-                          <p className='text-xxl text-center text-standard'>
+                      <div className='w-full p-8 pb-20 md:px-40 bg-blue'>
+                          <p className='text-3xl text-center text-standard'>
                               {content.rentalTitle}
                           </p>  
                         <div className='w-full grid lg:grid-cols-3 grid-cols-1 gap-8 items-center pt-8 '>
@@ -116,18 +116,18 @@ const WindsurfingIn = ({content}) => {
                         </div>
                       </div>
                       <div className='w-full p-8 md:px-40 flex flex-col items-center '>
-                        <p className='pb-8 text-xxl text-center'>
+                        <p className='pb-8 text-3xl text-center'>
                           {content.safetyTitle}
                         </p>
                         <p className='pb-8 max-w-5xl text-xl text-center'>
                           {content.safetyInfo}
                         </p>
                         <div className='w-full  flex justify-center py-8'>
-                          <img src={content.safetyImgSrc} alt={content.safetyImgAlt} className='rounded-lg w-full shadow-lg shadow-turquoise/60' />
+                          <img src={content.safetyImgSrc} alt={content.safetyImgAlt} className='rounded-lg w-full shadow-lg shadow-blue/60' />
                         </div>
                       </div>
-                      <div className='p-8  bg-turquoise text-standard  md:px-40 flex flex-col items-center'>
-                        <p className='pb-8 text-xxl text-center'>
+                      <div className='p-8  bg-blue text-standard  md:px-40 flex flex-col items-center'>
+                        <p className='pb-8 text-3xl text-center'>
                           {content.otherActivitiesTitle}
                         </p>
                         <p className='pb-8 max-w-5xl text-xl text-center'>
@@ -136,15 +136,15 @@ const WindsurfingIn = ({content}) => {
                       </div>
                       <div className='px-20 md:px-40 py-8'>
                         <div className='flex flex-col items-center'>
-                          <p className='pb-8 text-xxl text-center'>{content.whereToStayTitle}</p>
+                          <p className='pb-8 text-3xl text-center'>{content.whereToStayTitle}</p>
                           <p className='pb-8 max-w-5xl text-xl text-center'>{content.whereToStayInfo}</p>
                         </div>
                         <div className='w-full h-full flex flex-col lg:flex-row justify-between items-center '>
                           {content.accomodation.map(accom => {
                             return(
                               <div className='lg:py-0 p-8 min-w-4/6 group bg-standard '>
-                                  <a href={accom.accomLink} target='_blank' rel='noreferrer' className='flex flex-col items-center justify-center p-4 rounded-lg shadow-lg shadow-turquoise/60 group-hover:bg-turquoise/60 ease-in-out duration-500'>
-                                    <h1 className='pb-4 text-xl underline text-turquoise group-hover:text-standard ease-in-out duration-500'>{accom.accomTitle}</h1>
+                                  <a href={accom.accomLink} target='_blank' rel='noreferrer' className='flex flex-col items-center justify-center p-4 rounded-lg shadow-lg shadow-blue/60 group-hover:bg-blue/60 ease-in-out duration-500'>
+                                    <h1 className='pb-4 text-xl underline text-blue group-hover:text-standard ease-in-out duration-500'>{accom.accomTitle}</h1>
                                     <img src={accom.accomImgSrc} alt={accom.accomImgSrc} className='rounded-lg' width='300px' />  
                                   </a>
                                 </div>

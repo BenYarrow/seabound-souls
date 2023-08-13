@@ -55,7 +55,7 @@ const EgyptGallery = () => {
   return(
     <div className='w-3/6 h-auto py-8 flex justify-center'>
       <div className='w-full h-auto mx-8 sm:mx-4 flex justify-between items-center'>
-      <FaArrowAltCircleLeft className='text-icon text-turquoise cursor-pointer mx-4' onClick={prevSlide} />
+      <FaArrowAltCircleLeft className='text-icon text-blue cursor-pointer mx-4' onClick={prevSlide} />
 
         {egyptImages.map((image, index) => {
             return(
@@ -65,7 +65,7 @@ const EgyptGallery = () => {
             )
             })}
 
-      <FaArrowAltCircleRight className='text-icon text-turquoise cursor-pointer mx-4' onClick={nextSlide}/>
+      <FaArrowAltCircleRight className='text-icon text-blue cursor-pointer mx-4' onClick={nextSlide}/>
       </div>
       
     </div>
