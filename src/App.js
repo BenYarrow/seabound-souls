@@ -22,6 +22,9 @@ import Iceland from './DestComponents/Iceland';
 import CzechRepublic from './DestComponents/CzechRepublic';
 import Destinations from './DestComponents/Destinations';
 
+import Africa from './DestComponents/ContinentPages/Africa';
+import Europe from './DestComponents/ContinentPages/Europe';
+import NorthAmerica from './DestComponents/ContinentPages/NorthAmerica';
 
 
 function App() {
@@ -40,6 +43,11 @@ function App() {
             <Route path='/OurWork' element={<OurWork />}/>
             <Route path='/ContactUs' element={<ContactUs />}/>
           {/* DestinationComponents */}
+            {/* Continent Pages */}
+            <Route path='/Africa' element={<Africa />}/>
+            <Route path='/Europe' element={<Europe />}/>
+            <Route path='/NorthAmerica' element={<NorthAmerica />}/>
+
             <Route path='/Mauritius' element={<Mauritius />}/>
               <Route path='/WindsurfingInMauritius' element={<WindsurfingInMauritius />}/>
               <Route path='/StayingAtLux' element={<StayingAtLux />}/>

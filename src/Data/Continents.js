@@ -1,6 +1,7 @@
 export let continents = [
     {
       title: 'Africa',
+      linkTo: 'Africa',
       countries: [
         {
           location: 'Egypt',
@@ -27,6 +28,7 @@ export let continents = [
     },
     {
       title: 'Europe',
+      linkTo: '/Europe',
       countries: [
         {
           location: 'Czechia',
@@ -74,6 +76,7 @@ export let continents = [
     },
     {
       title: 'North America',
+      linkTo: '/NorthAmerica',
       countries: [
         {
           location: 'Canada',

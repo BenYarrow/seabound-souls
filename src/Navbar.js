@@ -7,6 +7,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { continents } from "./Data/Continents";
 
 const Navbar = () => {
+
   const destinationsPage = [
     {
       title: "Destinations",
@@ -127,16 +128,16 @@ const Navbar = () => {
                 >
                   {destinations.title}
                 </Link>
-                <div className=" hidden md:block absolute">
+                <div className=" hidden md:block absolute ">
                   {destinationDropdown.map((drop, index) => {
                     return (
                       <>
                         {isHovered && (
-                          <ul className="bg-standard opacity-60" key={index}>
-                            <li className="py-4">
+                          <ul className="bg-standard " key={index}>
+                            <li className="py-2 group hover:bg-blue">
                               <Link
-                                href=""
-                                className="text-blue font-navbar  text-xl md:text-3xl xl:text-4xl hover:cursor-pointer font-light uppercase tacking-wide  "
+                                to={drop.linkTo}
+                                className="text-blue font-navbar  text-xl md:text-3xl xl:text-4xl hover:cursor-pointer font-light uppercase tacking-wide group-hover:text-standard  "
                               >
                                 {drop.title}
                               </Link>
