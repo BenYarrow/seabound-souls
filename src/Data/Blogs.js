@@ -380,6 +380,182 @@ export let blogs = [
             }
         ]
     },
+    {
+        continent: 'europe',
+        country: 'greece',
+        blogTitle: 'windsurfing in greece',
+        blogData: [
+            {
+                title: 'Windsurfing in Vasiliki',
+                linkTo: '',
+                blogLinkImgSrc: '',
+                blogLinkImgAlt: '',
+                blogIntro: ``,
+                
+                    // Windsurfing Images
+                heroImgSrc: ``,
+                windsurfingImgOneSrc: ``,
+                windsurfingImgOneAlt: ``,
+                windsurfingImgTwoSrc: ``,
+                windsurfingImgTwoAlt: ``,
+                windsurfingImgThreeSrc: ``,
+                windsurfingImgThreeAlt: ``,
+                windsurfingImgFourSrc: ``,
+                windsurfingImgFourAlt: ``,
+                windsurfingImgFiveSrc: ``,
+                windsurfingImgFiveAlt: ``,
+                    // When to go
+                whenToGoTitle: ``,
+                whenToGoInfo: ``,
+                
+                    // Embed
+                embedSrc: ``,
+
+                    // Where to sail
+                whereToSailTitle: ``,
+                spotOneTitle: ``,
+                spotOneInfo: ``,
+                spotTwoTitle: ``,
+                spotTwoInfo: ``,
+                spotThreeTitle: ``,
+                spotThreeInfo: ``,
+                
+                    // What we did
+                whatWeDidTitle: ``,
+                whatWeDidInfo: ``,
+                
+                    //Rental info
+                rentalTitle: ``,    
+                rentalInfoOne: ``,
+                rentalInfoTwo: ``,
+                rentalImgSrc: ``,
+                rentalImgAlt: ``,
+
+                    // Safety
+                safetyTitle: ``,
+                safetyInfo: ``,
+                safetyImgSrc: ``,
+                safetyImgAlt:'',
+
+                    // Other Activities
+                otherActivitiesTitle: ``,
+                otherActivitiesInfo: ``,
+                
+                    // Where to stay
+                whereToStayTitle: ``,
+                whereToStayInfo: ``,
+                accomodation: [
+                    {
+                        accomTitle: ``,
+                        accomImgSrc: ``,
+                        accomImgAlt: ``,
+                        accomLink: ``,
+                    },
+                    {
+                        accomTitle: ``,
+                        accomImgSrc: ``,
+                        accomImgAlt: ``,
+                        accomLink: ``,
+                    },
+                    {
+                        accomTitle: ``,
+                        accomImgSrc: ``,
+                        accomImgAlt: ` `,
+                        accomLink: ``,
+                    },
+                ],
+                    // Outro
+                outroLocation: ``
+            }
+        ]
+    },
+    {
+        continent: 'north america',
+        country: 'canada',
+        blogTitle: 'Things to do in banff',
+        blogData: [
+            {   
+
+                title: 'Things to do in Banff',
+                linkTo: ``,
+                blogLinkImgSrc: ``,
+                blogLinkImgAlt: ``,
+                blogIntro: ``,
+                
+                recomendationOneTitle: ``,
+                recomendationOneInfo: ``,
+                recomendationOneImgOneSrc: ``,
+                recomendationOneImgOneAlt: ``,
+                recomendationOneImgTwoSrc: ``,
+                recomendationOneImgTwoAlt: ``,
+                recomendationOneImgThreeSrc: ``,
+                recomendationOneImgThreeAlt: ``,
+
+                recomendationTwoTitle: ``,
+                recomendationTwoInfo: ``,
+                recomendationTwoImgOneSrc: ``,
+                recomendationTwoImgOneAlt: ``,
+                recomendationTwoImgTwoSrc: ``,
+                recomendationTwoImgTwoAlt: ``,
+                recomendationTwoImgThreeSrc: ``,
+                recomendationTwoImgThreeAlt: ``,
+
+                recomendationThreeTitle: ``,
+                recomendationThreeInfo: ``,
+                recomendationThreeImgOneSrc: ``,
+                recomendationThreeImgOneAlt: ``,
+                recomendationThreeImgTwoSrc: ``,
+                recomendationThreeImgTwoAlt: ``,
+                recomendationThreeImgThreeSrc: ``,
+                recomendationThreeImgThreeAlt: ``,
+
+                recomendationFourTitle: ``,
+                recomendationFourInfo: ``,
+                recomendationFourImgOneSrc: ``,
+                recomendationFourImgOneAlt: ``,
+                // recomendationFourImgTwoSrc: ``,
+                // recomendationFourImgTwoAlt: ``,
+                // recomendationFourImgThreeSrc: ``,
+                // recomendationFourImgThreeAlt: ``,
+
+                recomendationFiveTitle: ``,
+                recomendationFiveInfo: ``,
+                recomendationFiveImgOneSrc: ``,
+                recomendationFiveImgOneAlt: ``,
+                recomendationFiveImgTwoSrc: ``,
+                recomendationFiveImgTwoAlt: ``,
+                recomendationFiveImgThreeSrc: ``,
+                recomendationFiveImgThreeAlt: ``,
+
+                recomendationSixTitle: ``,
+                recomendationSixInfo: ``,
+                recomendationSixImgOneSrc: ``,
+                recomendationSixImgOneAlt: ``,
+                recomendationSixImgTwoSrc: ``,
+                recomendationSixImgTwoAlt: ``,
+                // recomendationSixImgThreeSrc: ``,
+                // recomendationSixImgThreeAlt: ``,
+
+                recomendationSevenTitle: ``,
+                recomendationSevenInfo: ``,
+                recomendationSevenImgOneSrc: ``,
+                recomendationSevenImgOneAlt: ``,
+                recomendationSevenImgTwoSrc: ``,
+                recomendationSevenImgTwoAlt: ``,
+                recomendationSevenImgThreeSrc: ``,
+                recomendationSevenImgThreeAlt: ``,
+
+                recomendationEightTitle: ``,
+                recomendationEightInfo: ``,
+                recomendationEightImgOneSrc: ``,
+                recomendationEightImgOneAlt: ``,
+                recomendationEightImgTwoSrc: ``,
+                recomendationEightImgTwoAlt: ``,
+                recomendationEightImgThreeSrc: ``,
+                recomendationEightImgThreeAlt: ``,
+            }
+        ]
+    },
 
 ]
 

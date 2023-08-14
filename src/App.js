@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './Homepage';
-import OurWork from './OurWork';
 import ContactUs from './ContactUs';
 import Navbar from './Navbar';
+  import Destinations from './DestComponents/Destinations';
+  import AboutUs from './AboutUs';
 import Footer from './Footer';
+import Instagram from './Instagram';
 
 import Mauritius from './DestComponents/Mauritius';
   import WindsurfingInMauritius from './MauritiusComponents/WindsurfingInMauritius';
@@ -20,7 +22,7 @@ import England from './DestComponents/England';
 import Wales from './DestComponents/Wales';
 import Iceland from './DestComponents/Iceland';
 import CzechRepublic from './DestComponents/CzechRepublic';
-import Destinations from './DestComponents/Destinations';
+
 
 import Africa from './DestComponents/ContinentPages/Africa';
 import Europe from './DestComponents/ContinentPages/Europe';
@@ -40,7 +42,7 @@ function App() {
             <Route index element={<Homepage />}/>
             <Route path='/Homepage' element={<Homepage />}/>
             <Route path='/Destinations' element={<Destinations />}/>
-            <Route path='/OurWork' element={<OurWork />}/>
+            <Route path='/AboutUs' element={<AboutUs />}/>
             <Route path='/ContactUs' element={<ContactUs />}/>
           {/* DestinationComponents */}
             {/* Continent Pages */}
@@ -63,6 +65,7 @@ function App() {
             <Route path='/Greece' element={<Greece />}/>
 
           </Routes>
+        <Instagram />
         <Footer />  
       </Router>
     </div>

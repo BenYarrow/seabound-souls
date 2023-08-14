@@ -26,11 +26,11 @@ const CountryLink = ({ location, area, imageSrc, linkTo }) => {
             backgroundPosition: "center",
           }}
         >
-          <div className="w-full h-full flex justify-center items-center group-hover:bg-blue/40  ">
+          <div className="w-full h-full flex justify-center items-center group-hover:bg-blue/60  ">
             <div className="">
               <h2
                 id="location"
-                className="font-destinations text-standard text-center text-4xl md:text-6xl group-hover:text-8xl "
+                className="font-destinations text-standard text-center text-4xl md:text-6xl  "
               >
                 {location}
               </h2>
@@ -67,9 +67,9 @@ const Destinations = () => {
         <h1 className="text-4xl lg:text-6xl">Destinations</h1>
       </div>
       <div>
-        {continentsList.map((continent) => {
+        {continentsList.map((continent, index) => {
           return (
-            <div className="border-b-2 border-blue ">
+            <div className="border-b-2 border-blue " key={index}>
               <Continents
                 countries={continent.countries}
                 title={continent.title}
