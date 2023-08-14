@@ -32,7 +32,7 @@ const Navbar = () => {
   const navListItems = [
     {
       title: "Blog",
-      to: "/Blog",
+      to: "/BlogPage",
     },
     {
       title: "About Us",
@@ -50,19 +50,18 @@ const Navbar = () => {
 
   const navMenuHide = () => setNavIsHidden(true);
 
-  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
 
   useEffect(() => {
-    function handleResize() {
-      setInnerWidth(window.innerWidth);
 
-      if (innerWidth > 788) {
+    function handleResize() {
+
+      if (window.innerWidth > 788) {
         setNavIsHidden(true);
       }
     }
 
     window.addEventListener("resize", handleResize);
-  }, [innerWidth]);
+  }, []);
 
   return (
     <div className="w-screen sticky left-0 z-20">
@@ -78,7 +77,7 @@ const Navbar = () => {
             />
           </Link>
         </div>
-        <div className="absolute right-8">
+        <div className="absolute right-8 md:hidden ">
           {
             <FontAwesomeIcon
               icon={faBars}
@@ -86,7 +85,7 @@ const Navbar = () => {
               className={
                 !navIsHidden
                   ? "hidden"
-                  : "text-standard text-5xl flex md:hidden "
+                  : "text-standard text-5xl flex "
               }
             />
           }
@@ -97,7 +96,7 @@ const Navbar = () => {
               className={
                 navIsHidden
                   ? "hidden"
-                  : "text-standard text-5xl flex md:hidden "
+                  : "text-standard text-5xl flex  "
               }
             />
           }
@@ -106,7 +105,7 @@ const Navbar = () => {
         <div
           className={
             navIsHidden
-              ? "hidden md:flex items-center space-x-8 xl:space-x-16 pr-8 "
+              ? "hidden md:!flex items-center space-x-8 xl:space-x-16 pr-8 "
               : "w-full absolute top-32 bg-standard/90 z-10 h-auto md:hidden"
           }
         >
@@ -121,7 +120,7 @@ const Navbar = () => {
                   to={destinations.to}
                   className={
                     navIsHidden
-                      ? "text-standard font-navbar  text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide "
+                      ? "text-standard font-navbar text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide "
                       : "block font-standard text-blue text-2xl py-4 border-b-2 border-blue"
                   }
                   key={index}

@@ -5,6 +5,7 @@ import ContactUs from './ContactUs';
 import Navbar from './Navbar';
   import Destinations from './DestComponents/Destinations';
   import AboutUs from './AboutUs';
+  import BlogPage from './BlogPage';
 import Footer from './Footer';
 import Instagram from './Instagram';
 
@@ -42,6 +43,7 @@ function App() {
             <Route index element={<Homepage />}/>
             <Route path='/Homepage' element={<Homepage />}/>
             <Route path='/Destinations' element={<Destinations />}/>
+            <Route path="/BlogPage" element={<BlogPage />} /> 
             <Route path='/AboutUs' element={<AboutUs />}/>
             <Route path='/ContactUs' element={<ContactUs />}/>
           {/* DestinationComponents */}
