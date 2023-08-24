@@ -120,7 +120,7 @@ const Navbar = () => {
                   to={destinations.to}
                   className={
                     navIsHidden
-                      ? "text-standard font-navbar text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide "
+                      ? "text-standard font-title text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide "
                       : "block font-standard text-blue text-2xl py-4 border-b-2 border-blue"
                   }
                   key={index}
@@ -136,7 +136,7 @@ const Navbar = () => {
                             <li className="py-2 group hover:bg-blue">
                               <Link
                                 to={drop.linkTo}
-                                className="text-blue font-navbar  text-xl md:text-3xl xl:text-4xl hover:cursor-pointer font-light uppercase tacking-wide group-hover:text-standard  "
+                                className="text-blue font-title  text-xl md:text-3xl xl:text-4xl hover:cursor-pointer font-light uppercase tacking-wide group-hover:text-standard  "
                               >
                                 {drop.title}
                               </Link>
@@ -157,7 +157,7 @@ const Navbar = () => {
                 to={listItem.to}
                 className={
                   navIsHidden
-                    ? "text-standard font-navbar  text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide"
+                    ? "text-standard font-title  text-xl md:text-3xl xl:text-4xl hover:underline hover:cursor-pointer font-light uppercase tacking-wide"
                     : "block font-standard text-blue text-2xl py-4 border-b-2 border-blue"
                 }
                 key={index}

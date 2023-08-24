@@ -70,7 +70,7 @@ const BlogPage = () => {
         <button onClick={handleAllBlogs} class="mx-4 bg-blue">
           All Blogs
         </button>
-        <button onClick={handleWindsurfingBlogs} class="mx-4 bg-blue">
+        <button onClick={setFilteredBlogs(windsurfingBlogs)} class="mx-4 bg-blue">
           Set Windsurfing
         </button>
         <button onClick={handleAccomodationBlogs} class="mx-4 bg-blue">

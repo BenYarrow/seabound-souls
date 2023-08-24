@@ -67,7 +67,7 @@ function App() {
             <Route path='/Greece' element={<Greece />}/>
 
           </Routes>
-        <Instagram />
+        {/* <Instagram /> */}
         <Footer />  
       </Router>
     </div>

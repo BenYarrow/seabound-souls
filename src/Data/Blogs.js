@@ -4,6 +4,7 @@ export let blogs = [
         country: 'egypt',
         blogType: 'windsurfing',
         blogTitle: 'windsurfing in egypt',
+        featured: false,
         blogData: [
             {
                 title: 'Windsurfing in Dahab',
@@ -93,6 +94,7 @@ export let blogs = [
         country: 'egypt',
         blogType: 'accomodation',
         blogTitle: 'staying at the swiss resort',
+        featured: false,
         blogData: [
             {   
 
@@ -109,6 +111,7 @@ export let blogs = [
         country: 'egypt',
         blogType: 'things to do',
         blogTitle: 'things to do in egypt',
+        featured: false,
         blogData: [
             {   
 
@@ -197,6 +200,7 @@ export let blogs = [
         country: 'mauritius',
         blogType: 'windsurfing',
         blogTitle: 'windsurfing in mauritius',
+        featured: true,
         blogData: [
             {
                 title: 'Windsurfing in Mauritius',
@@ -287,6 +291,7 @@ export let blogs = [
         country: 'mauritius',
         blogType: 'accomodation',
         blogTitle: 'staying at lux le morne',
+        featured: true,
         blogData: [
             {   
 
@@ -302,6 +307,7 @@ export let blogs = [
         continent: 'africa',
         country: 'mauritius',
         blogTitle: 'things to do in mauritius',
+        featured: true,
         blogData: [
             {   
 
@@ -390,6 +396,7 @@ export let blogs = [
         country: 'greece',
         blogType: 'windsurfing',
         blogTitle: 'windsurfing in greece',
+        featured: false,
         blogData: [
             {
                 title: 'Windsurfing in Vasiliki',
@@ -480,6 +487,7 @@ export let blogs = [
         country: 'canada',
         blogType: 'things to do',
         blogTitle: 'Things to do in banff',
+        featured: false,
         blogData: [
             {   
 

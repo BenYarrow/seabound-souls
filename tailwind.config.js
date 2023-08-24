@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         standard: "'Glacial Indifference', sans-serif",
-        navbar: "Donau Neue",
+        title: "Donau Neue",
         destinations: "Black Bones Personal Use",
       },
       colors: {
