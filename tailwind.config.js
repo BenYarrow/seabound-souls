@@ -16,22 +16,7 @@ module.exports = {
     },
 
   },
-  plugins: [
-		({ addComponents, theme }) => {
-			addComponents({
-				// Extending container in the normal way does not allow for max widths to be changed
-				'.container': {
-					margin: '0 auto',
-					padding: '0 1rem',
-                    width: '100%',
 
-					'@screen lg': {
-						padding: '0 1.5rem'
-					}
-				}
-			}, ['responsive']);
-		}
-    ],
 
 }
 

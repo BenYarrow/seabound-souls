@@ -1,9 +1,0 @@
-#hero-section {
-    background-image: url('/public/Background-Images/hero-background.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    position: relative;
-    height: calc(100vh - 8rem);
-}
-

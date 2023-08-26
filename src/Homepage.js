@@ -1,11 +1,10 @@
 import React from "react";
-import "./Css/Homepage.css";
 import { blogs } from "./Data/Blogs";
 import FeaturedBlogLinks from "./HomepageComponents/FeaturedBlogLinks";
 import { text } from "@fortawesome/fontawesome-svg-core";
 
 function Homepage() {
-  const vassBay = "Background-Images/Vass-bay.jpg";
+  const heroImage = "Background-Images/hero-background.jpg";
 
   const featuredBlogs = blogs
     .map((blog) => {
@@ -20,10 +19,18 @@ function Homepage() {
 
   return (
     <div className="">
-      <div id="hero-section"></div>
+      {/* <div id="hero-section"></div> */}
+         <section
+          className="w-screen h-screen object-center bg-cover bg-no-repeat"
+          style={{
+            backgroundImage: `url(${heroImage})`,
+            backgroundRepeat: "no-repeat",
+          }}
+        > 
+        </section> 
       <div className="w-full">
 
-        <section className="w-full py-16 bg-standard text-blue flex justify-center ">
+        <section className="w-full py-16 bg-blue text-standard flex justify-center ">
           <div className="max-w-4xl flex flex-col space-y-8">
 
             <h3 className={headingClasses}>Welcome to Seabound Souls!</h3>
@@ -66,6 +73,21 @@ function Homepage() {
           </div>
         </section>
 
+        <section>
+          <div className="bg-standard text-blue p-8 xl:p-16">
+            <h3 className="text-left text-3xl uppercase pb-8">
+              Latest Blogs
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+              {featuredBlogs.map((blog) => {
+                return blog.blogData.map((data) => {
+                  return <FeaturedBlogLinks {...data} />;
+                });
+              })}
+            </div>
+          </div>
+        </section>
+
         <section className="w-full py-16 font-standard  text-standard bg-blue flex justify-evenly">
           <div className="max-w-4xl flex flex-col space-y-4 items-center justify-around">
             <p className="text-4xl md:text-3xl lg:text-4xl text-center font-title tracking-widest leading-loose">
@@ -86,20 +108,6 @@ function Homepage() {
         > 
         </section> */}
 
-        <section>
-          <div className="bg-standard text-blue p-8 xl:p-16">
-            <h3 className="text-left text-3xl uppercase pb-8">
-              Latest Blogs
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
-              {featuredBlogs.map((blog) => {
-                return blog.blogData.map((data) => {
-                  return <FeaturedBlogLinks {...data} />;
-                });
-              })}
-            </div>
-          </div>
-        </section>
       </div>
     </div>
   );
