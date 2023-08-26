@@ -17,10 +17,9 @@ function Homepage() {
     const textClasses = 'text-lg'
 
   return (
-    <div className="">
-      {/* <div id="hero-section"></div> */}
+    <div>
          <section
-          className="w-screen h-screen object-center bg-cover bg-no-repeat"
+          className="w-screen h-screen bg-cover  bg-no-repeat bg-center"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundRepeat: "no-repeat",
