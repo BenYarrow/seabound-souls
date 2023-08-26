@@ -1,7 +1,6 @@
 import React from "react";
 import { blogs } from "./Data/Blogs";
 import FeaturedBlogLinks from "./HomepageComponents/FeaturedBlogLinks";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 function Homepage() {
   const heroImage = "Background-Images/hero-background.jpg";
@@ -78,7 +77,7 @@ function Homepage() {
             <h3 className="text-left text-3xl uppercase pb-8">
               Latest Blogs
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+            <div class="grid grid-cols-1 px-1/4 md:grid-cols-3 gap-16">
               {featuredBlogs.map((blog) => {
                 return blog.blogData.map((data) => {
                   return <FeaturedBlogLinks {...data} />;
