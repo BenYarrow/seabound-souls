@@ -6,7 +6,6 @@ let egyptBlogs = blogs.filter(location => location.country === 'egypt')
 
 
 
-
 const BlogLink = () => {
   return(
     <div className='grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-20 text-blue font-standard mb-8'>

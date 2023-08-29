@@ -22,8 +22,8 @@ const Navbar = () => {
       to: "/AboutUs",
     },
     {
-      title: "Destinations",
-      to: "/Destinations",
+      title: "Travel",
+      to: "/Travel",
     },
     {
       title: "Blog",
@@ -68,14 +68,14 @@ const Navbar = () => {
 
               </div>
                 
-              <div className={mobileNav ? 'h-[calc(100vh-9rem)] flex flex-col justify-evenly items-start pl-8' : 'hidden md:flex md:justify-center md:space-x-20 lg:space-x-32 uppercase text-3xl font-title'}>
+              <div className={mobileNav ? 'h-[calc(100vh-9rem)] flex flex-col justify-evenly items-start pl-8' : 'hidden md:flex md:justify-center md:space-x-20 lg:space-x-32'}>
                   {navListItems.map((listItem, index) => {
                     return (
                       <button onClick={hideMobileNav}>
                         <Link
                           to={listItem.to}
                           key={index}
-                          className="text-3xl font-title"
+                          className="relative text-xl font-standard uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-black after:transition-all after:duration-300"
                         >
                           {listItem.title}
                         </Link>

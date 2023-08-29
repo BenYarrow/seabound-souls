@@ -2,7 +2,7 @@ import React from "react";
 
 const Heading = (props) => {
     return (
-        <h3 className="text-4xl lg:text-6xl font-title tracking-wider uppercase py-8">
+        <h3 className="text-4xl lg:text-4xl tracking-wider uppercase font-standard text-black text-center py-12">
             {props.title}
         </h3>
     )

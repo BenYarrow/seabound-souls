@@ -5,12 +5,13 @@ export let blogs = [
         blogType: 'windsurfing',
         blogTitle: 'windsurfing in egypt',
         featured: false,
+        isVisible: true,
         blogLinkData: [
             {
                 
                 title: 'Windsurfing in Dahab',
                 linkTo: '/WindsurfingInEgypt',
-                blogLinkImgSrc: '',
+                blogLinkImgSrc: './Egypt-Images/Dahab-Beach.jpg',
                 blogLinkImgAlt: 'Windsurfing in Egypt',
                 blogIntro: `windsurfing in dahab blog intro `,
 
@@ -23,12 +24,13 @@ export let blogs = [
         blogType: 'accomodation',
         blogTitle: 'staying at the swiss resort',
         featured: false,
+        isVisible: true,
         blogLinkData: [
             {   
 
                 title: 'Staying at the Swiss Resort',
                 linkTo: `/StayingAtSwiss`,
-                blogLinkImgSrc: ``,
+                blogLinkImgSrc: `./Egypt-Images/Dahab-Swiss-Inn-1.jpg`,
                 blogLinkImgAlt: 'Swiss Resort, Dahab',
                 blogIntro: `swiss hotel intro`,
 
@@ -41,6 +43,7 @@ export let blogs = [
         blogType: 'things to do',
         blogTitle: 'things to do in egypt',
         featured: false,
+        isVisible: true,
         blogLinkData: [
             {   
 
@@ -59,12 +62,13 @@ export let blogs = [
         blogType: 'windsurfing',
         blogTitle: 'windsurfing in mauritius',
         featured: true,
+        isVisible: true,
         blogLinkData: [
             {
 
                 title: 'Windsurfing in Mauritius',
                 linkTo: '/WindsurfingInMauritius',
-                blogLinkImgSrc: '/Mauritius-Images/Windsurfing-1.jpg',
+                blogLinkImgSrc: './Mauritius-Images/Windsurfing-1.jpg',
                 blogLinkImgAlt: 'Windsurfing in Mauritius',
                 blogIntro: `Mauritius is a fantastic destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds. Whether you're a beginner or an experienced windsurfer, there are plenty of spots around the island to enjoy this exhilarating water sport. `,
                 
@@ -77,6 +81,7 @@ export let blogs = [
         blogType: 'accomodation',
         blogTitle: 'staying at lux le morne',
         featured: true,
+        isVisible: true,
         blogLinkData: [
             {   
 
@@ -93,6 +98,7 @@ export let blogs = [
         country: 'mauritius',
         blogTitle: 'things to do in mauritius',
         featured: true,
+        isVisible: true,
         blogLinkData: [
             {   
                 title: 'Things to do in Mauritius',
@@ -110,6 +116,7 @@ export let blogs = [
         blogType: 'windsurfing',
         blogTitle: 'windsurfing in greece',
         featured: false,
+        isVisible: false,
         blogLinkData: [
             {
 
@@ -128,6 +135,7 @@ export let blogs = [
         blogType: 'things to do',
         blogTitle: 'Things to do in banff',
         featured: false,
+        isVisible: true,
         blogLinkData: [
             {   
                 title: 'Things to do in Banff',
