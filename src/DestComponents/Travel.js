@@ -27,19 +27,22 @@ const northAmericaBlogs = allBlogs.filter(continent => continent.continent === '
 
 const BlogLink = ({ title, blogLinkImgSrc, linkTo }) => {
   return (
-    <div className="w-80 group font-standard border-b-[1px] border-slate">
+    <div className="group font-standard border-b-[1px] border-blue/40 ">
       <Link to={linkTo}>
-        <div
-          className="aspect-square group "
-          style={{
-            backgroundImage: `url(${blogLinkImgSrc})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        >
+        <div className="w-80 h-80 overflow-hidden">
+          <div
+            className="aspect-square group-hover:scale-110 transition duration-700 "
+            style={{
+              backgroundImage: `url(${blogLinkImgSrc})`,
+              backgroundSize: "cover",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center",
+            }}
+          >
 
+          </div>
         </div>
+
       </Link>
         <h2 className="font-standard text-black text-left text-xl py-2">
           {title}
@@ -52,7 +55,7 @@ const Travel = () => {
 
   return (
     <div className="w-full pt-[8rem] md:pt-[12rem] px-8 lg:px-20 pb-16 flex justify-center">
-      <div className="md:border-t-[1px] md:border-slate flex flex-col ">
+      <div className="md:border-t-[1px] md:border-blue/40 flex flex-col ">
 
         <Heading 
           title='Africa'
