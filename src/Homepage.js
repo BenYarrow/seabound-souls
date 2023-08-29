@@ -78,7 +78,7 @@ function Homepage() {
             </h3>
             <div class="grid grid-cols-1 px-1/4 md:grid-cols-3 gap-16">
               {featuredBlogs.map((blog) => {
-                return blog.blogData.map((data) => {
+                return blog.blogLinkData.map((data) => {
                   return <FeaturedBlogLinks {...data} />;
                 });
               })}
@@ -94,18 +94,6 @@ function Homepage() {
             </p>
           </div>
         </section>
-
-        {/* <section
-          className="w-full h-[40rem] object-cover"
-          style={{
-            backgroundImage: `url(${vassBay})`,
-            backgroundSize: "cover",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "center",
-          }}
-        > 
-        </section> */}
-
       </div>
     </div>
   );

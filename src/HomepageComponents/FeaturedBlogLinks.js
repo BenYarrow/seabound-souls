@@ -20,7 +20,7 @@ const FeaturedBlogLinks = ({
                             backgroundPosition: "center",
                     }}>
                         <div className="hidden w-full h-full group-hover:bg-standard/60 group-hover:flex group-hover:justify-center  group-hover:items-center">
-                            <h3 class="text-xl xl:text-3xl uppercase text-blue font-bold">
+                            <h3 className="text-xl font-title xl:text-3xl uppercase text-blue font-bold">
                                 {title}
                             </h3>
                         </div>

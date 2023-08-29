@@ -22,15 +22,7 @@ import Wales from './DestComponents/Wales';
 import Iceland from './DestComponents/Iceland';
 import CzechRepublic from './DestComponents/CzechRepublic';
 
-
-import Africa from './DestComponents/ContinentPages/Africa';
-import Europe from './DestComponents/ContinentPages/Europe';
-import NorthAmerica from './DestComponents/ContinentPages/NorthAmerica';
-
-
 function App() {
-
-
 
   return (
       <Router>
@@ -43,11 +35,6 @@ function App() {
             <Route path='/AboutUs' element={<AboutUs />}/>
             <Route path='/ContactUs' element={<ContactUs />}/>
           {/* DestinationComponents */}
-            {/* Continent Pages */}
-            <Route path='/Africa' element={<Africa />}/>
-            <Route path='/Europe' element={<Europe />}/>
-            <Route path='/NorthAmerica' element={<NorthAmerica />}/>
-
             <Route path='/Mauritius' element={<Mauritius />}/>
               <Route path='/WindsurfingInMauritius' element={<WindsurfingInMauritius />}/>
               <Route path='/StayingAtLux' element={<StayingAtLux />}/>

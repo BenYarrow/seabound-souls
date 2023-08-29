@@ -42,7 +42,7 @@ export let continents = [
           area: 'various places',
           imageSrc: '/Destinations-Images/England.jpg',
           linkTo: '/England',
-          isEnabled: true,
+          isEnabled: false,
         },
         {
           location: 'Greece',

@@ -1,17 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { continents } from "../Data/Continents";
+import Heading from "../Components/Heading";
 
-let continentsList = continents
-  .map((continent) => {
-    continent.countries = JSON.parse(
-      JSON.stringify(
-        continent.countries.filter((country) => country.isEnabled === true)
-      )
-    );
-    return continent;
-  })
-  .filter((continents) => continents.countries.length > 0);
+const continentsList = continents.filter(
+    (continent) => continent.countries.some((country) => country.isEnabled)
+  )
+
+const comingSoonList = continents.map(
+    (continent) => continent.countries.filter((country) => !country.isEnabled)
+).flat(1)
+
+
 
 const CountryLink = ({ location, area, imageSrc, linkTo }) => {
   return (
@@ -52,7 +52,7 @@ const Continents = (props) => {
         <h2 className="text-4xl">{props.title}</h2>
       </div>
       <div className="grid grid-cols-2  lg:grid-cols-3 gap-8 ">
-        {props.countries.map((country) => (
+        {props.countries.filter(country => country.isEnabled).map((country) => (
           <CountryLink {...country} />
         ))}
       </div>
@@ -60,11 +60,39 @@ const Continents = (props) => {
   );
 };
 
-const Destinations = () => {
+const ComingSoon = ({ location, imageSrc }) => {
   return (
-    <div className="container text-blue ">
-      <div className="text-center border-b-2 border-blue py-8">
-        <h1 className="text-4xl lg:text-6xl">Destinations</h1>
+    <div className="w-80 pb-20">
+        <div
+          className="aspect-square"
+          style={{
+            backgroundImage: `url(${imageSrc})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+          }}
+        >
+          <div className="w-full h-full flex justify-center items-center">
+              <h2
+                className="font-destinations text-standard text-center text-4xl"
+              >
+                {location}
+              </h2>
+          </div>
+        </div>
+
+    </div>
+  );
+};
+
+const Destinations = () => {
+
+  return (
+    <div className="w-full pt-[12rem] px-20 text-blue ">
+      <div className="text-left border-b-2 border-blue py-8">
+        <Heading
+          title='destinations'
+        />
       </div>
       <div>
         {continentsList.map((continent, index) => {
@@ -77,6 +105,20 @@ const Destinations = () => {
             </div>
           );
         })}
+      </div>
+      <div className="w-full flex flex-col">
+        <Heading
+          title='coming soon'
+        />
+        <div className="w-full flex justify-center gap-4">
+          {comingSoonList.map(country => {
+            return(
+              <div>
+                <ComingSoon {...country} />
+              </div>
+            )
+          })}
+        </div>
       </div>
     </div>
   );

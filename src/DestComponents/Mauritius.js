@@ -12,7 +12,7 @@ const BlogLink = () => {
       {mauritiusBlogs.map((blogLink) => {
         return (
           <div className=" p-4   hover:bg-blue/60 hover:text-standard duration-200 ease-out hover:ease-in">
-            {blogLink.blogData.map((data) => {
+            {blogLink.blogLinkData.map((data) => {
               return (
                 <Link to={data.linkTo}>
                   <div className="flex flex-col w-full h-auto  ">

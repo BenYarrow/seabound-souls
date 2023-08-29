@@ -68,7 +68,7 @@ const Navbar = () => {
 
               </div>
                 
-              <div className={mobileNav ? 'h-[calc(100vh-9rem)] flex flex-col justify-evenly items-start pl-8' : 'hidden md:flex md:justify-center md:space-x-16 uppercaset text-3xl font-title'}>
+              <div className={mobileNav ? 'h-[calc(100vh-9rem)] flex flex-col justify-evenly items-start pl-8' : 'hidden md:flex md:justify-center md:space-x-20 lg:space-x-32 uppercase text-3xl font-title'}>
                   {navListItems.map((listItem, index) => {
                     return (
                       <button onClick={hideMobileNav}>
