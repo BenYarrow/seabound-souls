@@ -19,7 +19,7 @@ function Homepage() {
   return (
     <div>
          <section
-          className="w-screen h-screen bg-cover  bg-no-repeat bg-center"
+          className="w-screen h-screen bg-cover bg-center lg:bg-top"
           style={{
             backgroundImage: `url(${heroImage})`,
             backgroundRepeat: "no-repeat",
