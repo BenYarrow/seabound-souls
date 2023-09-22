@@ -2,29 +2,9 @@ export let blogs = [
     {
         continent: 'africa',
         country: 'egypt',
-        blogType: 'windsurfing',
-        blogTitle: 'windsurfing in egypt',
-        featured: false,
-        isVisible: true,
-        blogLinkData: [
-            {
-                
-                title: 'Windsurfing in Dahab',
-                linkTo: '/WindsurfingInEgypt',
-                blogLinkImgSrc: './Egypt-Images/Dahab-Beach.jpg',
-                blogLinkImgAlt: 'Windsurfing in Egypt',
-                blogIntro: `windsurfing in dahab blog intro `,
-
-            }
-        ]
-    },
-    {
-        continent: 'africa',
-        country: 'egypt',
         blogType: 'accomodation',
         blogTitle: 'staying at the swiss resort',
         featured: false,
-        isVisible: true,
         blogLinkData: [
             {   
 
@@ -43,7 +23,6 @@ export let blogs = [
         blogType: 'things to do',
         blogTitle: 'things to do in egypt',
         featured: false,
-        isVisible: true,
         blogLinkData: [
             {   
 
@@ -59,29 +38,9 @@ export let blogs = [
     {
         continent: 'africa',
         country: 'mauritius',
-        blogType: 'windsurfing',
-        blogTitle: 'windsurfing in mauritius',
-        featured: true,
-        isVisible: true,
-        blogLinkData: [
-            {
-
-                title: 'Windsurfing in Mauritius',
-                linkTo: '/WindsurfingInMauritius',
-                blogLinkImgSrc: './Mauritius-Images/Windsurfing-In-Mauritius/Ben-1.jpg',
-                blogLinkImgAlt: 'Windsurfing in Mauritius',
-                blogIntro: `Mauritius is a fantastic destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds. Whether you're a beginner or an experienced windsurfer, there are plenty of spots around the island to enjoy this exhilarating water sport. `,
-                
-            }
-        ]
-    },
-    {
-        continent: 'africa',
-        country: 'mauritius',
         blogType: 'accomodation',
         blogTitle: 'staying at lux le morne',
         featured: true,
-        isVisible: true,
         blogLinkData: [
             {   
 
@@ -98,7 +57,6 @@ export let blogs = [
         country: 'mauritius',
         blogTitle: 'things to do in mauritius',
         featured: true,
-        isVisible: true,
         blogLinkData: [
             {   
                 title: 'Things to do in Mauritius',
@@ -106,25 +64,6 @@ export let blogs = [
                 blogLinkImgSrc: `Mauritius-Images/mauritius-things-to-do-beach-2.jpg`,
                 blogLinkImgAlt: `Things to do in mauritius`,
                 blogIntro: `Mauritius is a small island nation with a lot to offer, from stunning beaches to thrilling activities and delicious food. If you're planning a trip to Mauritius, there are many things to do and see. Here are some of the best things we did during our time in Mauritius.`,
-                
-            }
-        ]
-    },
-    {
-        continent: 'europe',
-        country: 'greece',
-        blogType: 'windsurfing',
-        blogTitle: 'windsurfing in greece',
-        featured: false,
-        isVisible: false,
-        blogLinkData: [
-            {
-
-                title: 'Windsurfing in Vasiliki',
-                linkTo: '',
-                blogLinkImgSrc: '',
-                blogLinkImgAlt: '',
-                blogIntro: ``,
                 
             }
         ]

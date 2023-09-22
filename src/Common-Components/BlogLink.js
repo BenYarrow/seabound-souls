@@ -5,7 +5,8 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 const BlogLink = ({
     linkTo,
-    title,
+    location,
+    blogIntro,
     blogLinkImgSrc,
   }) => {
 
@@ -23,7 +24,7 @@ const BlogLink = ({
     return(
             <Link ref={ref} to={linkTo}>
                 <motion.div 
-                    className="flex flex-col justify-between h-full space-y-4 w-80 aspect-square overflow-hidden border-b border-blue/20"
+                    className="flex flex-col justify-between h-full space-y-4 w-full overflow-hidden border-b border-blue/20"
                     variants={{
                         hidden: {opacity: 0, y: 75},
                         visible: {opacity: 1, y: 0},
@@ -36,7 +37,7 @@ const BlogLink = ({
                       }}
                 >
                     <div 
-                        className={blogLinkImgSrc ? 'w-full aspect-square hover:scale-105 transition duration-300' : 'w-full aspect-square bg-blue'}
+                        className={blogLinkImgSrc ? 'w-full aspect-[5/4] hover:scale-105 transition duration-300' : 'w-full aspect-square bg-blue'}
                         style={{
                             backgroundImage: `url(${blogLinkImgSrc})`,
                             backgroundSize: "cover",
@@ -44,9 +45,13 @@ const BlogLink = ({
                             backgroundPosition: "center",
                     }}>
                     </div>
-                      <h3 className="text-xl font-standard uppercase text-black pb-2">
-                          {title}
-                      </h3>
+
+                    <h3 className="text-xl font-standard text-white pb-2">
+                        {location}
+                    </h3>
+                    <p>
+                      {blogIntro}
+                    </p>
                 </motion.div>
             </Link>
         

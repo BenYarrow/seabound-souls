@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
 
-    <nav class="container mx-auto relative">
+    <nav className="container mx-auto relative">
 
       <div className="w-full h-[4rem] flex items-center ">
         

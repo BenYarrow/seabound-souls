@@ -19,7 +19,7 @@ const GridImageDisplay = (props) => {
     const backgroundImageClasses = 'lg:absolute w-full h-full object-cover bg-center hover:scale-105 transition duration-300'
     
     return (
-        <div ref={ref} class="w-full p-12">
+        <div ref={ref} className="w-full p-12">
             <motion.div  
                 className="grid grid-cols-1 md:grid-cols-2 grid-rows-1 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-3 gap-4"
                 variants={{
@@ -33,14 +33,14 @@ const GridImageDisplay = (props) => {
                     delay: 0.5,
                   }}
             >
-                <div class="relative aspect-square overflow-hidden lg:row-span-2 lg:row-start-1 lg:col-start-1 lg:col-span-2">
+                <div className="relative aspect-square overflow-hidden lg:row-span-2 lg:row-start-1 lg:col-start-1 lg:col-span-2">
                     <img
                         className={backgroundImageClasses}
                         src={props.imageOne}
                         alt=""
                     /> 
                 </div>
-                <div class="relative overflow-hidden lg:col-start-3 lg:col-span-2">
+                <div className="relative overflow-hidden lg:col-start-3 lg:col-span-2">
                     <img 
                         className={backgroundImageClasses}
                         src={props.imageTwo}
@@ -48,14 +48,14 @@ const GridImageDisplay = (props) => {
                     /> 
                 </div>
 
-                <div class="relative overflow-hidden lg:row-start-3 lg:col-start-1 lg:col-span-2">
+                <div className="relative overflow-hidden lg:row-start-3 lg:col-start-1 lg:col-span-2">
                     <img 
                         className={backgroundImageClasses}
                         src={props.imageThree}
                         alt=""
                     /> 
                 </div>
-                <div class="relative overflow-hidden lg:col-start-3 lg:col-span-2 lg:row-start-2 lg:row-span-2">
+                <div className="relative overflow-hidden lg:col-start-3 lg:col-span-2 lg:row-start-2 lg:row-span-2">
                 
                     <img 
                         className={backgroundImageClasses}
