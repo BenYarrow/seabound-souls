@@ -68,7 +68,7 @@ export let blogs = [
 
                 title: 'Windsurfing in Mauritius',
                 linkTo: '/WindsurfingInMauritius',
-                blogLinkImgSrc: './Mauritius-Images/Windsurfing-1.jpg',
+                blogLinkImgSrc: './Mauritius-Images/Windsurfing-In-Mauritius/Ben-1.jpg',
                 blogLinkImgAlt: 'Windsurfing in Mauritius',
                 blogIntro: `Mauritius is a fantastic destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds. Whether you're a beginner or an experienced windsurfer, there are plenty of spots around the island to enjoy this exhilarating water sport. `,
                 

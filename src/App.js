@@ -1,26 +1,26 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './Homepage';
-import ContactUs from './ContactUs';
-import Navbar from './Navbar';
-  import Travel from './DestComponents/Travel';
-  import AboutUs from './AboutUs';
+import ContactUs from './NavBar-Pages/ContactUs';
+import Navbar from './NavBar-Pages/Navbar';
+  import Travel from './NavBar-Pages/Travel';
+  import AboutUs from './NavBar-Pages/AboutUs';
 import Footer from './Footer';
 
-import Mauritius from './DestComponents/Mauritius';
+import Mauritius from './Countries/Mauritius';
   import WindsurfingInMauritius from './MauritiusComponents/WindsurfingInMauritius';
   import StayingAtLux from './MauritiusComponents/StayingAtLux';
   import ThingsToDoInMauritius from './MauritiusComponents/ThingsToDoInMauritius';
 
-import SouthAfrica from './DestComponents/SouthAfrica';
-import Egypt from './DestComponents/Egypt';
+import SouthAfrica from './Countries/SouthAfrica';
+import Egypt from './Countries/Egypt';
   import WindsurfingInEgypt from './EgyptComponents/WindsurfingInEgypt';
-import Canada from './DestComponents/Canada';
-import Greece from './DestComponents/Greece';
-import England from './DestComponents/England';
-import Wales from './DestComponents/Wales';
-import Iceland from './DestComponents/Iceland';
-import CzechRepublic from './DestComponents/CzechRepublic';
+import Canada from './Countries/Canada';
+import Greece from './Countries/Greece';
+import England from './Countries/England';
+import Wales from './Countries/Wales';
+import Iceland from './Countries/Iceland';
+import CzechRepublic from './Countries/CzechRepublic';
 
 function App() {
 
@@ -50,7 +50,6 @@ function App() {
             <Route path='/Greece' element={<Greece />}/>
 
           </Routes>
-        {/* <Instagram /> */}
         <Footer />  
       </Router>
   );
