@@ -20,6 +20,8 @@ function Homepage() {
   })
   .filter((featured) => featured.featured === true);
 
+  const blogGridClasses = 'grid grid-cols-1 lg:grid-cols-3 gap-4'
+
   return (
     <div>
         <section 
@@ -34,7 +36,7 @@ function Homepage() {
       <section 
         className="w-full py-20 container mx-auto"
       >
-        <div className="grid grid-cols-1 lg::grid-cols-2 xl:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
           
           <div className="flex flex-col items-center space-8-12 xl:col-span-2">
             <h3 className="font-title text-4xl lg:text-7xl lg:max-w-2xl text-center uppercase text-blue pb-8 border-b-[1px] border-blue">
@@ -56,7 +58,7 @@ function Homepage() {
             </div>
           </div>
 
-          <div class="w-full bg-cover bg-center"         
+          <div class="w-full bg-cover bg-center xl:col-span-1"         
             style={{
             backgroundImage: `url(${destinationImage})`,
             backgroundRepeat: "no-repeat",
@@ -78,10 +80,10 @@ function Homepage() {
               Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
+          <div className={blogGridClasses}>
             {featuredDestinationBlogs.map((blog) => {
               return blog.blogLinkData.map((data) => {
-                return <BlogLink {...data} />;
+                return <BlogLink {...data} textColour='text-white' />;
               });
             })}
           </div>
@@ -98,10 +100,10 @@ function Homepage() {
               Follow our adventures as we travel and windsurf our way around the world
             </p>
           </div>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 ">
+          <div className={blogGridClasses}>
             {featuredBlogs.map((blog) => {
               return blog.blogLinkData.map((data) => {
-                return <BlogLink {...data} />;
+                return <BlogLink {...data} textColour='text-blue'/>;
               });
             })}
           </div>

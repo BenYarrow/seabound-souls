@@ -45,6 +45,7 @@ export let blogs = [
             {   
 
                 title: 'Staying at Lux, Le Morne',
+                location: 'Lux Le Morne, Mauritius',
                 linkTo: `/StayingAtLux`,
                 blogLinkImgSrc: `/Mauritius-Images/Mauritius-Lux-3.jpg`,
                 blogLinkImgAlt: 'Lux, Le Morne Resort',
@@ -60,6 +61,7 @@ export let blogs = [
         blogLinkData: [
             {   
                 title: 'Things to do in Mauritius',
+                location: 'Mauritius, Africa',
                 linkTo: `/ThingsToDoInMauritius`,
                 blogLinkImgSrc: `Mauritius-Images/mauritius-things-to-do-beach-2.jpg`,
                 blogLinkImgAlt: `Things to do in mauritius`,

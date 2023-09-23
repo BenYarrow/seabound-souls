@@ -8,6 +8,7 @@ const BlogLink = ({
     location,
     blogIntro,
     blogLinkImgSrc,
+    textColour
   }) => {
 
     const ref = useRef(null)
@@ -37,7 +38,7 @@ const BlogLink = ({
                       }}
                 >
                     <div 
-                        className={blogLinkImgSrc ? 'w-full aspect-[5/4] hover:scale-105 transition duration-300' : 'w-full aspect-square bg-blue'}
+                        className={blogLinkImgSrc ? 'aspect-[5/4] hover:scale-105 transition duration-300' : 'w-full aspect-[5/4] bg-blue'}
                         style={{
                             backgroundImage: `url(${blogLinkImgSrc})`,
                             backgroundSize: "cover",
@@ -46,10 +47,10 @@ const BlogLink = ({
                     }}>
                     </div>
 
-                    <h3 className="text-xl font-standard text-white pb-2">
+                    <h3 className={`${textColour} text-xl font-standard pb-4 `}>
                         {location}
                     </h3>
-                    <p>
+                    <p className={`${textColour} text-xl font-standard`}>
                       {blogIntro}
                     </p>
                 </motion.div>

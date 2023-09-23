@@ -90,6 +90,7 @@ const Navbar = () => {
               return (
                 <div>
                     <Link
+                      onClick={hideMobileNav}
                       to={listItem.to}
                       key={index}
                       className="relative text-xl text-blue font-standard uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-black after:transition-all after:duration-300"
