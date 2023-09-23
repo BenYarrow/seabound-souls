@@ -1,40 +1,78 @@
 import React from "react";
-import './Css/Footer.css';
 import {Link} from 'react-router-dom';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons"
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { IconBase } from "react-icons";
 
 function Footer() {
-    return(
-        <div id='footer' className="w-full h-[8rem] flex justify-between items-center  text-standard text-sm font-standard">
-            <div className="w-full h-full flex justify-start ml-8 ">
-                <ul className="h-full w-full flex justify-start items-center">
-                    <li className="">
-                        Website by Yarrow Travels
-                    </li>
-                </ul>
-            </div>
-            <div className="w-full h-full flex justify-end text-xl ">
-                <ul className="w-2/4 h-full flex justify-evenly items-center ">
-                    <li>
-                        <a href='https://www.instagram.com/yarrowtravels/' target='_blank' rel="noreferrer">
-                            <FontAwesomeIcon icon={faInstagram} className='cursor-pointer'/>
-                        </a>  
-                    </li>
-                    <li>
-                        <a href="tel:+447309067164">
-                            <FontAwesomeIcon icon={faPhone} className='cursor-pointer'/>
+
+    const subheadingClasses = 'text-center text-4xl font-title uppercase'
+
+    const socialLinks = [
+        {
+            title: 'Instagram',
+            linkTo: 'https://www.instagram.com/seabound.souls/',
+            icon: faInstagram,
+        },
+        {
+            title: 'Instagram',
+            linkTo: 'https://www.instagram.com/seabound.souls/',
+            icon: faInstagram,
+        },
+    ]
+
+    return (
+        <footer className="w-full py-20 bg-blue text-white">
+            <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
+                <div className="flex flex-col items-center gap-8">
+                    <h3 className="font-title uppercase text-6xl">
+                        Contact us
+                    </h3>
+                    <div>
+                        <p className="text-center max-w-sm pb-2">
+                            Have any questions, suggestions or want to collaborate?
+                        </p>
+                        <p className="text-center">
+                            Get in touch...
+                        </p>
+                    </div>
+                    <div>
+                        <h4 className={subheadingClasses}>
+                            Email
+                        </h4>
+                        <a href="mailto:yarrowtravels@outlook.com">
+                            yarrowtravels@outlook.cm
                         </a>
-                    </li>
-                    <li>
-                        <Link to='./ContactUs'>
-                            <FontAwesomeIcon icon={faEnvelope} className='cursor-pointer'/>
-                        </Link>
-                    </li>
-                </ul>
+                    </div>
+                    <div className="max-w-sm">
+                        <h4 className={subheadingClasses}>
+                            Get social
+                        </h4>
+                        <ul className="flex justify-between">
+                            {socialLinks.map(link => {
+                                
+                                const linkClasses = 'text-4xl text-white'
+
+                                return (
+                                    <li>
+                                        <Link to={link.linkTo} target="_blank">
+                                            <FontAwesomeIcon icon={link.icon} className={linkClasses}/>
+                                        </Link>
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    </div>
+
+                </div>
+                <div className="flex items-center justify-center">
+                    <img src="/Personal-Images/logo.png" alt="Seabound souls logo" class/>
+
+                </div>
             </div>
-        </div>
+
+        </footer>
     )
 };
 

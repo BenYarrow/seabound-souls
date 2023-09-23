@@ -14,7 +14,7 @@ function Homepage() {
     })
     .filter((featured) => featured.featured === true);
 
-  const featuredBlogs = destinationBlogs
+  const featuredBlogs = blogs
   .map((blog) => {
     return blog;
   })
