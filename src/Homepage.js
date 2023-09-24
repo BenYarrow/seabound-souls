@@ -2,11 +2,24 @@ import React from "react";
 import { destinationBlogs } from "./Data/DestinationBlogs";
 import { blogs } from "./Data/Blogs";
 import BlogLink from "./Common-Components/BlogLink";
+import PageHeading from "./Common-Components/PageHeading";
+import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
 
 function Homepage() {
 
-  const heroImage = "Background-Images/hero-background.jpg";
+  const heroImageOne = "Background-Images/hero-background.jpg";
   const destinationImage = "/Homepage-images/fuerteventura-beach-01.jpg";
+
+  const images = [
+    {
+      image: heroImageOne,
+      bgImageClasses: 'bg-cover bg-center'
+    },
+    {
+      image: destinationImage,
+      bgImageClasses: 'bg-cover bg-center',
+    }
+  ]
 
   const featuredDestinationBlogs = destinationBlogs
     .map((blog) => {
@@ -20,30 +33,28 @@ function Homepage() {
   })
   .filter((featured) => featured.featured === true);
 
-  const blogGridClasses = 'grid grid-cols-1 lg:grid-cols-3 gap-4'
+  const blogGridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-20'
 
   return (
     <div>
-        <section 
-        className="w-screen h-[92vh] bg-cover bg-center lg:bg-top"
-        style={{
-          backgroundImage: `url(${heroImage})`,
-          backgroundRepeat: "no-repeat",
-        }}
-      > 
-      </section> 
+      
+      <SwiperHeroSlider images={images}/>
 
       <section 
         className="w-full py-20 container mx-auto"
       >
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div>
+          <PageHeading heading='Seabound Souls'/>
+        </div>
+
+        <div className="grid grid-cols 1 gap-20 lg:grid-cols-2 xl:grid-cols-9">
           
-          <div className="flex flex-col items-center space-8-12 xl:col-span-2">
-            <h3 className="font-title text-4xl lg:text-7xl lg:max-w-2xl text-center uppercase text-blue pb-8 border-b-[1px] border-blue">
+          <div className="flex flex-col items-center space-8-12 xl:col-span-6">
+            <h3 className="font-title text-4xl lg:max-w-2xl text-center uppercase text-blue pb-8 border-b-[1px] border-blue">
               Memories are made where the wind meets the waves
             </h3>
             <div className="pt-8 space-y-8 flex flex-col items-center">
-              <h3 className="font-title text-4xl lg:text-7xl uppercase text-blue ">
+              <h3 className="font-title text-4xl uppercase text-blue ">
                   Get to know us
               </h3>
               <p className='text-center text-lg text-blue'>
@@ -58,16 +69,12 @@ function Homepage() {
             </div>
           </div>
 
-          <div class="w-full bg-cover bg-center xl:col-span-1"         
-            style={{
+          <div class="w-full h-[500px] lg:h-full flex bg-center bg-cover shadow-2xl xl:col-span-3" style={{
             backgroundImage: `url(${destinationImage})`,
             backgroundRepeat: "no-repeat",
-            }}
-          >
-            
-          </div>
+            }}></div>
 
-        </div>        
+          </div>
       </section>
 
       <section className="bg-blue text-standard py-20">
@@ -83,7 +90,7 @@ function Homepage() {
           <div className={blogGridClasses}>
             {featuredDestinationBlogs.map((blog) => {
               return blog.blogLinkData.map((data) => {
-                return <BlogLink {...data} textColour='text-white' />;
+                return <BlogLink {...data} textColour='text-standard' />;
               });
             })}
           </div>

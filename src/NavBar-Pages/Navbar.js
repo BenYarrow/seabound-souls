@@ -18,7 +18,6 @@ const Navbar = () => {
   const hideMobileNav = () => {
     setMobileNav(false)
   }
-  // const [height, setHeight] = useState(false);
 
   const navListItems = [
     {
@@ -56,7 +55,7 @@ const Navbar = () => {
 
   return (
 
-    <nav className="container mx-auto relative">
+    <nav className="container mx-auto relative z-10">
 
       <div className="w-full h-[4rem] flex items-center ">
         

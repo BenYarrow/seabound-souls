@@ -25,7 +25,7 @@ const BlogLink = ({
     return(
             <Link ref={ref} to={linkTo}>
                 <motion.div 
-                    className="flex flex-col justify-between h-full space-y-4 w-full overflow-hidden border-b border-blue/20"
+                    className="flex flex-col justify-between space-y-4 w-full overflow-hidden"
                     variants={{
                         hidden: {opacity: 0, y: 75},
                         visible: {opacity: 1, y: 0},
@@ -37,20 +37,22 @@ const BlogLink = ({
                         delay: 0.5,
                       }}
                 >
-                    <div 
-                        className={blogLinkImgSrc ? 'aspect-[5/4] hover:scale-105 transition duration-300' : 'w-full aspect-[5/4] bg-blue'}
-                        style={{
-                            backgroundImage: `url(${blogLinkImgSrc})`,
-                            backgroundSize: "cover",
-                            backgroundRepeat: "no-repeat",
-                            backgroundPosition: "center",
-                    }}>
-                    </div>
+                <div className="overflow-hidden">
+                  <div 
+                      className={blogLinkImgSrc ? 'aspect-[5/4] hover:scale-105 transition duration-300' : 'w-full aspect-[5/4] bg-blue'}
+                      style={{
+                          backgroundImage: `url(${blogLinkImgSrc})`,
+                          backgroundSize: "cover",
+                          backgroundRepeat: "no-repeat",
+                          backgroundPosition: "center",
+                  }}>
+                  </div>
+                </div>
 
-                    <h3 className={`${textColour} text-xl font-standard pb-4 `}>
+                    <h3 className={`${textColour} text-xl font-standard pb-2 `}>
                         {location}
                     </h3>
-                    <p className={`${textColour} text-xl font-standard`}>
+                    <p className={`${textColour} hidden lg:block text-xl font-standard`}>
                       {blogIntro}
                     </p>
                 </motion.div>
@@ -58,5 +60,6 @@ const BlogLink = ({
         
     )
 }
+
 
 export default BlogLink

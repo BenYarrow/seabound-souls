@@ -49,7 +49,7 @@ export let blogs = [
                 linkTo: `/StayingAtLux`,
                 blogLinkImgSrc: `/Mauritius-Images/Mauritius-Lux-3.jpg`,
                 blogLinkImgAlt: 'Lux, Le Morne Resort',
-                blogIntro: `lux le morn blog intro`,
+                blogIntro: `lux le morn blog intro lux le morn blog intro lux le morn blog intro lux le morn blog intro v  lux le morn blog intro lux le morn blog intro lux le morn blog intro lux le morn blog intro lux le morn blog intro `,
             }
         ]
     },

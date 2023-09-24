@@ -25,7 +25,7 @@ function Footer() {
     return (
         <footer className="w-full py-20 bg-blue text-white">
             <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
-                <div className="flex flex-col items-center gap-8">
+                <div className="flex flex-col items-center justify-center gap-8">
                     <h3 className="font-title uppercase text-6xl">
                         Contact us
                     </h3>
@@ -67,7 +67,7 @@ function Footer() {
 
                 </div>
                 <div className="flex items-center justify-center">
-                    <img src="/Personal-Images/logo.png" alt="Seabound souls logo" class/>
+                    <img src="/Personal-Images/logo.png" alt="Seabound souls logo" className="w-1/2 md:w-full max-w-md"/>
 
                 </div>
             </div>
