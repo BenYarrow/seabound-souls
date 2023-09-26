@@ -1,40 +1,39 @@
-import React from 'react'
-import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useEffect } from 'react';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import "swiper/css/effect-fade";
 
 const SwiperHeroSlider = (props) => {
-  return (
 
+  return (
     <Swiper
       modules={[Navigation, Pagination, Autoplay, EffectFade]}
-      autoplay={{
-        delay: 3000,
-      }}
-      effect="fade"
-      speed="1000"
-      loop={true}
       pagination={{ clickable: true }}
+      autoplay={true}
+      loop={true}
+      navigation={true}
+      effect="fade"
     >
-        {props.images.map((slide, index) => {
+        {props.images.map((slide) => {
           return(
             <SwiperSlide>
-              <div className={`${slide.bgImageClasses} w-screen h-[calc(100vh-4rem)]`}
-            style={{
-            backgroundImage: `url(${slide.image})`,
-            backgroundRepeat: "no-repeat"
-            }}
-            key={index}>
+                <div className={`${slide.bgImageClasses} w-screen h-[calc(100vh-4rem)]`}
+                    style={{
+                    backgroundImage: `url(${slide.image})`,
+                    backgroundRepeat: "no-repeat"
+                    }}
+                    >
 
               </div>
             </SwiperSlide>
           )
         })}
     </Swiper>
+
   )
 }
 

@@ -25,8 +25,8 @@ const Navbar = () => {
       to: "/Homepage",
     },
     {
-      title: "About",
-      to: "/About"
+      title: "About Us",
+      to: "/AboutUs"
     },
     {
       title: "Destinations",

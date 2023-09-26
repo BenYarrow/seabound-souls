@@ -10,7 +10,7 @@ function Homepage() {
   const heroImageOne = "Background-Images/hero-background.jpg";
   const destinationImage = "/Homepage-images/fuerteventura-beach-01.jpg";
 
-  const images = [
+  const heroImages = [
     {
       image: heroImageOne,
       bgImageClasses: 'bg-cover bg-center'
@@ -18,7 +18,7 @@ function Homepage() {
     {
       image: destinationImage,
       bgImageClasses: 'bg-cover bg-center',
-    }
+    },
   ]
 
   const featuredDestinationBlogs = destinationBlogs
@@ -38,7 +38,7 @@ function Homepage() {
   return (
     <div>
       
-      <SwiperHeroSlider images={images}/>
+      <SwiperHeroSlider images={heroImages}/>
 
       <section 
         className="w-full py-20 container mx-auto"
