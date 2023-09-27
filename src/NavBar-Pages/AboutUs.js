@@ -51,11 +51,11 @@ const AboutUs = () => {
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-12">
         {images.map((image, index) => {
           
           return (
-            <img src={image.image} alt="" class={`${image.imageClasses}`} key={index}/>
+            <img src={image.image} alt="" className={`${image.imageClasses}`} key={index}/>
           )
         })}
 

@@ -19,6 +19,14 @@ function Homepage() {
       image: destinationImage,
       bgImageClasses: 'bg-cover bg-center',
     },
+    {
+      image: heroImageOne,
+      bgImageClasses: 'bg-cover bg-center'
+    },
+    {
+      image: destinationImage,
+      bgImageClasses: 'bg-cover bg-center',
+    },
   ]
 
   const featuredDestinationBlogs = destinationBlogs
@@ -69,7 +77,7 @@ function Homepage() {
             </div>
           </div>
 
-          <div class="w-full h-[500px] lg:h-full flex bg-center bg-cover shadow-2xl xl:col-span-3" style={{
+          <div className="w-full h-[500px] lg:h-full flex bg-center bg-cover shadow-2xl xl:col-span-3" style={{
             backgroundImage: `url(${destinationImage})`,
             backgroundRepeat: "no-repeat",
             }}></div>

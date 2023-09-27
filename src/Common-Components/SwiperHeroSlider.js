@@ -11,23 +11,29 @@ const SwiperHeroSlider = (props) => {
 
   return (
     <Swiper
-      modules={[Navigation, Pagination, Autoplay, EffectFade]}
-      pagination={{ clickable: true }}
-      autoplay={true}
-      loop={true}
-      navigation={true}
-      effect="fade"
-    >
-        {props.images.map((slide) => {
+    spaceBetween={30}
+    centeredSlides={true}
+    autoplay={{
+      delay: 2500,
+      disableOnInteraction: false
+    }}
+    pagination={{
+      clickable: true
+    }}
+    loop
+    effect="fade"
+    modules={[Autoplay, Pagination, Navigation, EffectFade]}
+    className="mySwiper"
+  >
+        {props.images.map((slide, index) => {
           return(
-            <SwiperSlide>
-                <div className={`${slide.bgImageClasses} w-screen h-[calc(100vh-4rem)]`}
+            <SwiperSlide key={index}>
+                <div className={`${slide.bgImageClasses} h-[calc(100vh-4rem)]`}
                     style={{
                     backgroundImage: `url(${slide.image})`,
                     backgroundRepeat: "no-repeat"
                     }}
                     >
-
               </div>
             </SwiperSlide>
           )
