@@ -8,7 +8,7 @@ import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
 function Homepage() {
 
   const heroImageOne = "Background-Images/hero-background.jpg";
-  const destinationImage = "/Homepage-images/fuerteventura-beach-01.jpg";
+  const heroImageTwo = "/Homepage-images/fuerteventura-beach-01.jpg";
 
   const heroImages = [
     {
@@ -16,15 +16,7 @@ function Homepage() {
       bgImageClasses: 'bg-cover bg-center'
     },
     {
-      image: destinationImage,
-      bgImageClasses: 'bg-cover bg-center',
-    },
-    {
-      image: heroImageOne,
-      bgImageClasses: 'bg-cover bg-center'
-    },
-    {
-      image: destinationImage,
+      image: heroImageTwo,
       bgImageClasses: 'bg-cover bg-center',
     },
   ]
@@ -48,8 +40,10 @@ function Homepage() {
       
       <SwiperHeroSlider images={heroImages}/>
 
+
       <section 
         className="w-full py-20 container mx-auto"
+        id="top-section"
       >
         <div>
           <PageHeading heading='Seabound Souls'/>
@@ -78,7 +72,7 @@ function Homepage() {
           </div>
 
           <div className="w-full h-[500px] lg:h-full flex bg-center bg-cover shadow-2xl xl:col-span-3" style={{
-            backgroundImage: `url(${destinationImage})`,
+            backgroundImage: `url(${heroImageTwo})`,
             backgroundRepeat: "no-repeat",
             }}></div>
 

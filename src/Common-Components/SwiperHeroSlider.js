@@ -14,13 +14,9 @@ const SwiperHeroSlider = (props) => {
     spaceBetween={30}
     centeredSlides={true}
     autoplay={{
-      delay: 2500,
+      delay: 4000,
       disableOnInteraction: false
     }}
-    pagination={{
-      clickable: true
-    }}
-    loop
     effect="fade"
     modules={[Autoplay, Pagination, Navigation, EffectFade]}
     className="mySwiper"
@@ -28,12 +24,19 @@ const SwiperHeroSlider = (props) => {
         {props.images.map((slide, index) => {
           return(
             <SwiperSlide key={index}>
-                <div className={`${slide.bgImageClasses} h-[calc(100vh-4rem)]`}
-                    style={{
-                    backgroundImage: `url(${slide.image})`,
-                    backgroundRepeat: "no-repeat"
-                    }}
-                    >
+              <div className={`${slide.bgImageClasses} h-[calc(100vh-4rem)] -z-10 flex justify-center items-end`}
+                  style={{
+                  backgroundImage: `url(${slide.image})`,
+                  backgroundRepeat: "no-repeat"
+                  }}
+                >
+                <div className='group mb-20 hidden md:block'>
+                  <button className="px-8 py-2 bg-blue">
+                    <a href='#top-section' className="relative text-xl text-white  uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
+                      Read more
+                    </a>
+                  </button>
+                </div>
               </div>
             </SwiperSlide>
           )
