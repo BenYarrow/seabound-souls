@@ -55,12 +55,12 @@ const Navbar = () => {
 
   return (
 
-    <nav className="container mx-auto relative z-10 ">
+    <nav className="relative z-10 ">
 
-      <div className="w-full h-[4rem] flex items-center overflow-hidden">
+      <div className=" w-full h-[4rem] flex items-center container mx-auto ">
         
-        <div className="w-full flex justify-end md:hidden">
-          <button onClick={toggleMobileNav} className='text-blue text-5xl cursor-pointer '>
+        <div className="w-full flex justify-end md:hidden ">
+          <button onClick={toggleMobileNav} className='text-blue text-5xl cursor-pointer'>
             <FontAwesomeIcon
               icon={mobileNav ? faXmark : faBars}
             />
@@ -82,22 +82,25 @@ const Navbar = () => {
               );
             })}
         </div>
-          
-        
-        <div className={mobileNav ? 'absolute top-[4rem] right-0 w-11/12 flex flex-col space-y-2 pl-8 h-screen bg-white transition duration-300' : 'absolute top-[4rem] right-0 w-11/12 translate-x-full flex flex-col space-y-2 pl-8 h-screen bg-white transition duration-300'}>
+
+        <div className={mobileNav ? 'absolute top-[4rem] right-0 w-11/12 flex flex-col space-y-2 h-[calc(100vh-4rem)] bg-white opacity-1 transition duration-300 md:hidden' : 'absolute top-[4rem] right-0 w-11/12 flex flex-col space-y-2 h-screen bg-white opacity-0 transition duration-300 md:hidden'}>
             {navListItems.map((listItem, index) => {
               return (
-                <Link
-                  onClick={hideMobileNav}
-                  to={listItem.to}
-                  key={index}
-                  className='text-xl text-blue font-standard uppercase'
-                  >
-                  {listItem.title}
-                </Link>
+                <div className="">
+                  <Link
+                    onClick={hideMobileNav}
+                    to={listItem.to}
+                    key={index}
+                    className='text-xl text-blue font-standard uppercase pl-8 opacity-1 transition duration-300'
+                    >
+                    {listItem.title}
+                  </Link>
+                </div>
               );
             })}
-        </div>
+          </div>
+        
+
 
 
       </div>

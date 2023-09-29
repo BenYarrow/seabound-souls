@@ -1,5 +1,6 @@
 import React from "react";
 import SwiperHeroSlider from "../Common-Components/SwiperHeroSlider";
+import Image from "../Common-Components/Image";
 
 const AboutUs = () => {
 
@@ -19,18 +20,19 @@ const AboutUs = () => {
 
   const images = [
     {
-      image: heroImageOne,
+      imageSrc: heroImageOne,
       imageClasses: 'block'
     },
     {
-      image: heroImageOne,
+      imageSrc: heroImageOne,
       imageClasses: 'hidden md:block'
     },
     {
-      image: heroImageOne,
+      imageSrc: heroImageOne,
       imageClasses: 'hidden lg:block'
     },
   ]
+
   return (
   <div>
 
@@ -55,7 +57,11 @@ const AboutUs = () => {
         {images.map((image, index) => {
           
           return (
-            <img src={image.image} alt="" className={`${image.imageClasses}`} key={index}/>
+            <Image 
+              image={image.imageSrc} 
+              imageClasses={image.imageClasses} 
+              key={index}
+            />
           )
         })}
 
