@@ -53,7 +53,7 @@ function Homepage() {
           
           <div className="flex flex-col items-center space-8-12 xl:col-span-6">
             <h3 className="font-title text-4xl lg:max-w-2xl text-center uppercase text-blue pb-8 border-b-[1px] border-blue">
-              Memories are made where the wind meets the waves.
+              Memories are made where the wind meets the waves
             </h3>
             <div className="pt-8 space-y-8 flex flex-col items-center">
               <h3 className="font-title text-4xl uppercase text-blue ">
