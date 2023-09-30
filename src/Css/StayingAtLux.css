@@ -1,7 +1,0 @@
-#lux-hero-section {
-    background-image: url('/public/Mauritius-Images/Mauritius-Lux-3.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    height: calc(100vh - 8rem);
-}

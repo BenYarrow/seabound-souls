@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import PageHeading from './PageHeading';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -24,12 +25,15 @@ const SwiperHeroSlider = (props) => {
         {props.images.map((slide, index) => {
           return(
             <SwiperSlide key={index}>
-              <div className={`${slide.bgImageClasses} h-[calc(100vh-4rem)] -z-10 flex justify-center items-end`}
+              <div className={`${slide.bgImageClasses} h-[calc(100vh-4rem)] -z-10 flex flex-col justify-between items-center bg-white`}
                   style={{
                   backgroundImage: `url(${slide.image})`,
                   backgroundRepeat: "no-repeat"
                   }}
                 >
+                <div class="mt-20">
+                  <PageHeading heading='Seabound Souls' className=""/>
+                </div>
                 <div className='group mb-20 hidden md:block'>
                   <button className="px-8 py-2 bg-blue">
                     <a href='#top-section' className="relative text-xl text-white  uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">

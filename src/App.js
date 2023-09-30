@@ -25,33 +25,35 @@ import CzechRepublic from './Countries/CzechRepublic';
 function App() {
 
   return (
-      <Router>
-          <Navbar /> 
-        <Routes>
-          {/* Nav Components */}
-            <Route index element={<Homepage />}/>
-            <Route path='/Homepage' element={<Homepage />}/>
-            <Route path='/Travel' element={<Travel />}/>
-            <Route path='/AboutUs' element={<AboutUs />}/>
-            <Route path='/ContactUs' element={<ContactUs />}/>
-          {/* DestinationComponents */}
-            <Route path='/Mauritius' element={<Mauritius />}/>
-              <Route path='/WindsurfingInMauritius' element={<WindsurfingInMauritius />}/>
-              <Route path='/StayingAtLux' element={<StayingAtLux />}/>
-              <Route path='/ThingsToDoInMauritius' element={<ThingsToDoInMauritius />}/>
-            <Route path='/SouthAfrica' element={<SouthAfrica />}/>
-            <Route path='/Egypt' element={<Egypt />}/>
-              <Route path='/WindsurfingInEgypt' element={<WindsurfingInEgypt />}/>
-            <Route path='/Canada' element={<Canada />}/>
-            <Route path='/England' element={<England />}/>
-            <Route path='/Wales' element={<Wales />}/>
-            <Route path='/Iceland' element={<Iceland />}/>
-            <Route path='/CzechRepublic' element={<CzechRepublic />}/>
-            <Route path='/Greece' element={<Greece />}/>
+      <div className='text-blue bg-white'>
+        <Router>
+            <Navbar /> 
+          <Routes>
+            {/* Nav Components */}
+              <Route index element={<Homepage />}/>
+              <Route path='/Homepage' element={<Homepage />}/>
+              <Route path='/Travel' element={<Travel />}/>
+              <Route path='/AboutUs' element={<AboutUs />}/>
+              <Route path='/ContactUs' element={<ContactUs />}/>
+            {/* DestinationComponents */}
+              <Route path='/Mauritius' element={<Mauritius />}/>
+                <Route path='/WindsurfingInMauritius' element={<WindsurfingInMauritius />}/>
+                <Route path='/StayingAtLux' element={<StayingAtLux />}/>
+                <Route path='/ThingsToDoInMauritius' element={<ThingsToDoInMauritius />}/>
+              <Route path='/SouthAfrica' element={<SouthAfrica />}/>
+              <Route path='/Egypt' element={<Egypt />}/>
+                <Route path='/WindsurfingInEgypt' element={<WindsurfingInEgypt />}/>
+              <Route path='/Canada' element={<Canada />}/>
+              <Route path='/England' element={<England />}/>
+              <Route path='/Wales' element={<Wales />}/>
+              <Route path='/Iceland' element={<Iceland />}/>
+              <Route path='/CzechRepublic' element={<CzechRepublic />}/>
+              <Route path='/Greece' element={<Greece />}/>
 
-          </Routes>
-        <Footer />  
-      </Router>
+            </Routes>
+          <Footer />  
+        </Router>
+      </div>
   );
 }
 

@@ -55,7 +55,7 @@ const Navbar = () => {
 
   return (
 
-    <nav className="relative z-10 text-blue ">
+    <nav className="relative z-10 text-blue">
 
       <div className=" w-full h-[4rem] flex items-center container mx-auto ">
         
@@ -74,7 +74,7 @@ const Navbar = () => {
                   <Link
                     to={listItem.to}
                     key={index}
-                    className="relative text-xl   uppercase after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-blue/40 after:transition-all after:duration-300"
+                    className="relative text-xl   uppercase after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-blue/80 after:transition-all after:duration-300"
                     >
                     {listItem.title}
                   </Link>

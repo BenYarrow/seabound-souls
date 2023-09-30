@@ -2,21 +2,25 @@ import React from "react";
 import { destinationBlogs } from "./Data/DestinationBlogs";
 import { blogs } from "./Data/Blogs";
 import BlogLink from "./Common-Components/BlogLink";
-import PageHeading from "./Common-Components/PageHeading";
 import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
 
 function Homepage() {
 
-  const heroImageOne = "Background-Images/hero-background.jpg";
-  const heroImageTwo = "/Homepage-images/fuerteventura-beach-01.jpg";
+  const windsurfingOne = "Masthead-Images/windsurfing-together-01.jpg";
+  const fuerteventuraBeach = "/Masthead-Images/fuerteventura-beach-01.jpg";
+  const windsurfingTwo = "Masthead-Images/windsurfing-together-02.jpg";
 
   const heroImages = [
     {
-      image: heroImageOne,
+      image: windsurfingOne,
       bgImageClasses: 'bg-cover bg-center'
     },
     {
-      image: heroImageTwo,
+      image: fuerteventuraBeach,
+      bgImageClasses: 'bg-cover bg-center',
+    },
+    {
+      image: windsurfingTwo,
       bgImageClasses: 'bg-cover bg-center',
     },
   ]
@@ -36,7 +40,7 @@ function Homepage() {
   const blogGridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 gap-20'
 
   return (
-    <div class="text-blue">
+    <div >
       
       <SwiperHeroSlider images={heroImages}/>
 
@@ -44,9 +48,6 @@ function Homepage() {
         className="w-full py-20 container mx-auto"
         id="top-section"
       >
-        <div>
-          <PageHeading heading='Seabound Souls'/>
-        </div>
 
         <div className="grid grid-cols 1 gap-20 lg:grid-cols-2 xl:grid-cols-9">
           
@@ -71,7 +72,7 @@ function Homepage() {
           </div>
 
           <div className="w-full h-[500px] lg:h-full flex bg-center bg-cover shadow-2xl xl:col-span-3" style={{
-            backgroundImage: `url(${heroImageTwo})`,
+            backgroundImage: `url(${fuerteventuraBeach})`,
             backgroundRepeat: "no-repeat",
             }}></div>
 

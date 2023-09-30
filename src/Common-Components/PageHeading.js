@@ -3,7 +3,7 @@ import React from "react";
 const PageHeading = (props) => {
        
     return (
-        <h1 className="pb-20 text-7xl tracking-widest uppercase font-title  text-center">
+        <h1 className="pb-20 text-7xl tracking-[15px] uppercase font-title  text-center">
             {props.heading}
         </h1>
     )
