@@ -68,12 +68,7 @@ const Navbar = () => {
         </div>
 
         <div className='hidden md:relative md:w-full md:flex md:justify-center md:space-x-8'>
-            
-            <p className="text-2xl text-blue uppercase">
-              Coming soon
-            </p>
-            
-            {/* {navListItems.map((listItem, index) => {
+            {navListItems.map((listItem, index) => {
               return (
                 <div>
                     <Link
@@ -85,10 +80,10 @@ const Navbar = () => {
                     </Link>
                 </div>
               );
-            })} */}
+            })}
         </div>
 
-        {/* <div className={mobileNav ? 'absolute top-[4rem] right-0 w-11/12 flex flex-col space-y-2 h-[calc(100vh-4rem)] bg-white opacity-1 transition duration-300 md:hidden' : 'absolute top-[4rem] right-0 w-11/12 flex flex-col space-y-2 h-screen bg-white opacity-0 transition duration-300 md:hidden'}>
+        <div className={mobileNav ? 'absolute top-[4rem] right-0 w-11/12 flex flex-col space-y-2 h-[calc(100vh-4rem)] bg-white opacity-1 transition duration-300 md:hidden' : 'absolute top-[4rem] right-0 w-11/12 flex flex-col space-y-2 h-screen bg-white opacity-0 transition duration-300 md:hidden'}>
             {navListItems.map((listItem, index) => {
               return (
                 <div className="">
@@ -104,7 +99,7 @@ const Navbar = () => {
               );
             })}
           </div>
-         */}
+        
 
 
 
