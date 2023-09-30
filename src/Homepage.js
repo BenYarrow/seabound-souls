@@ -3,6 +3,7 @@ import { destinationBlogs } from "./Data/DestinationBlogs";
 import { blogs } from "./Data/Blogs";
 import BlogLink from "./Common-Components/BlogLink";
 import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
+import PageHeading from "./Common-Components/PageHeading";
 
 function Homepage() {
 
@@ -40,10 +41,10 @@ function Homepage() {
   const blogGridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 gap-20'
 
   return (
-    <div >
+    <div className="relative">
       
-      <SwiperHeroSlider images={heroImages}/>
-
+      <SwiperHeroSlider images={heroImages} heading='seabound souls'/>
+      
       <section 
         className="w-full py-20 container mx-auto"
         id="top-section"

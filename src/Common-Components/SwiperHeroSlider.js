@@ -31,8 +31,8 @@ const SwiperHeroSlider = (props) => {
                   backgroundRepeat: "no-repeat"
                   }}
                 >
-                <div class="mt-20">
-                  <PageHeading heading='Seabound Souls' className=""/>
+                <div className="mt-8">
+                  <PageHeading heading={props.heading} />
                 </div>
                 <div className='group mb-20 hidden md:block'>
                   <button className="px-8 py-2 bg-blue">

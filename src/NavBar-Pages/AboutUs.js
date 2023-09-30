@@ -4,8 +4,8 @@ import Image from "../Common-Components/Image";
 
 const AboutUs = () => {
 
-  const heroImageOne = "Background-Images/hero-background.jpg";
-  const heroImageTwo = "/Homepage-images/fuerteventura-beach-01.jpg";
+  const heroImageOne = "/Masthead-Images/windsurfing-together-02.jpg";
+  const heroImageTwo = "/Masthead-Images/windsurfing-together-01.jpg";
 
   const heroImages = [
     {
