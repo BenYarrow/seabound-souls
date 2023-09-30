@@ -5,7 +5,8 @@ module.exports = {
     'bg-white', 
     'text-blue', 
     'font standard',
-    'text-lg'
+    'text-lg',
+    'text-xl'
   ],  
   theme: {
     container: {

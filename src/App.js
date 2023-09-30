@@ -25,7 +25,7 @@ import CzechRepublic from './Countries/CzechRepublic';
 function App() {
 
   return (
-      <div className='text-blue bg-white'>
+      <div className='text-blue bg-white text-lg '>
         <Router>
             <Navbar /> 
           <Routes>

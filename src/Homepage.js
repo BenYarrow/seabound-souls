@@ -3,13 +3,12 @@ import { destinationBlogs } from "./Data/DestinationBlogs";
 import { blogs } from "./Data/Blogs";
 import BlogLink from "./Common-Components/BlogLink";
 import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
-import PageHeading from "./Common-Components/PageHeading";
 
 function Homepage() {
 
   const windsurfingOne = "Masthead-Images/windsurfing-together-01.jpg";
   const fuerteventuraBeach = "/Masthead-Images/fuerteventura-beach-01.jpg";
-  const windsurfingTwo = "Masthead-Images/windsurfing-together-02.jpg";
+  const windsurfingTwo = "Masthead-Images/ben-vulcan-fuerteventura.jpg";
 
   const heroImages = [
     {
@@ -47,7 +46,7 @@ function Homepage() {
       
       <section 
         className="w-full py-20 container mx-auto"
-        id="top-section"
+        id="content"
       >
 
         <div className="grid grid-cols 1 gap-20 lg:grid-cols-2 xl:grid-cols-9">
@@ -93,7 +92,9 @@ function Homepage() {
           <div className={blogGridClasses}>
             {featuredDestinationBlogs.map((blog) => {
               return blog.blogLinkData.map((data) => {
-                return <BlogLink {...data} textColour=''/>;
+                return (
+                  <BlogLink {...data}/>
+                );
               });
             })}
           </div>

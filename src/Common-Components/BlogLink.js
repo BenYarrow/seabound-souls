@@ -8,7 +8,7 @@ const BlogLink = ({
     location,
     blogIntro,
     blogLinkImgSrc,
-    textColour
+    textColour,
   }) => {
 
     const ref = useRef(null)
@@ -34,7 +34,7 @@ const BlogLink = ({
                       animate={mainControls}
                       transition={{
                         duration: 0.5,
-                        delay: 0.5,
+                        delay: 1
                       }}
                 >
                 <div className="overflow-hidden">
