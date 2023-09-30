@@ -36,7 +36,7 @@ function Homepage() {
   const blogGridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 gap-20'
 
   return (
-    <div>
+    <div class="text-blue">
       
       <SwiperHeroSlider images={heroImages}/>
 
@@ -99,7 +99,7 @@ function Homepage() {
 
       </section>
 
-      <section className=" py-20">
+      <section className="py-20">
         <div className="container mx-auto flex flex-col space-y-12">
           <div className='flex flex-col items-center space-y-4'>
             <h3 className="font-title text-6xl uppercase">
