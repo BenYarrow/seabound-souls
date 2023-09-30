@@ -49,7 +49,7 @@ const BlogLink = ({
                   </div>
                 </div>
 
-                    <h3 className={`${textColour} text-xl font-standard pb-2 `}>
+                    <h3 className={`${textColour} text-xl font-standard font-extralight pb-2 `}>
                         {location}
                     </h3>
                     <p className={`${textColour} hidden lg:block text-xl font-standard`}>
