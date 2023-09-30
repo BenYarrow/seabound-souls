@@ -30,13 +30,13 @@ const SwiperHeroSlider = (props) => {
                   backgroundRepeat: "no-repeat"
                   }}
                 >
-                {/* <div className='group mb-20 hidden md:block'>
+                <div className='group mb-20 hidden md:block'>
                   <button className="px-8 py-2 bg-blue">
                     <a href='#top-section' className="relative text-xl text-white  uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
                       Read more
                     </a>
                   </button>
-                </div> */}
+                </div>
               </div>
             </SwiperSlide>
           )
