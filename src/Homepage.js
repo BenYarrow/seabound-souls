@@ -40,7 +40,6 @@ function Homepage() {
       
       <SwiperHeroSlider images={heroImages}/>
 
-    
       <section 
         className="w-full py-20 container mx-auto"
         id="top-section"
@@ -56,16 +55,16 @@ function Homepage() {
               Memories are made where the wind meets the waves
             </h3>
             <div className="pt-8 space-y-8 flex flex-col items-center">
-              <h3 className="font-title text-4xl uppercase  ">
+              <h3 className="font-title text-4xl uppercase ">
                   Get to know us
               </h3>
-              <p className='text-center text-lg '>
+              <p className='text-center  '>
                 We are Rachel and ben. Two adventure seekers, travelling wherever the wind takes us. Follow our journey as we discover the most incredible windsurfing destinations around the globe.
               </p>
-              <p className='text-center text-lg '>
+              <p className='text-center  '>
                 This is not just a travel blog; it's a gateway to a unique blend of adrenaline and exploration. Whether you're a seasoned windurfer seeking the next ultimate spot or a curious traveller ready to dive into the exhilarating world of windsurfing, our blog is here to inspire, inform and fuel your passion for this incredible water sport.
               </p>
-              <p className='text-center text-lg '>
+              <p className='text-center  '>
                 Join us as we chase the winds, discover new horizons and travel the world windsurfing together.
               </p>
             </div>
@@ -86,11 +85,15 @@ function Homepage() {
               Destinations
             </h3>
             <p className='text-center text-xl'>
-              
+              Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip
             </p>
           </div>
           <div className={blogGridClasses}>
-
+            {featuredDestinationBlogs.map((blog) => {
+              return blog.blogLinkData.map((data) => {
+                return <BlogLink {...data} textColour=''/>;
+              });
+            })}
           </div>
         </div>
 
@@ -102,7 +105,7 @@ function Homepage() {
             <h3 className="font-title text-6xl uppercase">
               Blog
             </h3>
-            <p className='text-center text-xl '>
+            <p className='text-center text-xl'>
               Follow our adventures as we travel and windsurf our way around the world
             </p>
           </div>
