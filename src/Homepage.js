@@ -40,6 +40,7 @@ function Homepage() {
       
       <SwiperHeroSlider images={heroImages}/>
 
+{/*     
       <section 
         className="w-full py-20 container mx-auto"
         id="top-section"
@@ -116,7 +117,7 @@ function Homepage() {
             })}
           </div>
         </div>
-      </section>
+      </section> */}
 
     </div>
   );

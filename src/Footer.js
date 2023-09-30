@@ -15,11 +15,6 @@ function Footer() {
             linkTo: 'https://www.instagram.com/seabound.souls/',
             icon: faInstagram,
         },
-        {
-            title: 'Instagram',
-            linkTo: 'https://www.instagram.com/seabound.souls/',
-            icon: faInstagram,
-        },
     ]
 
     return (
@@ -42,14 +37,14 @@ function Footer() {
                             Email
                         </h4>
                         <a href="mailto:yarrowtravels@outlook.com">
-                            yarrowtravels@outlook.cm
+                            seaboundsouls@outlook.com
                         </a>
                     </div>
                     <div className="max-w-sm">
                         <h4 className={subheadingClasses}>
                             Get social
                         </h4>
-                        <ul className="flex justify-between">
+                        <ul className="flex justify-center">
                             {socialLinks.map(link => {
                                 
                                 const linkClasses = 'text-4xl text-white'
