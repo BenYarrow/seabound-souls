@@ -12,7 +12,7 @@ const PageHeadingWithImage = (props) => {
             }}
         > 
         </section> 
-            <h1 className="pt-80 text-8xl lg:text-6xl tracking-wider uppercase font-standard text-black text-center py-12">
+            <h1 className="pt-80 text-8xl lg:text-6xl tracking-wider uppercase  text-black text-center py-12">
                 {props.heading}
             </h1>
         </div>

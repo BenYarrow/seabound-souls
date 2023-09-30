@@ -7,12 +7,12 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        standard: "'Glacial Indifference', sans-serif",
+        standard: "'Poppins', sans-serif",
         title: "Donau Neue",
         destinations: "Black Bones Personal Use",
       },
       colors: {
-        'standard': '#FEFAF9',  
+        'white': '#FEFAF9',  
         'blue': '#26567B',
         'orange': '#F4A361',
       }

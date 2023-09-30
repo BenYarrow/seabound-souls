@@ -39,7 +39,7 @@ const AboutUs = () => {
     <SwiperHeroSlider images={heroImages}/>
     
     <section className="py-20 container mx-auto">
-      <div className="flex flex-col items-center space-y-8 text-blue  text-xl">
+      <div className="flex flex-col items-center space-y-8   text-xl">
         <p className="text-center">
           We are Rachel and Ben
         </p>

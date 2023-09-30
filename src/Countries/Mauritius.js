@@ -8,7 +8,7 @@ let mauritiusBlogs = blogs.filter(
 
 const BlogLink = () => {
   return (
-    <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-20 text-blue font-standard mb-8">
+    <div className="grid grid-rows-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-20   mb-8">
       {mauritiusBlogs.map((blogLink) => {
         return (
           <div className=" p-4   hover:bg-blue/60 hover:text-standard duration-200 ease-out hover:ease-in">
@@ -44,12 +44,12 @@ const BlogLink = () => {
 
 function Mauritius() {
   return (
-    <div className="font-standard pb-8 ">
+    <div className=" pb-8 ">
       <div className="py-8">
-        <h1 className="text-4xl lg:text-6xl text-blue text-center ">
+        <h1 className="text-4xl lg:text-6xl  text-center ">
           Mauritius
         </h1>
-        <p className="text-xl text-blue/80 text-center ">Le Morne</p>
+        <p className="text-xl /80 text-center ">Le Morne</p>
       </div>
       <div>
         <BlogLink />

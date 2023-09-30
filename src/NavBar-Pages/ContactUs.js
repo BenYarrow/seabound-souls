@@ -28,10 +28,10 @@ const ContactUs = () => {
   return (
     <div
       id="contact-us"
-      className="w-full flex flex-col justify-center items-center bg-standard font-standard text-blue text-sm"
+      className="w-full flex flex-col justify-center items-center bg-white   text-sm"
     >
       <div className="w-4/6 flex h-auto pb-4 flex-col items-center justify-center">
-        <h1 className="text-blue text-3xl ">Contact us!</h1>
+        <h1 className=" text-3xl ">Contact us!</h1>
         <p className="text-center">
           If you would like to get in contact with us about anything on our
           page, please send us a message using the form below.

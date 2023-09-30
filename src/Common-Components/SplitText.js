@@ -20,7 +20,7 @@ const SplitText = (props) => {
         <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2">
             <div className="bg-blue py-12 lg:pl-40 pr-12" ref={leftRef} >
                 <motion.p 
-                    className="text-white font-standard text-lg"                 
+                    className="text-white  text-lg"                 
                     variants={{
                         hidden: {opacity: 0, x: -75},
                         visible: {opacity: 1, x: 0},
@@ -37,7 +37,7 @@ const SplitText = (props) => {
             </div>
             <div className="bg-white py-12 lg:pr-40 pl-12" ref={rightRef}>
                 <motion.p 
-                    className="text-blue font-standard text-lg"                 
+                    className="  text-lg"                 
                     variants={{
                         hidden: {opacity: 0, x: 75},
                         visible: {opacity: 1, x: 0},
