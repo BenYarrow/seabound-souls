@@ -9,7 +9,7 @@ const BlogLink = ({
     blogIntro,
     blogLinkImgSrc,
     textColour,
-  }) => {
+   }) => {
 
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})

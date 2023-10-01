@@ -3,17 +3,12 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-// import AnimateHeight from "react-animate-height";
 
 const Navbar = () => {
   
   const [mobileNav, setMobileNav] = useState(false);
 
   const toggleMobileNav = () => setMobileNav(!mobileNav)
-
-  const showMobileNav = () => {
-    setMobileNav(true)
-  }
   
   const hideMobileNav = () => {
     setMobileNav(false)
