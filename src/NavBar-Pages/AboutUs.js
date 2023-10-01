@@ -1,5 +1,9 @@
-import React from "react";
+import React, {useState} from "react";
 import SwiperHeroSlider from "../Common-Components/SwiperHeroSlider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import AnimateHeight from "react-animate-height";
+
 import Image from "../Common-Components/Image";
 
 const AboutUs = () => {
@@ -35,6 +39,32 @@ const AboutUs = () => {
       customClasses: 'hidden md:block'
     }
   ]
+
+  const accordianData = [
+    {
+        question: 'happiness',
+        answer: 'answer one'
+    },
+    {
+        question: 'sense of freedom',
+        answer: 'answer two'
+    },
+    {
+        question: 'mindfullness',
+        answer: 'answer three'
+    },
+    {
+        question: 'connection with nature',
+        answer: 'answer four'
+    },
+    {
+      question: 'challenge and achievement',
+      answer: 'answer five'
+  },
+]
+
+const [activeIndex, setActiveIndex] = useState(-1)
+
   return (
   <div>
 
@@ -98,28 +128,47 @@ const AboutUs = () => {
         <h3 className="font-title text-4xl uppercase text-center pb-12">
           Why we love windsurfing
         </h3>
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div class="flex flex-col items-center space-y-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20">
+          <div className="flex flex-col space-y-8">
+            {accordianData.map((data, index) => {
+              
+              const handleClick = () => {
+                activeIndex !== index ? setActiveIndex(index) : setActiveIndex(-1)
+              }
+              
+              return (
+                <div className='flex flex-col space-y-2' key={index}>
+                  <button onClick={handleClick} className='w-full flex justify-between items-center'>
+                      <h3 className='uppercase'>
+                          {data.question}
+                      </h3>
+                      <div class="flex items-center">
+                        <p className="hidden lg:block lg:pr-2 uppercase">{activeIndex !== index ? 'Open' : 'Close'}</p>
+                        <FontAwesomeIcon icon={activeIndex !== index ? faPlus : faMinus} />
+                      </div>
+                  </button>
+                  
+                  <AnimateHeight 
+                    duration={300}
+                    height={activeIndex === index ? 'auto' : 0}
+                  >
+                      <p>
+                        {data.answer}
+                      </p>
+                  </AnimateHeight>
+                  
+                </div>
+              )
+            })}
+          </div>
+          
+          <div className="w-full h-96 md:h-full bg-center bg-cover shadow-2xl" style={{
+            backgroundImage: `url(${fuerteventuraWindsurfing})`,
+            backgroundRepeat: "no-repeat",
+            }}>
 
-              <p className="text-center">
-                Happiness
-              </p>
-              <p className="text-center">
-                Sense of freedom
-              </p>
-              <p className="text-center">
-                Mindfullness
-              </p>
-              <p className="text-center">
-                Connection with nature
-              </p>
-              <p className="text-center">
-                Challege and achievement
-              </p>
           </div>
-          <div>
-            <img src={fuerteventuraWindsurfing} />
-          </div>
+
         </div>
       </div>
     </section>
