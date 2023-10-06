@@ -1,5 +1,5 @@
 export let destinationBlogs = [
-{
+    {
         continent: 'africa',
         country: 'mauritius',
         blogType: 'windsurfing',

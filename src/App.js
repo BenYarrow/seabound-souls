@@ -3,7 +3,7 @@ import './App.css';
 import Homepage from './Homepage';
 import ContactUs from './NavBar-Pages/ContactUs';
 import Navbar from './NavBar-Pages/Navbar';
-  import Travel from './NavBar-Pages/Travel';
+  import Destinations from './NavBar-Pages/Destinations';
   import AboutUs from './NavBar-Pages/AboutUs';
 import Footer from './Footer';
 
@@ -32,7 +32,7 @@ function App() {
             {/* Nav Components */}
               <Route index element={<Homepage />}/>
               <Route path='/Homepage' element={<Homepage />}/>
-              <Route path='/Travel' element={<Travel />}/>
+              <Route path='/Destinations' element={<Destinations />}/>
               <Route path='/AboutUs' element={<AboutUs />}/>
               <Route path='/ContactUs' element={<ContactUs />}/>
             {/* DestinationComponents */}

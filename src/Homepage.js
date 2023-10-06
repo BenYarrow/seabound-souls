@@ -91,9 +91,9 @@ function Homepage() {
           </div>
           <div className={blogGridClasses}>
             {featuredDestinationBlogs.map((blog) => {
-              return blog.blogLinkData.map((data) => {
+              return blog.blogLinkData.map((data, index) => {
                 return (
-                  <BlogLink {...data}/>
+                  <BlogLink {...data} index={index}  />
                 );
               });
             })}

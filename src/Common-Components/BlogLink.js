@@ -9,6 +9,7 @@ const BlogLink = ({
     blogIntro,
     blogLinkImgSrc,
     textColour,
+    index,
    }) => {
 
     const ref = useRef(null)
@@ -23,7 +24,7 @@ const BlogLink = ({
     }, [isInView,  mainControls])
 
     return(
-            <Link ref={ref} to={linkTo}>
+            <Link ref={ref} to={linkTo} key={index}>
                 <motion.div 
                     className="flex flex-col justify-between space-y-4 w-full overflow-hidden"
                     variants={{
