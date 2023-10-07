@@ -35,7 +35,7 @@ const BlogLink = ({
                       animate={mainControls}
                       transition={{
                         duration: 0.5,
-                        delay: 1
+                        delay: 0.5
                       }}
                 >
                 <div className="overflow-hidden">

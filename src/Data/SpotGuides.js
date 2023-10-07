@@ -1,8 +1,6 @@
-export let destinationBlogs = [
+export let spotGuides = [
     {
-        continent: 'africa',
         country: 'mauritius',
-        blogType: 'windsurfing',
         blogTitle: 'windsurfing in mauritius',
         featured: true,
         isVisible: true,
@@ -20,9 +18,7 @@ export let destinationBlogs = [
         ]
     },
     {
-        continent: 'africa',
         country: 'egypt',
-        blogType: 'windsurfing',
         blogTitle: 'windsurfing in egypt',
         featured: false,
         isVisible: true,
@@ -39,9 +35,7 @@ export let destinationBlogs = [
         ]
     },
     {
-        continent: 'europe',
         country: 'greece',
-        blogType: 'windsurfing',
         blogTitle: 'windsurfing in greece',
         featured: true,
         isVisible: false,
@@ -59,9 +53,7 @@ export let destinationBlogs = [
         ]
     },
     {
-        continent: 'europe',
         country: 'canary islands',
-        blogType: 'windsurfing',
         blogTitle: 'windsurfing in fuerteventura',
         featured: true,
         isVisible: false,

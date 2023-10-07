@@ -1,5 +1,5 @@
 import React from "react";
-import { destinationBlogs } from "./Data/DestinationBlogs";
+import { spotGuides } from "./Data/SpotGuides";
 import { blogs } from "./Data/Blogs";
 import BlogLink from "./Common-Components/BlogLink";
 import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
@@ -25,7 +25,7 @@ function Homepage() {
     },
   ]
 
-  const featuredDestinationBlogs = destinationBlogs
+  const featuredspotGuides = spotGuides
     .map((blog) => {
       return blog;
     })
@@ -90,7 +90,7 @@ function Homepage() {
             </p>
           </div>
           <div className={blogGridClasses}>
-            {featuredDestinationBlogs.map((blog) => {
+            {featuredspotGuides.map((blog) => {
               return blog.blogLinkData.map((data, index) => {
                 return (
                   <BlogLink {...data} index={index}  />

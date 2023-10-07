@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { destinationBlogs } from "../Data/DestinationBlogs";
+import { spotGuides } from "../Data/SpotGuides";
 import SwiperHeroSlider from "../Common-Components/SwiperHeroSlider";
 import BlogLink from "../Common-Components/BlogLink";
 
@@ -25,7 +25,7 @@ const Destinations = () => {
     },
   ]
   
-  const windsurfingBlogs = destinationBlogs.filter(type => type.blogType === 'windsurfing')
+  const windsurfingBlogs = spotGuides.filter(visible => visible.isVisible === true)
   
   const egyptWindsurfingBlogs = windsurfingBlogs.map(blog => {
     return (
