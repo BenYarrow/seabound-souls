@@ -60,7 +60,7 @@ export let destinationBlogs = [
     },
     {
         continent: 'europe',
-        country: 'fuerteventura',
+        country: 'canary islands',
         blogType: 'windsurfing',
         blogTitle: 'windsurfing in fuerteventura',
         featured: true,
