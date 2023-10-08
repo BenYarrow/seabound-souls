@@ -163,7 +163,7 @@ const AboutUs = () => {
         />
       </section>
 
-      <section class="py-20">
+      <section className="py-20">
         <div className="container mx-auto">
           <div className="flex flex-col space-y-8 items-center pb-12">
             <h3 className="font-title text-4xl uppercase">

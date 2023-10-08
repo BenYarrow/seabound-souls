@@ -18,7 +18,7 @@ const SplitAccordianImage = (props) => {
           <h3 className="font-title text-4xl uppercase">
             {props.title}
           </h3>
-            <p class="pt-4">
+            <p className="pt-4">
             {props.subtitle}
           </p>
         </div>
@@ -48,7 +48,7 @@ const SplitAccordianImage = (props) => {
                       <h3 className='uppercase'>
                           {data.question}
                       </h3>
-                      <div class="flex items-center">
+                      <div className="flex items-center">
                         <p className="hidden lg:block lg:pr-2 uppercase tranition duration-300">{activeIndex !== index ? 'Open' : 'Close'}</p>
                         <FontAwesomeIcon icon={activeIndex !== index ? faPlus : faMinus} />
                       </div>

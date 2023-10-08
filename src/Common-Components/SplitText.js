@@ -14,10 +14,10 @@ const SplitText = (props) => {
       if (isInView) {
         mainControls.start('visible')
       }
-    }, [isInView,  mainControls])
+    }, [isInView, mainControls])
 
     return(
-        <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2">
+        <div className="w-full h-full grid grid-cols-1 lg:grid-cols-2 lg:gap-4">
             <div className="bg-blue py-12 lg:pl-40 pr-12" ref={leftRef} >
                 <motion.p 
                     className="text-white  "                 

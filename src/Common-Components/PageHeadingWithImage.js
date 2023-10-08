@@ -3,18 +3,18 @@ import React from "react";
 const PageHeadingWithImage = (props) => {
        
     return (
-        <div>
-        <section 
-            className="w-screen h-screen bg-cover bg-center lg:bg-top -z-10"
-            style={{
-            backgroundImage: `url(${props.imageSrc})`,
-            backgroundRepeat: "no-repeat",
-            }}
-        > 
-        </section> 
-            <h1 className="pt-80 text-8xl lg:text-6xl tracking-wider uppercase  text-black text-center py-12">
-                {props.heading}
-            </h1>
+        <div className="">
+            <img 
+                src={props.imageSrc}
+                width=""
+                height=""
+                className="-z-10 w-full h-60 object-cover"
+            />
+            <div className="container mx-auto">
+                <h1 className="py-12 text-center uppercase text-2xl md:text-4xl xl:text-5xl">
+                    {props.heading}
+                </h1>   
+            </div>
         </div>
     )
 }
