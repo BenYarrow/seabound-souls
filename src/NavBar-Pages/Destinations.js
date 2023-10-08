@@ -92,7 +92,9 @@ const Destinations = () => {
 
               const handleChange = () => {
                 setActiveFilter(location.filter);
-                setActiveMasthead(location.image)
+                setActiveMasthead(location.image);
+                console.log('clicked')
+
               }
 
               return (
