@@ -45,12 +45,12 @@ function Footer() {
                             Get social
                         </h4>
                         <ul className="flex justify-center">
-                            {socialLinks.map(link => {
+                            {socialLinks.map((link, index) => {
                                 
                                 const linkClasses = 'text-4xl text-white'
 
                                 return (
-                                    <li>
+                                    <li key={index}>
                                         <Link to={link.linkTo} target="_blank">
                                             <FontAwesomeIcon icon={link.icon} className={linkClasses}/>
                                         </Link>

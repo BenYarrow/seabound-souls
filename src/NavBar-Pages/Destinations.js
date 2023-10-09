@@ -94,16 +94,14 @@ const Destinations = () => {
                 setActiveFilter(location.filter);
                 setActiveMasthead(location.image);
                 console.log('clicked')
-
               }
 
               return (
-                <li key={index} className={`${index === 0 ? 'col-span-2 lg:w-48' : 'w-full lg:w-48'} py-2 bg-blue text-center`}>
-                  <button className="uppercase text-base lg:text-lg text-white"
-                    onClick={handleChange}
-                  >
+                <li key={index} 
+                  className={`${index === 0 ? 'col-span-2 lg:w-48' : 'w-full lg:w-48'} py-2 bg-blue text-center uppercase text-base lg:text-lg text-white cursor-pointer`}
+                  onClick={handleChange}
+                >
                     {location.location}
-                  </button>
                 </li>
               )
             })}
@@ -112,15 +110,18 @@ const Destinations = () => {
             
           </div>
         </div>
+
       </section>
 
       <section className="pb-20">
         <div className="container mx-auto">
           <div className={blogGridClasses}>
-            {activeFilter.map((blog) => {
+            {activeFilter.map((blog, index) => {
                   return blog.blogLinkData.map((data, index) => {
                     return (
-                        <BlogLink {...data} index={index}  />
+                        <div key={index}>
+                          <BlogLink {...data} index={index}  />
+                        </div>
                     );
                   });
                 })}
