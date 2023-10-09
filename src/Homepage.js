@@ -43,7 +43,7 @@ function Homepage() {
     <div className="relative">
       
       <SwiperHeroSlider images={heroImages} heading='seabound souls'/>
-      
+
       <section 
         className="w-full py-20 container mx-auto"
         id="content"
@@ -52,7 +52,7 @@ function Homepage() {
         <div className="grid grid-cols 1 gap-20 lg:grid-cols-2 xl:grid-cols-9">
           
           <div className="flex flex-col items-center space-8-12 xl:col-span-6">
-            <h3 className="font-title text-4xl lg:max-w-2xl text-center uppercase  pb-8 border-b-[1px] border-blue">
+            <h3 className="font-title text-4xl lg:max-w-2xl text-center uppercase pb-8 border-b-[1px] border-blue">
               Memories are made where the wind meets the waves
             </h3>
             <div className="pt-8 space-y-8 flex flex-col items-center">

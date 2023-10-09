@@ -18,8 +18,8 @@ function Footer() {
     ]
 
     return (
-        <footer className="w-full py-20 bg-blue text-white">
-            <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
+        <footer className="w-full h-screen md:h-auto md:py-20 bg-blue text-white">
+            <div className="container mx-auto h-full flex flex-col justify-between py-20 md:py-0 md:grid md:grid-cols-2">
                 <div className="flex flex-col items-center justify-center gap-8">
                     <h3 className="font-title uppercase text-6xl">
                         Contact us
@@ -61,6 +61,7 @@ function Footer() {
                     </div>
 
                 </div>
+
                 <div className="flex items-center justify-center">
                     <img src="/Personal-Images/logo.png" alt="Seabound souls logo" className="w-1/2 md:w-full max-w-md"/>
 
