@@ -6,9 +6,9 @@ import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
 
 function Homepage() {
 
-  const windsurfingOne = "Masthead-Images/windsurfing-together-01.jpg";
-  const fuerteventuraBeach = "/Masthead-Images/fuerteventura-beach-01.jpg";
-  const windsurfingTwo = "Masthead-Images/ben-vulcan-fuerteventura.jpg";
+  const windsurfingOne = "images/mastheads/homepage/windsurfing-together-01.jpg";
+  const fuerteventuraBeach = "images/mastheads/homepage/fuerteventura-beach-01.jpg";
+  const windsurfingTwo = "images/mastheads/homepage/ben-vulcan-fuerteventura.jpg";
 
   const heroImages = [
     {
@@ -25,11 +25,21 @@ function Homepage() {
     },
   ]
 
-  const featuredspotGuides = spotGuides
+  const featuredSpotGuides = spotGuides
     .map((blog) => {
       return blog;
     })
     .filter((featured) => featured.featured === true);
+  
+  featuredSpotGuides.sort((a, b) => {
+    if (a.featuredOrder < b.featuredOrder) {
+      return -1
+    } else if (a.featuredOrder > b.featuredOrder) {
+      return 1
+    } else {
+      return 0
+    }
+  })
 
   const featuredBlogs = blogs
   .map((blog) => {
@@ -90,7 +100,7 @@ function Homepage() {
             </p>
           </div>
           <div className={blogGridClasses}>
-            {featuredspotGuides.map((blog) => {
+            {featuredSpotGuides.map((blog) => {
               return blog.blogLinkData.map((data, index) => {
                 return (
                   <BlogLink {...data} index={index}  />

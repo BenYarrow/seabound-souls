@@ -1,15 +1,16 @@
 export let spotGuides = [
     {
         country: 'mauritius',
-        blogTitle: 'windsurfing in mauritius',
+        blogTitle: 'Le Morne, spot guide',
         featured: true,
+        featuredOrder: 1,
         isVisible: true,
         blogLinkData: [
             {
                 title: 'Windsurfing in Mauritius',
                 location: 'Le Morne, Mauritius',
-                linkTo: '/WindsurfingInMauritius',
-                blogLinkImgSrc: './Mauritius-Images/Windsurfing-In-Mauritius/Ben-1.jpg',
+                linkTo: '/LeMorneSpotGuide',
+                blogLinkImgSrc: 'images/spotguides/mauritius-spotguide.jpg',
                 blogLinkImgAlt: 'Windsurfing in Mauritius',
                 blogIntro: `Mauritius is a fantastic destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds.`,
             }
@@ -17,15 +18,14 @@ export let spotGuides = [
     },
     {
         country: 'egypt',
-        blogTitle: 'windsurfing in egypt',
+        blogTitle: 'Dahab, spot guide',
         featured: false,
         isVisible: true,
         blogLinkData: [
             {
-                
                 title: 'Windsurfing in Dahab',
-                linkTo: '/WindsurfingInEgypt',
-                blogLinkImgSrc: './Egypt-Images/Dahab-Beach.jpg',
+                linkTo: '/DahabSpotGuide',
+                blogLinkImgSrc: 'images/spotguides/dahab-spotguide.jpg',
                 blogLinkImgAlt: 'Windsurfing in Egypt',
                 blogIntro: `windsurfing in dahab blog intro `,
 
@@ -34,34 +34,35 @@ export let spotGuides = [
     },
     {
         country: 'greece',
-        blogTitle: 'windsurfing in greece',
+        blogTitle: 'Vassiliki',
         featured: true,
-        isVisible: false,
+        featuredOrder: 3,
+        isVisible: true,
         blogLinkData: [
             {
-                
                 title: 'Windsurfing in Vasiliki',
-                location: 'Vassiliki, Greece',
-                linkTo: '',
-                blogLinkImgSrc: '',
+                location: 'Vassiliki, Lefkada',
+                linkTo: '/VassilikiSpotGuide',
+                blogLinkImgSrc: 'images/spotguides/vassiliki-spotguide.jpg',
                 blogLinkImgAlt: '',
                 blogIntro: ``,
-                
             }
-        ]
+        ],
+
     },
     {
         country: 'canary islands',
-        blogTitle: 'windsurfing in fuerteventura',
+        blogTitle: 'Risco Del Paso, spot guide',
         featured: true,
-        isVisible: false,
+        featuredOrder: 2,
+        isVisible: true,
         blogLinkData: [
             {
                 
                 title: 'Windsurfing in Vasiliki',
-                location: 'Sotavento, Fuerteventura',
-                linkTo: '',
-                blogLinkImgSrc: '',
+                location: 'Risco Del Paso, Fuerteventura',
+                linkTo: '/RiscoDelPasoSpotGuide',
+                blogLinkImgSrc: 'images/spotguides/risco-del-paso-spotguide.jpg',
                 blogLinkImgAlt: '',
                 blogIntro: ``,
                 

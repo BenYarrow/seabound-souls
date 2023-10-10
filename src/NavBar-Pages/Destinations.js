@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { spotGuides } from "../Data/SpotGuides";
 import SwiperHeroSlider from "../Common-Components/SwiperHeroSlider";
 import BlogLink from "../Common-Components/BlogLink";
-import PageHeadingWithImage from "../Common-Components/PageHeadingWithImage";
+import StaticMasthead from "../Common-Components/StaticMasthead";
+import PageHeading from "../Common-Components/PageHeading";
 
 const Destinations = () => {
   
-  const windsurfingOne = "Masthead-Images/windsurfing-together-01.jpg";
-  const fuerteventuraBeach = "/Masthead-Images/fuerteventura-beach-01.jpg";
-  const windsurfingTwo = "Masthead-Images/ben-vulcan-fuerteventura.jpg";
-  
+  const masthead = "images/mastheads/destinations/destinations-masthead.jpg";
+
   const windsurfingBlogs = spotGuides.filter(visible => visible.isVisible === true)
   
   const egyptWindsurfingBlogs = windsurfingBlogs.map(blog => {
@@ -40,27 +39,22 @@ const Destinations = () => {
     {
       location: 'all',
       filter: windsurfingBlogs,
-      image: windsurfingOne
     },
     {
       location: 'canary islands',
       filter: canaryIslandWindsurfingBlogs,
-      image: fuerteventuraBeach
     },
     {
       location: 'egypt',
       filter: egyptWindsurfingBlogs,
-      image: windsurfingTwo
     },
     {
       location: 'greece',
       filter: greeceWindsurfingBlogs,
-      image: ''
     },
     {
       location: 'mauritius',
       filter: mauritiusWindsurfingBlogs,
-      image: ''
     }
   ]
   windsurfingLocations.sort((a, b) => {
@@ -77,23 +71,20 @@ const Destinations = () => {
   
   const [activeFilter, setActiveFilter] = useState(windsurfingBlogs)
 
-  const [activeMastHead, setActiveMasthead] = useState(windsurfingOne)
-
   return (
 
-    <div className="relative">
+    <div>
 
-      <PageHeadingWithImage imageSrc={activeMastHead} heading='Destination spot guides' />
+      <StaticMasthead imageSrc={masthead} />
+      <PageHeading heading='Destination spot guides' />
 
-      <section>
-        <div className="container mx-auto pb-20">
-          <ul className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-between gap-2">
+      <section className="">
+        <div className="container mx-auto pb-8">
+          <ul className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-between">
             {windsurfingLocations.map((location, index) => {
 
               const handleChange = () => {
                 setActiveFilter(location.filter);
-                setActiveMasthead(location.image);
-                console.log('clicked')
               }
 
               return (

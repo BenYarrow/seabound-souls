@@ -23,7 +23,7 @@ const SwiperHeroSlider = (props) => {
   >
         {props.images.map((slide, index) => {
           return(
-            <SwiperSlide key={index}>
+            <SwiperSlide key={index} className="relative">
               <div className={`${slide.bgImageClasses} h-[calc(100vh-4rem)] -z-10 flex flex-col justify-between items-center bg-white py-20`}
                   style={{
                   backgroundImage: `url(${slide.image})`,
