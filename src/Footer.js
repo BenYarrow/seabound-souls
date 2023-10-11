@@ -1,11 +1,10 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons"
+// import { faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons"
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { IconBase } from "react-icons";
 
-function Footer() {
+const Footer = () => {
 
     const subheadingClasses = 'text-center text-4xl font-title uppercase'
 

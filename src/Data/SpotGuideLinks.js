@@ -1,4 +1,4 @@
-export let spotGuides = [
+export let SpotGuideLinks = [
     {
         country: 'mauritius',
         blogTitle: 'Le Morne, spot guide',

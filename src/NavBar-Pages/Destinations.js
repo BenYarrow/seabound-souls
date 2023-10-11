@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { spotGuides } from "../Data/SpotGuides";
-import SwiperHeroSlider from "../Common-Components/SwiperHeroSlider";
+import { SpotGuideLinks } from "../Data/SpotGuideLinks";
 import BlogLink from "../Common-Components/BlogLink";
 import StaticMasthead from "../Common-Components/StaticMasthead";
 import PageHeading from "../Common-Components/PageHeading";
@@ -9,7 +8,7 @@ const Destinations = () => {
   
   const masthead = "images/mastheads/destinations/destinations-masthead.jpg";
 
-  const windsurfingBlogs = spotGuides.filter(visible => visible.isVisible === true)
+  const windsurfingBlogs = SpotGuideLinks.filter(visible => visible.isVisible === true)
   
   const egyptWindsurfingBlogs = windsurfingBlogs.map(blog => {
     return (

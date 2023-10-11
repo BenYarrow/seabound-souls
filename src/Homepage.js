@@ -1,5 +1,5 @@
 import React from "react";
-import { spotGuides } from "./Data/SpotGuides";
+import { SpotGuideLinks } from "./Data/SpotGuideLinks";
 import { blogs } from "./Data/Blogs";
 import BlogLink from "./Common-Components/BlogLink";
 import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
@@ -25,13 +25,13 @@ function Homepage() {
     },
   ]
 
-  const featuredSpotGuides = spotGuides
+  const featuredSpotGuideLinks = SpotGuideLinks
     .map((blog) => {
       return blog;
     })
     .filter((featured) => featured.featured === true);
   
-  featuredSpotGuides.sort((a, b) => {
+  featuredSpotGuideLinks.sort((a, b) => {
     if (a.featuredOrder < b.featuredOrder) {
       return -1
     } else if (a.featuredOrder > b.featuredOrder) {
@@ -100,7 +100,7 @@ function Homepage() {
             </p>
           </div>
           <div className={blogGridClasses}>
-            {featuredSpotGuides.map((blog) => {
+            {featuredSpotGuideLinks.map((blog) => {
               return blog.blogLinkData.map((data, index) => {
                 return (
                   <BlogLink {...data} index={index}  />

@@ -19,9 +19,17 @@ module.exports = {
         destinations: "Black Bones Personal Use",
       },
       colors: {
-        'white': '#FEFAF9',  
-        'blue': '#26567B',
+        'white': {  
+          DEFAULT: '#FEFAF9',  
+          darker: '#D8D8D8',
+        }, 
+        'blue': {
+          lighter: '#97C9CE',
+          DEFAULT: '#26567B',
+
+        },
         'orange': '#F4A361',
+        'gli' : '',
       }
     },
 
