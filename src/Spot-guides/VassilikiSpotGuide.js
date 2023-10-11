@@ -2,15 +2,15 @@ import React from 'react'
 import StaticMasthead from '../Common-Components/StaticMasthead'
 import PageHeading from '../Common-Components/PageHeading'
 import { SpotGuidePages } from '../Data/SpotGuidePages'
-import SpotStats from '../Common-Components/SpotStats'
-
+import SpotOverview from '../Common-Components/SpotOverview'
 
 
 const VassilikiSpotGuide = () => {
 
     const vassSpotGuide = SpotGuidePages.find(spot => spot.title === 'Vassiliki')
-
-    return (
+    
+    console.log(vassSpotGuide.discipline)
+    return (    
         <div>
 
             <StaticMasthead imageSrc={vassSpotGuide.masthead} />
@@ -32,7 +32,13 @@ const VassilikiSpotGuide = () => {
             </section>
 
             <section className='container mx-auto py-8'>
-                <SpotStats b1 b2 b3 b4 i1 i2 i3 i4 a1 a2 a3 a4/>
+                <SpotOverview b1 b2 b3 b4 i1 i2 i3 i4 a1 a2 a3 a4 
+                    discipline={vassSpotGuide.discipline}
+                    bestTime={vassSpotGuide.bestTime}
+                    bestDirection={vassSpotGuide.bestDirection}
+                    windConditions={vassSpotGuide.windConditions}
+                    waterConditions={vassSpotGuide.waterConditions}
+                />
             </section>
 
         </div>
