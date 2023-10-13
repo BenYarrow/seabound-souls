@@ -9,7 +9,6 @@ const VassilikiSpotGuide = () => {
 
     const vassSpotGuide = SpotGuidePages.find(spot => spot.title === 'Vassiliki')
     
-    console.log(vassSpotGuide.discipline)
     return (    
         <div>
 
@@ -33,11 +32,12 @@ const VassilikiSpotGuide = () => {
 
             <section className='container mx-auto py-8'>
                 <SpotOverview b1 b2 b3 b4 i1 i2 i3 i4 a1 a2 a3 a4 
-                    discipline={vassSpotGuide.discipline}
-                    bestTime={vassSpotGuide.bestTime}
+                    sailingStyle={vassSpotGuide.sailingStyle}
+                    bestConditions={vassSpotGuide.bestConditions}
                     bestDirection={vassSpotGuide.bestDirection}
                     windConditions={vassSpotGuide.windConditions}
                     waterConditions={vassSpotGuide.waterConditions}
+                    launchZone={vassSpotGuide.launchZone}
                 />
             </section>
 
