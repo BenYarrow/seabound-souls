@@ -4,31 +4,29 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const SpotOverview = (props) => {
 
-
-
   return (
     <div className='w-full'>
 
-        <h3 className='text-3xl pb-6'>
+        <h3 className='text-3xl lg:text-5xl pb-4 lg:pb-8'>
             Overview
         </h3>
 
-        <div className='grid grid-cols-1 lg:grid-cols-3'>
-            <div className='grid grid-cols-6 grid-rows-6'>
+        <div className='grid grid-cols-1 lg:grid-cols-3 '>
+            <div className='grid grid-cols-4 grid-rows-5 w-1/3 lg:w-full pb-8'>
                 <div className='w-full h-full flex items-center'>
-
                     <img src='svg/skill.svg'
                         width="50"
                         height="50"
+                        className=""
                     />
                 </div>
-                <p className="col-span-5 w-full font-bold flex items-center text-2xl pl-4">
+                <p className="col-span-3 col-start-2row-start-1 w-full font-bold flex items-center text-xl lg:text-2xl pl-4">
                     Ability Level
                 </p>
                 <div className='col-start-2 row-start-2 row-span-5 flex flex-col pl-4 gap-4'>
 
-                    <div className='col-start-2 col-span-5 flex flex-col gap-2'>
-                        <p className='text-xl '>
+                    <div className='col-start-2 col-span-3 flex flex-col gap-2'>
+                        <p className='text-md lg:text-xl'>
                             Beginner
                         </p>
                         <div className="flex gap-2">
@@ -39,8 +37,8 @@ const SpotOverview = (props) => {
                             <FontAwesomeIcon icon={faStar} className={`${props.b5 ? 'text-blue-lighter' : 'text-white-darker'}`}/>
                         </div>
                     </div>
-                    <div className='col-start-2 col-span-5 flex flex-col gap-2'>
-                        <p className='text-xl '>
+                    <div className='col-start-2 col-span-3 flex flex-col gap-2'>
+                        <p className='text-md lg:text-xl'>
                             Intermediate
                         </p>
                         <div className="flex gap-2">
@@ -51,8 +49,8 @@ const SpotOverview = (props) => {
                             <FontAwesomeIcon icon={faStar} className={`${props.i5 ? 'text-blue-lighter' : 'text-white-darker'}`}/>
                         </div>
                     </div>
-                    <div className='col-start-2 col-span-5 flex flex-col gap-2'>
-                        <p className='text-xl '>
+                    <div className='col-start-2 col-span-3 flex flex-col gap-2'>
+                        <p className='text-md lg:text-xl'>
                             Advanced
                         </p>
                         <div className='flex gap-2'>
@@ -65,8 +63,9 @@ const SpotOverview = (props) => {
                     </div>
                 </div>
             </div>
+
             
-            <div className="flex flex-col lg:flex-row lg:justify-between  lg:col-span-2">
+            <div className="w-full flex justify-between lg:grid lg:grid-cols-2 gap-8 lg:col-span-2 ">
 
                 <div className='grid grid-cols-6 grid-rows-6'>
                     <img src='svg/sailing-style.svg'
@@ -75,11 +74,11 @@ const SpotOverview = (props) => {
                         className='flex items-center'
                     />
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-2xl font-bold'>
+                        <p className='text-xl lg:text-2xl font-bold'>
                             Sailing style
                         </p>
                     </div>
-                    <p className='row-start-2 col-start-2 col-span-5 pl-4'>
+                    <p className='row-start-2 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.sailingStyle}
                     </p>
 
@@ -89,11 +88,11 @@ const SpotOverview = (props) => {
                         className='flex items-center row-start-3'
                     />
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-2xl font-bold'>
+                        <p className='text-xl lg:text-2xl font-bold'>
                             Best conditions
                         </p>
                     </div>
-                    <p className='row-start-4 col-start-2 col-span-5 pl-4'>
+                    <p className='row-start-4 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.bestConditions}
                     </p>
 
@@ -103,11 +102,11 @@ const SpotOverview = (props) => {
                         className='flex items-center row-start-5'
                     />
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-2xl font-bold'>
+                        <p className='text-xl lg:text-2xl font-bold'>
                             Best wind direction
                         </p>
                     </div>
-                    <p className='row-start-6 col-start-2 col-span-5 pl-4'>
+                    <p className='row-start-6 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.bestDirection}
                     </p>
                 </div>
@@ -118,11 +117,11 @@ const SpotOverview = (props) => {
                         className='flex items-center'
                     />
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-2xl font-bold'>
+                        <p className='text-xl lg:text-2xl font-bold'>
                             Wind conditions
                         </p>
                     </div>
-                    <p className='row-start-2 col-start-2 col-span-5 pl-4'>
+                    <p className='row-start-2 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.windConditions}
                     </p>
 
@@ -132,11 +131,11 @@ const SpotOverview = (props) => {
                         className='flex items-center row-start-3'
                     />
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-2xl font-bold'>
+                        <p className='text-xl lg:text-2xl font-bold'>
                             Water conditions
                         </p>
                     </div>
-                    <p className='row-start-4 col-start-2 col-span-5 pl-4'>
+                    <p className='row-start-4 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.waterConditions}
                     </p>
 
@@ -146,11 +145,11 @@ const SpotOverview = (props) => {
                         className='flex items-center row-start-5'
                     />
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-2xl font-bold'>
+                        <p className='text-xl lg:text-2xl font-bold'>
                             Launch zone
                         </p>
                     </div>
-                    <p className='row-start-6 col-start-2 col-span-5 pl-4'>
+                    <p className='row-start-6 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.launchZone}
                     </p>
                 </div>

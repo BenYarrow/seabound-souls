@@ -3,7 +3,8 @@ import StaticMasthead from '../Common-Components/StaticMasthead'
 import PageHeading from '../Common-Components/PageHeading'
 import { SpotGuidePages } from '../Data/SpotGuidePages'
 import SpotOverview from '../Common-Components/SpotOverview'
-
+import SpotConditions from '../Common-Components/SpotConditions'
+import WhereToStay from '../Common-Components/WhereToStay'
 
 const VassilikiSpotGuide = () => {
 
@@ -30,7 +31,7 @@ const VassilikiSpotGuide = () => {
                 </div>
             </section>
 
-            <section className='container mx-auto py-8'>
+            <section className='container mx-auto pt-8 pb-4'>
                 <SpotOverview b1 b2 b3 b4 i1 i2 i3 i4 a1 a2 a3 a4 
                     sailingStyle={vassSpotGuide.sailingStyle}
                     bestConditions={vassSpotGuide.bestConditions}
@@ -38,6 +39,33 @@ const VassilikiSpotGuide = () => {
                     windConditions={vassSpotGuide.windConditions}
                     waterConditions={vassSpotGuide.waterConditions}
                     launchZone={vassSpotGuide.launchZone}
+                />
+            </section>
+
+            <section className='container mx-auto py-4'>
+                    <SpotConditions
+                        waterConditionDetails={vassSpotGuide.waterConditionDetails}
+                        waterImage={vassSpotGuide.waterConditionImage}
+                        windConditionDetails={vassSpotGuide.windConditionDetails}
+                        windImage={vassSpotGuide.windConditionImage}
+                        windStatisticDetails={vassSpotGuide.windStatisticDetails}
+                        windStatisticImage={vassSpotGuide.windStatisticImage}
+                        whenToGoDetails={vassSpotGuide.whenToGoDetails}
+                        spotDetails={vassSpotGuide.spotDetails}
+                        spotImage={vassSpotGuide.spotImage}
+                    />
+            </section>
+
+            <section className='container mx-auto py-4'>
+                <WhereToStay 
+                    accomodationOneTitle= 'Cosmos Hotel'
+                    accomodationOneDetails= 'Located at the windward end of the bay which is recognized for providing optimum conditions and longest sail time. In our relaxed and exceptionally chilled surroundings, enjoy some pool time, a healthy lunch, maybe a cocktail or even dinner at our a la carte restaurant.'
+                    accomodationOneImage= 'images/Vassiliki-Images/cosmos-hotel.jpg'
+                    accomodationOneLink= 'https://cosmos-vassiliki.com/'
+                    accomodationTwoTitle= 'Surf Hotel'
+                    accomodationTwoImage= 'images/Vassiliki-Images/surf-hotel.jpg'
+                    accomodationTwoDetails= 'Located right in front of the bay, this complex is designed to offer you everything that will make your vacation unforgettable and will satisfy your every need!'
+                    accomodationTwoLink= 'https://surfhotel.gr/'
                 />
             </section>
 
