@@ -7,12 +7,12 @@ const SpotOverview = (props) => {
   return (
     <div className='w-full'>
 
-        <h3 className='text-3xl lg:text-5xl pb-4 lg:pb-8'>
+        <h2 className='text-3xl lg:text-5xl pb-4 lg:pb-8'>
             Overview
-        </h3>
+        </h2>
 
         <div className='grid grid-cols-1 lg:grid-cols-3 '>
-            <div className='grid grid-cols-4 grid-rows-5 w-1/3 lg:w-full pb-8'>
+            <div className='grid grid-cols-4 grid-rows-5 w-1/2 lg:w-full pb-8'>
                 <div className='w-full h-full flex items-center'>
                     <img src='svg/skill.svg'
                         width="50"
@@ -65,7 +65,7 @@ const SpotOverview = (props) => {
             </div>
 
             
-            <div className="w-full flex justify-between lg:grid lg:grid-cols-2 gap-8 lg:col-span-2 ">
+            <div className="grid grid-cols-1 md:grid md:grid-cols-2 gap-8 lg:col-span-2 ">
 
                 <div className='grid grid-cols-6 grid-rows-6'>
                     <img src='svg/sailing-style.svg'

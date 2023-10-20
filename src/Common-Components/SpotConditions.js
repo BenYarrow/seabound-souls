@@ -22,7 +22,7 @@ const SpotConditions = (props) => {
             title='Water conditions' 
             text={props.waterConditionDetails} 
             image={props.waterImage}
-            reverse='false'
+            reverse='true'
         />
 
         <SplitImageText 
@@ -36,7 +36,7 @@ const SpotConditions = (props) => {
             title='Wind statistics' 
             text={props.windStatisticDetails} 
             image={props.windStatisticImage}
-            reverse='false'
+            reverse='true'
         />
 
         <SplitImageText 

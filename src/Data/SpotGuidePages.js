@@ -25,10 +25,40 @@ export let SpotGuidePages = [
         spotDetails: "Vassiliki Bay: The main windsurfing area is Vassiliki Bay, a large, sheltered bay on the southern coast of Lefkada. Kitesurfing is prohibited in Vassiliki. Agios Ioannis / Milos Beach: Located on the northern coast of Lefkada, close to Lefkada town. The prevailing northwest winds provide reliable conditions. Schools and rental facilities can be found along the beach. It’s a popular spot for kite surfers and offers wave riding, although it can be somewhat risky due to the slippery rocks near the shore.",
         spotImage: 'images/spotguides/vassiliki-spotguide.jpg',
 
-        //Where to stay
+        // Lessons and hire
+        lessonTitleOne: 'Surf School Vassiliki',
+        lessonLinkOne: 'https://surfschoolvasiliki.gr/',
+        lessonTitleTwo: 'Human Sports',
+        lessonLinkTwo: 'http://www.human-sports.com/en/home.html',
+        lessonTitleThree: 'Club Vass',
+        lessonLinkThree: 'https://clubvass.com/',
+        lessonHireImage: '',
+            
 
-        accomodationOne: 'Cosmos Hotel',
-        accomodationOneImage: '',
+        // Where to stay
+        stayIntro: 'There are lots of options for accomodation in Vassiliki. Here are the most recomended by the locals:',
+        stayOneTitle: 'Cosmos Hotel',
+        stayOneLink: 'https://cosmos-vassiliki.com/',
+        stayTwoTitle: 'Surf Hotel',
+        stayTwoLink: 'https://surfhotel.gr/',
+        stayThreeTitle: 'Club Vass',
+        stayThreeLink: 'https://clubvass.com/',
+        stayImage: 'images/Vassiliki-Images/cosmos-hotel.jpg',
+
+        // Where to eat
+        eatIntro: 'Vassiliki has a wide range of restaurants serving, all serving amaxing food. here are some of our favourites:',
+        eatTitleOne: 'Vass Bar,',
+        eatLinkOne: 'https://vasiliki.eu/vass-bar.html',
+        eatTitleTwo: 'Patio Dining',
+        eatTitleThree: 'Oceans Restaurant',
+        eatTitleFour: 'Alex’s Pizza',
+        eatTitleFive: 'Cosmos Hotel',
+        eatTitleSix: 'The Old Plane Tree (Kontarena)',
+        eatTitleSeven: 'Sivota Bakery Café (Sivota)',
+        eatTitleEight: 'Rachi Restaurant (Exanthia)',
+
+
+
 
 
         

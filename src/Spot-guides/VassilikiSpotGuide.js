@@ -4,7 +4,9 @@ import PageHeading from '../Common-Components/PageHeading'
 import { SpotGuidePages } from '../Data/SpotGuidePages'
 import SpotOverview from '../Common-Components/SpotOverview'
 import SpotConditions from '../Common-Components/SpotConditions'
+import BulletsAndImage from '../Common-Components/BulletsAndImage'
 import WhereToStay from '../Common-Components/WhereToStay'
+import SplitImageText from '../Common-Components/SplitImageText'
 
 const VassilikiSpotGuide = () => {
 
@@ -42,30 +44,79 @@ const VassilikiSpotGuide = () => {
                 />
             </section>
 
-            <section className='container mx-auto py-4'>
-                    <SpotConditions
-                        waterConditionDetails={vassSpotGuide.waterConditionDetails}
-                        waterImage={vassSpotGuide.waterConditionImage}
-                        windConditionDetails={vassSpotGuide.windConditionDetails}
-                        windImage={vassSpotGuide.windConditionImage}
-                        windStatisticDetails={vassSpotGuide.windStatisticDetails}
-                        windStatisticImage={vassSpotGuide.windStatisticImage}
-                        whenToGoDetails={vassSpotGuide.whenToGoDetails}
-                        spotDetails={vassSpotGuide.spotDetails}
-                        spotImage={vassSpotGuide.spotImage}
-                    />
+            <section className='container mx-auto py-4 lg:py-8'>
+                <SpotConditions
+                    waterConditionDetails={vassSpotGuide.waterConditionDetails}
+                    waterImage={vassSpotGuide.waterConditionImage}
+                    windConditionDetails={vassSpotGuide.windConditionDetails}
+                    windImage={vassSpotGuide.windConditionImage}
+                    windStatisticDetails={vassSpotGuide.windStatisticDetails}
+                    windStatisticImage={vassSpotGuide.windStatisticImage}
+                    whenToGoDetails={vassSpotGuide.whenToGoDetails}
+                    spotDetails={vassSpotGuide.spotDetails}
+                    spotImage={vassSpotGuide.spotImage}
+                />
             </section>
 
-            <section className='container mx-auto py-4'>
-                <WhereToStay 
-                    accomodationOneTitle= 'Cosmos Hotel'
-                    accomodationOneDetails= 'Located at the windward end of the bay which is recognized for providing optimum conditions and longest sail time. In our relaxed and exceptionally chilled surroundings, enjoy some pool time, a healthy lunch, maybe a cocktail or even dinner at our a la carte restaurant.'
-                    accomodationOneImage= 'images/Vassiliki-Images/cosmos-hotel.jpg'
-                    accomodationOneLink= 'https://cosmos-vassiliki.com/'
-                    accomodationTwoTitle= 'Surf Hotel'
-                    accomodationTwoImage= 'images/Vassiliki-Images/surf-hotel.jpg'
-                    accomodationTwoDetails= 'Located right in front of the bay, this complex is designed to offer you everything that will make your vacation unforgettable and will satisfy your every need!'
-                    accomodationTwoLink= 'https://surfhotel.gr/'
+            <section className='container mx-auto py-4 lg:py-8'>
+                <BulletsAndImage 
+                    title= 'Lessons and Hire'
+                    intro= 'There are numerous windsurfing centres are located along the Vassiliki waterfront, offering equipment rental and lessons. These include:'
+                    titleOne={vassSpotGuide.lessonTitleOne}
+                    linkOne={vassSpotGuide.lessonLinkOne}
+                    titleTwo={vassSpotGuide.lessonTitleTwo}
+                    linkTwo={vassSpotGuide.lessonLinkTwo}
+                    titleThree={vassSpotGuide.lessonTitleThree}
+                    linkThree={vassSpotGuide.lessonLinkThree}
+                    image={vassSpotGuide.lessonHireImage}
+                    reverse='true'
+                />
+
+            </section>
+
+            <section className='container mx-auto py-4 lg:py-8'>
+                <BulletsAndImage 
+                    title= 'Where to stay'
+                    intro={vassSpotGuide.stayIntro}
+                    titleOne={vassSpotGuide.stayOneTitle}
+                    linkOne={vassSpotGuide.stayOneLink}
+                    titleTwo={vassSpotGuide.stayTwoTitle}
+                    linkTwo={vassSpotGuide.stayTwoLink}
+                    titleThree={vassSpotGuide.stayThreeTitle}
+                    linkThree={vassSpotGuide.stayThreeLink}
+                    image={vassSpotGuide.stayImage}
+                    reverse= 'true'
+                />
+            </section>
+
+            <section className='container mx-auto py-4 lg:py-8'>
+                <BulletsAndImage 
+                    title= 'Where to eat'
+                    intro={vassSpotGuide.eatIntro}
+                    titleOne={vassSpotGuide.eatTitleOne}
+                    linkOne={vassSpotGuide.eatLinkOne}
+                    titleTwo={vassSpotGuide.eatTitleTwo}
+                    linkTwo={vassSpotGuide.eatLinkTwo}
+                    titleThree={vassSpotGuide.eatTitleThree}
+                    titleFour={vassSpotGuide.eatTitleFour}
+                    titleFive={vassSpotGuide.eatTitleFive}
+                    titleSix={vassSpotGuide.eatTitleSix}
+                    titleSeven={vassSpotGuide.eatTitleSeven}
+                    titleEight={vassSpotGuide.eatTitleEight}
+      
+                    image={vassSpotGuide.eatImage}
+                    reverse= 'true'
+                />
+            </section>
+
+            <section className='container mx-auto py-4 lg:py-8'>
+                <SplitImageText 
+                    title='Other Activities'
+                    text="In addition to windsurfing, you can enjoy other water sports like sailing, kayaking, and paddleboarding.
+                    You can hire a car and explore the islands beautiful beaches, hiking trails and traditional Greek villages.
+                    Consider hiring a boat from Sivota and exploring the many caves and hidden beaches.
+                    You can even take the ferry from Nidri to Kefalonia."
+                    reverse='true'
                 />
             </section>
 
@@ -74,4 +125,6 @@ const VassilikiSpotGuide = () => {
 }
 
 export default VassilikiSpotGuide
+
+
 
