@@ -3,6 +3,7 @@ import React from 'react'
 const SplitImageText = (props) => {
 
     const reverse = props.reverse ?? false
+    const imageLinkWrapperClasses = 'group-hover:bg-white/60 w-full h-full flex items-center justify-center transition duration-300'
 
   return (
 
@@ -13,8 +14,25 @@ const SplitImageText = (props) => {
                   style={{
                       backgroundImage: `url(${props.image})`,
                       backgroundRepeat: "no-repeat",
-                      }}
-                  > 
+                    }}
+                  >
+                    {props.imageDescription != null && (
+                        <>
+                        {props.imageLink != null ? (
+                            <a href={props.imageLink} target="_blank" rel="noreferrer" className={imageLinkWrapperClasses}>
+                                <p href={props.imageLink} class="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+                                    {props.imageDescription}
+                                </p>
+                            </a>
+                        ) : (
+                            <div className={imageLinkWrapperClasses}>
+                                <p href={props.imageLink} class="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+                                    {props.imageDescription}
+                                </p>
+                            </div>
+                        )}
+                        </>
+                    )} 
                 </div>
               </div>
             )}

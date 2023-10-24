@@ -33,6 +33,8 @@ export let SpotGuidePages = [
         lessonTitleThree: 'Club Vass',
         lessonLinkThree: 'https://clubvass.com/',
         lessonHireImage: 'images/mastheads/destinations/destinations-masthead.jpg',
+        lessonHireImageDescription: 'Surf School Vassiliki',
+        lessonHireImageLink: 'https://surfschoolvasiliki.gr/',
             
 
         // Where to stay

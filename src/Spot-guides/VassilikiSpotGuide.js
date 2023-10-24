@@ -81,6 +81,8 @@ const VassilikiSpotGuide = () => {
                         titleThree={vassSpotGuide.lessonTitleThree}
                         linkThree={vassSpotGuide.lessonLinkThree}
                         image={vassSpotGuide.lessonHireImage}
+                        imageDescription={vassSpotGuide.lessonHireImageDescription}
+                        imageLink={vassSpotGuide.lessonHireImageLink}
                         reverse
                     />
 
