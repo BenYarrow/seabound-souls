@@ -16,12 +16,12 @@ const GridImageDisplay = (props) => {
         }
     })
 
-    const backgroundImageClasses = 'lg:absolute w-full h-full object-cover bg-center hover:scale-105 transition duration-300'
+    const backgroundImageClasses = 'absolute w-full h-full object-cover bg-center hover:scale-105 transition duration-300'
     
     return (
-        <div ref={ref} className="w-full p-12">
+        <div ref={ref} className="w-full">
             <motion.div  
-                className="grid grid-cols-1 md:grid-cols-2 grid-rows-1 md:grid-rows-2 lg:grid-cols-4 lg:grid-rows-3 gap-4"
+                className="grid grid-cols-4 grid-rows-3 gap-4"
                 variants={{
                     hidden: {opacity: 0, y: 75},
                     visible: {opacity: 1, y: 0},
@@ -33,14 +33,14 @@ const GridImageDisplay = (props) => {
                     delay: 0.5,
                   }}
             >
-                <div className="relative aspect-square overflow-hidden lg:row-span-2 lg:row-start-1 lg:col-start-1 lg:col-span-2">
+                <div className="relative aspect-square overflow-hidden row-span-2 row-start-1 col-start-1 col-span-2">
                     <img
                         className={backgroundImageClasses}
                         src={props.imageOne}
                         alt=""
                     /> 
                 </div>
-                <div className="relative overflow-hidden lg:col-start-3 lg:col-span-2">
+                <div className="relative overflow-hidden col-start-3 col-span-2">
                     <img 
                         className={backgroundImageClasses}
                         src={props.imageTwo}
@@ -48,14 +48,14 @@ const GridImageDisplay = (props) => {
                     /> 
                 </div>
 
-                <div className="relative overflow-hidden lg:row-start-3 lg:col-start-1 lg:col-span-2">
+                <div className="relative overflow-hidden row-start-3 col-start-1 col-span-2">
                     <img 
                         className={backgroundImageClasses}
                         src={props.imageThree}
                         alt=""
                     /> 
                 </div>
-                <div className="relative overflow-hidden lg:col-start-3 lg:col-span-2 lg:row-start-2 lg:row-span-2">
+                <div className="relative overflow-hidden col-start-3 col-span-2 row-start-2 row-span-2">
                 
                     <img 
                         className={backgroundImageClasses}

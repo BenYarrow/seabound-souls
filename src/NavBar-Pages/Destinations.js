@@ -79,7 +79,7 @@ const Destinations = () => {
 
       <section className="">
         <div className="container mx-auto pb-8">
-          <ul className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-between">
+          <ul className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-between gap-2">
             {windsurfingLocations.map((location, index) => {
 
               const handleChange = () => {

@@ -50,17 +50,19 @@ export let SpotGuidePages = [
         eatTitleOne: 'Vass Bar,',
         eatLinkOne: 'https://vasiliki.eu/vass-bar.html',
         eatTitleTwo: 'Patio Dining',
+        eatLinkTwo: 'https://www.facebook.com/profile.php?id=100063509014691',
         eatTitleThree: 'Oceans Restaurant',
+        eatLinkThree: 'https://oceanrestaurant.gr/en/',
         eatTitleFour: 'Alex’s Pizza',
+        eatLinkFour: 'https://www.facebook.com/people/Alexs-Pizza/100054340518389/',
         eatTitleFive: 'Cosmos Hotel',
+        eatLinkFive: 'https://cosmos-vassiliki.com/',
         eatTitleSix: 'The Old Plane Tree (Kontarena)',
+        eatLinkSix: 'https://vasiliki.eu/taverna-old-plane-tree.html',
         eatTitleSeven: 'Sivota Bakery Café (Sivota)',
+        eatLinkSeven: 'https://www.facebook.com/sivotabakerycafe/',
         eatTitleEight: 'Rachi Restaurant (Exanthia)',
-
-
-
-
-
+        eatLinkEight: 'https://rachi.gr/',
         
     }
 ]
