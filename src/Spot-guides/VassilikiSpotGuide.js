@@ -21,7 +21,7 @@ const VassilikiSpotGuide = () => {
 
                 <PageHeading heading={vassSpotGuide.title} />
 
-                <div className='pb-8 w-full flex justify-center'>
+                <div className='pb-4 lg:pb-8 w-full flex justify-center'>
                     <p className='font-bold'>
                         Location: <span className='font-normal'>{vassSpotGuide.location}</span>
                     </p>
@@ -29,14 +29,14 @@ const VassilikiSpotGuide = () => {
                 </div>
 
                 <section className='container mx-auto'>
-                    <div className=' border-y-[1px] border-white-darker py-8'>
-                        <p className=" text-center text-lg">
+                    <div className='border-y-[1px] border-white-darker py-4 lg:py-8'>
+                        <p className="text-center text-base lg:text-lg">
                             {vassSpotGuide.intro}
                         </p>
                     </div>
                 </section>
 
-                <section className='container mx-auto pt-8 pb-4'>
+                <section className='container mx-auto pt-4 lg:pt-8 pb-2 lg:pb-4'>
                     <SpotOverview b1 b2 b3 b4 i1 i2 i3 i4 a1 a2 a3 a4 
                         sailingStyle={vassSpotGuide.sailingStyle}
                         bestConditions={vassSpotGuide.bestConditions}
@@ -53,7 +53,6 @@ const VassilikiSpotGuide = () => {
                         imageTwo='images/mastheads/homepage/windsurfing-together-01.jpg'
                         imageThree='images/mastheads/homepage/windsurfing-together-02.jpg'
                         imageFour='images/Vassiliki-Images/surf-hotel.jpg'
-
                     />
                 </section>
 
@@ -82,7 +81,7 @@ const VassilikiSpotGuide = () => {
                         titleThree={vassSpotGuide.lessonTitleThree}
                         linkThree={vassSpotGuide.lessonLinkThree}
                         image={vassSpotGuide.lessonHireImage}
-                        reverse='true'
+                        reverse
                     />
 
                 </section>
@@ -98,7 +97,9 @@ const VassilikiSpotGuide = () => {
                         titleThree={vassSpotGuide.stayThreeTitle}
                         linkThree={vassSpotGuide.stayThreeLink}
                         image={vassSpotGuide.stayImage}
-                        reverse= 'true'
+                        imageDescription={vassSpotGuide.stayImageDescription}
+                        imageLink={vassSpotGuide.stayImageLink}
+                        reverse
                     />
                 </section>
 
@@ -123,7 +124,9 @@ const VassilikiSpotGuide = () => {
                         titleEight={vassSpotGuide.eatTitleEight}
                         linkEight={vassSpotGuide.eatLinkEight}
                         image={vassSpotGuide.eatImage}
-                        reverse= 'true'
+                        imageDescription={vassSpotGuide.eatImageDescription}
+                        imageLink={vassSpotGuide.eatImageLink}
+                        reverse
                     />
                 </section>
 

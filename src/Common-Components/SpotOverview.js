@@ -11,8 +11,8 @@ const SpotOverview = (props) => {
             Overview
         </h2>
 
-        <div className='grid grid-cols-1 lg:grid-cols-3 '>
-            <div className='grid grid-cols-4 grid-rows-5 w-1/2 lg:w-full pb-8'>
+        <div className='grid grid-cols-1 md:grid-cols-3 lg:gap-8'>
+            <div className='grid grid-cols-6 grid-rows-5 pb-4 lg:pb-0'>
                 <div className='w-full h-full flex items-center'>
                     <img src='svg/skill.svg'
                         width="50"
@@ -20,13 +20,13 @@ const SpotOverview = (props) => {
                         className=""
                     />
                 </div>
-                <p className="col-span-3 col-start-2row-start-1 w-full font-bold flex items-center text-xl lg:text-2xl pl-4">
+                <p className="col-span-5 col-start-2row-start-1 w-full font-bold flex items-center text-lg lg:text-2xl pl-4">
                     Ability Level
                 </p>
                 <div className='col-start-2 row-start-2 row-span-5 flex flex-col pl-4 gap-4'>
 
                     <div className='col-start-2 col-span-3 flex flex-col gap-2'>
-                        <p className='text-md lg:text-xl'>
+                        <p className='lg:text-xl'>
                             Beginner
                         </p>
                         <div className="flex gap-2">
@@ -65,16 +65,18 @@ const SpotOverview = (props) => {
             </div>
 
             
-            <div className="grid grid-cols-1 md:grid md:grid-cols-2 gap-8 lg:col-span-2 ">
+            <div className="grid grid-cols-1 md:grid md:grid-cols-2 md:col-span-2 lg:gap-8">
 
                 <div className='grid grid-cols-6 grid-rows-6'>
-                    <img src='svg/sailing-style.svg'
-                        width="50"
-                        height="50"
-                        className='flex items-center'
-                    />
+                    <div className='flex items-center'>
+                        <img src='svg/sailing-style.svg'
+                            width="50"
+                            height="50"
+                            className=''
+                        />
+                    </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-xl lg:text-2xl font-bold'>
+                        <p className='text-lg lg:text-2xl font-bold'>
                             Sailing style
                         </p>
                     </div>
@@ -82,27 +84,28 @@ const SpotOverview = (props) => {
                         {props.sailingStyle}
                     </p>
 
-                    <img src='svg/best-time.svg'
-                        width="50"
-                        height="50"
-                        className='flex items-center row-start-3'
-                    />
+                    <div className='flex items-center row-start-3'>
+                        <img src='svg/best-time.svg'
+                            width="50"
+                            height="50"
+                        />
+                    </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-xl lg:text-2xl font-bold'>
+                        <p className='text-base lg:text-2xl font-bold'>
                             Best conditions
                         </p>
                     </div>
                     <p className='row-start-4 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.bestConditions}
                     </p>
-
-                    <img src='svg/wind-direction.svg'
-                        width="50"
-                        height="50"
-                        className='flex items-center row-start-5'
-                    />
+                    <div className='flex items-center row-start-5'>
+                        <img src='svg/wind-direction.svg'
+                            width="50"
+                            height="50"
+                        />
+                    </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-xl lg:text-2xl font-bold'>
+                        <p className='text-base lg:text-2xl font-bold'>
                             Best wind direction
                         </p>
                     </div>
@@ -111,41 +114,42 @@ const SpotOverview = (props) => {
                     </p>
                 </div>
                 <div className='grid grid-cols-6 grid-rows-6'>
-                    <img src='svg/wind-conditions.svg'
-                        width="50"
-                        height="50"
-                        className='flex items-center'
-                    />
+                    <div className='flex items-center'>
+                        <img src='svg/wind-conditions.svg'
+                            width="50"
+                            height="50"
+                        />
+                    </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-xl lg:text-2xl font-bold'>
+                        <p className='text-base lg:text-2xl font-bold'>
                             Wind conditions
                         </p>
                     </div>
                     <p className='row-start-2 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.windConditions}
                     </p>
-
-                    <img src='svg/water.svg'
-                        width="50"
-                        height="50"
-                        className='flex items-center row-start-3'
-                    />
+                    <div className='flex items-center row-start-3'>
+                        <img src='svg/water.svg'
+                            width="50"
+                            height="50"
+                        />
+                    </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-xl lg:text-2xl font-bold'>
+                        <p className='text-base lg:text-2xl font-bold'>
                             Water conditions
                         </p>
                     </div>
                     <p className='row-start-4 col-start-2 col-span-5 pl-4 text-md lg:text-xl'>
                         {props.waterConditions}
                     </p>
-
-                    <img src='svg/skill.svg'
-                        width="50"
-                        height="50"
-                        className='flex items-center row-start-5'
-                    />
+                    <div className='flex items-center row-start-5'>
+                        <img src='svg/skill.svg'
+                            width="50"
+                            height="50"
+                        />
+                    </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
-                        <p className='text-xl lg:text-2xl font-bold'>
+                        <p className='text-base lg:text-2xl font-bold'>
                             Launch zone
                         </p>
                     </div>

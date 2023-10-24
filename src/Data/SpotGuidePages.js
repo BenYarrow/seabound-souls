@@ -32,7 +32,7 @@ export let SpotGuidePages = [
         lessonLinkTwo: 'http://www.human-sports.com/en/home.html',
         lessonTitleThree: 'Club Vass',
         lessonLinkThree: 'https://clubvass.com/',
-        lessonHireImage: '',
+        lessonHireImage: 'images/mastheads/destinations/destinations-masthead.jpg',
             
 
         // Where to stay
@@ -44,6 +44,8 @@ export let SpotGuidePages = [
         stayThreeTitle: 'Club Vass',
         stayThreeLink: 'https://clubvass.com/',
         stayImage: 'images/Vassiliki-Images/cosmos-hotel.jpg',
+        stayImageDescription: 'Cosmos Hotel',
+        stayImageLink: 'https://cosmos-vassiliki.com/',
 
         // Where to eat
         eatIntro: 'Vassiliki has a wide range of restaurants serving, all serving amaxing food. here are some of our favourites:',
@@ -63,6 +65,9 @@ export let SpotGuidePages = [
         eatLinkSeven: 'https://www.facebook.com/sivotabakerycafe/',
         eatTitleEight: 'Rachi Restaurant (Exanthia)',
         eatLinkEight: 'https://rachi.gr/',
+        eatImage: 'images/Vassiliki-Images/zorbas-restaurant.jpg',
+        eatImageDescription: 'Patio Restaurant',
+        eatImageLink: 'https://www.facebook.com/profile.php?id=100063509014691',
         
     }
 ]
