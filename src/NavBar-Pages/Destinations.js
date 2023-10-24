@@ -3,6 +3,7 @@ import { SpotGuideLinks } from "../Data/SpotGuideLinks";
 import BlogLink from "../Common-Components/BlogLink";
 import StaticMasthead from "../Common-Components/StaticMasthead";
 import PageHeading from "../Common-Components/PageHeading";
+import { act } from "react-dom/test-utils";
 
 const Destinations = () => {
   
@@ -75,9 +76,10 @@ const Destinations = () => {
     <div>
 
       <StaticMasthead imageSrc={masthead} />
+      
       <PageHeading heading='Destination spot guides' />
 
-      <section className="">
+      <section className="pt-8">
         <div className="container mx-auto pb-8">
           <ul className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-between gap-2">
             {windsurfingLocations.map((location, index) => {
@@ -85,13 +87,15 @@ const Destinations = () => {
               const handleChange = () => {
                 setActiveFilter(location.filter);
               }
+              console.log(activeFilter)
 
               return (
                 <li key={index} 
-                  className={`${index === 0 ? 'col-span-2 lg:w-48' : 'w-full lg:w-48'} py-2 bg-blue text-center uppercase text-base lg:text-lg text-white cursor-pointer`}
-                  onClick={handleChange}
-                >
+                  className={`${index === 0 ? 'col-span-2 lg:w-48' : 'w-full lg:w-48'} bg-blue cursor-pointer flex justify-center items-center`}  
+                >  
+                  <button onClick={handleChange} className=' uppercase text-base lg:text-lg text-white py-2'>
                     {location.location}
+                  </button>
                 </li>
               )
             })}
@@ -106,11 +110,11 @@ const Destinations = () => {
       <section className="pb-20">
         <div className="container mx-auto">
           <div className={blogGridClasses}>
-            {activeFilter.map((blog, index) => {
+            {activeFilter.map((blog) => {
                   return blog.blogLinkData.map((data, index) => {
                     return (
                         <div key={index}>
-                          <BlogLink {...data} index={index}  />
+                          <BlogLink {...data} index={index}/>
                         </div>
                     );
                   });

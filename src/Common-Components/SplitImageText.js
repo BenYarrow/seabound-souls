@@ -7,7 +7,7 @@ const SplitImageText = (props) => {
 
   return (
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 ">
+        <div className={`${props.image ? 'grid grid-cols-1 md:grid-cols-2 gap-8' : 'grid grid-cols-1'}  md:gap-12 lg:gap-20`}>
             {props.image && (
               <div className={`${reverse ? 'order-last' : 'order-first'} w-full h-80 md:h-full bg-center bg-cover overflow-hidden`}>
                 <div className='w-full h-full bg-center bg-cover hover:scale-105 transition duration-300' 

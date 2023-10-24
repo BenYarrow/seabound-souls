@@ -26,7 +26,7 @@ const BlogLink = ({
     return(
             <Link ref={ref} to={linkTo} key={index}>
                 <motion.div 
-                    className="flex flex-col justify-between space-y-4 w-full overflow-hidden"
+                    className="flex flex-col justify-between space-y-2 w-full overflow-hidden"
                     variants={{
                         hidden: {opacity: 0, y: 75},
                         visible: {opacity: 1, y: 0},
@@ -50,12 +50,12 @@ const BlogLink = ({
                   </div>
                 </div>
 
-                    <h3 className={`${textColour} pb-2`}>
-                        {location}
-                    </h3>
-                    <p className={`${textColour} hidden lg:block`}>
-                      {blogIntro}
-                    </p>
+                <h3 className={`${textColour} font-bold pt-2`}>
+                  {location}
+                </h3>
+                <p className={`${textColour} hidden lg:block`}>
+                  {blogIntro}
+                </p>
                 </motion.div>
             </Link>
         

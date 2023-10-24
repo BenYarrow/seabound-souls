@@ -81,26 +81,26 @@ const BulletsAndImage = (props) => {
                     <p>
                         {props.intro}
                     </p>
-                    <ul className="pl-12 flex flex-col space-y-2">
-                        {listData.map((list, index) => {
-                            return (
-                                <>
-                                    {list.title != null &&  (
-                                        <li key={index} className='list-disc'>
-                                            {list.link != null ? (
-                                                <a href={list.link} target="_blank" rel="noreferrer" className='font-bold hover:underline '>
-                                                    {list.title}
-                                                </a>
-                                            ) : (
-                                                <p key={index}>
-                                                    {list.title}
-                                                </p>
-                                            )}
-                                        </li>
-                                    )}
-                                </>
-                            )
-                        })}
+                        <ul className="pl-12 flex flex-col space-y-2">
+                            {listData.map((list, index) => {
+                                return (
+                                    <>
+                                        {list.title != null &&  (
+                                            <li key={index} className='list-disc'>
+                                                {list.link != null ? (
+                                                    <a href={list.link} target="_blank" rel="noreferrer" className='font-bold hover:underline '>
+                                                        {list.title}
+                                                    </a>
+                                                ) : (
+                                                    <p key={index}>
+                                                        {list.title}
+                                                    </p>
+                                                )}
+                                            </li>
+                                        )}
+                                    </>
+                                )
+                            })}
                     </ul>
                 </div>
             </div>

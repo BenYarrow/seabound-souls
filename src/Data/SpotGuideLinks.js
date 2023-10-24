@@ -1,7 +1,7 @@
 export let SpotGuideLinks = [
     {
         country: 'mauritius',
-        blogTitle: 'Le Morne, spot guide',
+        blogTitle: 'Le Morne',
         featured: true,
         featuredOrder: 1,
         isVisible: true,
@@ -10,24 +10,25 @@ export let SpotGuideLinks = [
                 title: 'Windsurfing in Mauritius',
                 location: 'Le Morne, Mauritius',
                 linkTo: '/LeMorneSpotGuide',
-                blogLinkImgSrc: 'images/spotguides/mauritius-spotguide.jpg',
+                blogLinkImgSrc: 'images/Spot-Guides/mauritius-spotguide.jpg',
                 blogLinkImgAlt: 'Windsurfing in Mauritius',
-                blogIntro: `Mauritius is a fantastic destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds.`,
+                blogIntro: `Known for its consistent winds, challenging wave conditions, and stunning surroundings. Le Morne has something to offer every windsurfing enthusiast.`,
             }
         ]
     },
     {
         country: 'egypt',
-        blogTitle: 'Dahab, spot guide',
+        blogTitle: 'Dahab',
         featured: false,
         isVisible: true,
         blogLinkData: [
             {
                 title: 'Windsurfing in Dahab',
+                location: 'Dahab, Egypt',
                 linkTo: '/DahabSpotGuide',
-                blogLinkImgSrc: 'images/spotguides/dahab-spotguide.jpg',
-                blogLinkImgAlt: 'Windsurfing in Egypt',
-                blogIntro: `windsurfing in dahab blog intro `,
+                blogLinkImgSrc: 'images/Spot-Guides/dahab-spotguide.jpg',
+                blogLinkImgAlt: 'Dahab, Egypt.',
+                blogIntro: `With its consistent winds, diverse water conditions, and suitability for all levels, it's a fantastic destination`,
 
             }
         ]
@@ -43,16 +44,16 @@ export let SpotGuideLinks = [
                 title: 'Windsurfing in Vasiliki',
                 location: 'Vassiliki, Lefkada',
                 linkTo: '/VassilikiSpotGuide',
-                blogLinkImgSrc: 'images/spotguides/vassiliki-spotguide.jpg',
+                blogLinkImgSrc: 'images/Spot-Guides/vassiliki-spotguide.jpg',
                 blogLinkImgAlt: '',
-                blogIntro: ``,
+                blogIntro: `Offering a diverse range of conditions, reliable winds, and a welcoming atmosphere - regardless of ability, Vassiliki has something to offer everyone.`,
             }
         ],
 
     },
     {
         country: 'canary islands',
-        blogTitle: 'Risco Del Paso, spot guide',
+        blogTitle: 'Risco Del Paso',
         featured: true,
         featuredOrder: 2,
         isVisible: true,
@@ -62,9 +63,9 @@ export let SpotGuideLinks = [
                 title: 'Windsurfing in Vasiliki',
                 location: 'Risco Del Paso, Fuerteventura',
                 linkTo: '/RiscoDelPasoSpotGuide',
-                blogLinkImgSrc: 'images/spotguides/risco-del-paso-spotguide.jpg',
-                blogLinkImgAlt: '',
-                blogIntro: ``,
+                blogLinkImgSrc: 'images/Spot-Guides/risco-del-paso-spotguide.jpg',
+                blogLinkImgAlt: 'Risco Del Paso',
+                blogIntro: `While not as famous as some other windsurfing spots in Fuerteventura, Risco del Paso is known for its strong and consistent winds, making it a desirable location for windsurfers.`,
                 
             }
         ]

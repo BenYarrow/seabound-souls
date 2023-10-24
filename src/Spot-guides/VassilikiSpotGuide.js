@@ -10,20 +10,20 @@ import GridImageDisplay from '../Common-Components/GridImageDisplay'
 
 const VassilikiSpotGuide = () => {
 
-    const vassSpotGuide = SpotGuidePages.find(spot => spot.title === 'Vassiliki')
+    const spotGuide = SpotGuidePages.find(spot => spot.title === 'Vassiliki')
     
     return (    
         <div>
 
-            <StaticMasthead imageSrc={vassSpotGuide.masthead} />
+            <StaticMasthead imageSrc={spotGuide.masthead} />
             
             <div id='content'>
 
-                <PageHeading heading={vassSpotGuide.title} />
+                <PageHeading heading={spotGuide.title} />
 
                 <div className='pb-4 lg:pb-8 w-full flex justify-center'>
                     <p className='font-bold'>
-                        Location: <span className='font-normal'>{vassSpotGuide.location}</span>
+                        Location: <span className='font-normal'>{spotGuide.location}</span>
                     </p>
 
                 </div>
@@ -31,19 +31,19 @@ const VassilikiSpotGuide = () => {
                 <section className='container mx-auto'>
                     <div className='border-y-[1px] border-white-darker py-4 lg:py-8'>
                         <p className="text-center text-base lg:text-lg">
-                            {vassSpotGuide.intro}
+                            {spotGuide.intro}
                         </p>
                     </div>
                 </section>
 
                 <section className='container mx-auto pt-4 lg:pt-8 pb-2 lg:pb-4'>
                     <SpotOverview b1 b2 b3 b4 i1 i2 i3 i4 a1 a2 a3 a4 
-                        sailingStyle={vassSpotGuide.sailingStyle}
-                        bestConditions={vassSpotGuide.bestConditions}
-                        bestDirection={vassSpotGuide.bestDirection}
-                        windConditions={vassSpotGuide.windConditions}
-                        waterConditions={vassSpotGuide.waterConditions}
-                        launchZone={vassSpotGuide.launchZone}
+                        sailingStyle={spotGuide.sailingStyle}
+                        bestConditions={spotGuide.bestConditions}
+                        bestDirection={spotGuide.bestDirection}
+                        windConditions={spotGuide.windConditions}
+                        waterConditions={spotGuide.waterConditions}
+                        launchZone={spotGuide.launchZone}
                     />
                 </section>
 
@@ -58,15 +58,15 @@ const VassilikiSpotGuide = () => {
 
                 <section className='container mx-auto py-4 lg:py-8'>
                     <SpotConditions
-                        waterConditionDetails={vassSpotGuide.waterConditionDetails}
-                        waterImage={vassSpotGuide.waterConditionImage}
-                        windConditionDetails={vassSpotGuide.windConditionDetails}
-                        windImage={vassSpotGuide.windConditionImage}
-                        windStatisticDetails={vassSpotGuide.windStatisticDetails}
-                        windStatisticImage={vassSpotGuide.windStatisticImage}
-                        whenToGoDetails={vassSpotGuide.whenToGoDetails}
-                        spotDetails={vassSpotGuide.spotDetails}
-                        spotImage={vassSpotGuide.spotImage}
+                        waterConditionDetails={spotGuide.waterConditionDetails}
+                        waterImage={spotGuide.waterConditionImage}
+                        windConditionDetails={spotGuide.windConditionDetails}
+                        windImage={spotGuide.windConditionImage}
+                        windStatisticDetails={spotGuide.windStatisticDetails}
+                        windStatisticImage={spotGuide.windStatisticImage}
+                        whenToGoDetails={spotGuide.whenToGoDetails}
+                        spotDetails={spotGuide.spotDetails}
+                        spotImage={spotGuide.spotImage}
                     />
                 </section>
 
@@ -74,15 +74,15 @@ const VassilikiSpotGuide = () => {
                     <BulletsAndImage 
                         title= 'Lessons and Hire'
                         intro= 'There are numerous windsurfing centres are located along the Vassiliki waterfront, offering equipment rental and lessons. These include:'
-                        titleOne={vassSpotGuide.lessonTitleOne}
-                        linkOne={vassSpotGuide.lessonLinkOne}
-                        titleTwo={vassSpotGuide.lessonTitleTwo}
-                        linkTwo={vassSpotGuide.lessonLinkTwo}
-                        titleThree={vassSpotGuide.lessonTitleThree}
-                        linkThree={vassSpotGuide.lessonLinkThree}
-                        image={vassSpotGuide.lessonHireImage}
-                        imageDescription={vassSpotGuide.lessonHireImageDescription}
-                        imageLink={vassSpotGuide.lessonHireImageLink}
+                        titleOne={spotGuide.lessonTitleOne}
+                        linkOne={spotGuide.lessonLinkOne}
+                        titleTwo={spotGuide.lessonTitleTwo}
+                        linkTwo={spotGuide.lessonLinkTwo}
+                        titleThree={spotGuide.lessonTitleThree}
+                        linkThree={spotGuide.lessonLinkThree}
+                        image={spotGuide.lessonHireImage}
+                        imageDescription={spotGuide.lessonHireImageDescription}
+                        imageLink={spotGuide.lessonHireImageLink}
                         reverse
                     />
 
@@ -91,16 +91,16 @@ const VassilikiSpotGuide = () => {
                 <section className='container mx-auto py-4 lg:py-8'>
                     <BulletsAndImage 
                         title= 'Where to stay'
-                        intro={vassSpotGuide.stayIntro}
-                        titleOne={vassSpotGuide.stayOneTitle}
-                        linkOne={vassSpotGuide.stayOneLink}
-                        titleTwo={vassSpotGuide.stayTwoTitle}
-                        linkTwo={vassSpotGuide.stayTwoLink}
-                        titleThree={vassSpotGuide.stayThreeTitle}
-                        linkThree={vassSpotGuide.stayThreeLink}
-                        image={vassSpotGuide.stayImage}
-                        imageDescription={vassSpotGuide.stayImageDescription}
-                        imageLink={vassSpotGuide.stayImageLink}
+                        intro={spotGuide.stayIntro}
+                        titleOne={spotGuide.stayOneTitle}
+                        linkOne={spotGuide.stayOneLink}
+                        titleTwo={spotGuide.stayTwoTitle}
+                        linkTwo={spotGuide.stayTwoLink}
+                        titleThree={spotGuide.stayThreeTitle}
+                        linkThree={spotGuide.stayThreeLink}
+                        image={spotGuide.stayImage}
+                        imageDescription={spotGuide.stayImageDescription}
+                        imageLink={spotGuide.stayImageLink}
                         reverse
                     />
                 </section>
@@ -108,26 +108,26 @@ const VassilikiSpotGuide = () => {
                 <section className='container mx-auto py-4 lg:py-8'>
                     <BulletsAndImage 
                         title= 'Where to eat'
-                        intro={vassSpotGuide.eatIntro}
-                        titleOne={vassSpotGuide.eatTitleOne}
-                        linkOne={vassSpotGuide.eatLinkOne}
-                        titleTwo={vassSpotGuide.eatTitleTwo}
-                        linkTwo={vassSpotGuide.eatLinkTwo}
-                        titleThree={vassSpotGuide.eatTitleThree}
-                        linkThree={vassSpotGuide.eatLinkThree}
-                        titleFour={vassSpotGuide.eatTitleFour}
-                        linkFour={vassSpotGuide.eatLinkFour}
-                        titleFive={vassSpotGuide.eatTitleFive}
-                        linkFive={vassSpotGuide.eatLinkFive}
-                        titleSix={vassSpotGuide.eatTitleSix}
-                        linkSix={vassSpotGuide.eatLinkSix}
-                        titleSeven={vassSpotGuide.eatTitleSeven}
-                        linkSeven={vassSpotGuide.eatLinkSeven}
-                        titleEight={vassSpotGuide.eatTitleEight}
-                        linkEight={vassSpotGuide.eatLinkEight}
-                        image={vassSpotGuide.eatImage}
-                        imageDescription={vassSpotGuide.eatImageDescription}
-                        imageLink={vassSpotGuide.eatImageLink}
+                        intro={spotGuide.eatIntro}
+                        titleOne={spotGuide.eatTitleOne}
+                        linkOne={spotGuide.eatLinkOne}
+                        titleTwo={spotGuide.eatTitleTwo}
+                        linkTwo={spotGuide.eatLinkTwo}
+                        titleThree={spotGuide.eatTitleThree}
+                        linkThree={spotGuide.eatLinkThree}
+                        titleFour={spotGuide.eatTitleFour}
+                        linkFour={spotGuide.eatLinkFour}
+                        titleFive={spotGuide.eatTitleFive}
+                        linkFive={spotGuide.eatLinkFive}
+                        titleSix={spotGuide.eatTitleSix}
+                        linkSix={spotGuide.eatLinkSix}
+                        titleSeven={spotGuide.eatTitleSeven}
+                        linkSeven={spotGuide.eatLinkSeven}
+                        titleEight={spotGuide.eatTitleEight}
+                        linkEight={spotGuide.eatLinkEight}
+                        image={spotGuide.eatImage}
+                        imageDescription={spotGuide.eatImageDescription}
+                        imageLink={spotGuide.eatImageLink}
                         reverse
                     />
                 </section>
@@ -135,11 +135,8 @@ const VassilikiSpotGuide = () => {
                 <section className='container mx-auto py-4 lg:py-8'>
                     <SplitImageText 
                         title='Other Activities'
-                        text="In addition to windsurfing, you can enjoy other water sports like sailing, kayaking, and paddleboarding.
-                        You can hire a car and explore the islands beautiful beaches, hiking trails and traditional Greek villages.
-                        Consider hiring a boat from Sivota and exploring the many caves and hidden beaches.
-                        You can even take the ferry from Nidri to Kefalonia."
-                        reverse='true'
+                        text={spotGuide.otherActivityText}
+                        reverse
                     />
                 </section>
             </div>

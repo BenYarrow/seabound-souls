@@ -13,15 +13,9 @@ function Homepage() {
   const heroImages = [
     {
       image: windsurfingOne,
-      bgImageClasses: 'bg-cover bg-center'
-    },
-    {
-      image: fuerteventuraBeach,
-      bgImageClasses: 'bg-cover bg-center',
     },
     {
       image: windsurfingTwo,
-      bgImageClasses: 'bg-cover bg-center',
     },
   ]
 
