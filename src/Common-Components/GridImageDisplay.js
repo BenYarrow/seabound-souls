@@ -1,6 +1,6 @@
 import React from 'react'
 import { useEffect, useRef } from "react";
-import { animate, motion, useAnimation, useInView } from "framer-motion";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 
 const GridImageDisplay = (props) => {

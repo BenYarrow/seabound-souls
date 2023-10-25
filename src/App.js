@@ -8,12 +8,8 @@ import Navbar from './NavBar-Pages/Navbar';
     import LeMorneSpotGuide from './Spot-guides/LeMorneSpotGuide';
     import VassilikiSpotGuide from './Spot-guides/VassilikiSpotGuide';
     import RiscoDelPasoSpotGuide from './Spot-guides/RiscoDelPasoSpotGuide';
-  import ContactUs from './NavBar-Pages/ContactUs';
-
-
-  import Footer from './Footer';
-
-
+  import ContactUs from './NavBar-Pages/ContactUs';  
+import Footer from './Footer';
 
 function App() {
 

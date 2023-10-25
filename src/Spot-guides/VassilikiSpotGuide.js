@@ -7,6 +7,7 @@ import SpotConditions from '../Common-Components/SpotConditions'
 import BulletsAndImage from '../Common-Components/BulletsAndImage'
 import SplitImageText from '../Common-Components/SplitImageText'
 import GridImageDisplay from '../Common-Components/GridImageDisplay'
+import ButtonLink from '../Common-Components/ButtonLink'
 
 const VassilikiSpotGuide = () => {
 
@@ -141,12 +142,8 @@ const VassilikiSpotGuide = () => {
                 </section>
             </div>
 
-            <div className='w-full pb-8 flex justify-center'>
-                  <button className="px-8 py-2 bg-blue">
-                    <a href='#content' className="relative text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
-                      back to the top
-                    </a>
-                  </button>
+            <div className='w-full pt-8 pb-20 flex justify-center'>
+                  <ButtonLink linkTo='#content' title='back to the top'/>
             </div>
 
         </div>
