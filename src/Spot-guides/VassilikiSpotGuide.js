@@ -73,7 +73,7 @@ const VassilikiSpotGuide = () => {
                 <section className='container mx-auto py-4 lg:py-8'>
                     <BulletsAndImage 
                         title= 'Lessons and Hire'
-                        intro= 'There are numerous windsurfing centres are located along the Vassiliki waterfront, offering equipment rental and lessons. These include:'
+                        intro={spotGuide.lessonIntro}
                         titleOne={spotGuide.lessonTitleOne}
                         linkOne={spotGuide.lessonLinkOne}
                         titleTwo={spotGuide.lessonTitleTwo}

@@ -33,36 +33,46 @@ const GridImageDisplay = (props) => {
                     delay: 0.5,
                   }}
             >
-                <div className="relative aspect-square overflow-hidden row-span-2 row-start-1 col-start-1 col-span-2">
-                    <img
-                        className={backgroundImageClasses}
-                        src={props.imageOne}
-                        alt=""
-                    /> 
-                </div>
-                <div className="relative overflow-hidden col-start-3 col-span-2">
-                    <img 
-                        className={backgroundImageClasses}
-                        src={props.imageTwo}
-                        alt=""
-                    /> 
-                </div>
+                {props.imageOne && (
+                    <div className="relative aspect-square overflow-hidden row-span-2 row-start-1 col-start-1 col-span-2">
+                        <img
+                            className={backgroundImageClasses}
+                            src={props.imageOne}
+                            alt=""
+                        /> 
+                    </div>
+                )}
 
-                <div className="relative overflow-hidden row-start-3 col-start-1 col-span-2">
-                    <img 
-                        className={backgroundImageClasses}
-                        src={props.imageThree}
-                        alt=""
-                    /> 
-                </div>
-                <div className="relative overflow-hidden col-start-3 col-span-2 row-start-2 row-span-2">
-                
-                    <img 
-                        className={backgroundImageClasses}
-                        src={props.imageFour}
-                        alt=""
-                    /> 
-                </div>          
+                {props.imageTwo && (
+
+                    <div className="relative overflow-hidden col-start-3 col-span-2">
+                        <img 
+                            className={backgroundImageClasses}
+                            src={props.imageTwo}
+                            alt=""
+                        /> 
+                    </div>
+                )}
+
+                {props.imageThree && (
+                    <div className="relative overflow-hidden row-start-3 col-start-1 col-span-2">
+                        <img 
+                            className={backgroundImageClasses}
+                            src={props.imageThree}
+                            alt=""
+                        /> 
+                    </div>
+                )}
+                {props.imageFour && (
+                    <div className="relative overflow-hidden col-start-3 col-span-2 row-start-2 row-span-2">
+                    
+                        <img 
+                            className={backgroundImageClasses}
+                            src={props.imageFour}
+                            alt=""
+                        /> 
+                    </div>          
+                )}
                 
             </motion.div>
         </div>

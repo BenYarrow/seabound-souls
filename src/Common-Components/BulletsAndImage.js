@@ -44,7 +44,7 @@ const BulletsAndImage = (props) => {
   return (
     <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 '>
         {props.image && (
-            <div className={`${reverse ? 'order-last' : ''}  w-full h-96 md:h-full bg-center bg-cover overflow-hidden group`}>
+            <div className={`${reverse ? 'order-last' : ''}  w-full h-80 md:h-96 aspect-square bg-center bg-cover overflow-hidden group`}>
                 <div className='w-full h-full bg-center bg-cover hover:scale-105 transition duration-300 -z-10'
                     style={{
                         backgroundImage: `url(${props.image})`,
@@ -72,8 +72,8 @@ const BulletsAndImage = (props) => {
             </div>
         )}
 
-        <div className='flex flex-col'>
-            <h4 className='text-left text-2xl lg:text-3xl font-bold pb-8'>
+        <div className='flex flex-col justify-center'>
+            <h4 className='text-left text-2xl lg:text-3xl font-bold pb-8 uppercase'>
                 {props.title}
             </h4>
             <div >

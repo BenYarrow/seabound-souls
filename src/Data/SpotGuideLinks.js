@@ -60,7 +60,7 @@ export let SpotGuideLinks = [
         blogLinkData: [
             {
                 
-                title: 'Windsurfing in Vasiliki',
+                title: 'Windsurfing in Risco Del Paso',
                 location: 'Risco Del Paso, Fuerteventura',
                 linkTo: '/RiscoDelPasoSpotGuide',
                 blogLinkImgSrc: 'images/Spot-Guides/risco-del-paso-spotguide.jpg',
