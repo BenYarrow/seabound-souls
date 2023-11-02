@@ -30,7 +30,7 @@ module.exports = {
         }, 
         'blue': {
           lighter: '#97C9CE',
-          DEFAULT: '#26567B',
+          DEFAULT: '#06637B',
 
         },
         'orange': '#F4A361',

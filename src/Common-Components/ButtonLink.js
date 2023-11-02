@@ -20,7 +20,6 @@ const ButtonLink = ({colourClass = 'blue', sizeClass = 'base', linkTo, title}) =
         }
     }
 
-
   return (
     <button className={``}>
         <a href={linkTo} className={`${colourClasses[colourClass].class} ${sizeClasses[sizeClass].class} uppercase font-bold transition duration-200`}>

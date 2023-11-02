@@ -37,13 +37,37 @@ const SplitImageText = (props) => {
               </div>
             )}
 
-          <div className='flex flex-col justify-center space-y-4 lg:space-y-8 w-full'>
-            <h4 className='text-left text-2xl lg:text-3xl font-bold uppercase'>
-                {props.title}
-            </h4>
-            <p>
-                {props.text}
-            </p>
+          <div className='flex flex-col space-y-4 lg:space-y-8 w-full'>
+            {props.title && (
+              <h4 className='text-left text-2xl lg:text-3xl font-bold uppercase'>
+                  {props.title}
+              </h4>
+            )}
+            {props.textOne && (
+              <p>
+                  {props.textOne}
+              </p>
+            )}
+            {props.textTwo && (
+              <p>
+                  {props.textTwo}
+              </p>
+            )}
+            {props.textThree && (
+              <p>
+                  {props.textThree}
+              </p>
+            )}
+            {props.textFour && (  
+              <p>
+                  {props.textFour}
+              </p>
+            )}
+            {props.textFive && (  
+              <p>
+                  {props.textFive}
+              </p>
+            )}
           </div>
 
         </div>
