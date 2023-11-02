@@ -42,7 +42,10 @@ const SpotGuideTemplate = ({spotGuide}) => {
 
                 {spotGuide.sailingStyle && (
                     <section className='container mx-auto pt-4 lg:pt-8 pb-2 lg:pb-4'>
-                        <SpotOverview b1 b2 b3 b4 i1 i2 i3 i4 a1 a2 a3 a4 
+                        <SpotOverview 
+                            b1={spotGuide.b1} b2={spotGuide.b2} b3={spotGuide.b3} b4={spotGuide.b4} b5={spotGuide.b5} 
+                            i1={spotGuide.i1} i2={spotGuide.i2} i3={spotGuide.i3} i4={spotGuide.i4} i5={spotGuide.i5} 
+                            a1={spotGuide.a1} a2={spotGuide.a2} a3={spotGuide.a3} a4={spotGuide.a4} a5={spotGuide.a5} 
                             sailingStyle={spotGuide.sailingStyle}
                             bestConditions={spotGuide.bestConditions}
                             bestDirection={spotGuide.bestDirection}
@@ -123,6 +126,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                             linkTwo={spotGuide.travellingTwoLink}
                             titleThree={spotGuide.travellingThreeTitle}
                             linkThree={spotGuide.travellingThreeLink}
+                            image={spotGuide.travellingImage}
                             reverse
                         />
                     </section>
@@ -183,7 +187,8 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     <section className='container mx-auto py-4 lg:py-8'>
                         <SplitImageText 
                             title='Other Activities'
-                            text={spotGuide.otherActivityText}
+                            textOne={spotGuide.otherActivityText}
+                            image={spotGuide.otherActivityImage}
                             reverse
                         />
                     </section>
