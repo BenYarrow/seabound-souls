@@ -3,7 +3,6 @@ import { SpotGuideLinks } from "../Data/SpotGuideLinks";
 import BlogLink from "../Common-Components/BlogLink";
 import StaticMasthead from "../Common-Components/StaticMasthead";
 import PageHeading from "../Common-Components/PageHeading";
-import { act } from "react-dom/test-utils";
 
 const Destinations = () => {
   
@@ -11,29 +10,13 @@ const Destinations = () => {
 
   const windsurfingBlogs = SpotGuideLinks.filter(visible => visible.isVisible === true)
   
-  const egyptWindsurfingBlogs = windsurfingBlogs.map(blog => {
-    return (
-      blog
-    )
-  }).filter(location => location.country === 'egypt')
+  const egyptWindsurfingBlogs = windsurfingBlogs.filter(location => location.country === 'egypt')
 
-  const canaryIslandWindsurfingBlogs = windsurfingBlogs.map(blog => {
-    return (
-      blog
-    )
-  }).filter(location => location.country === 'canary islands')
+  const canaryIslandWindsurfingBlogs = windsurfingBlogs.filter(location => location.country === 'canary islands')
 
-  const greeceWindsurfingBlogs = windsurfingBlogs.map(blog => {
-    return (
-      blog
-    )
-  }).filter(location => location.country === 'greece')
+  const greeceWindsurfingBlogs = windsurfingBlogs.filter(location => location.country === 'greece')
 
-  const mauritiusWindsurfingBlogs = windsurfingBlogs.map(blog => {
-    return (
-      blog
-    )
-  }).filter(location => location.country === 'mauritius')
+  const mauritiusWindsurfingBlogs = windsurfingBlogs.filter(location => location.country === 'mauritius')
 
   const windsurfingLocations = [
     {
@@ -87,12 +70,11 @@ const Destinations = () => {
               const handleChange = () => {
                 setActiveFilter(location.filter);
               }
-              console.log(activeFilter)
 
               return (
-                  <button onClick={handleChange} className={`${index === 0 ? 'col-span-2 lg:w-48' : 'w-full lg:w-48'} bg-blue cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg text-white py-2`}>
-                    {location.location}
-                  </button>
+                <button key={index} onClick={handleChange} className={`${index === 0 ? 'col-span-2 lg:w-48' : 'w-full lg:w-48'} bg-blue cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg text-white py-2`}>
+                  {location.location}
+                </button>
               )
             })}
           </div>
@@ -109,9 +91,10 @@ const Destinations = () => {
             {activeFilter.map((blog) => {
                   return blog.blogLinkData.map((data, index) => {
                     return (
-                        <div key={index}>
-                          <BlogLink {...data} index={index}/>
-                        </div>
+                      <div key={index}>
+                        <BlogLink {...data} index={index}/>
+                      </div>
+                      
                     );
                   });
                 })}

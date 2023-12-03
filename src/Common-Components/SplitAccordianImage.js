@@ -7,31 +7,41 @@ import AnimateHeight from 'react-animate-height'
 const SplitAccordianImage = (props) => {
 
   const [activeIndex, setActiveIndex] = useState(-1)
-  const reverse = props.reverse ?? 'false'
-  const invert = props.invert ?? 'false'
+  const reverse = props.reverse ?? false
+  const invert = props.invert ?? false
+  const customImageClasses = props.customImageClasses ?? ''
+
+  console.log(props.image)
 
   return (
-    <section className={invert !== 'true' ? 'py-20 bg-white text-blue' : 'py-20 bg-blue text-white'}>
+    <section className={invert ? 'py-20 bg-white text-blue' : 'py-20 bg-blue text-white'}>
       <div className="container mx-auto">
 
         <div className="flex flex-col items-center pb-12">
-          <h3 className="font-title text-4xl uppercase">
-            {props.title}
-          </h3>
+          {props.title && (
+            <h3 className="font-title text-4xl uppercase">
+              {props.title}
+            </h3>
+          )}
+          {props.subtitle && (
             <p className="pt-4">
-            {props.subtitle}
-          </p>
+              {props.subtitle}
+            </p>
+          )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 ">
+        <div className={`${props.image ? 'grid grid-cols-1 md:grid-cols-2 gap-8' : 'grid grid-cols-1'}  md:gap-12 lg:gap-20`}>
 
-          {reverse === 'true' && (
-              <div className='w-full h-96 md:h-full bg-center bg-cover shadow-2xl'>
-              <div className='w-full h-full bg-center bg-cover' style={{
-                backgroundImage: `url(${props.image})`,
-                backgroundRepeat: "no-repeat",
-                }}> 
-              </div>
+          {props.image &&   (
+            <div className={`${reverse ? 'order-last' : 'order-first'} w-full h-80 md:h-96 aspect-square overflow-hidden`}>
+              <div className={`${customImageClasses} w-full h-full bg-cover hover:scale-105 transition duration-300`} 
+                style={{
+                    backgroundImage: `url(${props.image})`,
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                </div>
+              
             </div>
             )}
 
@@ -68,16 +78,6 @@ const SplitAccordianImage = (props) => {
             })}
           </div>
           
-          {reverse !== 'true' && (
-            <div className='w-full h-96 md:h-full bg-center bg-cover shadow-2xl'>
-            <div className='w-full h-full bg-center bg-cover' style={{
-              backgroundImage: `url(${props.image})`,
-              backgroundRepeat: "no-repeat",
-              }}> 
-            </div>
-          </div>
-          )}
-
         </div>
       </div>
     </section>

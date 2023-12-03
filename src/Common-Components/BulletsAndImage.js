@@ -55,13 +55,13 @@ const BulletsAndImage = (props) => {
                         <>
                         {props.imageLink != null ? (
                             <a href={props.imageLink} target="_blank" rel="noreferrer" className={imageLinkWrapperClasses}>
-                                <p href={props.imageLink} class="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+                                <p href={props.imageLink} className="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
                                     {props.imageDescription}
                                 </p>
                             </a>
                         ) : (
                             <div className={imageLinkWrapperClasses}>
-                                <p href={props.imageLink} class="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
+                                <p href={props.imageLink} className="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
                                     {props.imageDescription}
                                 </p>
                             </div>

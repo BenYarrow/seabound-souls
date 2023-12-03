@@ -1,8 +1,7 @@
 import React from "react";
 import {Link} from 'react-router-dom';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-// import { faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons"
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
 
@@ -14,7 +13,13 @@ const Footer = () => {
             linkTo: 'https://www.instagram.com/seabound.souls/',
             icon: faInstagram,
         },
+        {
+            title: 'TikTok',
+            linkTo: 'https://www.tiktok.com/@seabound.souls?is_from_webapp=1&sender_device=pc',
+            icon: faTiktok
+        }
     ]
+    const afterClasses = 'relative uppercase after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-500'
 
     return (
         <footer className="w-full h-screen md:h-auto md:py-20 bg-blue text-white">
@@ -35,15 +40,15 @@ const Footer = () => {
                         <h4 className={subheadingClasses}>
                             Email
                         </h4>
-                        <a href="mailto:yarrowtravels@outlook.com">
+                        <a href="mailto:yarrowtravels@outlook.com" className={afterClasses}>
                             seaboundsouls@outlook.com
                         </a>
                     </div>
-                    <div className="max-w-sm">
+                    <div className="max-w-sm flex flex-col space-y-2">
                         <h4 className={subheadingClasses}>
                             Get social
                         </h4>
-                        <ul className="flex justify-center">
+                        <ul className="flex justify-center space-x-4">
                             {socialLinks.map((link, index) => {
                                 
                                 const linkClasses = 'text-4xl text-white'

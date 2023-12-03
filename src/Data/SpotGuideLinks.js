@@ -54,7 +54,7 @@ export let SpotGuideLinks = [
     {
         country: 'canary islands',
         blogTitle: 'Risco Del Paso',
-        featured: true,
+        featured: false,
         featuredOrder: 2,
         isVisible: true,
         blogLinkData: [

@@ -27,10 +27,10 @@ const Navbar = () => {
       title: "Destinations",
       to: "/Destinations",
     },
-    {
-      title: "Blog",
-      to: "/Blog",
-    },
+    // {
+    //   title: "Blog",
+    //   to: "/Blog",
+    // },
     {
       title: "Contact",
       to: "/ContactUs",

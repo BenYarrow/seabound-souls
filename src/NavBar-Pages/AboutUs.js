@@ -6,11 +6,8 @@ import GridImageDisplay from "../Common-Components/GridImageDisplay";
 
 const AboutUs = () => {
 
-  const masthead = 'images/mastheads/homepage/fuerteventura-beach-01.jpg'
-  const leMorneOne = "Masthead-Images/le-morne-01.jpg";
-  const weddingOne = "Masthead-Images/wedding-01.jpg"
-  const dahabSwissFour = "/Egypt-Images/Dahab-Swiss-Inn-4.jpg"
-  const fuerteventuraWindsurfing = "Masthead-Images/ben-vulcan-fuerteventura.jpg"
+  const masthead = 'images/mastheads/about-us/fuerteventura-beach-01.jpg'
+  
 
   const whyWeLoveWindsurfingAccordianData = [
     {
@@ -31,7 +28,7 @@ const AboutUs = () => {
     },
     {
       question: 'challenge and achievement',
-      answer: ' blah a;jant;boiante avknaetijvnagkv ifpuvnav ;fuivna;efjvbanf vsd;ifvbspfv s;fiuvbrnv aipjfvbnaerv ;iejvbne;krv sdpifvbae;kfv aepifvna;efkv apdifv a;fkv apifb '
+      answer: ''
   },
 ]
 
@@ -84,7 +81,7 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section class="container mx-auto py-4 lg:py-8">
+        <section className="container mx-auto py-4 lg:py-8">
           <GridImageDisplay 
             imageOne='images/Mauritius-Images/ben-windsurfing-01.jpg'
             imageTwo='images/mastheads/homepage/windsurfing-together-01.jpg'
@@ -120,9 +117,9 @@ const AboutUs = () => {
           <SplitAccordianImage 
             title='Why we love windsurfing' 
             accordianData={whyWeLoveWindsurfingAccordianData} 
-            image={fuerteventuraWindsurfing}
-            reverse='false'
-            invert='false'
+            image="images/Vassiliki-Images/cosmos-apartments.jpg"
+            customImageClasses="object-cover"
+            invert
           />
         </section>
 
@@ -131,9 +128,9 @@ const AboutUs = () => {
             title='Our mission' 
             subtitle='Sharing our passion'
             accordianData={ourMissionData} 
-            image={fuerteventuraWindsurfing}
-            reverse='true'
-            invert='true'
+            image="images/Mauritius-Images/ben-balcony.jpg"
+            customImageClasses=''
+            reverse
           />
         </section>
 
@@ -189,7 +186,7 @@ const AboutUs = () => {
               </div>
 
               <div className='w-full h-96 md:h-full bg-center bg-cover' style={{
-                backgroundImage: `url(${fuerteventuraWindsurfing})`,
+                backgroundImage: `url(${"images/mastheads/homepage/wedding-01.jpg"})`,
                 backgroundRepeat: "no-repeat",
                 }}> 
               </div>

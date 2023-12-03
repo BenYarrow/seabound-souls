@@ -7,7 +7,7 @@ import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
 function Homepage() {
 
   const windsurfingOne = "images/mastheads/homepage/windsurfing-together-01.jpg";
-  const fuerteventuraBeach = "images/mastheads/homepage/fuerteventura-beach-01.jpg";
+  const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-01.jpg";
   const windsurfingTwo = "images/mastheads/homepage/ben-vulcan-fuerteventura.jpg";
 
   const heroImages = [
