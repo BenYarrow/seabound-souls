@@ -14,7 +14,7 @@ export let SpotGuidePages = [
         i1: true,
         i2: true,
         i3: true,
-        i4: false,
+        i4: true,
         i5: false,
         a1: true,
         a2: true,
