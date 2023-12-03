@@ -21,7 +21,7 @@ const SpotOverview = (props) => {
                     />
                 </div>
                 <p className="col-span-5 col-start-2row-start-1 w-full font-bold flex items-center text-lg lg:text-2xl pl-4">
-                    Ability Level
+                    Ability level
                 </p>
                 <div className='col-start-2 row-start-2 row-span-5 flex flex-col pl-4 gap-4'>
 
