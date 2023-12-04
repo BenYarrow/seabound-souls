@@ -67,8 +67,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex items-center justify-center">
-                    <img src="/Logo/logo.png" alt="Seabound souls logo" className="w-1/2 md:w-full max-w-md"/>
-
+                    <img src="/Logo/logo.png" alt="Seabound souls logo" className="w-1/2 md:w-full max-w-md" width="350" height="350"/>
                 </div>
             </div>
 
