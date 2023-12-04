@@ -4,6 +4,7 @@ import Homepage from './Homepage';
 import Navbar from './NavBar-Pages/Navbar';
   import AboutUs from './NavBar-Pages/AboutUs';
   import Destinations from './NavBar-Pages/Destinations';
+    import TestingSpotGuide from './Spot-guides/TestingSpotGuide';
     import DahabSpotGuide from './Spot-guides/DahabSpotGuide';
     import LeMorneSpotGuide from './Spot-guides/LeMorneSpotGuide';
     import VassilikiSpotGuide from './Spot-guides/VassilikiSpotGuide';
@@ -12,7 +13,6 @@ import Navbar from './NavBar-Pages/Navbar';
 import Footer from './Footer';
 
 function App() {
-
   return (
       <div className='text-blue bg-white text-lg '>
         <Router>
@@ -30,8 +30,7 @@ function App() {
               <Route path='/LeMorneSpotGuide' element={<LeMorneSpotGuide />} />
               <Route path='/VassilikiSpotGuide' element={<VassilikiSpotGuide />} />
               <Route path='/RiscoDelPasoSpotGuide' element={<RiscoDelPasoSpotGuide />} />
-
-
+              <Route path='/TestingSpotGuide' element={<TestingSpotGuide />} />
             </Routes>
           <Footer />  
         </Router>

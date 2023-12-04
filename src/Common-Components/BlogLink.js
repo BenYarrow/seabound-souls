@@ -23,6 +23,10 @@ const BlogLink = ({
       }
     }, [isInView,  mainControls])
 
+    const fallbackImage = '/Logo/logo.png'
+
+    const blogImageSrc = blogLinkImgSrc ? blogLinkImgSrc : fallbackImage
+
     return(
             <Link ref={ref} to={linkTo} key={index}>
                 <motion.div 
@@ -42,7 +46,7 @@ const BlogLink = ({
                   <div 
                       className={blogLinkImgSrc ? 'aspect-[5/4] hover:scale-105 transition duration-300' : 'w-full aspect-[5/4] bg-blue'}
                       style={{
-                          backgroundImage: `url(${blogLinkImgSrc})`,
+                          backgroundImage: `url(${blogImageSrc})`,
                           backgroundSize: "cover",
                           backgroundRepeat: "no-repeat",
                           backgroundPosition: "center",

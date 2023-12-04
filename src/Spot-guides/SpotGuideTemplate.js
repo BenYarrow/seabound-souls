@@ -12,6 +12,7 @@ import ButtonLink from '../Common-Components/ButtonLink'
 const SpotGuideTemplate = ({spotGuide}) => {
 
     const galleryImages = [spotGuide.gridGalleryImageOne, spotGuide.gridGalleryImageTwo, spotGuide.gridGalleryImageThree, spotGuide.gridGalleryImageFour]
+    
     return (    
         <div>
 

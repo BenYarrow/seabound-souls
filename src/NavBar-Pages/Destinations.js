@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { React, useRef, useEffect, useState } from "react";
 import { SpotGuideLinks } from "../Data/SpotGuideLinks";
 import BlogLink from "../Common-Components/BlogLink";
 import StaticMasthead from "../Common-Components/StaticMasthead";
@@ -9,51 +9,22 @@ const Destinations = () => {
   const masthead = "images/mastheads/destinations/destinations-masthead.jpg";
 
   const windsurfingBlogs = SpotGuideLinks.filter(visible => visible.isVisible === true)
-  
-  const egyptWindsurfingBlogs = windsurfingBlogs.filter(location => location.country === 'egypt')
 
-  const canaryIslandWindsurfingBlogs = windsurfingBlogs.filter(location => location.country === 'canary islands')
+   // Extract unique countries from SpotGuideLinks
+   const uniqueCountries = Array.from(new Set(windsurfingBlogs.map((blog) => blog.country)));
 
-  const greeceWindsurfingBlogs = windsurfingBlogs.filter(location => location.country === 'greece')
-
-  const mauritiusWindsurfingBlogs = windsurfingBlogs.filter(location => location.country === 'mauritius')
-
-  const windsurfingLocations = [
-    {
-      location: 'all',
-      filter: windsurfingBlogs,
-    },
-    {
-      location: 'canary islands',
-      filter: canaryIslandWindsurfingBlogs,
-    },
-    {
-      location: 'egypt',
-      filter: egyptWindsurfingBlogs,
-    },
-    {
-      location: 'greece',
-      filter: greeceWindsurfingBlogs,
-    },
-    {
-      location: 'mauritius',
-      filter: mauritiusWindsurfingBlogs,
-    }
-  ]
-  windsurfingLocations.sort((a, b) => {
-    if (a.location < b.location) {
-      return -1
-    } else if (a.location > b.location) {
-      return 1
-    } else {
-      return 0
-    }
-  })
+   // Generate an array of objects with location and filter
+   const windsurfingLocations = uniqueCountries.map((country) => ({
+     location: country,
+     filter: windsurfingBlogs.filter((location) => location.country === country),
+   }));
+ 
+   windsurfingLocations.sort((a, b) => a.location.localeCompare(b.location)); 
 
   const blogGridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 gap-20'
   
   const [activeFilter, setActiveFilter] = useState(windsurfingBlogs)
-
+  
   return (
 
     <div>
@@ -63,26 +34,37 @@ const Destinations = () => {
       <PageHeading heading='Destination spot guides' />
 
       <section className="pt-8">
-        <div className="container mx-auto pb-8">
-          <div className="grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-between gap-2">
-            {windsurfingLocations.map((location, index) => {
+        <div className="container mx-auto pb-8 grid grid-cols-2 lg:flex lg:flex-wrap lg:justify-between gap-2">
+          <button 
+            onClick={() => setActiveFilter(windsurfingBlogs)} 
+            className={`${JSON.stringify(activeFilter) === JSON.stringify(windsurfingBlogs) ? 'bg-blue text-white ' : 'bg-blue-lighter text-blue' } col-span-2 cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full lg:w-48 py-2 font-bold`}
+          >
+            All
+          </button>
 
-              const handleChange = () => {
-                setActiveFilter(location.filter);
-              }
 
-              return (
-                <button key={index} onClick={handleChange} className={`${index === 0 ? 'col-span-2 lg:w-48' : 'w-full lg:w-48'} bg-blue cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg text-white py-2`}>
-                  {location.location}
-                </button>
-              )
-            })}
-          </div>
-          <div>
-            
-          </div>
+        {windsurfingLocations.map((location, index) => {
+
+          const handleChange = () => {
+            setActiveFilter(location.filter);
+          };
+
+          return (
+            <button
+              key={index}
+              onClick={handleChange}
+              className={`${index === 0 ? 'col-span-2 lg:w-48' : ''} ${
+                JSON.stringify(activeFilter) === JSON.stringify(location.filter)
+                  ? 'bg-blue text-white '
+                  : 'bg-blue-lighter text-blue'
+              } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full lg:w-48 py-2 font-bold`}
+            >
+              {location.location}
+            </button>
+          );
+        })}
+
         </div>
-
       </section>
 
       <section className="pb-20">

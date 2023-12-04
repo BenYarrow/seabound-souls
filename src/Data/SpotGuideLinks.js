@@ -70,4 +70,21 @@ export let SpotGuideLinks = [
             }
         ]
     },
+    // {
+    //     country: '',
+    //     blogTitle: 'testing page',
+    //     featured: false,
+    //     featuredOrder: false,
+    //     isVisible: true,
+    //     blogLinkData: [
+    //         {
+    //             title: 'Testing Page',
+    //             location: 'testing',
+    //             linkTo: '/TestingSpotGuide',
+    //             blogLinkImgSrc: null,
+    //             blogLinkImgAlt: '',
+    //             blogIntro: `testing intro`,
+    //         }
+    //     ]
+    // },
 ]
