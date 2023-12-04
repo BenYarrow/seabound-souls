@@ -69,7 +69,7 @@ const AboutUs = () => {
           <div className="flex flex-col space-y-8 items-center">
             <div className="flex flex-col space-y-8 items-center">
               <p className="text-center">
-                We are rachel and ben            
+                We are Rachel and Ben
               </p>
               <p className="text-center">
                 Two adventure seekers from the UK, pursuing our passion for windsurfing and travelling wherever the wind takes us.

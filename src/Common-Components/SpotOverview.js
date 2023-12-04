@@ -143,7 +143,7 @@ const SpotOverview = (props) => {
                         {props.waterConditions}
                     </p>
                     <div className='flex items-center row-start-5'>
-                        <img src='svg/skill.svg'
+                        <img src='svg/launch.png'
                             width="50"
                             height="50"
                         />

@@ -1,4 +1,4 @@
-import { React, useRef, useEffect, useState } from "react";
+import { React, useRef, useState } from "react";
 import { SpotGuideLinks } from "../Data/SpotGuideLinks";
 import BlogLink from "../Common-Components/BlogLink";
 import StaticMasthead from "../Common-Components/StaticMasthead";
@@ -10,14 +10,12 @@ const Destinations = () => {
 
   const windsurfingBlogs = SpotGuideLinks.filter(visible => visible.isVisible === true)
 
-   // Extract unique countries from SpotGuideLinks
-   const uniqueCountries = Array.from(new Set(windsurfingBlogs.map((blog) => blog.country)));
+  const uniqueCountries = Array.from(new Set(windsurfingBlogs.map((blog) => blog.country)));
 
-   // Generate an array of objects with location and filter
-   const windsurfingLocations = uniqueCountries.map((country) => ({
-     location: country,
-     filter: windsurfingBlogs.filter((location) => location.country === country),
-   }));
+  const windsurfingLocations = uniqueCountries.map((country) => ({
+    location: country,
+    filter: windsurfingBlogs.filter((location) => location.country === country),
+  }));
  
    windsurfingLocations.sort((a, b) => a.location.localeCompare(b.location)); 
 
@@ -42,27 +40,26 @@ const Destinations = () => {
             All
           </button>
 
+          {windsurfingLocations.map((location, index) => {
 
-        {windsurfingLocations.map((location, index) => {
+            const handleChange = () => {
+              setActiveFilter(location.filter);
+            };
 
-          const handleChange = () => {
-            setActiveFilter(location.filter);
-          };
-
-          return (
-            <button
-              key={index}
-              onClick={handleChange}
-              className={`${index === 0 ? 'col-span-2 lg:w-48' : ''} ${
-                JSON.stringify(activeFilter) === JSON.stringify(location.filter)
-                  ? 'bg-blue text-white '
-                  : 'bg-blue-lighter text-blue'
-              } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full lg:w-48 py-2 font-bold`}
-            >
-              {location.location}
-            </button>
-          );
-        })}
+            return (
+              <button
+                key={index}
+                onClick={handleChange}
+                className={`${index === 0 ? 'col-span-2 lg:w-48' : ''} ${
+                  JSON.stringify(activeFilter) === JSON.stringify(location.filter)
+                    ? 'bg-blue text-white '
+                    : 'bg-blue-lighter text-blue'
+                } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full lg:w-48 py-2 font-bold`}
+              >
+                {location.location}
+              </button>
+            );
+          })}
 
         </div>
       </section>
@@ -83,8 +80,7 @@ const Destinations = () => {
           </div>
         </div>
       </section>
-      
-      
+
     </div>
   );
 };
