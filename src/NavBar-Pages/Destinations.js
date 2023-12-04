@@ -10,8 +10,10 @@ const Destinations = () => {
 
   const windsurfingBlogs = SpotGuideLinks.filter(visible => visible.isVisible === true)
 
+  // Extract unique countries from SpotGuideLinks
   const uniqueCountries = Array.from(new Set(windsurfingBlogs.map((blog) => blog.country)));
 
+  // Generate an array of objects with location and filter
   const windsurfingLocations = uniqueCountries.map((country) => ({
     location: country,
     filter: windsurfingBlogs.filter((location) => location.country === country),
@@ -54,7 +56,7 @@ const Destinations = () => {
                   JSON.stringify(activeFilter) === JSON.stringify(location.filter)
                     ? 'bg-blue text-white '
                     : 'bg-blue-lighter text-blue'
-                } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full lg:w-48 py-2 font-bold`}
+                  } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full lg:w-48 py-2 font-bold`}
               >
                 {location.location}
               </button>
