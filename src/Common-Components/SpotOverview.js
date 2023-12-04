@@ -72,7 +72,10 @@ const SpotOverview = (props) => {
                         <img src='svg/sailing-style.svg'
                             width="50"
                             height="50"
-                            className=''
+                            alt='sailing style logo'
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -88,6 +91,10 @@ const SpotOverview = (props) => {
                         <img src='svg/best-time.svg'
                             width="50"
                             height="50"
+                            alt='best time to go logo'
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -102,6 +109,10 @@ const SpotOverview = (props) => {
                         <img src='svg/wind-direction.svg'
                             width="50"
                             height="50"
+                            alt='wind direction logo'
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -118,6 +129,10 @@ const SpotOverview = (props) => {
                         <img src='svg/wind-conditions.svg'
                             width="50"
                             height="50"
+                            alt='wind condition logo'
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -132,6 +147,10 @@ const SpotOverview = (props) => {
                         <img src='svg/water.svg'
                             width="50"
                             height="50"
+                            alt='water condition logo'
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -146,6 +165,10 @@ const SpotOverview = (props) => {
                         <img src='svg/launch.png'
                             width="50"
                             height="50"
+                            alt='launch zone logo'
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">

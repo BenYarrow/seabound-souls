@@ -39,6 +39,9 @@ const GridImageDisplay = (props) => {
                             className={backgroundImageClasses}
                             src={props.imageOne}
                             alt=""
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         /> 
                     </div>
                 )}
@@ -50,6 +53,9 @@ const GridImageDisplay = (props) => {
                             className={backgroundImageClasses}
                             src={props.imageTwo}
                             alt=""
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         /> 
                     </div>
                 )}
@@ -60,6 +66,9 @@ const GridImageDisplay = (props) => {
                             className={backgroundImageClasses}
                             src={props.imageThree}
                             alt=""
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         /> 
                     </div>
                 )}
@@ -70,6 +79,9 @@ const GridImageDisplay = (props) => {
                             className={backgroundImageClasses}
                             src={props.imageFour}
                             alt=""
+                            fetchPriority="low"
+                            loading="lazy"
+                            crossOrigin
                         /> 
                     </div>          
                 )}

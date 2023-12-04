@@ -48,15 +48,6 @@ const SpotConditions = (props) => {
                     />
                 )}
 
-                {props.windStatGraph && (
-                    <div className="w-full">
-                        <img 
-                            src={props.windStatGraph}
-                        />
-
-                    </div>
-                )}
-
                 {props.spotDetailsOne && (
                     <SplitImageText 
                         title='Spots' 

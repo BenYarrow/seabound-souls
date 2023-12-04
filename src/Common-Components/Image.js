@@ -5,7 +5,14 @@ const Image = (props) => {
 
   return (
     <div className='w-full h-full overflow-hidden'>
-      <img src={props.image} alt={props.alt} className={`${props.customClasses} object-fit shadow-xl hover:scale-105 transition duration-300`}/>
+      <img 
+        src={props.image} 
+        alt={props.alt} 
+        className={`${props.customClasses} object-fit shadow-xl hover:scale-105 transition duration-300`}
+        fetchPriority="low"
+        loading="lazy"
+        crossOrigin
+      />
     </div>
   )
 }

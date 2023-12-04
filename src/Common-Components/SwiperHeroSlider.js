@@ -34,6 +34,7 @@ const SwiperHeroSlider = (props) => {
                 className="object-cover w-full h-full -z-50 absolute"
                 fetchPriority={index === 0 ? 'high' : 'low'}
                 loading={index === 0 ? false : true}
+                crossOrigin
               />
               <div className="flex flex-col justify-between items-center bg-white/10 pb-12  z-50 h-full">
                 
