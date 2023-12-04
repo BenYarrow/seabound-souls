@@ -36,14 +36,12 @@ const SwiperHeroSlider = (props) => {
               <div className="flex flex-col justify-between items-center bg-white/10 pb-12  z-50 h-full">
                 
                 <PageHeading heading={props.heading} />
-                <button className="px-8 py-2 bg-blue">
-                  <a
-                    href="#content"
-                    className="relative text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300"
-                  >
+                <a
+                  href="#content"
+                  className="relative px-8 py-2 bg-blue text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300"
+                >
                     Read more
                   </a>
-                </button>
               </div>
             </div>
           </SwiperSlide>
