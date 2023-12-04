@@ -32,6 +32,8 @@ const SwiperHeroSlider = (props) => {
                 sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw, 33.3vw"
                 alt={props.heading}
                 className="object-cover w-full h-full -z-50 absolute"
+                fetchPriority={index === 0 ? 'high' : 'low'}
+                loading={index === 0 ? false : true}
               />
               <div className="flex flex-col justify-between items-center bg-white/10 pb-12  z-50 h-full">
                 

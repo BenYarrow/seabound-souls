@@ -28,7 +28,7 @@ const BlogLink = ({
     const blogImageSrc = blogLinkImgSrc ? blogLinkImgSrc : fallbackImage
 
     return(
-            <Link ref={ref} to={linkTo} key={index}>
+            <Link ref={ref} to={linkTo} key={index} aria-label={`Read about our time in ${location}`}>
                 <motion.div 
                     className="flex flex-col justify-between space-y-2 w-full overflow-hidden"
                     variants={{
