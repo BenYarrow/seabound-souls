@@ -40,7 +40,7 @@ const Footer = () => {
                         <h4 className={subheadingClasses}>
                             Email
                         </h4>
-                        <a href="mailto:yarrowtravels@outlook.com" className={afterClasses}>
+                        <a href="mailto:seabound.souls@outlook.com" className={afterClasses}>
                             seaboundsouls@outlook.com
                         </a>
                     </div>

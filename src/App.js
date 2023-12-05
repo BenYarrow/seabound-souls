@@ -18,7 +18,7 @@ function App() {
   return (
       <div className='text-blue bg-white text-lg '>
         <Router>
-            <SeaboundSouls />
+            
             <Navbar /> 
           <Routes>
             {/* Nav Components */}
