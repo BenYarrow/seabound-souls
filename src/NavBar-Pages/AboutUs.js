@@ -72,7 +72,7 @@ const AboutUs = () => {
                 We are Rachel and Ben
               </p>
               <p className="text-center">
-                Two adventure seekers from the UK, pursuing our passion for windsurfing and travelling wherever the wind takes us.
+              As a travel couple with a passion for windsurfing and watersports, we're always on the lookout for the next incredible destination. But our journey goes beyond the waves as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health. 
               </p>
               <p className="text-center">
                 <a href="https://www.instagram.com/seabound.souls/" className="font-bold underline" target="_blank" rel="noreferrer">Follow our journey</a> as we discover the most incredible windsurfing destinations around the world. 
@@ -120,17 +120,6 @@ const AboutUs = () => {
             image="images/Vassiliki-Images/cosmos-apartments.jpg"
             customImageClasses="object-cover"
             invert
-          />
-        </section>
-
-        <section>
-          <SplitAccordianImage 
-            title='Our mission' 
-            subtitle='Sharing our passion'
-            accordianData={ourMissionData} 
-            image="images/Mauritius-Images/ben-balcony.jpg"
-            customImageClasses=''
-            reverse
           />
         </section>
 
