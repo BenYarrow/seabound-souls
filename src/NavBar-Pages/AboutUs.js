@@ -113,16 +113,6 @@ const AboutUs = () => {
           </div>
         </section>
 
-        <section>
-          <SplitAccordianImage 
-            title='Why we love windsurfing' 
-            accordianData={whyWeLoveWindsurfingAccordianData} 
-            image="images/Vassiliki-Images/cosmos-apartments.jpg"
-            customImageClasses="object-cover"
-            invert
-          />
-        </section>
-
         <section className="py-20">
           <div className="container mx-auto">
             <div className="flex flex-col space-y-8 items-center pb-12">
