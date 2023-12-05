@@ -46,7 +46,7 @@ function Homepage() {
   return (
     <div className="relative">
       
-      <SwiperHeroSlider images={heroImages} heading='seabound souls'/>
+      <SwiperHeroSlider images={heroImages}/>
 
       <section 
         className="w-full py-20 container mx-auto"
@@ -63,14 +63,17 @@ function Homepage() {
               <h3 className="font-title text-4xl uppercase ">
                   Get to know us
               </h3>
-              <p className='text-center  '>
-                We are Rachel and ben. Two adventure seekers, travelling wherever the wind takes us. Follow our journey as we discover the most incredible windsurfing destinations around the globe.
+              <p className='text-center'>
+                Hi! We are Rachel and Ben. We're two adventure seekers, travelling the world wherever the wind takes us. 
               </p>
-              <p className='text-center  '>
-                This is not just a travel blog; it's a gateway to a unique blend of adrenaline and exploration. Whether you're a seasoned windurfer seeking the next ultimate spot or a curious traveller ready to dive into the exhilarating world of windsurfing, our blog is here to inspire, inform and fuel your passion for this incredible water sport.
+              <p className='text-center'>
+                Follow our journey to discover the most incredible windsurfing destinations around the globe.
               </p>
-              <p className='text-center  '>
-                Join us as we chase the winds, discover new horizons and travel the world windsurfing together.
+              <p className='text-center'>
+                This isn't just a travel blog; it's a gateway to a unique blend of adrenaline and exploration. Whether you're a seasoned windurfer seeking the next ultimate spot or a curious traveller ready to dive into the exhilarating world of windsurfing, our blog is here to inspire, inform and fuel your passion for this incredible water sport.
+              </p>
+              <p className='text-center'>
+                Join us as we chase the winds, discover new horizons and travel to the very best windsurf destinations.
               </p>
             </div>
           </div>

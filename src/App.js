@@ -1,6 +1,8 @@
+import {React} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './Homepage';
+import SeaboundSouls from './SeaboundSouls';
 import Navbar from './NavBar-Pages/Navbar';
   import AboutUs from './NavBar-Pages/AboutUs';
   import Destinations from './NavBar-Pages/Destinations';
@@ -16,6 +18,7 @@ function App() {
   return (
       <div className='text-blue bg-white text-lg '>
         <Router>
+            <SeaboundSouls />
             <Navbar /> 
           <Routes>
             {/* Nav Components */}

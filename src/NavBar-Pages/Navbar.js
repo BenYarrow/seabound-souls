@@ -68,7 +68,7 @@ const Navbar = () => {
               <li key={index}>
                   <Link
                     to={listItem.to}
-                    className="relative text-xl   uppercase after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-blue/80 after:transition-all after:duration-300"
+                    className="relative uppercase after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-blue/80 after:transition-all after:duration-300"
                     >
                     {listItem.title}
                   </Link>
@@ -84,7 +84,7 @@ const Navbar = () => {
                 <Link
                   onClick={hideMobileNav}
                   to={listItem.to}
-                  className={mobileNav ? 'pl-8 text-xl uppercase' : 'hidden'}
+                  className={mobileNav ? 'pl-8 uppercase' : 'hidden'}
                   >
                   {listItem.title}
                 </Link>

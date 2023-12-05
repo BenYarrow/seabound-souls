@@ -36,7 +36,7 @@ function Egypt() {
   return (
     <div className=' pb-8 '>
       <div className='py-8'>
-        <h1 className='xl:text-8xl text-6xl py-8  text-center '>Egypt</h1>
+        <h2 className='xl:text-8xl text-6xl py-8  text-center '>Egypt</h2>
         <p className='text-xl /80 text-center'>Dahab</p>
       </div>
       <div>

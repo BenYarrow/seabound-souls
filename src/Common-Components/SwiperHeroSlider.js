@@ -25,7 +25,7 @@ const SwiperHeroSlider = (props) => {
       {props.images.map((slide, index) => {
         return (
           <SwiperSlide key={index} className="relative">
-            <div className="h-[calc(100vh-4rem)]">
+            <div className="h-[calc(100vh-8rem)]">
               <img
                 src={slide.image}
                 srcSet={`${slide.image} 768w, ${slide.image}?resize&size=1024 1024w, ${slide.image}?resize&size=1600 1600w`}
@@ -33,10 +33,10 @@ const SwiperHeroSlider = (props) => {
                 alt={props.heading}
                 className="object-cover w-full h-full -z-50 absolute"
                 fetchPriority={index === 0 ? 'high' : 'low'}
-                loading={index === 0 ? false : true}
+                loading={index === 0 && 'lazy'}
                 crossOrigin
               />
-              <div className="flex flex-col justify-between items-center bg-white/10 pb-12  z-50 h-full">
+              <div className="flex flex-col justify-between items-center pb-12  z-50 h-full">
                 
                 <PageHeading heading={props.heading} />
                 <a
