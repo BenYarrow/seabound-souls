@@ -19,7 +19,7 @@ const Footer = () => {
             icon: faTiktok
         }
     ]
-    const afterClasses = 'relative uppercase after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-500'
+    const afterClasses = 'relative after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-500'
 
     return (
         <footer className="w-full h-screen md:h-auto md:py-20 bg-blue text-white">
