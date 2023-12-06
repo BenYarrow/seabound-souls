@@ -1,11 +1,13 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Navbar = () => {
   
+  const location = useLocation()
+  const isHomePage = location.pathname === '/Homepage'
   const [mobileNav, setMobileNav] = useState(false);
 
   const toggleMobileNav = () => setMobileNav(!mobileNav)
@@ -48,22 +50,28 @@ const Navbar = () => {
 
   const body = document.getElementById('body')
 
-    useEffect(() => {
-      if (mobileNav === true){
-        document.body.style.overflow = 'hidden';
-      } else {
-        document.body.style.overflow = 'auto';
-      }
-  
-    })
+  useEffect(() => {
+    if (mobileNav === true){
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+  })
 
   return (
     <section>
       <div className="relative bg-blue text-white ">
         <div className="container  mx-auto w-full h-[4rem] flex items-center justify-between md:justify-center">
-          <h1 class="font-title text-4xl uppercase">
-              Seabound souls
-          </h1>
+          {isHomePage ? (
+            <h1 class="font-title text-4xl uppercase">
+                Seabound souls
+            </h1>
+          ) : (
+            <h2 class="font-title text-4xl uppercase">
+                Seabound souls
+            </h2>
+          )}
           <div>
             <button onClick={toggleMobileNav} className=' text-4xl w-full md:hidden '>
               <FontAwesomeIcon
