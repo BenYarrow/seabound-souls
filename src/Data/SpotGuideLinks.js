@@ -12,7 +12,7 @@ export let SpotGuideLinks = [
                 linkTo: '/LeMorneSpotGuide',
                 blogLinkImgSrc: 'images/Spot-Guides/mauritius-spotguide.jpg',
                 blogLinkImgAlt: 'Windsurfing in Mauritius',
-                blogIntro: `Known for its consistent winds, challenging wave conditions, and stunning surroundings. Le Morne has something to offer every windsurfing enthusiast.`,
+                blogIntro: `Welcome to paradise! This windy island in the Indian ocean is every windsurfers dream. From flat water to a mix of wave conditions, this destination has something for everyone.`,
             }
         ]
     },
@@ -28,8 +28,7 @@ export let SpotGuideLinks = [
                 linkTo: '/DahabSpotGuide',
                 blogLinkImgSrc: 'images/Spot-Guides/dahab-spotguide.jpg',
                 blogLinkImgAlt: 'Dahab, Egypt.',
-                blogIntro: `With its consistent winds, diverse water conditions, and suitability for all levels, it's a fantastic destination`,
-
+                blogIntro: `Nestled in Egypt, Dahab offers ideal conditions for all windsurfing disciplines, offering consistent winds and clear turquoise waters, making it a great spot for both beginners and seasoned sailors.`,
             }
         ]
     },
@@ -46,7 +45,7 @@ export let SpotGuideLinks = [
                 linkTo: '/VassilikiSpotGuide',
                 blogLinkImgSrc: 'images/Spot-Guides/vassiliki-spotguide.jpg',
                 blogLinkImgAlt: '',
-                blogIntro: `Offering a diverse range of conditions, reliable winds, and a welcoming atmosphere - regardless of ability, Vassiliki has something to offer everyone.`,
+                blogIntro: `Vassiliki is a dream for water sports lovers. The bay is renowned for its epic windsurfing conditions - reliable winds, warm waters, and stunning views that call to riders of all levels.`,
             }
         ],
 
@@ -81,7 +80,7 @@ export let SpotGuideLinks = [
                 title: 'Windsurfing in Langebaan',
                 location: 'Langebaan, Western Cape',
                 linkTo: '/LangebaanSpotGuide',
-                blogLinkImgSrc: null,
+                blogLinkImgSrc: 'images/Spot-Guides/langebaan-spotguide.jpg',
                 blogLinkImgAlt: 'Langebaan',
                 blogIntro: `testing intro`,
             }

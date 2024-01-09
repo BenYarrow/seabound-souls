@@ -9,7 +9,6 @@ const StaticMasthead = (props) => {
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center",
         }}> 
-
         </div>
     )
 }

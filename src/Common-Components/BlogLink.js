@@ -10,6 +10,7 @@ const BlogLink = ({
     blogLinkImgSrc,
     textColour,
     index,
+    overallRating
    }) => {
 
     const ref = useRef(null)
@@ -28,7 +29,7 @@ const BlogLink = ({
     const blogImageSrc = blogLinkImgSrc ? blogLinkImgSrc : fallbackImage
 
     return(
-            <Link ref={ref} to={linkTo} key={index} aria-label={`Read about our time in ${location}`}>
+            <Link ref={ref} to={linkTo} key={index} aria-label={`Read about our time in ${location}`} className='group' >
                 <motion.div 
                     className="flex flex-col justify-between space-y-2 w-full overflow-hidden"
                     variants={{
@@ -42,9 +43,9 @@ const BlogLink = ({
                         delay: 0.5
                       }}
                 >
-                <div className="overflow-hidden">
+                <div className="overflow-hidden relative">
                   <div 
-                      className={blogLinkImgSrc ? 'aspect-[5/4] hover:scale-105 transition duration-300' : 'w-full aspect-[5/4] bg-blue'}
+                      className={blogLinkImgSrc ? 'aspect-[5/4] group-hover:scale-105 transition duration-300' : 'w-full aspect-[5/4] bg-blue'}
                       style={{
                           backgroundImage: `url(${blogImageSrc})`,
                           backgroundSize: "cover",
@@ -57,7 +58,7 @@ const BlogLink = ({
                 <h3 className={`${textColour} font-bold pt-2`}>
                   {location}
                 </h3>
-                <p className={`${textColour} hidden lg:block`}>
+                <p className={`${textColour} hidden lg:block text-base`}>
                   {blogIntro}
                 </p>
                 </motion.div>

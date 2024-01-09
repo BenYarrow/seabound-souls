@@ -1,7 +1,6 @@
 import React from 'react'
 import StaticMasthead from '../Common-Components/StaticMasthead'
 import PageHeading from '../Common-Components/PageHeading'
-import { SpotGuidePages } from '../Data/SpotGuidePages'
 import SpotOverview from '../Common-Components/SpotOverview'
 import SpotConditions from '../Common-Components/SpotConditions'
 import BulletsAndImage from '../Common-Components/BulletsAndImage'
@@ -57,7 +56,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     </section>
                 )}
 
-                {galleryImages && (
+                {galleryImages.length > 0 && (
                     <section className='container mx-auto py-4 lg:py-8'>
                         <GridImageDisplay 
                             imageOne={spotGuide.gridGalleryImageOne}

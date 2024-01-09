@@ -1,6 +1,7 @@
-import {React} from 'react';
+import { React } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import ScrollToTop from './Common-Components/ScrollToTop';
 import Homepage from './Homepage';
 import Navbar from './NavBar-Pages/Navbar';
   import AboutUs from './NavBar-Pages/AboutUs';
@@ -18,6 +19,7 @@ function App() {
   return (
       <div className='text-blue bg-white text-lg '>
         <Router>
+          <ScrollToTop />
             
             <Navbar /> 
           <Routes>
