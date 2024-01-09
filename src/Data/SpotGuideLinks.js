@@ -64,7 +64,7 @@ export let SpotGuideLinks = [
                 linkTo: '/RiscoDelPasoSpotGuide',
                 blogLinkImgSrc: 'images/Spot-Guides/risco-del-paso-spotguide.jpg',
                 blogLinkImgAlt: 'Risco Del Paso',
-                blogIntro: `While not as famous as some other windsurfing spots in Fuerteventura, Risco del Paso is known for its strong and consistent winds, making it a desirable location for windsurfers.`,
+                blogIntro: `Risco del Paso is a perfect playground for windsurfing in Fuerteventura. The combination of trade winds, azure waters and varied conditions make it a must-visit spot for windsurfers of all levels.`,
                 
             }
         ]
@@ -78,11 +78,11 @@ export let SpotGuideLinks = [
         blogLinkData: [
             {
                 title: 'Windsurfing in Langebaan',
-                location: 'Langebaan, Western Cape',
+                location: 'Langebaan, South Africa',
                 linkTo: '/LangebaanSpotGuide',
                 blogLinkImgSrc: 'images/Spot-Guides/langebaan-spotguide.jpg',
                 blogLinkImgAlt: 'Langebaan',
-                blogIntro: `testing intro`,
+                blogIntro: `Situated along the breathtaking western cape coastline, Langebaan offers incredible conditions for windsurfers. The area's stunning natural beauty make it a place you simply cannot miss.`,
             }
         ]
     },

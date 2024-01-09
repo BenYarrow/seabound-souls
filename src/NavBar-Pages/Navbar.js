@@ -62,15 +62,15 @@ const Navbar = () => {
   return (
     <section>
       <div className="relative bg-blue text-white ">
-        <div className="container  mx-auto w-full h-[4rem] flex items-center justify-between md:justify-center">
+        <div className="container  mx-auto w-full h-[4rem] md:h-[6rem] flex items-center justify-between md:justify-center">
           {isHomePage ? (
-            <h1 class="font-title text-4xl uppercase">
+            <h1 class="font-title text-4xl md:text-6xl uppercase">
                 Seabound souls
             </h1>
           ) : (
-            <h2 class="font-title text-4xl uppercase">
+            <Link to='/Homepage' class="font-title text-4xl md:text-6xl uppercase">
                 Seabound souls
-            </h2>
+            </Link>
           )}
           <div>
             <button onClick={toggleMobileNav} className=' text-4xl w-full md:hidden '>

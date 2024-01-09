@@ -25,7 +25,7 @@ const SwiperHeroSlider = (props) => {
       {props.images.map((slide, index) => {
         return (
           <SwiperSlide key={index} className="relative">
-            <div className="h-[calc(100vh-4rem)] md:h-[calc(100vh-8rem)]">
+            <div className="h-[calc(100vh-4rem)] md:h-[calc(100vh-10rem)]">
               <img
                 src={slide.image}
                 srcSet={`${slide.image} 768w, ${slide.image}?resize&size=1024 1024w, ${slide.image}?resize&size=1600 1600w`}
