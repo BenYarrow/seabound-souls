@@ -11,15 +11,15 @@ const Destinations = () => {
   const windsurfingBlogs = SpotGuideLinks.filter(visible => visible.isVisible === true)
 
   // Extract unique countries from SpotGuideLinks
-  const uniqueCountries = Array.from(new Set(windsurfingBlogs.map((blog) => blog.country)));
+  const uniqueContinents = Array.from(new Set(windsurfingBlogs.map((blog) => blog.continent)));
 
   // Generate an array of objects with location and filter
-  const windsurfingLocations = uniqueCountries.map((country) => ({
-    location: country,
-    filter: windsurfingBlogs.filter((location) => location.country === country),
+  const windsurfingLocations = uniqueContinents.map((continent) => ({
+    location: continent,
+    filter: windsurfingBlogs.filter((location) => location.continent === continent),
   }));
  
-   windsurfingLocations.sort((a, b) => a.location.localeCompare(b.location)); 
+  windsurfingLocations.sort((a, b) => a.location.localeCompare(b.location)); 
 
   const blogGridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 gap-20'
   

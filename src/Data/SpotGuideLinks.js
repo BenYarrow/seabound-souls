@@ -1,6 +1,6 @@
 export let SpotGuideLinks = [
     {
-        country: 'mauritius',
+        continent: 'africa',
         blogTitle: 'Le Morne',
         featured: true,
         featuredOrder: 1,
@@ -17,7 +17,7 @@ export let SpotGuideLinks = [
         ]
     },
     {
-        country: 'egypt',
+        continent: 'africa',
         blogTitle: 'Dahab',
         featured: false,
         isVisible: true,
@@ -34,7 +34,7 @@ export let SpotGuideLinks = [
         ]
     },
     {
-        country: 'greece',
+        continent: 'europe',
         blogTitle: 'Vassiliki',
         featured: true,
         featuredOrder: 3,
@@ -52,7 +52,7 @@ export let SpotGuideLinks = [
 
     },
     {
-        country: 'canary islands',
+        continent: 'europe',
         blogTitle: 'Risco Del Paso',
         featured: false,
         featuredOrder: 2,
@@ -70,8 +70,25 @@ export let SpotGuideLinks = [
             }
         ]
     },
+    {
+        continent: 'africa',
+        blogTitle: 'Langebaan',
+        featured: false,
+        featuredOrder: false,
+        isVisible: true,
+        blogLinkData: [
+            {
+                title: 'Windsurfing in Langebaan',
+                location: 'Langebaan, Western Cape',
+                linkTo: '/LangebaanSpotGuide',
+                blogLinkImgSrc: null,
+                blogLinkImgAlt: 'Langebaan',
+                blogIntro: `testing intro`,
+            }
+        ]
+    },
     // {
-    //     country: '',
+    //     continent: '',
     //     blogTitle: 'testing page',
     //     featured: false,
     //     featuredOrder: false,

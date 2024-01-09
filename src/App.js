@@ -2,7 +2,6 @@ import {React} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Homepage from './Homepage';
-import SeaboundSouls from './SeaboundSouls';
 import Navbar from './NavBar-Pages/Navbar';
   import AboutUs from './NavBar-Pages/AboutUs';
   import Destinations from './NavBar-Pages/Destinations';
@@ -11,6 +10,7 @@ import Navbar from './NavBar-Pages/Navbar';
     import LeMorneSpotGuide from './Spot-guides/LeMorneSpotGuide';
     import VassilikiSpotGuide from './Spot-guides/VassilikiSpotGuide';
     import RiscoDelPasoSpotGuide from './Spot-guides/RiscoDelPasoSpotGuide';
+    import LangebaanSpotGuide from './Spot-guides/LangebaanSpotGuide';
   import ContactUs from './NavBar-Pages/ContactUs';  
 import Footer from './Footer';
 
@@ -33,6 +33,7 @@ function App() {
               <Route path='/LeMorneSpotGuide' element={<LeMorneSpotGuide />} />
               <Route path='/VassilikiSpotGuide' element={<VassilikiSpotGuide />} />
               <Route path='/RiscoDelPasoSpotGuide' element={<RiscoDelPasoSpotGuide />} />
+              <Route path='/LangebaanSpotGuide' element={<LangebaanSpotGuide />} />
               <Route path='/TestingSpotGuide' element={<TestingSpotGuide />} />
             </Routes>
           <Footer />  
