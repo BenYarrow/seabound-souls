@@ -64,11 +64,11 @@ const Navbar = () => {
       <div className="relative bg-blue text-white ">
         <div className="container  mx-auto w-full h-[4rem] md:h-[6rem] flex items-center justify-between md:justify-center">
           {isHomePage ? (
-            <h1 class="font-title text-4xl md:text-6xl uppercase">
+            <h1 className="font-title text-4xl md:text-6xl uppercase">
                 Seabound souls
             </h1>
           ) : (
-            <Link to='/Homepage' class="font-title text-4xl md:text-6xl uppercase">
+            <Link to='/Homepage' className="font-title text-4xl md:text-6xl uppercase">
                 Seabound souls
             </Link>
           )}

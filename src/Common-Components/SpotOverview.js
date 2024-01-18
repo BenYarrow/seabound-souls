@@ -73,7 +73,7 @@ const SpotOverview = (props) => {
                             width="50"
                             height="50"
                             alt='sailing style logo'
-                            fetchPriority="low"
+                            fetchpriority="low"
                             loading="lazy"
                             crossOrigin
                         />
@@ -92,7 +92,7 @@ const SpotOverview = (props) => {
                             width="50"
                             height="50"
                             alt='best time to go logo'
-                            fetchPriority="low"
+                            fetchpriority="low"
                             loading="lazy"
                             crossOrigin
                         />
@@ -110,7 +110,7 @@ const SpotOverview = (props) => {
                             width="50"
                             height="50"
                             alt='wind direction logo'
-                            fetchPriority="low"
+                            fetchpriority="low"
                             loading="lazy"
                             crossOrigin
                         />
@@ -130,7 +130,7 @@ const SpotOverview = (props) => {
                             width="50"
                             height="50"
                             alt='wind condition logo'
-                            fetchPriority="low"
+                            fetchpriority="low"
                             loading="lazy"
                             crossOrigin
                         />
@@ -148,7 +148,7 @@ const SpotOverview = (props) => {
                             width="50"
                             height="50"
                             alt='water condition logo'
-                            fetchPriority="low"
+                            fetchpriority="low"
                             loading="lazy"
                             crossOrigin
                         />
@@ -166,7 +166,7 @@ const SpotOverview = (props) => {
                             width="50"
                             height="50"
                             alt='launch zone logo'
-                            fetchPriority="low"
+                            fetchpriority="low"
                             loading="lazy"
                             crossOrigin
                         />

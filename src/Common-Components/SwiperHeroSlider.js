@@ -32,7 +32,7 @@ const SwiperHeroSlider = (props) => {
                 sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw, 33.3vw"
                 alt={props.heading}
                 className="object-cover w-full h-full -z-50 absolute"
-                fetchPriority={index === 0 ? 'high' : 'low'}
+                fetchpriority={index === 0 ? 'high' : 'low'}
                 loading={index === 0 && 'lazy'}
                 crossOrigin
               />

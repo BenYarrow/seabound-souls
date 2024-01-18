@@ -73,7 +73,7 @@ const Footer = () => {
                         className="w-1/2 md:w-full max-w-md" 
                         width="350" 
                         height="350"
-                        fetchPriority="low"
+                        fetchpriority="low"
                         loading="lazy"
                         crossOrigin
                     />
