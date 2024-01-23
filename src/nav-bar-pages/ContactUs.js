@@ -5,8 +5,6 @@ import { faPhone, faEnvelope, } from "@fortawesome/free-solid-svg-icons"
 import { faSquareInstagram, faTiktok} from "@fortawesome/free-brands-svg-icons";
 import StaticMasthead from "../components/StaticMasthead";
 import PageHeading from "../components/PageHeading";
-import ContactForm from "../components/ContactForm";
-
 
 const ContactUs = () => {
   
