@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faEnvelope, } from "@fortawesome/free-solid-svg-icons"
 import { faSquareInstagram, faTiktok} from "@fortawesome/free-brands-svg-icons";
-import StaticMasthead from "../Common-Components/StaticMasthead";
-import PageHeading from "../Common-Components/PageHeading";
+import StaticMasthead from "../components/StaticMasthead";
+import PageHeading from "../components/PageHeading";
 
 
 const ContactUs = () => {

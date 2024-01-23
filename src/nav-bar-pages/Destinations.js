@@ -1,8 +1,9 @@
 import { React, useRef, useState } from "react";
-import { SpotGuideLinks } from "../Data/SpotGuideLinks";
-import BlogLink from "../Common-Components/BlogLink";
-import StaticMasthead from "../Common-Components/StaticMasthead";
-import PageHeading from "../Common-Components/PageHeading";
+import { SpotGuideLinks } from "../data/spot-guide-links";
+import BlogLink from "../components/BlogLink";
+import StaticMasthead from "../components/StaticMasthead";
+import PageHeading from "../components/PageHeading";
+import { Helmet } from "react-helmet";
 
 const Destinations = () => {
   

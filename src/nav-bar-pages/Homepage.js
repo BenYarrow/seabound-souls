@@ -1,8 +1,9 @@
 import React from "react";
-import { SpotGuideLinks } from "./Data/SpotGuideLinks";
-import { blogs } from "./Data/Blogs";
-import BlogLink from "./Common-Components/BlogLink";
-import SwiperHeroSlider from "./Common-Components/SwiperHeroSlider";
+import { SpotGuideLinks } from "../data/spot-guide-links";
+import { blogs } from "../data/blogs";
+import BlogLink from "../components/BlogLink";
+import SwiperHeroSlider from "../components/SwiperHeroSlider";
+import { Helmet } from 'react-helmet';
 
 function Homepage() {
 
@@ -45,6 +46,12 @@ function Homepage() {
 
   return (
     <div className="relative">
+      <Helmet>
+        <title>Seabound Souls</title>
+        <meta name="description" content="Explore the best windsurfing destinations around the world." />
+        <meta name="keywords" content="windsurfing, travel, adventure, water sports, destinations, spot guides, wind forecast, weather forecast" />
+        <meta name="author" content="Seabound Souls" />
+      </Helmet>
       
       <SwiperHeroSlider images={heroImages}/>
 

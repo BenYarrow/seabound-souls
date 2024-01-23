@@ -1,12 +1,12 @@
 import React from 'react'
-import StaticMasthead from '../Common-Components/StaticMasthead'
-import PageHeading from '../Common-Components/PageHeading'
-import SpotOverview from '../Common-Components/SpotOverview'
-import SpotConditions from '../Common-Components/SpotConditions'
-import BulletsAndImage from '../Common-Components/BulletsAndImage'
-import SplitImageText from '../Common-Components/SplitImageText'
-import GridImageDisplay from '../Common-Components/GridImageDisplay'
-import ButtonLink from '../Common-Components/ButtonLink'
+import StaticMasthead from '../components/StaticMasthead'
+import PageHeading from '../components/PageHeading'
+import SpotOverview from '../components/SpotOverview'
+import SpotConditions from '../components/SpotConditions'
+import BulletsAndImage from '../components/BulletsAndImage'
+import SplitImageText from '../components/SplitImageText'
+import GridImageDisplay from '../components/GridImageDisplay'
+import ButtonLink from '../components/ButtonLink'
 
 const SpotGuideTemplate = ({spotGuide}) => {
 

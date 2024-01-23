@@ -1,8 +1,8 @@
 import React from "react";
-import StaticMasthead from "../Common-Components/StaticMasthead";
-import PageHeading from "../Common-Components/PageHeading";
-import SplitAccordianImage from "../Common-Components/SplitAccordianImage";
-import GridImageDisplay from "../Common-Components/GridImageDisplay";
+import StaticMasthead from "../components/StaticMasthead";
+import PageHeading from "../components/PageHeading";
+import SplitAccordianImage from "../components/SplitAccordianImage";
+import GridImageDisplay from "../components/GridImageDisplay";
 
 const AboutUs = () => {
 

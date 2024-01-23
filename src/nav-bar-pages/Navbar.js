@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { navListItems } from "../data/nav-bar-links";
 
 const Navbar = () => {
   
@@ -15,29 +16,6 @@ const Navbar = () => {
   const hideMobileNav = () => {
     setMobileNav(false)
   }
-
-  const navListItems = [
-    {
-      title: "Home",
-      to: "/Homepage",
-    },
-    {
-      title: "About Us",
-      to: "/AboutUs"
-    },
-    {
-      title: "Destinations",
-      to: "/Destinations",
-    },
-    // {
-    //   title: "Blog",
-    //   to: "/Blog",
-    // },
-    {
-      title: "Contact",
-      to: "/ContactUs",
-    },
-  ];
 
   useEffect(() => {
     function handleResize() {

@@ -1,18 +1,18 @@
 import { React } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import ScrollToTop from './Common-Components/ScrollToTop';
-import Homepage from './Homepage';
-import Navbar from './NavBar-Pages/Navbar';
-  import AboutUs from './NavBar-Pages/AboutUs';
-  import Destinations from './NavBar-Pages/Destinations';
-    import TestingSpotGuide from './Spot-guides/TestingSpotGuide';
-    import DahabSpotGuide from './Spot-guides/DahabSpotGuide';
-    import LeMorneSpotGuide from './Spot-guides/LeMorneSpotGuide';
-    import VassilikiSpotGuide from './Spot-guides/VassilikiSpotGuide';
-    import RiscoDelPasoSpotGuide from './Spot-guides/RiscoDelPasoSpotGuide';
-    import LangebaanSpotGuide from './Spot-guides/LangebaanSpotGuide';
-  import ContactUs from './NavBar-Pages/ContactUs';  
+import ScrollToTop from './components/ScrollToTop';
+import Homepage from './nav-bar-pages/Homepage';
+import Navbar from './nav-bar-pages/Navbar';
+  import AboutUs from './nav-bar-pages/AboutUs';
+  import Destinations from './nav-bar-pages/Destinations';
+    import TestingSpotGuide from './spot-guide-pages/TestingSpotGuide';
+    import DahabSpotGuide from './spot-guide-pages/DahabSpotGuide';
+    import LeMorneSpotGuide from './spot-guide-pages/LeMorneSpotGuide';
+    import VassilikiSpotGuide from './spot-guide-pages/VassilikiSpotGuide';
+    import RiscoDelPasoSpotGuide from './spot-guide-pages/RiscoDelPasoSpotGuide';
+    import LangebaanSpotGuide from './spot-guide-pages/LangebaanSpotGuide';
+  import ContactUs from './nav-bar-pages/ContactUs';  
 import Footer from './Footer';
 
 function App() {
