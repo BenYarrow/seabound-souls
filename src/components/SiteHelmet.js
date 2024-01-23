@@ -9,9 +9,9 @@ const SiteHelmet = ({
   return (
         <Helmet>
             <title>{metaData.siteName}</title>
-            <meta name="description" content={metaData.siteDescription} />
-            <meta name="keywords" content="windsurfing, travel, adventure, water sports, destinations" />
-
+            <meta name="keywords" content={metaData.siteMetaKeyWords} />
+            <meta name="description" content={metaData.siteMetaContent} />
+            
             {customKeyWords && customKeyWords.map((keyWord, index) => (
                 <meta key={index} name="keywords" content={keyWord} />
             ))}

@@ -3,7 +3,7 @@ import { SpotGuideLinks } from "../data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import StaticMasthead from "../components/StaticMasthead";
 import PageHeading from "../components/PageHeading";
-import { Helmet } from "react-helmet";
+import SiteHelmet from "../components/SiteHelmet";
 
 const Destinations = () => {
   
@@ -31,10 +31,20 @@ const Destinations = () => {
   ].join(' ')
   
   const [activeFilter, setActiveFilter] = useState(windsurfingBlogs)
-  
+
   return (
 
     <div>
+      <SiteHelmet
+        customKeyWords={[
+          uniqueContinents.map(continent => (
+            `Windsurfing in ${continent}`
+          )), 
+          windsurfingBlogs.map(blog => {
+            return blog.blogTitle
+          }),
+        ]}
+      />
 
       <StaticMasthead imageSrc={masthead} />
       
@@ -78,6 +88,7 @@ const Destinations = () => {
           <div className={blogGridClasses}>
             {activeFilter.map((blog) => {
                   return blog.blogLinkData.map((data, index) => {
+                    console.log(data)
                     return (
                       <div key={index}>
                         <BlogLink {...data} index={index}/>

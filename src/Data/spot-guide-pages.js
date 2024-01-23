@@ -1,6 +1,13 @@
 export let SpotGuidePages = [
     {
         title: 'Vassiliki',
+        metaKeyWords: [
+            'windsurfing in vassiliki', 
+            'vasssiliki windsurfing', 
+            'vassiliki freestyle', 
+            'club vass'
+        ],
+        metaContent: '',
         masthead: 'images/Spot-Guides/vassiliki-spotguide.jpg',
         location: 'Vassiliki, Lefkada',
         intro: "Vassiliki is a pretty town nestled on the southern coast of Lefkada. It is renowned for its natural beauty, world class water sports scene and vibrant nightlife. Vassiliki has become a sought-after destination for travellers seeking a perfect blend of adventure and relaxation. Whether you're a watersports enthusiast, a beach lover, or simply looking to immerse yourself in the Greek island experience, Vassiliki offers a warm and welcoming atmosphere for all.",
@@ -116,6 +123,14 @@ export let SpotGuidePages = [
     },
     {
         title: 'Le Morne',
+        keyWords: [ 
+            'windsurfing at Le Morne', 
+            'Le Morne windsurfing', 
+            'windsurfing in Mauritius', 
+            'Mauritius windsurfing', 
+            'ion club mauritius', 
+            'ion club windsurfing',
+        ],
         masthead: 'images/Spot-Guides/mauritius-spotguide.jpg',
         location: 'Le Morne, Mautitius',
         intro: "Mauritius is an incredible destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds. It offers ideal conditions for both freestyle and wave riding, with a mix of flat water and small to medium-sized waves.",
@@ -234,6 +249,15 @@ export let SpotGuidePages = [
     },
     {
         title: 'Risco Del Paso',
+        keyWords: [
+            'windsurfing in Fuerteventura',
+            'Risco Del Paso windsurfing',
+            'Canary island windsurfing',
+            'Rene Egli',
+            'PWA world tour', 
+            'PWA fuerteventura',
+            'Melia Hotel'
+        ],
         masthead: 'images/Spot-Guides/risco-del-paso-spotguide.jpg',
         location: 'Fuerteventura, Canaries',
         intro: "Costa Calma, located on Fuerteventura's southeast coast, is a windsurfing paradise. Its warm waters and consistent trade winds provide ideal conditions for windsurfing, making it a haven for enthusiasts of all skill levels.",
@@ -351,6 +375,13 @@ export let SpotGuidePages = [
     },
     {
         title: 'Dahab',
+        keyWords: [
+            'windsurfing in Dahab', 
+            'Dahab windsurfing', 
+            'windsurfing in Egypt', 
+            'Dahaab lagoon', 
+            'Red Sea windsurfing',
+        ],
         masthead: 'images/Spot-Guides/dahab-spotguide.jpg',
         location: "Dahab, Egypt",
         intro: "Dahab, Egypt, is a windsurfing paradise, thanks to its consistent sea breezes and warm, clear waters. This coastal haven lures windsurfing enthusiasts worldwide, offering an ideal setting for both beginners and experts to ride the waters against a backdrop of stunning desert landscapes.",
@@ -448,6 +479,12 @@ export let SpotGuidePages = [
     },
     {
         title: 'Langebaan',
+        keyWords: [
+            'windsurfing in Langebaan', 
+            'Langebaan windsurfing', 
+            'windsurfing in South Africa', 
+            'South africa windsurfing'
+        ],
         masthead: 'images/Spot-Guides/langebaan-spotguide.jpg',
         location: 'Langebaan, South Africa',
         intro: "Langebaan is a must-visit destination for those seeking the perfect balance between adventure and relaxation. It's renowned for its consistent winds and offers much needed sunshine during the cold winter months in the northern hemisphere.",

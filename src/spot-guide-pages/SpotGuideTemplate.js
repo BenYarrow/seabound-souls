@@ -7,13 +7,18 @@ import BulletsAndImage from '../components/BulletsAndImage'
 import SplitImageText from '../components/SplitImageText'
 import GridImageDisplay from '../components/GridImageDisplay'
 import ButtonLink from '../components/ButtonLink'
+import SiteHelmet from '../components/SiteHelmet'
 
 const SpotGuideTemplate = ({spotGuide}) => {
-
+    
     const galleryImages = [spotGuide.gridGalleryImageOne, spotGuide.gridGalleryImageTwo, spotGuide.gridGalleryImageThree, spotGuide.gridGalleryImageFour]
     
     return (    
         <div>
+            <SiteHelmet
+                customKeyWords={[spotGuide.title, spotGuide.location, spotGuide.metaKeyWords]}
+                
+            />
 
             <StaticMasthead imageSrc={spotGuide.masthead} />
             
