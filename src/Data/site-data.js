@@ -1,4 +1,9 @@
-export const navListItems = [
+const metaData = {
+  siteName: 'Seabound Souls',
+  siteDescription: 'Explore the best windsurfing destinations around the world.'
+}
+
+const navListItems = [
     {
       title: "Home",
       to: "/Homepage",
@@ -16,3 +21,8 @@ export const navListItems = [
       to: "/ContactUs",
     },
   ];
+
+  export { 
+    navListItems,
+    metaData
+  }

@@ -3,9 +3,14 @@ import { SpotGuideLinks } from "../data/spot-guide-links";
 import { blogs } from "../data/blogs";
 import BlogLink from "../components/BlogLink";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
-import { Helmet } from 'react-helmet';
+import SiteHelmet from "../components/SiteHelmet";
 
 function Homepage() {
+
+  const customContent = [
+    'testing one', 
+    'testing two',
+  ];
 
   const windsurfingOne = "images/mastheads/homepage/windsurfing-together-01.jpg";
   const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-01.jpg";
@@ -46,12 +51,8 @@ function Homepage() {
 
   return (
     <div className="relative">
-      <Helmet>
-        <title>Seabound Souls</title>
-        <meta name="description" content="Explore the best windsurfing destinations around the world." />
-        <meta name="keywords" content="windsurfing, travel, adventure, water sports, destinations, spot guides, wind forecast, weather forecast" />
-        <meta name="author" content="Seabound Souls" />
-      </Helmet>
+
+      <SiteHelmet keyWords="testing" customContent={customContent}/>
       
       <SwiperHeroSlider images={heroImages}/>
 
