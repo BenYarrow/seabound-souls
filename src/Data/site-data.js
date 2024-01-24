@@ -5,25 +5,25 @@ const metaData = {
 }
 
 const navListItems = [
-    {
-      title: "Home",
-      to: "/Homepage",
-    },
-    {
-      title: "About Us",
-      to: "/AboutUs"
-    },
-    {
-      title: "Destinations",
-      to: "/Destinations",
-    },
-    {
-      title: "Contact",
-      to: "/ContactUs",
-    },
-  ];
+  {
+    title: "Home",
+    to: "/homepage",
+  },
+  {
+    title: "About Us",
+    to: "/aboutus"
+  },
+  {
+    title: "Destinations",
+    to: "/destinations",
+  },
+  {
+    title: "Contact",
+    to: "/contactus",
+  },
+];
 
-  export { 
-    navListItems,
-    metaData
-  }
+export {
+  navListItems,
+  metaData
+}
