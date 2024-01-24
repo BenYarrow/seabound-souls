@@ -130,9 +130,17 @@ const AboutUs = () => {
                   <h4 className="text-2xl uppercase text-center pb-2">
                     Raising mental health awareness
                   </h4>
-                  <p className="text-center">
-                    Promoting watersports to help improve mental health
-                  </p>
+                  <div className="text-center space-y-1">
+                    <p>
+                      Raising awareness about mental health is a crucial endeavor, and promoting watersports can serve as a powerful avenue for enhancing mental well-being.
+                    </p>
+                    <p>
+                      Engaging in activities like windsurfing not only offers physical exercise but also provides a unique therapeutic escape. The rhythmic flow of the water, the adrenaline rush from mastering the wind, and the immersive connection with nature can significantly contribute to reducing stress and anxiety.
+                    </p> 
+                    <p>
+                      By encouraging participation in watersports, we can foster a community that embraces the positive impact of these activities on mental health. It's an opportunity to break down stigmas surrounding mental well-being and highlight the transformative potential of immersing oneself in the serenity of the water, promoting a holistic approach to mental health awareness and self-care.
+                    </p> 
+                  </div>
                 </div>
 
                 <div>
