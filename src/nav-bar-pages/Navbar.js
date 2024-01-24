@@ -26,7 +26,6 @@ const Navbar = () => {
     window.addEventListener("resize", handleResize);
   }, []);
 
-  const body = document.getElementById('body')
 
   useEffect(() => {
     if (mobileNav === true){

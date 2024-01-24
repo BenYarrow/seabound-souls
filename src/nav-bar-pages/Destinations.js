@@ -1,4 +1,4 @@
-import { React, useRef, useState } from "react";
+import { React, useState } from "react";
 import { spotGuideLinks } from "../data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import StaticMasthead from "../components/StaticMasthead";
