@@ -1,6 +1,5 @@
 import React from "react";
-import { SpotGuideLinks } from "../data/spot-guide-links";
-import { blogs } from "../data/blogs";
+import { spotGuideLinks } from "../data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";
@@ -25,7 +24,7 @@ function Homepage() {
     },
   ]
 
-  const featuredSpotGuideLinks = SpotGuideLinks
+  const featuredSpotGuideLinks = spotGuideLinks
     .map((blog) => {
       return blog;
     })
@@ -40,12 +39,6 @@ function Homepage() {
       return 0
     }
   })
-
-  const featuredBlogs = blogs
-  .map((blog) => {
-    return blog;
-  })
-  .filter((featured) => featured.featured === true);
 
   const blogGridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 gap-20'
 
@@ -115,26 +108,6 @@ function Homepage() {
           </div>
         </div>
 
-      </section>
-
-      <section className="py-20">
-        <div className="container mx-auto flex flex-col space-y-12">
-          <div className='flex flex-col items-center space-y-4'>
-            <h3 className="font-title text-6xl uppercase">
-              Blog
-            </h3>
-            <p className='text-center text-xl'>
-              Follow our adventures as we travel and windsurf our way around the world
-            </p>
-          </div>
-          <div className={blogGridClasses}>
-            {featuredBlogs.map((blog) => {
-              return blog.blogLinkData.map((data) => {
-                return <BlogLink {...data} aria-label={`Read about our time in ${data.location}`}/>;
-              });
-            })}
-          </div>
-        </div>
       </section>
 
     </div>

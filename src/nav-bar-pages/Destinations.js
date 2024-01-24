@@ -1,5 +1,5 @@
 import { React, useRef, useState } from "react";
-import { SpotGuideLinks } from "../data/spot-guide-links";
+import { spotGuideLinks } from "../data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import StaticMasthead from "../components/StaticMasthead";
 import PageHeading from "../components/PageHeading";
@@ -9,7 +9,7 @@ const Destinations = () => {
   
   const masthead = "images/mastheads/destinations/destinations-masthead.jpg";
 
-  const windsurfingBlogs = SpotGuideLinks.filter(visible => visible.isVisible === true)
+  const windsurfingBlogs = spotGuideLinks.filter(visible => visible.isVisible === true)
 
   // Extract unique countries from SpotGuideLinks
   const uniqueContinents = Array.from(new Set(windsurfingBlogs.map((blog) => blog.continent)));

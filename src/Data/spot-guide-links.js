@@ -1,4 +1,4 @@
-export let SpotGuideLinks = [
+export let spotGuideLinks = [
     {
         continent: 'africa',
         blogTitle: 'Le Morne',
