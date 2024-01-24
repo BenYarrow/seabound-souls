@@ -1,9 +1,8 @@
 import React from "react";
 import StaticMasthead from "../components/StaticMasthead";
 import PageHeading from "../components/PageHeading";
-import SplitAccordianImage from "../components/SplitAccordianImage";
 import GridImageDisplay from "../components/GridImageDisplay";
-import SplitImageText from "../components/SplitImageText";
+
 
 const AboutUs = () => {
 

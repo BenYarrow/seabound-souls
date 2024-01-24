@@ -113,7 +113,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     <section className='container mx-auto py-4 lg:py-8'>
                         <SplitImageText
                             title={`Getting to ${spotGuide.title}`}
-                            textOne={spotGuide.gettingHereText}
+                            texts={[spotGuide.gettingHereText]}
                             image={spotGuide.gettingHereImage}
                             reverse
                         />
@@ -192,7 +192,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     <section className='container mx-auto py-4 lg:py-8'>
                         <SplitImageText 
                             title='Other Activities'
-                            textOne={spotGuide.otherActivityText}
+                            texts={[spotGuide.otherActivityText]}
                             image={spotGuide.otherActivityImage}
                             reverse
                         />

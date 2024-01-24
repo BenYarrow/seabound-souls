@@ -74,8 +74,8 @@ export let SpotGuidePages = [
         gettingHereImage: null,
 
         // Travelling around
-        travellingIntro: 'Vassiliki itself is a small town and it takes around 20 minutes to walk from one side of the bay to the other. If youâre staying longer than a week, you may want to consider hiring a bike in order to get around much quicker.',
-        travellingOneTitle: 'By Car: Weâd recommend hiring a car to explore everything the island has to offer.',
+        travellingIntro: "Vassiliki itself is a small town and it takes around 20 minutes to walk from one side of the bay to the other. If you're staying longer than a week, you may want to consider hiring a bike in order to get around much quicker.",
+        travellingOneTitle: 'By Car: We would recommend hiring a car to explore everything the island has to offer.',
         travellingOneLink: null,
         travellingTwoTitle: 'Taxi',
         travellingTwoLink: null,

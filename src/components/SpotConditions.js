@@ -26,7 +26,7 @@ const SpotConditions = (props) => {
                 {props.waterConditionDetails && (
                     <SplitImageText 
                         title='Water conditions' 
-                        textOne={props.waterConditionDetails} 
+                        texts={[props.waterConditionDetails]} 
                         image={props.waterImage}
                         reverse
                     />
@@ -34,7 +34,7 @@ const SpotConditions = (props) => {
                 {props.waterConditionDetails && (
                     <SplitImageText 
                         title='Wind Conditions' 
-                        textOne={props.windConditionDetails} 
+                        texts={[props.windConditionDetails]} 
                         image={props.windImage}
                         reverse
                     />
@@ -42,7 +42,7 @@ const SpotConditions = (props) => {
                 {props.windStatisticDetails && (
                     <SplitImageText 
                         title='Wind statistics' 
-                        textOne={props.windStatisticDetails} 
+                        texts={[props.windStatisticDetails]} 
                         image={props.windStatisticImage}
                         reverse
                     />
@@ -51,11 +51,13 @@ const SpotConditions = (props) => {
                 {props.spotDetailsOne && (
                     <SplitImageText 
                         title='Spots' 
-                        textOne={props.spotDetailsOne} 
-                        textTwo={props.spotDetailsTwo} 
-                        textThree={props.spotDetailsThree} 
-                        textFour={props.spotDetailsFour}
-                        textFive={props.spotDetailsFive} 
+                        texts={[
+                            props.spotDetailsOne,
+                            props.spotDetailsTwo,
+                            props.spotDetailsThree,
+                            props.spotDetailsFour,
+                            props.spotDetailsFive,
+                        ]}  
                         image={props.spotImage}
                         reverse
                     />
