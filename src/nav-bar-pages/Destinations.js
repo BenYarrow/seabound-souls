@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { spotGuideLinks } from "../data/spot-guide-links";
+import { spotGuideLinks } from "../Data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import StaticMasthead from "../components/StaticMasthead";
 import PageHeading from "../components/PageHeading";

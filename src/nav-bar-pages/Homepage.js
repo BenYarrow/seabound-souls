@@ -1,5 +1,5 @@
 import React from "react";
-import { spotGuideLinks } from "../data/spot-guide-links";
+import { spotGuideLinks } from "../Data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";

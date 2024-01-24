@@ -1,6 +1,6 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import { metaData } from '../data/site-data'
+import { metaData } from '../Data/site-data'
 
 const SiteHelmet = ({
     customKeyWords,

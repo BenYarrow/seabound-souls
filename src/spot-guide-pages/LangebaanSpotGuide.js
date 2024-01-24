@@ -1,5 +1,5 @@
 import React from 'react'
-import { SpotGuidePages } from '../data/spot-guide-pages'
+import { SpotGuidePages } from '../Data/spot-guide-pages'
 import SpotGuideTemplate from './SpotGuideTemplate'
 
 const LangebaanSpotGuide = () => {
