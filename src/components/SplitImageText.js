@@ -4,7 +4,6 @@ const SplitImageText = (props) => {
     const { reverse = false, image, imageDescription = 'Seabound Souls', imageLink = 'https://www.instagram.com/seabound.souls/', title, texts = [] } = props;
 
     const imageLinkWrapperClasses = 'group-hover:bg-white/60 w-full h-full flex items-center justify-center transition duration-300';
-    console.log(imageLink)
     return (
         <div className={`${image ? 'grid grid-cols-1 md:grid-cols-2 gap-8' : 'grid grid-cols-1'}  md:gap-12 lg:gap-20`}>
             {image && (

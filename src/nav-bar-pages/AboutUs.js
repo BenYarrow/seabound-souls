@@ -72,7 +72,10 @@ const AboutUs = () => {
                 We are Rachel and Ben
               </p>
               <p className="text-center">
-              As a travel couple with a passion for windsurfing and watersports, we're always on the lookout for the next incredible destination. But our journey goes beyond the waves as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health. 
+                As a travel couple with a passion for windsurfing and watersports, we're always on the lookout for the next incredible destination. 
+              </p>
+              <p class="text-center">
+                Our journey goes beyond the water as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health. 
               </p>
               <p className="text-center">
                 <a href="https://www.instagram.com/seabound.souls/" className="font-bold underline" target="_blank" rel="noreferrer">Follow our journey</a> as we discover the most incredible windsurfing destinations around the world. 
@@ -96,13 +99,13 @@ const AboutUs = () => {
               Our story
             </h3>
             <p className="text-center">
-              Our paths first crossed in the summer of 2019. Rachel was working as a watersports instructor in Vasiliki, Greece, while Ben was indulging his passion for windsurfing at the same resort. 
+              Our paths first crossed in the summer of 2019. Rachel was working as a watersports instructor in Vasiliki, Greece, while Ben travelled on a windsurfing trip to the same resort. 
             </p>
             <p className="text-center">
-              We remained in touch after the summer, but as we lived 200 miles apart neither of us envisaged a future relationship. As the pandemic hit in 2020, we decided to spend our time in lockdown together. Despite the challenges, the shared experience brought us closer together and within a matter of weeks, it became evident that our connection was something special.
+              We remained in touch after the summer, but as we lived 200 miles apart neither of us thought a relationship was on the cards. As the pandemic hit in 2020, we decided to spend our time in lockdown together. Despite the challenges, the shared experience brought us closer together and within just a few weeks we knew this was the start of an an awesome adventure together.
             </p>
             <p className="text-center">
-              As the world gradually reopened, we made some significant life changes. Ben sold his house and moved across the country, where we established a home together. As the travel restriction eased, we were eager to return to the place where we first met. It was during this trip that Ben proposed and Rachel happily accepted.
+              As the world gradually reopened, we made some significant life changes. Ben sold his house and moved across the country, where we established a home together. As the travel restriction eased, we were eager to return to the place where we first met. It was during this trip that we got engaged!
             </p>
             <p className="text-center">
               When it came to planning our wedding, we knew we wanted an intimate, beach ceremony just the two of us. After researching various destinations, we settled on Le Morne in Mauritius — a place known for its warm winds and beautiful beaches. Fast forward to September 2022, and our dream wedding became a reality.
