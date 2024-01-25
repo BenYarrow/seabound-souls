@@ -24,8 +24,8 @@ const AboutUs = () => {
               "As a travel couple with a passion for windsurfing and watersports, we're always on the lookout for the next incredible destination.",
               "Our journey goes beyond the water as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health.",
               () => (
-                <p className="flex gap-1">
-                  <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer" noopener>
+                <p>
+                  <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer" noopener className="whitespace-nowrap pr-1.5">
                     Follow our journey
                   </a>
                   as we discover the most incredible windsurfing destinations around the world.
@@ -33,8 +33,6 @@ const AboutUs = () => {
               )
             ]}
           />
-
-
         </BlockWrapper>
 
         <BlockWrapper>

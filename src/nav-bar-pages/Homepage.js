@@ -3,6 +3,9 @@ import { spotGuideLinks } from "../Data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";
+import BlockWrapper from "../components/BlockWrapper";
+import Title from "../components/Title";
+import Text from "../components/Text";
 
 function Homepage() {
 
@@ -49,54 +52,49 @@ function Homepage() {
       
       <SwiperHeroSlider images={heroImages}/>
 
-      <section 
-        className="w-full py-20 container mx-auto"
-        id="content"
-      >
+      <BlockWrapper id="content">
 
-        <div className="grid grid-cols 1 gap-20 lg:grid-cols-2 xl:grid-cols-9">
+        <div className="grid grid-cols  lg:grid-cols-2 xl:grid-cols-9">
           
-          <div className="flex flex-col items-center space-8-12 xl:col-span-6">
-            <h3 className=" text-4xl lg:max-w-2xl text-center uppercase pb-8 border-b-[1px] border-blue">
-              Memories are made where the wind meets the waves
-            </h3>
-            <div className="pt-8 space-y-8 flex flex-col items-center">
-              <h3 className=" text-4xl uppercase ">
-                  Get to know us
-              </h3>
-              <p className='text-center'>
-                Hi! We are Rachel and Ben. We're two adventure seekers, travelling the world wherever the wind takes us. 
-              </p>
-              <p className='text-center'>
-                Follow our journey to discover the most incredible windsurfing destinations around the globe.
-              </p>
-              <p className='text-center'>
-                This isn't just a travel blog; it's a gateway to a unique blend of adrenaline and exploration. Whether you're a seasoned windurfer seeking the next ultimate spot or a curious traveller ready to dive into the exhilarating world of windsurfing, our blog is here to inspire, inform and fuel your passion for this incredible water sport.
-              </p>
-              <p className='text-center'>
-                Join us as we chase the winds, discover new horizons and travel to the very best windsurf destinations.
-              </p>
-            </div>
+          <div className="xl:col-span-6">
+            <Title
+              title="Memories are made where the wind meets the waves"
+              centreTitle
+            />
+            <Text
+              title="Get to know us"
+              content={[
+                "Hi! We are Rachel and Ben. We're two adventure seekers, travelling the world wherever the wind takes us.",
+                "Follow our journey to discover the most incredible windsurfing destinations around the globe.",
+                "This isn't just a travel blog; it's a gateway to a unique blend of adrenaline and exploration. Whether you're a seasoned windurfer seeking the next ultimate spot or a curious traveller ready to dive into the exhilarating world of windsurfing, our blog is here to inspire, inform and fuel your passion for this incredible water sport.",
+                () => (
+                  <span className="gap-1">
+                    <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer" noopener className="whitespace-nowrap pr-1.5">
+                      Join us
+                    </a>
+                     as we chase the winds, discover new horizons and travel to the very best windsurf destinations.
+                  </span>
+                )
+              ]}
+            />
           </div>
+          
+          <img src={fuerteventuraBeach}
+              width="480"
+              height="480"
+              alt="An image of Ben and rachel on a beach in Fuerteventura"
+              class="w-full h-full object-left md:object-center object-cover xl:col-span-3"
+          />
+        </div>
+      </BlockWrapper>
 
-          <div className="w-full h-[500px] lg:h-full flex bg-center bg-cover shadow-2xl xl:col-span-3" style={{
-            backgroundImage: `url(${fuerteventuraBeach})`,
-            backgroundRepeat: "no-repeat",
-            }}></div>
-
-          </div>
-      </section>
-
-      <section className="bg-blue text-white py-20">
-        <div className="container mx-auto flex flex-col space-y-12">
-          <div className='flex flex-col items-center space-y-4'>
-            <h3 className=" text-6xl uppercase">
-              Destinations
-            </h3>
-            <p className='text-center text-xl'>
-              Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip
-            </p>
-          </div>
+      <BlockWrapper invert>
+          <Title
+            title={() => (<h2 className="text-white"><a href="/destinations">Destinations</a></h2>)}
+            subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
+            invert
+          />
+          
           <div className={blogGridClasses}>
             {featuredSpotGuideLinks.map((blog) => {
               return blog.blogLinkData.map((data, index) => {
@@ -106,9 +104,8 @@ function Homepage() {
               });
             })}
           </div>
-        </div>
 
-      </section>
+      </BlockWrapper>
 
     </div>
   );
