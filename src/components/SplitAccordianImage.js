@@ -22,7 +22,7 @@ const SplitAccordianImage = ({
 
         <div className="flex flex-col items-center pb-12">
           {title && (
-            <h3 className="font-title text-4xl uppercase">
+            <h3 className=" text-4xl uppercase">
               {title}
             </h3>
           )}

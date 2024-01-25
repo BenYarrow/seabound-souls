@@ -5,7 +5,7 @@ import { faInstagram, faTiktok } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {
 
-    const subheadingClasses = 'text-center text-4xl font-title uppercase'
+    const subheadingClasses = 'text-center text-4xl  uppercase'
 
     const socialLinks = [
         {
@@ -25,7 +25,7 @@ const Footer = () => {
         <footer className="w-full h-screen md:h-auto md:py-20 bg-blue text-white">
             <div className="container mx-auto h-full flex flex-col justify-between py-20 md:py-0 md:grid md:grid-cols-2">
                 <div className="flex flex-col items-center justify-center gap-8">
-                    <h3 className="font-title uppercase text-6xl">
+                    <h3 className=" uppercase text-6xl">
                         Contact us
                     </h3>
                     <div>

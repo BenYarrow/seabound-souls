@@ -1,6 +1,6 @@
 import React from "react";
 import StaticMasthead from "../components/StaticMasthead";
-import PageHeading from "../components/PageHeading";
+import Title from "../components/Title";
 
 const ContactUs = () => {
   
@@ -11,7 +11,7 @@ const ContactUs = () => {
     <div className="">
       <StaticMasthead imageSrc={mastheadImage} backgroundPosition='bg-right-bottom'/>
       <div className="container mx-auto w-full flex flex-col justify-center">
-        <PageHeading heading='Contact us' />
+        <Title title='Contact us' />
 
         <div className="w-full py-12 flex flex-col items-center space-y-8">
           <p className="max-w-3xl text-center ">

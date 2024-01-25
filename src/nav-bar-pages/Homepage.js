@@ -57,11 +57,11 @@ function Homepage() {
         <div className="grid grid-cols 1 gap-20 lg:grid-cols-2 xl:grid-cols-9">
           
           <div className="flex flex-col items-center space-8-12 xl:col-span-6">
-            <h3 className="font-title text-4xl lg:max-w-2xl text-center uppercase pb-8 border-b-[1px] border-blue">
+            <h3 className=" text-4xl lg:max-w-2xl text-center uppercase pb-8 border-b-[1px] border-blue">
               Memories are made where the wind meets the waves
             </h3>
             <div className="pt-8 space-y-8 flex flex-col items-center">
-              <h3 className="font-title text-4xl uppercase ">
+              <h3 className=" text-4xl uppercase ">
                   Get to know us
               </h3>
               <p className='text-center'>
@@ -90,7 +90,7 @@ function Homepage() {
       <section className="bg-blue text-white py-20">
         <div className="container mx-auto flex flex-col space-y-12">
           <div className='flex flex-col items-center space-y-4'>
-            <h3 className="font-title text-6xl uppercase">
+            <h3 className=" text-6xl uppercase">
               Destinations
             </h3>
             <p className='text-center text-xl'>

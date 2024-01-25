@@ -24,7 +24,7 @@ const SplitImageText = (props) => {
                 </div>
             )}
 
-            <div className='flex flex-col space-y-4 lg:space-y-8 w-full'>
+            <div className='flex flex-col space-y-4 w-full'>
                 {title && <h4 className='text-left text-2xl lg:text-3xl font-bold uppercase'>{title}</h4>}
                 
                 {texts.map((text, index) => (

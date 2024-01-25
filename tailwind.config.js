@@ -21,7 +21,6 @@ module.exports = {
       fontFamily: {
         standard: "'Poppins', sans-serif",
         title: "Donau Neue",
-        destinations: "Black Bones Personal Use",
       },
       colors: {
         'white': {  
@@ -34,11 +33,12 @@ module.exports = {
 
         },
         'orange': '#F4A361',
-        'gli' : '',
       }
     },
-
   },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 
 
 }

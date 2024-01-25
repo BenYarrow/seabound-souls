@@ -1,6 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import PageHeading from './PageHeading';
+import Title from './Title';
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -38,7 +38,7 @@ const SwiperHeroSlider = (props) => {
               />
               <div className="flex flex-col justify-between items-center pb-12  z-50 h-full">
                 
-                <PageHeading heading={props.heading} />
+                <Title heading={props.heading} />
                 <a
                   href="#content"
                   className="relative px-8 py-2 bg-blue text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300"

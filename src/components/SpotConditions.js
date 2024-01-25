@@ -1,64 +1,79 @@
 import React from 'react'
 import SplitImageText from './SplitImageText'
 
-const SpotConditions = (props) => {
+// destructure this and improve code
+const SpotConditions = ({
+    whenToGoDetails,
+    waterConditionDetails,
+    waterImage,
+    windConditionDetails,
+    windImage,
+    windStatisticDetails,
+    windStatisticImage,
+    spotDetailsOne,
+    spotDetailsTwo,
+    spotDetailsThree,
+    spotDetailsFour,
+    spotDetailsFive,
+    spotImage
+}) => {
   return (
     <>
-        {props.whenToGoDetails && (
+        {whenToGoDetails && (
 
-            <div className='flex flex-col space-y-6 md:space-y-8 lg:space-y-12'>
+            <div className='flex flex-col space-y-4 lg:space-y-8'>
 
                 <h3 className='text-left text-2xl lg:text-5xl font-bold pb-6 uppercase'>
                     Conditions
                 </h3>
 
-                {props.whenToGoDetails && (
-                    <div className="flex flex-col space-y-2 lg:space-y-8 w-full">
+                {whenToGoDetails && (
+                    <div className="flex flex-col space-y-2 w-full">
                         <h4 className='text-left text-2xl lg:text-3xl font-bold pb-4 uppercase'>
                             When to go
                         </h4>
                         <p>
-                            {props.whenToGoDetails}
+                            {whenToGoDetails}
                         </p>
                     </div>
                 )}
 
-                {props.waterConditionDetails && (
+                {waterConditionDetails && (
                     <SplitImageText 
                         title='Water conditions' 
-                        texts={[props.waterConditionDetails]} 
-                        image={props.waterImage}
+                        texts={Array.isArray(waterConditionDetails) ? waterConditionDetails : [waterConditionDetails]} 
+                        image={waterImage}
                         reverse
                     />
                 )}
-                {props.waterConditionDetails && (
+                {waterConditionDetails && (
                     <SplitImageText 
                         title='Wind Conditions' 
-                        texts={[props.windConditionDetails]} 
-                        image={props.windImage}
+                        texts={[windConditionDetails]} 
+                        image={windImage}
                         reverse
                     />
                 )}
-                {props.windStatisticDetails && (
+                {windStatisticDetails && (
                     <SplitImageText 
                         title='Wind statistics' 
-                        texts={[props.windStatisticDetails]} 
-                        image={props.windStatisticImage}
+                        texts={[windStatisticDetails]} 
+                        image={windStatisticImage}
                         reverse
                     />
                 )}
 
-                {props.spotDetailsOne && (
+                {spotDetailsOne && (
                     <SplitImageText 
                         title='Spots' 
                         texts={[
-                            props.spotDetailsOne,
-                            props.spotDetailsTwo,
-                            props.spotDetailsThree,
-                            props.spotDetailsFour,
-                            props.spotDetailsFive,
+                            spotDetailsOne,
+                            spotDetailsTwo,
+                            spotDetailsThree,
+                            spotDetailsFour,
+                            spotDetailsFive,
                         ]}  
-                        image={props.spotImage}
+                        image={spotImage}
                         reverse
                     />
                 )}

@@ -1,13 +1,13 @@
-import React from 'react'
-import StaticMasthead from '../components/StaticMasthead'
-import PageHeading from '../components/PageHeading'
-import SpotOverview from '../components/SpotOverview'
-import SpotConditions from '../components/SpotConditions'
-import BulletsAndImage from '../components/BulletsAndImage'
-import SplitImageText from '../components/SplitImageText'
-import GridImageDisplay from '../components/GridImageDisplay'
-import ButtonLink from '../components/ButtonLink'
-import SiteHelmet from '../components/SiteHelmet'
+import React from'react'
+import StaticMasthead from'../components/StaticMasthead'
+import Title from '../components/Title'
+import SpotOverview from'../components/SpotOverview'
+import SpotConditions from'../components/SpotConditions'
+import BulletsAndImage from'../components/BulletsAndImage'
+import SplitImageText from'../components/SplitImageText'
+import GridImageDisplay from'../components/GridImageDisplay'
+import ButtonLink from'../components/ButtonLink'
+import SiteHelmet from'../components/SiteHelmet'
 
 const SpotGuideTemplate = ({spotGuide}) => {
     
@@ -25,7 +25,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
             <div id='content'>
 
                 {spotGuide.title && spotGuide.location && (
-                    <PageHeading heading={spotGuide.title} />
+                    <Title title={spotGuide.title} />
                 )}
                 {spotGuide.location && (
                     <div className='pb-4 lg:pb-8 w-full flex justify-center'>
@@ -37,7 +37,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
 
                 {spotGuide.intro && (
                     <section className='container mx-auto'>
-                        <div className='border-y-[1px] border-white-darker py-4 lg:py-8'>
+                        <div className='border-y-[1px] border-white-darker py-4'>
                             <p className="text-center text-base lg:text-lg">
                                 {spotGuide.intro}
                             </p>
@@ -46,7 +46,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.sailingStyle && (
-                    <section className='container mx-auto pt-4 lg:pt-8 pb-2 lg:pb-4'>
+                    <section className='container mx-auto py-4'>
                         <SpotOverview 
                             b1={spotGuide.b1} b2={spotGuide.b2} b3={spotGuide.b3} b4={spotGuide.b4} b5={spotGuide.b5} 
                             i1={spotGuide.i1} i2={spotGuide.i2} i3={spotGuide.i3} i4={spotGuide.i4} i5={spotGuide.i5} 
@@ -61,8 +61,8 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     </section>
                 )}
 
-                {galleryImages.length > 0 && (
-                    <section className='container mx-auto py-4 lg:py-8'>
+                {spotGuide.gridGalleryImageOne && (
+                    <section className='container mx-auto py-4'>
                         <GridImageDisplay 
                             imageOne={spotGuide.gridGalleryImageOne}
                             imageTwo={spotGuide.gridGalleryImageTwo}
@@ -72,7 +72,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     </section>
                 )}
 
-                <section className='container mx-auto py-4 lg:py-8'>
+                <section className='container mx-auto py-4'>
                     <SpotConditions
                         waterConditionDetails={spotGuide.waterConditionDetails}
                         waterImage={spotGuide.waterConditionImage}
@@ -91,9 +91,9 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 </section>
                 
                 {spotGuide.lessonIntro && (
-                    <section className='container mx-auto py-4 lg:py-8'>
+                    <section className='container mx-auto py-4'>
                         <BulletsAndImage 
-                            title= 'Lessons and Hire'
+                            title='Lessons and Hire'
                             intro={spotGuide.lessonIntro}
                             titleOne={spotGuide.lessonTitleOne}
                             linkOne={spotGuide.lessonLinkOne}
@@ -110,7 +110,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.gettingHereText && (
-                    <section className='container mx-auto py-4 lg:py-8'>
+                    <section className='container mx-auto py-4'>
                         <SplitImageText
                             title={`Getting to ${spotGuide.title}`}
                             texts={[spotGuide.gettingHereText]}
@@ -121,7 +121,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.travellingIntro && (
-                    <section className='container mx-auto py-4 lg:py-8'>
+                    <section className='container mx-auto py-4'>
                         <BulletsAndImage
                             title='Travelling around'
                             intro={spotGuide.travellingIntro}
@@ -138,9 +138,9 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.stayIntro && (                    
-                    <section className='container mx-auto py-4 lg:py-8'>
+                    <section className='container mx-auto py-4'>
                         <BulletsAndImage 
-                            title= 'Where to stay'
+                            title='Where to stay'
                             intro={spotGuide.stayIntro}
                             titleOne={spotGuide.stayOneTitle}
                             linkOne={spotGuide.stayOneLink}
@@ -160,9 +160,9 @@ const SpotGuideTemplate = ({spotGuide}) => {
 
                 {spotGuide.eatIntro && (
                                     
-                    <section className='container mx-auto py-4 lg:py-8'>
+                    <section className='container mx-auto py-4'>
                         <BulletsAndImage 
-                            title= 'Where to eat'
+                            title='Where to eat'
                             intro={spotGuide.eatIntro}
                             titleOne={spotGuide.eatTitleOne}
                             linkOne={spotGuide.eatLinkOne}
@@ -189,7 +189,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
                 
                 {spotGuide.otherActivityText && (    
-                    <section className='container mx-auto py-4 lg:py-8'>
+                    <section className='container mx-auto py-4'>
                         <SplitImageText 
                             title='Other Activities'
                             texts={[spotGuide.otherActivityText]}

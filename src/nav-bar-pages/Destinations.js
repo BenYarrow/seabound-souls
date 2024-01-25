@@ -2,7 +2,7 @@ import { React, useState } from "react";
 import { spotGuideLinks } from "../Data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import StaticMasthead from "../components/StaticMasthead";
-import PageHeading from "../components/PageHeading";
+import Title from "../components/Title";
 import SiteHelmet from "../components/SiteHelmet";
 
 const Destinations = () => {
@@ -48,7 +48,7 @@ const Destinations = () => {
 
       <StaticMasthead imageSrc={masthead} />
       
-      <PageHeading heading='Destination spot guides' />
+      <Title title='Destination spot guides' />
 
       <section className="pt-8">
         <div className={`container mx-auto pb-8 grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>
