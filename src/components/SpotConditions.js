@@ -2,6 +2,7 @@ import React from 'react'
 import SplitImageText from './SplitImageText'
 import Text from '../components/Text'
 import Title from '../components/Title'
+import BlockWrapper from './BlockWrapper'
 
 // destructure this and improve code
 const SpotConditions = ({
@@ -20,21 +21,23 @@ const SpotConditions = ({
     spotImage
 }) => {
   return (
-    <>
+
+    <section>
         {whenToGoDetails && (
 
             <div className='flex flex-col space-y-4 lg:space-y-8'>
-
-                <Title 
-                    title="Conditions"
-                />
-
-                {whenToGoDetails && (
-                    <Text
-                        title="When to go"
-                        content={[whenToGoDetails]}
+                <BlockWrapper>
+                    <Title 
+                        title="Conditions"
                     />
-                )}
+
+                    {whenToGoDetails && (
+                        <Text
+                            title="When to go"
+                            content={[whenToGoDetails]}
+                        />
+                    )}
+                </BlockWrapper>
 
                 {waterConditionDetails && (
                     <SplitImageText 
@@ -44,6 +47,7 @@ const SpotConditions = ({
                         reverse
                     />
                 )}
+                
                 {waterConditionDetails && (
                     <SplitImageText 
                         title='Wind Conditions' 
@@ -69,7 +73,7 @@ const SpotConditions = ({
                             spotDetailsTwo,
                             spotDetailsThree,
                             spotDetailsFour,
-                            spotDetailsFive,
+                            spotDetailsFive
                         ]}  
                         image={spotImage}
                         reverse
@@ -79,7 +83,7 @@ const SpotConditions = ({
 
             </div>
         )}
-    </>
+    </section>
   )
 }
 

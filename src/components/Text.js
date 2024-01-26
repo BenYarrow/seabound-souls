@@ -5,9 +5,10 @@ const Text = ({
     content = [], 
     invert,
 }) => {
+  
   const classes = [
     'prose prose-h3:uppercase prose-a:text-blue prose-a:font-bold',
-    invert ? 'prose-h3:text-white prose-p:text-white' : 'prose-h3:text-blue prose-p:text-blue',
+    invert ? 'prose-h3:text-white prose-p:text-white prose-a:text-white' : 'prose-h3:text-blue prose-p:text-blue prose-a:text-blue',
     'max-w-6xl',
   ].join(' ');
 

@@ -1,11 +1,12 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import BlockWrapper from './BlockWrapper';
 
 const SpotOverview = (props) => {
 
   return (
-    <div className='w-full'>
+    <BlockWrapper>
 
         <h2 className='text-3xl lg:text-5xl pb-4 lg:pb-8'>
             Overview
@@ -183,7 +184,7 @@ const SpotOverview = (props) => {
             </div>
 
         </div>
-    </div>
+    </BlockWrapper>
   )
 }
 

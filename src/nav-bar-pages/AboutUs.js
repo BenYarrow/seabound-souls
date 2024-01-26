@@ -35,14 +35,13 @@ const AboutUs = () => {
           />
         </BlockWrapper>
 
-        <BlockWrapper>
           <GridImageDisplay 
             imageOne='images/Mauritius-Images/ben-windsurfing-01.jpg'
             imageTwo='images/mastheads/homepage/windsurfing-together-01.jpg'
             imageThree='images/mastheads/homepage/windsurfing-together-02.jpg'
             imageFour='images/Vassiliki-Images/surf-hotel.jpg'
           />
-        </BlockWrapper>
+          
 
         <BlockWrapper invert>
           <Title
@@ -96,6 +95,13 @@ const AboutUs = () => {
             />
           </div>
         </BlockWrapper>
+
+        <GridImageDisplay 
+            imageOne='images/Mauritius-Images/wedding-1.jpg'
+            imageTwo='images/Mauritius-Images/wedding-2.jpg'
+            imageThree='images/Mauritius-Images/mauritius.jpg'
+            imageFour='images/Mauritius-Images/wedding-3.jpg'
+          />
     </div>    
   );
 };
