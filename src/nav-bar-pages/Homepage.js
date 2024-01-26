@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef} from "react";
 import { spotGuideLinks } from "../Data/spot-guide-links";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";
@@ -8,11 +8,6 @@ import Text from "../components/Text";
 import ListBlogs from "../components/ListBlogs";
 
 function Homepage() {
-
-  const customContent = [
-    'testing one', 
-    'testing two',
-  ];
 
   const windsurfingOne = "images/mastheads/homepage/windsurfing-together-01.jpg";
   const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-01.jpg";
@@ -43,18 +38,18 @@ function Homepage() {
     }
   })
 
-  const blogGridClasses = 'grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 gap-20'
+  const content = useRef(null)
 
   return (
     <div className="relative">
 
-      <SiteHelmet keyWords="testing" customContent={customContent}/>
+      <SiteHelmet/>
       
       <SwiperHeroSlider images={heroImages}/>
 
-      <BlockWrapper id="content">
+      <BlockWrapper>
 
-        <div className="grid grid-cols lg:grid-cols-2 xl:grid-cols-9 gap-8">
+        <div id="content" className="grid grid-cols lg:grid-cols-2 xl:grid-cols-9 gap-8">
           
           <div className="xl:col-span-6">
             <Title
@@ -82,7 +77,7 @@ function Homepage() {
           <img src={fuerteventuraBeach}
               width="480"
               height="480"
-              alt="An image of Ben and rachel on a beach in Fuerteventura"
+              alt="Ben and rachel on a beach in Fuerteventura"
               class="w-full h-full object-left md:object-center object-cover xl:col-span-3"
           />
         </div>

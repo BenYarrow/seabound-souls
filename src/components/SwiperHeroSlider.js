@@ -9,7 +9,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
 const SwiperHeroSlider = (props) => {
-  const singleImage = 'your-single-image.jpg'; // Replace with your image URL
 
   return (
     <Swiper

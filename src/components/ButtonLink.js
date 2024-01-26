@@ -1,6 +1,12 @@
 import React from 'react'
 
-const ButtonLink = ({colourClass = 'blue-outline', sizeClass = 'base', linkTo, title, customClasses = ''}) => {
+const ButtonLink = ({
+    colourClass = 'blue-outline', 
+    sizeClass = 'base', 
+    linkTo, 
+    title, 
+    customClasses = ''
+}) => {
 
     const colourClasses = {
         'blue': {

@@ -12,8 +12,6 @@ import BlockWrapper from "../components/BlockWrapper"
 
 const SpotGuideTemplate = ({spotGuide}) => {
     
-    const galleryImages = [spotGuide.gridGalleryImageOne, spotGuide.gridGalleryImageTwo, spotGuide.gridGalleryImageThree, spotGuide.gridGalleryImageFour]
-    
     return (    
         <div>
             <SiteHelmet
