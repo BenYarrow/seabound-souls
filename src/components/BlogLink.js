@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Text from "../components/Text.js"
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
@@ -8,9 +9,8 @@ const BlogLink = ({
     location,
     blogIntro,
     blogLinkImgSrc,
-    textColour,
     index,
-    overallRating
+    invert
    }) => {
 
     const ref = useRef(null)
@@ -44,7 +44,7 @@ const BlogLink = ({
                   }}
               >
                 <div className="overflow-hidden relative">
-                  <img src={blogLinkImgSrc}
+                  <img src={blogImageSrc}
                     width="480"
                     height="480"
                     alt={`An image of ${location}`}
@@ -52,12 +52,12 @@ const BlogLink = ({
                   />
                 </div>
 
-                <h3 className={textColour}>
-                  {location}
-                </h3>
-                <p className={textColour}>
-                  {blogIntro}
-                </p>
+                
+                <Text 
+                  title={location}
+                  content={[blogIntro]}
+                  invert={invert ? invert : false}
+                />
                 </motion.div>
             </Link>
         

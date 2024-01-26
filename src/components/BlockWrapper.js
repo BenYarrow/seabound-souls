@@ -6,7 +6,7 @@ const BlockWrapper = ({
 }) => {
 
     const classes = [
-        'py-8',
+        'py-8 lg:py-12',
         invert ? 'bg-blue' : 'bg-white'
     ].join(' ')
   return (

@@ -6,6 +6,8 @@ import SiteHelmet from "../components/SiteHelmet";
 import BlockWrapper from "../components/BlockWrapper";
 import Title from "../components/Title";
 import Text from "../components/Text";
+import ButtonLink from "../components/ButtonLink"
+import ListFeaturedBlogs from "../components/ListFeaturedBlogs";
 
 function Homepage() {
 
@@ -54,7 +56,7 @@ function Homepage() {
 
       <BlockWrapper id="content">
 
-        <div className="grid grid-cols  lg:grid-cols-2 xl:grid-cols-9">
+        <div className="grid grid-cols lg:grid-cols-2 xl:grid-cols-9 gap-8">
           
           <div className="xl:col-span-6">
             <Title
@@ -78,7 +80,7 @@ function Homepage() {
               ]}
             />
           </div>
-          
+
           <img src={fuerteventuraBeach}
               width="480"
               height="480"
@@ -88,24 +90,23 @@ function Homepage() {
         </div>
       </BlockWrapper>
 
-      <BlockWrapper invert>
-          <Title
-            title={() => (<h2 className="text-white"><a href="/destinations">Destinations</a></h2>)}
-            subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
-            invert
-          />
-          
-          <div className={blogGridClasses}>
-            {featuredSpotGuideLinks.map((blog) => {
-              return blog.blogLinkData.map((data, index) => {
-                return (
-                  <BlogLink {...data} index={index}/>
-                );
-              });
-            })}
-          </div>
-
-      </BlockWrapper>
+      <ListFeaturedBlogs
+        title="Destinations"
+        subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
+        invert
+        featuredBlogs={featuredSpotGuideLinks}
+        buttonLink="/destinations"
+        buttonTitle="View More"
+        buttonColourClass="white-outline"
+      />
+      <ListFeaturedBlogs
+        title="Destinations"
+        subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
+        
+        featuredBlogs={featuredSpotGuideLinks}
+        buttonLink="/destinations"
+        buttonTitle="View More"
+      />
 
     </div>
   );
