@@ -37,7 +37,7 @@ function Footer() {
                             Email
                         </h4>
                         <a href="mailto:yarrowtravels@outlook.com">
-                            seaboundsouls@outlook.com
+                            seabound.souls@outlook.com
                         </a>
                     </div>
                     <div className="max-w-sm">
