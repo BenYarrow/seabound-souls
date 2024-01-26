@@ -1,4 +1,5 @@
 import React from 'react';
+import Text from '../components/Text'
 
 const SplitImageText = (props) => {
     const { reverse = false, image, imageDescription = 'Seabound Souls', imageLink = 'https://www.instagram.com/seabound.souls/', title, texts = [] } = props;
@@ -24,13 +25,10 @@ const SplitImageText = (props) => {
                 </div>
             )}
 
-            <div className='flex flex-col space-y-4 w-full'>
-                {title && <h4 className='text-left text-2xl lg:text-3xl font-bold uppercase'>{title}</h4>}
-                
-                {texts.map((text, index) => (
-                    <p key={index}>{text}</p>
-                ))}
-            </div>
+            <Text
+                title={title}
+                content={texts}
+            />
         </div>
     );
 };

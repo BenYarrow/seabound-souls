@@ -1,5 +1,7 @@
 import React from 'react'
 import SplitImageText from './SplitImageText'
+import Text from '../components/Text'
+import Title from '../components/Title'
 
 // destructure this and improve code
 const SpotConditions = ({
@@ -23,19 +25,15 @@ const SpotConditions = ({
 
             <div className='flex flex-col space-y-4 lg:space-y-8'>
 
-                <h3 className='text-left text-2xl lg:text-5xl font-bold pb-6 uppercase'>
-                    Conditions
-                </h3>
+                <Title 
+                    title="Conditions"
+                />
 
                 {whenToGoDetails && (
-                    <div className="flex flex-col space-y-2 w-full">
-                        <h4 className='text-left text-2xl lg:text-3xl font-bold pb-4 uppercase'>
-                            When to go
-                        </h4>
-                        <p>
-                            {whenToGoDetails}
-                        </p>
-                    </div>
+                    <Text
+                        title="When to go"
+                        content={[whenToGoDetails]}
+                    />
                 )}
 
                 {waterConditionDetails && (

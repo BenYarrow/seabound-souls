@@ -1,4 +1,6 @@
 import React from 'react'
+import Title from "../components/Title"
+import Text from "../components/Text"
 
 const BulletsAndImage = (props) => {
 
@@ -72,43 +74,37 @@ const BulletsAndImage = (props) => {
             </div>
         )}
 
-        <div className='flex flex-col '>
-            {props.title && (
-                <h4 className='text-left text-2xl lg:text-3xl font-bold pb-8 uppercase'>
-                    {props.title}
-                </h4>
+        <div>
+            {props.title && props.intro && (
+                <Text
+                    title={props.title}
+                    content={[props.intro]}
+                />
             )}
-            <div >
                 <div className='flex flex-col space-y-2'>
-                    {props.intro && (
-                        <p>
-                            {props.intro}
-                        </p>
-                    )}  
-                        {listData && (
-                            <ul className="pl-12 flex flex-col space-y-2">
-                                {listData.map((list, index) => {
-                                    return (
-                                        <>
-                                            {list.title != null &&  (
-                                                <li key={index} className='list-disc'>
-                                                    {list.link != null ? (
-                                                        <a href={list.link} target="_blank" rel="noreferrer" className='font-bold hover:underline '>
-                                                            {list.title}
-                                                        </a>
-                                                    ) : (
-                                                        <p key={index}>
-                                                            {list.title}
-                                                        </p>
-                                                    )}
-                                                </li>
-                                            )}
-                                        </>
-                                    )
-                                })}
-                        </ul>
-                    )}
-                </div>
+                    {listData && (
+                        <ul className="pl-12 flex flex-col space-y-2">
+                            {listData.map((list, index) => {
+                                return (
+                                    <>
+                                        {list.title != null &&  (
+                                            <li key={index} className='list-disc'>
+                                                {list.link != null ? (
+                                                    <a href={list.link} target="_blank" rel="noreferrer" className='font-bold hover:underline '>
+                                                        {list.title}
+                                                    </a>
+                                                ) : (
+                                                    <p key={index}>
+                                                        {list.title}
+                                                    </p>
+                                                )}
+                                            </li>
+                                        )}
+                                    </>
+                                )
+                            })}
+                    </ul>
+                )}
             </div>
         </div>
     </div>
