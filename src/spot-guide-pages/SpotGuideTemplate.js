@@ -59,12 +59,14 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.gridGalleryImageOne && (
-                    <GridImageDisplay 
-                        imageOne={spotGuide.gridGalleryImageOne}
-                        imageTwo={spotGuide.gridGalleryImageTwo}
-                        imageThree={spotGuide.gridGalleryImageThree}
-                        imageFour={spotGuide.gridGalleryImageFour}
-                    />
+                    <BlockWrapper>
+                        <GridImageDisplay 
+                            imageOne={spotGuide.gridGalleryImageOne}
+                            imageTwo={spotGuide.gridGalleryImageTwo}
+                            imageThree={spotGuide.gridGalleryImageThree}
+                            imageFour={spotGuide.gridGalleryImageFour}
+                        />
+                    </BlockWrapper>
                 )}
 
                 <SpotConditions

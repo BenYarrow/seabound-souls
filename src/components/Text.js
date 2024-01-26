@@ -19,7 +19,7 @@ const Text = ({
         <div>
           {content.map((item, index) => (
             <p key={index}>
-              {typeof item === 'string' ? (
+              {typeof item === 'string' || 'array' ? (
                 item
               ) : (
                 item()

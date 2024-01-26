@@ -6,7 +6,7 @@ const GridImageDisplay = (props) => {
     const backgroundImageClasses = 'absolute w-full h-full object-cover bg-center hover:scale-105 transition duration-300'
     
     return (
-        <BlockWrapper>
+        <div>
             <div className="grid grid-cols-4 grid-rows-3 gap-4">
                 {props.imageOne && (
                     <div className="relative aspect-square overflow-hidden row-span-2 row-start-1 col-start-1 col-span-2">
@@ -62,7 +62,7 @@ const GridImageDisplay = (props) => {
                 )}
                 
             </div>
-        </BlockWrapper>
+        </div>
     )
 }
 
