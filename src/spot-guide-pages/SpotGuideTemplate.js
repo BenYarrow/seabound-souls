@@ -8,6 +8,7 @@ import SplitImageText from'../components/SplitImageText'
 import GridImageDisplay from'../components/GridImageDisplay'
 import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
+import BlockWrapper from "../components/BlockWrapper"
 
 const SpotGuideTemplate = ({spotGuide}) => {
     
@@ -17,7 +18,6 @@ const SpotGuideTemplate = ({spotGuide}) => {
         <div>
             <SiteHelmet
                 customKeyWords={[spotGuide.title, spotGuide.location, spotGuide.metaKeyWords]}
-                
             />
 
             <StaticMasthead imageSrc={spotGuide.masthead} />
@@ -25,7 +25,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
             <div id='content'>
 
                 {spotGuide.title && spotGuide.location && (
-                    <Title title={spotGuide.title} />
+                    <Title title={spotGuide.title} firstBlock />
                 )}
                 {spotGuide.location && (
                     <div className='pb-4 lg:pb-8 w-full flex justify-center'>
@@ -36,17 +36,17 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.intro && (
-                    <section className='container mx-auto'>
-                        <div className='border-y-[1px] border-white-darker py-4'>
+                    <BlockWrapper className='container mx-auto'>
+                        <div className='border-y-[1px] border-white-darker py-4 prose max-w-6xl prose-p:text-blue'>
                             <p className="text-center text-base lg:text-lg">
                                 {spotGuide.intro}
                             </p>
                         </div>
-                    </section>
+                    </BlockWrapper>
                 )}
 
                 {spotGuide.sailingStyle && (
-                    <section className='container mx-auto py-4'>
+                    <BlockWrapper>
                         <SpotOverview 
                             b1={spotGuide.b1} b2={spotGuide.b2} b3={spotGuide.b3} b4={spotGuide.b4} b5={spotGuide.b5} 
                             i1={spotGuide.i1} i2={spotGuide.i2} i3={spotGuide.i3} i4={spotGuide.i4} i5={spotGuide.i5} 
@@ -58,21 +58,21 @@ const SpotGuideTemplate = ({spotGuide}) => {
                             waterConditions={spotGuide.waterConditions}
                             launchZone={spotGuide.launchZone}
                         />
-                    </section>
+                    </BlockWrapper>
                 )}
 
                 {spotGuide.gridGalleryImageOne && (
-                    <section className='container mx-auto py-4'>
+                    <BlockWrapper>
                         <GridImageDisplay 
                             imageOne={spotGuide.gridGalleryImageOne}
                             imageTwo={spotGuide.gridGalleryImageTwo}
                             imageThree={spotGuide.gridGalleryImageThree}
                             imageFour={spotGuide.gridGalleryImageFour}
                         />
-                    </section>
+                    </BlockWrapper>
                 )}
 
-                <section className='container mx-auto py-4'>
+                <BlockWrapper>
                     <SpotConditions
                         waterConditionDetails={spotGuide.waterConditionDetails}
                         waterImage={spotGuide.waterConditionImage}
@@ -88,10 +88,10 @@ const SpotGuideTemplate = ({spotGuide}) => {
                         spotDetailsFour={spotGuide.spotDetailsFour}
                         spotImage={spotGuide.spotImage}
                     />
-                </section>
+                </BlockWrapper>
                 
                 {spotGuide.lessonIntro && (
-                    <section className='container mx-auto py-4'>
+                    <BlockWrapper>
                         <BulletsAndImage 
                             title='Lessons and Hire'
                             intro={spotGuide.lessonIntro}
@@ -106,22 +106,22 @@ const SpotGuideTemplate = ({spotGuide}) => {
                             imageLink={spotGuide.lessonHireImageLink}
                             reverse
                         />
-                    </section>
+                    </BlockWrapper>
                 )}
 
                 {spotGuide.gettingHereText && (
-                    <section className='container mx-auto py-4'>
+                    <BlockWrapper>
                         <SplitImageText
                             title={`Getting to ${spotGuide.title}`}
                             texts={[spotGuide.gettingHereText]}
                             image={spotGuide.gettingHereImage}
                             reverse
                         />
-                    </section>
+                    </BlockWrapper>
                 )}
 
                 {spotGuide.travellingIntro && (
-                    <section className='container mx-auto py-4'>
+                    <BlockWrapper>
                         <BulletsAndImage
                             title='Travelling around'
                             intro={spotGuide.travellingIntro}
@@ -134,11 +134,11 @@ const SpotGuideTemplate = ({spotGuide}) => {
                             image={spotGuide.travellingImage}
                             reverse
                         />
-                    </section>
+                    </BlockWrapper>
                 )}
 
                 {spotGuide.stayIntro && (                    
-                    <section className='container mx-auto py-4'>
+                    <BlockWrapper>
                         <BulletsAndImage 
                             title='Where to stay'
                             intro={spotGuide.stayIntro}
@@ -155,12 +155,12 @@ const SpotGuideTemplate = ({spotGuide}) => {
                             imageLink={spotGuide.stayImageLink}
                             reverse
                         />
-                    </section>
+                    </BlockWrapper>
                 )}
 
                 {spotGuide.eatIntro && (
                                     
-                    <section className='container mx-auto py-4'>
+                    <BlockWrapper>
                         <BulletsAndImage 
                             title='Where to eat'
                             intro={spotGuide.eatIntro}
@@ -185,18 +185,18 @@ const SpotGuideTemplate = ({spotGuide}) => {
                             imageLink={spotGuide.eatImageLink}
                             reverse
                         />
-                    </section>
+                    </BlockWrapper>
                 )}
                 
                 {spotGuide.otherActivityText && (    
-                    <section className='container mx-auto py-4'>
+                    <BlockWrapper>
                         <SplitImageText 
                             title='Other Activities'
                             texts={[spotGuide.otherActivityText]}
                             image={spotGuide.otherActivityImage}
                             reverse
                         />
-                    </section>
+                    </BlockWrapper>
                 )}
             </div>
 
