@@ -4,6 +4,7 @@ import BlogLink from "../components/BlogLink";
 import StaticMasthead from "../components/StaticMasthead";
 import Title from "../components/Title";
 import SiteHelmet from "../components/SiteHelmet";
+import BlockWrapper from "../components/BlockWrapper"
 
 const Destinations = () => {
   
@@ -48,7 +49,7 @@ const Destinations = () => {
 
       <StaticMasthead imageSrc={masthead} />
       
-      <Title title='Destination spot guides' />
+      <Title title='Destination spot guides' firstBlock />
 
       <section className="pt-8">
         <div className={`container mx-auto pb-8 grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>

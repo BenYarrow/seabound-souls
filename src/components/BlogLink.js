@@ -30,35 +30,32 @@ const BlogLink = ({
 
     return(
             <Link ref={ref} to={linkTo} key={index} aria-label={`Read about our time in ${location}`} className='group' >
-                <motion.div 
-                    className="flex flex-col justify-between space-y-2 w-full overflow-hidden"
-                    variants={{
-                        hidden: {opacity: 0, y: 75},
-                        visible: {opacity: 1, y: 0},
-                      }}
-                      initial= 'hidden'
-                      animate={mainControls}
-                      transition={{
-                        duration: 0.5,
-                        delay: 0.5
-                      }}
-                >
+              <motion.div 
+                className="flex flex-col justify-between space-y-2 w-full overflow-hidden prose prose-h3:text-blue prose-p:text-blue"
+                variants={{
+                    hidden: {opacity: 0, y: 75},
+                    visible: {opacity: 1, y: 0},
+                  }}
+                  initial= 'hidden'
+                  animate={mainControls}
+                  transition={{
+                    duration: 0.5,
+                    delay: 0.5
+                  }}
+              >
                 <div className="overflow-hidden relative">
-                  <div 
-                      className={blogLinkImgSrc ? 'aspect-[5/4] group-hover:scale-105 transition duration-300' : 'w-full aspect-[5/4] bg-blue'}
-                      style={{
-                          backgroundImage: `url(${blogImageSrc})`,
-                          backgroundSize: "cover",
-                          backgroundRepeat: "no-repeat",
-                          backgroundPosition: "center",
-                  }}>
-                  </div>
+                  <img src={blogLinkImgSrc}
+                    width="480"
+                    height="480"
+                    alt={`An image of ${location}`}
+                    class="aspect-[5/4] group-hover:scale-105 transition duration-300"
+                  />
                 </div>
 
-                <h3 className={`${textColour} font-bold pt-2`}>
+                <h3 className={textColour}>
                   {location}
                 </h3>
-                <p className={`${textColour} hidden lg:block text-base`}>
+                <p className={textColour}>
                   {blogIntro}
                 </p>
                 </motion.div>
