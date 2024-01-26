@@ -43,9 +43,9 @@ export let SpotGuidePages = [
         
         // Spot conditions
         whenToGoDetails: 'The season runs from May to September, with the windiest months being June, July and August. ',
-        waterConditionDetails: "Vassiliki bay offers both flatwater and choppy conditions, making it suitable for windsurfers of all levels. Additionally, the bay is non-tidal so thereâs no restrictions on sailing once the wind kicks in. The water temperature typically ranges from around 20Â°C (68Â°F) in the early spring (May) to 26Â°C (79Â°F) or higher in the peak summer months of July and August. In May and September, you may want to wear a long wetsuit, particularly once the sun sets behind the mountains. But otherwise, boardies and a rash vest is all youâll need during the summer months.",
+        waterConditionDetails: "Vassiliki bay offers both flatwater and choppy conditions, making it suitable for windsurfers of all levels. Additionally, the bay is non-tidal so theres no restrictions on sailing once the wind kicks in. The water temperature typically ranges from around 20°C (68°F) in the early spring (May) to 26°C (79°F) or higher in the peak summer months of July and August. In May and September, you may want to wear a long wetsuit, particularly once the sun sets behind the mountains. But otherwise, boardies and a rash vest is all youll need during the summer months.",
         waterConditionImage: 'images/mastheads/homepage/paddleboarding-vass.jpg',
-        windConditionDetails: "Vassiliki is famous for its reliable afternoon thermal winds. The prevailing wind is a katabatic thermal wind known as 'Eric,' which blows from the northwest. The wind typically starts picking up in the late morning or early afternoon, reaching its peak in the late afternoon or early evening. The air temperature during the season ranges from 25Â°C to 35Â°C (77Â°F to 95Â°F).",
+        windConditionDetails: "Vassiliki is famous for its reliable afternoon thermal winds. The prevailing wind is a katabatic thermal wind known as 'Eric,' which blows from the northwest. The wind typically starts picking up in the late morning or early afternoon, reaching its peak in the late afternoon or early evening. The air temperature during the season ranges from 25°C to 35°C (77°F to 95°F).",
         windConditionImage: 'images/mastheads/homepage/windsurfing-together-02.jpg',
         windStatisticDetails: "As the day progresses, the Meltemi takes charge. It typically starts picking up in the early afternoon and reaches its peak strength during the late afternoon. With winds consistently blowing between 15 to 25 knots, the steady, strong winds and predictable gusts make Vassiliki an ideal destination for those looking to progress in their windsurfing skills or take on more advanced sailing challenges.",
         windStatisticImage: 'images/mastheads/homepage/windsurfing-together-01.jpg',
@@ -103,7 +103,7 @@ export let SpotGuidePages = [
         eatLinkTwo: 'https://www.facebook.com/profile.php?id=100063509014691',
         eatTitleThree: 'Oceans Restaurant',
         eatLinkThree: 'https://oceanrestaurant.gr/en/',
-        eatTitleFour: 'Alexâs Pizza',
+        eatTitleFour: 'Alexs Pizza',
         eatLinkFour: 'https://www.facebook.com/people/Alexs-Pizza/100054340518389/',
         eatTitleFive: 'Cosmos Hotel',
         eatLinkFive: 'https://cosmos-vassiliki.com/',
@@ -166,7 +166,7 @@ export let SpotGuidePages = [
         
         // Spot conditions
         whenToGoDetails: "The peak season in Le Morne runs from June to October when the trade winds consistently blow from the southeast. During this period, you can expect strong and consistent wind conditions, especially for wave riding. We visited during September and pretty much every day was windy with great conditions. ",
-        waterConditionDetails: "The lagoon inside the reef provides shallow and flat water, making it ideal for beginners to practice. Outside of the lagoon offers a variety of wave conditions and a great place to improve your wave riding skills. The water temperature is consistently warm and comfortable year-round. It typically ranges from 24Â°C (75Â°F) in the winter to 28Â°C (82Â°F) in the summer. We wore long summer wetsuits and booties, to provide some protections from the rocks when windsurfing close to the reefs.",
+        waterConditionDetails: "The lagoon inside the reef provides shallow and flat water, making it ideal for beginners to practice. Outside of the lagoon offers a variety of wave conditions and a great place to improve your wave riding skills. The water temperature is consistently warm and comfortable year-round. It typically ranges from 24°C (75°F) in the winter to 28°C (82°F) in the summer. We wore long summer wetsuits and booties, to provide some protections from the rocks when windsurfing close to the reefs.",
         waterConditionImage: 'images/Mauritius-Images/mauritius-beach-02.jpg',
         windConditionDetails: "The trade winds typically blow between 15 to 30 knots during the peak season. The predominant wind direction is cross or cross-onshore, which is great for both the lagoon and reef riding. It offers a safe launch and landing for kiters.  The air temperature ranges from warm to hot throughout the year due to its tropical climate.",
         windConditionImage: 'images/Mauritius-Images/ben-windsurfing-01.jpg',
@@ -244,7 +244,7 @@ export let SpotGuidePages = [
         eatImageLink: null,
 
         // Other Activities
-        otherActivityText: 'Hike to the summit of Le Morne Brabant. Take an organised boat tour or catamaran cruise to explore the nearby islands like Ãle aux Cerfs and Ãle aux Aigrettes. See Le Morneâs incredible underwater waterfall from the air by helicopter or sea plane. Visit Charamel and discover itâs waterfall, Severn coloured earth and rum distillery. ',
+        otherActivityText: 'Hike to the summit of Le Morne Brabant. Take an organised boat tour or catamaran cruise to explore the nearby islands like Ãle aux Cerfs and Ãle aux Aigrettes. See Le Mornes incredible underwater waterfall from the air by helicopter or sea plane. Visit Charamel and discover its waterfall, Severn coloured earth and rum distillery. ',
         otherActivityImage: "images/Mauritius-Images/ben-wakeboarding.jpg",
     },
     {

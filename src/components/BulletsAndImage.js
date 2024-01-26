@@ -88,13 +88,13 @@ const BulletsAndImage = (props) => {
                                 return (
                                     <>
                                         {list.title != null &&  (
-                                            <li key={index} className='list-disc'>
+                                            <li key={index} className='list-disc prose marker:text-blue'>
                                                 {list.link != null ? (
-                                                    <a href={list.link} target="_blank" rel="noreferrer" className='font-bold hover:underline '>
+                                                    <a href={list.link} target="_blank" rel="noreferrer" className='font-bold hover:underline text-blue'>
                                                         {list.title}
                                                     </a>
                                                 ) : (
-                                                    <p key={index}>
+                                                    <p key={index} className="text-blue">
                                                         {list.title}
                                                     </p>
                                                 )}
