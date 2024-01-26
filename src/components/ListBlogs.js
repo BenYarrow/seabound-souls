@@ -4,14 +4,13 @@ import ButtonLink from  './ButtonLink'
 import Title from './Title'
 import BlogLink from './BlogLink'
 
-const ListFeaturedBlogs = ({
+const ListBlogs = ({
   invert,
   title,
   subTitle,
   featuredBlogs,
   buttonLink,
   buttonTitle,
-  buttonColourClass,
 }) => {
   return (
     <BlockWrapper invert={invert}>
@@ -36,4 +35,4 @@ const ListFeaturedBlogs = ({
   )
 }
 
-export default ListFeaturedBlogs
+export default ListBlogs

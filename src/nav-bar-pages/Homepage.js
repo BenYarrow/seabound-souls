@@ -1,13 +1,11 @@
 import React from "react";
 import { spotGuideLinks } from "../Data/spot-guide-links";
-import BlogLink from "../components/BlogLink";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";
 import BlockWrapper from "../components/BlockWrapper";
 import Title from "../components/Title";
 import Text from "../components/Text";
-import ButtonLink from "../components/ButtonLink"
-import ListFeaturedBlogs from "../components/ListFeaturedBlogs";
+import ListBlogs from "../components/ListBlogs";
 
 function Homepage() {
 
@@ -90,7 +88,7 @@ function Homepage() {
         </div>
       </BlockWrapper>
 
-      <ListFeaturedBlogs
+      <ListBlogs
         title="Destinations"
         subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
         invert
@@ -99,7 +97,7 @@ function Homepage() {
         buttonTitle="View More"
         buttonColourClass="white-outline"
       />
-      <ListFeaturedBlogs
+      <ListBlogs
         title="Destinations"
         subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
         
