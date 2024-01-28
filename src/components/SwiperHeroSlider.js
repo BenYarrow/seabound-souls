@@ -33,11 +33,12 @@ const SwiperHeroSlider = (props) => {
                 alt={props.heading}
                 className="object-cover w-full h-full -z-50 absolute"
                 fetchpriority={index === 0 ? 'high' : 'low'}
+                loading={index > 0 && 'lazy'}
                 crossOrigin
               />
               <div className="flex flex-col justify-between items-center pb-12  z-50 h-full">
 
-                <Title heading={props.heading} />
+                  <Title heading={props.heading} />
               
                 <ButtonLink title="Join the adventure"
                   linkTo="#content"
