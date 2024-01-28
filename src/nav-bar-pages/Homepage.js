@@ -13,7 +13,7 @@ function Homepage() {
 
   const heroImages = [
     {
-      image: "images/mastheads/homepage/windsurfing-together-01.webp",
+      image: "images/mastheads/homepage/windsurfing-together-01.png",
     },
     {
       image: "images/mastheads/homepage/ben-vulcan-fuerteventura.jpg",
