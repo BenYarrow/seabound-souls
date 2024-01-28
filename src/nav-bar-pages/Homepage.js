@@ -12,12 +12,9 @@ function Homepage() {
   const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-01.jpg";
 
   const heroImages = [
-    {
-      image: "images/mastheads/homepage/windsurfing-together-01.png",
-    },
-    {
-      image: "images/mastheads/homepage/ben-vulcan-fuerteventura.jpg",
-    },
+      "/images/mastheads/homepage/windsurfing-together-01.webp",
+      "/images/mastheads/homepage/windsurfing-together-02.jpg",
+      "/images/mastheads/homepage/ben-vulcan-fuerteventura.jpg",
   ]
 
   const featuredSpotGuideLinks = spotGuideLinks

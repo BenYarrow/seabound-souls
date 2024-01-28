@@ -28,7 +28,7 @@ const SwiperHeroSlider = (props) => {
             <div className="h-[calc(100vh-4rem)] md:h-[calc(100vh-10rem)]">
               <img
                 src={slide.image}
-                srcSet={`${slide.image} 768w, ${slide.image}?resize&size=1024 1024w, ${slide.image}?resize&size=1600 1600w`}
+                srcSet={`${slide} 768w, ${slide}?resize&size=1024 1024w, ${slide}?resize&size=1600 1600w`}
                 sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw, 33.3vw"
                 alt={props.heading}
                 className="object-cover w-full h-full -z-50 absolute"
@@ -37,9 +37,9 @@ const SwiperHeroSlider = (props) => {
                 crossOrigin
               />
               <div className="flex flex-col justify-between items-center pb-12  z-50 h-full">
-                
-                <Title heading={props.heading} />
 
+                <Title heading={props.heading} />
+              
                 <ButtonLink title="Join the adventure"
                   linkTo="#content"
                   colourClass='blue'
