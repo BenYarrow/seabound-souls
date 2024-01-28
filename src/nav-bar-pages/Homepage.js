@@ -9,16 +9,14 @@ import ListBlogs from "../components/ListBlogs";
 
 function Homepage() {
 
-  const windsurfingOne = "images/mastheads/homepage/windsurfing-together-01.jpg";
   const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-01.jpg";
-  const windsurfingTwo = "images/mastheads/homepage/ben-vulcan-fuerteventura.jpg";
 
   const heroImages = [
     {
-      image: windsurfingOne,
+      image: "images/mastheads/homepage/windsurfing-together-01.webp",
     },
     {
-      image: windsurfingTwo,
+      image: "images/mastheads/homepage/ben-vulcan-fuerteventura.jpg",
     },
   ]
 
