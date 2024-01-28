@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React from "react";
 import { spotGuideLinks } from "../Data/spot-guide-links";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";
@@ -12,9 +12,9 @@ function Homepage() {
   const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-01.jpg";
 
   const heroImages = [
-      "/images/mastheads/homepage/windsurfing-together-01.webp",
-      "/images/mastheads/homepage/windsurfing-together-02.jpg",
-      "/images/mastheads/homepage/ben-vulcan-fuerteventura.jpg",
+      "/images/mastheads/homepage/webp/windsurfing-together-01.webp",
+      "/images/mastheads/homepage/webp/windsurfing-together-02.webp",
+      "/images/mastheads/homepage/webp/ben-vulcan-fuerteventura.webp",
   ]
 
   const featuredSpotGuideLinks = spotGuideLinks
@@ -32,8 +32,6 @@ function Homepage() {
       return 0
     }
   })
-
-  const content = useRef(null)
 
   return (
     <div className="relative">
