@@ -59,66 +59,105 @@ export let SpotGuidePages = [
 
         // Lessons and hire
         lessonIntro: 'There are numerous windsurfing centres are located along the Vassiliki waterfront, offering equipment rental and lessons. These include:',
-        lessonTitleOne: 'Surf School Vassiliki',
-        lessonLinkOne: 'https://surfschoolvasiliki.gr/',
-        lessonTitleTwo: 'Human Sports',
-        lessonLinkTwo: 'http://www.human-sports.com/en/home.html',
-        lessonTitleThree: 'Club Vass',
-        lessonLinkThree: 'https://clubvass.com/',
+        lessonBulletData: [
+            {
+                title: 'Surf School Vassiliki',
+                link: 'https://surfschoolvasiliki.gr/',
+            },
+            {
+                title: 'Human Sports',
+                link: 'http://www.human-sports.com/en/home.html',
+            },
+            {
+                title: 'Club Vass',
+                link: 'https://clubvass.com/',
+            },
+        ],
         lessonHireImage: 'images/mastheads/destinations/destinations-masthead.jpg',
         lessonHireImageDescription: 'Surf School Vassiliki',
         lessonHireImageLink: 'https://surfschoolvasiliki.gr/',
             
         // Getting here 
-        gettingHereText: 'There are lots of flight options available form the UK. We would recommend Easyjet if you want to take your own windsurf or wing kit. The nearest airport to Vassiliki is Aktion National Airport (PVK), which is approximately 70-minute drive away. You can also reach Lefkada by road from mainland Europe or by ferry from Brindisi, Italy to Igoumenitsa.',
+        gettingHereText: [
+            'There are lots of flight options available form the UK. We would recommend Easyjet if you want to take your own windsurf or wing kit. The nearest airport to Vassiliki is Aktion National Airport (PVK), which is approximately 70-minute drive away. You can also reach Lefkada by road from mainland Europe or by ferry from Brindisi, Italy to Igoumenitsa.',
+        ],
         gettingHereImage: null,
 
         // Travelling around
         travellingIntro: "Vassiliki itself is a small town and it takes around 20 minutes to walk from one side of the bay to the other. If you're staying longer than a week, you may want to consider hiring a bike in order to get around much quicker.",
-        travellingOneTitle: 'By Car: We would recommend hiring a car to explore everything the island has to offer.',
-        travellingOneLink: null,
-        travellingTwoTitle: 'Taxi',
-        travellingTwoLink: null,
-        travellingThreeTitle: 'Bus',
-        travellingThreeLink: null,
+        travellingBulletData: [
+            {
+                title: 'By Car: We would recommend hiring a car to explore everything the island has to offer.',
+            },
+            {
+                title: 'Taxi',
+            },
+            {
+                title: 'Bus'
+            }
+        ],
         travellingImage: null,
 
         // Where to stay
         stayIntro: 'There are lots of options for accomodation in Vassiliki. Here are the most recomended by the locals:',
-        stayOneTitle: 'Cosmos Hotel',
-        stayOneLink: 'https://cosmos-vassiliki.com/',
-        stayTwoTitle: 'Surf Hotel',
-        stayTwoLink: 'https://surfhotel.gr/',
-        stayThreeTitle: 'Club Vass',
-        stayThreeLink: 'https://clubvass.com/',
+        whereToStayBulletData: [
+            {
+                title: 'Cosmos Hotel',
+                link: 'https://cosmos-vassiliki.com/', 
+            },
+            {
+                title: 'Surf Hotel',
+                link: 'https://surfhotel.gr/',
+            },
+            {
+                title: 'Club Vass',
+                link: 'https://clubvass.com/',
+            },
+        ],
         stayImage: 'images/Vassiliki-Images/cosmos-hotel.jpg',
         stayImageDescription: 'Cosmos Hotel',
         stayImageLink: 'https://cosmos-vassiliki.com/',
 
         // Where to eat
         eatIntro: 'Vassiliki has a wide range of restaurants serving, all serving amaxing food. here are some of our favourites:',
-        eatTitleOne: 'Vass Bar,',
-        eatLinkOne: 'https://vasiliki.eu/vass-bar.html',
-        eatTitleTwo: 'Patio Dining',
-        eatLinkTwo: 'https://www.facebook.com/profile.php?id=100063509014691',
-        eatTitleThree: 'Oceans Restaurant',
-        eatLinkThree: 'https://oceanrestaurant.gr/en/',
-        eatTitleFour: 'Alexs Pizza',
-        eatLinkFour: 'https://www.facebook.com/people/Alexs-Pizza/100054340518389/',
-        eatTitleFive: 'Cosmos Hotel',
-        eatLinkFive: 'https://cosmos-vassiliki.com/',
-        eatTitleSix: 'The Old Plane Tree (Kontarena)',
-        eatLinkSix: 'https://vasiliki.eu/taverna-old-plane-tree.html',
-        eatTitleSeven: 'Sivota Bakery CafÃ© (Sivota)',
-        eatLinkSeven: 'https://www.facebook.com/sivotabakerycafe/',
-        eatTitleEight: 'Rachi Restaurant (Exanthia)',
-        eatLinkEight: 'https://rachi.gr/',
+        whereToEatBulletData: [
+            {
+                title: 'Vass Bar',
+                link: 'https://vasiliki.eu/vass-bar.html',
+            },
+            {
+                title: 'Patio Dining',
+                link: 'https://www.facebook.com/profile.php?id=100063509014691',
+            },
+            {
+                title: 'Oceans Restaurant',
+                link: 'https://oceanrestaurant.gr/en/',
+            },
+            {
+                title: "Alex's Pizza",
+                link: 'https://www.facebook.com/people/Alexs-Pizza/100054340518389/',
+            },
+            {
+                title: 'The Old Plane Tree (Kontarena)',
+                link: 'https://vasiliki.eu/taverna-old-plane-tree.html',
+            },
+            {
+                title: 'Sivota Bakery CafÃ© (Sivota)',
+                link: 'https://www.facebook.com/sivotabakerycafe/',
+            },
+            {
+                title: 'Rachi Restaurant (Exanthia)',
+                link: 'https://rachi.gr/',
+            },
+        ],
         eatImage: 'images/Vassiliki-Images/zorbas-restaurant.jpg',
         eatImageDescription: 'Patio Restaurant',
         eatImageLink: 'https://www.facebook.com/profile.php?id=100063509014691',
 
         // Other Activities
-        otherActivityText: "In addition to windsurfing, you can enjoy other water sports like sailing, kayaking, and paddleboarding. You can hire a car and explore the islands beautiful beaches, hiking trails and traditional Greek villages. Consider hiring a boat from Sivota and exploring the many caves and hidden beaches. You can even take the ferry from Nidri to Kefalonia.",
+        otherActivityText: [
+            "In addition to windsurfing, you can enjoy other water sports like sailing, kayaking, and paddleboarding. You can hire a car and explore the islands beautiful beaches, hiking trails and traditional Greek villages. Consider hiring a boat from Sivota and exploring the many caves and hidden beaches. You can even take the ferry from Nidri to Kefalonia.",
+        ],
         otherActivityImage: null,
     },
     {
@@ -182,69 +221,86 @@ export let SpotGuidePages = [
 
         // Lessons and hire
         lessonIntro: 'Ion Club Le Morne is particularly well known for its windsurfing school that caters to all levels. We hired kit from ION Club Le Morne and were very impressed with their selection of boards and sails. Staff were super friendly and always on hand to help. They also cater for kite surfers, wingfoilers and surfers.',
-        lessonTitleOne: 'Ion Club, Mauritius',
-        lessonLinkOne: 'https://www.ion-club.net/le-morne/',
-        lessonTitleTwo: null,
-        lessonLinkTwo: null,
-        lessonTitleThree: null,
-        lessonLinkThree: null,
+        lessonBulletData: [
+            {
+                title: 'Ion Club, Mauritius',
+                link: 'https://www.ion-club.net/le-morne/'
+            }
+        ],
         lessonHireImage: 'images/Mauritius-Images/ion-club-safety-tower.jpg',
         lessonHireImageDescription: 'Ion Club, Mauritius',
         lessonHireImageLink: 'https://www.ion-club.net/le-morne/',
 
         // Getting here
-        gettingHereText: 'Regular flights are available from London Heathrow (LHR), London Gatwick (LGW), and Manchester Airport (MAN) to Sir Seewoosagur Ramgoolam International Airport (MRU), the main international airport in Mauritius. Several airlines operate flights, including British Airways, Emirates and Air Mauritius. The flight takes around 12 to 13 hours.',
+        gettingHereText: [
+            'Regular flights are available from London Heathrow (LHR), London Gatwick (LGW), and Manchester Airport (MAN) to Sir Seewoosagur Ramgoolam International Airport (MRU), the main international airport in Mauritius. Several airlines operate flights, including British Airways, Emirates and Air Mauritius. The flight takes around 12 to 13 hours.',
+        ],
         gettingHereImage: "images/Mauritius-Images/crystal-rock.jpg",
 
         // Travelling around
         travellingIntro: 'There are many ways to travel around Mauritius. We found the easiest was to book a taxi, however next time we will definitely be hiring a car for our trip.',
-        travellingOneTitle: 'Car hire',
-        travellingOneLink: null,
-        travellingTwoTitle: 'Local taxi',
-        travellingTwoLink: null,
-        travellingThreeTitle: 'Cycling',
-        travellingThreeLink: null,
+        travellingBulletData: [
+            {
+                title: 'Car hire',
+            },
+            {
+                title: 'Local Taxi',
+            },
+            {
+                title: 'Cycling',
+            },
+        ],
         travellingImage: "images/Mauritius-Images/mauritius-monkey.jpg",
 
 
         // Where to stay
         stayIntro: "Le Morne offers a range of accommodation options, including luxury resorts, boutique hotels, and Airbnb rentals. It's advisable to book your accommodation in advance, especially during the peak tourist season.",
-        stayOneTitle: 'Lux Le Morne',
-        stayOneLink: 'https://www.luxresorts.com/en/mauritius/hotel/luxlemorne',
-        stayTwoTitle: 'JW Marriot',
-        stayTwoLink: 'https://www.marriott.com/en-us/hotels/mrujw-jw-marriott-mauritius-resort/overview/',
-        stayThreeTitle: 'Hotel Rui',
-        stayThreeLink: 'https://www.riu.com/en/hotel/mauritius-island/morne-brabant/',
-        stayFourTitle: 'Villa Habiscus',
-        stayFourLink: 'https://lagaulette.com',
+        whereToStayBulletData: [
+            {
+                title: 'Lux Le Morne',
+                link: 'https://www.luxresorts.com/en/mauritius/hotel/luxlemorne',
+            },
+            {
+                title: 'JW Marriot',
+                link: 'https://www.marriott.com/en-us/hotels/mrujw-jw-marriott-mauritius-resort/overview/',
+            },
+            {
+                title: 'Hotel Rui',
+                link: 'https://www.riu.com/en/hotel/mauritius-island/morne-brabant/',
+            },
+            {
+                title: 'Villa Habiscus',
+                link: 'https://lagaulette.com',
+            },
+        ],
         stayImage: "images/Mauritius-Images/lux-le-morne-bed.jpg",
         stayImageDescription: "Lux Le Morne",
         stayImageLink: "https://www.luxresorts.com/en/mauritius/hotel/luxlemorne",
 
         // Where to eat
         eatIntro: 'Our stay at LUX* Le Morne was all-inclusive so we only ate outside of the resort once during our visit. Whilst all-inclusive is on the pricey side, we felt it was worth it for the ease and variety. We ate at The Kitchen and The Beach (LUX* Le Morne) most evenings. During our South Island tour, we enjoyed a beautiful meal at Le Chamarel Panoramic Restaurant, overlooking the ocean. Some more restaurants that come highly recommended are listed below:',
-        eatTitleOne: 'WAPALAPAM, Island Eatery',
-        eatLinkOne: null,
-        eatTitleTwo: 'Umami (Dinarobin Beachcomber)',
-        eatLinkTwo: null,
-        eatTitleThree: "Dina's (Dinarobin Beachcomber)",
-        eatLinkThree: null,
-        eatTitleFour: 'The Boathouse Bar & Grill (JW Marriott Mauritius Resort)',
-        eatLinkFour: null,
-        eatTitleFive: 'Floating Market (JW Marriott Mauritius Resort)',
-        eatLinkFive: null,
-        eatTitleSix: null,
-        eatLinkSix: null,
-        eatTitleSeven: null,
-        eatLinkSeven: null,
-        eatTitleEight: null,
-        eatLinkEight: null,
+        whereToEatBulletData: [
+            {
+                title: 'WAPALAPAM, Island Eatery',
+            },
+            {
+                title: 'Umami (Dinarobin Beachcomber)',
+            },
+            {
+                title: 'The Boathouse Bar & Grill (JW Marriott Mauritius Resort)',
+            },
+            {
+                title: 'Floating Market (JW Marriott Mauritius Resort)',
+            },
+        ],
         eatImage: "images/Mauritius-Images/mauritius-rum-factory-01.jpg",
         eatImageDescription: null,
         eatImageLink: null,
 
         // Other Activities
-        otherActivityText: 'Hike to the summit of Le Morne Brabant. Take an organised boat tour or catamaran cruise to explore the nearby islands like Ãle aux Cerfs and Ãle aux Aigrettes. See Le Mornes incredible underwater waterfall from the air by helicopter or sea plane. Visit Charamel and discover its waterfall, Severn coloured earth and rum distillery. ',
+        otherActivityText: [
+            'Hike to the summit of Le Morne Brabant. Take an organised boat tour or catamaran cruise to explore the nearby islands like Ãle aux Cerfs and Ãle aux Aigrettes. See Le Mornes incredible underwater waterfall from the air by helicopter or sea plane. Visit Charamel and discover its waterfall, Severn coloured earth and rum distillery.',
+        ],
         otherActivityImage: "images/Mauritius-Images/ben-wakeboarding.jpg",
     },
     {
@@ -311,13 +367,7 @@ export let SpotGuidePages = [
 
         // Lessons and hire
         lessonIntro: null,
-        lessonTitleOne: null,
-        lessonLinkOne: null,
-        lessonTitleTwo: null,
-        lessonLinkTwo: null,
-        lessonTitleThree: null,
-        lessonLinkThree: null,
-        lessonHireImage: null,
+        lessonBulletData: null,
         lessonHireImageDescription: null,
         lessonHireImageLink: null,
         
@@ -327,44 +377,19 @@ export let SpotGuidePages = [
 
         // Travelling around
         travellingIntro: null,
-        travellingOneTitle: null,
-        travellingOneLink: null,
-        travellingTwoTitle: null,
-        travellingTwoLink: null,
-        travellingThreeTitle: null,
-        travellingThreeLink: null,
+        travellingBulletData: null,
         travellingImage: null,
 
         // Where to stay
         stayIntro: null,
-        stayOneTitle: null,
-        stayOneLink: null,
-        stayTwoTitle: null,
-        stayTwoLink: null,
-        stayThreeTitle: null,
-        stayThreeLink: null,
+        whereToStayBulletData: null,
         stayImage: null,
         stayImageDescription: null,
         stayImageLink: null,
 
         // Where to eat
         eatIntro: null,
-        eatTitleOne: null,
-        eatLinkOne: null,
-        eatTitleTwo: null,
-        eatLinkTwo: null,
-        eatTitleThree: null,
-        eatLinkThree: null,
-        eatTitleFour: null,
-        eatLinkFour: null,
-        eatTitleFive: null,
-        eatLinkFive: null,
-        eatTitleSix: null,
-        eatLinkSix: null,
-        eatTitleSeven: null,
-        eatLinkSeven: null,
-        eatTitleEight: null,
-        eatLinkEight: null,
+        whereToEatBulletData: null,
         eatImage: null,
         eatImageDescription: null,
         eatImageLink: null,
@@ -428,12 +453,20 @@ export let SpotGuidePages = [
 
         // Lessons and hire
         lessonIntro: "There are three main centres for hiring equipment and booking lessons. We used Dahab starts for storage of our equipment and also for boat shuttle services out to snorkle spots when the wind wasnt so strong. Here are the well known centres:",
-        lessonTitleOne: "Dahab Stars",
-        lessonLinkOne: "https://www.dahab-stars.com/",
-        lessonTitleTwo: "Harry Nass",
-        lessonLinkTwo: "https://www.harry-nass.com/en/",
-        lessonTitleThree: "Five Squares",
-        lessonLinkThree: "https://go-dahab.ru/eng/",
+        lessonBulletData: [
+            {
+                title: 'Dahab Stars',
+                link: 'https://www.dahab-stars.com/',
+            },
+            {
+                title: 'Harry Nass',
+                link: 'https://www.harry-nass.com/en/',
+            },
+            {
+                title: 'Five Squares',
+                link: 'https://go-dahab.ru/eng/',
+            },
+        ],
         lessonHireImage: null,
         lessonHireImageDescription: "Dahab Stars",
         lessonHireImageLink: "https://www.dahab-stars.com/",
@@ -441,40 +474,31 @@ export let SpotGuidePages = [
 
         // Where to stay
         stayIntro: "During our visit to dahav we stayed in 4 different accomodations. It must be said, if you're budget isnt extremely tight, the little extra goes along way. We upgraded from a small apartment with no locking doors in the centre to a luxury resort fo a small additional cost. If you're planning to visit for a short period of time, we recomend the following hotels from our personal experience:",
-        stayOneTitle: "Swiss Inn Resort",
-        stayOneLink: "https://swissinn.net/hotels/index.php?lang=Dahab",
-        stayTwoTitle: "Safir Hotel",
-        stayTwoLink: "https://safirhotels.com/en/hotel/dahab",
-        stayThreeTitle: null,
-        stayThreeLink: null,
+        whereToStayBulletData: [
+            {
+                title: 'Swiss Inn Resort',
+                link: 'https://swissinn.net/hotels/index.php?lang=Dahab',
+            },
+            {
+                title: 'Safir Hotel',
+                link: 'https://safirhotels.com/en/hotel/dahab',
+            },
+        ],
         stayImage: null,
         stayImageDescription: "Swiss Inn Resort",
         stayImageLink: "https://swissinn.net/hotels/index.php?lang=Dahab",
 
         // Where to eat
         eatIntro: null,
-        eatTitleOne: null,
-        eatLinkOne: null,
-        eatTitleTwo: null,
-        eatLinkTwo: null,
-        eatTitleThree: null,
-        eatLinkThree: null,
-        eatTitleFour: null,
-        eatLinkFour: null,
-        eatTitleFive: null,
-        eatLinkFive: null,
-        eatTitleSix: null,
-        eatLinkSix: null,
-        eatTitleSeven: null,
-        eatLinkSeven: null,
-        eatTitleEight: null,
-        eatLinkEight: null,
+        whereToEatBulletData: null,
         eatImage: null,
         eatImageDescription: null,
         eatImageLink: null,
 
         // Other Activities
-        otherActivityText: "Dahab is also famous for its world class scuba diving and snorkling. The great blue hole is one of the most famous dive spots in the world. There are also desert safaris, hiking and trecking as well as cultural experiences discovering the local beduin way of live.",
+        otherActivityText: [
+            "Dahab is also famous for its world class scuba diving and snorkling. The great blue hole is one of the most famous dive spots in the world. There are also desert safaris, hiking and trecking as well as cultural experiences discovering the local beduin way of live.",
+        ],
         otherActivityImage: null,
     },
     {
@@ -537,182 +561,40 @@ export let SpotGuidePages = [
 
         // Lessons and hire
         lessonIntro: '',
-        lessonTitleOne: '',
-        lessonLinkOne: '',
-        lessonTitleTwo: '',
-        lessonLinkTwo: '',
-        lessonTitleThree: '',
-        lessonLinkThree: '',
+        lessonBulletData: null,
         lessonHireImage: '',
         lessonHireImageDescription: '',
         lessonHireImageLink: '',
             
         // Getting here 
-        gettingHereText: 'drive',
+        gettingHereText: [
+            'drive'
+        ],
         gettingHereImage: null,
 
         // Travelling around
         travellingIntro: 'How to explore langebaan and the local areas',
-        travellingOneTitle: 'Drive',
-        travellingOneLink: null,
-        travellingTwoTitle: 'Taxi',
-        travellingTwoLink: null,
-        travellingThreeTitle: null,
-        travellingThreeLink: null,
+        travellingBulletData: null,
         travellingImage: null,
 
         // Where to stay
         stayIntro: 'we stayed in a few places',
-        stayOneTitle: 'wind town',
-        stayOneLink: null,
-        stayTwoTitle: 'wind town',
-        stayTwoLink: null,
-        stayThreeTitle: null,
-        stayThreeLink: null,
+        whereToStayBulletData: null,
         stayImage: null,
         stayImageDescription: null,
         stayImageLink: null,
 
         // Where to eat
         eatIntro: 'we ate here',
-        eatTitleOne: 'Wind town',
-        eatLinkOne: null,
-        eatTitleTwo: 'Wonderbar',
-        eatLinkTwo: null,
-        eatTitleThree: 'Farm house',
-        eatLinkThree: null,
-        eatTitleFour: null,
-        eatLinkFour: null,
-        eatTitleFive: null,
-        eatLinkFive: null,
-        eatTitleSix: null,
-        eatLinkSix: null,
-        eatTitleSeven: null,
-        eatLinkSeven: null,
-        eatTitleEight: null,
-        eatLinkEight: null,
+        whereToEatBulletData: null,
         eatImage: '',
         eatImageDescription: '',
         eatImageLink: '',
 
         // Other Activities
-        otherActivityText: "Kayacking and stuff",
+        otherActivityText: [
+            "Kayacking and stuff",
+        ],
         otherActivityImage: null,
     },
-    {
-        title: 'testing',
-        masthead: '',
-        location: '',
-        intro: "",
-        
-        // Spot Overview
-        b1: true,
-        b2: true,
-        b3: true,
-        b4: true,
-        b5: false,
-        i1: true,
-        i2: true,
-        i3: true,
-        i4: true,
-        i5: false,
-        a1: true,
-        a2: true,
-        a3: true,
-        a4: true,
-        a5: false,
-        sailingStyle: '',
-        bestConditions: '',
-        bestDirection: '',
-        windConditions: '',
-        waterConditions: '',
-        launchZone: '',
-
-        // Gallery grid
-        gridGalleryImageOne:'',
-        gridGalleryImageTwo:'',
-        gridGalleryImageThree:'',
-        gridGalleryImageFour:'',
-        
-        // Spot conditions
-        whenToGoDetails: '',
-        waterConditionDetails: "",
-        waterConditionImage: '',
-        windConditionDetails: "",
-        windConditionImage: '',
-        windStatisticDetails: "",
-        windStatisticImage: '',
-        windStatGraph: null,
-        spotDetailsOne: "", 
-        spotDetailsTwo:"",
-        spotDetailsThree: null,
-        spotDetailsFour: null,
-        spotDetailsFive: null,
-        spotImage: '',
-
-        // Lessons and hire
-        lessonIntro: '',
-        lessonTitleOne: '',
-        lessonLinkOne: '',
-        lessonTitleTwo: '',
-        lessonLinkTwo: '',
-        lessonTitleThree: '',
-        lessonLinkThree: '',
-        lessonHireImage: '',
-        lessonHireImageDescription: '',
-        lessonHireImageLink: '',
-            
-        // Getting here 
-        gettingHereText: '',
-        gettingHereImage: null,
-
-        // Travelling around
-        travellingIntro: '',
-        travellingOneTitle: '',
-        travellingOneLink: null,
-        travellingTwoTitle: '',
-        travellingTwoLink: null,
-        travellingThreeTitle: '',
-        travellingThreeLink: null,
-        travellingImage: null,
-
-        // Where to stay
-        stayIntro: '',
-        stayOneTitle: '',
-        stayOneLink: '',
-        stayTwoTitle: '',
-        stayTwoLink: '',
-        stayThreeTitle: '',
-        stayThreeLink: '',
-        stayImage: '',
-        stayImageDescription: '',
-        stayImageLink: '',
-
-        // Where to eat
-        eatIntro: '',
-        eatTitleOne: '',
-        eatLinkOne: '',
-        eatTitleTwo: '',
-        eatLinkTwo: '',
-        eatTitleThree: '',
-        eatLinkThree: '',
-        eatTitleFour: '',
-        eatLinkFour: '',
-        eatTitleFive: '',
-        eatLinkFive: '',
-        eatTitleSix: '',
-        eatLinkSix: '',
-        eatTitleSeven: '',
-        eatLinkSeven: '',
-        eatTitleEight: '',
-        eatLinkEight: '',
-        eatImage: '',
-        eatImageDescription: '',
-        eatImageLink: '',
-
-        // Other Activities
-        otherActivityText: "",
-        otherActivityImage: null,
-    },
-    
 ]

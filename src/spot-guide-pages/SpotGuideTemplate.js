@@ -89,12 +89,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     <BulletsAndImage 
                         title='Lessons and Hire'
                         intro={spotGuide.lessonIntro}
-                        titleOne={spotGuide.lessonTitleOne}
-                        linkOne={spotGuide.lessonLinkOne}
-                        titleTwo={spotGuide.lessonTitleTwo}
-                        linkTwo={spotGuide.lessonLinkTwo}
-                        titleThree={spotGuide.lessonTitleThree}
-                        linkThree={spotGuide.lessonLinkThree}
+                        bulletListData={spotGuide.lessonBulletData}
                         image={spotGuide.lessonHireImage}
                         imageDescription={spotGuide.lessonHireImageDescription}
                         imageLink={spotGuide.lessonHireImageLink}
@@ -105,7 +100,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 {spotGuide.gettingHereText && (
                     <SplitImageText
                         title={`Getting to ${spotGuide.title}`}
-                        texts={[spotGuide.gettingHereText]}
+                        texts={spotGuide.gettingHereText}
                         image={spotGuide.gettingHereImage}
                         reverse
                     />
@@ -115,12 +110,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     <BulletsAndImage
                         title='Travelling around'
                         intro={spotGuide.travellingIntro}
-                        titleOne={spotGuide.travellingOneTitle}
-                        linkOne={spotGuide.travellingOneLink}
-                        titleTwo={spotGuide.travellingTwoTitle}
-                        linkTwo={spotGuide.travellingTwoLink}
-                        titleThree={spotGuide.travellingThreeTitle}
-                        linkThree={spotGuide.travellingThreeLink}
+                        bulletListData={spotGuide.travellingBulletData}
                         image={spotGuide.travellingImage}
                         reverse
                     />
@@ -130,14 +120,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     <BulletsAndImage 
                         title='Where to stay'
                         intro={spotGuide.stayIntro}
-                        titleOne={spotGuide.stayOneTitle}
-                        linkOne={spotGuide.stayOneLink}
-                        titleTwo={spotGuide.stayTwoTitle}
-                        linkTwo={spotGuide.stayTwoLink}
-                        titleThree={spotGuide.stayThreeTitle}
-                        linkThree={spotGuide.stayThreeLink}
-                        titleFour={spotGuide.stayFourTitle}
-                        linkFour={spotGuide.stayFourLink}
+                        bulletListData={spotGuide.whereToStayBulletData}
                         image={spotGuide.stayImage}
                         imageDescription={spotGuide.stayImageDescription}
                         imageLink={spotGuide.stayImageLink}
@@ -149,22 +132,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     <BulletsAndImage 
                         title='Where to eat'
                         intro={spotGuide.eatIntro}
-                        titleOne={spotGuide.eatTitleOne}
-                        linkOne={spotGuide.eatLinkOne}
-                        titleTwo={spotGuide.eatTitleTwo}
-                        linkTwo={spotGuide.eatLinkTwo}
-                        titleThree={spotGuide.eatTitleThree}
-                        linkThree={spotGuide.eatLinkThree}
-                        titleFour={spotGuide.eatTitleFour}
-                        linkFour={spotGuide.eatLinkFour}
-                        titleFive={spotGuide.eatTitleFive}
-                        linkFive={spotGuide.eatLinkFive}
-                        titleSix={spotGuide.eatTitleSix}
-                        linkSix={spotGuide.eatLinkSix}
-                        titleSeven={spotGuide.eatTitleSeven}
-                        linkSeven={spotGuide.eatLinkSeven}
-                        titleEight={spotGuide.eatTitleEight}
-                        linkEight={spotGuide.eatLinkEight}
+                        bulletListData={spotGuide.whereToEatBulletData}
                         image={spotGuide.eatImage}
                         imageDescription={spotGuide.eatImageDescription}
                         imageLink={spotGuide.eatImageLink}
@@ -175,7 +143,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 {spotGuide.otherActivityText && (    
                     <SplitImageText 
                         title='Other Activities'
-                        texts={[spotGuide.otherActivityText]}
+                        texts={spotGuide.otherActivityText}
                         image={spotGuide.otherActivityImage}
                         reverse
                     />
