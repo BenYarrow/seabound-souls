@@ -26,9 +26,10 @@ const SpotConditions = ({
         {whenToGoDetails && (
 
             <div className='flex flex-col space-y-4 lg:space-y-8'>
-                <BlockWrapper>
+                <BlockWrapper reduceMargin>
                     <Title 
                         title="Conditions"
+                        reduceMargin
                     />
 
                     {whenToGoDetails && (

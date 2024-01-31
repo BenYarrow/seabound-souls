@@ -16,7 +16,10 @@ const AboutUs = () => {
       <StaticMasthead imageSrc={masthead} />
 
       <BlockWrapper id='content'>
-          <Title title='About us' />
+          <Title title='About us'
+            h1
+            centreTitle
+          />
             
           <Text
             title="Hi! We're Rachel and Ben"
@@ -43,15 +46,11 @@ const AboutUs = () => {
           
         </BlockWrapper>
 
-          
-
         <BlockWrapper invert>
-          <Title
-            title="Our Story"
-            invert
-          />
-
           <Text
+            title="Our Story"
+            largeHeading
+            centreHeading
             content={[
               "Our paths first crossed in the summer of 2019. Rachel was working as a watersports instructor in Vasiliki, Greece, while Ben travelled on a windsurfing trip to the same resort.",
               "We remained in touch after the summer, but as we lived 200 miles apart neither of us thought a relationship was on the cards. As the pandemic hit in 2020, we decided to spend our time in lockdown together. Despite the challenges, the shared experience brought us closer together and within just a few weeks we knew this was the start of an awesome adventure together.",
@@ -65,12 +64,14 @@ const AboutUs = () => {
 
         <BlockWrapper>
             <Title
-              title="Our Values"
             />
 
           <div class="space-y-8">
             <Text
-              title="Raising mental health awareness"
+              title="Our Values"
+              centreHeading
+              largeHeading
+              subTitle="Raising mental health awareness"
               content={[
                 "We strive to raise awareness about mental health, and believe in promoting watersports as a powerful way to enhance mental well-being.",
                 "For us, spending time on the water has a positive impact on both the mind and soul. Taking part in watersports provides not just physical exercise but also an escape from the stresses of every day life.",
@@ -79,7 +80,7 @@ const AboutUs = () => {
             />
             
             <Text
-              title="Protecting our oceans"
+              subTitle="Protecting our oceans"
               content={[
                 "Protecting our oceans is a paramount responsibility for every inhabitant of this planet. As vital sources of biodiversity and climate regulation, oceans sustain life on Earth.",
                 "To ensure their well-being, we must adopt sustainable practices, reduce plastic pollution, and combat overfishing. By advocating for marine conservation, supporting initiatives that promote responsible fishing, and raising awareness about the perils of single-use plastics, we contribute to safeguarding the delicate balance of our oceans.",
@@ -88,7 +89,7 @@ const AboutUs = () => {
             />
 
             <Text
-              title="Living conciously"
+              subTitle="Living conciously"
               content={[
                 "Living consciously in the world of windsurf travel involves a mindful connection with both nature and community. Embracing sustainable practices, such as minimizing carbon footprints and respecting local ecosystems, becomes integral to the windsurfer's lifestyle.",
                 "By immersing oneself in the beauty of diverse landscapes and understanding the impact of our actions, a conscious windsurfer strives to preserve the very environments that provide endless adventures.",
@@ -97,13 +98,15 @@ const AboutUs = () => {
             />
           </div>
 
-          <GridImageDisplay 
-              imageOne='images/Mauritius-Images/wedding-1.jpg'
-              imageTwo='images/Mauritius-Images/wedding-2.jpg'
-              imageThree='images/Mauritius-Images/mauritius.jpg'
-              imageFour='images/Mauritius-Images/wedding-3.jpg'
-            />
 
+        </BlockWrapper>
+        <BlockWrapper reduceMargin >
+            <GridImageDisplay 
+                imageOne='images/Mauritius-Images/wedding-1.jpg'
+                imageTwo='images/Mauritius-Images/wedding-2.jpg'
+                imageThree='images/Mauritius-Images/mauritius.jpg'
+                imageFour='images/Mauritius-Images/wedding-3.jpg'
+              />
         </BlockWrapper>
 
     </div>    

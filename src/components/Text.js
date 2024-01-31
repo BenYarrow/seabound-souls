@@ -3,8 +3,12 @@ import { motion, useAnimation, useInView } from "framer-motion";
 
 const Text = ({ 
     title, 
+    subTitle,
     content = [], 
     invert,
+    centredText = false,
+    largeHeading,
+    centreHeading = false
 }) => {
 
   const ref = useRef(null)
@@ -19,39 +23,44 @@ const Text = ({
   }, [isInView,  mainControls])
   
   const classes = [
-    'prose prose-h3:uppercase prose-a:text-blue prose-a:font-bold prose-h3:mt-0',
-    invert ? 'prose-h3:text-white prose-p:text-white prose-a:text-white' : 'prose-h3:text-blue prose-p:text-blue prose-a:text-blue',
-    'max-w-6xl',
+    'prose prose-headings:uppercase prose-a:text-blue prose-a:font-bold prose-headings:mt-0 max-w-6xl',
+    largeHeading && 'prose-h2:text-4xl',
+    invert ? 'prose-headings:text-white prose-p:text-white prose-a:text-white' : 'prose-headings:text-blue prose-p:text-blue prose-a:text-blue',
+    centredText && 'prose-p:text-center',
+    centreHeading && 'prose-h2:text-center'
   ].join(' ');
 
   return (
-    <div className={classes} ref={ref}>
+    <>
       {content.length > 0 && (
-        <motion.div
-          variants={{
-            hidden: {opacity: 0, y: 75},
-            visible: {opacity: 1, y: 0},
-          }}
-          initial= 'hidden'
-          animate={mainControls}
-          transition={{
-            duration: 0.5,
-            delay: 0.5
-          }}
-        >
-          {title && <h3>{title}</h3>}
-          {content.map((item, index) => (
-            <p key={index}>
-              {typeof item === 'string' || 'array' ? (
-                item
-              ) : (
-                item()
-              )}
-            </p>
-          ))}
-        </motion.div>
-      )}
-    </div>
+        <div className={classes} ref={ref}>
+          <motion.div
+            variants={{
+              hidden: {opacity: 0, y: 75},
+              visible: {opacity: 1, y: 0},
+            }}
+            initial= 'hidden'
+            animate={mainControls}
+            transition={{
+              duration: 0.5,
+              delay: 0.5
+            }}
+          >
+            {title && <h2>{title}</h2>}
+            {subTitle && <h3>{subTitle}</h3>}
+              {content.map((item, index) => (
+                <p key={index}>
+                  {typeof item === 'string' || 'array' ? (
+                    item
+                  ) : (
+                    item()
+                  )}
+                </p>
+              ))}
+          </motion.div>
+          </div>
+        )}
+    </>
   );
 };
 

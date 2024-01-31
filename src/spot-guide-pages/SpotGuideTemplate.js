@@ -9,6 +9,7 @@ import GridImageDisplay from'../components/GridImageDisplay'
 import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
+import Text from '../components/Text'
 
 const SpotGuideTemplate = ({spotGuide}) => {
     
@@ -23,7 +24,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
             <div id='content'>
 
                 {spotGuide.title && spotGuide.location && (
-                    <Title title={spotGuide.title} firstBlock />
+                    <Title title={`Windsurfing in ${spotGuide.title}`} firstBlock h1 />
                 )}
                 
                 {spotGuide.location && (
@@ -35,11 +36,12 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.intro && (
-                    <BlockWrapper>
-                        <div className='border-y-[1px] border-white-darker py-4 prose max-w-6xl prose-p:text-blue'>
-                            <p className="text-center text-base lg:text-lg">
-                                {spotGuide.intro}
-                            </p>
+                    <BlockWrapper reduceMargin>
+                        <div className='border-y-[1px] border-white-darker'>
+                            <Text
+                                content={[spotGuide.intro]}
+                                centredText
+                            />
                         </div>
                     </BlockWrapper>
                 )}
@@ -59,7 +61,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.gridGalleryImageOne && (
-                    <BlockWrapper>
+                    <BlockWrapper reduceMargin>
                         <GridImageDisplay 
                             imageOne={spotGuide.gridGalleryImageOne}
                             imageTwo={spotGuide.gridGalleryImageTwo}
