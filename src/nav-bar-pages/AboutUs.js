@@ -15,7 +15,7 @@ const AboutUs = () => {
 
       <StaticMasthead imageSrc={masthead} />
 
-      <BlockWrapper id='content'>
+      <BlockWrapper id='content' firstlBlock>
           <Title title='About us'
             h1
             centreTitle
@@ -46,7 +46,7 @@ const AboutUs = () => {
           
         </BlockWrapper>
 
-        <BlockWrapper invert>
+        <BlockWrapper invert firstlBlock>
           <Text
             title="Our Story"
             largeHeading
@@ -100,7 +100,8 @@ const AboutUs = () => {
 
 
         </BlockWrapper>
-        <BlockWrapper reduceMargin >
+        
+        <BlockWrapper>
             <GridImageDisplay 
                 imageOne='images/Mauritius-Images/wedding-1.jpg'
                 imageTwo='images/Mauritius-Images/wedding-2.jpg'

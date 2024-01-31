@@ -47,7 +47,9 @@ const Text = ({
             }}
           >
             {title && <h2>{title}</h2>}
+
             {subTitle && <h3>{subTitle}</h3>}
+
               {content.map((item, index) => (
                 <p key={index}>
                   {typeof item === 'string' || 'array' ? (
@@ -57,7 +59,7 @@ const Text = ({
                   )}
                 </p>
               ))}
-          </motion.div>
+            </motion.div>
           </div>
         )}
     </>

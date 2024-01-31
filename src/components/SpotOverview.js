@@ -2,16 +2,16 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import BlockWrapper from './BlockWrapper';
+import Title from './Title';
 
 const SpotOverview = (props) => {
 
   return (
-    <BlockWrapper>
-
-        <h2 className='text-3xl lg:text-5xl pb-4 lg:pb-8'>
-            Overview
-        </h2>
-
+    <BlockWrapper reduceMargin> 
+        <Title 
+          title='Overview' 
+          h1 
+        />
         <div className='grid grid-cols-1 md:grid-cols-3 lg:gap-8'>
             <div className='grid grid-cols-6 grid-rows-5 pb-4 lg:pb-0'>
                 <div className='w-full h-full flex items-center'>

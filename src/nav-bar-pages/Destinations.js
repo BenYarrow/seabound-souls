@@ -49,7 +49,13 @@ const Destinations = () => {
 
       <StaticMasthead imageSrc={masthead} />
       
-      <Title title='Destination spot guides' h1 firstBlock />
+      <BlockWrapper >
+        <Title 
+          title='Destination spot guides' 
+          h1 
+          centreTitle
+        />
+      </BlockWrapper>
 
       <section>
         <div className={`container mx-auto pb-8 grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>

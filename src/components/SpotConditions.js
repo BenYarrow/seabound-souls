@@ -25,12 +25,11 @@ const SpotConditions = ({
     <section>
         {whenToGoDetails && (
 
-            <div className='flex flex-col space-y-4 lg:space-y-8'>
+            <div>
                 <BlockWrapper reduceMargin>
-                    <Title 
-                        title="Conditions"
-                        reduceMargin
-                    />
+                    <h3 class="pb-8 text-4xl uppercase font-bold">
+                        Conditions
+                    </h3>
 
                     {whenToGoDetails && (
                         <Text
@@ -80,8 +79,6 @@ const SpotConditions = ({
                         reverse
                     />
                 )}
-                
-
             </div>
         )}
     </section>

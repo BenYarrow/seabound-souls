@@ -9,7 +9,7 @@ const Title = ({
     centreTitle = false,
     firstBlock = false,
 }) => {
-    console.log(firstBlock)
+
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
   
@@ -26,7 +26,6 @@ const Title = ({
         'max-w-6xl',
         invert ? 'prose-headings:text-white prose-p:text-white' : 'prose-headings:text-blue prose-p:text-blue',
         centreTitle && 'prose-headings:text-center prose-h1:text-center',
-        'prose:mt-0'
     ].join(' ')
     
     return (

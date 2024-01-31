@@ -24,15 +24,17 @@ const SpotGuideTemplate = ({spotGuide}) => {
             <div id='content'>
 
                 {spotGuide.title && spotGuide.location && (
-                    <Title title={`Windsurfing in ${spotGuide.title}`} firstBlock h1 />
-                )}
-                
-                {spotGuide.location && (
-                    <div className='pb-4 lg:pb-8 w-full flex justify-center'>
-                        <p className='font-bold'>
-                            Location: <span className='font-normal'>{spotGuide.location}</span>
-                        </p>
-                    </div>
+                    <BlockWrapper firstlBlock>
+                        <Title title={`Windsurfing in ${spotGuide.title}`} h1 centreTitle/>
+                    
+                        {spotGuide.location && (
+                            <div className=' w-full flex justify-center'>
+                                <p className='font-bold'>
+                                    Location: <span className='font-normal'>{spotGuide.location}</span>
+                                </p>
+                            </div>
+                        )}
+                    </BlockWrapper>
                 )}
 
                 {spotGuide.intro && (
