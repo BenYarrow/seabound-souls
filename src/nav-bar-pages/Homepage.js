@@ -6,6 +6,7 @@ import BlockWrapper from "../components/BlockWrapper";
 import Title from "../components/Title";
 import Text from "../components/Text";
 import ListBlogs from "../components/ListBlogs";
+import SpotGuideLineChart from "../components/charts/SpotGuideLineChart";
 
 function Homepage() {
 
@@ -93,6 +94,8 @@ function Homepage() {
         buttonLink="/destinations"
         buttonTitle="View More"
       />
+
+      <SpotGuideLineChart/>
 
     </div>
   );
