@@ -22,21 +22,21 @@ function App() {
           <ScrollToTop />
             
             <Navbar /> 
-          <Routes>
-            {/* Nav Components */}
+            <Routes>
+              {/* Nav Components */}
               <Route index element={<Homepage />}/>
               <Route path='/Homepage' element={<Homepage />}/>
-              <Route path='/Destinations' element={<Destinations />}/>
               <Route path='/AboutUs' element={<AboutUs />}/>
               <Route path='/ContactUs' element={<ContactUs />}/>
-            
-            {/* Spot Guides */}
-              <Route path='/DahabSpotGuide' element={<DahabSpotGuide />} />
-              <Route path='/LeMorneSpotGuide' element={<LeMorneSpotGuide />} />
-              <Route path='/VassilikiSpotGuide' element={<VassilikiSpotGuide />} />
-              <Route path='/RiscoDelPasoSpotGuide' element={<RiscoDelPasoSpotGuide />} />
-              <Route path='/LangebaanSpotGuide' element={<LangebaanSpotGuide />} />
-              <Route path='/TestingSpotGuide' element={<TestingSpotGuide />} />
+
+              {/* Spot Guides */}
+              <Route path='/Destinations' element={<Destinations />}/>
+                <Route path='/Destinations/DahabSpotGuide' element={<DahabSpotGuide />} />
+                <Route path='/Destinations/LeMorneSpotGuide' element={<LeMorneSpotGuide />} />
+                <Route path='/Destinations/VassilikiSpotGuide' element={<VassilikiSpotGuide />} />
+                <Route path='/Destinations/RiscoDelPasoSpotGuide' element={<RiscoDelPasoSpotGuide />} />
+                <Route path='/Destinations/LangebaanSpotGuide' element={<LangebaanSpotGuide />} />
+                <Route path='/Destinations/TestingSpotGuide' element={<TestingSpotGuide />} />
             </Routes>
           <Footer />  
         </Router>

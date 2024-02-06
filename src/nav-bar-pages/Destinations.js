@@ -107,7 +107,6 @@ const Destinations = () => {
           </div>
         </div>
       </section>
-
     </div>
   );
 };

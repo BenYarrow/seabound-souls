@@ -15,7 +15,7 @@ const SpotOverview = (props) => {
         <div className='grid grid-cols-1 md:grid-cols-3 lg:gap-8'>
             <div className='grid grid-cols-6 grid-rows-5 pb-4 lg:pb-0'>
                 <div className='w-full h-full flex items-center'>
-                    <img src='svg/skill.svg'
+                    <img src='/svg/skill.svg'
                         width="50"
                         height="50"
                         className=""
@@ -70,7 +70,7 @@ const SpotOverview = (props) => {
 
                 <div className='grid grid-cols-6 grid-rows-6'>
                     <div className='flex items-center'>
-                        <img src='svg/sailing-style.svg'
+                        <img src='/svg/sailing-style.svg'
                             width="50"
                             height="50"
                             alt='sailing style logo'
@@ -89,7 +89,7 @@ const SpotOverview = (props) => {
                     </p>
 
                     <div className='flex items-center row-start-3'>
-                        <img src='svg/best-time.svg'
+                        <img src='/svg/best-time.svg'
                             width="50"
                             height="50"
                             alt='best time to go logo'
@@ -107,7 +107,7 @@ const SpotOverview = (props) => {
                         {props.bestConditions}
                     </p>
                     <div className='flex items-center row-start-5'>
-                        <img src='svg/wind-direction.svg'
+                        <img src='/svg/wind-direction.svg'
                             width="50"
                             height="50"
                             alt='wind direction logo'
@@ -127,7 +127,7 @@ const SpotOverview = (props) => {
                 </div>
                 <div className='grid grid-cols-6 grid-rows-6'>
                     <div className='flex items-center'>
-                        <img src='svg/wind-conditions.svg'
+                        <img src='/svg/wind-conditions.svg'
                             width="50"
                             height="50"
                             alt='wind condition logo'
@@ -145,7 +145,7 @@ const SpotOverview = (props) => {
                         {props.windConditions}
                     </p>
                     <div className='flex items-center row-start-3'>
-                        <img src='svg/water.svg'
+                        <img src='/svg/water.svg'
                             width="50"
                             height="50"
                             alt='water condition logo'
@@ -163,7 +163,7 @@ const SpotOverview = (props) => {
                         {props.waterConditions}
                     </p>
                     <div className='flex items-center row-start-5'>
-                        <img src='svg/launch.png'
+                        <img src='/svg/launch.png'
                             width="50"
                             height="50"
                             alt='launch zone logo'

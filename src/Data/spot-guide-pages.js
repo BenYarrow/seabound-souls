@@ -8,7 +8,7 @@ export let SpotGuidePages = [
             'club vass'
         ],
         metaContent: '',
-        masthead: 'images/Spot-Guides/vassiliki-spotguide.jpg',
+        masthead: '/images/Spot-Guides/vassiliki-spotguide.jpg',
         location: 'Vassiliki, Lefkada',
         intro: "Vassiliki is a pretty town nestled on the southern coast of Lefkada. It is renowned for its natural beauty, world class water sports scene and vibrant nightlife. Vassiliki has become a sought-after destination for travellers seeking a perfect blend of adventure and relaxation. Whether you're a watersports enthusiast, a beach lover, or simply looking to immerse yourself in the Greek island experience, Vassiliki offers a warm and welcoming atmosphere for all.",
         
@@ -36,26 +36,26 @@ export let SpotGuidePages = [
         launchZone: 'Pebble beach',
 
         // Gallery grid
-        gridGalleryImageOne:'images/Vassiliki-Images/cosmos-hotel.jpg',
-        gridGalleryImageTwo:'images/mastheads/homepage/windsurfing-together-01.jpg',
-        gridGalleryImageThree:'images/mastheads/homepage/windsurfing-together-02.jpg',
-        gridGalleryImageFour:'images/Vassiliki-Images/surf-hotel.jpg',
+        gridGalleryImageOne:'/images/Vassiliki-Images/cosmos-hotel.jpg',
+        gridGalleryImageTwo:'/images/mastheads/homepage/windsurfing-together-01.jpg',
+        gridGalleryImageThree:'/images/mastheads/homepage/windsurfing-together-02.jpg',
+        gridGalleryImageFour:'/images/Vassiliki-Images/surf-hotel.jpg',
         
         // Spot conditions
         whenToGoDetails: 'The season runs from May to September, with the windiest months being June, July and August. ',
         waterConditionDetails: "Vassiliki bay offers both flatwater and choppy conditions, making it suitable for windsurfers of all levels. Additionally, the bay is non-tidal so theres no restrictions on sailing once the wind kicks in. The water temperature typically ranges from around 20°C (68°F) in the early spring (May) to 26°C (79°F) or higher in the peak summer months of July and August. In May and September, you may want to wear a long wetsuit, particularly once the sun sets behind the mountains. But otherwise, boardies and a rash vest is all youll need during the summer months.",
-        waterConditionImage: 'images/mastheads/homepage/paddleboarding-vass.jpg',
+        waterConditionImage: '/images/mastheads/homepage/paddleboarding-vass.jpg',
         windConditionDetails: "Vassiliki is famous for its reliable afternoon thermal winds. The prevailing wind is a katabatic thermal wind known as 'Eric,' which blows from the northwest. The wind typically starts picking up in the late morning or early afternoon, reaching its peak in the late afternoon or early evening. The air temperature during the season ranges from 25°C to 35°C (77°F to 95°F).",
-        windConditionImage: 'images/mastheads/homepage/windsurfing-together-02.jpg',
+        windConditionImage: '/images/mastheads/homepage/windsurfing-together-02.jpg',
         windStatisticDetails: "As the day progresses, the Meltemi takes charge. It typically starts picking up in the early afternoon and reaches its peak strength during the late afternoon. With winds consistently blowing between 15 to 25 knots, the steady, strong winds and predictable gusts make Vassiliki an ideal destination for those looking to progress in their windsurfing skills or take on more advanced sailing challenges.",
-        windStatisticImage: 'images/mastheads/homepage/windsurfing-together-01.jpg',
+        windStatisticImage: '/images/mastheads/homepage/windsurfing-together-01.jpg',
         windStatGraph: null,
         spotDetailsOne: null, 
         spotDetailsTwo: null,
         spotDetailsThree: null,
         spotDetailsFour: null,
         spotDetailsFive: null,
-        spotImage: 'images/Spot-Guides/vassiliki-spotguide.jpg',
+        spotImage: '/images/Spot-Guides/vassiliki-spotguide.jpg',
 
         // Lessons and hire
         lessonIntro: 'There are numerous windsurfing centres are located along the Vassiliki waterfront, offering equipment rental and lessons. These include:',
@@ -73,7 +73,7 @@ export let SpotGuidePages = [
                 link: 'https://clubvass.com/',
             },
         ],
-        lessonHireImage: 'images/mastheads/destinations/destinations-masthead.jpg',
+        lessonHireImage: '/images/mastheads/destinations/destinations-masthead.jpg',
         lessonHireImageDescription: 'Surf School Vassiliki',
         lessonHireImageLink: 'https://surfschoolvasiliki.gr/',
             
@@ -114,7 +114,7 @@ export let SpotGuidePages = [
                 link: 'https://clubvass.com/',
             },
         ],
-        stayImage: 'images/Vassiliki-Images/cosmos-hotel.jpg',
+        stayImage: '/images/Vassiliki-Images/cosmos-hotel.jpg',
         stayImageDescription: 'Cosmos Hotel',
         stayImageLink: 'https://cosmos-vassiliki.com/',
 
@@ -150,7 +150,7 @@ export let SpotGuidePages = [
                 link: 'https://rachi.gr/',
             },
         ],
-        eatImage: 'images/Vassiliki-Images/zorbas-restaurant.jpg',
+        eatImage: '/images/Vassiliki-Images/zorbas-restaurant.jpg',
         eatImageDescription: 'Patio Restaurant',
         eatImageLink: 'https://www.facebook.com/profile.php?id=100063509014691',
 
@@ -170,7 +170,7 @@ export let SpotGuidePages = [
             'ion club mauritius', 
             'ion club windsurfing',
         ],
-        masthead: 'images/Spot-Guides/mauritius-spotguide.jpg',
+        masthead: '/images/Spot-Guides/mauritius-spotguide.jpg',
         location: 'Le Morne, Mautitius',
         intro: "Mauritius is an incredible destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds. It offers ideal conditions for both freestyle and wave riding, with a mix of flat water and small to medium-sized waves.",
         
@@ -198,17 +198,17 @@ export let SpotGuidePages = [
         launchZone: 'Sandy beach',
 
         // Grid Gallery
-        gridGalleryImageOne:'images/Mauritius-Images/mauritius-beach-01.jpg',
-        gridGalleryImageTwo:'images/Mauritius-Images/rachel-windsurfing-01.jpg',
-        gridGalleryImageThree:'images/Mauritius-Images/le-morne-mountain-01.jpg',
-        gridGalleryImageFour:'images/Mauritius-Images/rachel-sitting.jpg',
+        gridGalleryImageOne:'/images/Mauritius-Images/mauritius-beach-01.jpg',
+        gridGalleryImageTwo:'/images/Mauritius-Images/rachel-windsurfing-01.jpg',
+        gridGalleryImageThree:'/images/Mauritius-Images/le-morne-mountain-01.jpg',
+        gridGalleryImageFour:'/images/Mauritius-Images/rachel-sitting.jpg',
         
         // Spot conditions
         whenToGoDetails: "The peak season in Le Morne runs from June to October when the trade winds consistently blow from the southeast. During this period, you can expect strong and consistent wind conditions, especially for wave riding. We visited during September and pretty much every day was windy with great conditions. ",
         waterConditionDetails: "The lagoon inside the reef provides shallow and flat water, making it ideal for beginners to practice. Outside of the lagoon offers a variety of wave conditions and a great place to improve your wave riding skills. The water temperature is consistently warm and comfortable year-round. It typically ranges from 24°C (75°F) in the winter to 28°C (82°F) in the summer. We wore long summer wetsuits and booties, to provide some protections from the rocks when windsurfing close to the reefs.",
-        waterConditionImage: 'images/Mauritius-Images/mauritius-beach-02.jpg',
+        waterConditionImage: '/images/Mauritius-Images/mauritius-beach-02.jpg',
         windConditionDetails: "The trade winds typically blow between 15 to 30 knots during the peak season. The predominant wind direction is cross or cross-onshore, which is great for both the lagoon and reef riding. It offers a safe launch and landing for kiters.  The air temperature ranges from warm to hot throughout the year due to its tropical climate.",
-        windConditionImage: 'images/Mauritius-Images/ben-windsurfing-01.jpg',
+        windConditionImage: '/images/Mauritius-Images/ben-windsurfing-01.jpg',
         windStatisticDetails: "Austral Summer (May to September): This is the peak windsurfing and kitesurfing season in Le Morne. During these months, the trade winds are at their strongest, and wind speeds often range from 15 to 30 knots. The winds are most consistent in the afternoon, making it the perfect time for water sports. Transition Seasons (April and October): Wind conditions in the transition months of April and October can still be favorable for windsurfing and kitesurfing, but they are generally less reliable compared to the peak summer season. Wind speeds may range from 10 to 25 knots during these months. Austral Winter (November to March): While it's possible to enjoy windsurfing and kitesurfing during the austral winter, the winds are less consistent, and wind speeds can vary widely. Wind speeds may range from 8 to 20 knots during this period.",
         windStatisticImage: "images/Mauritius-Images/ben-windsurfing-02.jpg",
         spotDetailsOne: "The Lagoon, Le Morne: Situated inside the protective reef, the water is generally flat and shallow, making it perfect for beginners and freestyle windsurfing. Little Reef, ", 
@@ -217,7 +217,7 @@ export let SpotGuidePages = [
         spotDetailsFour: "Anse La Raie: Situated on the northern coast, Anse La Raie provides excellent windsurfing opportunities with consistent trade winds. The lagoon here is shallow and flat, making it ideal for beginners and freestyle enthusiasts.",
         spotDetailsFive: "Belle Mare: Found on the eastern coast, Belle Mare features a long stretch of white sandy beach and turquoise waters. The winds here are generally lighter than in other spots, making it suitable for beginners or those who prefer more relaxed windsurfing sessions.",
         windStatGraph: null,
-        spotImage: 'images/Mauritius-Images/mauritius-beach-03.jpg',
+        spotImage: '/images/Mauritius-Images/mauritius-beach-03.jpg',
 
         // Lessons and hire
         lessonIntro: 'Ion Club Le Morne is particularly well known for its windsurfing school that caters to all levels. We hired kit from ION Club Le Morne and were very impressed with their selection of boards and sails. Staff were super friendly and always on hand to help. They also cater for kite surfers, wingfoilers and surfers.',
@@ -227,7 +227,7 @@ export let SpotGuidePages = [
                 link: 'https://www.ion-club.net/le-morne/'
             }
         ],
-        lessonHireImage: 'images/Mauritius-Images/ion-club-safety-tower.jpg',
+        lessonHireImage: '/images/Mauritius-Images/ion-club-safety-tower.jpg',
         lessonHireImageDescription: 'Ion Club, Mauritius',
         lessonHireImageLink: 'https://www.ion-club.net/le-morne/',
 
@@ -314,7 +314,7 @@ export let SpotGuidePages = [
             'PWA fuerteventura',
             'Melia Hotel'
         ],
-        masthead: 'images/Spot-Guides/risco-del-paso-spotguide.jpg',
+        masthead: '/images/Spot-Guides/risco-del-paso-spotguide.jpg',
         location: 'Fuerteventura, Canaries',
         intro: "Costa Calma, located on Fuerteventura's southeast coast, is a windsurfing paradise. Its warm waters and consistent trade winds provide ideal conditions for windsurfing, making it a haven for enthusiasts of all skill levels.",
         
@@ -407,7 +407,7 @@ export let SpotGuidePages = [
             'Dahaab lagoon', 
             'Red Sea windsurfing',
         ],
-        masthead: 'images/Spot-Guides/dahab-spotguide.jpg',
+        masthead: '/images/Spot-Guides/dahab-spotguide.jpg',
         location: "Dahab, Egypt",
         intro: "Dahab, Egypt, is a windsurfing paradise, thanks to its consistent sea breezes and warm, clear waters. This coastal haven lures windsurfing enthusiasts worldwide, offering an ideal setting for both beginners and experts to ride the waters against a backdrop of stunning desert landscapes.",
         
@@ -509,7 +509,7 @@ export let SpotGuidePages = [
             'windsurfing in South Africa', 
             'South africa windsurfing'
         ],
-        masthead: 'images/Spot-Guides/langebaan-spotguide.jpg',
+        masthead: '/images/Spot-Guides/langebaan-spotguide.jpg',
         location: 'Langebaan, South Africa',
         intro: "Langebaan is a must-visit destination for those seeking the perfect balance between adventure and relaxation. It's renowned for its consistent winds and offers much needed sunshine during the cold winter months in the northern hemisphere.",
         
