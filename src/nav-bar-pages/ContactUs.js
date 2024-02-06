@@ -1,6 +1,7 @@
 import React from "react";
 import StaticMasthead from "../components/StaticMasthead";
 import Title from "../components/Title";
+import ContactForm from "../forms/ContactForm";
 
 const ContactUs = () => {
   
@@ -21,6 +22,7 @@ const ContactUs = () => {
             Let's work together to make a positive impact while embarking on exciting adventures! Feel free to <a href="mailto:seabound.souls@outlook.com" className="font-bold border-b-[1px] border-blue">reach out</a>, and let's create waves of change together. 
           </p>
         </div>
+        <ContactForm/>
       </div>
 
     </div>
