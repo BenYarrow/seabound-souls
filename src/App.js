@@ -31,12 +31,12 @@ function App() {
 
               {/* Spot Guides */}
               <Route path='/Destinations' element={<Destinations />}/>
-                <Route path='/Destinations/DahabSpotGuide' element={<DahabSpotGuide />} />
-                <Route path='/Destinations/LeMorneSpotGuide' element={<LeMorneSpotGuide />} />
-                <Route path='/Destinations/VassilikiSpotGuide' element={<VassilikiSpotGuide />} />
-                <Route path='/Destinations/RiscoDelPasoSpotGuide' element={<RiscoDelPasoSpotGuide />} />
-                <Route path='/Destinations/LangebaanSpotGuide' element={<LangebaanSpotGuide />} />
-                <Route path='/Destinations/TestingSpotGuide' element={<TestingSpotGuide />} />
+                <Route path='/destinations/DahabSpotGuide' element={<DahabSpotGuide />} />
+                <Route path='/destinations/LeMorneSpotGuide' element={<LeMorneSpotGuide />} />
+                <Route path='/destinations/VassilikiSpotGuide' element={<VassilikiSpotGuide />} />
+                <Route path='/destinations/RiscoDelPasoSpotGuide' element={<RiscoDelPasoSpotGuide />} />
+                <Route path='/destinations/LangebaanSpotGuide' element={<LangebaanSpotGuide />} />
+                <Route path='/destinations/TestingSpotGuide' element={<TestingSpotGuide />} />
             </Routes>
           <Footer />  
         </Router>
