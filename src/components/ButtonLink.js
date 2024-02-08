@@ -5,7 +5,8 @@ const ButtonLink = ({
     sizeClass = 'base', 
     linkTo, 
     title, 
-    customClasses = ''
+    customClasses = '',
+    type = '',
 }) => {
 
     const colourClasses = {
