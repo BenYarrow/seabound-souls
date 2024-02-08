@@ -48,7 +48,7 @@ const BlogLink = ({
                     width="480"
                     height="480"
                     alt={`An image of ${location}`}
-                    class="aspect-[5/4] group-hover:scale-105 transition duration-300"
+                    className="aspect-[5/4] group-hover:scale-105 transition duration-300"
                   />
                 </div>
 

@@ -72,7 +72,7 @@ function Homepage() {
               width="480"
               height="480"
               alt="Ben and rachel on a beach in Fuerteventura"
-              class="w-full h-full object-left md:object-center object-cover xl:col-span-3"
+              className="w-full h-full object-left md:object-center object-cover xl:col-span-3"
           />
         </div>
       </BlockWrapper>
@@ -84,7 +84,7 @@ function Homepage() {
         featuredBlogs={featuredSpotGuideLinks}
         buttonLink="/destinations"
         buttonTitle="View More"
-        buttonColourClass="white-outline"
+        buttonColourclassName="white-outline"
       />
       <ListBlogs
         title="Destinations"

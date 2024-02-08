@@ -1,3 +1,6 @@
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTiktok } from "@fortawesome/free-brands-svg-icons";
+
 const metaData = {
   siteName: 'Seabound Souls',
   siteMetaContent: 'Discover the best windsurfing destinations around the world. Explore our list of top locations for windsurfing. From the crystal-clear waters of the Mauritius wild meltemi winds. Plan your trip with our detailed guides and tips.',
@@ -10,11 +13,11 @@ const siteData = {
   logo: '/Logo/logo.png',
   socialMedia: [
     {
-      icon: 'faInstagram',
+      icon: faInstagram,
       link: 'https://www.instagram.com/seabound.souls/',
     },
     {
-      icon: 'faTiktoks',
+      icon: faTiktok,
       link: 'https://www.tiktok.com/@seabound.souls?is_from_webapp=1&sender_device=pc',
     }
   ]

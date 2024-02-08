@@ -2,7 +2,6 @@ import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
-import ButtonLink from '../components/ButtonLink';
 
 export const ContactForm = () => {
     const [name, setName] = useState('');
@@ -62,7 +61,7 @@ export const ContactForm = () => {
                     onChange={(e) => setMessage(e.target.value)}
                     className="text-white p-2 bg-blue"
                 />
-                <button type='submit' class="relative px-8 py-2 bg-blue text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
+                <button type='submit' className="relative px-8 py-2 bg-blue text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
                     Send email
                 </button>
             </form>

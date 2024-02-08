@@ -66,7 +66,7 @@ const AboutUs = () => {
             <Title
             />
 
-          <div class="space-y-8">
+          <div className="space-y-8">
             <Text
               title="Our Values"
               centreHeading

@@ -29,7 +29,7 @@ const ListBlogs = ({
             })}
           </div>
           <div className='w-full pt-8 flex justify-center'>
-              <ButtonLink linkTo={buttonLink} title={buttonTitle} colourClass={invert ? "white-outline" : "blue-outline"}/>
+              <ButtonLink linkTo={buttonLink} title={buttonTitle} colourclassName={invert ? "white-outline" : "blue-outline"}/>
           </div>
       </BlockWrapper>
   )

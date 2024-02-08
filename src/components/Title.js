@@ -29,7 +29,7 @@ const Title = ({
     ].join(' ')
     
     return (
-        <div class={classes} ref={ref}>
+        <div className={classes} ref={ref}>
             <motion.div
                 variants={{
                     hidden: {opacity: 0, y: 75},
