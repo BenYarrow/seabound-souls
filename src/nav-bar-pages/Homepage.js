@@ -95,7 +95,7 @@ function Homepage() {
         buttonTitle="View More"
       />
 
-      <SpotGuideLineChart/>
+      {/* <SpotGuideLineChart/> */}
 
     </div>
   );

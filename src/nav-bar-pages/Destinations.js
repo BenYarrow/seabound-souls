@@ -55,58 +55,52 @@ const Destinations = () => {
           h1 
           centreTitle
         />
+        <section className={`container mx-auto grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>
+            <button 
+              onClick={() => setActiveFilter(windsurfingBlogs)} 
+              className={`${JSON.stringify(activeFilter) === JSON.stringify(windsurfingBlogs) ? 'bg-blue text-white ' : 'bg-blue-lighter text-blue' } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full py-2 font-bold`}
+            >
+              All
+            </button>
+
+            {windsurfingLocations.map((location, index) => {
+
+              const handleChange = () => {
+                setActiveFilter(location.filter);
+              };
+
+              return (
+                <button
+                  key={index}
+                  onClick={handleChange}
+                  className={`${
+                    JSON.stringify(activeFilter) === JSON.stringify(location.filter)
+                      ? 'bg-blue text-white '
+                      : 'bg-blue-lighter text-blue'
+                    } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full py-2 font-bold`}
+                >
+                  {location.location}
+                </button>
+              );
+            })}
+        </section>
+
+        <section className="pb-20 container mx-auto">
+            <div className={blogGridClasses}>
+              {activeFilter.map((blog) => {
+                    return blog.blogLinkData.map((data, index) => {
+                      console.log(data)
+                      return (
+                        <div key={index}>
+                          <BlogLink {...data} index={index}/>
+                        </div>
+                        
+                      );
+                    });
+                  })}
+            </div>
+        </section>
       </BlockWrapper>
-
-      <section>
-        <div className={`container mx-auto pb-8 grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>
-          <button 
-            onClick={() => setActiveFilter(windsurfingBlogs)} 
-            className={`${JSON.stringify(activeFilter) === JSON.stringify(windsurfingBlogs) ? 'bg-blue text-white ' : 'bg-blue-lighter text-blue' } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full py-2 font-bold`}
-          >
-            All
-          </button>
-
-          {windsurfingLocations.map((location, index) => {
-
-            const handleChange = () => {
-              setActiveFilter(location.filter);
-            };
-
-            return (
-              <button
-                key={index}
-                onClick={handleChange}
-                className={`${index === 0 ? 'x' : ''} ${
-                  JSON.stringify(activeFilter) === JSON.stringify(location.filter)
-                    ? 'bg-blue text-white '
-                    : 'bg-blue-lighter text-blue'
-                  } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full py-2 font-bold`}
-              >
-                {location.location}
-              </button>
-            );
-          })}
-
-        </div>
-      </section>
-
-      <section className="pb-20">
-        <div className="container mx-auto">
-          <div className={blogGridClasses}>
-            {activeFilter.map((blog) => {
-                  return blog.blogLinkData.map((data, index) => {
-                    console.log(data)
-                    return (
-                      <div key={index}>
-                        <BlogLink {...data} index={index}/>
-                      </div>
-                      
-                    );
-                  });
-                })}
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

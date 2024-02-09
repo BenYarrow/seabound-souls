@@ -45,7 +45,7 @@ const Navbar = () => {
                 Seabound souls
             </h1>
           ) : (
-            <Link to='/Homepage' className=" text-4xl md:text-6xl uppercase">
+            <Link to='/Homepage' className="text-3xl md:text-6xl uppercase">
                 Seabound souls
             </Link>
           )}

@@ -45,21 +45,21 @@ export const ContactForm = () => {
                     placeholder='Your name'
                     value={name}
                     onChange={(e) => setName(e.target.value)}
-                    className="p-2 bg-blue text-white placeholder:text-blue-lighter"
+                    className="p-2 text-blue border-b-[1px] border-blue placeholder:text-blue-lighter"
                 />
                 <input
                     type='text'
                     placeholder='Your email'
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    className="p-2 bg-blue text-white placeholder:text-blue-lighter"
+                    className="p-2 text-blue border-b-[1px] border-blue placeholder:text-blue-lighter"
                 />
                 <textarea
                     cols="30"
                     rows="10"
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    className="text-white p-2 bg-blue"
+                    className="p-2 text-blue border-b-[1px] border-blue placeholder:text-blue-lighter"
                 />
                 <button type='submit' className="relative px-8 py-2 bg-blue text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
                     Send email

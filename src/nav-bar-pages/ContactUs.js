@@ -2,6 +2,7 @@ import React from "react";
 import StaticMasthead from "../components/StaticMasthead";
 import Title from "../components/Title";
 import ContactForm from "../forms/ContactForm";
+import BlockWrapper from "../components/BlockWrapper";
 
 const ContactUs = () => {
   
@@ -10,12 +11,12 @@ const ContactUs = () => {
   return (
   
     <div>
-      <StaticMasthead imageSrc={mastheadImage} backgroundPosition='bg-right-bottom'/>
-      <div className="container mx-auto w-full flex flex-col justify-center relative">
-        <Title title='Contact us' centreTitle />
+      <StaticMasthead imageSrc={mastheadImage}/>
+      <BlockWrapper className="container mx-auto">
+        <Title title='Contact us' h1 centreTitle />
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 pb-20 pt-8">
-          <div className="w-full  flex flex-col items-center  space-y-8">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
+          <div className="w-full  flex flex-col items-center gap-y-8">
             <p className="max-w-3xl text-center ">
               If you represent a brand that aligns with our values and shares our commitment to environmental conservation and mental health advocacy, we would love to explore collaboration opportunities. 
             </p>
@@ -26,7 +27,7 @@ const ContactUs = () => {
 
           <ContactForm/>
         </section>
-      </div>
+      </BlockWrapper>
 
     </div>
       
