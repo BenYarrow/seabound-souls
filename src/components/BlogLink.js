@@ -58,7 +58,7 @@ const BlogLink = ({
                   content={[blogIntro]}
                   invert={invert ? invert : false}
                 />
-                </motion.div>
+              </motion.div>
             </Link>
         
     )

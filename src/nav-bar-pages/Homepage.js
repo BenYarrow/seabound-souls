@@ -84,19 +84,14 @@ function Homepage() {
         featuredBlogs={featuredSpotGuideLinks}
         buttonLink="/destinations"
         buttonTitle="View More"
-        buttonColourclassName="white-outline"
       />
       <ListBlogs
         title="Destinations"
         subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
-        
         featuredBlogs={featuredSpotGuideLinks}
         buttonLink="/destinations"
         buttonTitle="View More"
       />
-
-      {/* <SpotGuideLineChart/> */}
-
     </div>
   );
 }

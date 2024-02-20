@@ -3,11 +3,13 @@ import React from 'react'
 const BlockWrapper = ({
     children, 
     invert = false,
+    padded = false
 }) => {
 
     const classes = [
-        'py-8 lg:py-12', 
+        'pt-8 lg:pt-12', 
         invert ? 'bg-blue' : 'bg-white',
+        padded && 'pb-8 lg:pb-12',
     ].join(' ')
 
   return (

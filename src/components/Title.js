@@ -22,7 +22,7 @@ const Title = ({
     }, [isInView,  mainControls])
 
     const classes = [
-        'prose prose-headings:uppercase prose-headings:text-2xl prose-headings:md:3xl prose-headings:lg:text-4xl prose-headings:xl-text-5xl prose-headings:mt-0 prose-headings:pt-0 prose-headings:p2-4 prose-headings:lg:pb-8',
+        'prose prose-headings:uppercase prose-headings:text-2xl prose-headings:md:3xl prose-headings:lg:text-4xl prose-headings:xl-text-5xl prose-headings:mt-0 prose-headings:pt-0',
         'max-w-6xl',
         invert ? 'prose-headings:text-white prose-p:text-white' : 'prose-headings:text-blue prose-p:text-blue',
         centreTitle && 'prose-headings:text-center prose-h1:text-center',

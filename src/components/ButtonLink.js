@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ButtonLink = ({
-    colourClass = 'blue-outline', 
+    colour = 'blue-outline', 
     sizeClass = 'base', 
     linkTo, 
     title, 
@@ -35,7 +35,7 @@ const ButtonLink = ({
 
   return (
     <button className={customClasses}>
-        <a href={linkTo} className={`${colourClasses[colourClass].class} ${sizeClasses[sizeClass].class} uppercase font-bold transition duration-200`}>
+        <a href={linkTo} className={`${colourClasses[colour].class} ${sizeClasses[sizeClass].class} uppercase font-bold transition duration-200`}>
             {title}
         </a>
     </button>

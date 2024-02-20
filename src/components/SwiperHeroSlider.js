@@ -38,11 +38,11 @@ const SwiperHeroSlider = (props) => {
               />
               <div className="flex flex-col justify-between items-center pb-12  z-50 h-full">
 
-                  <Title heading={props.heading} />
+                <Title heading={props.heading} />
               
-                <ButtonLink title="Join the adventure"
+                <ButtonLink title="Read more"
                   linkTo="#content"
-                  colourclassName='blue'
+                  colour='blue'
                 />
                 
               </div>
