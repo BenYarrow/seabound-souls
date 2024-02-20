@@ -11,6 +11,7 @@ import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
 
+
 const SpotGuideTemplate = ({spotGuide}) => {
     
     return (    
