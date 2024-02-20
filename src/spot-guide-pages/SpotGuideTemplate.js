@@ -10,10 +10,10 @@ import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
+import LineChart from '../components/charts/AreaChart'
 
 
-const SpotGuideTemplate = ({spotGuide}) => {
-    
+const SpotGuideTemplate = ({spotGuide, windData}) => {
     return (    
         <div>
             <SiteHelmet
@@ -39,7 +39,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.intro && (
-                    <BlockWrapper reduceMargin>
+                    <BlockWrapper>
                         <div className='border-y-[1px] border-white-darker'>
                             <Text
                                 content={[spotGuide.intro]}
@@ -64,7 +64,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                 )}
 
                 {spotGuide.gridGalleryImageOne && (
-                    <BlockWrapper reduceMargin>
+                    <BlockWrapper>
                         <GridImageDisplay 
                             imageOne={spotGuide.gridGalleryImageOne}
                             imageTwo={spotGuide.gridGalleryImageTwo}
@@ -88,6 +88,7 @@ const SpotGuideTemplate = ({spotGuide}) => {
                     spotDetailsThree={spotGuide.spotDetailsThree}
                     spotDetailsFour={spotGuide.spotDetailsFour}
                     spotImage={spotGuide.spotImage}
+                    windData={windData}
                 />
                 
                 {spotGuide.lessonIntro && (

@@ -3,8 +3,8 @@ import SplitImageText from './SplitImageText'
 import Text from '../components/Text'
 import Title from '../components/Title'
 import BlockWrapper from './BlockWrapper'
+import AreaChart from './charts/AreaChart'
 
-// destructure this and improve code
 const SpotConditions = ({
     whenToGoDetails,
     waterConditionDetails,
@@ -18,7 +18,8 @@ const SpotConditions = ({
     spotDetailsThree,
     spotDetailsFour,
     spotDetailsFive,
-    spotImage
+    spotImage,
+    windData
 }) => {
   return (
 
@@ -36,6 +37,10 @@ const SpotConditions = ({
                             title="When to go"
                             content={[whenToGoDetails]}
                         />
+                    )}
+
+                    {windData && (
+                        <AreaChart data={windData}/>
                     )}
                 </BlockWrapper>
 
