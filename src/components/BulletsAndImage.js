@@ -58,21 +58,21 @@ const BulletsAndImage = ({
                             <ul className="pl-12 flex flex-col space-y-2">
                                 {bulletListData.map((list, index) => {
                                     return (
-                                        <>
+                                        <li key={index} className='list-disc prose marker:text-blue'>
                                             {list.title != null &&  (
-                                                <li key={index} className='list-disc prose marker:text-blue'>
+                                                <>
                                                     {list.link != null ? (
                                                         <a href={list.link} target="_blank" rel="noreferrer" className='font-bold hover:underline text-blue'>
                                                             {list.title}
                                                         </a>
                                                     ) : (
-                                                        <p key={index} className="text-blue">
+                                                        <span key={index} className="text-blue">
                                                             {list.title}
-                                                        </p>
+                                                        </span>
                                                     )}
-                                                </li>
+                                                </>
                                             )}
-                                        </>
+                                        </li>
                                     )
                                 })}
                         </ul>
