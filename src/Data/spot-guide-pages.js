@@ -210,7 +210,7 @@ export let SpotGuidePages = [
         windConditionDetails: "The trade winds typically blow between 15 to 30 knots during the peak season. The predominant wind direction is cross or cross-onshore, which is great for both the lagoon and reef riding. It offers a safe launch and landing for kiters.  The air temperature ranges from warm to hot throughout the year due to its tropical climate.",
         windConditionImage: '/images/Mauritius-Images/ben-windsurfing-01.jpg',
         windStatisticDetails: "Austral Summer (May to September): This is the peak windsurfing and kitesurfing season in Le Morne. During these months, the trade winds are at their strongest, and wind speeds often range from 15 to 30 knots. The winds are most consistent in the afternoon, making it the perfect time for water sports. Transition Seasons (April and October): Wind conditions in the transition months of April and October can still be favorable for windsurfing and kitesurfing, but they are generally less reliable compared to the peak summer season. Wind speeds may range from 10 to 25 knots during these months. Austral Winter (November to March): While it's possible to enjoy windsurfing and kitesurfing during the austral winter, the winds are less consistent, and wind speeds can vary widely. Wind speeds may range from 8 to 20 knots during this period.",
-        windStatisticImage: "images/Mauritius-Images/ben-windsurfing-02.jpg",
+        windStatisticImage: "/images/Mauritius-Images/ben-windsurfing-02.jpg",
         spotDetailsOne: "The Lagoon, Le Morne: Situated inside the protective reef, the water is generally flat and shallow, making it perfect for beginners and freestyle windsurfing. Little Reef, ", 
         spotDetailsTwo:"Le Morne: Located just outside the protective reef, Little Reef offers challenging wave riding conditions with reef breaks. The waves range from chest-high to double overhead, providing a thrilling experience for advanced windsurfers.",
         spotDetailsThree: "One Eye, Le Morne: One Eye is one of the most famous wave spots in Le Morne. It's known for its powerful, barrelling waves and is a favourite among expert windsurfers. The wave can be extremely challenging, and it's not recommended for those with limited experience.",
@@ -235,7 +235,7 @@ export let SpotGuidePages = [
         gettingHereText: [
             'Regular flights are available from London Heathrow (LHR), London Gatwick (LGW), and Manchester Airport (MAN) to Sir Seewoosagur Ramgoolam International Airport (MRU), the main international airport in Mauritius. Several airlines operate flights, including British Airways, Emirates and Air Mauritius. The flight takes around 12 to 13 hours.',
         ],
-        gettingHereImage: "images/Mauritius-Images/crystal-rock.jpg",
+        gettingHereImage: "/images/Mauritius-Images/crystal-rock.jpg",
 
         // Travelling around
         travellingIntro: 'There are many ways to travel around Mauritius. We found the easiest was to book a taxi, however next time we will definitely be hiring a car for our trip.',
@@ -250,7 +250,7 @@ export let SpotGuidePages = [
                 title: 'Cycling',
             },
         ],
-        travellingImage: "images/Mauritius-Images/mauritius-monkey.jpg",
+        travellingImage: "/images/Mauritius-Images/mauritius-monkey.jpg",
 
 
         // Where to stay
@@ -273,7 +273,7 @@ export let SpotGuidePages = [
                 link: 'https://lagaulette.com',
             },
         ],
-        stayImage: "images/Mauritius-Images/lux-le-morne-bed.jpg",
+        stayImage: "/images/Mauritius-Images/lux-le-morne-bed.jpg",
         stayImageDescription: "Lux Le Morne",
         stayImageLink: "https://www.luxresorts.com/en/mauritius/hotel/luxlemorne",
 
@@ -293,7 +293,7 @@ export let SpotGuidePages = [
                 title: 'Floating Market (JW Marriott Mauritius Resort)',
             },
         ],
-        eatImage: "images/Mauritius-Images/mauritius-rum-factory-01.jpg",
+        eatImage: "/images/Mauritius-Images/mauritius-rum-factory-01.jpg",
         eatImageDescription: null,
         eatImageLink: null,
 
@@ -301,7 +301,7 @@ export let SpotGuidePages = [
         otherActivityText: [
             'Hike to the summit of Le Morne Brabant. Take an organised boat tour or catamaran cruise to explore the nearby islands like Ãle aux Cerfs and Ãle aux Aigrettes. See Le Mornes incredible underwater waterfall from the air by helicopter or sea plane. Visit Charamel and discover its waterfall, Severn coloured earth and rum distillery.',
         ],
-        otherActivityImage: "images/Mauritius-Images/ben-wakeboarding.jpg",
+        otherActivityImage: "/images/Mauritius-Images/ben-wakeboarding.jpg",
     },
     {
         title: 'Risco Del Paso',
