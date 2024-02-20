@@ -2,18 +2,18 @@ export let windData = [
     {
       location: 'Le Morne',
       data: [
-        { month: 'Jan', averageWindSpeed: 15, maxWindSpeed: 10 },
-        { month: 'Feb', averageWindSpeed: 12, maxWindSpeed: 10 },
-        { month: 'Mar', averageWindSpeed: 18, maxWindSpeed: 10 },
-        { month: 'Apr', averageWindSpeed: 22, maxWindSpeed: 10 },
-        { month: 'May', averageWindSpeed: 24, maxWindSpeed: 10 },
-        { month: 'Jun', averageWindSpeed: 32, maxWindSpeed: 10 },
-        { month: 'Jul', averageWindSpeed: 36, maxWindSpeed: 10 },
-        { month: 'Aug', averageWindSpeed: 29, maxWindSpeed: 10 },
-        { month: 'Sep', averageWindSpeed: 22, maxWindSpeed: 10 },
-        { month: 'Oct', averageWindSpeed: 18, maxWindSpeed: 10 },
-        { month: 'Nov', averageWindSpeed: 12, maxWindSpeed: 10 },
-        { month: 'Dec', averageWindSpeed: 14, maxWindSpeed: 10 }
+        { month: 'Jan', maxWindSpeed: 14, averageWindSpeed: 12 },
+        { month: 'Feb', maxWindSpeed: 8 , averageWindSpeed: 6 },
+        { month: 'Mar', maxWindSpeed: 13 , averageWindSpeed: 10 },
+        { month: 'Apr', maxWindSpeed: 14, averageWindSpeed: 11 },
+        { month: 'May', maxWindSpeed: 13, averageWindSpeed: 10 },
+        { month: 'Jun', maxWindSpeed: 15 , averageWindSpeed: 11 },
+        { month: 'Jul', maxWindSpeed: 18, averageWindSpeed: 14 },
+        { month: 'Aug', maxWindSpeed: 16, averageWindSpeed: 11 },
+        { month: 'Sep', maxWindSpeed: 16, averageWindSpeed: 14 },
+        { month: 'Oct', maxWindSpeed: 15, averageWindSpeed: 12 },
+        { month: 'Nov', maxWindSpeed: 13, averageWindSpeed: 11 },
+        { month: 'Dec', maxWindSpeed: 12, averageWindSpeed: 10 }
       ]
     },
     // Add more locations as needed
