@@ -40,7 +40,7 @@ function Homepage() {
       
       <SwiperHeroSlider images={heroImages}/>
 
-      <BlockWrapper>
+      <BlockWrapper padded={true}>
 
         <div id="content" className="grid grid-cols lg:grid-cols-2 xl:grid-cols-9 gap-8">
           
@@ -91,6 +91,7 @@ function Homepage() {
         buttonLink="/destinations"
         buttonTitle="View More"
       />
+
     </div>
   );
 }

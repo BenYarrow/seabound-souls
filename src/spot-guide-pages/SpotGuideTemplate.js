@@ -10,10 +10,9 @@ import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
-import LineChart from '../components/charts/AreaChart'
+import LiveWeatherData from '../components/LiveWeatherData'
 
-
-const SpotGuideTemplate = ({spotGuide, windData}) => {
+const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
     return (    
         <div>
             <SiteHelmet
@@ -36,6 +35,10 @@ const SpotGuideTemplate = ({spotGuide, windData}) => {
                             Location: <span className='font-normal'>{spotGuide.location}</span>
                         </p>
                     </div>
+                )}
+
+                {coordinates && (
+                    <LiveWeatherData {...coordinates}/>
                 )}
 
                 {spotGuide.intro && (
