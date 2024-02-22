@@ -27,7 +27,7 @@ const SplitImageText = ({
 
     return (
         <BlockWrapper >
-            <div className={`${image ? 'grid grid-cols-1 md:grid-cols-2 gap-8' : 'grid grid-cols-1'}  md:gap-12 lg:gap-20`}
+            <div className={`${image ? 'grid grid-cols-1 lg:grid-cols-2 gap-8' : 'grid grid-cols-1'}  lg:gap-12`}
                 variants={{
                   hidden: {opacity: 0, y: 75},
                   visible: {opacity: 1, y: 0},
@@ -40,7 +40,7 @@ const SplitImageText = ({
                 }}
             >
                 {image && (
-                    <div className={`${reverse ? 'order-last' : 'order-first'} relative group w-full h-80 md:h-96 bg-center bg-cover overflow-hidden`} ref={ref}>
+                    <div className={`${reverse ? 'order-last' : 'order-first'} relative group w-full h-80 lg:h-96 bg-center bg-cover overflow-hidden`} ref={ref}>
                         <motion.div 
                             variants={{
                                 hidden: {opacity: 0, y: 75},

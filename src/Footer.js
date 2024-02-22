@@ -11,7 +11,7 @@ const Footer = () => {
     const instagramLink = siteData.socialMedia.map(data => data.link).filter(value => value.includes("instagram"));
 
     return (
-        <BlockWrapper invert padded>
+        <BlockWrapper invert >
             <footer>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="flex flex-col justify-center gap-4 lg:gap-8">

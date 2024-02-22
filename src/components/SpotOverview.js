@@ -7,7 +7,7 @@ import Title from './Title';
 const SpotOverview = (props) => {
 
   return (
-    <BlockWrapper reduceMargin> 
+    <BlockWrapper > 
         <Title 
           title='Overview' 
           h1 

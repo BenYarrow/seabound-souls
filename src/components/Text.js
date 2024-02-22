@@ -8,7 +8,8 @@ const Text = ({
     invert,
     centredText = false,
     largeHeading,
-    centreHeading = false
+    centreHeading = false,
+    children
 }) => {
 
   const ref = useRef(null)
@@ -46,18 +47,20 @@ const Text = ({
               delay: 0.5
             }}
           >
-            {title && <h2>{title}</h2>}
+            {title && <h3>{title}</h3>}
 
-            {subTitle && <h3>{subTitle}</h3>}
+            {subTitle && <p>{subTitle}</p>}
 
-              {content.map((item, index) => (
-                <p key={index}>
-                  {typeof item === 'string' || 'array' ? (
-                    item
+            {content.map((item, index) => (
+                <div key={index}>
+                  {typeof item === 'string' || Array.isArray(item) ? (
+                    <p>{item}</p>
+                  ) : typeof item === 'function' ? (
+                    item() // Assuming item is a function that returns JSX
                   ) : (
-                    item()
+                    null // Handle other types or do nothing
                   )}
-                </p>
+                </div>
               ))}
             </motion.div>
           </div>

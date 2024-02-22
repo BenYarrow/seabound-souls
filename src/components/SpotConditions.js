@@ -1,7 +1,6 @@
 import React from 'react'
 import SplitImageText from './SplitImageText'
 import Text from '../components/Text'
-import Title from '../components/Title'
 import BlockWrapper from './BlockWrapper'
 import AreaChart from './charts/AreaChart'
 
@@ -27,7 +26,7 @@ const SpotConditions = ({
         {whenToGoDetails && (
 
             <div>
-                <BlockWrapper reduceMargin>
+                <BlockWrapper  >
                     <h3 className="pb-8 text-4xl uppercase font-bold">
                         Conditions
                     </h3>

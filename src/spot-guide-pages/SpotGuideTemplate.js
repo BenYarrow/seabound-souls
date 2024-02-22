@@ -26,16 +26,16 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 {spotGuide.title &&  (
                     <BlockWrapper>
                         <Title title={`Windsurfing in ${spotGuide.title}`} h1 centreTitle/>
+                        {spotGuide.location && (
+                            <div className='w-full flex justify-center'>
+                                <p className='font-bold'>
+                                    Location: <span className='font-normal'>{spotGuide.location}</span>
+                                </p>
+                            </div>
+                        )}
                     </BlockWrapper>
                 )}
                 
-                {spotGuide.location && (
-                    <div className='w-full flex justify-center'>
-                        <p className='font-bold'>
-                            Location: <span className='font-normal'>{spotGuide.location}</span>
-                        </p>
-                    </div>
-                )}
 
                 {coordinates && (
                     <LiveWeatherData lat={coordinates.lat} long={coordinates.long}/>
@@ -67,7 +67,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 )}
 
                 {spotGuide.gridGalleryImageOne && (
-                    <BlockWrapper>
+                    <BlockWrapper >
                         <GridImageDisplay 
                             imageOne={spotGuide.gridGalleryImageOne}
                             imageTwo={spotGuide.gridGalleryImageTwo}
@@ -159,9 +159,11 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 )}
             </div>
 
-            <div className='w-full pt-8 pb-20 flex justify-center'>
-                <ButtonLink linkTo='#content' title='back to the top'/>
-            </div>
+            <BlockWrapper>
+                <div className='flex justify-center mb-8'>
+                    <ButtonLink linkTo='#content' title='back to the top'/>
+                </div>
+            </BlockWrapper>
 
         </div>
     )

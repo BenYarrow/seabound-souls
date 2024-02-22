@@ -27,7 +27,7 @@ const ListBlogs = ({
   }, [isInView,  mainControls])
 
   return (
-    <BlockWrapper invert={invert} padded={true}>
+    <BlockWrapper invert={invert}>
         <Title
           title={title}
           subTitle={subTitle}

@@ -15,10 +15,10 @@ const BulletsAndImage = ({
     const imageLinkWrapperClasses = 'group-hover:bg-white/60 w-full h-full flex items-center justify-center transition duration-300'
 
     return (
-        <BlockWrapper>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-20 '>
+        <BlockWrapper >
+            <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12'>
                 {image && (
-                    <div className={`${reverse ? 'order-last' : ''}  w-full h-80 md:h-96 aspect-square bg-center bg-cover overflow-hidden group`}>
+                    <div className={`${reverse ? 'order-last' : ''}  w-full h-80 lg:h-96 aspect-square bg-center bg-cover overflow-hidden group`}>
                         <div className='w-full h-full bg-center bg-cover hover:scale-105 transition duration-300 -z-10'
                             style={{
                                 backgroundImage: `url(${image})`,

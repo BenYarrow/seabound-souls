@@ -15,15 +15,15 @@ const AboutUs = () => {
 
       <StaticMasthead imageSrc={masthead} />
 
-      <BlockWrapper id='content' padded>
+      <BlockWrapper id='content' >
           <Title title='About us'
             h1
             centreTitle
           />
             
           <Text
-            title="Hi! We're Rachel and Ben"
             content={[
+              "Hi! We're Rachel and Ben!", 
               "As a travel couple with a passion for windsurfing and watersports, we're always on the lookout for the next incredible destination.",
               "Our journey goes beyond the water as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health.",
               () => (
@@ -46,7 +46,7 @@ const AboutUs = () => {
           
         </BlockWrapper>
 
-        <BlockWrapper invert padded>
+        <BlockWrapper invert >
           <Text
             title="Our Story"
             largeHeading
@@ -62,7 +62,7 @@ const AboutUs = () => {
           />
         </BlockWrapper>
 
-        <BlockWrapper padded>
+        <BlockWrapper >
             <Title
             />
 

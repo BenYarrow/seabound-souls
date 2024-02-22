@@ -28,7 +28,7 @@ const LiveWeatherData = ({lat, long}) => {
     
 
     return (
-        <BlockWrapper>
+        <div className='container mx-auto'>
             <h2>
                 Live data
             </h2>
@@ -53,7 +53,7 @@ const LiveWeatherData = ({lat, long}) => {
                     
                 </div>
             )}
-        </BlockWrapper>
+        </div>
     );
 };
 

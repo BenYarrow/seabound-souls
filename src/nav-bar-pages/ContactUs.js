@@ -12,7 +12,7 @@ const ContactUs = () => {
   
     <div>
       <StaticMasthead imageSrc={mastheadImage}/>
-      <BlockWrapper className="container mx-auto" padded>
+      <BlockWrapper>
         <Title title='Contact us' h1 centreTitle />
 
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
