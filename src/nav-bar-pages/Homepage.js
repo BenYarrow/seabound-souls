@@ -54,7 +54,7 @@ function Homepage() {
               content={[
                 "Hi! We are Rachel and Ben. We're two adventure seekers, travelling the world wherever the wind takes us.",
                 "Follow our journey to discover the most incredible windsurfing destinations around the globe.",
-                "This isn't just a travel blog; it's a gateway to a unique blend of adrenaline and exploration. Whether you're a seasoned windurfer seeking the next ultimate spot or a curious traveller ready to dive into the exhilarating world of windsurfing, our blog is here to inspire, inform and fuel your passion for this incredible water sport.",
+                "This isn't just a travel blog; it's a unique blend of adrenaline and first hand experiences. Whether you're an experienced windurfer seeking the next ultimate spot or a curious traveller ready to climb onto a windsurf board, our blog is here to inspire, inform and fuel your passion for this incredible water sport.",
                 () => (
                   <span className="gap-1">
                     <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer" noopener className="whitespace-nowrap pr-1.5">

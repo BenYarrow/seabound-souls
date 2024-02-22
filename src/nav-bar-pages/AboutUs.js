@@ -15,7 +15,7 @@ const AboutUs = () => {
 
       <StaticMasthead imageSrc={masthead} />
 
-      <BlockWrapper id='content' firstlBlock>
+      <BlockWrapper id='content' padded>
           <Title title='About us'
             h1
             centreTitle
@@ -46,7 +46,7 @@ const AboutUs = () => {
           
         </BlockWrapper>
 
-        <BlockWrapper invert firstlBlock>
+        <BlockWrapper invert padded>
           <Text
             title="Our Story"
             largeHeading
@@ -62,7 +62,7 @@ const AboutUs = () => {
           />
         </BlockWrapper>
 
-        <BlockWrapper>
+        <BlockWrapper padded>
             <Title
             />
 
@@ -99,16 +99,14 @@ const AboutUs = () => {
           </div>
 
 
+              <GridImageDisplay 
+                  imageOne='images/Mauritius-Images/wedding-1.jpg'
+                  imageTwo='images/Mauritius-Images/wedding-2.jpg'
+                  imageThree='images/Mauritius-Images/mauritius.jpg'
+                  imageFour='images/Mauritius-Images/wedding-3.jpg'
+                />
         </BlockWrapper>
         
-        <BlockWrapper>
-            <GridImageDisplay 
-                imageOne='images/Mauritius-Images/wedding-1.jpg'
-                imageTwo='images/Mauritius-Images/wedding-2.jpg'
-                imageThree='images/Mauritius-Images/mauritius.jpg'
-                imageFour='images/Mauritius-Images/wedding-3.jpg'
-              />
-        </BlockWrapper>
 
     </div>    
   );
