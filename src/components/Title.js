@@ -7,7 +7,7 @@ const Title = ({
     invert = false,
     h1 = false,
     centreTitle = false,
-    firstBlock = false,
+    padded
 }) => {
 
     const ref = useRef(null)
@@ -26,6 +26,7 @@ const Title = ({
         'max-w-6xl',
         invert ? 'prose-headings:text-white prose-p:text-white' : 'prose-headings:text-blue prose-p:text-blue',
         centreTitle && 'prose-headings:text-center prose-h1:text-center',
+        padded && 'pb-4'
     ].join(' ')
     
     return (

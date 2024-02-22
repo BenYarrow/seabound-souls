@@ -54,6 +54,7 @@ const Destinations = () => {
           title='Destination spot guides' 
           h1 
           centreTitle
+          padded
         />
         <section className={`container mx-auto grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>
             <button 

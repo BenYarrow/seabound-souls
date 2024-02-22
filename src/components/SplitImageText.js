@@ -12,35 +12,32 @@ const SplitImageText = ({
     texts = []
 }) => {
 
-    const ref = useRef(null)
-    const isInView = useInView(ref, {once: true})
-  
+    const imageRef = useRef(null)
+    const textRef = useRef(null)
+    const isImageInView = useInView(imageRef, {once: true})
+    const isTextInView = useInView(textRef, {once: true})
+    
     const mainControls = useAnimation()
   
     useEffect(() => {
-      if (isInView) {
+      if (isImageInView) {
         mainControls.start('visible')
       }
-    }, [isInView,  mainControls])
+    }, [isImageInView,  mainControls])
+    
+    useEffect(() => {
+      if (isTextInView) {
+        mainControls.start('visible')
+      }
+    }, [isTextInView,  mainControls])
 
     const imageLinkWrapperClasses = 'group-hover:bg-white/60 absolute inset-0 flex items-center justify-center transition duration-300';
 
     return (
-        <BlockWrapper >
-            <div className={`${image ? 'grid grid-cols-1 lg:grid-cols-2 gap-8' : 'grid grid-cols-1'}  lg:gap-12`}
-                variants={{
-                  hidden: {opacity: 0, y: 75},
-                  visible: {opacity: 1, y: 0},
-                }}
-                initial= 'hidden'
-                animate={mainControls}
-                transition={{
-                  duration: 0.5,
-                  delay: 0.5
-                }}
-            >
+        <BlockWrapper padded>
+            <div className={`${image ? 'grid grid-cols-1 md:grid-cols-2 gap-8' : 'grid grid-cols-1'}  md:gap-12 lg:gap-20`}>
                 {image && (
-                    <div className={`${reverse ? 'order-last' : 'order-first'} relative group w-full h-80 lg:h-96 bg-center bg-cover overflow-hidden`} ref={ref}>
+                    <div className={`${reverse ? 'order-last' : 'order-first'} relative group w-full h-80 md:h-96 bg-center bg-cover overflow-hidden`} ref={imageRef}>
                         <motion.div 
                             variants={{
                                 hidden: {opacity: 0, y: 75},
@@ -67,11 +64,25 @@ const SplitImageText = ({
                         </motion.div>
                     </div>
                 )}
-
-                <Text
-                    title={title}
-                    content={texts}
-                />
+                <div ref={textRef}>
+                    <motion.div 
+                        variants={{
+                            hidden: {opacity: 0, y: 75},
+                            visible: {opacity: 1, y: 0},
+                        }}
+                        initial= 'hidden'
+                        animate={mainControls}
+                        transition={{
+                            duration: 0.5,
+                            delay: 0.5
+                        }}
+                    >
+                    <Text
+                        title={title}
+                        content={texts}
+                    />
+                    </motion.div>
+                </div>
             </div>
         </BlockWrapper>
     );

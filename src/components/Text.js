@@ -1,5 +1,4 @@
-import React, {useRef, useEffect} from 'react';
-import { motion, useAnimation, useInView } from "framer-motion";
+import React from 'react';
 
 const Text = ({ 
     title, 
@@ -9,19 +8,9 @@ const Text = ({
     centredText = false,
     largeHeading,
     centreHeading = false,
-    children
 }) => {
 
-  const ref = useRef(null)
-  const isInView = useInView(ref, {once: true})
-
-  const mainControls = useAnimation()
-
-  useEffect(() => {
-    if (isInView) {
-      mainControls.start('visible')
-    }
-  }, [isInView,  mainControls])
+  
   
   const classes = [
     'prose prose-headings:uppercase prose-a:text-blue prose-a:font-bold prose-headings:mt-0 max-w-6xl',
@@ -34,19 +23,8 @@ const Text = ({
   return (
     <>
       {content.length > 0 && (
-        <div className={classes} ref={ref}>
-          <motion.div
-            variants={{
-              hidden: {opacity: 0, y: 75},
-              visible: {opacity: 1, y: 0},
-            }}
-            initial= 'hidden'
-            animate={mainControls}
-            transition={{
-              duration: 0.5,
-              delay: 0.5
-            }}
-          >
+        <div className={classes}>
+          
             {title && <h3>{title}</h3>}
 
             {subTitle && <p>{subTitle}</p>}
@@ -56,13 +34,12 @@ const Text = ({
                   {typeof item === 'string' || Array.isArray(item) ? (
                     <p>{item}</p>
                   ) : typeof item === 'function' ? (
-                    item() // Assuming item is a function that returns JSX
+                    item()
                   ) : (
-                    null // Handle other types or do nothing
+                    null
                   )}
                 </div>
               ))}
-            </motion.div>
           </div>
         )}
     </>
