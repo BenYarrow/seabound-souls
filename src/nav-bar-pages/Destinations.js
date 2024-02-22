@@ -89,7 +89,6 @@ const Destinations = () => {
             <div className={blogGridClasses}>
               {activeFilter.map((blog) => {
                     return blog.blogLinkData.map((data, index) => {
-                      console.log(data)
                       return (
                         <div key={index}>
                           <BlogLink {...data} index={index}/>

@@ -38,7 +38,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 )}
 
                 {coordinates && (
-                    <LiveWeatherData {...coordinates}/>
+                    <LiveWeatherData lat={coordinates.lat} long={coordinates.long}/>
                 )}
 
                 {spotGuide.intro && (

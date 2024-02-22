@@ -1,16 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { siteData } from '../Data/site-data';
 import BlockWrapper from './BlockWrapper';
-import { mpsToKnots } from '../helpers/converstions';
+import { mpsToKnotsFormatter, tempFormatter } from '../helpers/unit-conversions';
 
-const LiveWeatherData = () => {
+const LiveWeatherData = ({lat, long}) => {
 
     const [weatherData, setWeatherData] = useState({});
 
     const API_KEY = siteData.openWeatherMap['key'];
-    const lat = 33.44;
-    const lon = -94.04;
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&units=metric&appid=${API_KEY}`;
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`;
 
     useEffect(() => {
         const fetchData = async () => {
@@ -20,15 +18,14 @@ const LiveWeatherData = () => {
                     throw new Error('Network response was not ok');
                 }
                 const data = await response.json();
-                // Set weather data
-                console.log(data);
                 setWeatherData(data);
             } catch (error) {
                 console.error('Error fetching weather data:', error);
             }
         };
         fetchData();
-    }, []);
+    }, [url]);
+    
 
     return (
         <BlockWrapper>
@@ -37,21 +34,23 @@ const LiveWeatherData = () => {
             </h2>
             {weatherData.current && (
                 <div>
+                    {/* NaN gusts to fix */}
                     {weatherData.current.wind_gust && (
                         <p>
-                            Live gusts: {mpsToKnots(weatherData.current.wind_gust)}
+                            Live gusts: {mpsToKnotsFormatter(weatherData.current.wind_gust)}
                         </p>
                     )}
                     {weatherData.current.wind_speed && (
                         <p>
-                            Average wind speed: {mpsToKnots(weatherData.current.wind_speed)}
+                            Average wind speed: {mpsToKnotsFormatter(weatherData.current.wind_speed)}
                         </p>
                     )}
                     {weatherData.current.temp && (
                         <p>
-                            Live temp: {weatherData.current.temp}
+                            Live temp: {tempFormatter(weatherData.current.temp)}
                         </p>
                     )}
+                    
                 </div>
             )}
         </BlockWrapper>
