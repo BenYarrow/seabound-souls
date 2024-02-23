@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { siteData } from '../Data/site-data';
-import BlockWrapper from './BlockWrapper';
-import { mpsToKnotsFormatter, tempFormatter } from '../helpers/unit-conversions';
+import { siteData } from '../../Data/site-data';
+import BlockWrapper from '../BlockWrapper';
+import { mpsToKnotsFormatter, tempFormatter } from '../../helpers/unit-conversions';
 
 const LiveWeatherData = ({lat, long}) => {
 

@@ -10,7 +10,7 @@ import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
-import LiveWeatherData from '../components/LiveWeatherData'
+import LiveWeatherData from '../components/api-weather-components/LiveWeatherData'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
     return (    
