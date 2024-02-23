@@ -91,9 +91,10 @@ const AboutUs = () => {
             <Text
               subTitle="Living conciously"
               content={[
-                "Living consciously in the world of windsurf travel involves a mindful connection with both nature and community. Embracing sustainable practices, such as minimizing carbon footprints and respecting local ecosystems, becomes integral to the windsurfer's lifestyle.",
-                "By immersing oneself in the beauty of diverse landscapes and understanding the impact of our actions, a conscious windsurfer strives to preserve the very environments that provide endless adventures.",
-                "This mindful approach extends to fostering respectful relationships with the communities encountered along the way, promoting cultural understanding and responsible tourism. In the realm of windsurfing, living consciously is not just a personal philosophy but a commitment to safeguarding the vibrant destinations that make each journey unforgettable."
+                "For us, living consciously in the world of windsurf travel means having a mindful connection with both nature and community around us.",
+                "By immersing ourselves in beautiful and diverse landscapes, we strives to preserve the very environments that provide endless joy, freedom and adrenaline.",
+                "This mindful approach extends to fostering respectful relationships with the communities we meet along the way, promoting cultural understanding and responsible tourism.",
+                "In the world of windsurfing, living consciously is not just a personal philosophy but a commitment to safeguarding the vibrant destinations that make each journey unforgettable."
               ]}
             />
           </div>
