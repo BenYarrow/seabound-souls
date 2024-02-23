@@ -6,7 +6,6 @@ const Text = ({
     content = [], 
     invert,
     centredText = false,
-    largeHeading,
     centreHeading = false,
 }) => {
 

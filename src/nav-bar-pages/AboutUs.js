@@ -24,7 +24,7 @@ const AboutUs = () => {
           <Text
             content={[
               "Hi! We're Rachel and Ben!", 
-              "As a travel couple with a passion for windsurfing and watersports, we're always on the lookout for the next incredible destination.",
+              "As a travel couple with a shared love of windsurfing and watersports, we're always on the lookout for epic destinations.",
               "Our journey goes beyond the water as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health.",
               () => (
                 <p>
