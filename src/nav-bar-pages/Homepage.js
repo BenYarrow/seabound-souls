@@ -6,6 +6,7 @@ import BlockWrapper from "../components/BlockWrapper";
 import Title from "../components/Title";
 import Text from "../components/Text";
 import ListBlogs from "../components/ListBlogs";
+import LiveWeatherMap from "../components/api-weather-components/LiveWeatherMap";
 
 function Homepage() {
 
@@ -56,7 +57,7 @@ function Homepage() {
                 "Follow our journey to discover the most incredible windsurfing destinations around the globe.",
                 "This isn't just a travel blog; it's a unique blend of travel, adrenaline and first hand experiences. Whether you're an experienced windurfer seeking the next ultimate spot or a curious traveller ready to climb onto a windsurf board, our blog is here to inspire, inform and fuel your passion for this incredible water sport.",
                 () => (
-                  <span className="gap-1">
+                  <span className="gap-1 text-blue">
                     <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer" noopener className="whitespace-nowrap pr-1.5">
                       Join us
                     </a>
@@ -91,6 +92,8 @@ function Homepage() {
         buttonLink="/destinations"
         buttonTitle="View More"
       />
+
+      <LiveWeatherMap/>
 
     </div>
   );
