@@ -82,9 +82,9 @@ const AboutUs = () => {
             <Text
               subTitle="Protecting our oceans"
               content={[
-                "Protecting our oceans is a paramount responsibility for every inhabitant of this planet. As vital sources of biodiversity and climate regulation, oceans sustain life on Earth.",
-                "To ensure their well-being, we must adopt sustainable practices, reduce plastic pollution, and combat overfishing. By advocating for marine conservation, supporting initiatives that promote responsible fishing, and raising awareness about the perils of single-use plastics, we contribute to safeguarding the delicate balance of our oceans.",
-                "Preserving these vast and mysterious ecosystems is not only an environmental imperative but a collective duty to secure a healthy future for generations to come. Through conscientious choices and global cooperation, we can strive to leave a positive and lasting impact on the oceans that connect us all."
+                "Protecting our oceans is an important responsibility for every person on this planet. As vital sources of biodiversity and climate regulation, our oceans sustain life on Earth.",
+                "To ensure the well-being of our oceans, we believe in adopting sustainable practices and reducing plastic pollution. By advocating for marine conservation and raising awareness about the impact of single-use plastics, we hope to contribute to safeguarding the balance of our oceans.",
+                "Through conscientious choices and global cooperation, we strive to leave a positive and lasting impact on our oceans, beaches and coastlines."
               ]}
             />
 
