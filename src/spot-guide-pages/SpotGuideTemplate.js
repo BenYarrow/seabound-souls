@@ -39,7 +39,9 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 
 
                 {coordinates && (
-                    <LiveWeatherData lat={coordinates.lat} long={coordinates.long}/>
+                    <BlockWrapper>
+                        <LiveWeatherData lat={coordinates.lat} long={coordinates.long}/>
+                    </BlockWrapper>
                 )}
 
                 {spotGuide.intro && (

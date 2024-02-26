@@ -11,5 +11,5 @@ const tempFormatter = (temp) => {
 
 export {
     mpsToKnotsFormatter,
-    tempFormatter
+    tempFormatter,
 }
