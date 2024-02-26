@@ -93,8 +93,6 @@ function Homepage() {
         buttonTitle="View More"
       />
 
-      <LiveWeatherMap/>
-
     </div>
   );
 }

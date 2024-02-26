@@ -9,7 +9,7 @@ export let spotGuideLinks = [
             {
                 title: 'Windsurfing in Mauritius',
                 location: 'Le Morne, Mauritius',
-                linkTo: 'LeMorneSpotGuide',
+                linkTo: '/destinations/LeMorneSpotGuide',
                 blogLinkImgSrc: 'images/Spot-Guides/mauritius-spotguide.jpg',
                 blogLinkImgAlt: 'Windsurfing in Mauritius',
                 blogIntro: `Welcome to paradise! This windy island in the Indian ocean is every windsurfers dream. From flat water to a mix of wave conditions, this destination has something for everyone.`,

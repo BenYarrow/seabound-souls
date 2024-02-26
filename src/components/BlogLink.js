@@ -27,39 +27,44 @@ const BlogLink = ({
     const fallbackImage = '/Logo/logo.png'
 
     const blogImageSrc = blogLinkImgSrc ? blogLinkImgSrc : fallbackImage
-
+    
     return(
-            <Link ref={ref} to={linkTo} key={index} aria-label={`Read about our time in ${location}`} className='group' >
-              <motion.div 
-                className="flex flex-col justify-between space-y-2 w-full overflow-hidden prose prose-h3:text-blue prose-p:text-blue"
-                variants={{
-                    hidden: {opacity: 0, y: 75},
-                    visible: {opacity: 1, y: 0},
-                  }}
-                  initial= 'hidden'
-                  animate={mainControls}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.5
-                  }}
-              >
-                <div className="overflow-hidden relative">
-                  <img src={blogImageSrc}
-                    width="480"
-                    height="480"
-                    alt={`An image of ${location}`}
-                    className="aspect-[5/4] group-hover:scale-105 transition duration-300"
-                  />
-                </div>
+          <li key={index}>
+              <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group' >
+                <motion.div 
+                  className="flex flex-col justify-between space-y-2 w-full overflow-hidden prose prose-h3:text-blue prose-p:text-blue"
+                  variants={{
+                      hidden: {opacity: 0, y: 75},
+                      visible: {opacity: 1, y: 0},
+                    }}
+                    initial= 'hidden'
+                    animate={mainControls}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.5
+                    }}
+                >
+                  <div className="overflow-hidden relative">
+                    <img src={blogImageSrc}
+                      width="480"
+                      height="480"
+                      alt={`An image of ${location}`}
+                      className="aspect-[5/4] group-hover:scale-105 transition duration-300"
+                      loading="lazy"
+                      crossOrigin="true"
+                    />
+                  </div>
 
-                
-                <Text 
-                  title={location}
-                  content={[blogIntro]}
-                  invert={invert}
-                />
-              </motion.div>
-            </Link>
+                  
+                  <Text 
+                    title={location}
+                    content={[blogIntro]}
+                    invert={invert}
+                  />
+                </motion.div>
+              </Link>
+          </li>
+            
         
     )
 }

@@ -33,7 +33,7 @@ const ListBlogs = ({
           subTitle={subTitle}
           invert={invert}
         />
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12'>
+          <ul className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12'>
             {featuredBlogs.map((blog) => {
               return blog.blogLinkData.map((data, index) => {
                 return (
@@ -41,7 +41,7 @@ const ListBlogs = ({
                 );
               });
             })}
-          </div>
+          </ul>
           <div ref={buttonRef}>
             <motion.div 
               className='w-full py-8 flex justify-center'

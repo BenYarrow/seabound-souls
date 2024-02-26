@@ -11,6 +11,7 @@ import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
 import LiveWeatherData from '../components/api-weather-components/LiveWeatherData'
+import LiveWeatherMap from '../components/api-weather-components/LiveWeatherMap'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
     return (    
@@ -158,6 +159,10 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                     />
                 )}
             </div>
+
+            {coordinates && (
+                <LiveWeatherMap lat={coordinates.lat} long={coordinates.long}/>
+            )}
 
             <BlockWrapper>
                 <div className='flex justify-center mb-8'>
