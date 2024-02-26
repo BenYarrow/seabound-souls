@@ -5,7 +5,7 @@ import BlockWrapper from '../BlockWrapper';
 
 const LiveWeatherMap = ({lat, long}) => {
     // const [weatherMapUrl, setWeatherMapUrl] = useState('');
-    // const API_KEY = siteData.openWeatherMap['key'];
+    const API_KEY = siteData.openWeatherMap['key'];
     // const url = `https://tile.openweathermap.org/map/wind_new/0/0/0.png?appid=${API_KEY}`;
     
     // useEffect(() => {
@@ -24,10 +24,8 @@ const LiveWeatherMap = ({lat, long}) => {
     //     fetchData();
     // }, [url]);
 
-    
-
-
     // DEFAULT TILE LAYER URL https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
+
     return (
            <BlockWrapper>
                 <div className='w-full h-80 lg:h-[60vh]'>

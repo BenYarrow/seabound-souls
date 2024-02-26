@@ -29,7 +29,7 @@ const BlogLink = ({
     const blogImageSrc = blogLinkImgSrc ? blogLinkImgSrc : fallbackImage
     
     return(
-          <li key={index}>
+          <li key={index} className="list-none">
               <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group' >
                 <motion.div 
                   className="flex flex-col justify-between space-y-2 w-full overflow-hidden prose prose-h3:text-blue prose-p:text-blue"
