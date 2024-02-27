@@ -3,6 +3,7 @@ import { siteData } from '../../Data/site-data';
 import { mpsToKnotsFormatter, tempFormatter } from '../../helpers/unit-conversions';
 
 const LiveWeatherData = ({ lat, long }) => {
+    
     const [weatherData, setWeatherData] = useState({});
     const [weatherStats, setWeatherStats] = useState({});
 
