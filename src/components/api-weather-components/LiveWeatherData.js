@@ -8,29 +8,22 @@ const LiveWeatherData = ({ lat, long }) => {
 
     const API_KEY = siteData.openWeatherMap['key'];
     const weatherUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`;
-    const timezoneUrl = `https://maps.googleapis.com/maps/api/timezone/json?location=${lat},${long}&timestamp=${Math.floor(Date.now() / 1000)}&key=YOUR_GOOGLE_MAPS_API_KEY`;
 
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const [weatherResponse, timezoneResponse] = await Promise.all([
-                    fetch(weatherUrl),
-                    fetch(timezoneUrl)
-                ]);
-                if (!weatherResponse.ok || !timezoneResponse.ok) {
-                    throw new Error('Network response was not ok');
+                const response = await fetch(weatherUrl);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok', response.status, response.statusText);
                 }
-                const [weatherData, timezoneData] = await Promise.all([
-                    weatherResponse.json(),
-                    timezoneResponse.json()
-                ]);
-                setWeatherData(weatherData);
+                const data = await response.json()
+                setWeatherData(data);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }
         };
         fetchData();
-    }, [weatherUrl, timezoneUrl]);
+    }, [weatherUrl]);
 
     useEffect(() => {
         if (weatherData.current) {
