@@ -7,6 +7,7 @@ const Text = ({
     invert,
     centredText = false,
     centreHeading = false,
+    lineClamp
 }) => {
   
   const classes = [
@@ -28,7 +29,7 @@ const Text = ({
             {content.map((item, index) => (
                 <div key={index}>
                   {typeof item === 'string' || Array.isArray(item) ? (
-                    <p>{item}</p>
+                    <p class={lineClamp ? lineClamp : ''}>{item}</p>
                   ) : typeof item === 'function' ? (
                     item()
                   ) : (

@@ -60,6 +60,7 @@ const BlogLink = ({
                     title={location}
                     content={[blogIntro]}
                     invert={invert}
+                    lineClamp="line-clamp-4"
                   />
                 </motion.div>
               </Link>

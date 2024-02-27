@@ -6,7 +6,6 @@ import BlockWrapper from "../components/BlockWrapper";
 import Title from "../components/Title";
 import Text from "../components/Text";
 import ListBlogs from "../components/ListBlogs";
-import LiveWeatherMap from "../components/api-weather-components/LiveWeatherMap";
 
 function Homepage() {
 
@@ -73,6 +72,8 @@ function Homepage() {
               height="480"
               alt="Ben and rachel on a beach in Fuerteventura"
               className="w-full h-full object-left md:object-center object-cover xl:col-span-3"
+              loading="lazy"
+              crossorigin
           />
         </div>
       </BlockWrapper>
