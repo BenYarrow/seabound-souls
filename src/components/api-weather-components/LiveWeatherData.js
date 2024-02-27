@@ -60,14 +60,15 @@ const LiveWeatherData = ({ lat, long }) => {
                     },
                     {
                         title: 'Conditions:',
-                        value: weatherData.current.weather ? weatherData.current.weather.map(item => item.description) : null
+                        value: weatherData.current.weather ? weatherData.current.weather.map(item => item.description) : null,
+                        icon: weatherData.current.weather ? weatherData.current.weather.map(item => item.icon) : null,
                     }
                 ]
             };
             setWeatherStats(stats);
         }
     }, [weatherData]);
-    
+    console.log(weatherData.current)
     return (
         <div className='prose prose-headings:text-blue prose-li:text-blue'>
             <h3>Live data</h3>
@@ -114,6 +115,20 @@ const LiveWeatherData = ({ lat, long }) => {
                                 <p>
                                     {windData.value}
                                 </p>
+                                {windData.icon && (
+                                    <div class="flex items-center">
+                                        <p>
+                                            Live weather icon
+                                        </p>
+                                        <img
+                                            src={`https://openweathermap.org/img/wn/${windData.icon}@2x.png`}
+                                            alt="Weather Icon"
+                                            loading="lazy"
+                                            crossorigin
+                                        />
+                                    </div>
+                                )}
+                                
                             </li>
                         )
                     })}
