@@ -59,10 +59,10 @@ const LiveWeatherData = ({ lat, long }) => {
                     },
                     {
                         title: 'Conditions:',
-                        value: weatherData.current.weather ? weatherData.current.weather.map(item => item.description).join(', ') : null
+                        value: weatherData.current.weather ? weatherData.current.weather.map(item => item.description) : null
                     }
                 ]
-        };
+            };
             setWeatherStats(stats);
         }
     }, [weatherData]);
