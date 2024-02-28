@@ -25,7 +25,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
             <div id='content'>
 
                 {spotGuide.title &&  (
-                    <BlockWrapper>
+                    <BlockWrapper firstBlock={true}>
                         <Title title={`Windsurfing in ${spotGuide.title}`} h1 centreTitle/>
                         {spotGuide.location && (
                             <div className='w-full flex justify-center'>
@@ -38,11 +38,6 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 )}
                 
 
-                {coordinates && (
-                    <BlockWrapper>
-                        <LiveWeatherData lat={coordinates.lat} long={coordinates.long}/>
-                    </BlockWrapper>
-                )}
 
                 {spotGuide.intro && (
                     <BlockWrapper>
@@ -50,8 +45,14 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                             <Text
                                 content={[spotGuide.intro]}
                                 centredText
-                            />
+                                />
                         </div>
+                    </BlockWrapper>
+                )}
+
+                {coordinates && (
+                    <BlockWrapper>
+                        <LiveWeatherData lat={coordinates.lat} long={coordinates.long}/>
                     </BlockWrapper>
                 )}
 
@@ -166,8 +167,8 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 <LiveWeatherMap lat={coordinates.lat} long={coordinates.long}/>
             )}
 
-            <BlockWrapper>
-                <div className='flex justify-center mb-8'>
+            <BlockWrapper customClasses="">
+                <div className='flex justify-center items-center'>
                     <ButtonLink linkTo='#content' title='back to the top'/>
                 </div>
             </BlockWrapper>
