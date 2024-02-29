@@ -39,25 +39,25 @@ const Navbar = () => {
   return (
     <section>
       <div className="relative bg-blue text-white ">
-        <div className="container  mx-auto w-full h-[4rem] md:h-[6rem] flex items-center justify-between md:justify-center">
+        <div className="container  mx-auto w-full h-[4rem] lg:h-[6rem] flex items-center justify-between lg:justify-center">
           {isHomePage ? (
-            <h1 className=" text-4xl md:text-6xl uppercase">
+            <h1 className=" text-4xl lg:text-6xl uppercase">
                 Seabound souls
             </h1>
           ) : (
-            <Link to='/Homepage' className="text-3xl md:text-6xl uppercase">
+            <Link to='/Homepage' className="text-3xl lg:text-6xl uppercase">
                 Seabound souls
             </Link>
           )}
           <div>
-            <button onClick={toggleMobileNav} className=' text-4xl w-full md:hidden '>
+            <button onClick={toggleMobileNav} className=' text-4xl w-full lg:hidden '>
               <FontAwesomeIcon
                 icon={mobileNav ? faXmark : faBars}
                 />
             </button>
           </div>
         </div>
-        <ul className={mobileNav ? 'z-50  absolute top-[4rem] pt-8 right-0 w-full flex flex-col space-y-2 h-[calc(100vh-4rem)] bg-white opacity-1 transition duration-300 md:hidden' : 'absolute top-[4rem] right-0 w-0 flex flex-col space-y-2 h-screen bg-white opacity-0 transition duration-300 md:hidden'}>
+        <ul className={mobileNav ? 'z-50  absolute top-[4rem] pt-8 right-0 w-full flex flex-col space-y-2 h-[calc(100vh-4rem)] bg-white opacity-1 transition duration-300 lg:hidden' : 'absolute top-[4rem] right-0 w-0 flex flex-col space-y-2 h-screen bg-white opacity-0 transition duration-300 lg:hidden'}>
             {navListItems.map((listItem, index) => {
               return (
                 <li key={index}>
@@ -74,9 +74,9 @@ const Navbar = () => {
           </ul>
       </div>
 
-      <nav className="hidden md:block relative z-10 text-blue border-b-[1px] border-blue">
+      <nav className="hidden lg:block relative z-10 text-blue border-b-[1px] border-blue">
         <div className="w-full h-[4rem] flex items-center container mx-auto  ">
-          <ul className='hidden md:relative md:w-full md:flex md:justify-center md:space-x-8'>
+          <ul className='hidden lg:relative lg:w-full lg:flex lg:justify-center lg:space-x-8'>
             {navListItems.map((listItem, index) => {
               return (
                 <li key={index}>

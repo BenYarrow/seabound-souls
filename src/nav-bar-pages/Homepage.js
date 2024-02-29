@@ -12,9 +12,16 @@ function Homepage() {
   const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-01.jpg";
 
   const heroImages = [
-      "/images/mastheads/homepage/webp/windsurfing-together-01.webp",
-      "/images/mastheads/homepage/webp/windsurfing-together-02.webp",
-      "/images/mastheads/homepage/webp/ben-vulcan-fuerteventura.webp",
+      {
+        sm: "/images/mastheads/homepage/windsurfing-together-01-mobile.jpg",
+        md: '/images/mastheads/homepage/windsurfing-together-01-tablet.jpg',
+        lg: "/images/mastheads/homepage/windsurfing-together-01-desktop.jpg",
+      },
+      {
+        sm: "/images/mastheads/homepage/ben-vulcan-fuerteventura-mobile.jpg",
+        md: '/images/mastheads/homepage/ben-vulcan-fuerteventura-tablet.jpg',
+        lg: "/images/mastheads/homepage/ben-vulcan-fuerteventura-desktop.jpg",
+      }
   ]
 
   const featuredSpotGuideLinks = spotGuideLinks
@@ -40,7 +47,7 @@ function Homepage() {
       
       <SwiperHeroSlider images={heroImages}/>
 
-      <BlockWrapper>
+      <BlockWrapper firstBlock>
 
         <div id="content" className="grid grid-cols lg:grid-cols-2 xl:grid-cols-9 gap-8">
           

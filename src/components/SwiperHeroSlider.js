@@ -24,18 +24,21 @@ const SwiperHeroSlider = (props) => {
     >
       {props.images.map((slide, index) => {
         return (
-          <SwiperSlide key={index} className="relative">
-            <div className="h-[calc(100vh-4rem)] md:h-[calc(100vh-10rem)]">
-              <img
-                src={slide.image}
-                srcSet={`${slide} 768w, ${slide}?resize&size=1024 1024w, ${slide}?resize&size=1600 1600w`}
-                sizes="(max-width: 767px) 100vw, (min-width: 768px) 50vw, 33.3vw"
-                alt={props.heading}
-                className="object-cover w-full h-full -z-50 absolute"
-                fetchpriority={index === 0 ? 'high' : 'low'}
-                loading={index > 0 ? 'lazy' : ''}
-                crossOrigin
-              />
+          <SwiperSlide key={index}>
+            <div className="relative h-[calc(100vh-4rem)] lg:h-[calc(100vh-10rem)] bg-blue-lighter">
+              <div className='absolute inset-0'>
+                <picture>
+                  <source media="(max-width: 640px)" srcSet={slide.sm} />
+                  <source media="(min-width: 641px) and (max-width: 1024px)" srcSet={slide.md} />
+                  <source media="(min-width: 1025px)" srcSet={slide.lg} />
+                  <img src={slide.mobile} alt="Ben and Rachel windsurfing" 
+                    className='object-cover w-full h-full' fetchpriority={index === 0 ? 'high' : 'low'}
+                    loading={index > 0 ? 'lazy' : ''}
+                    crossOrigin
+                  />
+                </picture>
+              </div>
+
               <div className="flex flex-col justify-between items-center pb-12  z-50 h-full">
 
                 <Title heading={props.heading} />
