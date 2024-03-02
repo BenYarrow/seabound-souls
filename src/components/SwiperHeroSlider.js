@@ -15,7 +15,7 @@ const SwiperHeroSlider = (props) => {
       modules={[Autoplay, Pagination, Navigation, EffectFade]}
       centeredSlides={true}
       autoplay={{
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: false,
       }}
       loop={true}
@@ -33,7 +33,7 @@ const SwiperHeroSlider = (props) => {
                   <source media="(min-width: 1025px)" srcSet={slide.lg} />
                   <img src={slide.mobile} alt="Ben and Rachel windsurfing" 
                     className='object-cover w-full h-full' fetchpriority={index === 0 ? 'high' : 'low'}
-                    loading={index > 0 ? 'lazy' : ''}
+                    loading={index !== 0 ? 'lazy' : ''}
                     crossOrigin
                   />
                 </picture>
