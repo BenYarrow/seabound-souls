@@ -9,7 +9,7 @@ import ListBlogs from "../components/ListBlogs";
 
 function Homepage() {
 
-  const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-01.jpg";
+  const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-mobile.jpg";
 
   const heroImages = [
       {
@@ -74,14 +74,17 @@ function Homepage() {
             />
           </div>
 
-          <img src={fuerteventuraBeach}
-              width="480"
-              height="480"
-              alt="Ben and rachel on a beach in Fuerteventura"
-              className="w-full h-full object-left md:object-center object-cover xl:col-span-3"
-              loading="lazy"
-              crossorigin
-          />
+          <picture className="xl:col-span-3">
+                <source media="(max-width: 640px)" srcSet='/images/mastheads/about-us/fuerteventura-beach-tablet.jpg' />
+                <source media="(min-width: 641px) and (max-width: 1024px)" srcSet='/images/mastheads/about-us/fuerteventura-beach-mobile.jpg' />
+                
+                    <img src='/images/mastheads/about-us/fuerteventura-beach-mobile.jpg'
+                        alt='Ben and Rachel on a beach in Fuerteventura' 
+                        className='w-full h-full object-left md:object-center object-cover '
+                        loading='lazy'
+                        crossOrigin
+                    />
+            </picture>
         </div>
       </BlockWrapper>
 
