@@ -16,7 +16,7 @@ const GridImageDisplay = (props) => {
                             alt=""
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         /> 
                     </div>
                 )}
@@ -30,7 +30,7 @@ const GridImageDisplay = (props) => {
                             alt=""
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         /> 
                     </div>
                 )}
@@ -43,7 +43,7 @@ const GridImageDisplay = (props) => {
                             alt=""
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         /> 
                     </div>
                 )}
@@ -56,7 +56,7 @@ const GridImageDisplay = (props) => {
                             alt=""
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         /> 
                     </div>          
                 )}

@@ -34,7 +34,7 @@ const AboutUs = () => {
               "Our journey goes beyond the water as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health.",
               () => (
                 <p>
-                  <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer" noopener className="whitespace-nowrap pr-1.5">
+                  <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer noopener" className="whitespace-nowrap pr-1.5">
                     Follow our journey
                   </a>
                   as we discover the most incredible windsurfing destinations around the world.

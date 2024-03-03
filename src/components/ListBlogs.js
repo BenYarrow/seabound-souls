@@ -37,7 +37,9 @@ const ListBlogs = ({
             {featuredBlogs.map((blog) => {
               return blog.blogLinkData.map((data, index) => {
                 return (
-                  <BlogLink {...data} index={index} invert={invert}/>
+                  <li key={index}>
+                    <BlogLink {...data} invert={invert}/>
+                  </li>
                 );
               });
             })}

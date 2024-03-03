@@ -44,7 +44,7 @@ const Footer = () => {
                             <ul className="flex items-center space-x-4">
                                 {siteData.socialMedia.map((social, index) => (
                                     <li key={index}>
-                                        <a href={social.link} target="_blank">
+                                        <a href={social.link} target="_blank" aria-label="Visit our social media">
                                             <FontAwesomeIcon icon={social.icon} className='text-4xl text-white'/>
                                         </a>
                                     </li>
@@ -63,7 +63,7 @@ const Footer = () => {
                             height="350"
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         />
                     </a>
                 </div>

@@ -64,7 +64,7 @@ function Homepage() {
                 "This isn't just a travel blog; it's a unique blend of travel, adrenaline and first hand experiences. Whether you're an experienced windurfer seeking the next ultimate spot or a curious traveller ready to climb onto a windsurf board, our blog is here to inspire, inform and fuel your passion for this incredible water sport.",
                 () => (
                   <span className="gap-1 text-blue">
-                    <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer" noopener className="whitespace-nowrap pr-1.5">
+                    <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer noopener" className="whitespace-nowrap pr-1.5">
                       Join us
                     </a>
                      as we chase the winds, discover new horizons and travel to the very best windsurf destinations.
@@ -82,7 +82,7 @@ function Homepage() {
                         alt='Ben and Rachel on a beach in Fuerteventura' 
                         className='w-full h-full object-left md:object-center object-cover '
                         loading='lazy'
-                        crossOrigin
+                        crossOrigin="true"
                     />
             </picture>
         </div>

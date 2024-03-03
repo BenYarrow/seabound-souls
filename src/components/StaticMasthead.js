@@ -14,7 +14,7 @@ const StaticMasthead = ({image}) => {
                         alt={image.alt} 
                         className={`${image.customClasses ? image.customClasses : 'object-cover'} w-full h-full`}
                         fetchpriority='high'
-                        crossOrigin
+                        crossOrigin="true"
                     />
                 }
             </picture>

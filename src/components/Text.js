@@ -29,7 +29,7 @@ const Text = ({
             {content.map((item, index) => (
                 <div key={index}>
                   {typeof item === 'string' || Array.isArray(item) ? (
-                    <p class={lineClamp ? lineClamp : ''}>{item}</p>
+                    <p className={lineClamp ? lineClamp : ''}>{item}</p>
                   ) : typeof item === 'function' ? (
                     item()
                   ) : (

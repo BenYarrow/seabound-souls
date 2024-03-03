@@ -50,7 +50,7 @@ const Navbar = () => {
             </Link>
           )}
           <div>
-            <button onClick={toggleMobileNav} className=' text-4xl w-full lg:hidden '>
+            <button onClick={toggleMobileNav} className=' text-4xl w-full lg:hidden' aria-label="Navigation button">
               <FontAwesomeIcon
                 icon={mobileNav ? faXmark : faBars}
                 />

@@ -34,7 +34,7 @@ const SwiperHeroSlider = (props) => {
                   <img src={slide.sm} alt="Ben and Rachel windsurfing" 
                     className='object-cover w-full h-full' fetchpriority={index === 0 ? 'high' : 'low'}
                     loading={index !== 0 ? 'lazy' : ''}
-                    crossOrigin
+                    crossOrigin="true"
                   />
                 </picture>
               </div>

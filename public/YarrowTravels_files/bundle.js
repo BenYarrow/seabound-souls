@@ -13335,7 +13335,7 @@ if (true) {
     // The attribute name is case-sensitive in SVG so we can't just use
     // the React name like we do for attributes that exist only in HTML.
 
-    ['tabIndex', 'crossOrigin'].forEach(function (attributeName) {
+    ['tabIndex', 'crossorigin'].forEach(function (attributeName) {
       properties[attributeName] = new PropertyInfoRecord(attributeName, STRING, false,
       // mustUseProperty
       attributeName.toLowerCase(),
@@ -15425,7 +15425,7 @@ if (true) {
       controls: 'controls',
       controlslist: 'controlsList',
       coords: 'coords',
-      crossorigin: 'crossOrigin',
+      crossorigin: 'crossorigin',
       dangerouslysetinnerhtml: 'dangerouslySetInnerHTML',
       data: 'data',
       datetime: 'dateTime',

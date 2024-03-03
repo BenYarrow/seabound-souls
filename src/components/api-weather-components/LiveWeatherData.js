@@ -86,7 +86,7 @@ const LiveWeatherData = ({ lat, long }) => {
                                         height="50"
                                         alt="Weather Icon"
                                         loading="lazy"
-                                        crossorigin
+                                        crossOrigin="true"
                                     />
                                 </div>
                                 )}

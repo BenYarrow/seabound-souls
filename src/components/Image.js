@@ -11,7 +11,7 @@ const Image = (props) => {
         className={`${props.customClasses} object-fit shadow-xl hover:scale-105 transition duration-300`}
         fetchpriority="low"
         loading="lazy"
-        crossOrigin
+        crossOrigin="true"
       />
     </div>
   )

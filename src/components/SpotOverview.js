@@ -76,7 +76,7 @@ const SpotOverview = (props) => {
                             alt='sailing style logo'
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -95,7 +95,7 @@ const SpotOverview = (props) => {
                             alt='best time to go logo'
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -113,7 +113,7 @@ const SpotOverview = (props) => {
                             alt='wind direction logo'
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -133,7 +133,7 @@ const SpotOverview = (props) => {
                             alt='wind condition logo'
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -151,7 +151,7 @@ const SpotOverview = (props) => {
                             alt='water condition logo'
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
@@ -169,7 +169,7 @@ const SpotOverview = (props) => {
                             alt='launch zone logo'
                             fetchpriority="low"
                             loading="lazy"
-                            crossOrigin
+                            crossOrigin="true"
                         />
                     </div>
                     <div className="w-full  h-full col-span-5 flex items-center pl-4">
