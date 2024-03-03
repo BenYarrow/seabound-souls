@@ -13,7 +13,7 @@ const AboutUs = () => {
     md: 'images/mastheads/about-us/fuerteventura-beach-tablet.jpg',
     lg: 'images/mastheads/about-us/fuerteventura-beach-desktop.jpg',
     alt: 'Ben and rachel on a beach in Fuerteventura',
-    customClasses: 'object-centre lg:object-bottom'
+    customClasses: 'object-cover object-centre lg:object-bottom'
   } 
 
   return (
