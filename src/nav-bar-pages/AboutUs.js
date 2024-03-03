@@ -8,12 +8,18 @@ import BlockWrapper from "../components/BlockWrapper";
 
 const AboutUs = () => {
 
-  const masthead = 'images/mastheads/about-us/fuerteventura-beach-01.jpg'
+  const masthead = {
+    sm: 'images/mastheads/about-us/fuerteventura-beach-mobile.jpg',
+    md: 'images/mastheads/about-us/fuerteventura-beach-tablet.jpg',
+    lg: 'images/mastheads/about-us/fuerteventura-beach-desktop.jpg',
+    alt: 'Ben and rachel on a beach in Fuerteventura',
+    customClasses: 'object-centre lg:object-bottom'
+  } 
 
   return (
     <div>
 
-      <StaticMasthead imageSrc={masthead} />
+      <StaticMasthead image={masthead} />
 
       <BlockWrapper id='content' >
           <Title title='About us'

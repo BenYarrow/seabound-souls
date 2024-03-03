@@ -6,12 +6,19 @@ import BlockWrapper from "../components/BlockWrapper";
 
 const ContactUs = () => {
   
-  const mastheadImage = 'images/mastheads/homepage/wedding-01.jpg'
+  const mastheadImage = {
+    sm: 'images/mastheads/contact-us/wedding-tablet.jpg',
+    md: 'images/mastheads/contact-us/wedding-tablet.jpg',
+    lg: 'images/mastheads/contact-us/wedding-desktop.jpg',
+    alt: 'Ben and rachel in mauritius on their wedding day',
+    customClasses: 'object-right object-cover md:object-centre'
+  } 
 
   return (
   
     <div>
-      <StaticMasthead imageSrc={mastheadImage}/>
+      <StaticMasthead image={mastheadImage}/>
+
       <BlockWrapper>
         <Title title='Contact us' h1 centreTitle />
 

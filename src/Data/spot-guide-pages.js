@@ -8,7 +8,12 @@ export let SpotGuidePages = [
             'club vass'
         ],
         metaContent: '',
-        masthead: '/images/Spot-Guides/vassiliki-spotguide.jpg',
+        masthead: {
+            sm: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-mobile.jpg',
+            md: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-tablet.jpg',
+            lg: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-desktop.jpg',
+            alt: 'Vassiliki bay'
+        },
         location: 'Vassiliki, Lefkada',
         intro: "Vassiliki is a pretty town nestled on the southern coast of Lefkada. It is renowned for its natural beauty, world class water sports scene and vibrant nightlife. Vassiliki has become a sought-after destination for travellers seeking a perfect blend of adventure and relaxation. Whether you're a watersports enthusiast, a beach lover, or simply looking to immerse yourself in the Greek island experience, Vassiliki offers a warm and welcoming atmosphere for all.",
         
@@ -170,7 +175,13 @@ export let SpotGuidePages = [
             'ion club mauritius', 
             'ion club windsurfing',
         ],
-        masthead: '/images/Spot-Guides/mauritius-spotguide.jpg',
+        masthead: {
+            sm: '/images/Spot-Guides/mauritius/mauritius-spotguide-mobile.jpg',
+            md: '/images/Spot-Guides/mauritius/mauritius-spotguide-desktop.jpg',
+            lg: '/images/Spot-Guides/mauritius/mauritius-spotguide-desktop.jpg',
+            alt: 'Le morne mountain',
+            customClasses: 'object-cover object-centre'
+        },
         location: 'Le Morne, Mautitius',
         intro: "Mauritius is an incredible destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds. It offers ideal conditions for both freestyle and wave riding, with a mix of flat water and small to medium-sized waves.",
         
@@ -314,7 +325,12 @@ export let SpotGuidePages = [
             'PWA fuerteventura',
             'Melia Hotel'
         ],
-        masthead: '/images/Spot-Guides/risco-del-paso-spotguide.jpg',
+        masthead: {
+            sm: '/images/Spot-Guides/risco/risco-spotguide-mobile.jpg',
+            md: '/images/Spot-Guides/risco/risco-spotguide-tablet.jpg',
+            lg: '/images/Spot-Guides/risco/risco-spotguide-desktop.jpg',
+            alt: 'Risco del paso lagoon',
+        },
         location: 'Fuerteventura, Canaries',
         intro: "Costa Calma, located on Fuerteventura's southeast coast, is a windsurfing paradise. Its warm waters and consistent trade winds provide ideal conditions for windsurfing, making it a haven for enthusiasts of all skill levels.",
         
@@ -407,7 +423,12 @@ export let SpotGuidePages = [
             'Dahaab lagoon', 
             'Red Sea windsurfing',
         ],
-        masthead: '/images/Spot-Guides/dahab-spotguide.jpg',
+        masthead: {
+            sm: '/images/Spot-Guides/dahab/dahab-spotguide-mobile.jpg',
+            md: '/images/Spot-Guides/dahab/dahab-spotguide-tablet.jpg',
+            lg: '/images/Spot-Guides/dahab/dahab-spotguide-desktop.jpg',
+            alt: 'Dahab beach',
+        },
         location: "Dahab, Egypt",
         intro: "Dahab, Egypt, is a windsurfing paradise, thanks to its consistent sea breezes and warm, clear waters. This coastal haven lures windsurfing enthusiasts worldwide, offering an ideal setting for both beginners and experts to ride the waters against a backdrop of stunning desert landscapes.",
         
@@ -509,7 +530,12 @@ export let SpotGuidePages = [
             'windsurfing in South Africa', 
             'South africa windsurfing'
         ],
-        masthead: '/images/Spot-Guides/langebaan-spotguide.jpg',
+        masthead: {
+            sm: '/images/Spot-Guides/langebaan/langebaan-spotguide-mobile.jpg',
+            md: '/images/Spot-Guides/langebaan/langebaan-spotguide-tablet.jpg',
+            lg: '/images/Spot-Guides/langebaan/langebaan-spotguide-desktop.jpg',
+            alt: 'Langebaan lagoon'
+        }, 
         location: 'Langebaan, South Africa',
         intro: "Langebaan is a must-visit destination for those seeking the perfect balance between adventure and relaxation. It's renowned for its consistent winds and offers much needed sunshine during the cold winter months in the northern hemisphere.",
         

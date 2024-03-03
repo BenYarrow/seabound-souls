@@ -1,16 +1,23 @@
 import React from "react";
 
-const StaticMasthead = (props) => {
+const StaticMasthead = ({image}) => {
        
     return (
         <div className="w-screen h-[60vh] relative overflow-hidden">
-            <img
-                src={props.imageSrc}
-                alt="Masthead Image"
-                width="2500"
-                height="200"
-                className="absolute left-0 top-0 h-full w-full object-cover"
-            />
+            <picture>
+                {image.sm && <source media="(max-width: 640px)" srcSet={image.sm} />}
+                
+                {image.md && <source media="(min-width: 641px) and (max-width: 1024px)" srcSet={image.md} />}
+                {image.lg && <source media="(min-width: 1025px)" srcSet={image.lg} />}
+                {image.sm && 
+                    <img src={image.sm} 
+                        alt={image.alt} 
+                        className={`${image.customClasses ? image.customClasses : 'object-cover'} w-full h-full`}
+                        fetchpriority='high'
+                        crossOrigin
+                    />
+                }
+            </picture>
         </div>
     )
 }

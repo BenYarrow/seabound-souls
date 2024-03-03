@@ -31,7 +31,7 @@ const SwiperHeroSlider = (props) => {
                   <source media="(max-width: 640px)" srcSet={slide.sm} />
                   <source media="(min-width: 641px) and (max-width: 1024px)" srcSet={slide.md} />
                   <source media="(min-width: 1025px)" srcSet={slide.lg} />
-                  <img src={slide.mobile} alt="Ben and Rachel windsurfing" 
+                  <img src={slide.sm} alt="Ben and Rachel windsurfing" 
                     className='object-cover w-full h-full' fetchpriority={index === 0 ? 'high' : 'low'}
                     loading={index !== 0 ? 'lazy' : ''}
                     crossOrigin

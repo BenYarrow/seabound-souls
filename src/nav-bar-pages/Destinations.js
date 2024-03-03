@@ -8,7 +8,13 @@ import BlockWrapper from "../components/BlockWrapper"
 
 const Destinations = () => {
   
-  const masthead = "images/mastheads/destinations/destinations-masthead.jpg";
+  const mastheadImages = {
+    sm: '/images/mastheads/destinations/ben-vulcan-vassiliki-tablet.jpg',
+    md: '/images/mastheads/destinations/ben-vulcan-vassiliki-tablet.jpg',
+    lg: '/images/mastheads/destinations/ben-vulcan-vassiliki-desktop.jpg',
+    alt: 'Ben windsrurfing in Vassiliki',
+    customClasses: 'object-cover object-centre md:object-bottom lg:object-centre'
+  } 
 
   const windsurfingBlogs = spotGuideLinks.filter(visible => visible.isVisible === true)
 
@@ -47,7 +53,7 @@ const Destinations = () => {
         ]}
       />
 
-      <StaticMasthead imageSrc={masthead} />
+      <StaticMasthead image={mastheadImages} />
       
       <BlockWrapper >
         <Title 

@@ -20,7 +20,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 customKeyWords={[spotGuide.title, spotGuide.location, spotGuide.metaKeyWords]}
             />
 
-            <StaticMasthead imageSrc={spotGuide.masthead} />
+            <StaticMasthead image={spotGuide.masthead} />
             
             <div id='content'>
 
