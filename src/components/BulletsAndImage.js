@@ -29,7 +29,7 @@ const BulletsAndImage = ({
     return (
         <BlockWrapper >
             <div ref={imageRef} >
-                <motion.div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12'
+                <motion.div className={`${image ? 'grid grid-cols-1 lg:grid-cols-2 gap-8' : 'grid grid-cols-1'}  lg:gap-12`}
                     variants={{
                         hidden: {opacity: 0, y: 75},
                         visible: {opacity: 1, y: 0},

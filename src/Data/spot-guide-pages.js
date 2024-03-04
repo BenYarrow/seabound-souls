@@ -473,8 +473,9 @@ export let SpotGuidePages = [
         gridGalleryImageFour:null,
         
         // Spot conditions
-        whenToGoDetails: "The windiest time of the year in Dahab typically occurs from late spring to early summer and then again in late summer to early autumn. During these periods, the reliable north winds create strong conditions for windsurfing and kiteboarding.",
-        waterConditionDetails: ["Famous for its flat waters, Dahab offers a great spot for beginners, freeride, freestyle and speed windsurfing.", 
+        whenToGoDetails: "The windiest time of the year in Dahab typically occurs from late spring to early summer and then again in late summer to early autumn. During these periods, the reliable north winds create strong conditions for windsurfing.",
+        waterConditionDetails: [
+            "Famous for its flat waters, Dahab offers a great spot for beginners, freeride, freestyle and speed windsurfing.", 
             () => <p><span className="font-bold">The lagoon:</span> This is generally where lessons are taken as this is a windsurf only zone. The natural curve of the sand bank creates a wide sailing area in waist deep waters which makes this a great spot to learn</p>, 
             () => <p><span className="font-bold">Speedy/Baby bay:</span> Just over the sand bar of the lagoon is another windsurf only zone which offers world-class flat water sailing. The wind comes over the sand bar and straight on to the flat water which makes this ideal for freestylers, speed sailing and for people wanting to improve their skills such as gybing. There is also a floating platform in this area where windsurfers can take a break.</p>, 
         ],
@@ -533,8 +534,15 @@ export let SpotGuidePages = [
         stayImageLink: "https://swissinn.net/hotels/index.php?lang=Dahab",
 
         // Where to eat
-        eatIntro: null,
-        whereToEatBulletData: null,
+        eatIntro: [
+            "We visited a couple of restauraunts while visiting dahab, however our favourite was Al Pacino. The food was delicious and the service was great. A warm and friendly envoronment."
+        ],
+        whereToEatBulletData: [
+            {
+                title: 'Al Pacino',
+                link: null,
+            }
+        ],
         eatImage: null,
         eatImageDescription: null,
         eatImageLink: null,
@@ -592,35 +600,59 @@ export let SpotGuidePages = [
         gridGalleryImageFour:'',
         
         // Spot conditions
-        whenToGoDetails: 'The wind season in Langebaan typically runs from November to March, with the strongest winds usually in the afternoons. Go in January or February for the best conditions.',
-        waterConditionDetails: ["Langebaan lagoon is protected from the large ocean swells and offers flat water close to the shore, an ideal spot for freestyle. Further out, the conditions become more challenging, although providing fun bump and jump blasting conditions.",
-            "One thing to note is that you do have to be mindful of the tide. When the tide is going out, the current becomes exceptionally strong, making sailing in a southeast wind less enjoyable. Conversely, when the tide is coming in, the conditions are awesome for effortless sailing. Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months (October to March), water temperatures range from around 15 to 20°C. During the winter season (April to September), temperatures can drop slightly to approximately 12 to 16°C. We'd advise a 3/2 wetsuit even in the summer months."
+        whenToGoDetails: 'The wind season in Langebaan is generally from November to March, with the strongest winds usually in the afternoons. We visited for 2 weeks at the start of january after landing on enw years eve. We had 1 week of light wind, followed by none stop wind for the second week.',
+        waterConditionDetails: [
+            "Langebaan lagoon is protected from the large ocean swells and has reasonably flat water close to the shore. It's a great spot for freestyle in the flat spots. Further out, the conditions become more unsettled, although providing fun bump and jump conditions.",
+            () => <p>One thing to note is that you do have to <span className="font-bold">be mindful of the tide.</span> When the tide is going out, the current becomes exceptionally strong, making sailing in a southeast wind a little more tricky. However, when the tide is coming in the sailing is effortless. </p>,
+            () => <p>Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months <em>(October to March),</em> water temperatures range from around <span className="font-bold">15 to 20°C.</span> During the winter season <em>(April to September)</em>, temperatures can drop slightly to approximately <span>12 to 16°C.</span> We'd recommend a 3/2 wetsuit even in the summer months.</p>
         ],
-        waterConditionImage: '',
+        waterConditionImage: null,
         windConditionDetails: [
-            "The prevailing southerly winds during the summer months (October to March) provide a consistent breeze ranging from 15 to 25 knots. This creates ideal conditions for windsurfers looking to progress their sailing or just enjoy cruising around the turquoise blue waters. Winter (April to September) brings reliable north-westerly winds, offering a slightly different but equally enjoyable windsurfing experience.",
-            "The spot benefits from thermal winds, especially during the warmer months. As the land heats up, it creates a temperature difference between the inland areas and the coast, resulting in the development of additional winds that enhance the overall wind conditions. Wind strength in Langebaan can vary, but it's not uncommon to experience winds ranging from 15 to 30 knots or more. These conditions are particularly appealing to intermediate and advanced windsurfers."
+            () => <div>
+                    <p className="font-bold">Summer months <em>(October to March):</em></p>
+                    <p>The summer brings prevailing southerly winds ranging from <span>15 to 25 knots.</span> This is great for windsurfers looking to progress their sailing or just enjoy cruising around the turquoise blue waters.</p>
+                </div>,
+            () => <div>
+                    <p className="font-bold">Winter months <em>(April to September):</em></p>
+                    <p>In the winter the direction changes to be more north-westerly, giving slightly different sailing conditions but equally enjoyable windsurfing experience.</p>
+                </div>,
+            () => <p>The spot benefits from thermal winds, especially during the warmer months. As the land heats up, it creates a temperature difference between the inland areas and the coast, resulting in the wind typically being stronger than what is forecast. Wind strength in Langebaan can vary, but it's not uncommon to experience winds ranging from <span>15 to 30 knots</span> or more.</p>
         ] ,
         windConditionImage: '',
         spots: null,
-        spotImage: '',
+        spotImage: null,
 
         // Lessons and hire
-        lessonIntro: '',
+        lessonIntro: [
+            'There is only 1 windsurfing centre in Langebaan, however from our experience, we wouldnt recomend this location as a place to learn or hire equipment from. The general attitude was not good at all.',
+            () => <p>The attitude of the centre towards the customers didnt feel very welcoming. Ben asked if he could switch out a 32cm fin on a freestyle board for a smaller one, to which the owner said: <em className="font-bold">"You wont be using our equipment for anything like that, <span className="uppercase">you will break it!</span>"</em></p>,
+            () => <p>Another occasion left a man with a broken sail stranded in the water as the staff stood on the side and watched him attempt to swim back against the current. After 10 minutes of wondering where the safety boat was, ben went down to point out the struggling sailor. Their reply was: <em className="font-bold">"Thats part of windsurfing...sh*t happens".</em> After a brief heated conversation they agreed to call the safety boat. </p>,
+            () => <p>When we first arrived at the centre we discussed how it operates, and were told that customers are only be charged for the time used. And finally, after using 5 less days of hire in than our pre booked amount, asked if a refund was possible on the unused days, to which we recieved less than 1 days rental costs.</p>
+        ],
         lessonBulletData: null,
-        lessonHireImage: '',
-        lessonHireImageDescription: '',
-        lessonHireImageLink: '',
+        lessonHireImage: null,
+        lessonHireImageDescription: null,
+        lessonHireImageLink: null,
             
         // Getting here 
         gettingHereText: [
-            'drive'
+            "Langebaan is around a 1.5hrs drive from Cape Town. It is possible to get a taxi for this journey, however we highly recomend hiring a car, as there are so many things to do in the Western Cape area.",
         ],
         gettingHereImage: null,
 
         // Travelling around
-        travellingIntro: 'How to explore langebaan and the local areas',
-        travellingBulletData: null,
+        travellingIntro: "As we just mentioned, we hired a car for our stay in LAngebaan. Driving here is very easy, with the left side of the road feeling comfortably familiar. However, make sure your doors are locked at all time while driving around Cape Town, as there are a lot of people that wander close to your car at traffic lights etc.",
+        travellingBulletData: [
+            {
+                title: 'Car hire',
+            },
+            {
+                title: 'Taxi',
+            },
+            {
+                title: 'Public transport'
+            }
+        ],
         travellingImage: null,
 
         // Where to stay
