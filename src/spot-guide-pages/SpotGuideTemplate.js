@@ -14,6 +14,7 @@ import LiveWeatherData from '../components/api-weather-components/LiveWeatherDat
 import LiveWeatherMap from '../components/api-weather-components/LiveWeatherMap'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
+
     return (    
         <div>
             <SiteHelmet
@@ -90,10 +91,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                     windStatisticImage={spotGuide.windStatisticImage}
                     windStatGraph={spotGuide.windStatGraph}
                     whenToGoDetails={spotGuide.whenToGoDetails}
-                    spotDetailsOne={spotGuide.spotDetailsOne}
-                    spotDetailsTwo={spotGuide.spotDetailsTwo}
-                    spotDetailsThree={spotGuide.spotDetailsThree}
-                    spotDetailsFour={spotGuide.spotDetailsFour}
+                    spots={spotGuide.spots}
                     spotImage={spotGuide.spotImage}
                     windData={windData}
                 />

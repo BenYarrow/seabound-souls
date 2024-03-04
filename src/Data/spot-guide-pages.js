@@ -42,24 +42,22 @@ export let SpotGuidePages = [
 
         // Gallery grid
         gridGalleryImageOne:'/images/Vassiliki-Images/cosmos-hotel.jpg',
-        gridGalleryImageTwo:'/images/mastheads/homepage/windsurfing-together-01.jpg',
-        gridGalleryImageThree:'/images/mastheads/homepage/windsurfing-together-02.jpg',
+        gridGalleryImageTwo:'/images/mastheads/homepage/windsurfing-together-01-desktop.jpg',
+        gridGalleryImageThree:'/images/mastheads/homepage/windsurfing-together-02-desktop.jpg',
         gridGalleryImageFour:'/images/Vassiliki-Images/surf-hotel.jpg',
         
         // Spot conditions
         whenToGoDetails: 'The season runs from May to September, with the windiest months being June, July and August. ',
         waterConditionDetails: "Vassiliki bay offers both flatwater and choppy conditions, making it suitable for windsurfers of all levels. Additionally, the bay is non-tidal so theres no restrictions on sailing once the wind kicks in. The water temperature typically ranges from around 20°C (68°F) in the early spring (May) to 26°C (79°F) or higher in the peak summer months of July and August. In May and September, you may want to wear a long wetsuit, particularly once the sun sets behind the mountains. But otherwise, boardies and a rash vest is all youll need during the summer months.",
         waterConditionImage: '/images/mastheads/homepage/paddleboarding-vass.jpg',
-        windConditionDetails: "Vassiliki is famous for its reliable afternoon thermal winds. The prevailing wind is a katabatic thermal wind known as 'Eric,' which blows from the northwest. The wind typically starts picking up in the late morning or early afternoon, reaching its peak in the late afternoon or early evening. The air temperature during the season ranges from 25°C to 35°C (77°F to 95°F).",
-        windConditionImage: '/images/mastheads/homepage/windsurfing-together-02.jpg',
-        windStatisticDetails: "As the day progresses, the Meltemi takes charge. It typically starts picking up in the early afternoon and reaches its peak strength during the late afternoon. With winds consistently blowing between 15 to 25 knots, the steady, strong winds and predictable gusts make Vassiliki an ideal destination for those looking to progress in their windsurfing skills or take on more advanced sailing challenges.",
-        windStatisticImage: '/images/mastheads/homepage/windsurfing-together-01.jpg',
-        windStatGraph: null,
-        spotDetailsOne: null, 
-        spotDetailsTwo: null,
-        spotDetailsThree: null,
-        spotDetailsFour: null,
-        spotDetailsFive: null,
+        windConditionDetails: [
+            "Vassiliki is famous for its reliable afternoon thermal winds. The prevailing wind is a katabatic thermal wind known as 'Eric,' which blows from the northwest.", 
+            () => <p>The wind typically starts picking up in the late morning or early afternoon, reaching its peak in the late afternoon. The air temperature during the season ranges from <span className="font-bold">25°C to 35°C (77°F to 95°F).</span></p>,
+            () => <p>Once 'Eric' shows up, its a race to the water as hundreds of windsurfers rush to catch the first gusts on the water. Winds consistently blow between <span className="font-bold">15 to 25 knots.</span></p>,
+            "The steady, strong winds and predictable gusts make Vassiliki an ideal destination for those looking to progress in their windsurfing skills or take on more advanced sailing challenges."
+        ],
+        windConditionImage: '/images/mastheads/homepage/windsurfing-together-02-desktop.jpg',
+        spots: null,
         spotImage: '/images/Spot-Guides/vassiliki-spotguide.jpg',
 
         // Lessons and hire
@@ -78,7 +76,7 @@ export let SpotGuidePages = [
                 link: 'https://clubvass.com/',
             },
         ],
-        lessonHireImage: '/images/mastheads/destinations/destinations-masthead.jpg',
+        lessonHireImage: '/images/mastheads/destinations/ben-vulcan-vassiliki-desktop.jpg',
         lessonHireImageDescription: 'Surf School Vassiliki',
         lessonHireImageLink: 'https://surfschoolvasiliki.gr/',
             
@@ -223,28 +221,33 @@ export let SpotGuidePages = [
                 <div> 
                     <p className="font-bold">Austral Summer <em>(May to September):</em></p> 
                     <p>
-                        This is the peak season in Le Morne. During these months, the trade winds are at their strongest, and wind speeds often range from <span className="font-bold">15 to 30</span> knots. The winds are most consistent in the afternoon, making it the perfect time to get on the water.
+                        This is the peak season in Le Morne. During these months, the trade winds are at their strongest, and wind speeds often range from <span className="font-bold">15 to 30 knots.</span> The winds are most consistent in the afternoon, making it the perfect time to get on the water.
                     </p>
                 </div>,
             () => 
                 <div> 
                     <p className="font-bold">Transition Seasons <em>(April and October)</em></p>
-                    <p>Wind conditions in the transition months of April and October can still be favorable, but generally less reliable than peak season. Wind speeds may range from <span className="font-bold">10 to 25</span> knots during these months.</p>
+                    <p>Wind conditions in the transition months of April and October can still be favorable, but generally less reliable than peak season. Wind speeds may range from <span className="font-bold">10 to 25 knots</span> during these months.</p>
                 </div>, 
             () => 
                 <div>
                     <p className="font-bold">Austral Winter <em>(November to March):</em></p> 
-                    <p>While it's possible to have a good session on the foil at this time of year, the winds are less consistent, and wind speeds can vary widely. Wind speeds may range from <span className="font-bold">8 to 20</span> knots during this period.</p>
+                    <p>While it's possible to have a good session on the foil at this time of year, the winds are less consistent, and wind speeds can vary widely. Wind speeds may range from <span className="font-bold">8 to 20 knots</span> during this period.</p>
                 </div>
                 
         ],
         windConditionImage: '/images/Mauritius-Images/ben-windsurfing-01.jpg',
-        spotDetailsOne: "The Lagoon, Le Morne: Situated inside the protective reef, the water is generally flat and shallow, making it perfect for beginners and freestyle windsurfing. Little Reef, ", 
-        spotDetailsTwo:"Le Morne: Located just outside the protective reef, Little Reef offers challenging wave riding conditions with reef breaks. The waves range from chest-high to double overhead, providing a thrilling experience for advanced windsurfers.",
-        spotDetailsThree: "One Eye, Le Morne: One Eye is one of the most famous wave spots in Le Morne. It's known for its powerful, barrelling waves and is a favourite among expert windsurfers. The wave can be extremely challenging, and it's not recommended for those with limited experience.",
-        spotDetailsFour: "Anse La Raie: Situated on the northern coast, Anse La Raie provides excellent windsurfing opportunities with consistent trade winds. The lagoon here is shallow and flat, making it ideal for beginners and freestyle enthusiasts.",
-        spotDetailsFive: "Belle Mare: Found on the eastern coast, Belle Mare features a long stretch of white sandy beach and turquoise waters. The winds here are generally lighter than in other spots, making it suitable for beginners or those who prefer more relaxed windsurfing sessions.",
-        windStatGraph: null,
+        spots: [
+            () => <div>
+                    <p className="font-bold">Lagoon: </p>
+                    <p>Located just outside the protective reef, Little Reef offers challenging wave riding conditions with reef breaks. The waves range from chest-high to double overhead, providing a thrilling experience for advanced windsurfers.</p>
+                </div>,
+            () => <div>
+                    <p className="font-bold">One Eye: </p>
+                    <p>One Eye is one of the most famous wave spots in Le Morne. It's known for its powerful, barrelling waves and is a favourite among expert windsurfers. The wave can be extremely challenging, and it's not recommended for those with limited experience.</p>
+                </div>
+        ],
+
         spotImage: '/images/Mauritius-Images/mauritius-beach-03.jpg',
 
         // Lessons and hire
@@ -327,7 +330,7 @@ export let SpotGuidePages = [
 
         // Other Activities
         otherActivityText: [
-            'Hike to the summit of Le Morne Brabant. Take an organised boat tour or catamaran cruise to explore the nearby islands like Ãle aux Cerfs and Ãle aux Aigrettes. See Le Mornes incredible underwater waterfall from the air by helicopter or sea plane. Visit Charamel and discover its waterfall, Severn coloured earth and rum distillery.',
+            'Hike to the summit of Le Morne Brabant. Take an organised boat tour or catamaran cruise to explore the nearby islands like ile aux Cerfs and ile le aux Aigrettes. Take to the skys and see the famous udnerwaterfall from a helicopter or sea plane. Visit Charamel rum distillary and discover the seven coloured earth.',
         ],
         otherActivityImage: "/images/Mauritius-Images/ben-wakeboarding.jpg",
     },
@@ -386,16 +389,7 @@ export let SpotGuidePages = [
         waterConditionImage: null,
         windConditionDetails: null,
         windConditionImage: null,
-        windStatisticDetails: null,
-        spotDetailsOne: null, 
-        spotDetailsTwo: null, 
-        spotDetailsThree: null,
-        spotDetailsFour: null,
-        spotDetailsFive: null,
-        windStatGraph: null,
-        windStatisticDetails: null,
-        windStatisticImage: null,
-        spotDetails: null,
+        spots: null,
         spotImage: null,
 
         // Lessons and hire
@@ -494,9 +488,7 @@ export let SpotGuidePages = [
             </p>
         ] ,
         windConditionImage: null,
-        windStatisticDetails: "test",
-        windStatisticImage: null,
-        spotDetails: "lagoon, baby bay, speedy",
+        spots: null,
         spotImage: null,
 
         // Lessons and hire
@@ -521,7 +513,11 @@ export let SpotGuidePages = [
             
 
         // Where to stay
-        stayIntro: "During our visit to dahav we stayed in 4 different accomodations. It must be said, if you're budget isnt extremely tight, the little extra goes along way. We upgraded from a small apartment with no locking doors in the centre to a luxury resort fo a small additional cost. If you're planning to visit for a short period of time, we recomend the following hotels from our personal experience:",
+        stayIntro: [
+            "During our visit to dahab we stayed in 4 different accomodations. If you read earlier that we were only here for a week, then you may have some questions!", 
+            "All we can say is, if you're budget isnt extremely tight, the little extra goes along way. We upgraded from a small apartment with no locking doors, air condition or clean water, to a luxury resort fo a small additional cost.", 
+            "If you're planning to visit for a short period of time, we recomend staying here:"
+        ],
         whereToStayBulletData: [
             {
                 title: 'Swiss Inn Resort',
@@ -532,7 +528,7 @@ export let SpotGuidePages = [
                 link: 'https://safirhotels.com/en/hotel/dahab',
             },
         ],
-        stayImage: null,
+        stayImage: "/images/Egypt-Images/Dahab-Swiss-Inn-4.jpg",
         stayImageDescription: "Swiss Inn Resort",
         stayImageLink: "https://swissinn.net/hotels/index.php?lang=Dahab",
 
@@ -601,15 +597,12 @@ export let SpotGuidePages = [
             "One thing to note is that you do have to be mindful of the tide. When the tide is going out, the current becomes exceptionally strong, making sailing in a southeast wind less enjoyable. Conversely, when the tide is coming in, the conditions are awesome for effortless sailing. Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months (October to March), water temperatures range from around 15 to 20°C. During the winter season (April to September), temperatures can drop slightly to approximately 12 to 16°C. We'd advise a 3/2 wetsuit even in the summer months."
         ],
         waterConditionImage: '',
-        windConditionDetails: "The prevailing southerly winds during the summer months (October to March) provide a consistent breeze ranging from 15 to 25 knots. This creates ideal conditions for windsurfers looking to progress their sailing or just enjoy cruising around the turquoise blue waters. Winter (April to September) brings reliable north-westerly winds, offering a slightly different but equally enjoyable windsurfing experience.",
+        windConditionDetails: [
+            "The prevailing southerly winds during the summer months (October to March) provide a consistent breeze ranging from 15 to 25 knots. This creates ideal conditions for windsurfers looking to progress their sailing or just enjoy cruising around the turquoise blue waters. Winter (April to September) brings reliable north-westerly winds, offering a slightly different but equally enjoyable windsurfing experience.",
+            "The spot benefits from thermal winds, especially during the warmer months. As the land heats up, it creates a temperature difference between the inland areas and the coast, resulting in the development of additional winds that enhance the overall wind conditions. Wind strength in Langebaan can vary, but it's not uncommon to experience winds ranging from 15 to 30 knots or more. These conditions are particularly appealing to intermediate and advanced windsurfers."
+        ] ,
         windConditionImage: '',
-        windStatisticDetails: "The spot benefits from thermal winds, especially during the warmer months. As the land heats up, it creates a temperature difference between the inland areas and the coast, resulting in the development of additional winds that enhance the overall wind conditions. Wind strength in Langebaan can vary, but it's not uncommon to experience winds ranging from 15 to 30 knots or more. These conditions are particularly appealing to intermediate and advanced windsurfers.",
-        windStatisticImage: '',
-        spotDetailsOne: null, 
-        spotDetailsTwo: null,
-        spotDetailsThree: null,
-        spotDetailsFour: null,
-        spotDetailsFive: null,
+        spots: null,
         spotImage: '',
 
         // Lessons and hire

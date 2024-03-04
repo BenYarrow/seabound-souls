@@ -12,11 +12,7 @@ const SpotConditions = ({
     windImage,
     windStatisticDetails,
     windStatisticImage,
-    spotDetailsOne,
-    spotDetailsTwo,
-    spotDetailsThree,
-    spotDetailsFour,
-    spotDetailsFive,
+    spots,
     spotImage,
     windData
 }) => {
@@ -72,16 +68,10 @@ const SpotConditions = ({
                     />
                 )}
 
-                {spotDetailsOne && (
+                {spots && (
                     <SplitImageText 
                         title='Spots' 
-                        texts={[
-                            spotDetailsOne,
-                            spotDetailsTwo,
-                            spotDetailsThree,
-                            spotDetailsFour,
-                            spotDetailsFive
-                        ]}  
+                        texts={Array.isArray(spots) ? spots : [spots]}  
                         image={spotImage}
                         reverse
                     />

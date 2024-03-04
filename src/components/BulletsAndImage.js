@@ -75,9 +75,9 @@ const BulletsAndImage = ({
                         {title && intro && (
                             <Text
                                 title={title}
-                                content={[intro]}
-                                />
-                            )}
+                                content={Array.isArray(intro) ? intro : [intro]}
+                            />
+                        )}
                         <div className='flex flex-col space-y-2'>
                             {bulletListData && (
                                 <ul className="pl-12 flex flex-col space-y-2">
