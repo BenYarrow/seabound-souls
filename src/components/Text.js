@@ -19,14 +19,13 @@ const Text = ({
 
   return (
     <>
-      {content.length > 0 && (
         <div className={classes}>
           
             {title && <h3>{title}</h3>}
 
             {subTitle && <h4>{subTitle}</h4>}
 
-            {content.map((item, index) => (
+            {content.length > 0 && content.map((item, index) => (
                 <div key={index}>
                   {typeof item === 'string' || Array.isArray(item) ? (
                     <p className={lineClamp ? lineClamp : ''}>{item}</p>
@@ -38,7 +37,6 @@ const Text = ({
                 </div>
               ))}
           </div>
-        )}
     </>
   );
 };

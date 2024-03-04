@@ -218,10 +218,27 @@ export let SpotGuidePages = [
         whenToGoDetails: "The peak season in Le Morne runs from June to October when the trade winds consistently blow from the southeast. During this period, you can expect strong and consistent wind conditions, especially for wave riding. We visited during September and pretty much every day was windy with great conditions. ",
         waterConditionDetails: "The lagoon inside the reef provides shallow and flat water, making it ideal for beginners to practice. Outside of the lagoon offers a variety of wave conditions and a great place to improve your wave riding skills. The water temperature is consistently warm and comfortable year-round. It typically ranges from 24°C (75°F) in the winter to 28°C (82°F) in the summer. We wore long summer wetsuits and booties, to provide some protections from the rocks when windsurfing close to the reefs.",
         waterConditionImage: '/images/Mauritius-Images/mauritius-beach-02.jpg',
-        windConditionDetails: "The trade winds typically blow between 15 to 30 knots during the peak season. The predominant wind direction is cross or cross-onshore, which is great for both the lagoon and reef riding. It offers a safe launch and landing for kiters.  The air temperature ranges from warm to hot throughout the year due to its tropical climate.",
+        windConditionDetails: [
+            () => 
+                <div> 
+                    <p className="font-bold">Austral Summer <em>(May to September):</em></p> 
+                    <p>
+                        This is the peak season in Le Morne. During these months, the trade winds are at their strongest, and wind speeds often range from <span className="font-bold">15 to 30</span> knots. The winds are most consistent in the afternoon, making it the perfect time to get on the water.
+                    </p>
+                </div>,
+            () => 
+                <div> 
+                    <p className="font-bold">Transition Seasons <em>(April and October)</em></p>
+                    <p>Wind conditions in the transition months of April and October can still be favorable, but generally less reliable than peak season. Wind speeds may range from <span className="font-bold">10 to 25</span> knots during these months.</p>
+                </div>, 
+            () => 
+                <div>
+                    <p className="font-bold">Austral Winter <em>(November to March):</em></p> 
+                    <p>While it's possible to have a good session on the foil at this time of year, the winds are less consistent, and wind speeds can vary widely. Wind speeds may range from <span className="font-bold">8 to 20</span> knots during this period.</p>
+                </div>
+                
+        ],
         windConditionImage: '/images/Mauritius-Images/ben-windsurfing-01.jpg',
-        windStatisticDetails: "Austral Summer (May to September): This is the peak windsurfing and kitesurfing season in Le Morne. During these months, the trade winds are at their strongest, and wind speeds often range from 15 to 30 knots. The winds are most consistent in the afternoon, making it the perfect time for water sports. Transition Seasons (April and October): Wind conditions in the transition months of April and October can still be favorable for windsurfing and kitesurfing, but they are generally less reliable compared to the peak summer season. Wind speeds may range from 10 to 25 knots during these months. Austral Winter (November to March): While it's possible to enjoy windsurfing and kitesurfing during the austral winter, the winds are less consistent, and wind speeds can vary widely. Wind speeds may range from 8 to 20 knots during this period.",
-        windStatisticImage: "/images/Mauritius-Images/ben-windsurfing-02.jpg",
         spotDetailsOne: "The Lagoon, Le Morne: Situated inside the protective reef, the water is generally flat and shallow, making it perfect for beginners and freestyle windsurfing. Little Reef, ", 
         spotDetailsTwo:"Le Morne: Located just outside the protective reef, Little Reef offers challenging wave riding conditions with reef breaks. The waves range from chest-high to double overhead, providing a thrilling experience for advanced windsurfers.",
         spotDetailsThree: "One Eye, Le Morne: One Eye is one of the most famous wave spots in Le Morne. It's known for its powerful, barrelling waves and is a favourite among expert windsurfers. The wave can be extremely challenging, and it's not recommended for those with limited experience.",
@@ -430,7 +447,7 @@ export let SpotGuidePages = [
             alt: 'Dahab beach',
         },
         location: "Dahab, Egypt",
-        intro: "Dahab, Egypt, is a windsurfing paradise, thanks to its consistent sea breezes and warm, clear waters. This coastal haven lures windsurfing enthusiasts worldwide, offering an ideal setting for both beginners and experts to ride the waters against a backdrop of stunning desert landscapes.",
+        intro: "Dahab, a windsurfing paradise! Thanks to its consistent sea breezes and warm, clear waters, this lagoon brings in windsurfers from all around the world. The lagoon offers an ideal location for both beginners and experts to sail the waters against a backdrop of the striking desert landscapes.",
         
         // Spot Overview
         b1: true,
@@ -462,12 +479,22 @@ export let SpotGuidePages = [
         gridGalleryImageFour:null,
         
         // Spot conditions
-        whenToGoDetails: "The windiest time of the month in Dahab typically occurs from late spring to early summer and then again in late summer to early autumn. The two primary windy seasons in Dahab are usually from April to June and from August to October. During these periods, the reliable north winds create optimal conditions for windsurfing and kiteboarding.",
-        waterConditionDetails: "Famous for its flat waters, Dahab offers a great spot for beginners, freeride, freestyle and speed windsurfing.",
+        whenToGoDetails: "The windiest time of the year in Dahab typically occurs from late spring to early summer and then again in late summer to early autumn. During these periods, the reliable north winds create strong conditions for windsurfing and kiteboarding.",
+        waterConditionDetails: ["Famous for its flat waters, Dahab offers a great spot for beginners, freeride, freestyle and speed windsurfing.", 
+            () => <p><span className="font-bold">The lagoon:</span> This is generally where lessons are taken as this is a windsurf only zone. The natural curve of the sand bank creates a wide sailing area in waist deep waters which makes this a great spot to learn</p>, 
+            () => <p><span className="font-bold">Speedy/Baby bay:</span> Just over the sand bar of the lagoon is another windsurf only zone which offers world-class flat water sailing. The wind comes over the sand bar and straight on to the flat water which makes this ideal for freestylers, speed sailing and for people wanting to improve their skills such as gybing. There is also a floating platform in this area where windsurfers can take a break.</p>, 
+        ],
         waterConditionImage: null,
-        windConditionDetails: "Wind speeds in Dahab vary depending on the time of year. The wind tends to be lighter in the morning and gradually increases in strength during the day, reaching its peak in the afternoon. Wind speeds can range from around 15 to 30 knots on average, with stronger gusts at times.",
+        windConditionDetails: [
+            () => <p>
+                Wind speeds in Dahab vary depending on the time of year. The wind tends to be lighter in the morning and gradually increases in strength during the day, reaching its peak in the afternoon. Wind speeds can range from around <span className="font-bold">15 to 30 knots</span> on average.
+            </p>,
+            () => <p>
+                We only had 1 week in this location, however out of those 7 days, we had 4 windy days, with one of them hitting the <span className="font-bold">40 knot</span> mark! It's safe to say, if you're not renting equipment then we would highly recommend a range of sail sizes to keep you covered.
+            </p>
+        ] ,
         windConditionImage: null,
-        windStatisticDetails: null,
+        windStatisticDetails: "test",
         windStatisticImage: null,
         spotDetails: "lagoon, baby bay, speedy",
         spotImage: null,
@@ -571,7 +598,7 @@ export let SpotGuidePages = [
         // Spot conditions
         whenToGoDetails: 'The wind season in Langebaan typically runs from November to March, with the strongest winds usually in the afternoons. Go in January or February for the best conditions.',
         waterConditionDetails: ["Langebaan lagoon is protected from the large ocean swells and offers flat water close to the shore, an ideal spot for freestyle. Further out, the conditions become more challenging, although providing fun bump and jump blasting conditions.",
-         "One thing to note is that you do have to be mindful of the tide. When the tide is going out, the current becomes exceptionally strong, making sailing in a southeast wind less enjoyable. Conversely, when the tide is coming in, the conditions are awesome for effortless sailing. Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months (October to March), water temperatures range from around 15 to 20°C. During the winter season (April to September), temperatures can drop slightly to approximately 12 to 16°C. We'd advise a 3/2 wetsuit even in the summer months."
+            "One thing to note is that you do have to be mindful of the tide. When the tide is going out, the current becomes exceptionally strong, making sailing in a southeast wind less enjoyable. Conversely, when the tide is coming in, the conditions are awesome for effortless sailing. Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months (October to March), water temperatures range from around 15 to 20°C. During the winter season (April to September), temperatures can drop slightly to approximately 12 to 16°C. We'd advise a 3/2 wetsuit even in the summer months."
         ],
         waterConditionImage: '',
         windConditionDetails: "The prevailing southerly winds during the summer months (October to March) provide a consistent breeze ranging from 15 to 25 knots. This creates ideal conditions for windsurfers looking to progress their sailing or just enjoy cruising around the turquoise blue waters. Winter (April to September) brings reliable north-westerly winds, offering a slightly different but equally enjoyable windsurfing experience.",

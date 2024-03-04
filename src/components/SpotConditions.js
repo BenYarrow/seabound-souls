@@ -34,12 +34,8 @@ const SpotConditions = ({
                     {whenToGoDetails && (
                         <Text
                             title="When to go"
-                            content={[whenToGoDetails]}
+                            content={Array.isArray(whenToGoDetails) ? whenToGoDetails : [whenToGoDetails]}
                         />
-                    )}
-
-                    {windData && (
-                        <AreaChart data={windData}/>
                     )}
                 </BlockWrapper>
 
@@ -52,14 +48,21 @@ const SpotConditions = ({
                     />
                 )}
                 
-                {waterConditionDetails && (
+                {windConditionDetails && (
                     <SplitImageText 
                         title='Wind Conditions' 
-                        texts={[windConditionDetails]} 
+                        texts={Array.isArray(windConditionDetails) ? windConditionDetails : [windConditionDetails]} 
                         image={windImage}
                         reverse
                     />
                 )}
+
+                {windData && (
+                    <BlockWrapper>
+                        <AreaChart data={windData} title="Wind statistics"/>
+                    </BlockWrapper>
+                )}
+
                 {windStatisticDetails && (
                     <SplitImageText 
                         title='Wind statistics' 
