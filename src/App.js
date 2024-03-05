@@ -1,4 +1,5 @@
 import { React } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import ScrollToTop from './components/ScrollToTop';
@@ -40,6 +41,7 @@ function App() {
             </Routes>
           <Footer />  
         </Router>
+        <Analytics />
       </div>
   );
 }
