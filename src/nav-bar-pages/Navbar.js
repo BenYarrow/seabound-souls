@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <section>
       <div className="relative bg-blue text-white ">
-        <div className="container  mx-auto w-full h-[4rem] lg:h-[6rem] flex items-center justify-between lg:justify-center">
+        <div className="container mx-auto w-full h-[4rem] lg:h-[6rem] flex items-center justify-between lg:justify-center">
           {isHomePage ? (
             <h1 className=" text-4xl lg:text-6xl uppercase">
                 Seabound souls
@@ -75,7 +75,7 @@ const Navbar = () => {
       </div>
 
       <nav className="hidden lg:block relative z-10 text-blue border-b-[1px] border-blue">
-        <div className="w-full h-[4rem] flex items-center container mx-auto  ">
+        <div className="w-full h-[4rem] flex items-center container mx-auto">
           <ul className='hidden lg:relative lg:w-full lg:flex lg:justify-center lg:space-x-8'>
             {navListItems.map((listItem, index) => {
               return (

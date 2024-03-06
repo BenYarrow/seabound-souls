@@ -6,7 +6,7 @@ import { spotGuideCoordinates } from '../Data/spot-guide-coordinates'
 const LangebaanSpotGuide = () => {
 
     const spotGuide = SpotGuidePages.find(spot => spot.title === 'Langebaan')
-    const coordinates = spotGuideCoordinates.langebaanCoordinates
+    const coordinates = spotGuideCoordinates.langebaan.locationCoordinates
     
     return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates}/>
 }
