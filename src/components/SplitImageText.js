@@ -56,7 +56,7 @@ const SplitImageText = ({
                                 alt=""
                                 className='w-full h-full bg-center bg-cover group-hover:scale-105 transition duration-300'
                             />
-                            <a href={imageLink} target="_blank" rel="noreferrer" className={imageLinkWrapperClasses}>
+                            <a href={imageLink} target="_blank" rel="nofollow external noopener noreferrer" className={imageLinkWrapperClasses}>
                                 <p className="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
                                     {imageDescription}
                                 </p>

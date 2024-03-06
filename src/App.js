@@ -7,7 +7,6 @@ import Homepage from './nav-bar-pages/Homepage';
 import Navbar from './nav-bar-pages/Navbar';
   import AboutUs from './nav-bar-pages/AboutUs';
   import Destinations from './nav-bar-pages/Destinations';
-    import TestingSpotGuide from './spot-guide-pages/TestingSpotGuide';
     import DahabSpotGuide from './spot-guide-pages/DahabSpotGuide';
     import LeMorneSpotGuide from './spot-guide-pages/LeMorneSpotGuide';
     import VassilikiSpotGuide from './spot-guide-pages/VassilikiSpotGuide';
@@ -26,18 +25,17 @@ function App() {
             <Routes>
               {/* Nav Components */}
               <Route index element={<Homepage />}/>
-              <Route path='/Homepage' element={<Homepage />}/>
-              <Route path='/AboutUs' element={<AboutUs />}/>
-              <Route path='/ContactUs' element={<ContactUs />}/>
+              <Route path='/' element={<Homepage />}/>
+              <Route path='/about-us' element={<AboutUs />}/>
+              <Route path='/contact-us' element={<ContactUs />}/>
 
               {/* Spot Guides */}
-              <Route path='/Destinations' element={<Destinations />}/>
-                <Route path='/destinations/DahabSpotGuide' element={<DahabSpotGuide />} />
-                <Route path='/destinations/LeMorneSpotGuide' element={<LeMorneSpotGuide />} />
-                <Route path='/destinations/VassilikiSpotGuide' element={<VassilikiSpotGuide />} />
-                <Route path='/destinations/RiscoDelPasoSpotGuide' element={<RiscoDelPasoSpotGuide />} />
-                <Route path='/destinations/LangebaanSpotGuide' element={<LangebaanSpotGuide />} />
-                <Route path='/destinations/TestingSpotGuide' element={<TestingSpotGuide />} />
+              <Route path='/destinations' element={<Destinations />}/>
+                <Route path='/destinations/dahab-spot-guide' element={<DahabSpotGuide />} />
+                <Route path='/destinations/le-morne-spot-guide' element={<LeMorneSpotGuide />} />
+                <Route path='/destinations/vassiliki-spot-guide' element={<VassilikiSpotGuide />} />
+                <Route path='/destinations/risco-del-paso-spot-guide' element={<RiscoDelPasoSpotGuide />} />
+                <Route path='/destinations/langebaan-spot-guide' element={<LangebaanSpotGuide />} />
             </Routes>
           <Footer />  
         </Router>

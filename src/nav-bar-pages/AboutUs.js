@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useRef, useEffect} from 'react';
+import { motion, useAnimation, useInView } from "framer-motion";
 import StaticMasthead from "../components/StaticMasthead";
 import GridImageDisplay from "../components/GridImageDisplay";
 import Text from "../components/Text";
@@ -16,43 +17,72 @@ const AboutUs = () => {
     customClasses: 'object-cover object-centre lg:object-bottom'
   } 
 
+  const textRef = useRef(null)
+  const isTextInView = useInView(textRef, {once: true})
+    
+  const mainControls = useAnimation()
+
+  useEffect(() => {
+    if (isTextInView) {
+      mainControls.start('visible')
+    }
+  }, [isTextInView,  mainControls])
+
   return (
     <div>
 
-      <StaticMasthead image={masthead} />
+      <StaticMasthead image={masthead}/>
 
-      <BlockWrapper id='content' >
+      <BlockWrapper id='content' padded>
           <Title title='About us'
             h1
             centreTitle
           />
-            
-          <Text
-            content={[
-              "Hi! We're Rachel and Ben!", 
-              "As a travel couple with a shared love of windsurfing and watersports, we're always on the lookout for epic destinations.",
-              "Our journey goes beyond the water as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health.",
-              () => (
-                <p>
-                  <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer noopener" className="whitespace-nowrap pr-1.5">
-                    Follow our journey
-                  </a>
-                  as we discover the most incredible windsurfing destinations around the world.
-                </p>
-              )
-            ]}
-          />
+          
+          <div ref={textRef}>
+            <motion.div  
+              variants={{
+                  hidden: {opacity: 0, y: 75},
+                  visible: {opacity: 1, y: 0},
+                }}
+                initial= 'hidden'
+                animate={mainControls}
+                transition={{
+                  duration: 0.5,
+                  delay: 0.5
+                }}
+              >
 
-          <GridImageDisplay 
-            imageOne='images/Mauritius-Images/ben-windsurfing-01.jpg'
-            imageTwo='images/mastheads/homepage/windsurfing-together-01.jpg'
-            imageThree='images/mastheads/homepage/windsurfing-together-02.jpg'
-            imageFour='images/Vassiliki-Images/surf-hotel.jpg'
-          />
+              <Text
+                content={[
+                  "Hi! We're Rachel and Ben!", 
+                  "As a travel couple with a shared love of windsurfing and watersports, we're always on the lookout for epic destinations.",
+                  "Our journey goes beyond the water as we also advocate the importance of protecting our oceans, minimising single-use plastics and prioritising mental health.",
+                  () => (
+                    <p>
+                      <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="nofollow external noopener noreferrer" className="whitespace-nowrap pr-1.5">
+                        Follow our journey
+                      </a>
+                      as we discover the most incredible windsurfing destinations around the world.
+                    </p>
+                  )
+                ]}
+              />
+            </motion.div>
+          </div>
+          
+          <BlockWrapper container={false} padded>
+            <GridImageDisplay 
+              imageOne='images/Mauritius-Images/ben-windsurfing-01.jpg'
+              imageTwo='images/mastheads/homepage/windsurfing-together-01-desktop.jpg'
+              imageThree='images/mastheads/homepage/windsurfing-together-02-desktop.jpg'
+              imageFour='images/Vassiliki-Images/surf-hotel.jpg'
+            />
+          </BlockWrapper>
           
         </BlockWrapper>
 
-        <BlockWrapper invert >
+        <BlockWrapper invert padded>
           <Text
             title="Our Story"
             largeHeading
@@ -68,7 +98,7 @@ const AboutUs = () => {
           />
         </BlockWrapper>
 
-        <BlockWrapper >
+        <BlockWrapper padded>
             <Title
             />
 
@@ -107,10 +137,10 @@ const AboutUs = () => {
 
 
               <GridImageDisplay 
-                  imageOne='images/Mauritius-Images/wedding-1.jpg'
-                  imageTwo='images/Mauritius-Images/wedding-2.jpg'
-                  imageThree='images/Mauritius-Images/mauritius.jpg'
-                  imageFour='images/Mauritius-Images/wedding-3.jpg'
+                  imageOne='/images/Mauritius-Images/wedding-1.jpg'
+                  imageTwo='/images/Mauritius-Images/rachel-windsurfing-01.jpg'
+                  imageThree='/images/Mauritius-Images/mauritius.jpg'
+                  imageFour='/images/Mauritius-Images/wedding-3.jpg'
                 />
         </BlockWrapper>
         

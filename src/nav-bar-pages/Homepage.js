@@ -9,8 +9,6 @@ import ListBlogs from "../components/ListBlogs";
 
 function Homepage() {
 
-  const fuerteventuraBeach = "images/mastheads/about-us/fuerteventura-beach-mobile.jpg";
-
   const heroImages = [
       {
         sm: "/images/mastheads/homepage/windsurfing-together-01-mobile.jpg",
@@ -64,7 +62,7 @@ function Homepage() {
                 "This isn't just a travel blog; it's a unique blend of travel, adrenaline and first hand experiences. Whether you're an experienced windurfer seeking the next ultimate spot or a curious traveller ready to climb onto a windsurf board, our blog is here to inspire, inform and fuel your passion for this incredible water sport.",
                 () => (
                   <span className="gap-1 text-blue">
-                    <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="noreferrer noopener" className="whitespace-nowrap pr-1.5">
+                    <a href="https://www.instagram.com/seabound.souls" target="_blank" rel="nofollow external noopener noreferrer" className="whitespace-nowrap pr-1.5">
                       Join us
                     </a>
                      as we chase the winds, discover new horizons and travel to the very best windsurf destinations.

@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { siteData } from '../../Data/site-data';
+import React from 'react'
+// import { useState, useEffect } from 'react';
+// import { siteData } from '../../Data/site-data';
 import { MapContainer, TileLayer } from 'react-leaflet';
 import BlockWrapper from '../BlockWrapper';
 
 const LiveWeatherMap = ({lat, long}) => {
     // const [weatherMapUrl, setWeatherMapUrl] = useState('');
-    const API_KEY = siteData.openWeatherMap['key'];
+    // const API_KEY = siteData.openWeatherMap['key'];
     // const url = `https://tile.openweathermap.org/map/wind_new/0/0/0.png?appid=${API_KEY}`;
     
     // useEffect(() => {

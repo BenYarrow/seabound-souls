@@ -35,7 +35,7 @@ const ButtonLink = ({
 
   return (
     <button className={customClasses}>
-        <a href={linkTo} className={`${colourClasses[colour].class} ${sizeClasses[sizeClass].class} uppercase font-bold transition duration-200`}>
+        <a href={linkTo} rel="nofollow noopener noreferrer" className={`${colourClasses[colour].class} ${sizeClasses[sizeClass].class} uppercase font-bold transition duration-200`}>
             {title}
         </a>
     </button>

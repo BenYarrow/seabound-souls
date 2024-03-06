@@ -44,7 +44,7 @@ const Footer = () => {
                             <ul className="flex items-center space-x-4">
                                 {siteData.socialMedia.map((social, index) => (
                                     <li key={index}>
-                                        <a href={social.link} target="_blank" aria-label="Visit our social media">
+                                        <a href={social.link} target="_blank" aria-label="Visit our social media" rel="nofollow external noopener noreferrer">
                                             <FontAwesomeIcon icon={social.icon} className='text-4xl text-white'/>
                                         </a>
                                     </li>
@@ -54,7 +54,7 @@ const Footer = () => {
 
                     </div>
 
-                    <a href={instagramLink} className="flex items-center justify-center" rel="noopener noreferrer" target="_blank">
+                    <a href={instagramLink} className="flex items-center justify-center" rel="nofollow external noopener noreferrer" target="_blank">
                         <img 
                             src={siteData.logo} 
                             alt="Seabound souls logo" 

@@ -12,6 +12,7 @@ import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
 import LiveWeatherData from '../components/api-weather-components/LiveWeatherData'
 import LiveWeatherMap from '../components/api-weather-components/LiveWeatherMap'
+import { checkContentFormat } from '../helpers/funcntions'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
 
@@ -44,7 +45,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                     <BlockWrapper>
                         <div className='border-y-[1px] border-white-darker'>
                             <Text
-                                content={[spotGuide.intro]}
+                                content={checkContentFormat(spotGuide.intro)}
                                 centredText
                                 />
                         </div>
@@ -154,7 +155,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
                 {spotGuide.otherActivityText && (    
                     <SplitImageText 
                         title='Other Activities'
-                        texts={spotGuide.otherActivityText}
+                        texts={checkContentFormat(spotGuide.otherActivityText)}
                         image={spotGuide.otherActivityImage}
                         reverse
                     />

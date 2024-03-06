@@ -18,6 +18,7 @@ const SpotOverview = (props) => {
                     <img src='/svg/skill.svg'
                         width="50"
                         height="50"
+                        alt=""
                         className=""
                     />
                 </div>
@@ -73,7 +74,7 @@ const SpotOverview = (props) => {
                         <img src='/svg/sailing-style.svg'
                             width="50"
                             height="50"
-                            alt='sailing style logo'
+                            alt=''
                             fetchpriority="low"
                             loading="lazy"
                             crossOrigin="true"
@@ -92,7 +93,7 @@ const SpotOverview = (props) => {
                         <img src='/svg/best-time.svg'
                             width="50"
                             height="50"
-                            alt='best time to go logo'
+                            alt=''
                             fetchpriority="low"
                             loading="lazy"
                             crossOrigin="true"
@@ -110,7 +111,7 @@ const SpotOverview = (props) => {
                         <img src='/svg/wind-direction.svg'
                             width="50"
                             height="50"
-                            alt='wind direction logo'
+                            alt=''
                             fetchpriority="low"
                             loading="lazy"
                             crossOrigin="true"
@@ -130,7 +131,7 @@ const SpotOverview = (props) => {
                         <img src='/svg/wind-conditions.svg'
                             width="50"
                             height="50"
-                            alt='wind condition logo'
+                            alt=''
                             fetchpriority="low"
                             loading="lazy"
                             crossOrigin="true"
@@ -148,7 +149,7 @@ const SpotOverview = (props) => {
                         <img src='/svg/water.svg'
                             width="50"
                             height="50"
-                            alt='water condition logo'
+                            alt=''
                             fetchpriority="low"
                             loading="lazy"
                             crossOrigin="true"
@@ -166,7 +167,7 @@ const SpotOverview = (props) => {
                         <img src='/svg/launch.png'
                             width="50"
                             height="50"
-                            alt='launch zone logo'
+                            alt=''
                             fetchpriority="low"
                             loading="lazy"
                             crossOrigin="true"

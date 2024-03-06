@@ -9,7 +9,16 @@ const tempFormatter = (temp) => {
     return `${roundedTemp} °C`
 }
 
+const checkContentFormat = (content) => {
+    if (Array.isArray(content)) {
+        return content
+    } else {
+        return [content]
+    }
+}   
+
 export {
     mpsToKnotsFormatter,
     tempFormatter,
+    checkContentFormat
 }

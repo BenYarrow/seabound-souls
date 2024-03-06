@@ -3,6 +3,7 @@ import SplitImageText from './SplitImageText'
 import Text from '../components/Text'
 import BlockWrapper from './BlockWrapper'
 import AreaChart from './charts/AreaChart'
+import { checkContentFormat } from '../helpers/funcntions'
 
 const SpotConditions = ({
     whenToGoDetails,
@@ -30,7 +31,7 @@ const SpotConditions = ({
                     {whenToGoDetails && (
                         <Text
                             title="When to go"
-                            content={Array.isArray(whenToGoDetails) ? whenToGoDetails : [whenToGoDetails]}
+                            content={checkContentFormat(whenToGoDetails)}
                         />
                     )}
                 </BlockWrapper>
@@ -38,7 +39,7 @@ const SpotConditions = ({
                 {waterConditionDetails && (
                     <SplitImageText 
                         title='Water conditions' 
-                        texts={Array.isArray(waterConditionDetails) ? waterConditionDetails : [waterConditionDetails]} 
+                        texts={checkContentFormat(waterConditionDetails)} 
                         image={waterImage}
                         reverse
                     />
@@ -47,7 +48,7 @@ const SpotConditions = ({
                 {windConditionDetails && (
                     <SplitImageText 
                         title='Wind Conditions' 
-                        texts={Array.isArray(windConditionDetails) ? windConditionDetails : [windConditionDetails]} 
+                        texts={checkContentFormat(windConditionDetails)} 
                         image={windImage}
                         reverse
                     />
@@ -71,7 +72,7 @@ const SpotConditions = ({
                 {spots && (
                     <SplitImageText 
                         title='Spots' 
-                        texts={Array.isArray(spots) ? spots : [spots]}  
+                        texts={checkContentFormat(spots)}  
                         image={spotImage}
                         reverse
                     />

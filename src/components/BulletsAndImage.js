@@ -2,6 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import Text from "../components/Text"
 import BlockWrapper from './BlockWrapper'
 import { motion, useAnimation, useInView } from "framer-motion";
+import { checkContentFormat } from '../helpers/funcntions'
 
 const BulletsAndImage = ({
     image, 
@@ -53,7 +54,7 @@ const BulletsAndImage = ({
                                 {imageDescription != null && (
                                     <>
                                     {imageLink != null ? (
-                                        <a href={imageLink} target="_blank" rel="noreferrer" className={imageLinkWrapperClasses}>
+                                        <a href={imageLink} target="_blank" rel="nofollow external noopener noreferrer" className={imageLinkWrapperClasses}>
                                             <p href={imageLink} className="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
                                                 {imageDescription}
                                             </p>
@@ -75,7 +76,7 @@ const BulletsAndImage = ({
                         {title && intro && (
                             <Text
                                 title={title}
-                                content={Array.isArray(intro) ? intro : [intro]}
+                                content={checkContentFormat(intro)}
                             />
                         )}
                         <div className='flex flex-col space-y-2'>
@@ -87,7 +88,7 @@ const BulletsAndImage = ({
                                                 {list.title != null &&  (
                                                     <>
                                                         {list.link != null ? (
-                                                            <a href={list.link} target="_blank" rel="noreferrer" className='font-bold hover:underline text-blue'>
+                                                            <a href={list.link} target="_blank" rel="nofollow external noopener noreferrer" className='font-bold hover:underline text-blue'>
                                                                 {list.title}
                                                             </a>
                                                         ) : (

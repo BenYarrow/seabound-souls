@@ -32,11 +32,11 @@ const siteData = {
 const navListItems = [
   {
     title: "Home",
-    to: "/homepage",
+    to: "/",
   },
   {
     title: "About Us",
-    to: "/aboutus"
+    to: "/about-us"
   },
   {
     title: "Destinations",
@@ -44,7 +44,7 @@ const navListItems = [
   },
   {
     title: "Contact",
-    to: "/contactus",
+    to: "/contact-us",
   },
 ];
 

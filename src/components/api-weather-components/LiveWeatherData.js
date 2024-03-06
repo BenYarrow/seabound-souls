@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { siteData } from '../../Data/site-data';
-import { mpsToKnotsFormatter, tempFormatter } from '../../helpers/unit-conversions';
+import { mpsToKnotsFormatter, tempFormatter } from '../../helpers/funcntions';
 
 const LiveWeatherData = ({ lat, long }) => {
     
