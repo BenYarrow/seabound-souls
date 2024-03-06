@@ -2,7 +2,7 @@ import React from 'react'
 import { SpotGuidePages } from '../Data/spot-guide-pages'
 import SpotGuideTemplate from './SpotGuideTemplate'
 import { windData } from '../Data/spot-guide-wind-data'
-import { spotGuideCoordinates } from '../Data/spot-guide-coordinates'
+import { spotGuideCoordinates } from '../Data/spot-guide-coordinate-data'
 
 const LeMorneSpotGuide = () => {
 
