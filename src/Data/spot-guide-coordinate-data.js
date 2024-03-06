@@ -3,7 +3,27 @@ export let spotGuideCoordinates = {
         locationCoordinates: {
             lat: -20.468610, 
             long: 57.313242, 
-        }
+        },
+        markers: [
+            {
+                title: 'Lux Le Morne', 
+                coordinates: {
+                    lat: -20.4569659,
+                    long: 57.3112085, 
+                },
+                link: 'https://www.luxresorts.com/en/mauritius/hotel/luxlemorne',
+                popUpContent: null,
+            },
+            {
+                title: 'Ion Club, Mauritius', 
+                coordinates: {
+                    lat: -20.468065, 
+                    long: 57.314266, 
+                },
+                link: 'https://www.ion-club.net/le-morne/',
+                popUpContent: null,
+            }
+        ]
     },
     vassiliki: {
         locationCoordinates: {

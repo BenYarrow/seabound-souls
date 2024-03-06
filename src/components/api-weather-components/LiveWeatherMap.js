@@ -1,10 +1,10 @@
 import React from 'react'
 // import { useState, useEffect } from 'react';
 // import { siteData } from '../../Data/site-data';
-import { MapContainer, TileLayer } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import BlockWrapper from '../BlockWrapper';
 
-const LiveWeatherMap = ({lat, long}) => {
+const LiveWeatherMap = ({lat, long, markers}) => {
     // const [weatherMapUrl, setWeatherMapUrl] = useState('');
     // const API_KEY = siteData.openWeatherMap['key'];
     // const url = `https://tile.openweathermap.org/map/wind_new/0/0/0.png?appid=${API_KEY}`;
@@ -26,8 +26,8 @@ const LiveWeatherMap = ({lat, long}) => {
     // }, [url]);
 
     // DEFAULT TILE LAYER URL https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
-
-    return (
+    
+    return (    
            <BlockWrapper>
                 <div className='w-full h-80 lg:h-[60vh]'>
                     <MapContainer
@@ -37,6 +37,26 @@ const LiveWeatherMap = ({lat, long}) => {
                         className="w-full h-full"
                     >
                         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                        {markers && markers.map((marker, index) => {
+                            return (
+                                <Marker position={[marker.coordinates.lat, marker.coordinates.long]} key={index}>
+                                    {marker.title && (
+                                        <Popup>
+                                            {marker.title && (   
+                                                <>
+                                                    {marker.link ? (
+                                                            <a href={marker.link} target="_blank" rel="nofollow external noopener noreferrer" className='text-blue hover:underline'>{marker.title}</a>
+                                                        ) : (
+
+                                                            <p>{marker.title}</p>
+                                                        )}
+                                                </>                                             
+                                            )}
+                                        </Popup>
+                                    )}
+                                </Marker>
+                            )
+                        })}
                     </MapContainer>
                 </div>
             </BlockWrapper>

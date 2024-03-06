@@ -14,7 +14,7 @@ import LiveWeatherData from '../components/api-weather-components/LiveWeatherDat
 import LiveWeatherMap from '../components/api-weather-components/LiveWeatherMap'
 import { checkContentFormat } from '../helpers/funcntions'
 
-const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
+const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers}) => {
 
     return (    
         <div>
@@ -163,7 +163,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates}) => {
             </div>
 
             {coordinates && (
-                <LiveWeatherMap lat={coordinates.lat} long={coordinates.long}/>
+                <LiveWeatherMap lat={coordinates.lat} long={coordinates.long} markers={markers}/>
             )}
 
             <BlockWrapper customClasses="">
