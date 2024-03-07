@@ -9,7 +9,7 @@ const BlockWrapper = ({
 }) => {
 
     const classes = [
-        padded ? 'py-12' : 'py-8',
+        padded ? 'py-8 lg:py-12' : 'py-8',
         invert ? 'bg-blue' : 'bg-white',
         customClasses && customClasses
     ].join(' ')

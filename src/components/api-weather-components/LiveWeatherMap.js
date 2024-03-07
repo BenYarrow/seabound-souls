@@ -48,7 +48,7 @@ const LiveWeatherMap = ({lat, long, markers}) => {
                                                             <a href={marker.link} target="_blank" rel="nofollow external noopener noreferrer" className='text-blue hover:underline'>{marker.title}</a>
                                                         ) : (
 
-                                                            <p>{marker.title}</p>
+                                                            <p className='text-blue' >{marker.title}</p>
                                                         )}
                                                 </>                                             
                                             )}

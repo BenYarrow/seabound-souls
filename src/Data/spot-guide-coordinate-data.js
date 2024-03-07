@@ -1,12 +1,12 @@
 export let spotGuideCoordinates = {
     leMorne: {
         locationCoordinates: {
-            lat: -20.468610, 
-            long: 57.313242, 
+            lat: -20.460852,  
+            long: 57.314262, 
         },
         markers: [
             {
-                title: 'Lux Le Morne', 
+                title: 'Lux, Le Morne', 
                 coordinates: {
                     lat: -20.4569659,
                     long: 57.3112085, 
@@ -21,6 +21,30 @@ export let spotGuideCoordinates = {
                     long: 57.314266, 
                 },
                 link: 'https://www.ion-club.net/le-morne/',
+                popUpContent: null,
+            },
+            {
+                title: 'JW Marriot Hotel',
+                coordinates: {
+                    lat: -20.461242,
+                    long: 57.310059,
+                },
+                popUpContent: null,
+            },
+            {
+                title: 'Hotel Rui',
+                coordinates: {
+                    lat: -20.466322, 
+                    long: 57.311008,
+                },
+                popUpContent: null,
+            },
+            {
+                title: 'Villa Habiscus',
+                coordinates: {
+                    lat: -20.4297275,
+                    long: 57.3564193,
+                },
                 popUpContent: null,
             }
         ]
