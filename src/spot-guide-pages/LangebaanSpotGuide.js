@@ -7,8 +7,9 @@ const LangebaanSpotGuide = () => {
 
     const spotGuide = SpotGuidePages.find(spot => spot.title === 'Langebaan')
     const coordinates = spotGuideCoordinates.langebaan.locationCoordinates
+    const markers = spotGuideCoordinates.langebaan.markers
     
-    return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates}/>
+    return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates} markers={markers}/>
 }
 
 export default LangebaanSpotGuide

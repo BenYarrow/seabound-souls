@@ -7,8 +7,9 @@ const RiscoDelPasoSpotGuide = () => {
 
     const spotGuide = SpotGuidePages.find(spot => spot.title === 'Risco Del Paso')
     const coordinates = spotGuideCoordinates.riscoDelPaso.locationCoordinates
+    const markers = spotGuideCoordinates.riscoDelPaso.markers
     
-    return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates}/>
+    return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates} markers={markers}/>
 }
 
 export default RiscoDelPasoSpotGuide

@@ -7,8 +7,9 @@ const VassilikiSpotGuide = () => {
 
     const spotGuide = SpotGuidePages.find(spot => spot.title === 'Vassiliki')
     const coordinates = spotGuideCoordinates.vassiliki.locationCoordinates
-    
-    return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates}/>
+    const markers = spotGuideCoordinates.vassiliki.markers
+
+    return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates} markers={markers}/>
 }
 
 export default VassilikiSpotGuide

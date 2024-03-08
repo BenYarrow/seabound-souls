@@ -7,8 +7,9 @@ const DahabSpotGuide = () => {
 
     const spotGuide = SpotGuidePages.find(spot => spot.title === 'Dahab')
     const coordinates = spotGuideCoordinates.dahab.locationCoordinates
+    const markers = spotGuideCoordinates.dahab.markers
 
-    return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates}/>
+    return <SpotGuideTemplate spotGuide={spotGuide} coordinates={coordinates} markers={markers}/>
 }
 
 export default DahabSpotGuide
