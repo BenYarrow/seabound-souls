@@ -46,6 +46,7 @@ export const ContactForm = () => {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     className="p-2 text-blue border-b-[1px] border-blue placeholder:text-blue-lighter"
+                    required
                 />
                 <input
                     type='text'
@@ -53,6 +54,7 @@ export const ContactForm = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="p-2 text-blue border-b-[1px] border-blue placeholder:text-blue-lighter"
+                    required
                 />
                 <textarea
                     cols="30"
@@ -60,6 +62,7 @@ export const ContactForm = () => {
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
                     className="p-2 text-blue border-b-[1px] border-blue placeholder:text-blue-lighter"
+                    required
                 />
                 <button type='submit' className="relative px-8 py-2 bg-blue text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
                     Send email
