@@ -9,9 +9,10 @@ const LeMorneSpotGuide = () => {
     const spotGuide = SpotGuidePages.find(spot => spot.title === 'Le Morne')    
     const leMorneWindData = windData.find(location => location.location === 'Le Morne').data
     const coordinates = spotGuideCoordinates.leMorne.locationCoordinates
+    const timeZone = spotGuideCoordinates.leMorne.timeZone
     const markers = spotGuideCoordinates.leMorne.markers
 
-    return <SpotGuideTemplate spotGuide={spotGuide} windData={leMorneWindData} coordinates={coordinates} markers={markers}/>
+    return <SpotGuideTemplate spotGuide={spotGuide} windData={leMorneWindData} coordinates={coordinates} markers={markers} timeZone={timeZone}/>
 }
 
 export default LeMorneSpotGuide

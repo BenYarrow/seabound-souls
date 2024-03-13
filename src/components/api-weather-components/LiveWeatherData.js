@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { siteData } from '../../Data/site-data';
-import { mpsToKnotsFormatter, tempFormatter } from '../../helpers/funcntions';
+import { mpsToKnotsFormatter, tempFormatter, formatUnixTimeInTimeZone } from '../../helpers/funcntions';
 
-const LiveWeatherData = ({ lat, long }) => {
+const LiveWeatherData = ({ lat, long, timeZone }) => {
     
     const [weatherData, setWeatherData] = useState({});
     const [weatherStats, setWeatherStats] = useState({});
@@ -52,11 +52,11 @@ const LiveWeatherData = ({ lat, long }) => {
                 generalConditions: [
                     {
                         title: 'Sunrise:',
-                        value: weatherData.current.sunrise ? weatherData.current.sunrise : null
+                        value: weatherData.current.sunrise ? formatUnixTimeInTimeZone(weatherData.current.sunrise, timeZone) : null
                     },
                     {
                         title: 'Sunset:',
-                        value: weatherData.current.sunset ? weatherData.current.sunset : null
+                        value: weatherData.current.sunset ? formatUnixTimeInTimeZone(weatherData.current.sunset, timeZone) : null
                     },
                     {
                         title: 'Conditions:',
@@ -68,9 +68,9 @@ const LiveWeatherData = ({ lat, long }) => {
             setWeatherStats(stats);
         }
     }, [weatherData]);
-    console.log(weatherData.current)
+    
     return (
-        <div className='prose prose-headings:text-blue prose-p:text-blue max-w-none prose-headings:my-0'>
+        <div className='prose max-w-none prose-headings:text-blue prose-p:text-blue prose-headings:my-0'>
             <div className="flex gap-2 items-center">
                 <h3>
                     Live weather data

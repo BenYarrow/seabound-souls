@@ -14,7 +14,7 @@ import LiveWeatherData from '../components/api-weather-components/LiveWeatherDat
 import LiveWeatherMap from '../components/api-weather-components/LiveWeatherMap'
 import { checkContentFormat } from '../helpers/funcntions'
 
-const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers}) => {
+const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}) => {
 
     return (    
         <div>
@@ -30,7 +30,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers}) => {
                     <BlockWrapper firstBlock={true}>
                         <Title title={`Windsurfing in ${spotGuide.title}`} h1 centreTitle/>
                         {spotGuide.location && (
-                            <div className='w-full flex justify-center'>
+                            <div className='w-full flex justify-center prose lg:prose-lg max-w-none py-0'>
                                 <p className='font-bold'>
                                     Location: <span className='font-normal'>{spotGuide.location}</span>
                                 </p>
@@ -54,7 +54,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers}) => {
 
                 {coordinates && (
                     <BlockWrapper>
-                        <LiveWeatherData lat={coordinates.lat} long={coordinates.long}/>
+                        <LiveWeatherData lat={coordinates.lat} long={coordinates.long} timeZone={timeZone}/>
                     </BlockWrapper>
                 )}
 

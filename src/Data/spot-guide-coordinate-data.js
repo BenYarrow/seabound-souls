@@ -4,6 +4,7 @@ export let spotGuideCoordinates = {
             lat: -20.460852,  
             long: 57.314262, 
         },
+        timeZone: 'Indian/Mauritius',
         markers: [
             {
                 title: 'Lux, Le Morne', 
@@ -49,6 +50,7 @@ export let spotGuideCoordinates = {
             lat: 38.629184, 
             long: 20.599712,
         },
+        timeZone: 'Europe/Athens',
         markers: [
             {
                 title: 'Cosmos Hotel',
@@ -113,6 +115,7 @@ export let spotGuideCoordinates = {
             lat: 28.471083, 
             long: 34.501198,
         },
+        timeZone: 'Africa/Cairo',
         markers: [
             {
                 title: 'Dahab Stars',
@@ -145,6 +148,7 @@ export let spotGuideCoordinates = {
             lat: 28.110461, 
             long: -14.261792,
         },
+        timeZone: 'Atlantic/Canary',
         markers: [
             {
                 title: 'Ion Club, Risco',
@@ -169,6 +173,7 @@ export let spotGuideCoordinates = {
             lat: -33.082824, 
             long: 18.029206,
         },
+        timeZone: 'Africa/Johannesburg',
         markers: [
             {
                 title: 'Wind Town Hotel',

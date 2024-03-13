@@ -31,7 +31,7 @@ const BlogLink = ({
           <div>
               <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group' >
                 <motion.div 
-                  className="flex flex-col justify-between space-y-2 w-full overflow-hidden prose prose-h3:text-blue prose-p:text-blue"
+                  className="flex flex-col justify-between space-y-2 w-full overflow-hidden prose prose-h3:text-blue prose-p:text-blue max-w-none"
                   variants={{
                       hidden: {opacity: 0, y: 75},
                       visible: {opacity: 1, y: 0},
