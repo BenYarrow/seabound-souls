@@ -5,6 +5,7 @@ import StaticMasthead from "../components/StaticMasthead";
 import Title from "../components/Title";
 import SiteHelmet from "../components/SiteHelmet";
 import BlockWrapper from "../components/BlockWrapper"
+import SimpleMap from "../components/simple-maps/SimpleMap";
 
 const Destinations = () => {
   
@@ -16,7 +17,7 @@ const Destinations = () => {
     customClasses: 'object-cover object-centre md:object-bottom lg:object-centre'
   } 
 
-  const windsurfingBlogs = spotGuideLinks.filter(visible => visible.isVisible === true)
+  const windsurfingBlogs = spotGuideLinks.filter(link => link.isVisible === true)
 
   // Extract unique countries from SpotGuideLinks
   const uniqueContinents = Array.from(new Set(windsurfingBlogs.map((blog) => blog.continent)));
@@ -54,14 +55,19 @@ const Destinations = () => {
       />
 
       <StaticMasthead image={mastheadImages} />
-      
-      <BlockWrapper >
+
+      <BlockWrapper>
         <Title 
           title='Destination spot guides' 
           h1 
           centreTitle
           padded
-        />
+          />
+      </BlockWrapper>
+
+      <SimpleMap/>
+
+      <BlockWrapper >
         <section className={`container mx-auto grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>
             <button 
               onClick={() => setActiveFilter(windsurfingBlogs)} 
@@ -93,18 +99,17 @@ const Destinations = () => {
         </section>
 
         <section className="pb-20 container mx-auto">
-            <div className={blogGridClasses}>
+            <ul className={blogGridClasses}>
               {activeFilter.map((blog) => {
                     return blog.blogLinkData.map((data, index) => {
                       return (
-                        <div key={index}>
+                        <li key={index}>
                           <BlogLink {...data} index={index}/>
-                        </div>
-                        
-                      );
+                        </li>
+                      )
                     });
                   })}
-            </div>
+            </ul>
         </section>
       </BlockWrapper>
     </div>

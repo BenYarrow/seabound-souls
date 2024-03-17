@@ -2,8 +2,6 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import BlockWrapper from './BlockWrapper';
-import { svg } from 'leaflet';
-
 
 const DetailItem = ({
     index,
