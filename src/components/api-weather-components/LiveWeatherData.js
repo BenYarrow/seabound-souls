@@ -67,7 +67,7 @@ const LiveWeatherData = ({ lat, long, timeZone }) => {
             };
             setWeatherStats(stats);
         }
-    }, [weatherData]);
+    }, [weatherData, timeZone]);
     
     return (
         <div className='prose max-w-none prose-headings:text-blue prose-p:text-blue prose-headings:my-0'>

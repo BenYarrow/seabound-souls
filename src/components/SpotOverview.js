@@ -2,17 +2,17 @@ import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import BlockWrapper from './BlockWrapper';
+import { svg } from 'leaflet';
 
 
 const DetailItem = ({
     index,
     svg,
     title,
-    text
+    text,
+    svgClasses
 }) => {
     
-    const svgClasses = 'size-10 md:size-12 lg:size-16 self-start'
-
     return (
         <li key={index}>
             <div className='flex items-center gap-x-4'>
@@ -25,8 +25,8 @@ const DetailItem = ({
                     loading="lazy"
                     crossOrigin="true"
                 />
-                <p className="text-md font-bold whitespace-nowrap">
-                    {title}: <span className='text-base md:text-md font-normal md:block xl:inline-block  whitespace-normal'>{text}</span>
+                <p className="text-sm lg:text-xl font-bold whitespace-nowrap">
+                    {title}: <span className='text-sm lg:text-xl font-normal md:block whitespace-normal'>{text}</span>
                 </p>
             </div>
         </li>
@@ -35,7 +35,7 @@ const DetailItem = ({
 
 const SpotOverview = (props) => {
 
-    const svgClasses = 'size-10 md:size-12 lg:size-16'
+    const svgClasses = 'size-10 lg:size-16'
 
     const spotItemData = [
         {
@@ -84,13 +84,13 @@ const SpotOverview = (props) => {
                         alt=""
                         className={svgClasses}
                     />
-                    <p className="text-md font-bold whitespace-nowrap">
+                    <p className="lg:text-md font-bold whitespace-nowrap">
                         Ability level
                     </p>
                 </div>
-                <div className='grid md:grid-cols-3 grid-cols-1 gap-4 lg:gap-8'>
+                <div className='flex justify-between md:grid-cols-3 gap-4 lg:gap-8'>
                     <div className='flex flex-col gap-y-1 lg:gap-y-2'>
-                        <p className='lg:text-xl text-left'>
+                        <p className='text-sm lg:text-xl text-left'>
                             Beginner
                         </p>
                         <div className="flex gap-x-1">
@@ -102,7 +102,7 @@ const SpotOverview = (props) => {
                         </div>
                     </div>
                     <div className='flex flex-col gap-y-1 lg:gap-y-2'>
-                        <p className='lg:text-xl text-left'>
+                        <p className='text-sm lg:text-xl text-left'>
                             Intermediate
                         </p>
                         <div className="flex gap-x-1">
@@ -114,7 +114,7 @@ const SpotOverview = (props) => {
                         </div>
                     </div>
                     <div className='flex flex-col gap-y-1 lg:gap-y-2 '>
-                        <p className='lg:text-xl text-left'>
+                        <p className='text-sm lg:text-xl text-left'>
                             Advanced
                         </p>
                         <div className='flex gap-x-1'>
@@ -128,8 +128,8 @@ const SpotOverview = (props) => {
                 </div>
             </div>
 
-            <ul className='grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-12'>
-                {spotItemData.map((data, index) => <DetailItem {...data} index={index}/>)}
+            <ul className='grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-12'>
+                {spotItemData.map((data, index) => <DetailItem {...data} index={index} svgClasses={svgClasses}/>)}
             </ul>
 
         </div>

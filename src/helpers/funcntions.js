@@ -20,10 +20,13 @@ const checkContentFormat = (content) => {
 const formatUnixTimeInTimeZone = (unixTimestamp, timeZone) => {
     const date = new Date(unixTimestamp * 1000); // Convert Unix timestamp to milliseconds
         const options = {
-            timeZone: timeZone,
-            hour: '2-digit',
-            minute: '2-digit',
-            second: '2-digit',
+        timeZone: timeZone,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
         };
     return date.toLocaleString('en-US', options);
   }
@@ -35,4 +38,5 @@ export {
     tempFormatter,
     checkContentFormat,
     formatUnixTimeInTimeZone 
+
 }
