@@ -13,6 +13,8 @@ import Text from '../components/Text'
 import LiveWeatherData from '../components/api-weather-components/LiveWeatherData'
 import LiveWeatherMap from '../components/api-weather-components/LiveWeatherMap'
 import { checkContentFormat } from '../helpers/funcntions'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}) => {
 
@@ -29,13 +31,54 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 {spotGuide.title &&  (
                     <BlockWrapper firstBlock={true}>
                         <Title title={`Windsurfing in ${spotGuide.title}`} h1 centreTitle/>
-                        {spotGuide.location && (
-                            <div className='w-full flex justify-center prose lg:prose-lg max-w-none py-0'>
-                                <p className='font-bold'>
-                                    Location: <span className='font-normal'>{spotGuide.location}</span>
-                                </p>
+                        <section class="flex flex-col gap-y-4 lg:gap-y-8">
+
+                            {spotGuide.location && (
+                                <div className='w-full flex justify-center prose lg:prose-lg max-w-none py-0 prose-p:text-blue'>
+                                    <p className='font-bold'>
+                                        Location: <span className='font-normal'>{spotGuide.location}</span>
+                                    </p>
+                                </div>
+                            )}
+                            <div className='flex justify-between gap-4 lg:gap-8'>
+                                <div className='flex flex-col items-center gap-y-1 lg:gap-y-2'>
+                                    <p className='text-sm lg:text-xl text-left'>
+                                        Beginner
+                                    </p>
+                                    <div className="flex gap-x-1">
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                    </div>
+                                </div>
+                                <div className='flex flex-col items-center gap-y-1 lg:gap-y-2'>
+                                    <p className='text-sm lg:text-xl text-left'>
+                                        Intermediate
+                                    </p>
+                                    <div className="flex gap-x-1">
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                    </div>
+                                </div>
+                                <div className='flex flex-col items-center gap-y-1 lg:gap-y-2 '>
+                                    <p className='text-sm lg:text-xl text-left'>
+                                        Advanced
+                                    </p>
+                                    <div className='flex gap-x-1'>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                    </div>
+                                </div>
                             </div>
-                        )}
+                        </section>
                     </BlockWrapper>
                 )}
                 
@@ -60,9 +103,6 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
 
                 {spotGuide.sailingStyle && (
                     <SpotOverview 
-                        b1={spotGuide.b1} b2={spotGuide.b2} b3={spotGuide.b3} b4={spotGuide.b4} b5={spotGuide.b5} 
-                        i1={spotGuide.i1} i2={spotGuide.i2} i3={spotGuide.i3} i4={spotGuide.i4} i5={spotGuide.i5} 
-                        a1={spotGuide.a1} a2={spotGuide.a2} a3={spotGuide.a3} a4={spotGuide.a4} a5={spotGuide.a5} 
                         sailingStyle={spotGuide.sailingStyle}
                         bestConditions={spotGuide.bestConditions}
                         bestDirection={spotGuide.bestDirection}
