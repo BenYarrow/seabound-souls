@@ -1,3 +1,5 @@
+// Coordinates are [longitude, latitude], this is backwards in comparison to the leaflet coordinates
+
 export let destinationCoordinates = [
     {
         name: 'Le Morne',
