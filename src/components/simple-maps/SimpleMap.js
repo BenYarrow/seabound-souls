@@ -1,7 +1,6 @@
 import React from "react"
 import { ComposableMap, Geographies, Geography, ZoomableGroup, Marker } from "react-simple-maps"
 import simpleMapData from "../../Data/simple-map-data.json"
-import BlockWrapper from "../BlockWrapper"
 import { destinationCoordinates } from "../../Data/destinations-coordinate-data"
 
 const SimpleMap = () => {

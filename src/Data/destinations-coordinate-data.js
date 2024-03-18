@@ -1,23 +1,23 @@
 export let destinationCoordinates = [
     {
         name: 'Le Morne',
-        coordinates: [-20.460852, 57.314262]
+        coordinates: [ 57.314262, -20.460852]
     },
     {
 
         name: 'vassiliki',
-        coordinates: [38.629184, 20.599712]
+        coordinates: [20.599712, 38.629184]
     },
     {
         name: 'Dahab',
-        coordinates: [28.471083, 34.501198]
+        coordinates: [34.501198, 28.471083]
     },
     {
         name: 'Risco Del Paso',
-        coordinates: [28.110461, -14.261792]
+        coordinates: [-14.261792, 28.110461]
     },
     {
         name: 'Langebaan',
-        coordinates: [-33.082824, 18.029206]
+        coordinates: [18.029206, -33.082824]
     }
 ]

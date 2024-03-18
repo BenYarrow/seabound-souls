@@ -67,7 +67,7 @@ const Destinations = () => {
 
       <SimpleMap/>
 
-      <BlockWrapper >
+      <BlockWrapper>
         <section className={`container mx-auto grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>
             <button 
               onClick={() => setActiveFilter(windsurfingBlogs)} 
@@ -98,7 +98,7 @@ const Destinations = () => {
             })}
         </section>
 
-        <section className="pb-20 container mx-auto">
+        <section className="pb-20 pt-8 lg:pt-12 container mx-auto">
             <ul className={blogGridClasses}>
               {activeFilter.map((blog) => {
                     return blog.blogLinkData.map((data, index) => {
