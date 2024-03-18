@@ -3,23 +3,33 @@
 export let destinationCoordinates = [
     {
         name: 'Le Morne',
-        coordinates: [ 57.314262, -20.460852]
+        href: '/destinations/le-morne-spot-guide',
+        coordinates: [ 57.314262, -20.460852],
+        index: 0
     },
     {
 
         name: 'vassiliki',
-        coordinates: [20.599712, 38.629184]
+        href: '/destinations/vassiliki-spot-guide',
+        coordinates: [20.599712, 38.629184],
+        index: 1
     },
     {
         name: 'Dahab',
-        coordinates: [34.501198, 28.471083]
+        href: '/destinations/dahab-spot-guide',
+        coordinates: [34.501198, 28.471083],
+        index: 2
     },
     {
         name: 'Risco Del Paso',
-        coordinates: [-14.261792, 28.110461]
+        href: '/destinations/risco-del-paso-spot-guide',
+        coordinates: [-14.261792, 28.110461],
+        index: 3
     },
     {
         name: 'Langebaan',
-        coordinates: [18.029206, -33.082824]
+        href: '/destinations/langebaan-spot-guide',
+        coordinates: [18.029206, -33.082824],
+        index: 4
     }
 ]
