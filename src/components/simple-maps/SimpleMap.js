@@ -13,8 +13,8 @@ const CustomMarker = () => {
   
 const SimpleMap = () => {
 
-    const [isHovered, setisHovered] = useState(-1)
-
+    const [activeIndex, setActiveIndex] = useState(-1)
+    
     return (
         <ComposableMap height={400} width="1000">
             <ZoomableGroup center={[20, 10]} zoom={1}>
@@ -35,14 +35,18 @@ const SimpleMap = () => {
                 {destinationCoordinates.map(({ name, coordinates, href, index }) => {
                     return (
                     <>
-                        <Marker key={name} className="cursor-pointer" coordinates={coordinates} onMouseEnter={() => setisHovered(index)} onMouseLeave={() => setisHovered(-1)}>
+                        <Marker key={name} className="cursor-pointer" coordinates={coordinates} onMouseEnter={() => setActiveIndex(index)} onMouseLeave={() => setActiveIndex(-1)}>
                             {/* -translate-x-[1/2 of the svg width], -translate-y-[100% svg height] */}
                             <g className="p-2 -translate-x-[10px] -translate-y-[20px]" >
                                 <CustomMarker/>
                             </g>
-                            {isHovered === index && (
-                                <text>
-                                    <Link to={href}>{name}</Link>
+                            {activeIndex === index && (
+                                <text
+                                    textAnchor="middle"
+                                    
+                                    style={{ fontFamily: "Poppins, sans-serif", fill: "#06637B" }}
+                                >
+                                    <Link to={href} className="!text-blue bg-white">{name}</Link>
                                 </text>
                             )}
                         </Marker>
