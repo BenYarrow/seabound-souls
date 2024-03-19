@@ -115,7 +115,7 @@ const LiveWeatherData = ({ lat, long, timeZone }) => {
                             )
                         })}
                     </div>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+                    <div className="grid grid-cols-1 md:flex md:justify-between gap-8 lg:gap-12">
                         <div>
                             <h3>
                                 Live wind statistics

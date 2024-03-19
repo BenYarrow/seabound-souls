@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import React, { useState } from "react";
 import { spotGuideLinks } from "../Data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import StaticMasthead from "../components/StaticMasthead";
@@ -30,18 +30,24 @@ const Destinations = () => {
  
   windsurfingLocations.sort((a, b) => a.location.localeCompare(b.location)); 
 
-  const gapClasses = 'lg:gap-8 xl:gap-12'
-
   const blogGridClasses = [
     'grid grid-cols-1 md:grid-cols-3',
-    'gap-8',
-    gapClasses,
+    'gap-8 lg:gap-12 xl:gap-12',
   ].join(' ')
   
   const [activeFilter, setActiveFilter] = useState(windsurfingBlogs)
 
-  return (
+  const handleFilterChange = (event) => {
+    const selectedLocation = event.target.value;
+    if (selectedLocation === 'All') {
+      setActiveFilter(windsurfingBlogs);
+    } else {
+      const filteredBlogs = windsurfingLocations.find(location => location.location === selectedLocation)?.filter;
+      setActiveFilter(filteredBlogs || []);
+    }
+  };
 
+  return (
     <div>
       <SiteHelmet
         customKeyWords={[
@@ -62,56 +68,34 @@ const Destinations = () => {
           h1 
           centreTitle
           padded
-          />
+        />
       </BlockWrapper>
 
       <SimpleMap/>
 
-      <BlockWrapper>
-        <section className={`container mx-auto grid grid-cols-1 gap-2 lg:grid-cols-3 ${gapClasses}`}>
-            <button 
-              onClick={() => setActiveFilter(windsurfingBlogs)} 
-              className={`${JSON.stringify(activeFilter) === JSON.stringify(windsurfingBlogs) ? 'bg-blue text-white ' : 'bg-blue-lighter text-blue' } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full py-2 font-bold`}
-            >
-              All
-            </button>
-
-            {windsurfingLocations.map((location, index) => {
-
-              const handleChange = () => {
-                setActiveFilter(location.filter);
-              };
-
-              return (
-                <button
-                  key={index}
-                  onClick={handleChange}
-                  className={`${
-                    JSON.stringify(activeFilter) === JSON.stringify(location.filter)
-                      ? 'bg-blue text-white '
-                      : 'bg-blue-lighter text-blue'
-                    } cursor-pointer flex justify-center items-center uppercase text-base lg:text-lg w-full py-2 font-bold`}
-                >
-                  {location.location}
-                </button>
-              );
-            })}
+      <div className={`container mx-auto pt-8 lg:py-12 ${blogGridClasses}`}>
+          <div className="w-full">
+            <label htmlFor="filters" className="sr-only">Filter by continent</label>
+            <select id="filters" className="w-full pl-2 py-2 border-[1px] border-blue" onChange={handleFilterChange}>
+              <option value="All">All</option>
+              {windsurfingLocations.map((location, index) => (
+                <option key={index} value={location.location}>{location.location.toUpperCase()}</option>
+              ))}
+            </select>
+          </div>
+        
+        <section className="pb-20 pt-8 lg:pt-12 ">
+          <ul className={blogGridClasses}>
+            {activeFilter.map((blog) => (
+              blog.blogLinkData.map((data, index) => (
+                <li key={index}>
+                  <BlogLink {...data} index={index}/>
+                </li>
+              ))
+            ))}
+          </ul>
         </section>
-
-        <section className="pb-20 pt-8 lg:pt-12 container mx-auto">
-            <ul className={blogGridClasses}>
-              {activeFilter.map((blog) => {
-                    return blog.blogLinkData.map((data, index) => {
-                      return (
-                        <li key={index}>
-                          <BlogLink {...data} index={index}/>
-                        </li>
-                      )
-                    });
-                  })}
-            </ul>
-        </section>
-      </BlockWrapper>
+      </div>
     </div>
   );
 };
