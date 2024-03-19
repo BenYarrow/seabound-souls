@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react'
 import Text from "../components/Text"
 import BlockWrapper from './BlockWrapper'
 import { motion, useAnimation, useInView } from "framer-motion";
-import { checkContentFormat } from '../helpers/funcntions'
+import { checkContentFormat } from '../helpers/functions'
 
 const BulletsAndImage = ({
     image, 

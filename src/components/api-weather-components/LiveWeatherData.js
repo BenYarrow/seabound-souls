@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { siteData } from '../../Data/site-data';
-import { mpsToKnotsFormatter, tempFormatter, formatUnixTimeInTimeZone } from '../../helpers/funcntions';
+import { mpsToKnotsFormatter, tempFormatter, formatUnixTimeInTimeZone } from '../../helpers/functions';
 import BeatLoader from 'react-spinners/BeatLoader'
-import BlockWrapper from '../BlockWrapper';
 
 
 const LiveWeatherData = ({ lat, long, timeZone }) => {
@@ -56,11 +55,11 @@ const LiveWeatherData = ({ lat, long, timeZone }) => {
                 generalConditions: [
                     {
                         title: 'Sunrise:',
-                        value: weatherData.current.sunrise ? formatUnixTimeInTimeZone(weatherData.current.sunrise, timeZone) : null
+                        value: weatherData.current.sunrise ? formatUnixTimeInTimeZone(weatherData.current.sunrise, weatherData.timezone, weatherData.timezone_offse) : null
                     },
                     {
                         title: 'Sunset:',
-                        value: weatherData.current.sunset ? formatUnixTimeInTimeZone(weatherData.current.sunset, timeZone) : null
+                        value: weatherData.current.sunset ? formatUnixTimeInTimeZone(weatherData.current.sunset, weatherData.timezone, weatherData.timezone_offset) : null
                     },
                     {
                         title: 'Conditions:',
@@ -155,11 +154,11 @@ const LiveWeatherData = ({ lat, long, timeZone }) => {
                                 General conditions
                             </h3>
                             <div>
-                                {weatherStats.generalConditions && weatherStats.generalConditions.map((windData, index) => {
+                                {weatherStats.generalConditions && weatherStats.generalConditions.map((generalData, index) => {
                                     return(
                                         <div key={index} className="list-none">
                                             <p>
-                                                {windData.title} <span>{windData.value}</span>
+                                                {generalData.title} <span>{generalData.value}</span>
                                             </p>
                                         </div>
                                     )

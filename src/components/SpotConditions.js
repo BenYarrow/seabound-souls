@@ -3,7 +3,7 @@ import SplitImageText from './SplitImageText'
 import Text from '../components/Text'
 import BlockWrapper from './BlockWrapper'
 import AreaChart from './charts/AreaChart'
-import { checkContentFormat } from '../helpers/funcntions'
+import { checkContentFormat } from '../helpers/functions'
 
 const SpotConditions = ({
     whenToGoDetails,

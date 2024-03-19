@@ -12,7 +12,7 @@ import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
 import LiveWeatherData from '../components/api-weather-components/LiveWeatherData'
 import LiveWeatherMap from '../components/api-weather-components/LiveWeatherMap'
-import { checkContentFormat } from '../helpers/funcntions'
+import { checkContentFormat } from '../helpers/functions'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 
