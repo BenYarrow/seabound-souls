@@ -46,7 +46,7 @@ const BlogLink = ({
             width="480"
             height="480"
             alt={location}
-            className="aspect-[5/4] group-hover:scale-105 transition duration-300 object-cover"
+            className="aspect-[5/4] w-full group-hover:scale-105 transition duration-300 object-cover"
             loading="lazy"
             crossOrigin="true"
           />

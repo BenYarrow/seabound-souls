@@ -28,12 +28,16 @@ const formatUnixTimeInTimeZone = (unixTimestamp, timeZone, timeZoneOffset) => {
     return date.toLocaleString('en', options);
   }
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+  
 
 
 export {
     mpsToKnotsFormatter,
     tempFormatter,
     checkContentFormat,
-    formatUnixTimeInTimeZone 
-
+    formatUnixTimeInTimeZone,
+    capitalizeFirstLetter
 }

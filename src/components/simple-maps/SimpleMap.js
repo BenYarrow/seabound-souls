@@ -1,9 +1,9 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import { ComposableMap, Geographies, Geography, ZoomableGroup, Marker } from "react-simple-maps"
 import simpleMapData from "../../Data/simple-map-data.json"
 import { destinationCoordinates } from "../../Data/destinations-coordinate-data"
 import { Link } from "react-router-dom"
-
+import debounce from 'lodash/debounce'; 
 
 const CustomMarker = () => {
     return (
@@ -14,47 +14,68 @@ const CustomMarker = () => {
 const SimpleMap = () => {
 
     const [activeIndex, setActiveIndex] = useState(-1)
+    const [height, setHeight] = useState(600)
+    
+    useEffect(() => {
+        const windowX = window.innerWidth   
+        const handleHeight = () => {
+            if (windowX < 1024) {
+                setHeight(400)
+            } else {
+                setHeight(200)
+            }
+        }
+
+        const debouncedHeight = debounce(handleHeight, 200)
+
+        window.addEventListener('resize', debouncedHeight)
+
+        return () => {
+            window.removeEventListener('resize', debouncedHeight)
+        }
+    })
     
     return (
-        <ComposableMap height={400} width="1000">
-            <ZoomableGroup center={[20, 10]} zoom={1}>
-                <Geographies 
-                    geography={simpleMapData}       
-                >
-                    {({ geographies }) => geographies.map((geo) => {
-                        return (
-                            <Geography 
-                                key={geo.rsmKey} 
-                                geography={geo}               
-                                fill="#97C9CE"
-                                stroke="#FEFAF9"
-                            />)
-                        })
-                    }
-                </Geographies>
-                {destinationCoordinates.map(({ name, coordinates, href, index }) => {
-                    return (
-                    <>
-                        <Marker key={name} className="cursor-pointer" coordinates={coordinates} onMouseEnter={() => setActiveIndex(index)} onMouseLeave={() => setActiveIndex(-1)}>
-                            {/* -translate-x-[1/2 of the svg width], -translate-y-[100% svg height] */}
-                            <g className="p-2 -translate-x-[10px] -translate-y-[20px]" >
-                                <CustomMarker/>
-                            </g>
-                            {activeIndex === index && (
-                                <text
-                                    textAnchor="middle"
-                                    
-                                    style={{ fontFamily: "Poppins, sans-serif", fill: "#06637B" }}
-                                >
-                                    <Link to={href} className="!text-blue bg-white">{name}</Link>
-                                </text>
-                            )}
-                        </Marker>
-                    </>
-                )})}
-            </ZoomableGroup>
-            
-        </ComposableMap>
+        <section className="container mx-auto overflow-hidden">
+            <ComposableMap height={height} width="1000">
+                <ZoomableGroup center={[20, 10]} zoom={1.5}>
+                    <Geographies 
+                        geography={simpleMapData}       
+                    >
+                        {({ geographies }) => geographies.map((geo) => {
+                            return (
+                                <Geography 
+                                    key={geo.rsmKey} 
+                                    geography={geo}               
+                                    fill="#97C9CE"
+                                    stroke="#FEFAF9"
+                                />)
+                            })
+                        }
+                    </Geographies>
+                    {destinationCoordinates.map(({ name, coordinates, href, index }) => (
+                        <>
+                            <Marker key={name} className="cursor-pointer" coordinates={coordinates} onMouseEnter={() => setActiveIndex(index)} onMouseLeave={() => setActiveIndex(-1)}>
+                                {/* -translate-x-[1/2 of the svg width], -translate-y-[100% svg height] */}
+                                <g className="p-2 -translate-x-[10px] -translate-y-[20px]" >
+                                    <CustomMarker/>
+                                </g>
+                                {activeIndex === index && (
+                                    <text
+                                        textAnchor="middle"
+                                        
+                                        style={{ fontFamily: "Poppins, sans-serif", fill: "#06637B" }}
+                                    >
+                                        <Link to={href} className="!text-blue bg-white">{name}</Link>
+                                    </text>
+                                )}
+                            </Marker>
+                        </>
+                    ))}
+                </ZoomableGroup>
+                
+            </ComposableMap>
+        </section>
     )
 }
 
