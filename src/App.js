@@ -15,6 +15,7 @@ import Navbar from './nav-bar-pages/Navbar';
     import LangebaanSpotGuide from './spot-guide-pages/LangebaanSpotGuide';
   import ContactUs from './nav-bar-pages/ContactUs';  
 import Footer from './Footer';
+import NotFound from './404/NotFound';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
                 <Route path='/destinations/vassiliki-spot-guide' element={<VassilikiSpotGuide />} />
                 <Route path='/destinations/risco-del-paso-spot-guide' element={<RiscoDelPasoSpotGuide />} />
                 <Route path='/destinations/langebaan-spot-guide' element={<LangebaanSpotGuide />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           <Footer />  
         </Router>
