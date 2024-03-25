@@ -66,7 +66,6 @@ const SpotOverview = (props) => {
         },
     ]
 
-    console.log(spotItemData.length)
   return (
     <BlockWrapper > 
         <div className='flex flex-col gap-y-8'>

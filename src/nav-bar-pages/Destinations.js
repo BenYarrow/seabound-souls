@@ -72,7 +72,7 @@ const Destinations = () => {
       <BlockWrapper>
         <Title title="Destination spot guides" h1 centreTitle padded />
       </BlockWrapper>
-
+      
       <SimpleMap />
 
       <BlockWrapper>
@@ -118,6 +118,7 @@ const Destinations = () => {
           )}
         </ul>
       </BlockWrapper>
+      
     </div>
   );
 };
