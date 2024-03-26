@@ -2,19 +2,20 @@ import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { siteData } from '../Data/site-data';
 
 export const ContactForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(null);
 
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const serviceId = 'service_yzgwrlt';
-        const templateId = 'template_n2judga';
-        const publicKey = 'IQepkdoYDompauO4V';
+        const serviceId = siteData.emailJs.serviceId;
+        const templateId = siteData.emailJs.templateId;
+        const publicKey = siteData.emailJs.publicKey;
 
         const templateParams = {
             from_name: name,

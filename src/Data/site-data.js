@@ -26,6 +26,11 @@ const siteData = {
     urlBase: "https://api.openweathermap.org/data/2.5/weather?q=",
     urlPreKey: '&appid=',
     urlAfterKey: '&units=metric'
+  },
+  emailJs: {
+    serviceId: 'service_yzgwrlt',
+    templateId: 'template_n2judga',
+    publicKey: 'IQepkdoYDompauO4V',
   }
 }
   
