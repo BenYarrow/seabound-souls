@@ -1,17 +1,20 @@
 import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { siteData } from '../Data/site-data';
+import BeatLoader from 'react-spinners/BeatLoader';
 
 export const ContactForm = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
-    const [showSuccessMessage, setShowSuccessMessage] = useState(null);
+    const [sendingEmail, setSendingEmail] = useState(false);
+    const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        setSendingEmail(true);
 
         const serviceId = siteData.emailJs.serviceId;
         const templateId = siteData.emailJs.templateId;
@@ -31,10 +34,12 @@ export const ContactForm = () => {
                 setName('');
                 setEmail('');
                 setMessage('');
+                setSendingEmail(false);
                 setTimeout(() => setShowSuccessMessage(false), 5000); // Hide the success message after 5 seconds
             })
             .catch((error) => {
                 console.log('Error sending email', error);
+                setSendingEmail(false);
             });
     };
 
@@ -65,8 +70,17 @@ export const ContactForm = () => {
                     className="p-2 text-blue border-b-[1px] border-blue placeholder:text-blue-lighter"
                     required
                 />
-                <button type='submit' className="relative px-8 py-2 bg-blue text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
-                    Send email
+                <button type='submit' disabled={sendingEmail} className="relative px-8 py-2 bg-blue text-xl text-white uppercase after:absolute after:bottom-0 after:right-0 after:h-[2px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-300">
+                    {sendingEmail ? (
+                        <BeatLoader
+                            color="#ffffff"
+                            loading={true}
+                            size={8}
+                            css=""
+                        />
+                    ) : (
+                        "Send email"
+                    )}
                 </button>
             </form>
             {showSuccessMessage && (
