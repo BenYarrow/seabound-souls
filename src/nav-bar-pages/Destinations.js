@@ -46,14 +46,15 @@ const Destinations = () => {
   
   const handleFilterChange = (event) => {
     const selectedLocation = event.target.value;
-    if (selectedLocation === "All") {
+    if (selectedLocation === "all") {
       setActiveFilter(windsurfingBlogs);
     } else {
       const filteredBlogs = windsurfingLocations.find(
         (location) => location.location === selectedLocation
-      )?.filter;
-      setActiveFilter(filteredBlogs || []);
-    }
+        )?.filter;
+        setActiveFilter(filteredBlogs || []);
+      }
+    console.log(event.target.value)
   };
 
   return (
@@ -86,7 +87,7 @@ const Destinations = () => {
               className="w-full pl-2 py-2 border-[1px] border-blue"
               onChange={handleFilterChange}
             >
-              <option value="All">All</option>
+              <option value="all">All</option>
               {windsurfingLocations.map((location, index) => (
                 <option key={index} value={location.location}>
                   {location.location.toUpperCase()}
@@ -97,10 +98,10 @@ const Destinations = () => {
           
           <div className="flex items-end lg:col-span-2">
             <p>
-              Showing <span>
+              Showing <span className="font-bold">
                 {activeFilter.length}
               </span> spot guides <span>
-                {activeFilter !== windsurfingBlogs && `from ${capitalizeFirstLetter(activeFilter[0].continent)}`}
+                {activeFilter.length !== windsurfingBlogs.length && `from ${capitalizeFirstLetter(activeFilter[0].continent)}`}
               </span>
             </p>
           </div>
