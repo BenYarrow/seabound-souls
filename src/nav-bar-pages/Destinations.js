@@ -5,8 +5,10 @@ import StaticMasthead from "../components/StaticMasthead";
 import Title from "../components/Title";
 import SiteHelmet from "../components/SiteHelmet";
 import BlockWrapper from "../components/BlockWrapper";
-import SimpleMap from "../components/simple-maps/SimpleMap";
+// import SimpleMap from "../components/simple-maps/SimpleMap";
 import { capitalizeFirstLetter } from "../helpers/functions";
+import LeafletMap from "../components/api-weather-components/LeafletMap";
+import { destinationCoordinates } from "../Data/destinations-coordinate-data";
 
 const Destinations = () => {
   const mastheadImages = {
@@ -56,6 +58,7 @@ const Destinations = () => {
       }
     console.log(event.target.value)
   };
+  const mapMarkers = destinationCoordinates.map(destination => destination.marker)
 
   return (
     <div>
@@ -74,7 +77,15 @@ const Destinations = () => {
         <Title title="Destination spot guides" h1 centreTitle padded />
       </BlockWrapper>
       
-      <SimpleMap />
+      {/* <SimpleMap /> */}
+
+      <LeafletMap
+        lat={10}
+        long={20}
+        zoom={2}
+        markers={mapMarkers}
+      />
+
 
       <BlockWrapper>
         <div className={blogGridClasses}>

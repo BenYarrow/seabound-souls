@@ -11,7 +11,7 @@ import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
 import LiveWeatherData from '../components/api-weather-components/LiveWeatherData'
-import LiveWeatherMap from '../components/api-weather-components/LiveWeatherMap'
+import LeafletMap from '../components/api-weather-components/LeafletMap'
 import { checkContentFormat } from '../helpers/functions'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
@@ -203,7 +203,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
             </div>
 
             {coordinates && (
-                <LiveWeatherMap lat={coordinates.lat} long={coordinates.long} markers={markers}/>
+                <LeafletMap lat={coordinates.lat} long={coordinates.long} markers={markers}/>
             )}
 
             <BlockWrapper customClasses="">
