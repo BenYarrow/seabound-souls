@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import BlockWrapper from '../BlockWrapper';
 import { siteData } from '../../Data/site-data';
+import InfoModal from "../InfoModal";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
 const LeafletMap = ({lat, long, markers, zoom = 15}) => {
-    
+
+    const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
+
     const username = siteData.mapBox.username
     const styleId = siteData.mapBox.styleId.destinationsPage
     const key = siteData.mapBox.key
@@ -14,6 +19,30 @@ const LeafletMap = ({lat, long, markers, zoom = 15}) => {
         <>
             {lat && long && (
                 <BlockWrapper padded>
+                    <div>
+                        <p className="flex gap-x-1">
+                            Map navigation
+                            <button onClick={() => setIsInfoModalOpen(true)} className="flex items-start">
+                                <FontAwesomeIcon icon={faCircleInfo}/>
+                            </button>
+                            <InfoModal
+                                isOpen={isInfoModalOpen}
+                                setIsOpen={setIsInfoModalOpen}
+                            >
+                                <div class="flex flex-col gap-y-2">
+                                    <p>
+                                        Use our interactive map to navigate the earth to find the location you're looking for. Click on a marker to view the name of the location, from there you can navigate to that specific spot guide.
+                                    </p>
+                                    <p>
+                                        The light blue is representative of land, with borders being seperated via the white lines. The darker blue areas are national parks, and the black lines are road networks.
+                                    </p>
+                                    <small>
+                                        This map uses data provided by Mapbox.
+                                    </small>
+                                </div>
+                            </InfoModal>
+                        </p>
+                    </div>
                     <div className='w-full h-80 lg:h-[60vh]'>
                         <MapContainer
                             center={[lat, long]}
