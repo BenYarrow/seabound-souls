@@ -6,7 +6,7 @@ import InfoModal from "../InfoModal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 
-const LeafletMap = ({lat, long, markers, zoom = 15}) => {
+const LeafletMap = ({lat, long, markers, zoom = 15, infoModalContent}) => {
 
     const [isInfoModalOpen, setIsInfoModalOpen] = useState(false);
 
@@ -19,7 +19,7 @@ const LeafletMap = ({lat, long, markers, zoom = 15}) => {
         <>
             {lat && long && (
                 <BlockWrapper padded>
-                    <div>
+                    {infoModalContent && (
                         <p className="flex gap-x-1">
                             Map navigation
                             <button onClick={() => setIsInfoModalOpen(true)} className="flex items-start">
@@ -29,20 +29,10 @@ const LeafletMap = ({lat, long, markers, zoom = 15}) => {
                                 isOpen={isInfoModalOpen}
                                 setIsOpen={setIsInfoModalOpen}
                             >
-                                <div class="flex flex-col gap-y-2">
-                                    <p>
-                                        Use our interactive map to navigate the earth to find the location you're looking for. Click on a marker to view the name of the location, from there you can navigate to that specific spot guide.
-                                    </p>
-                                    <p>
-                                        The light blue is representative of land, with borders being seperated via the white lines. The darker blue areas are national parks, and the black lines are road networks.
-                                    </p>
-                                    <small>
-                                        This map uses data provided by Mapbox.
-                                    </small>
-                                </div>
+                                {infoModalContent}
                             </InfoModal>
                         </p>
-                    </div>
+                    )}
                     <div className='w-full h-80 lg:h-[60vh]'>
                         <MapContainer
                             center={[lat, long]}
@@ -56,14 +46,10 @@ const LeafletMap = ({lat, long, markers, zoom = 15}) => {
                                     <Marker position={[marker.coordinates.lat, marker.coordinates.long]} key={index}>
                                         {marker.title && (
                                             <Popup>
-                                                {marker.title && (   
-                                                    <>
-                                                        {marker.link ? (
-                                                                <a href={marker.link} target="_blank" rel="nofollow external noopener noreferrer" className='text-blue hover:underline'>{marker.title}</a>
-                                                            ) : (
-                                                                <p className='text-blue' >{marker.title}</p>
-                                                            )}
-                                                    </>                                             
+                                                {marker.link ? (
+                                                        <a href={marker.link} target="_blank" rel="nofollow external noopener noreferrer" className='text-blue hover:underline'>{marker.title}</a>
+                                                    ) : (
+                                                        <p className='text-blue' >{marker.title}</p>
                                                 )}
                                             </Popup>
                                         )}

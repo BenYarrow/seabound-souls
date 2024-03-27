@@ -9,6 +9,20 @@ import { capitalizeFirstLetter } from "../helpers/functions";
 import LeafletMap from "../components/api-weather-components/LeafletMap";
 import { destinationCoordinates } from "../Data/destinations-coordinate-data";
 
+const InfoModelContent = () => (
+  <div class="flex flex-col gap-y-2">
+    <p>
+      Use our interactive map to navigate the earth to find the location you're looking for. Click on a marker to view the name of the location, from there you can navigate to that specific spot guide.
+    </p>
+    <p>
+        The light blue is representative of land, with borders being seperated via the white lines. The darker blue areas are national parks, and the black lines are road networks.
+    </p>
+    <small>
+        This map uses data provided by Mapbox.
+    </small>
+  </div>
+)
+
 const Destinations = () => {
   const mastheadImages = {
     sm: "/images/mastheads/destinations/ben-vulcan-vassiliki-tablet.jpg",
@@ -72,15 +86,16 @@ const Destinations = () => {
 
       <StaticMasthead image={mastheadImages} />
 
-      <div className="pt-8 lg:pt-12">
-        <Title title="Destination spot guides" h1 centreTitle padded />
-      </div>
+      
+      <Title title="Destination spot guides" h1 centreTitle/>
+      
       
       <LeafletMap
         lat={10}
         long={20}
         zoom={2}
         markers={mapMarkers}
+        infoModalContent={<InfoModelContent />}
       />
 
 

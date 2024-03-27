@@ -31,7 +31,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 {spotGuide.title &&  (
                     <BlockWrapper firstBlock={true}>
                         <Title title={`Windsurfing in ${spotGuide.title}`} h1 centreTitle/>
-                        <section class="flex flex-col gap-y-4 lg:gap-y-8">
+                        <section class="flex flex-col gap-y-4 lg:gap-y-8 pt-8 lg:pt-12">
 
                             {spotGuide.location && (
                                 <div className='w-full flex justify-center prose lg:prose-lg max-w-none py-0 prose-p:text-blue'>

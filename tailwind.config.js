@@ -24,12 +24,13 @@ module.exports = {
       },
       colors: {
         'white': {  
-          DEFAULT: '#FEFAF9',  
-          darker: '#D8D8D8',
+          DEFAULT: 'hsl(12, 71%, 99%)',  
+          darker: 'hsl(0, 0%, 85%)',
         }, 
         'blue': {
-          lighter: '#97C9CE',
-          DEFAULT: '#06637B',
+          lighter: 'hsl(185, 36%, 70%)',
+          DEFAULT: 'hsl(192, 91%, 25%)',
+          darker: 'hsl(192, 91%, 15%)',
 
         },
         'orange': '#F4A361',
