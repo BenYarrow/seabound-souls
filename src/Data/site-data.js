@@ -27,6 +27,13 @@ const siteData = {
     urlPreKey: '&appid=',
     urlAfterKey: '&units=metric'
   },
+  mapBox: {
+    username: 'seaboundsouls',
+    styleId: {
+      destinationsPage: 'clua2dy0h011b01mj53obfe94'
+    },
+    key: 'pk.eyJ1Ijoic2VhYm91bmRzb3VscyIsImEiOiJjbHU4ejViY20wNDdzMnNxeDNvbzlnczVxIn0.bP8QBA3kTF3bMwQmEF2cyg'
+  },
   emailJs: {
     serviceId: 'service_yzgwrlt',
     templateId: 'template_n2judga',

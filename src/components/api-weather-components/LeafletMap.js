@@ -1,9 +1,17 @@
 import React from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import BlockWrapper from '../BlockWrapper';
+import { siteData } from '../../Data/site-data';
 
 const LeafletMap = ({lat, long, markers, zoom = 15}) => {
-    
+    // mapbox://styles/seaboundsouls/clua2dy0h011b01mj53obfe94
+    // key pk.eyJ1Ijoic2VhYm91bmRzb3VscyIsImEiOiJjbHU4ejViY20wNDdzMnNxeDNvbzlnczVxIn0.bP8QBA3kTF3bMwQmEF2cyg
+    // 
+    const username = siteData.mapBox.username
+    const styleId = siteData.mapBox.styleId.destinationsPage
+    const key = siteData.mapBox.key
+    const url = `https://api.mapbox.com/styles/v1/${username}/${styleId}/tiles/256/{z}/{x}/{y}@2x?access_token=${key}`
+
     return (
         <>
             {lat && long && (
@@ -15,7 +23,7 @@ const LeafletMap = ({lat, long, markers, zoom = 15}) => {
                             scrollWheelZoom={true}
                             className="w-full h-full"
                         >
-                            <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                            <TileLayer url={url} />
                             {markers && markers.map((marker, index) => {
                                 return (
                                     <Marker position={[marker.coordinates.lat, marker.coordinates.long]} key={index}>
