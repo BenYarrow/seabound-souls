@@ -107,7 +107,7 @@ const AboutUs = () => {
               title="Our Values"
               centreHeading
               largeHeading
-              subTitle="Raising mental health awareness"
+              subtitle="Raising mental health awareness"
               content={[
                 "We strive to raise awareness about mental health, and believe in promoting watersports as a powerful way to enhance mental well-being.",
                 "For us, spending time on the water has a positive impact on both the mind and soul. Taking part in watersports provides not just physical exercise but also an escape from the stresses of every day life.",
@@ -116,7 +116,7 @@ const AboutUs = () => {
             />
             
             <Text
-              subTitle="Protecting our oceans"
+              subtitle="Protecting our oceans"
               content={[
                 "Protecting our oceans is an important responsibility for every person on this planet. As vital sources of biodiversity and climate regulation, our oceans sustain life on Earth.",
                 "To ensure the well-being of our oceans, we believe in adopting sustainable practices and reducing plastic pollution. By advocating for marine conservation and raising awareness about the impact of single-use plastics, we hope to contribute to safeguarding the balance of our oceans.",
@@ -125,7 +125,7 @@ const AboutUs = () => {
             />
 
             <Text
-              subTitle="Living conciously"
+              subtitle="Living conciously"
               content={[
                 "For us, living consciously in the world of windsurf travel means having a mindful connection with both nature and community around us.",
                 "By immersing ourselves in beautiful and diverse landscapes, we strives to preserve the very environments that provide endless joy, freedom and adrenaline.",

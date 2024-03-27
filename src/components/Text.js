@@ -2,7 +2,7 @@ import React from 'react';
 
 const Text = ({ 
     title, 
-    subTitle,
+    subtitle,
     content = [], 
     invert,
     centredText = false,
@@ -23,7 +23,7 @@ const Text = ({
           
             {title && <h3>{title}</h3>}
 
-            {subTitle && <h4>{subTitle}</h4>}
+            {subtitle && <h4>{subtitle}</h4>}
 
             {content.length > 0 && content.map((item, index) => (
                 <div key={index}>

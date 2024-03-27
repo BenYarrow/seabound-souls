@@ -88,15 +88,16 @@ function Homepage() {
 
       <ListBlogs
         title="Destinations"
-        subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
+        subtitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip."
         invert
         featuredBlogs={featuredSpotGuideLinks}
         buttonLink="/destinations"
         buttonTitle="View More"
       />
+
       <ListBlogs
         title="Destinations"
-        subTitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip"
+        subtitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip."
         featuredBlogs={featuredSpotGuideLinks}
         buttonLink="/destinations"
         buttonTitle="View More"

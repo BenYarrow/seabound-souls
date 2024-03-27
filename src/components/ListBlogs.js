@@ -9,7 +9,7 @@ import { motion, useAnimation, useInView } from "framer-motion";
 const ListBlogs = ({
   invert,
   title,
-  subTitle,
+  subtitle,
   featuredBlogs,
   buttonLink,
   buttonTitle,
@@ -27,13 +27,14 @@ const ListBlogs = ({
   }, [isInView,  mainControls])
 
   return (
-    <BlockWrapper invert={invert}>
+    <BlockWrapper invert={invert} padded>
         <Title
           title={title}
-          subTitle={subTitle}
+          subtitle={subtitle}
           invert={invert}
+          padded={false}
         />
-          <ul className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12'>
+          <ul className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 pt-2 lg:pt-6'>
             {featuredBlogs.map((blog) => {
               return blog.blogLinkData.map((data, index) => {
                 return (

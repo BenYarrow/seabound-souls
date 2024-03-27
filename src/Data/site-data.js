@@ -55,6 +55,10 @@ const navListItems = [
     to: "/destinations",
   },
   {
+    title: "Blog",
+    to: "/blog",
+  },
+  {
     title: "Contact",
     to: "/contact-us",
   },

@@ -22,7 +22,7 @@ const LeafletMap = ({lat, long, markers, zoom = 15, infoModalContent}) => {
             {lat && long && (
                 <BlockWrapper padded>
                     {infoModalContent && (
-                        <p className="flex gap-x-1">
+                        <p className="flex gap-x-1 mb-2">
                             Map navigation
                             <button onClick={() => setIsInfoModalOpen(true)} className="flex items-start">
                                 <FontAwesomeIcon icon={faCircleInfo}/>
@@ -61,8 +61,6 @@ const LeafletMap = ({lat, long, markers, zoom = 15, infoModalContent}) => {
 
                             <FullscreenControl 
                                 position={'topright'}
-                                title='full screen'
-                                
                             />
                         </MapContainer>
                     </div>
