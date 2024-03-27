@@ -5,6 +5,8 @@ import { siteData } from '../../Data/site-data';
 import InfoModal from "../InfoModal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import { FullscreenControl } from "react-leaflet-fullscreen";
+import "react-leaflet-fullscreen/styles.css";
 
 const LeafletMap = ({lat, long, markers, zoom = 15, infoModalContent}) => {
 
@@ -56,6 +58,12 @@ const LeafletMap = ({lat, long, markers, zoom = 15, infoModalContent}) => {
                                     </Marker>
                                 )
                             })}
+
+                            <FullscreenControl 
+                                position={'topright'}
+                                title='full screen'
+                                
+                            />
                         </MapContainer>
                     </div>
                 </BlockWrapper>
