@@ -11,7 +11,7 @@ import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
 import LiveWeatherData from '../components/api-weather-components/LiveWeatherData'
-import LeafletMap from '../components/api-weather-components/LeafletMap'
+import LeafletMap from '../components/maps/LeafletMap'
 import { checkContentFormat } from '../helpers/functions'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';

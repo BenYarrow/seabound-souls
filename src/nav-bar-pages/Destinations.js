@@ -6,7 +6,7 @@ import Title from "../components/Title";
 import SiteHelmet from "../components/SiteHelmet";
 import BlockWrapper from "../components/BlockWrapper";
 import { capitalizeFirstLetter } from "../helpers/functions";
-import LeafletMap from "../components/api-weather-components/LeafletMap";
+import LeafletMap from "../components/maps/LeafletMap";
 import { destinationCoordinates } from "../Data/destinations-coordinate-data";
 
 const InfoModelContent = () => (
