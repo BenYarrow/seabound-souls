@@ -13,7 +13,7 @@ export let destinationCoordinates = [
     },
     {
         marker: {
-            title: 'vassiliki',
+            title: 'Vassiliki',
             link: '/destinations/vassiliki-spot-guide',
             coordinates: {
                 lat: 38.629184,

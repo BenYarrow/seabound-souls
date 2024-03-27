@@ -4,9 +4,7 @@ import BlockWrapper from '../BlockWrapper';
 import { siteData } from '../../Data/site-data';
 
 const LeafletMap = ({lat, long, markers, zoom = 15}) => {
-    // mapbox://styles/seaboundsouls/clua2dy0h011b01mj53obfe94
-    // key pk.eyJ1Ijoic2VhYm91bmRzb3VscyIsImEiOiJjbHU4ejViY20wNDdzMnNxeDNvbzlnczVxIn0.bP8QBA3kTF3bMwQmEF2cyg
-    // 
+    
     const username = siteData.mapBox.username
     const styleId = siteData.mapBox.styleId.destinationsPage
     const key = siteData.mapBox.key
@@ -15,7 +13,7 @@ const LeafletMap = ({lat, long, markers, zoom = 15}) => {
     return (
         <>
             {lat && long && (
-                <BlockWrapper>
+                <BlockWrapper padded>
                     <div className='w-full h-80 lg:h-[60vh]'>
                         <MapContainer
                             center={[lat, long]}
@@ -23,7 +21,7 @@ const LeafletMap = ({lat, long, markers, zoom = 15}) => {
                             scrollWheelZoom={true}
                             className="w-full h-full"
                         >
-                            <TileLayer url={url} />
+                            <TileLayer url={url} attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>"/>
                             {markers && markers.map((marker, index) => {
                                 return (
                                     <Marker position={[marker.coordinates.lat, marker.coordinates.long]} key={index}>
@@ -34,7 +32,6 @@ const LeafletMap = ({lat, long, markers, zoom = 15}) => {
                                                         {marker.link ? (
                                                                 <a href={marker.link} target="_blank" rel="nofollow external noopener noreferrer" className='text-blue hover:underline'>{marker.title}</a>
                                                             ) : (
-
                                                                 <p className='text-blue' >{marker.title}</p>
                                                             )}
                                                     </>                                             
