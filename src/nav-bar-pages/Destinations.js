@@ -8,6 +8,7 @@ import BlockWrapper from "../components/BlockWrapper";
 import { capitalizeFirstLetter } from "../helpers/functions";
 import LeafletMap from "../components/maps/LeafletMap";
 import { destinationCoordinates } from "../Data/destinations-coordinate-data";
+import Select from 'react-select'
 
 const InfoModelContent = () => (
   <div class="flex flex-col gap-y-2">
@@ -59,20 +60,33 @@ const Destinations = () => {
 
   const [activeFilter, setActiveFilter] = useState(windsurfingBlogs);
   
-  const handleFilterChange = (event) => {
-    const selectedLocation = event.target.value;
+  const handleFilterChange = (selectedOption) => {
+    const selectedLocation = selectedOption.value;
     if (selectedLocation === "all") {
       setActiveFilter(windsurfingBlogs);
     } else {
       const filteredBlogs = windsurfingLocations.find(
         (location) => location.location === selectedLocation
-        )?.filter;
-        setActiveFilter(filteredBlogs || []);
-      }
-    console.log(event.target.value)
+      )?.filter;
+      setActiveFilter(filteredBlogs || []);
+    }
   };
+  
   const mapMarkers = destinationCoordinates.map(destination => destination.marker)
 
+  const options = windsurfingLocations.map(location => {
+    return {
+      label: location.location.toUpperCase(),
+      value: location.location
+    }
+  })
+  const allOptions = [
+    {
+      label: "All",
+      value: 'all'
+    },
+    ...options
+  ]
   return (
     <div>
       <SiteHelmet
@@ -85,10 +99,8 @@ const Destinations = () => {
       />
 
       <StaticMasthead image={mastheadImages} />
-
       
       <Title title="Destination spot guides" h1 centreTitle/>
-      
       
       <LeafletMap
         lat={10}
@@ -98,25 +110,13 @@ const Destinations = () => {
         infoModalContent={<InfoModelContent />}
       />
 
-
       <BlockWrapper>
         <div className={blogGridClasses}>
           <div className="w-full">
-            <label htmlFor="filters" className="sr-only">
-              Filter by continent
-            </label>
-            <select
-              id="filters"
-              className="w-full pl-2 py-2 border-[1px] border-blue"
-              onChange={handleFilterChange}
-            >
-              <option value="all">All</option>
-              {windsurfingLocations.map((location, index) => (
-                <option key={index} value={location.location}>
-                  {location.location.toUpperCase()}
-                </option>
-              ))}
-            </select>
+            <Select 
+              options={allOptions} 
+              onChange={handleFilterChange} 
+            />
           </div>
           
           <div className="flex items-end lg:col-span-2">
