@@ -87,6 +87,13 @@ const Destinations = () => {
     },
     ...options
   ]
+
+  const customSelectThemeColours = {
+    primary25: 'hsl(185, 36%, 70%)',
+    primary50: 'hsl(192, 91%, 25%)',
+    primary: 'hsl(192, 91%, 25%)',
+  }
+
   return (
     <div>
       <SiteHelmet
@@ -116,6 +123,13 @@ const Destinations = () => {
             <Select 
               options={allOptions} 
               onChange={handleFilterChange} 
+              theme={(theme) => ({
+                ...theme,
+                colors: {
+                  ...theme.colors,
+                  ...customSelectThemeColours,
+                },
+              })}
             />
           </div>
           
