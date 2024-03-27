@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 import { spotGuideLinks } from "../Data/spot-guide-links";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";
@@ -49,7 +49,7 @@ function Homepage() {
 
         <div id="content" className="grid grid-cols lg:grid-cols-2 xl:grid-cols-9 gap-8">
           
-          <div className="xl:col-span-6">
+          <div className="xl:col-span-6 flex lg:justify-center flex-col gap-6 lg:gap-12">
             <Title
               title="Memories are made where the wind meets the waves"
               centreTitle
@@ -75,10 +75,9 @@ function Homepage() {
           <picture className="xl:col-span-3">
             <source media="(max-width: 640px)" srcSet='/images/mastheads/about-us/fuerteventura-beach-tablet.jpg' />
             <source media="(min-width: 641px) and (max-width: 1024px)" srcSet='/images/mastheads/about-us/fuerteventura-beach-mobile.jpg' />
-            
                 <img src='/images/mastheads/about-us/fuerteventura-beach-mobile.jpg'
                     alt='Ben and Rachel on a beach in Fuerteventura' 
-                    className='w-full h-full object-left md:object-center object-cover '
+                    className='w-full object-left md:object-center object-cover '
                     loading='lazy'
                     crossOrigin="true"
                 />

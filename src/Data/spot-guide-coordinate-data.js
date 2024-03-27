@@ -1,8 +1,12 @@
 export let spotGuideCoordinates = {
     leMorne: {
-        locationCoordinates: {
-            lat: -20.460852,  
-            long: 57.314262, 
+        marker: {
+            title: 'Le Morne',
+            link: '/destinations/le-morne-spot-guide',
+            coordinates: {
+                lat: -20.460852,
+                long: 57.314262
+            }
         },
         timeZone: 'Indian/Mauritius',
         markers: [
@@ -46,9 +50,13 @@ export let spotGuideCoordinates = {
         ]
     },
     vassiliki: {
-        locationCoordinates: {
-            lat: 38.629184, 
-            long: 20.599712,
+        marker: {
+            title: 'Vassiliki',
+            link: '/destinations/vassiliki-spot-guide',
+            coordinates: {
+                lat: 38.629184,
+                long: 20.599712
+            }
         },
         timeZone: 'Europe/Athens',
         markers: [
@@ -111,9 +119,13 @@ export let spotGuideCoordinates = {
         ]
     },
     dahab: {
-        locationCoordinates: {
-            lat: 28.471083, 
-            long: 34.501198,
+        marker: {
+            title: 'Dahab',
+            link: '/destinations/dahab-spot-guide',
+            coordinates: {
+                lat: 28.471083,
+                long: 34.501198
+            }
         },
         timeZone: 'Africa/Cairo',
         markers: [
@@ -144,9 +156,13 @@ export let spotGuideCoordinates = {
         ]
     },
     riscoDelPaso: {
-        locationCoordinates: {
-            lat: 28.110461, 
-            long: -14.261792,
+        marker: {
+            title: 'Risco Del Paso',
+            link: '/destinations/risco-del-paso-spot-guide',
+            coordinates: {
+                lat: 28.110461,
+                long: -14.261792
+            },
         },
         timeZone: 'Atlantic/Canary',
         markers: [
@@ -169,9 +185,13 @@ export let spotGuideCoordinates = {
         ]
     },
     langebaan: {
-        locationCoordinates: {
-            lat: -33.082824, 
-            long: 18.029206,
+        marker: {
+            title: 'Langebaan',
+            link: '/destinations/langebaan-spot-guide',
+            coordinates: {
+                lat: -33.082824,
+                long: 18.029206
+            },
         },
         timeZone: 'Africa/Johannesburg',
         markers: [
@@ -216,6 +236,5 @@ export let spotGuideCoordinates = {
                 link: 'https://www.facebook.com/capesport.co.za'
             },
         ]
-    }
-        
+    }   
 }

@@ -8,7 +8,7 @@ const LeMorneSpotGuide = () => {
 
     const spotGuide = SpotGuidePages.find(spot => spot.title === 'Le Morne')    
     const leMorneWindData = windData.find(location => location.location === 'Le Morne').data
-    const coordinates = spotGuideCoordinates.leMorne.locationCoordinates
+    const coordinates = spotGuideCoordinates.leMorne.marker.coordinates
     const timeZone = spotGuideCoordinates.leMorne.timeZone
     const markers = spotGuideCoordinates.leMorne.markers
 

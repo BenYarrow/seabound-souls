@@ -7,7 +7,7 @@ import SiteHelmet from "../components/SiteHelmet";
 import BlockWrapper from "../components/BlockWrapper";
 import { capitalizeFirstLetter } from "../helpers/functions";
 import LeafletMap from "../components/maps/LeafletMap";
-import { destinationCoordinates } from "../Data/destinations-coordinate-data";
+import { spotGuideCoordinates } from "../Data/spot-guide-coordinate-data";
 import Select from 'react-select'
 
 const InfoModelContent = () => (
@@ -72,7 +72,8 @@ const Destinations = () => {
     }
   };
   
-  const mapMarkers = destinationCoordinates.map(destination => destination.marker)
+  // const mapMarkers = destinationCoordinates.map(destination => destination.marker)
+  const mapMarkers = Object.values(spotGuideCoordinates).map(location => location.marker)
 
   const options = windsurfingLocations.map(location => {
     return {
