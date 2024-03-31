@@ -34,7 +34,7 @@ const SplitImageText = ({
     const imageLinkWrapperClasses = 'group-hover:bg-white/60 absolute inset-0 flex items-center justify-center transition duration-300';
 
     return (
-        <BlockWrapper padded>
+        <BlockWrapper>
             <div className={`${image ? 'grid grid-cols-1 lg:grid-cols-2 gap-8' : 'grid grid-cols-1'}  lg:gap-12`}>
                 {image && (
                     <div className={`${reverse ? 'order-last' : 'order-first'} relative group w-full h-80 md:h-96 bg-center bg-cover overflow-hidden`} ref={imageRef}>

@@ -20,7 +20,7 @@ const LeafletMap = ({lat, long, markers, zoom = 15, infoModalContent}) => {
     return (
         <>
             {lat && long && (
-                <BlockWrapper padded>
+                <BlockWrapper>
                     {infoModalContent && (
                         <p className="flex gap-x-1 mb-2">
                             Map navigation

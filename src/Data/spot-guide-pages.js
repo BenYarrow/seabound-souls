@@ -14,7 +14,7 @@ export let SpotGuidePages = [
             lg: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-desktop.jpg',
             alt: 'Vassiliki bay'
         },
-        location: 'Vassiliki, Lefkada',
+        location: 'Greece',
         intro: "Vassiliki is a pretty town nestled on the southern coast of Lefkada. It is renowned for its natural beauty, world class water sports scene and vibrant nightlife. Vassiliki has become a sought-after destination for travellers seeking a perfect blend of adventure and relaxation. Whether you're a watersports enthusiast, a beach lover, or simply looking to immerse yourself in the Greek island experience, Vassiliki offers a warm and welcoming atmosphere for all.",
         
         // Spot Overview
@@ -180,7 +180,7 @@ export let SpotGuidePages = [
             alt: 'Le morne mountain',
             customClasses: 'object-cover object-centre'
         },
-        location: 'Le Morne, Mautitius',
+        location: 'Mauritius',
         intro: "Mauritius is an incredible destination for windsurfing, thanks to its stunning beaches, warm tropical waters, and consistent trade winds. It offers ideal conditions for both freestyle and wave riding, with a mix of flat water and small to medium-sized waves.",
         
         // Spot Overview
@@ -351,7 +351,7 @@ export let SpotGuidePages = [
             lg: '/images/Spot-Guides/risco/risco-spotguide-desktop.jpg',
             alt: 'Risco del paso lagoon',
         },
-        location: 'Fuerteventura, Canaries',
+        location: 'Fuerteventura',
         intro: [
             () => <p>Sotavento, located on Fuerteventura's south-east coast, is definitely a spot to visit. Warm waters, flat lagoons and smooth winds make this one of the best spots in the world for windsurfing. Costa Calma is also home to the windsurfing Centre <a href="https://www.rene-egli.com/" rel="nofollow external noopener noreferrer" target="_blank">Rene Egli</a> which hosts one of the stops on the PWA World Tour</p>,
             () => <p>As well as Rene Egli, on this small portion of the island you can also find 2 of the well known <a href="https://www.ion-club.net/fuerteventura/" rel="nofollow external noopener noreferrer" target="_blank">Ion Club</a> centres, one of which is at the epic lagoon, Risco Del Paso.</p> 
@@ -512,7 +512,7 @@ export let SpotGuidePages = [
             lg: '/images/Spot-Guides/dahab/dahab-spotguide-desktop.jpg',
             alt: 'Dahab beach',
         },
-        location: "Dahab, Egypt",
+        location: "Egypt",
         intro: "Dahab, a windsurfing paradise! Thanks to its consistent sea breezes and warm, clear waters, this lagoon brings in windsurfers from all around the world. The lagoon offers an ideal location for both beginners and experts to sail the waters against a backdrop of the striking desert landscapes.",
         
         // Spot Overview
@@ -639,7 +639,7 @@ export let SpotGuidePages = [
             lg: '/images/Spot-Guides/langebaan/langebaan-spotguide-desktop.jpg',
             alt: 'Langebaan lagoon'
         }, 
-        location: 'Langebaan, South Africa',
+        location: 'South Africa',
         intro: "Langebaan is a must-visit destination for those seeking the perfect balance between adventure and relaxation. It's renowned for its consistent winds and offers much needed sunshine during the cold winter months in the northern hemisphere.",
         
         // Spot Overview

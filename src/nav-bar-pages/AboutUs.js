@@ -33,7 +33,7 @@ const AboutUs = () => {
 
       <StaticMasthead image={masthead}/>
 
-      <BlockWrapper id='content' padded>
+      <BlockWrapper id='content' >
           <Title title='About us'
             h1
             centreTitle
@@ -71,7 +71,7 @@ const AboutUs = () => {
             </motion.div>
           </div>
           
-          <BlockWrapper container={false} padded>
+          <BlockWrapper container={false} >
             <GridImageDisplay 
               imageOne='images/Mauritius-Images/ben-windsurfing-01.jpg'
               imageTwo='images/mastheads/homepage/windsurfing-together-01-desktop.jpg'
@@ -82,7 +82,7 @@ const AboutUs = () => {
           
         </BlockWrapper>
 
-        <BlockWrapper invert padded>
+        <BlockWrapper invert >
           <Text
             title="Our Story"
             largeHeading
@@ -98,7 +98,7 @@ const AboutUs = () => {
           />
         </BlockWrapper>
 
-        <BlockWrapper padded>
+        <BlockWrapper >
             <Title
             />
 

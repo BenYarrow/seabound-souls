@@ -4,12 +4,13 @@ const BlockWrapper = ({
     children, 
     invert = false,
     customClasses,
-    padded = false,
+    firstBlock = false,
     container = true
 }) => {
 
     const classes = [
-        padded ? 'py-8 lg:py-12' : 'py-8',
+        'pb-8 lg:pb-12',
+        firstBlock && 'pt-8 lg:pt-12',
         invert ? 'bg-blue' : 'bg-white',
         customClasses && customClasses
     ].join(' ')

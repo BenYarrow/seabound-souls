@@ -24,76 +24,65 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 customKeyWords={[spotGuide.title, spotGuide.location, spotGuide.metaKeyWords]}
             />
 
-            <StaticMasthead image={spotGuide.masthead} />
+            <StaticMasthead image={spotGuide.masthead} title={spotGuide.title} subtitle={spotGuide.location}/>
             
             <div id='content'>
 
-                {spotGuide.title &&  (
-                    <BlockWrapper firstBlock={true}>
-                        <Title title={`Windsurfing in ${spotGuide.title}`} h1 centreTitle/>
-                        <section class="flex flex-col gap-y-4 lg:gap-y-8 pt-8 lg:pt-12">
-
-                            {spotGuide.location && (
-                                <div className='w-full flex justify-center prose lg:prose-lg max-w-none py-0 prose-p:text-blue'>
-                                    <p className='font-bold'>
-                                        Location: <span className='font-normal'>{spotGuide.location}</span>
-                                    </p>
-                                </div>
-                            )}
-                            <div className='flex justify-between gap-4 lg:gap-8'>
-                                <div className='flex flex-col items-center gap-y-1 lg:gap-y-2'>
-                                    <p className='text-sm lg:text-xl text-left'>
-                                        Beginner
-                                    </p>
-                                    <div className="flex gap-x-1">
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.b5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                    </div>
-                                </div>
-                                <div className='flex flex-col items-center gap-y-1 lg:gap-y-2'>
-                                    <p className='text-sm lg:text-xl text-left'>
-                                        Intermediate
-                                    </p>
-                                    <div className="flex gap-x-1">
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.i5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                    </div>
-                                </div>
-                                <div className='flex flex-col items-center gap-y-1 lg:gap-y-2 '>
-                                    <p className='text-sm lg:text-xl text-left'>
-                                        Advanced
-                                    </p>
-                                    <div className='flex gap-x-1'>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                        <FontAwesomeIcon icon={faStar} className={`${spotGuide.a5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                    </BlockWrapper>
-                )}
-                
-
-
                 {spotGuide.intro && (
-                    <BlockWrapper>
-                        <div className='border-y-[1px] border-white-darker'>
-                            <Text
-                                content={checkContentFormat(spotGuide.intro)}
-                                centredText
+                    <BlockWrapper firstBlock>
+                        <div className='border-y border-white-darker pb-4 lg:pt-4'>
+                            <div className='flex items-center'>
+                                <Text
+                                    content={checkContentFormat(spotGuide.intro)}
+                                    centredText
                                 />
+                            </div>
+                                {spotGuide.title &&  (
+                                    <div class=" flex justify-around w-full ">
+                                            <div className='flex flex-col items-center gap-y-1 lg:gap-y-2'>
+                                                <p className='text-sm lg:text-xl text-left'>
+                                                    Beginner
+                                                </p>
+                                                <div className="flex gap-x-1">
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.b1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.b2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.b3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.b4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.b5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                </div>
+                                            </div>
+                                            <div className='flex flex-col items-center gap-y-1 lg:gap-y-2'>
+                                                <p className='text-sm lg:text-xl text-left'>
+                                                    Intermediate
+                                                </p>
+                                                <div className="flex gap-x-1">
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.i1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.i2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.i3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.i4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.i5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                </div>
+                                            </div>
+                                            <div className='flex flex-col items-center gap-y-1 lg:gap-y-2 '>
+                                                <p className='text-sm lg:text-xl text-left'>
+                                                    Advanced
+                                                </p>
+                                                <div className='flex gap-x-1'>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.a1 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.a2 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.a3 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.a4 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                    <FontAwesomeIcon icon={faStar} className={`${spotGuide.a5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
+                                                </div>
+                                            </div>
+                                    </div>
+                                )}
                         </div>
                     </BlockWrapper>
+                    
                 )}
+
+                
 
                 {coordinates && (
                     <BlockWrapper>
