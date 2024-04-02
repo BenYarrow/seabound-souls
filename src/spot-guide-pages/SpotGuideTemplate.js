@@ -1,4 +1,4 @@
-import React from'react'
+import React, {useState} from'react'
 import StaticMasthead from'../components/StaticMasthead'
 import Title from '../components/Title'
 import SpotOverview from'../components/SpotOverview'
@@ -20,6 +20,7 @@ import UtilityBar from '../components/UtilityBar'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}) => {
 
+    const [isOpen, setIsOpen] = useState(false)
     return (    
         <div>
             <SiteHelmet
@@ -83,14 +84,6 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                         </div>
                     </BlockWrapper>
                     
-                )}
-
-                
-
-                {coordinates && (
-                    <BlockWrapper>
-                        <LiveWeatherData lat={coordinates.lat} long={coordinates.long} timeZone={timeZone}/>
-                    </BlockWrapper>
                 )}
 
                 {spotGuide.sailingStyle && (
@@ -193,9 +186,11 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     />
                 )}
 
-                <UtilityBar>
-                    test
-                </UtilityBar>
+                {coordinates && (
+                    <UtilityBar title="View live weather data" isOpen={isOpen} setIsOpen={setIsOpen}>
+                        <LiveWeatherData lat={coordinates.lat} long={coordinates.long} timeZone={timeZone} location={spotGuide.location} isOpen={isOpen}/>
+                    </UtilityBar>
+                )}
             </div>
 
             {coordinates && (

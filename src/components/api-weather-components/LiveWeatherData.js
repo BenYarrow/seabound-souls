@@ -4,7 +4,7 @@ import { mpsToKnotsFormatter, tempFormatter, formatUnixTimeInTimeZone } from '..
 import BeatLoader from 'react-spinners/BeatLoader'
 
 
-const LiveWeatherData = ({ lat, long, timeZone }) => {
+const LiveWeatherData = ({ lat, long, timeZone, isOpen }) => {
     
     const [weatherData, setWeatherData] = useState({});
     const [weatherStats, setWeatherStats] = useState({});
@@ -72,102 +72,81 @@ const LiveWeatherData = ({ lat, long, timeZone }) => {
         }
     }, [weatherData, timeZone]);
     
+    const classes = [
+        'prose max-w-none prose-headings:text-white prose-p:text-white prose-headings:my-0 container mx-auto',
+        isOpen && 'pb-8'
+    ].filter(Boolean).join(' ')
+    
     return (
-        <div className='prose max-w-none prose-headings:text-blue prose-p:text-blue prose-headings:my-0'>
-            {isLoading ? (
-                <div class="flex flex-col gap-y-8">
+        <div className={classes}>
+
+            <div className=" grid grid-cols 1 md:grid-cols-2 gap-8 md:gap-12">
+                <div className='bg-blue/80 shadow-xl p-6'>
                     <h3>
-                        Loading live weather data...
+                        Wind
                     </h3>
-                    <div className='flex items-center justify-center py-8'>
-                        <BeatLoader
-                            color="#06637B"
-                            loading={isLoading}
-                            cssOverride={null}
-                            size={20}
-                            aria-label="Loading Spinner"
-                            data-testid="loader"
-                            />
-                    </div>
+                    {weatherStats.wind && weatherStats.wind.map((windData, index) => {
+                        return(
+                            <div key={index} className="">
+                                <p className='flex items-center gap-x-2'>
+                                    {windData.title} <span>
+                                        {isLoading ?
+                                                <BeatLoader
+                                                color="#ffffff"
+                                                loading={true}
+                                                size={10}
+                                                css=""
+                                            /> : 
+                                            windData.value
+                                        }
+                                    </span>
+                                </p>
+                            </div>
+                        )
+                    })}
                 </div>
-            ) : (
-                <>
-                    <div className="flex gap-2 items-center">
-                        <h3>
-                            Live weather data
-                        </h3>
-                        {weatherStats.generalConditions && weatherStats.generalConditions.map((windData) => {
+                <div className='bg-blue/80 shadow-xl p-6'>
+                    <h3>
+                        Temperature
+                    </h3>
+                    {weatherStats.temp && weatherStats.temp.map((windData, index) => {
+                        return(
+                            <div key={index} className="">
+                                <p className='flex items-center gap-x-2'>
+                                    {windData.title} <span>
+                                        {isLoading ?
+                                                <BeatLoader
+                                                color="#ffffff"
+                                                loading={true}
+                                                size={10}
+                                                css=""
+                                            /> : 
+                                            windData.value
+                                        }
+                                    </span>
+                                </p>
+                            </div>
+                        )
+                    })}
+                </div>
+{/*                 
+                <div>
+                    <h3>
+                        General conditions
+                    </h3>
+                    <div>
+                        {weatherStats.generalConditions && weatherStats.generalConditions.map((generalData, index) => {
                             return(
-                                <>
-                                    {windData.icon && (
-                                        <div className="flex items-center">
-                                            <img
-                                                src={`https://openweathermap.org/img/wn/${windData.icon}@2x.png`}
-                                                width="50"
-                                                height="50"
-                                                alt="Weather Icon"
-                                                loading="lazy"
-                                                crossOrigin="true"
-                                            />
-                                        </div>
-                                        )}
-                                </>
+                                <div key={index} className="divst-none">
+                                    <p>
+                                        {generalData.title} <span>{generalData.value}</span>
+                                    </p>
+                                </div>
                             )
                         })}
                     </div>
-                    <div className="grid grid-cols-1 md:flex md:justify-between gap-8 lg:gap-12">
-                        <div>
-                            <h3>
-                                Live wind statistics
-                            </h3>
-                            <div>
-                                {weatherStats.wind && weatherStats.wind.map((windData, index) => {
-                                    return(
-                                        <div key={index} className="list-none">
-                                            <p>
-                                                {windData.title} <span>{windData.value}</span>
-                                            </p>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        <div>
-                            <h3>
-                                Live temperature statistics
-                            </h3>
-                            <div>
-                                {weatherStats.temp && weatherStats.temp.map((windData, index) => {
-                                    return(
-                                        <div key={index} className="list-none">
-                                            <p>
-                                                {windData.title} <span>{windData.value}</span>
-                                            </p>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                        {/* Format sunrise and sunset */}
-                        <div>
-                            <h3>
-                                General conditions
-                            </h3>
-                            <div>
-                                {weatherStats.generalConditions && weatherStats.generalConditions.map((generalData, index) => {
-                                    return(
-                                        <div key={index} className="list-none">
-                                            <p>
-                                                {generalData.title} <span>{generalData.value}</span>
-                                            </p>
-                                        </div>
-                                    )
-                                })}
-                            </div>
-                        </div>
-                    </div>
-                </>
-            )}
+                </div> */}
+            </div>   
         </div>
     );
 };
