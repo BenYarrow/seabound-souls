@@ -8,14 +8,16 @@ const Text = ({
     invert,
     centredText = false,
     centreHeading = false,
-    lineClamp
+    lineClamp,
+    reduceParagraphPadding
 }) => {
   
   const classes = [
-    'prose lg:prose-lg prose-headings:uppercase prose-a:text-blue prose-a:font-bold prose-headings:mt-0 max-w-none prose-h3:text-xl',
-    invert ? 'prose-h3:text-white prose-p:text-white prose-a:text-white' : 'prose-headings:text-blue prose-p:text-blue prose-a:text-blue',
+    'prose lg:prose-lg prose-headings:uppercase prose-a:text-blue prose-a:font-bold prose-headings:mt-0 max-w-none prose-h3:text-xl prose-p:pt-0 z-100',
+    invert ? 'prose-h3:text-white prose-p:text-white prose-a:text-white' : 'prose-headings:text-blue prose-p:text-black prose-a:text-orange',
     centredText && 'prose-p:text-center',
-    centreHeading && 'prose-h2:text-center'
+    centreHeading && 'prose-h2:text-center',
+    reduceParagraphPadding && 'prose-p:m-0'
   ].join(' ');
 
   const textRef = useRef(null)

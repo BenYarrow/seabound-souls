@@ -52,8 +52,8 @@ export let SpotGuidePages = [
         waterConditionImage: '/images/mastheads/homepage/paddleboarding-vass.jpg',
         windConditionDetails: [
             "Vassiliki is famous for its reliable afternoon thermal winds. The prevailing wind is a katabatic thermal wind known as 'Eric,' which blows from the northwest.", 
-            () => <p>The wind typically starts picking up in the late morning or early afternoon, reaching its peak in the late afternoon. The air temperature during the season ranges from <span className="font-bold">25°C to 35°C (77°F to 95°F).</span></p>,
-            () => <p>Once 'Eric' shows up, its a race to the water as hundreds of windsurfers rush to catch the first gusts on the water. Winds consistently blow between <span className="font-bold">15 to 25 knots.</span></p>,
+            () => <p>The wind typically starts picking up in the late morning or early afternoon, reaching its peak in the late afternoon. The air temperature during the season ranges from <span className="font-bold text-blue">25°C to 35°C (77°F to 95°F).</span></p>,
+            () => <p>Once 'Eric' shows up, its a race to the water as hundreds of windsurfers rush to catch the first gusts on the water. Winds consistently blow between <span className="font-bold text-blue">15 to 25 knots.</span></p>,
             "The steady, strong winds and predictable gusts make Vassiliki an ideal destination for those looking to progress in their windsurfing skills or take on more advanced sailing challenges."
         ],
         windConditionImage: '/images/mastheads/homepage/windsurfing-together-02-desktop.jpg',
@@ -214,36 +214,36 @@ export let SpotGuidePages = [
         
         // Spot conditions
         whenToGoDetails: "The peak season in Le Morne runs from June to October when the trade winds consistently blow from the southeast. During this period, you can expect strong and consistent wind conditions, especially for wave riding. We visited during September and pretty much every day was windy with great conditions. ",
-        waterConditionDetails: "The lagoon inside the reef provides shallow and flat water, making it ideal for beginners to practice. Outside of the lagoon offers a variety of wave conditions and a great place to improve your wave riding skills. The water temperature is consistently warm and comfortable year-round. It typically ranges from 24°C (75°F) in the winter to 28°C (82°F) in the summer. We wore long summer wetsuits and booties, to provide some protections from the rocks when windsurfing close to the reefs.",
+        waterConditionDetails:  () => <p>The lagoon inside the reef provides shallow and flat water, making it ideal for beginners to practice. Outside of the lagoon offers a variety of wave conditions and a great place to improve your wave riding skills. The water temperature is consistently warm and comfortable year-round. It typically ranges from <span className='font-bold text-blue'>24°C (75°F)</span> in the winter to <span className='font-bold text-blue'>28°C (82°F)</span> in the summer. We wore long summer wetsuits and booties, to provide some protections from the rocks when windsurfing close to the reefs.</p>,
         waterConditionImage: '/images/Mauritius-Images/mauritius-beach-02.jpg',
         windConditionDetails: [
             () => 
                 <div> 
-                    <p className="font-bold">Austral Summer <em>(May to September):</em></p> 
+                    <h3 className="font-bold text-blue">Austral Summer <em>(May to September):</em></h3> 
                     <p>
-                        This is the peak season in Le Morne. During these months, the trade winds are at their strongest, and wind speeds often range from <span className="font-bold">15 to 30 knots.</span> The winds are most consistent in the afternoon, making it the perfect time to get on the water.
+                        This is the peak season in Le Morne. During these months, the trade winds are at their strongest, and wind speeds often range from <span className="font-bold text-blue">15 to 30 knots.</span> The winds are most consistent in the afternoon, making it the perfect time to get on the water.
                     </p>
                 </div>,
             () => 
                 <div> 
-                    <p className="font-bold">Transition Seasons <em>(April and October)</em></p>
-                    <p>Wind conditions in the transition months of April and October can still be favorable, but generally less reliable than peak season. Wind speeds may range from <span className="font-bold">10 to 25 knots</span> during these months.</p>
+                    <h3 className="font-bold text-blue">Transition Seasons <em>(April and October)</em></h3>
+                    <p>Wind conditions in the transition months of April and October can still be favorable, but generally less reliable than peak season. Wind speeds may range from <span className="font-bold text-blue">10 to 25 knots</span> during these months.</p>
                 </div>, 
             () => 
                 <div>
-                    <p className="font-bold">Austral Winter <em>(November to March):</em></p> 
-                    <p>While it's possible to have a good session on the foil at this time of year, the winds are less consistent, and wind speeds can vary widely. Wind speeds may range from <span className="font-bold">8 to 20 knots</span> during this period.</p>
+                    <h3 className="font-bold text-blue">Austral Winter <em>(November to March):</em></h3> 
+                    <p>While it's possible to have a good session on the foil at this time of year, the winds are less consistent, and wind speeds can vary widely. Wind speeds may range from <span className="font-bold text-blue">8 to 20 knots</span> during this period.</p>
                 </div>
                 
         ],
         windConditionImage: '/images/Mauritius-Images/ben-windsurfing-01.jpg',
         spots: [
             () => <div>
-                    <p className="font-bold">Lagoon: </p>
+                    <h3 className="font-bold text-blue">Lagoon: </h3>
                     <p>Located just outside the protective reef, Little Reef offers challenging wave riding conditions with reef breaks. The waves range from chest-high to double overhead, providing a thrilling experience for advanced windsurfers.</p>
                 </div>,
             () => <div>
-                    <p className="font-bold">One Eye: </p>
+                    <h3 className="font-bold text-blue">One Eye: </h3>
                     <p>One Eye is one of the most famous wave spots in Le Morne. It's known for its powerful, barrelling waves and is a favourite among expert windsurfers. The wave can be extremely challenging, and it's not recommended for those with limited experience.</p>
                 </div>
         ],
@@ -391,7 +391,7 @@ export let SpotGuidePages = [
         waterConditionDetails: [
             () => <div>
                     <p>Depending on where youre sailing, the water canditions can vary. In the laggon you can expect extremely flat water on low tides, with slight small chop at high tide <em>(depending how high the high tide is).</em> Over the sand bar you can expect smooth boom high waves that roll in consistently while the tide is coming in, this then flattens off when the tide is going out.</p>
-                    <p>Water temperatures stay warm year-round, ranging from <span className="font-bold">24°C (75°F)</span> in winter to <span className="font-bold">28°C (82°F)</span> in summer. We recommend wearing long summer wetsuits and booties for protection, especially near the reefs.</p>
+                    <p>Water temperatures stay warm year-round, ranging from <span className="font-bold text-blue">24°C (75°F)</span> in winter to <span className="font-bold text-blue">28°C (82°F)</span> in summer. We recommend wearing long summer wetsuits and booties for protection, especially near the reefs.</p>
                 </div>
         ],
         waterConditionImage: null,
@@ -399,11 +399,11 @@ export let SpotGuidePages = [
         windConditionImage: null,
         spots: [
             () => <div>
-                    <p className="font-bold">Lagoon: </p>
+                    <h3 className="font-bold text-blue">Lagoon: </h3>
                     <p>The lagoon at Risco Dell Paso is awesome spot to progress your freeride and freestyle sailing. One thing to note is that the lagoon is <em>tidal</em>. Get to your session early to hit the water as early as possible as soon as the water fills in! If you want as much time on the water as you can get, we would recomend checking the tide tables <a href="https://www.rene-egli.com/windsurfing/windsurfing/lagoon" rel="nofollow external noopener noreferrer" target="_blank">here</a> to plan your trip around the highest tides.</p>
                 </div>,
             () => <div>
-                    <p className="font-bold">Sea: </p>
+                    <h3 className="font-bold text-blue">Sea: </h3>
                     <ul className="pl-12">
                         <li className='list-disc prose marker:text-blue'>
                             <a href="https://www.ion-club.net/fuerteventura/" rel="nofollow external noopener noreferrer" target="_blank">Ion Club:</a>
@@ -548,16 +548,16 @@ export let SpotGuidePages = [
         whenToGoDetails: "The windiest time of the year in Dahab typically occurs from late spring to early summer and then again in late summer to early autumn. During these periods, the reliable north winds create strong conditions for windsurfing.",
         waterConditionDetails: [
             "Famous for its flat waters, Dahab offers a great spot for beginners, freeride, freestyle and speed windsurfing.", 
-            () => <p><span className="font-bold">The lagoon:</span> This is generally where lessons are taken as this is a windsurf only zone. The natural curve of the sand bank creates a wide sailing area in waist deep waters which makes this a great spot to learn</p>, 
-            () => <p><span className="font-bold">Speedy/Baby bay:</span> Just over the sand bar of the lagoon is another windsurf only zone which offers world-class flat water sailing. The wind comes over the sand bar and straight on to the flat water which makes this ideal for freestylers, speed sailing and for people wanting to improve their skills such as gybing. There is also a floating platform in this area where windsurfers can take a break.</p>, 
+            () => <p><span className="font-bold text-blue">The lagoon:</span> This is generally where lessons are taken as this is a windsurf only zone. The natural curve of the sand bank creates a wide sailing area in waist deep waters which makes this a great spot to learn</p>, 
+            () => <p><span className="font-bold text-blue">Speedy/Baby bay:</span> Just over the sand bar of the lagoon is another windsurf only zone which offers world-class flat water sailing. The wind comes over the sand bar and straight on to the flat water which makes this ideal for freestylers, speed sailing and for people wanting to improve their skills such as gybing. There is also a floating platform in this area where windsurfers can take a break.</p>, 
         ],
         waterConditionImage: null,
         windConditionDetails: [
             () => <p>
-                Wind speeds in Dahab vary depending on the time of year. The wind tends to be lighter in the morning and gradually increases in strength during the day, reaching its peak in the afternoon. Wind speeds can range from around <span className="font-bold">15 to 30 knots</span> on average.
+                Wind speeds in Dahab vary depending on the time of year. The wind tends to be lighter in the morning and gradually increases in strength during the day, reaching its peak in the afternoon. Wind speeds can range from around <span className="font-bold text-blue">15 to 30 knots</span> on average.
             </p>,
             () => <p>
-                We only had 1 week in this location, however out of those 7 days, we had 4 windy days, with one of them hitting the <span className="font-bold">40 knot</span> mark! It's safe to say, if you're not renting equipment then we would highly recommend a range of sail sizes to keep you covered.
+                We only had 1 week in this location, however out of those 7 days, we had 4 windy days, with one of them hitting the <span className="font-bold text-blue">40 knot</span> mark! It's safe to say, if you're not renting equipment then we would highly recommend a range of sail sizes to keep you covered.
             </p>
         ] ,
         windConditionImage: null,
@@ -675,17 +675,17 @@ export let SpotGuidePages = [
         whenToGoDetails: 'The wind season in Langebaan is generally from November to March, with the strongest winds usually in the afternoons. We visited for 2 weeks at the start of january after landing on enw years eve. We had 1 week of light wind, followed by none stop wind for the second week.',
         waterConditionDetails: [
             "Langebaan lagoon is protected from the large ocean swells and has reasonably flat water close to the shore. It's a great spot for freestyle in the flat spots. Further out, the conditions become more unsettled, although providing fun bump and jump conditions.",
-            () => <p>One thing to note is that you do have to <span className="font-bold">be mindful of the tide.</span> When the tide is going out, the current becomes exceptionally strong, making sailing in a southeast wind a little more tricky. However, when the tide is coming in the sailing is effortless. </p>,
-            () => <p>Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months <em>(October to March),</em> water temperatures range from around <span className="font-bold">15 to 20°C.</span> During the winter season <em>(April to September)</em>, temperatures can drop slightly to approximately <span>12 to 16°C.</span> We'd recommend a 3/2 wetsuit even in the summer months.</p>
+            () => <p>One thing to note is that you do have to <span className="font-bold text-blue">be mindful of the tide.</span> When the tide is going out, the current becomes exceptionally strong, making sailing in a southeast wind a little more tricky. However, when the tide is coming in the sailing is effortless. </p>,
+            () => <p>Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months <em>(October to March),</em> water temperatures range from around <span className="font-bold text-blue">15 to 20°C.</span> During the winter season <em>(April to September)</em>, temperatures can drop slightly to approximately <span>12 to 16°C.</span> We'd recommend a 3/2 wetsuit even in the summer months.</p>
         ],
         waterConditionImage: null,
         windConditionDetails: [
             () => <div>
-                    <p className="font-bold">Summer months <em>(October to March):</em></p>
+                    <h3 className="font-bold text-blue">Summer months <em>(October to March):</em></h3>
                     <p>The summer brings prevailing southerly winds ranging from <span>15 to 25 knots.</span> This is great for windsurfers looking to progress their sailing or just enjoy cruising around the turquoise blue waters.</p>
                 </div>,
             () => <div>
-                    <p className="font-bold">Winter months <em>(April to September):</em></p>
+                    <h3 className="font-bold text-blue">Winter months <em>(April to September):</em></h3>
                     <p>In the winter the direction changes to be more north-westerly, giving slightly different sailing conditions but equally enjoyable windsurfing experience.</p>
                 </div>,
             () => <p>The spot benefits from thermal winds, especially during the warmer months. As the land heats up, it creates a temperature difference between the inland areas and the coast, resulting in the wind typically being stronger than what is forecast. Wind strength in Langebaan can vary, but it's not uncommon to experience winds ranging from <span>15 to 30 knots</span> or more.</p>

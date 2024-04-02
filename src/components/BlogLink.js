@@ -28,7 +28,7 @@ const BlogLink = ({
     const blogImageSrc = blogLinkImgSrc ? blogLinkImgSrc : fallbackImage
     
     return(
-      <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group' >
+      <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group shadow-2xl' >
         <motion.div 
           className="w-full overflow-hidden prose prose-h3:text-blue prose-p:text-blue max-w-none"
           variants={{

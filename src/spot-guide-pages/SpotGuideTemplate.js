@@ -15,6 +15,8 @@ import LeafletMap from '../components/maps/LeafletMap'
 import { checkContentFormat } from '../helpers/functions'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { Util } from 'leaflet'
+import UtilityBar from '../components/UtilityBar'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}) => {
 
@@ -26,19 +28,20 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
 
             <StaticMasthead image={spotGuide.masthead} title={spotGuide.title} subtitle={spotGuide.location}/>
             
-            <div id='content'>
+            <div id='content' className='relative'>
 
                 {spotGuide.intro && (
-                    <BlockWrapper firstBlock>
-                        <div className='border-y border-white-darker pb-4 lg:pt-4'>
+                    <BlockWrapper padded>
+                        <div className='border-y border-white-darker py-6 flex flex-col gap-y-4'>
                             <div className='flex items-center'>
                                 <Text
                                     content={checkContentFormat(spotGuide.intro)}
                                     centredText
+                                    reduceParagraphPadding 
                                 />
                             </div>
                                 {spotGuide.title &&  (
-                                    <div class=" flex justify-around w-full ">
+                                    <div class="flex justify-around w-full ">
                                             <div className='flex flex-col items-center gap-y-1 lg:gap-y-2'>
                                                 <p className='text-sm lg:text-xl text-left'>
                                                     Beginner
@@ -189,6 +192,10 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                         reverse
                     />
                 )}
+
+                <UtilityBar>
+                    test
+                </UtilityBar>
             </div>
 
             {coordinates && (
@@ -200,6 +207,8 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     <ButtonLink linkTo='#content' title='back to the top'/>
                 </div>
             </BlockWrapper>
+
+           
 
         </div>
     )

@@ -1,8 +1,9 @@
-import React, { useRef, useEffect } from 'react'
+import React from 'react'
 import Text from "../components/Text"
 import BlockWrapper from './BlockWrapper'
-import { motion, useAnimation, useInView } from "framer-motion";
 import { checkContentFormat } from '../helpers/functions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 
 const BulletsAndImage = ({
     image, 
@@ -14,63 +15,12 @@ const BulletsAndImage = ({
     reverse = false,
 }) => {
 
-    const imageLinkWrapperClasses = 'group-hover:bg-white/60 w-full h-full flex items-center justify-center transition duration-300'
+    const imageLinkWrapperClasses = 'w-full h-full flex items-end justify-start group group-hover:underline'
 
-    const imageRef = useRef(null)
-    const imageIsInView = useInView(imageRef, {once: true})
-
-    const mainControls = useAnimation()
-
-    useEffect(() => {
-        if (imageIsInView) {
-        mainControls.start('visible')
-        }
-    }, [imageIsInView,  mainControls])
-  
     return (
         <BlockWrapper >
-            <div ref={imageRef} >
-                <motion.div className={`${image ? 'grid grid-cols-1 lg:grid-cols-2 gap-8' : 'grid grid-cols-1'}  lg:gap-12`}
-                    variants={{
-                        hidden: {opacity: 0, y: 75},
-                        visible: {opacity: 1, y: 0},
-                    }}
-                    initial= 'hidden'
-                    animate={mainControls}
-                    transition={{
-                        duration: 0.5,
-                        delay: 0.5
-                    }}
-                >
-                    
-                    {image && (
-                        <div className={`${reverse ? 'order-last' : ''}  w-full h-80 lg:h-96 aspect-square bg-center bg-cover overflow-hidden group`}>
-                            <div className='w-full h-full bg-center bg-cover hover:scale-105 transition duration-300 -z-10'
-                                style={{
-                                    backgroundImage: `url(${image})`,
-                                    backgroundRepeat: "no-repeat",
-                                }}
-                                > 
-                                {imageDescription != null && (
-                                    <>
-                                    {imageLink != null ? (
-                                        <a href={imageLink} target="_blank" rel="nofollow external noopener noreferrer" className={imageLinkWrapperClasses}>
-                                            <p href={imageLink} className="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-                                                {imageDescription}
-                                            </p>
-                                        </a>
-                                    ) : (
-                                        <div className={imageLinkWrapperClasses}>
-                                            <p href={imageLink} className="text-4xl font-bold opacity-0 group-hover:opacity-100 transition duration-300">
-                                                {imageDescription}
-                                            </p>
-                                        </div>
-                                    )}
-                                    </>
-                                )}
-                            </div>
-                        </div>
-                    )}
+            <div>
+                <div className="grid grid-cols-1 gap-8 lg:gap-12">
 
                     <div>
                         {title && intro && (
@@ -84,11 +34,11 @@ const BulletsAndImage = ({
                                 <ul className="pl-12 flex flex-col space-y-2">
                                     {bulletListData.map((list, index) => {
                                         return (
-                                            <li key={index} className='list-disc prose marker:text-blue max-w-none'>
+                                            <li key={index} className={`list-disc prose lg:prose-lg max-w-none ${list.link !== null ? 'marker:text-orange' : 'marker:text-blue'}`}>
                                                 {list.title != null &&  (
                                                     <>
                                                         {list.link != null ? (
-                                                            <a href={list.link} target="_blank" rel="nofollow external noopener noreferrer" className='font-bold hover:underline text-blue'>
+                                                            <a href={list.link} target="_blank" rel="nofollow external noopener noreferrer" className='font-bold hover:underline text-orange'>
                                                                 {list.title}
                                                             </a>
                                                         ) : (
@@ -105,7 +55,29 @@ const BulletsAndImage = ({
                             )}
                         </div>
                     </div>
-                </motion.div>
+                    {image && (
+                        
+                        <div className="relative group w-full h-80 md:h-96 lg:h-[600px] overflow-hidden">
+                            <img src={image}
+                                width="400"
+                                height="400"
+                                alt=""
+                                className='w-full h-full absolute inset-0 object-cover group-hover:scale-105 transition duration-300'
+                            />
+                            {imageDescription != null && imageLink != null && (
+                                <div className='w-full h-full bg-white'>
+                                    <a href={imageLink} target="_blank" rel="nofollow external noopener noreferrer" className={imageLinkWrapperClasses}>
+                                        <p href={imageLink} className="bg-white/80 hover:bg-white-darker/80 transition duration-300 z-10 w-full p-4 flex justify-between items-center">
+                                            {imageDescription}
+                                            <FontAwesomeIcon icon={faExternalLink}/>
+                                        </p>
+                                    </a>
+                                </div>
+                            )}
+                        </div>
+                    )}
+                    
+                </div>
             </div>
         </BlockWrapper>
     )

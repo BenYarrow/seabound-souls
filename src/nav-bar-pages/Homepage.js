@@ -43,17 +43,13 @@ function Homepage() {
 
       <SiteHelmet/>
       
-      <SwiperHeroSlider images={heroImages}/>
+      <SwiperHeroSlider images={heroImages} title="Memories are made where the wind meets the waves"/>
 
-      <BlockWrapper firstBlock>
-
+      <BlockWrapper padded>
         <div id="content" className="grid grid-cols lg:grid-cols-2 xl:grid-cols-9 gap-8">
           
+
           <div className="xl:col-span-6 flex lg:justify-center flex-col gap-6 lg:gap-12">
-            <Title
-              title="Memories are made where the wind meets the waves"
-              centreTitle
-            />
             <Text
               title="Get to know us"
               content={[

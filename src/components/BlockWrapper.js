@@ -4,16 +4,18 @@ const BlockWrapper = ({
     children, 
     invert = false,
     customClasses,
-    firstBlock = false,
-    container = true
+    padded = false,
+    container = true,
+    relative = true
 }) => {
 
     const classes = [
         'pb-8 lg:pb-12',
-        firstBlock && 'pt-8 lg:pt-12',
+        padded && 'pt-8 lg:pt-12',
         invert ? 'bg-blue' : 'bg-white',
-        customClasses && customClasses
-    ].join(' ')
+        customClasses && customClasses,
+        relative && 'relative'
+    ].filter(Boolean).join(' ')
 
   return (
     <section className={classes}>

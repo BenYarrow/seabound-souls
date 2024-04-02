@@ -1,6 +1,5 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Title from './Title';
 import ButtonLink from "../components/ButtonLink"
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
@@ -8,7 +7,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-const SwiperHeroSlider = (props) => {
+const SwiperHeroSlider = ({images, title, subtitle}) => {
 
   return (
     <Swiper
@@ -22,7 +21,7 @@ const SwiperHeroSlider = (props) => {
       effect="fade"
       className="mySwiper"
     >
-      {props.images.map((slide, index) => {
+      {images.map((slide, index) => {
         return (
           <SwiperSlide key={index}>
             <div className="relative h-[calc(100vh-4rem)] lg:h-[calc(100vh-10rem)] bg-blue-lighter">
@@ -39,16 +38,20 @@ const SwiperHeroSlider = (props) => {
                 </picture>
               </div>
 
-              <div className="flex flex-col justify-between items-center pb-12  z-50 h-full">
-
-                <Title heading={props.heading} />
-              
-                <ButtonLink title="Read more"
-                  linkTo="#content"
-                  colour='blue'
-                />
-                
-              </div>
+                {title && (
+                  <div className="absolute w-full h-full flex justify-center items-center z-10 overflow-visible radial-background">
+                      <div className="flex flex-col gap-y-4 text-white uppercase ">
+                          <h1 className="text-4xl md:text-5xl text-center  max-w-3xl font-bold">
+                              {title}
+                          </h1>
+                          {subtitle && (
+                              <p className="text-center whitespace-nowrap text-lg md:text-xl lg:text-2xl">
+                                  {subtitle}
+                              </p>
+                          )}
+                      </div>
+                  </div>
+                )}
             </div>
           </SwiperSlide>
         );

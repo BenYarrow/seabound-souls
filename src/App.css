@@ -7,17 +7,7 @@ html {
     color: '#26567B';
 }
 
-.clipped-masthead {
-    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
-}
-
-@media screen and (min-width: 1025px) {
-    .clipped-masthead {
-        clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 100%, 0 70%);
-    }
-}
-
 .radial-background {
-    background: radial-gradient(hsla(192, 91%, 15%, 0.4) , transparent 50%);
-    padding: 4rem;
+    background: radial-gradient(hsla(192, 91%, 15%, 0.6) , transparent 50%);
+    padding: 5rem;
 }

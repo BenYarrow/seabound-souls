@@ -41,11 +41,11 @@ const Navbar = () => {
       <div className="relative bg-blue text-white ">
         <div className="container mx-auto w-full h-[4rem] lg:h-[6rem] flex items-center justify-between lg:justify-center">
           {isHomePage ? (
-            <h1 className=" text-4xl lg:text-6xl uppercase">
+            <h1 className="text-4xl lg:text-6xl uppercase font-bold">
                 Seabound souls
             </h1>
           ) : (
-            <Link to='/' className="text-3xl lg:text-6xl uppercase">
+            <Link to='/' className="text-3xl lg:text-6xl uppercase font-bold">
                 Seabound souls
             </Link>
           )}

@@ -13,8 +13,8 @@ module.exports = {
       padding: {
         DEFAULT: '1rem',
         sm: '2rem',
-        xl: '3rem',
-        '2xl': '4rem',
+        xl: '6rem',
+        '2xl': '6rem',
       }
     },
     extend: {
@@ -24,16 +24,19 @@ module.exports = {
       },
       colors: {
         'white': {  
-          DEFAULT: 'hsl(12, 71%, 99%)',  
+          DEFAULT: 'hsl(20, 13%, 95%)',  
           darker: 'hsl(0, 0%, 85%)',
         }, 
         'blue': {
-          lighter: 'hsl(185, 36%, 70%)',
-          DEFAULT: 'hsl(192, 91%, 25%)',
-          darker: 'hsl(192, 91%, 15%)',
+          lightest: 'hsl(169, 28%, 89%)',
+          lighter: 'hsl(183, 25%, 58%)',
+          DEFAULT: 'hsl(192, 89%, 25%)',
 
         },
-        'orange': '#F4A361',
+        'orange': 'hsl(11, 61%, 58%)',
+      },
+      zIndex: {
+        '-1': '-1'
       }
     },
   },

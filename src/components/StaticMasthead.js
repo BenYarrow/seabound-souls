@@ -24,10 +24,10 @@ const StaticMasthead = ({
             </picture>
             {title && (
                 <div className="absolute w-full h-full flex justify-center items-center z-10 overflow-visible radial-background">
-                    <div className="flex flex-col gap-y-4 text-white uppercase">
-                        <h1 className="text-4xl md:text-6xl text-center whitespace-nowrap">
+                    <div className="flex flex-col gap-y-4 text-white uppercase ">
+                        <h2 className="text-4xl md:text-5xl text-center whitespace-nowrap font-bold">
                             {title}
-                        </h1>
+                        </h2>
                         {subtitle && (
                             <p className="text-center whitespace-nowrap text-lg md:text-xl lg:text-2xl">
                                 {subtitle}
@@ -36,7 +36,7 @@ const StaticMasthead = ({
                     </div>
                 </div>
             )}
-
+            
         </div>
     )
 }
