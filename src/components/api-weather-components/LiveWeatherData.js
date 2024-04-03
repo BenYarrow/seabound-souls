@@ -4,7 +4,7 @@ import { mpsToKnotsFormatter, tempFormatter, formatUnixTimeInTimeZone } from '..
 import BeatLoader from 'react-spinners/BeatLoader'
 
 
-const LiveWeatherData = ({ lat, long, timeZone, isOpen }) => {
+const LiveWeatherData = ({ lat, long, timeZone, isOpen, title, location }) => {
     
     const [weatherData, setWeatherData] = useState({});
     const [weatherStats, setWeatherStats] = useState({});
@@ -52,37 +52,33 @@ const LiveWeatherData = ({ lat, long, timeZone, isOpen }) => {
                         value: weatherData.current.feels_like ? tempFormatter(weatherData.current.feels_like) : null
                     },
                 ],
-                generalConditions: [
-                    {
-                        title: 'Sunrise:',
-                        value: weatherData.current.sunrise ? formatUnixTimeInTimeZone(weatherData.current.sunrise, weatherData.timezone, weatherData.timezone_offse) : null
-                    },
-                    {
-                        title: 'Sunset:',
-                        value: weatherData.current.sunset ? formatUnixTimeInTimeZone(weatherData.current.sunset, weatherData.timezone, weatherData.timezone_offset) : null
-                    },
-                    {
-                        title: 'Conditions:',
-                        value: weatherData.current.weather ? weatherData.current.weather.map(item => item.description) : null,
-                        icon: weatherData.current.weather ? weatherData.current.weather.map(item => item.icon) : null,
-                    }
-                ]
+                generalConditions: {
+                    sunrise: weatherData.current.sunrise ? formatUnixTimeInTimeZone(weatherData.current.sunrise, weatherData.timezone, weatherData.timezone_offse) : null,
+                    sunset: weatherData.current.sunset ? formatUnixTimeInTimeZone(weatherData.current.sunset, weatherData.timezone, weatherData.timezone_offset) : null,
+                    conditions: weatherData.current.weather ? weatherData.current.weather.map(item => item.description) : null,
+                    icon: weatherData.current.weather ? weatherData.current.weather.map(item => item.icon) : null,
+                },
             };
             setWeatherStats(stats);
         }
     }, [weatherData, timeZone]);
     
     const classes = [
-        'prose max-w-none prose-headings:text-white prose-p:text-white prose-headings:my-0 container mx-auto',
+        'flex flex-col gap-y-6 container mx-auto',
         isOpen && 'pb-8'
     ].filter(Boolean).join(' ')
-    
+
+    const spotLocation = `${title}, ${location}`
+    const introText = weatherStats.generalConditions && weatherStats.generalConditions.conditions ? `Today in ${spotLocation} you can expect ${weatherStats.generalConditions.conditions.toString()}.` : '';
+
     return (
         <div className={classes}>
-
-            <div className=" grid grid-cols 1 md:grid-cols-2 gap-8 md:gap-12">
-                <div className='bg-blue/80 shadow-xl p-6'>
-                    <h3>
+            <p className='text-sm'>
+                {introText}
+            </p>
+            <div className="grid grid-cols 1 md:grid-cols-2 gap-8 md:gap-12">
+                <div className='bg-blue/80 shadow-xl p-6 flex flex-col gap-y-4'>
+                    <h3 class="text-lg font-bold">
                         Wind
                     </h3>
                     {weatherStats.wind && weatherStats.wind.map((windData, index) => {
@@ -105,8 +101,8 @@ const LiveWeatherData = ({ lat, long, timeZone, isOpen }) => {
                         )
                     })}
                 </div>
-                <div className='bg-blue/80 shadow-xl p-6'>
-                    <h3>
+                <div className='bg-blue/80 shadow-xl p-6 flex flex-col gap-y-4'>
+                    <h3 className='text-lg font-bold'>
                         Temperature
                     </h3>
                     {weatherStats.temp && weatherStats.temp.map((windData, index) => {
@@ -129,24 +125,21 @@ const LiveWeatherData = ({ lat, long, timeZone, isOpen }) => {
                         )
                     })}
                 </div>
-{/*                 
-                <div>
-                    <h3>
-                        General conditions
-                    </h3>
-                    <div>
-                        {weatherStats.generalConditions && weatherStats.generalConditions.map((generalData, index) => {
-                            return(
-                                <div key={index} className="divst-none">
-                                    <p>
-                                        {generalData.title} <span>{generalData.value}</span>
-                                    </p>
-                                </div>
-                            )
-                        })}
-                    </div>
-                </div> */}
             </div>   
+                {weatherStats.generalConditions && weatherStats.generalConditions.sunrise && weatherStats.generalConditions.sunset && (
+                    <div className='flex justify-between md:grid md:grid-cols-2 md:gap-12'>
+                        <p>
+                            Sunrise: <span>
+                                {weatherStats.generalConditions.sunrise}
+                            </span>
+                        </p>
+                        <p>
+                            Sunset: <span>
+                                {weatherStats.generalConditions.sunset}
+                            </span>
+                        </p>
+                    </div>
+                )}
         </div>
     );
 };

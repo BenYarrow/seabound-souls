@@ -19,7 +19,7 @@ const InfoModelContent = () => (
         The light blue is representative of land, with borders being seperated via the white lines. The darker blue areas are national parks, and the black lines are road networks.
     </p>
     <small>
-        This map uses data provided by Mapbox.
+        This map is powered by by Mapbox.
     </small>
   </div>
 )
@@ -107,8 +107,10 @@ const Destinations = () => {
       />
 
       <StaticMasthead image={mastheadImages} />
-      
-      <Title title="Destination spot guides" h1 centreTitle/>
+
+      <BlockWrapper>
+        <Title title="Destination spot guides" h1 centreTitle/>
+      </BlockWrapper>
       
       <LeafletMap
         lat={10}
