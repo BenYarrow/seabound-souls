@@ -84,7 +84,6 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                             </div>
                         </div>
                     </BlockWrapper>
-                    
                 )}
 
                 {spotGuide.sailingStyle && (
