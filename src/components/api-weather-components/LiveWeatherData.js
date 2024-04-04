@@ -20,6 +20,7 @@ const LiveWeatherData = ({
     const [currentTemp, setCurrentTemp] = useState(null)
     const [feelsLikeTemp, setFeelsLikeTemp] = useState(null)
     const [currentGusts, setCurrentGusts] = useState(null)
+    const [currentAverageWind, setCurrentAverageWind] = useState(null)
     const [tempUnitChecked, setTempUnitChecked] = useState('celcius')
     const [windUnitChecked, setWindUnitChecked] = useState('knots')
     
@@ -111,7 +112,7 @@ const LiveWeatherData = ({
                 )
             }
         }
-    }, [tempUnitChecked, isLoading, currentGusts])
+    }, [tempUnitChecked, isLoading])
     
     useEffect(() => {
         if (!isLoading) {
@@ -119,13 +120,18 @@ const LiveWeatherData = ({
                 setCurrentGusts(
                     mpsToKnotsFormatter(weatherStats.wind?.gusts)
                 )
+                setCurrentAverageWind(
+                    mpsToKnotsFormatter(weatherStats.wind?.averageSpeed)
+                )
             } else if (windUnitChecked === 'mps') {
                 setCurrentGusts(`${Math.round(weatherStats.wind?.gusts)} mps`)
+                setCurrentAverageWind(`${Math.round(weatherStats.wind?.averageSpeed)} mps`)
             } else if (windUnitChecked === 'mph') {
                 setCurrentGusts(mpsToMphFormatter(weatherStats.wind?.gusts))
+                setCurrentAverageWind(mpsToMphFormatter(weatherStats.wind?.averageSpeed))
             }
         }
-    }, [windUnitChecked, isLoading, currentGusts])
+    }, [windUnitChecked, isLoading])
 
     return (
         <div className={classes}>
@@ -155,10 +161,10 @@ const LiveWeatherData = ({
                                             </span>
                                         </p>
                                     )}
-                                    {weatherStats.wind.averageSpeed && (
+                                    {currentAverageWind && (
                                         <p className='flex items-center gap-x-2'>
-                                            Feels Like: <span>
-                                                {weatherStats.wind.averageSpeed}
+                                            Average: <span>
+                                                {currentAverageWind}
                                             </span>
                                         </p>
                                     )}
