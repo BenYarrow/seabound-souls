@@ -17,6 +17,8 @@ const LiveWeatherData = ({
     const [weatherData, setWeatherData] = useState({});
     const [weatherStats, setWeatherStats] = useState({});
     const [isLoading, setIsLoading] = useState(true)
+    const [currentTemp, setCurrentTemp] = useState(null)
+    const [feelsLikeTemp, setFeelsLikeTemp] = useState(null)
     const [tempUnitChecked, setTempUnitChecked] = useState('celcius')
     
     const API_KEY = siteData.openWeatherMap['key'];
@@ -53,8 +55,6 @@ const LiveWeatherData = ({
             setWeatherStats(stats);
         }
     }, [weatherData, timeZone]);
-    
-    const [currentTemp, setCurrentTemp] = useState(weatherStats.temp?.current)
 
     const classes = [
         'flex flex-col gap-y-6 container mx-auto',
@@ -68,12 +68,10 @@ const LiveWeatherData = ({
         {
             id: 'celcius',
             label: '°C',
-            function: ''
         },
         {
             id: 'farenheight',
             label: '°F',
-            function: ''
         },
     ]
     
@@ -81,15 +79,22 @@ const LiveWeatherData = ({
         setTempUnitChecked(e.target.id)
     }
 
-    const currentTempInCelcius = tempFormatterFromCelciusToRoundedCelcius(weatherStats.temp?.current)
-    const currentTempInFarenheight = tempFormatterFromCelciusToFahrenheit(weatherStats.temp?.current)
-
     useEffect(() => {
         if (!isLoading) {
             if(tempUnitChecked === 'celcius') {
-                setCurrentTemp(currentTempInCelcius)
+                setCurrentTemp(
+                    tempFormatterFromCelciusToRoundedCelcius(weatherStats.temp?.current)
+                )
+                setFeelsLikeTemp(
+                    tempFormatterFromCelciusToRoundedCelcius(weatherStats.temp?.feels_like)
+                )
             } else if (tempUnitChecked === 'farenheight') {
-                setCurrentTemp(currentTempInFarenheight)
+                setCurrentTemp(
+                    tempFormatterFromCelciusToFahrenheit(weatherStats.temp?.current)
+                )
+                setFeelsLikeTemp(
+                    tempFormatterFromCelciusToFahrenheit(weatherStats.temp?.feels_like)
+                )
             }
         }
     }, [tempUnitChecked, isLoading, currentTemp])
@@ -139,11 +144,20 @@ const LiveWeatherData = ({
                         <>
                             {weatherStats.temp && (
                                 <div className="">
-                                    <p className='flex items-center gap-x-2'>
-                                        Current <span>
-                                            {currentTemp && currentTemp}
-                                        </span>
-                                    </p>
+                                    {currentTemp && (
+                                        <p className='flex items-center gap-x-2'>
+                                            Current: <span>
+                                                {currentTemp}
+                                            </span>
+                                        </p>
+                                    )}
+                                    {feelsLikeTemp && (
+                                        <p className='flex items-center gap-x-2'>
+                                            Feels Like: <span>
+                                                {feelsLikeTemp}
+                                            </span>
+                                        </p>
+                                    )}
                                 </div>
                             )}
                         </>
