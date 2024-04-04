@@ -1,32 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import { siteData } from '../../Data/site-data';
-import { mpsToKnotsFormatter, tempFormatter, formatUnixTimeInTimeZone } from '../../helpers/functions';
+import { mpsToKnotsFormatter, tempFormatterFromCelciusToRoundedCelcius, tempFormatterFromCelciusToFahrenheit, formatUnixTimeInTimeZone } from '../../helpers/functions';
 import BeatLoader from 'react-spinners/BeatLoader'
+import { fetchWeatherData } from '../../helpers/functions';
 
 
-const LiveWeatherData = ({ lat, long, timeZone, isOpen, title, location }) => {
+const LiveWeatherData = ({ 
+    lat, 
+    long, 
+    timeZone, 
+    isOpen, 
+    title, 
+    location 
+}) => {
     
     const [weatherData, setWeatherData] = useState({});
     const [weatherStats, setWeatherStats] = useState({});
     const [isLoading, setIsLoading] = useState(true)
+    const [tempUnitChecked, setTempUnitChecked] = useState('celcius')
+    
     const API_KEY = siteData.openWeatherMap['key'];
     const weatherUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`;
 
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const response = await fetch(weatherUrl);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok', response.status, response.statusText);
-                }
-                const data = await response.json()
-                setWeatherData(data);
-                setIsLoading(false)
-            } catch (error) {
-                console.error('Error fetching data:', error);
-            }
-        };
-        fetchData();
+        fetchWeatherData({weatherUrl, setWeatherData, setIsLoading}) ;
     }, [weatherUrl]);
 
     useEffect(() => {
@@ -42,16 +39,10 @@ const LiveWeatherData = ({ lat, long, timeZone, isOpen, title, location }) => {
                         value: weatherData.current.wind_speed ? mpsToKnotsFormatter(weatherData.current.wind_speed) : null
                     },
                 ],
-                temp: [
-                    {
-                        title: 'Live temp:',
-                        value: weatherData.current.temp ? tempFormatter(weatherData.current.temp) : null
-                    },
-                    {
-                        title: 'Feels Like:',
-                        value: weatherData.current.feels_like ? tempFormatter(weatherData.current.feels_like) : null
-                    },
-                ],
+                temp: {
+                    current: weatherData.current.temp ? weatherData.current.temp : null,
+                    feels_like: weatherData.current.feels_like ? weatherData.current.feels_like : null
+                },
                 generalConditions: {
                     sunrise: weatherData.current.sunrise ? formatUnixTimeInTimeZone(weatherData.current.sunrise, weatherData.timezone, weatherData.timezone_offse) : null,
                     sunset: weatherData.current.sunset ? formatUnixTimeInTimeZone(weatherData.current.sunset, weatherData.timezone, weatherData.timezone_offset) : null,
@@ -63,6 +54,8 @@ const LiveWeatherData = ({ lat, long, timeZone, isOpen, title, location }) => {
         }
     }, [weatherData, timeZone]);
     
+    const [currentTemp, setCurrentTemp] = useState(weatherStats.temp?.current)
+
     const classes = [
         'flex flex-col gap-y-6 container mx-auto',
         isOpen && 'pb-8'
@@ -71,6 +64,36 @@ const LiveWeatherData = ({ lat, long, timeZone, isOpen, title, location }) => {
     const spotLocation = `${title}, ${location}`
     const introText = weatherStats.generalConditions && weatherStats.generalConditions.conditions ? `Today in ${spotLocation} you can expect ${weatherStats.generalConditions.conditions.toString()}.` : '';
 
+    const tempCheckboxInputs = [
+        {
+            id: 'celcius',
+            label: '°C',
+            function: ''
+        },
+        {
+            id: 'farenheight',
+            label: '°F',
+            function: ''
+        },
+    ]
+    
+    const handleCheckboxChange = (e) => {
+        setTempUnitChecked(e.target.id)
+    }
+
+    const currentTempInCelcius = tempFormatterFromCelciusToRoundedCelcius(weatherStats.temp?.current)
+    const currentTempInFarenheight = tempFormatterFromCelciusToFahrenheit(weatherStats.temp?.current)
+
+    useEffect(() => {
+        if (!isLoading) {
+            if(tempUnitChecked === 'celcius') {
+                setCurrentTemp(currentTempInCelcius)
+            } else if (tempUnitChecked === 'farenheight') {
+                setCurrentTemp(currentTempInFarenheight)
+            }
+        }
+    }, [tempUnitChecked, isLoading, currentTemp])
+    
     return (
         <div className={classes}>
             <p className='text-sm'>
@@ -87,7 +110,7 @@ const LiveWeatherData = ({ lat, long, timeZone, isOpen, title, location }) => {
                                 <p className='flex items-center gap-x-2'>
                                     {windData.title} <span>
                                         {isLoading ?
-                                                <BeatLoader
+                                            <BeatLoader
                                                 color="#ffffff"
                                                 loading={true}
                                                 size={10}
@@ -105,25 +128,45 @@ const LiveWeatherData = ({ lat, long, timeZone, isOpen, title, location }) => {
                     <h3 className='text-lg font-bold'>
                         Temperature
                     </h3>
-                    {weatherStats.temp && weatherStats.temp.map((windData, index) => {
-                        return(
-                            <div key={index} className="">
-                                <p className='flex items-center gap-x-2'>
-                                    {windData.title} <span>
-                                        {isLoading ?
-                                                <BeatLoader
-                                                color="#ffffff"
-                                                loading={true}
-                                                size={10}
-                                                css=""
-                                            /> : 
-                                            windData.value
-                                        }
-                                    </span>
-                                </p>
-                            </div>
-                        )
-                    })}
+                    {isLoading ? (
+                        <BeatLoader
+                            color="#ffffff"
+                            loading={true}
+                            size={10}
+                            css=""
+                        /> 
+                    ) : (
+                        <>
+                            {weatherStats.temp && (
+                                <div className="">
+                                    <p className='flex items-center gap-x-2'>
+                                        Current <span>
+                                            {currentTemp && currentTemp}
+                                        </span>
+                                    </p>
+                                </div>
+                            )}
+                        </>
+
+                     )}
+                    <div className='flex justify-between'>
+                        {tempCheckboxInputs.map(check => {
+                            return (
+                                <div className='flex items-center gap-x-2'>
+                                    <input
+                                        type="checkbox"
+                                        id={check.id}
+                                        name="temperatureUnit"
+                                        value={check.id}
+                                        checked={tempUnitChecked === check.id}
+                                        onChange={(e) => handleCheckboxChange(e)}
+                                    />
+                                    <label for={check.id}>{check.label}</label>
+                                </div>
+                            )
+                        })}
+                    </div>
+                    
                 </div>
             </div>   
                 {weatherStats.generalConditions && weatherStats.generalConditions.sunrise && weatherStats.generalConditions.sunset && (

@@ -4,10 +4,17 @@ const mpsToKnotsFormatter = (mps) => {
     return `${calculatedResult} knts`;
 }
 
-const tempFormatter = (temp) => {
+const tempFormatterFromCelciusToRoundedCelcius = (temp) => {
     const roundedTemp = Math.round(temp)
     return `${roundedTemp} °C`
 }
+
+const tempFormatterFromCelciusToFahrenheit = (temp) => {
+    const tempInFahrenheit = (temp * 9/5) + 32;
+    const roundedTemp = Math.round(tempInFahrenheit);
+    return `${roundedTemp} °F`;
+}
+
 
 const checkContentFormat = (content) => {
     if (Array.isArray(content)) {
@@ -32,12 +39,26 @@ function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
 }
   
-
+const fetchWeatherData = async ({weatherUrl, setWeatherData, setIsLoading}) => {
+    try {
+        const response = await fetch(weatherUrl);
+        if (!response.ok) {
+            throw new Error('Network response was not ok', response.status, response.statusText);
+        }
+        const data = await response.json()
+        setWeatherData(data);
+        setIsLoading(false)
+    } catch (error) {
+        console.error('Error fetching data:', error);
+    }
+};
 
 export {
     mpsToKnotsFormatter,
-    tempFormatter,
+    tempFormatterFromCelciusToRoundedCelcius,
+    tempFormatterFromCelciusToFahrenheit,
     checkContentFormat,
     formatUnixTimeInTimeZone,
-    capitalizeFirstLetter
+    capitalizeFirstLetter,
+    fetchWeatherData
 }

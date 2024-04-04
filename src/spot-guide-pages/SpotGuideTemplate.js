@@ -74,14 +74,12 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
 
                 {spotGuide.intro && (
                     <BlockWrapper>
-                        <div className='border-y border-white-darker py-6 flex flex-col gap-y-4'>
-                            <div className='flex items-center'>
-                                <Text
-                                    content={checkContentFormat(spotGuide.intro)}
-                                    centredText
-                                    reduceParagraphPadding 
-                                />
-                            </div>
+                        <div className='border-y border-blue-lighter py-6'>
+                            <Text
+                                content={checkContentFormat(spotGuide.intro)}
+                                centredText
+                                reduceParagraphPadding 
+                            />
                         </div>
                     </BlockWrapper>
                 )}
