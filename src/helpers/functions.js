@@ -4,9 +4,15 @@ const mpsToKnotsFormatter = (mps) => {
     return `${calculatedResult} knts`;
 }
 
+const mpsToMphFormatter = (mps) => {
+    const mph = mps * 2.23694;
+    const result = Math.round(mph);
+    return `${result} mph`;
+}
+
 const tempFormatterFromCelciusToRoundedCelcius = (temp) => {
-    const roundedTemp = Math.round(temp)
-    return `${roundedTemp} °C`
+    const roundedTemp = Math.round(temp);
+    return `${roundedTemp} °C`;
 }
 
 const tempFormatterFromCelciusToFahrenheit = (temp) => {
@@ -55,6 +61,7 @@ const fetchWeatherData = async ({weatherUrl, setWeatherData, setIsLoading}) => {
 
 export {
     mpsToKnotsFormatter,
+    mpsToMphFormatter,
     tempFormatterFromCelciusToRoundedCelcius,
     tempFormatterFromCelciusToFahrenheit,
     checkContentFormat,

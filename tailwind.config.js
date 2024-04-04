@@ -4,7 +4,7 @@ module.exports = {
   safelist: [
     'bg-white', 
     'text-blue', 
-    'font standard',
+    'font-standard',
     'text-lg',
     'text-xl'
   ],  
