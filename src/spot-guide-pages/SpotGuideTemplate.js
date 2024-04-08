@@ -17,6 +17,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { Util } from 'leaflet'
 import UtilityBar from '../components/UtilityBar'
+import Gallery from '../components/Gallery'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}) => {
 
@@ -97,15 +98,19 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
 
                 {spotGuide.gridGalleryImageOne && (
                     <BlockWrapper >
-                        <GridImageDisplay 
+                        {/* <GridImageDisplay 
                             imageOne={spotGuide.gridGalleryImageOne}
                             imageTwo={spotGuide.gridGalleryImageTwo}
                             imageThree={spotGuide.gridGalleryImageThree}
                             imageFour={spotGuide.gridGalleryImageFour}
-                        />
+                        /> */}
                     </BlockWrapper>
                 )}
 
+                <Gallery 
+                    images={[spotGuide.gridGalleryImageOne, spotGuide.gridGalleryImageTwo, spotGuide.gridGalleryImageThree, spotGuide.gridGalleryImageFour]}
+                />
+                
                 <SpotConditions
                     waterConditionDetails={spotGuide.waterConditionDetails}
                     waterImage={spotGuide.waterConditionImage}

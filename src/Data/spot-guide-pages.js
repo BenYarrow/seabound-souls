@@ -539,10 +539,10 @@ export let SpotGuidePages = [
         launchZone: 'Sandy beach',
 
         // Gallery grid
-        gridGalleryImageOne: null,
-        gridGalleryImageTwo:null,
-        gridGalleryImageThree:null,
-        gridGalleryImageFour:null,
+        gridGalleryImageOne: '/images/Egypt-Images/dahab-swiss-inn-resort.jpg',
+        gridGalleryImageTwo: '/images/Egypt-Images/dahab-beach-2.jpg',
+        gridGalleryImageThree: '/images/Egypt-Images/Dahab-Safir-1.jpg',
+        gridGalleryImageFour: '/images/Egypt-Images/01001053.jpg',
         
         // Spot conditions
         whenToGoDetails: "The windiest time of the year in Dahab typically occurs from late spring to early summer and then again in late summer to early autumn. During these periods, the reliable north winds create strong conditions for windsurfing.",
