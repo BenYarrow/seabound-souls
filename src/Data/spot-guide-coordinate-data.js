@@ -123,8 +123,8 @@ export let spotGuideCoordinates = {
             title: 'Dahab',
             link: '/destinations/dahab-spot-guide',
             coordinates: {
-                lat: 28.471083,
-                long: 34.501198
+                lat: 28.476967, 
+                long: 34.497250,
             }
         },
         timeZone: 'Africa/Cairo',

@@ -20,7 +20,7 @@ import NotFound from './404/NotFound';
 
 function App() {
   return (
-      <div className='text-blue bg-white text-lg '>
+      <div className='bg-white'>
         <Router>
           <ScrollToTop />
             

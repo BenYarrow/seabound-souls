@@ -38,11 +38,12 @@ const BulletsAndImage = ({
                                                 {list.title != null &&  (
                                                     <>
                                                         {list.link != null ? (
-                                                            <a href={list.link} target="_blank" rel="nofollow external noopener noreferrer" className='font-bold hover:underline text-orange'>
+                                                            <a href={list.link} target="_blank" rel="nofollow external noopener noreferrer" className='font-bold hover:underline text-orange flex gap-x-2 items-center'>
                                                                 {list.title}
+                                                                <FontAwesomeIcon icon={faExternalLink}/>
                                                             </a>
                                                         ) : (
-                                                            <span key={index} className="text-blue">
+                                                            <span key={index}>
                                                                 {list.title}
                                                             </span>
                                                         )}

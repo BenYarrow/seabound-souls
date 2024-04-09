@@ -22,13 +22,13 @@ const ContactUs = () => {
       <BlockWrapper>
         <Title title='Contact us' h1 centreTitle />
 
-        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8">
+        <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 pt-8 lg:pt-12">
           <div className="w-full  flex flex-col items-center gap-y-8">
             <p className="max-w-3xl text-center ">
               If you represent a brand that aligns with our values and shares our commitment to environmental conservation and mental health advocacy, we would love to explore collaboration opportunities. 
             </p>
             <p className="max-w-3xl text-center ">
-              Let's work together to make a positive impact while embarking on exciting adventures! Feel free to <a href="mailto:seabound.souls@outlook.com" rel="nofollow external noopener noreferrer" className="font-bold border-b-[1px] border-blue">reach out</a>, and let's create waves of change together. 
+              Let's work together to make a positive impact while embarking on exciting adventures! Feel free to <a href="mailto:seabound.souls@outlook.com" rel="nofollow external noopener noreferrer" className="text-orange font-bold">reach out</a>, and let's create waves of change together. 
             </p>
           </div>
 

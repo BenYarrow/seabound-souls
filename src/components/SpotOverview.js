@@ -21,8 +21,8 @@ const DetailItem = ({
                     loading="lazy"
                     crossOrigin="true"
                 />
-                <p className="text-sm lg:text-xl font-bold whitespace-nowrap">
-                    {title}: <span className='text-sm lg:text-xl font-normal md:block whitespace-normal'>{text}</span>
+                <p className="text-sm lg:text-xl font-bold whitespace-nowrap text-blue">
+                    {title}: <span className='text-sm lg:text-xl font-normal md:block whitespace-normal text-black'>{text}</span>
                 </p>
             </div>
         </li>
@@ -69,14 +69,14 @@ const SpotOverview = (props) => {
   return (
     <BlockWrapper > 
         <div className='flex flex-col gap-y-8'>
-            <h2 className='text-2xl md:text-3xl font-bold'>
+            <h2 className='text-2xl md:text-3xl font-bold text-blue'>
                 Overview
             </h2>
             
-            <ul className='grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-12'>
+            <ul className='grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 lg:gap-12'>
                 {spotItemData.slice(0, 3).map((data, index) => <DetailItem {...data} index={index} svgClasses={svgClasses}/>)}
             </ul>
-            <ul className='grid grid-cols-1 md:grid-cols-3 md:gap-6 lg:gap-12'>
+            <ul className='grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 lg:gap-12'>
                 {spotItemData.slice(3, 6).map((data, index) => <DetailItem {...data} index={index} svgClasses={svgClasses}/>)}
             </ul>
         </div>

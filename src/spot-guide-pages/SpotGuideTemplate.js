@@ -1,11 +1,9 @@
 import React, {useState} from'react'
 import StaticMasthead from'../components/StaticMasthead'
-import Title from '../components/Title'
 import SpotOverview from'../components/SpotOverview'
 import SpotConditions from'../components/SpotConditions'
 import BulletsAndImage from'../components/BulletsAndImage'
 import SplitImageText from'../components/SplitImageText'
-import GridImageDisplay from'../components/GridImageDisplay'
 import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
@@ -15,7 +13,6 @@ import LeafletMap from '../components/maps/LeafletMap'
 import { checkContentFormat } from '../helpers/functions'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { Util } from 'leaflet'
 import UtilityBar from '../components/UtilityBar'
 import Gallery from '../components/Gallery'
 

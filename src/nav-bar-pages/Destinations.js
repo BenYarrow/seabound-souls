@@ -72,7 +72,6 @@ const Destinations = () => {
     }
   };
   
-  // const mapMarkers = destinationCoordinates.map(destination => destination.marker)
   const mapMarkers = Object.values(spotGuideCoordinates).map(location => location.marker)
 
   const options = windsurfingLocations.map(location => {
@@ -138,9 +137,9 @@ const Destinations = () => {
           
           <div className="flex items-end lg:col-span-2">
             <p>
-              Showing <span className="font-bold">
+              Showing <span className="font-bold text-orange">
                 {activeFilter.length}
-              </span> spot guides <span>
+              </span> spot guides <span className="font-bold text-orange">
                 {activeFilter.length !== windsurfingBlogs.length && `from ${capitalizeFirstLetter(activeFilter[0].continent)}`}
               </span>
             </p>

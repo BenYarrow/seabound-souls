@@ -25,7 +25,7 @@ const LeafletMap = ({lat, long, markers, zoom = 15, infoModalContent}) => {
                         <p className="flex gap-x-1 mb-2">
                             Map navigation
                             <button onClick={() => setIsInfoModalOpen(true)} className="flex items-start">
-                                <FontAwesomeIcon icon={faCircleInfo}/>
+                                <FontAwesomeIcon icon={faCircleInfo} className="text-blue"/>
                             </button>
                             <InfoModal
                                 isOpen={isInfoModalOpen}
@@ -40,7 +40,7 @@ const LeafletMap = ({lat, long, markers, zoom = 15, infoModalContent}) => {
                             center={[lat, long]}
                             zoom={zoom}
                             scrollWheelZoom={true}
-                            className="w-full h-full"
+                            className="w-full h-full z-10"
                         >
                             <TileLayer url={url} attribution="© <a href='https://www.mapbox.com/about/maps/'>Mapbox</a> © <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap</a> <strong><a href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a></strong>"/>
                             {markers && markers.map((marker, index) => {

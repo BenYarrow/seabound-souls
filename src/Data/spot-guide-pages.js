@@ -48,7 +48,7 @@ export let SpotGuidePages = [
         
         // Spot conditions
         whenToGoDetails: 'The season runs from May to September, with the windiest months being June, July and August. ',
-        waterConditionDetails: "Vassiliki bay offers both flatwater and choppy conditions, making it suitable for windsurfers of all levels. Additionally, the bay is non-tidal so theres no restrictions on sailing once the wind kicks in. The water temperature typically ranges from around 20°C (68°F) in the early spring (May) to 26°C (79°F) or higher in the peak summer months of July and August. In May and September, you may want to wear a long wetsuit, particularly once the sun sets behind the mountains. But otherwise, boardies and a rash vest is all youll need during the summer months.",
+        waterConditionDetails: () => <p>Vassiliki bay offers both flatwater and choppy conditions, making it suitable for windsurfers of all levels. Additionally, the bay is non-tidal so theres no restrictions on sailing once the wind kicks in. The water temperature typically ranges from around <span className="font-bold text-blue">20°C (68°F)</span> in the early spring (May) to <span className="font-bold text-blue">26°C (79°F)</span> or higher in the peak summer months of July and August. In May and September, you may want to wear a long wetsuit, particularly once the sun sets behind the mountains. But otherwise, boardies and a rash vest is all youll need during the summer months.</p>,
         waterConditionImage: '/images/mastheads/homepage/paddleboarding-vass.jpg',
         windConditionDetails: [
             "Vassiliki is famous for its reliable afternoon thermal winds. The prevailing wind is a katabatic thermal wind known as 'Eric,' which blows from the northwest.", 
@@ -532,7 +532,7 @@ export let SpotGuidePages = [
         a4: true,
         a5: false,
         sailingStyle: 'Freeride / Freestlye / Foil',
-        bestConditions: 'April / May / June / August / September / October',
+        bestConditions: 'April - June / August - October',
         bestDirection: 'N / NE',
         windConditions: 'Clean',
         waterConditions: 'Chop hop / Flat',
@@ -676,19 +676,19 @@ export let SpotGuidePages = [
         waterConditionDetails: [
             "Langebaan lagoon is protected from the large ocean swells and has reasonably flat water close to the shore. It's a great spot for freestyle in the flat spots. Further out, the conditions become more unsettled, although providing fun bump and jump conditions.",
             () => <p>One thing to note is that you do have to <span className="font-bold text-blue">be mindful of the tide.</span> When the tide is going out, the current becomes exceptionally strong, making sailing in a southeast wind a little more tricky. However, when the tide is coming in the sailing is effortless. </p>,
-            () => <p>Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months <em>(October to March),</em> water temperatures range from around <span className="font-bold text-blue">15 to 20°C.</span> During the winter season <em>(April to September)</em>, temperatures can drop slightly to approximately <span>12 to 16°C.</span> We'd recommend a 3/2 wetsuit even in the summer months.</p>
+            () => <p>Whilst Langebaan generally experiences a moderate climate, the water is much colder than you'd expect. In the summer months <em>(October to March),</em> water temperatures range from around <span className="font-bold text-blue">15 to 20°C.</span> During the winter season <em>(April to September)</em>, temperatures can drop slightly to approximately <span className="font-bold text-orange">12 to 16°C.</span> We'd recommend a 3/2 wetsuit even in the summer months.</p>
         ],
         waterConditionImage: null,
         windConditionDetails: [
             () => <div>
                     <h3 className="font-bold text-blue">Summer months <em>(October to March):</em></h3>
-                    <p>The summer brings prevailing southerly winds ranging from <span>15 to 25 knots.</span> This is great for windsurfers looking to progress their sailing or just enjoy cruising around the turquoise blue waters.</p>
+                    <p>The summer brings prevailing southerly winds ranging from <span className="font-bold text-orange">15 to 25 knots.</span> This is great for windsurfers looking to progress their sailing or just enjoy cruising around the turquoise blue waters.</p>
                 </div>,
             () => <div>
                     <h3 className="font-bold text-blue">Winter months <em>(April to September):</em></h3>
                     <p>In the winter the direction changes to be more north-westerly, giving slightly different sailing conditions but equally enjoyable windsurfing experience.</p>
                 </div>,
-            () => <p>The spot benefits from thermal winds, especially during the warmer months. As the land heats up, it creates a temperature difference between the inland areas and the coast, resulting in the wind typically being stronger than what is forecast. Wind strength in Langebaan can vary, but it's not uncommon to experience winds ranging from <span>15 to 30 knots</span> or more.</p>
+            () => <p>The spot benefits from thermal winds, especially during the warmer months. As the land heats up, it creates a temperature difference between the inland areas and the coast, resulting in the wind typically being stronger than what is forecast. Wind strength in Langebaan can vary, but it's not uncommon to experience winds ranging from <span className="font-bold text-orange">15 to 30 knots</span> or more.</p>
         ] ,
         windConditionImage: '',
         spots: null,

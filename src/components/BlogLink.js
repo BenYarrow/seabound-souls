@@ -30,7 +30,7 @@ const BlogLink = ({
     return(
       <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group shadow-2xl' >
         <motion.div 
-          className="w-full overflow-hidden prose prose-h3:text-blue prose-p:text-blue max-w-none"
+          className="w-full overflow-hidden flex flex-col gap-y-8"
           variants={{
               hidden: {opacity: 0, y: 75},
               visible: {opacity: 1, y: 0},

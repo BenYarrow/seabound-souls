@@ -24,7 +24,7 @@ const SpotConditions = ({
 
             <div>
                 <BlockWrapper  >
-                    <h3 className="pb-8 text-4xl uppercase font-bold">
+                    <h3 className="pb-8 text-4xl uppercase font-bold text-blue">
                         Conditions
                     </h3>
 
