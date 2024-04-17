@@ -1,5 +1,6 @@
 import React, {useRef, useEffect} from 'react';
 import { motion, useAnimation, useInView } from "framer-motion";
+import BlockWrapper from './BlockWrapper';
 
 const Text = ({ 
     title, 
@@ -9,7 +10,8 @@ const Text = ({
     centredText = false,
     centreHeading = false,
     lineClamp,
-    reduceParagraphPadding
+    reduceParagraphPadding,
+    container = true
 }) => {
   
   const classes = [
@@ -32,7 +34,7 @@ const Text = ({
   }, [isTextInView,  mainControls])
 
   return (
-    <>
+    <BlockWrapper container={container}>
         <motion.div ref={textRef}  
           variants={{
             hidden: {opacity: 0, y: 75},
@@ -46,7 +48,7 @@ const Text = ({
           }}
         >
           <div className={classes}>
-            {title && <h3>{title}</h3>}
+            {title && <h2>{title}</h2>}
 
             {subtitle && <h4>{subtitle}</h4>}
 
@@ -63,7 +65,7 @@ const Text = ({
               ))}
           </div>
       </motion.div>
-    </>
+    </BlockWrapper>
   );
 };
 

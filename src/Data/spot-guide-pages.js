@@ -43,7 +43,7 @@ export let SpotGuidePages = [
         // Gallery
         galleryImages:[
             {
-                src: '/images/Vassiliki-Images/cosmos-hotel.jpg',
+                src: '/images/vassiliki/cosmos-hotel.jpg',
                 alt: 'Cosmos hotel, Vassiliki'
             },
             {
@@ -55,7 +55,7 @@ export let SpotGuidePages = [
                 alt: 'Ben and Rachel windsurfing together'
             },
             {
-                src: '/images/Vassiliki-Images/surf-hotel.jpg',
+                src: '/images/vassiliki/surf-hotel.jpg',
                 alt: 'Surf Hotel, Vassiliki'
             },
         ],
@@ -131,7 +131,7 @@ export let SpotGuidePages = [
                 link: 'https://clubvass.com/',
             },
         ],
-        stayImage: '/images/Vassiliki-Images/cosmos-hotel.jpg',
+        stayImage: '/images/vassiliki/cosmos-hotel.jpg',
         stayImageDescription: 'Cosmos Hotel',
         stayImageLink: 'https://cosmos-vassiliki.com/',
 
@@ -167,7 +167,7 @@ export let SpotGuidePages = [
                 link: 'https://rachi.gr/',
             },
         ],
-        eatImage: '/images/Vassiliki-Images/zorbas-restaurant.jpg',
+        eatImage: '/images/vassiliki/zorbas-restaurant.jpg',
         eatImageDescription: 'Patio Restaurant',
         eatImageLink: 'https://www.facebook.com/profile.php?id=100063509014691',
 
@@ -223,15 +223,15 @@ export let SpotGuidePages = [
         // Gallery
         galleryImages: [
             {
-                src: '/images/Mauritius-Images/rachel-windsurfing-01.jpg',
+                src: '/images/mauritius/rachel-windsurfing-01.jpg',
                 alt: 'Rachel windsurfing in Mauritius'
             },
             {
-                src: '/images/Mauritius-Images/le-morne-mountain-01.jpg',
+                src: '/images/mauritius/le-morne-mountain-01.jpg',
                 alt: 'Le Morne, Mauritius'
             },
             {
-                src: '/images/Mauritius-Images/rachel-sitting.jpg',
+                src: '/images/mauritius/rachel-sitting.jpg',
                 alt: 'Rachel sitting on the beach'
             },
         ],
@@ -239,7 +239,7 @@ export let SpotGuidePages = [
         // Spot conditions
         whenToGoDetails: "The peak season in Le Morne runs from June to October when the trade winds consistently blow from the southeast. During this period, you can expect strong and consistent wind conditions, especially for wave riding. We visited during September and pretty much every day was windy with great conditions. ",
         waterConditionDetails:  () => <p>The lagoon inside the reef provides shallow and flat water, making it ideal for beginners to practice. Outside of the lagoon offers a variety of wave conditions and a great place to improve your wave riding skills. The water temperature is consistently warm and comfortable year-round. It typically ranges from <span className='font-bold text-blue'>24°C (75°F)</span> in the winter to <span className='font-bold text-blue'>28°C (82°F)</span> in the summer. We wore long summer wetsuits and booties, to provide some protections from the rocks when windsurfing close to the reefs.</p>,
-        waterConditionImage: '/images/Mauritius-Images/mauritius-beach-02.jpg',
+        waterConditionImage: '/images/mauritius/mauritius-beach-02.jpg',
         windConditionDetails: [
             () => 
                 <div> 
@@ -260,7 +260,7 @@ export let SpotGuidePages = [
                 </div>
                 
         ],
-        windConditionImage: '/images/Mauritius-Images/ben-windsurfing-01.jpg',
+        windConditionImage: '/images/mauritius/ben-windsurfing-01.jpg',
         spots: [
             () => <div>
                     <h3 className="font-bold text-blue">Lagoon: </h3>
@@ -272,7 +272,7 @@ export let SpotGuidePages = [
                 </div>
         ],
 
-        spotImage: '/images/Mauritius-Images/mauritius-beach-03.jpg',
+        spotImage: '/images/mauritius/mauritius-beach-03.jpg',
 
         // Lessons and hire
         lessonIntro: 'Ion Club Le Morne is particularly well known for its windsurfing school that caters to all levels. We hired kit from ION Club Le Morne and were very impressed with their selection of boards and sails. Staff were super friendly and always on hand to help. They also cater for kite surfers, wingfoilers and surfers.',
@@ -282,7 +282,7 @@ export let SpotGuidePages = [
                 link: 'https://www.ion-club.net/le-morne/'
             }
         ],
-        lessonHireImage: '/images/Mauritius-Images/ion-club-safety-tower.jpg',
+        lessonHireImage: '/images/mauritius/ion-club-safety-tower.jpg',
         lessonHireImageDescription: 'Ion Club, Mauritius',
         lessonHireImageLink: 'https://www.ion-club.net/le-morne/',
 
@@ -290,7 +290,7 @@ export let SpotGuidePages = [
         gettingHereText: [
             'Regular flights are available from London Heathrow (LHR), London Gatwick (LGW), and Manchester Airport (MAN) to Sir Seewoosagur Ramgoolam International Airport (MRU), the main international airport in Mauritius. Several airlines operate flights, including British Airways, Emirates and Air Mauritius. The flight takes around 12 to 13 hours.',
         ],
-        gettingHereImage: "/images/Mauritius-Images/crystal-rock.jpg",
+        gettingHereImage: "/images/mauritius/crystal-rock.jpg",
 
         // Travelling around
         travellingIntro: 'There are many ways to travel around Mauritius. We found the easiest was to book a taxi, however next time we will definitely be hiring a car for our trip.',
@@ -305,7 +305,7 @@ export let SpotGuidePages = [
                 title: 'Cycling',
             },
         ],
-        travellingImage: "/images/Mauritius-Images/mauritius-monkey.jpg",
+        travellingImage: "/images/mauritius/mauritius-monkey.jpg",
 
 
         // Where to stay
@@ -328,27 +328,34 @@ export let SpotGuidePages = [
                 link: 'https://lagaulette.com',
             },
         ],
-        stayImage: "/images/Mauritius-Images/lux-le-morne-bed.jpg",
+        stayImage: "/images/mauritius/lux-le-morne-bed.jpg",
         stayImageDescription: "Lux Le Morne",
         stayImageLink: "https://www.luxresorts.com/en/mauritius/hotel/luxlemorne",
 
         // Where to eat
         eatIntro: 'Our stay at LUX* Le Morne was all-inclusive so we only ate outside of the resort once during our visit. Whilst all-inclusive is on the pricey side, we felt it was worth it for the ease and variety. We ate at The Kitchen and The Beach (LUX* Le Morne) most evenings. During our South Island tour, we enjoyed a beautiful meal at Le Chamarel Panoramic Restaurant, overlooking the ocean. Some more restaurants that come highly recommended are listed below:',
-        whereToEatBulletData: [
-            {
-                title: 'WAPALAPAM, Island Eatery',
-            },
-            {
-                title: 'Umami (Dinarobin Beachcomber)',
-            },
-            {
-                title: 'The Boathouse Bar & Grill (JW Marriott Mauritius Resort)',
-            },
-            {
-                title: 'Floating Market (JW Marriott Mauritius Resort)',
-            },
-        ],
-        eatImage: "/images/Mauritius-Images/mauritius-rum-factory-01.jpg",
+        whereToEatBulletData: () =>  {
+            <ul>
+                <li>
+                    WAPALAPAM, Island Eatery
+                </li>
+            </ul>
+        },
+        // [
+        //     {
+        //         title: 'WAPALAPAM, Island Eatery',
+        //     },
+        //     {
+        //         title: 'Umami (Dinarobin Beachcomber)',
+        //     },
+        //     {
+        //         title: 'The Boathouse Bar & Grill (JW Marriott Mauritius Resort)',
+        //     },
+        //     {
+        //         title: 'Floating Market (JW Marriott Mauritius Resort)',
+        //     },
+        // ],
+        eatImage: "/images/mauritius/mauritius-rum-factory-01.jpg",
         eatImageDescription: null,
         eatImageLink: null,
 
@@ -356,7 +363,7 @@ export let SpotGuidePages = [
         otherActivityText: [
             'Hike to the summit of Le Morne Brabant. Take an organised boat tour or catamaran cruise to explore the nearby islands like ile aux Cerfs and ile le aux Aigrettes. Take to the skys and see the famous udnerwaterfall from a helicopter or sea plane. Visit Charamel rum distillary and discover the seven coloured earth.',
         ],
-        otherActivityImage: "/images/Mauritius-Images/ben-wakeboarding.jpg",
+        otherActivityImage: "/images/mauritius/ben-wakeboarding.jpg",
     },
     {
         title: 'Risco Del Paso',
@@ -419,18 +426,18 @@ export let SpotGuidePages = [
         windConditionDetails: null,
         windConditionImage: null,
         spots: [
-            () => <div>
+            () => <div className="prose lg:prose-lg max-w-none">
                     <h3 className="font-bold text-blue">Lagoon: </h3>
                     <p>The lagoon at Risco Dell Paso is awesome spot to progress your freeride and freestyle sailing. One thing to note is that the lagoon is <em>tidal</em>. Get to your session early to hit the water as early as possible as soon as the water fills in! If you want as much time on the water as you can get, we would recomend checking the tide tables <a href="https://www.rene-egli.com/windsurfing/windsurfing/lagoon" rel="nofollow external noopener noreferrer" target="_blank">here</a> to plan your trip around the highest tides.</p>
                 </div>,
-            () => <div>
+            () => <div className="prose lg:prose-lg max-w-none pt-8">
                     <h3 className="font-bold text-blue">Sea: </h3>
                     <ul className="pl-12">
-                        <li className='list-disc prose marker:text-blue'>
+                        <li className='list-disc marker:text-blue'>
                             <a href="https://www.ion-club.net/fuerteventura/" rel="nofollow external noopener noreferrer" target="_blank">Ion Club:</a>
                             <p>Just a few metres walk over the sand bar you can get straight into the sea to experience the smooth rolling waves when the tide is coming in. When the tide is going out the sandbar protects the water which creats super flat condition for freeride and freestyle.</p>
                         </li>
-                        <li className='list-disc prose marker:text-blue'>
+                        <li className='list-disc marker:text-blue'>
                             <a href="https://www.rene-egli.com/" rel="nofollow external noopener noreferrer" target="_blank">Rene Egli</a>
                             <p>A great alternative to the Ion Club is Rene Egli, this is located at the north end of sotavento beach. The conditions here tend to have a little more chop, but aren't as challenging as the waves at Risco if you're wanting to enjoy a nice freeride or foiling session.</p>
                         </li>
@@ -562,31 +569,67 @@ export let SpotGuidePages = [
         // Gallery 
         galleryImages: [
             {
-                src: '/images/Egypt-Images/dahab-swiss-inn-resort.jpg',
-                alt: 'Swiss Inn resort, Dahab'
-            },
-            {
-                src: '/images/Egypt-Images/dahab-beach-2.jpg',
+                src: '/images/dahab/dahab-beach-2.jpg',
                 alt: 'Dahab beach'
             },
             {
-                src: '/images/Egypt-Images/Dahab-Safir-1.jpg',
+                src: '/images/dahab/dahab-windsurfing-vulcan.jpg',
+                alt: 'Ben windsurfing'
+            },
+            {
+                src: '/images/dahab/dahab-swiss-inn-1.jpg',
+                alt: 'Swiss Inn resort, Dahab'
+            },
+            {
+                src: '/images/dahab/dahab-swiss-inn-2.jpg',
+                alt: 'Swiss Inn resort, Dahab'
+            },
+            {
+                src: '/images/dahab/dahab-rachel-snorkling.jpg',
+                alt: 'Rachel snorkling'
+            },
+            {
+                src: '/images/dahab/dahab-swiss-inn-3.jpg',
+                alt: 'Swiss Inn resort, Dahab'
+            },
+            {
+                src: '/images/dahab/dahab-swiss-inn-4.jpg',
+                alt: 'Swiss Inn resort, Dahab'
+            },
+            {
+                src: '/images/dahab/dahab-swiss-inn-5.jpg',
+                alt: 'Swiss Inn resort, Dahab'
+            },
+            {
+                src: '/images/dahab/dahab-swiss-inn-6.jpg',
+                alt: 'Swiss Inn resort, Dahab'
+            },
+            {
+                src: '/images/dahab/dahab-beach-2.jpg',
+                alt: 'Dahab beach'
+            },
+            {
+                src: '/images/dahab/dahab-safir-1.jpg',
                 alt: 'Safir Resort, Dahab'
             },
             {
-                src: '/images/Egypt-Images/01001053.jpg',
-                alt: ''
+                src: '/images/dahab/dahab-rachel-snorkling.jpg',
+                alt: 'Rachel snorkling'
+            },
+            {
+                src: '/images/dahab/dahab-safir-2.jpg',
+                alt: 'Safir Resort, Dahab'
+            },
+            {
+                src: '/images/dahab/camels.jpg',
+                alt: 'Camels sitting down'
             },
         ],
         
         // Spot conditions
         whenToGoDetails: "The windiest time of the year in Dahab typically occurs from late spring to early summer and then again in late summer to early autumn. During these periods, the reliable north winds create strong conditions for windsurfing.",
-        waterConditionDetails: [
-            "Famous for its flat waters, Dahab offers a great spot for beginners, freeride, freestyle and speed windsurfing.", 
-            () => <p><span className="font-bold text-blue">The lagoon:</span> This is generally where lessons are taken as this is a windsurf only zone. The natural curve of the sand bank creates a wide sailing area in waist deep waters which makes this a great spot to learn</p>, 
-            () => <p><span className="font-bold text-blue">Speedy/Baby bay:</span> Just over the sand bar of the lagoon is another windsurf only zone which offers world-class flat water sailing. The wind comes over the sand bar and straight on to the flat water which makes this ideal for freestylers, speed sailing and for people wanting to improve their skills such as gybing. There is also a floating platform in this area where windsurfers can take a break.</p>, 
-        ],
-        waterConditionImage: null,
+        waterConditionDetails: "Famous for its flat waters, Dahab offers a great spot for beginners, freeride, freestyle and speed windsurfing.",
+        waterConditionImage: '/images/dahab/dahab-rachel-snorkling.jpg',
         windConditionDetails: [
             () => <p>
                 Wind speeds in Dahab vary depending on the time of year. The wind tends to be lighter in the morning and gradually increases in strength during the day, reaching its peak in the afternoon. Wind speeds can range from around <span className="font-bold text-blue">15 to 30 knots</span> on average.
@@ -596,8 +639,11 @@ export let SpotGuidePages = [
             </p>
         ] ,
         windConditionImage: null,
-        spots: null,
-        spotImage: null,
+        spots: [
+            () => <p><span className="font-bold text-blue">The lagoon:</span> This is generally where lessons are taken as this is a windsurf only zone. The natural curve of the sand bank creates a wide sailing area in waist deep waters which makes this a great spot to learn</p>, 
+            () => <p><span className="font-bold text-blue">Speedy/Baby bay:</span> Just over the sand bar of the lagoon is another windsurf only zone which offers world-class flat water sailing. The wind comes over the sand bar and straight on to the flat water which makes this ideal for freestylers, speed sailing and for people wanting to improve their skills such as gybing. There is also a floating platform in this area where windsurfers can take a break.</p>, 
+        ],
+        spotImage: '/images/dahab/dahab-windsurfing-vulcan.jpg',
 
         // Lessons and hire
         lessonIntro: "There are three main centres for hiring equipment and booking lessons. We used Dahab starts for storage of our equipment and also for boat shuttle services out to snorkle spots when the wind wasnt so strong. Here are the well known centres:",
@@ -636,7 +682,7 @@ export let SpotGuidePages = [
                 link: 'https://safirhotels.com/en/hotel/dahab',
             },
         ],
-        stayImage: "/images/Egypt-Images/Dahab-Swiss-Inn-4.jpg",
+        stayImage: "/images/dahab/dahab-swiss-Inn-4.jpg",
         stayImageDescription: "Swiss Inn Resort",
         stayImageLink: "https://swissinn.net/hotels/index.php?lang=Dahab",
 

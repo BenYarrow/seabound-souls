@@ -1,5 +1,6 @@
 import React from 'react';
 import { AreaChart, Area, CartesianGrid, XAxis, YAxis, Tooltip, ResponsiveContainer } from 'recharts';
+import BlockWrapper from '../BlockWrapper';
 import Text from '../Text';
 
 const SpotGuideAreaChart = ({ data, title }) => {
@@ -14,7 +15,7 @@ const SpotGuideAreaChart = ({ data, title }) => {
   }
 
   return (
-    <div>
+    <BlockWrapper>
       {data && (
         <>
           {title && <Text title={title}/>}
@@ -65,7 +66,7 @@ const SpotGuideAreaChart = ({ data, title }) => {
           </div>
         </>
       )}
-    </div>
+    </BlockWrapper>
   )
 }
 

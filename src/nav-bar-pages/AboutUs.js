@@ -73,10 +73,10 @@ const AboutUs = () => {
           
           <BlockWrapper container={false} >
             <GridImageDisplay 
-              imageOne='images/Mauritius-Images/ben-windsurfing-01.jpg'
+              imageOne='images/mauritius/ben-windsurfing-01.jpg'
               imageTwo='images/mastheads/homepage/windsurfing-together-01-desktop.jpg'
               imageThree='images/mastheads/homepage/windsurfing-together-02-desktop.jpg'
-              imageFour='images/Vassiliki-Images/surf-hotel.jpg'
+              imageFour='images/vassiliki/surf-hotel.jpg'
             />
           </BlockWrapper>
           
@@ -137,10 +137,10 @@ const AboutUs = () => {
 
 
               <GridImageDisplay 
-                  imageOne='/images/Mauritius-Images/wedding-1.jpg'
-                  imageTwo='/images/Mauritius-Images/rachel-windsurfing-01.jpg'
-                  imageThree='/images/Mauritius-Images/mauritius.jpg'
-                  imageFour='/images/Mauritius-Images/wedding-3.jpg'
+                  imageOne='/images/mauritius/wedding-1.jpg'
+                  imageTwo='/images/mauritius/rachel-windsurfing-01.jpg'
+                  imageThree='/images/mauritius/mauritius.jpg'
+                  imageFour='/images/mauritius/wedding-3.jpg'
                 />
         </BlockWrapper>
         

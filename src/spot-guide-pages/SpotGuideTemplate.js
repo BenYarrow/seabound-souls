@@ -1,7 +1,6 @@
 import React, {useState} from'react'
 import StaticMasthead from'../components/StaticMasthead'
 import SpotOverview from'../components/SpotOverview'
-import SpotConditions from'../components/SpotConditions'
 import BulletsAndImage from'../components/BulletsAndImage'
 import SplitImageText from'../components/SplitImageText'
 import ButtonLink from'../components/ButtonLink'
@@ -15,6 +14,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import UtilityBar from '../components/UtilityBar'
 import Gallery from '../components/Gallery'
+import Image from '../components/Image'
+import AreaChart from '../components/charts/AreaChart'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}) => {
 
@@ -30,7 +31,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
             <div id='content' className='relative'>
                 
                 <BlockWrapper padded>
-                    <div class="flex justify-around w-full ">
+                    <div class="flex justify-around w-full">
                         <div className='flex flex-col items-center gap-y-1 lg:gap-y-2'>
                             <p className='text-sm lg:text-xl text-left'>
                                 Beginner
@@ -67,7 +68,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                                 <FontAwesomeIcon icon={faStar} className={`${spotGuide.a5 ? 'text-blue-lighter' : 'text-white-darker'} text-sm lg:text-base`}/>
                             </div>
                         </div>
-                </div>
+                    </div>
                 </BlockWrapper>    
 
                 {spotGuide.intro && (
@@ -92,35 +93,61 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                         launchZone={spotGuide.launchZone}
                     />
                 )}
-
-                {spotGuide.gridGalleryImageOne && (
-                    <BlockWrapper >
-                        {/* <GridImageDisplay 
-                            imageOne={spotGuide.gridGalleryImageOne}
-                            imageTwo={spotGuide.gridGalleryImageTwo}
-                            imageThree={spotGuide.gridGalleryImageThree}
-                            imageFour={spotGuide.gridGalleryImageFour}
-                        /> */}
-                    </BlockWrapper>
+                {spotGuide.galleryImages && (
+                    <Gallery 
+                        images={spotGuide.galleryImages}
+                    />
                 )}
 
-                <Gallery 
-                    images={spotGuide.galleryImages}
-                />
+                {spotGuide.waterConditionDetails && (
+                    <Text 
+                        title="Water conditions"
+                        content={checkContentFormat(spotGuide.waterConditionDetails)}
+                    />
+                )}
+
+                {spotGuide.waterConditionImage && (
+                    <Image
+                        image={spotGuide.waterConditionImage}
+                    />
+                )}
+
+                {spotGuide.windConditionDetails && (
+                    <Text 
+                        title="Wind conditions"
+                        content={checkContentFormat(spotGuide.windConditionDetails)}
+                    />
+                )}
+
+                {spotGuide.windConditionImage && (
+                    <Image
+                        image={spotGuide.windConditionImage}
+                    />
+                )}
                 
-                <SpotConditions
-                    waterConditionDetails={spotGuide.waterConditionDetails}
-                    waterImage={spotGuide.waterConditionImage}
-                    windConditionDetails={spotGuide.windConditionDetails}
-                    windImage={spotGuide.windConditionImage}
-                    windStatisticDetails={spotGuide.windStatisticDetails}
-                    windStatisticImage={spotGuide.windStatisticImage}
-                    windStatGraph={spotGuide.windStatGraph}
-                    whenToGoDetails={spotGuide.whenToGoDetails}
-                    spots={spotGuide.spots}
-                    spotImage={spotGuide.spotImage}
-                    windData={windData}
-                />
+                {spotGuide.whenToGoDetails && (
+                    <Text 
+                        title="When to go"
+                        content={checkContentFormat(spotGuide.whenToGoDetails)}
+                    />
+                )}
+                
+                {spotGuide.spots && (
+                    <Text 
+                        title="Spots"
+                        content={checkContentFormat(spotGuide.spots)}
+                    />
+                )}
+
+                {spotGuide.spotImage && (
+                    <Image
+                        image={spotGuide.spotImage}
+                    />
+                )}
+
+                {windData && (
+                    <AreaChart data={windData} title="Wind statistics"/>
+                )}
                 
                 {spotGuide.lessonIntro && (
                     <BulletsAndImage 
@@ -165,27 +192,35 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     />
                 )}
 
-                {spotGuide.eatIntro && (
-                    <BulletsAndImage 
+                {spotGuide.whereToEatBulletData && (
+                    <Text
                         title='Where to eat'
-                        intro={spotGuide.eatIntro}
-                        bulletListData={spotGuide.whereToEatBulletData}
-                        image={spotGuide.eatImage}
-                        imageDescription={spotGuide.eatImageDescription}
-                        imageLink={spotGuide.eatImageLink}
-                        reverse
-                    />
-                )}
-                
-                {spotGuide.otherActivityText && (    
-                    <SplitImageText 
-                        title='Other Activities'
-                        texts={checkContentFormat(spotGuide.otherActivityText)}
-                        image={spotGuide.otherActivityImage}
-                        reverse
+                        content={checkContentFormat(spotGuide.whereToEatBulletData)}
                     />
                 )}
 
+                {spotGuide.eatImage && (
+                    <Image
+                        image={spotGuide.eatImage}
+                        imageDescription={spotGuide.eatImageDescription}
+                        imageLink={spotGuide.eatImageLink}
+                    />
+                )}
+
+
+                {spotGuide.otherActivityText && (
+                    <Text
+                        title='Other Activities'
+                        content={checkContentFormat(spotGuide.otherActivityText)}
+                    />
+                )}
+
+                {spotGuide.otherActivityImage && (
+                    <Image 
+                        image={spotGuide.otherActivityImage}
+                    />
+                )}
+                
                 {coordinates && (
                     <UtilityBar title="Current Conditions" isOpen={isOpen} setIsOpen={setIsOpen}>
                         <LiveWeatherData lat={coordinates.lat} long={coordinates.long} timeZone={timeZone} title={spotGuide.title} location={spotGuide.location} isOpen={isOpen}/>
