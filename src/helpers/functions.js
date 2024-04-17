@@ -21,7 +21,6 @@ const tempFormatterFromCelciusToFahrenheit = (temp) => {
     return `${roundedTemp} °F`;
 }
 
-
 const checkContentFormat = (content) => {
     if (Array.isArray(content)) {
         return content

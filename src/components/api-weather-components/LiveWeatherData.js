@@ -35,12 +35,12 @@ const LiveWeatherData = ({
         if (weatherData.current) {
             const stats = {
                 wind: {
-                    gusts: weatherData.current.wind_gust ? weatherData.current.wind_gust : null,
-                    averageSpeed: weatherData.current.wind_speed ? weatherData.current.wind_speed : null,
+                    gusts: weatherData.current.wind_gust || null,
+                    averageSpeed: weatherData.current.wind_speed || null,
                 },
                 temp: {
-                    current: weatherData.current.temp ? weatherData.current.temp : null,
-                    feels_like: weatherData.current.feels_like ? weatherData.current.feels_like : null
+                    current: weatherData.current.temp || null,
+                    feels_like: weatherData.current.feels_like || null
                 },
                 generalConditions: {
                     sunrise: weatherData.current.sunrise ? formatUnixTimeInTimeZone(weatherData.current.sunrise, weatherData.timezone, weatherData.timezone_offse) : null,
@@ -112,7 +112,7 @@ const LiveWeatherData = ({
                 )
             }
         }
-    }, [tempUnitChecked, isLoading])
+    }, [tempUnitChecked, isLoading, weatherStats.temp])
     
     useEffect(() => {
         if (!isLoading) {
@@ -131,8 +131,8 @@ const LiveWeatherData = ({
                 setCurrentAverageWind(mpsToMphFormatter(weatherStats.wind?.averageSpeed))
             }
         }
-    }, [windUnitChecked, isLoading])
-
+    }, [windUnitChecked, isLoading, weatherStats.wind])
+    
     return (
         <div className={classes}>
             <p className='text-sm'>
@@ -148,11 +148,10 @@ const LiveWeatherData = ({
                             color="#ffffff"
                             loading={true}
                             size={10}
-                            css=""
                         /> 
                     ) : (
                         <>
-                            {weatherStats.wind && (
+                            {weatherData.current.wind_gust && weatherData.current.wind_speed && (
                                 <div className="">
                                     {currentGusts && (
                                         <p className='flex items-center gap-x-2'>

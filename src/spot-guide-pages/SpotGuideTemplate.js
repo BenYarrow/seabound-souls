@@ -105,7 +105,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
 
                 <Gallery 
-                    images={[spotGuide.gridGalleryImageOne, spotGuide.gridGalleryImageTwo, spotGuide.gridGalleryImageThree, spotGuide.gridGalleryImageFour]}
+                    images={spotGuide.galleryImages}
                 />
                 
                 <SpotConditions

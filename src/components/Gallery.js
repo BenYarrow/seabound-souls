@@ -1,9 +1,12 @@
 import {useState} from 'react';
 import BlockWrapper from './BlockWrapper';
 import {Swiper, SwiperSlide} from 'swiper/react';
-import {FreeMode, Navigation, Autoplay, EffectFade, Thumbs} from "swiper/modules"
+import {FreeMode, Navigation, Autoplay, EffectFade, Thumbs, A11y} from "swiper/modules"
 
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 
 const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
@@ -40,10 +43,10 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
                             return (
                                 <SwiperSlide key={index}>
                                     <img
-                                        src={image}
+                                        src={image.src}
                                         height=""
                                         width=""
-                                        alt=""
+                                        alt={image.alt}
                                         className='w-full'
                                     />
                                 </SwiperSlide>
@@ -53,24 +56,23 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
                 ) : (
                     <div>
                         <Swiper
-                            modules={[EffectFade, Navigation, Autoplay, Thumbs]}
+                            modules={[EffectFade, Navigation, Autoplay, Thumbs, A11y]}
                             spaceBetween={10}
                             slidesPerView={1}
-                            navigation={true}
                             thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
                             effect="fade"
                             autoplay={{delay: autoplayDelay}}
-                            className='w-full bg-blue-lightest aspect-video'
+                            className='w-full bg-blue-lightest aspect-video relative'
                         >
                             {images.map((image, index) => {
                                 return (
                                     <SwiperSlide key={index}>
                                         <img
-                                            src={image}
+                                            src={image.src}
                                             height="2000"
                                             width="2000"
-                                            alt=""
-                                            className="w-full h-full object-cover"
+                                            alt={image.alt}
+                                            className="absolute left-0 top-0 inset-0 w-full h-full object-cover"
                                         />
                                     </SwiperSlide>
                                 )
@@ -82,11 +84,6 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
                             modules={[FreeMode, Navigation, Thumbs]}
                             spaceBetween={10}
                             slidesPerView={4.5}
-                            breakpoints={{
-                                768: {
-                                    slidesPerView: 6.5,
-                                },
-                            }}
                             watchSlidesProgress={true}
                             freeMode={true}
                             className='mt-4'
@@ -95,10 +92,10 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
                                 return (
                                     <SwiperSlide key={index} className="w-40 aspect-square overflow-hidden relative">
                                         <img
-                                            src={image}
+                                            src={image.src}
                                             height="200"
                                             width="200"
-                                            alt=""
+                                            alt={image.alt}
                                             className=" absolute w-full h-full inset-0 object-cover cursor-pointer mx-auto shadow-lg transition duration-300 bg-blue-lightest"
                                         />
                                     </SwiperSlide>
@@ -106,7 +103,6 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
                             })}
                         </Swiper>
                     </div>
-
                 )}
 
             </BlockWrapper>

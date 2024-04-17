@@ -40,11 +40,25 @@ export let SpotGuidePages = [
         waterConditions: 'Chop hop / Flat',
         launchZone: 'Pebble beach',
 
-        // Gallery grid
-        gridGalleryImageOne:'/images/Vassiliki-Images/cosmos-hotel.jpg',
-        gridGalleryImageTwo:'/images/mastheads/homepage/windsurfing-together-01-desktop.jpg',
-        gridGalleryImageThree:'/images/mastheads/homepage/windsurfing-together-02-desktop.jpg',
-        gridGalleryImageFour:'/images/Vassiliki-Images/surf-hotel.jpg',
+        // Gallery
+        galleryImages:[
+            {
+                src: '/images/Vassiliki-Images/cosmos-hotel.jpg',
+                alt: 'Cosmos hotel, Vassiliki'
+            },
+            {
+                src: '/images/mastheads/homepage/windsurfing-together-01-desktop.jpg',
+                alt: 'Ben and Rachel windsurfing together'
+            },
+            {
+                src: '/images/mastheads/homepage/windsurfing-together-02-desktop.jpg',
+                alt: 'Ben and Rachel windsurfing together'
+            },
+            {
+                src: '/images/Vassiliki-Images/surf-hotel.jpg',
+                alt: 'Surf Hotel, Vassiliki'
+            },
+        ],
         
         // Spot conditions
         whenToGoDetails: 'The season runs from May to September, with the windiest months being June, July and August. ',
@@ -206,11 +220,21 @@ export let SpotGuidePages = [
         waterConditions: 'Flat / Waves',
         launchZone: 'Sandy beach',
 
-        // Grid Gallery
-        gridGalleryImageOne:'/images/Mauritius-Images/mauritius-beach-01.jpg',
-        gridGalleryImageTwo:'/images/Mauritius-Images/rachel-windsurfing-01.jpg',
-        gridGalleryImageThree:'/images/Mauritius-Images/le-morne-mountain-01.jpg',
-        gridGalleryImageFour:'/images/Mauritius-Images/rachel-sitting.jpg',
+        // Gallery
+        galleryImages: [
+            {
+                src: '/images/Mauritius-Images/rachel-windsurfing-01.jpg',
+                alt: 'Rachel windsurfing in Mauritius'
+            },
+            {
+                src: '/images/Mauritius-Images/le-morne-mountain-01.jpg',
+                alt: 'Le Morne, Mauritius'
+            },
+            {
+                src: '/images/Mauritius-Images/rachel-sitting.jpg',
+                alt: 'Rachel sitting on the beach'
+            },
+        ],
         
         // Spot conditions
         whenToGoDetails: "The peak season in Le Morne runs from June to October when the trade winds consistently blow from the southeast. During this period, you can expect strong and consistent wind conditions, especially for wave riding. We visited during September and pretty much every day was windy with great conditions. ",
@@ -380,11 +404,8 @@ export let SpotGuidePages = [
         waterConditions: 'Flat / Waves',
         launchZone: 'Sandy beach / Lagoon',
 
-        // Grid Gallery
-        gridGalleryImageOne: null,
-        gridGalleryImageTwo: null,
-        gridGalleryImageThree: null,
-        gridGalleryImageFour: null,
+        // Gallery
+        galleryImages: null,
         
         // Spot conditions
         whenToGoDetails: "The windiest time of year in Risco del Paso typically occurs during the summer months, particularly from June to August. During this period, the Canary Islands experience the strongest trade winds, which blow consistently from the northeast. These winds provide for epic sessions on the water.",
@@ -538,11 +559,25 @@ export let SpotGuidePages = [
         waterConditions: 'Chop hop / Flat',
         launchZone: 'Sandy beach',
 
-        // Gallery grid
-        gridGalleryImageOne: '/images/Egypt-Images/dahab-swiss-inn-resort.jpg',
-        gridGalleryImageTwo: '/images/Egypt-Images/dahab-beach-2.jpg',
-        gridGalleryImageThree: '/images/Egypt-Images/Dahab-Safir-1.jpg',
-        gridGalleryImageFour: '/images/Egypt-Images/01001053.jpg',
+        // Gallery 
+        galleryImages: [
+            {
+                src: '/images/Egypt-Images/dahab-swiss-inn-resort.jpg',
+                alt: 'Swiss Inn resort, Dahab'
+            },
+            {
+                src: '/images/Egypt-Images/dahab-beach-2.jpg',
+                alt: 'Dahab beach'
+            },
+            {
+                src: '/images/Egypt-Images/Dahab-Safir-1.jpg',
+                alt: 'Safir Resort, Dahab'
+            },
+            {
+                src: '/images/Egypt-Images/01001053.jpg',
+                alt: ''
+            },
+        ],
         
         // Spot conditions
         whenToGoDetails: "The windiest time of the year in Dahab typically occurs from late spring to early summer and then again in late summer to early autumn. During these periods, the reliable north winds create strong conditions for windsurfing.",
@@ -665,11 +700,8 @@ export let SpotGuidePages = [
         waterConditions: 'Bump and jump',
         launchZone: 'Sandy Beach',
 
-        // Gallery grid
-        gridGalleryImageOne:'',
-        gridGalleryImageTwo:'',
-        gridGalleryImageThree:'',
-        gridGalleryImageFour:'',
+        // Gallery
+        galleryImages: null,
         
         // Spot conditions
         whenToGoDetails: 'The wind season in Langebaan is generally from November to March, with the strongest winds usually in the afternoons. We visited for 2 weeks at the start of january after landing on enw years eve. We had 1 week of light wind, followed by none stop wind for the second week.',
