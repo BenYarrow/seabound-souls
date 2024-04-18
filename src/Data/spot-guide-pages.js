@@ -9,9 +9,9 @@ export let SpotGuidePages = [
         ],
         metaContent: '',
         masthead: {
-            sm: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-mobile.jpg',
-            md: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-tablet.jpg',
-            lg: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-desktop.jpg',
+            sm: '/images/spot-guides/vassiliki/vassiliki-spotguide-mobile.jpg',
+            md: '/images/spot-guides/vassiliki/vassiliki-spotguide-tablet.jpg',
+            lg: '/images/spot-guides/vassiliki/vassiliki-spotguide-desktop.jpg',
             alt: 'Vassiliki bay'
         },
         location: 'Greece',
@@ -72,7 +72,7 @@ export let SpotGuidePages = [
         ],
         windConditionImage: '/images/mastheads/homepage/windsurfing-together-02-desktop.jpg',
         spots: null,
-        spotImage: '/images/Spot-Guides/vassiliki-spotguide.jpg',
+        spotImage: '/images/spot-guides/vassiliki/vassiliki-spotguide-desktop.jpg',
 
         // Lessons and hire
         lessonIntro: 'There are numerous windsurfing centres are located along the Vassiliki waterfront, offering equipment rental and lessons. These include:',
@@ -188,9 +188,9 @@ export let SpotGuidePages = [
             'ion club windsurfing',
         ],
         masthead: {
-            sm: '/images/Spot-Guides/mauritius/mauritius-spotguide-mobile.jpg',
-            md: '/images/Spot-Guides/mauritius/mauritius-spotguide-desktop.jpg',
-            lg: '/images/Spot-Guides/mauritius/mauritius-spotguide-desktop.jpg',
+            sm: '/images/spot-guides/mauritius/mauritius-spotguide-mobile.jpg',
+            md: '/images/spot-guides/mauritius/mauritius-spotguide-desktop.jpg',
+            lg: '/images/spot-guides/mauritius/mauritius-spotguide-desktop.jpg',
             alt: 'Le morne mountain',
             customClasses: 'object-cover object-centre'
         },
@@ -406,9 +406,9 @@ export let SpotGuidePages = [
             'Melia Hotel'
         ],
         masthead: {
-            sm: '/images/Spot-Guides/risco/risco-spotguide-mobile.jpg',
-            md: '/images/Spot-Guides/risco/risco-spotguide-tablet.jpg',
-            lg: '/images/Spot-Guides/risco/risco-spotguide-desktop.jpg',
+            sm: '/images/spot-guides/risco/risco-spotguide-mobile.jpg',
+            md: '/images/spot-guides/risco/risco-spotguide-tablet.jpg',
+            lg: '/images/spot-guides/risco/risco-spotguide-desktop.jpg',
             alt: 'Risco del paso lagoon',
         },
         location: 'Fuerteventura',
@@ -564,9 +564,9 @@ export let SpotGuidePages = [
             'Red Sea windsurfing',
         ],
         masthead: {
-            sm: '/images/Spot-Guides/dahab/dahab-spotguide-mobile.jpg',
-            md: '/images/Spot-Guides/dahab/dahab-spotguide-tablet.jpg',
-            lg: '/images/Spot-Guides/dahab/dahab-spotguide-desktop.jpg',
+            sm: '/images/spot-guides/dahab/dahab-spotguide-mobile.jpg',
+            md: '/images/spot-guides/dahab/dahab-spotguide-tablet.jpg',
+            lg: '/images/spot-guides/dahab/dahab-spotguide-desktop.jpg',
             alt: 'Dahab beach',
         },
         location: "Egypt",
@@ -744,9 +744,9 @@ export let SpotGuidePages = [
             'South africa windsurfing'
         ],
         masthead: {
-            sm: '/images/Spot-Guides/langebaan/langebaan-spotguide-mobile.jpg',
-            md: '/images/Spot-Guides/langebaan/langebaan-spotguide-tablet.jpg',
-            lg: '/images/Spot-Guides/langebaan/langebaan-spotguide-desktop.jpg',
+            sm: '/images/spot-guides/langebaan/langebaan-spotguide-mobile.jpg',
+            md: '/images/spot-guides/langebaan/langebaan-spotguide-tablet.jpg',
+            lg: '/images/spot-guides/langebaan/langebaan-spotguide-desktop.jpg',
             alt: 'Langebaan lagoon'
         }, 
         location: 'South Africa',
