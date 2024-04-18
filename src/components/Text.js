@@ -11,7 +11,6 @@ const Text = ({
     centredText = false,
     centreHeading = false,
     lineClamp,
-    reduceParagraphPadding,
     container = true
 }) => {
   
@@ -20,7 +19,6 @@ const Text = ({
     invert ? 'prose-h3:text-white prose-p:text-white prose-a:text-white' : 'prose-headings:text-blue prose-p:text-black prose-a:text-orange',
     centredText && 'prose-p:text-center',
     centreHeading && 'prose-h2:text-center',
-    reduceParagraphPadding && 'prose-p:m-0'
   ].filter(Boolean).join(' ');
 
   const textRef = useRef(null)
