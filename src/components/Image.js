@@ -5,7 +5,7 @@ import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 
 
 const Image = ({
-  image,
+  image, 
   imageDescription, 
   imageLink, 
   container = true,
@@ -14,7 +14,7 @@ const Image = ({
   const imageLinkWrapperClasses = 'w-full h-full flex items-end justify-start group group-hover:underline'
   const imageDescriptionText = imageDescription ? imageDescription :  'Seabound Souls'
   const href = imageLink ? imageLink : 'https://www.instagram.com/seabound.souls/'
-  
+
   return (
     <BlockWrapper container={container}>
       {image && (

@@ -223,16 +223,52 @@ export let SpotGuidePages = [
         // Gallery
         galleryImages: [
             {
-                src: '/images/mauritius/rachel-windsurfing-01.jpg',
-                alt: 'Rachel windsurfing in Mauritius'
-            },
-            {
                 src: '/images/mauritius/le-morne-mountain-01.jpg',
                 alt: 'Le Morne, Mauritius'
             },
             {
+                src: '/images/mauritius/rachel-windsurfing-01.jpg',
+                alt: 'Rachel windsurfing in Mauritius'
+            },
+            {
+                src: '/images/mauritius/ben-windsurfing-02.jpg',
+                alt: 'Rachel sitting on the beach'
+            },
+            {
                 src: '/images/mauritius/rachel-sitting.jpg',
                 alt: 'Rachel sitting on the beach'
+            },
+            {
+                src: '/images/mauritius/crystal-rock.jpg',
+                alt: 'Crystal Rock'
+            },
+            {
+                src: '/images/mauritius/post-windsurf-walking.jpg',
+                alt: 'Ben walking on the beach'
+            },
+            {
+                src: '/images/mauritius/ion-club-safety-tower.jpg',
+                alt: 'Ion club safety tower'
+            },
+            {
+                src: '/images/mauritius/lux-le-morne-bed.jpg',
+                alt: 'The bed in Lux Le Morne'
+            },
+            {
+                src: '/images/mauritius/lux-le-morne-walkway.jpg',
+                alt: 'The pool walkway in Lux Le Morne'
+            },
+            {
+                src: '/images/mauritius/lux-le-morne-treehouse.jpg',
+                alt: 'The threehouse in Lux Le Morne'
+            },
+            {
+                src: '/images/mauritius/mauritius-viewpoint.jpg',
+                alt: 'A view across the forest'
+            },
+            {
+                src: '/images/mauritius/seven-coloured-earth.jpg',
+                alt: 'Seven coloured earth'
             },
         ],
         

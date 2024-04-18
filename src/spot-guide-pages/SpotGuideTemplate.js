@@ -157,16 +157,19 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                         image={spotGuide.lessonHireImage}
                         imageDescription={spotGuide.lessonHireImageDescription}
                         imageLink={spotGuide.lessonHireImageLink}
-                        reverse
                     />
                 )}
 
                 {spotGuide.gettingHereText && (
-                    <SplitImageText
+                    <Text 
                         title={`Getting to ${spotGuide.title}`}
-                        texts={spotGuide.gettingHereText}
+                        content={spotGuide.gettingHereText}
+                    />
+                )}
+
+                {spotGuide.gettingHereImage && (
+                    <Image
                         image={spotGuide.gettingHereImage}
-                        reverse
                     />
                 )}
 
