@@ -1,6 +1,7 @@
 import React, {useRef, useEffect} from 'react';
 import { motion, useAnimation, useInView } from "framer-motion";
 import BlockWrapper from './BlockWrapper';
+import { checkContentFormat } from '../helpers/functions';
 
 const Text = ({ 
     title, 
@@ -52,7 +53,7 @@ const Text = ({
 
             {subtitle && <h4>{subtitle}</h4>}
 
-            {content.length > 0 && content.map((item, index) => (
+            {checkContentFormat(content) && content.map((item, index) => (
                 <div key={index}>
                   {typeof item === 'string' || Array.isArray(item) ? (
                     <p className={lineClamp ? lineClamp : ''}>{item}</p>

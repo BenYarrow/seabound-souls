@@ -178,8 +178,12 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                         title='Travelling around'
                         intro={spotGuide.travellingIntro}
                         bulletListData={spotGuide.travellingBulletData}
+                    />
+                    )}
+
+                {spotGuide.travellingImage && (
+                    <Image
                         image={spotGuide.travellingImage}
-                        reverse
                     />
                 )}
 
@@ -188,13 +192,17 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                         title='Where to stay'
                         intro={spotGuide.stayIntro}
                         bulletListData={spotGuide.whereToStayBulletData}
+                    />
+                    )}
+
+                {spotGuide.stayImageDescription && (
+                    <Image
                         image={spotGuide.stayImage}
                         imageDescription={spotGuide.stayImageDescription}
                         imageLink={spotGuide.stayImageLink}
-                        reverse
                     />
                 )}
-
+            
                 {spotGuide.whereToEatBulletData && (
                     <Text
                         title='Where to eat'
