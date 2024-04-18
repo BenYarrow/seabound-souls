@@ -1,7 +1,7 @@
 import React, {useState} from'react'
 import StaticMasthead from'../components/StaticMasthead'
 import SpotOverview from'../components/SpotOverview'
-import BulletsAndImage from'../components/BulletsAndImage'
+import Bulletpoints from'../components/Bulletpoints'
 import SplitImageText from'../components/SplitImageText'
 import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
@@ -150,7 +150,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
                 
                 {spotGuide.lessonIntro && (
-                    <BulletsAndImage 
+                    <Bulletpoints 
                         title='Lessons and Hire'
                         intro={spotGuide.lessonIntro}
                         bulletListData={spotGuide.lessonBulletData}
@@ -174,7 +174,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
 
                 {spotGuide.travellingIntro && (
-                    <BulletsAndImage
+                    <Bulletpoints
                         title='Travelling around'
                         intro={spotGuide.travellingIntro}
                         bulletListData={spotGuide.travellingBulletData}
@@ -188,12 +188,12 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
 
                 {spotGuide.stayIntro && (                    
-                    <BulletsAndImage 
+                    <Bulletpoints 
                         title='Where to stay'
                         intro={spotGuide.stayIntro}
                         bulletListData={spotGuide.whereToStayBulletData}
                     />
-                    )}
+                )}
 
                 {spotGuide.stayImageDescription && (
                     <Image
@@ -204,9 +204,10 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
             
                 {spotGuide.whereToEatBulletData && (
-                    <Text
+                    <Bulletpoints
                         title='Where to eat'
-                        content={checkContentFormat(spotGuide.whereToEatBulletData)}
+                        intro={checkContentFormat(spotGuide.eatIntro)}
+                        bulletListData={spotGuide.whereToEatBulletData}
                     />
                 )}
 

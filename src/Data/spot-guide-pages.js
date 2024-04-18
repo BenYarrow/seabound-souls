@@ -232,7 +232,7 @@ export let SpotGuidePages = [
             },
             {
                 src: '/images/mauritius/ben-windsurfing-02.jpg',
-                alt: 'Rachel sitting on the beach'
+                alt: 'Ben windsurfing'
             },
             {
                 src: '/images/mauritius/rachel-sitting.jpg',
@@ -370,29 +370,20 @@ export let SpotGuidePages = [
 
         // Where to eat
         eatIntro: 'Our stay at LUX* Le Morne was all-inclusive so we only ate outside of the resort once during our visit. Whilst all-inclusive is on the pricey side, we felt it was worth it for the ease and variety. We ate at The Kitchen and The Beach (LUX* Le Morne) most evenings. During our South Island tour, we enjoyed a beautiful meal at Le Chamarel Panoramic Restaurant, overlooking the ocean. Some more restaurants that come highly recommended are listed below:',
-        whereToEatBulletData: [() => 
-        <ul className="prose lg:prose-lg prose-p:text-black ">
-            <li className="disc-blue">
-                <p>
-                    WAPALAPAM, Island Eatery
-                </p>
-            </li>
-            <li>
-                <p>
-                    Umami (Dinarobin Beachcomber)
-                </p>
-            </li>
-            <li>
-                <p>
-                    The Boathouse Bar & Grill (JW Marriott Mauritius Resort)
-                </p>
-            </li>
-            <li>
-                <p>
-                    Floating Market (JW Marriott Mauritius Resort)
-                </p>
-            </li>
-        </ul>],
+        whereToEatBulletData: [
+            {
+                title: 'WAPALAPAM, Island Eatery',
+            },
+            {
+                title: 'Umami (Dinarobin Beachcomber)',
+            },
+            {
+                title: 'The Boathouse Bar & Grill (JW Marriott Mauritius Resort)',
+            },
+            {
+                title: 'Floating Market (JW Marriott Mauritius Resort)',
+            },
+        ],
         eatImage: "/images/mauritius/mauritius-rum-factory-01.jpg",
         eatImageDescription: null,
         eatImageLink: null,
