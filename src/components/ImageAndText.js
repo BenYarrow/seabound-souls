@@ -14,8 +14,8 @@ const ImageAndText = ({
         {image && (
             <Image image={image} imageDescription={imageDescription} imageLink={imageLink}/>
         )}
-        <div className='-translate-y-20 lg:-translate-y-40'>
-            <div className='p-4 lg:p-8 container mx-auto bg-gradient-to-b from-white/80 to-white-darker via-white via-80% shadow-2xl shadow-white-darker'>
+        <div className='-translate-y-20 lg:-translate-y-40 container mx-auto'>
+            <div className='p-4 lg:p-8 bg-gradient-to-b from-white/80 to-white-darker via-white via-80% shadow-2xl shadow-white-darker'>
                 {content && (
                     <Text 
                         title={title ? title : null}
