@@ -120,10 +120,12 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
                 
                 {spotGuide.whenToGoDetails && (
-                    <Text 
-                        title="When to go"
-                        content={spotGuide.whenToGoDetails}
-                    />
+                    <BlockWrapper>
+                        <Text 
+                            title="When to go"
+                            content={spotGuide.whenToGoDetails}
+                        />
+                    </BlockWrapper>
                 )}
                 
                 {spotGuide.spotImage && spotGuide.spots && (
