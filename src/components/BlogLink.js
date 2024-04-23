@@ -28,9 +28,9 @@ const BlogLink = ({
     const blogImageSrc = blogLinkImgSrc ? blogLinkImgSrc : fallbackImage
     
     return(
-      <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group shadow-2xl' >
+      <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group'>
         <motion.div 
-          className="w-full overflow-hidden flex flex-col gap-y-8"
+          className=""
           variants={{
               hidden: {opacity: 0, y: 75},
               visible: {opacity: 1, y: 0},
@@ -50,13 +50,14 @@ const BlogLink = ({
             loading="lazy"
             crossOrigin="true"
           />
-          
-          <Text 
-            title={location}
-            content={[blogIntro]}
-            invert={invert}
-            lineClamp="line-clamp-4"
-          />
+          <div className="pt-8">
+            <Text 
+              title={location}
+              content={[blogIntro]}
+              invert={invert}
+              lineClamp="line-clamp-4"
+            />
+          </div>
         </motion.div>
       </Link>
     )

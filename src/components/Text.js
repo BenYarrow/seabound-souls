@@ -1,6 +1,5 @@
 import React, {useRef, useEffect} from 'react';
 import { motion, useAnimation, useInView } from "framer-motion";
-import BlockWrapper from './BlockWrapper';
 import { checkContentFormat } from '../helpers/functions';
 
 const Text = ({ 
@@ -11,11 +10,10 @@ const Text = ({
     centredText = false,
     centreHeading = false,
     lineClamp,
-    container = true
 }) => {
   
   const classes = [
-    'prose lg:prose-lg prose-headings:uppercase prose-a:text-orange prose-a:font-bold prose-headings:mt-0 max-w-none prose-h3:text-xl prose-p:pt-0',
+    'prose lg:prose-lg prose-headings:uppercase prose-a:text-orange prose-a:font-bold prose-headings:mt-0 max-w-none prose-h3:text-xl prose-pt-0 prose-p:pt-0',
     invert ? 'prose-h3:text-white prose-p:text-white prose-a:text-white' : 'prose-headings:text-blue prose-p:text-black prose-a:text-orange',
     centredText && 'prose-p:text-center',
     centreHeading && 'prose-h2:text-center',
@@ -31,9 +29,9 @@ const Text = ({
       mainControls.start('visible')
     }
   }, [isTextInView,  mainControls])
+  const blockContent = checkContentFormat(content) 
 
   return (
-    <BlockWrapper container={container}>
         <motion.div ref={textRef}  
           variants={{
             hidden: {opacity: 0, y: 75},
@@ -49,9 +47,9 @@ const Text = ({
           <div className={classes}>
             {title && <h2>{title}</h2>}
 
-            {subtitle && <h4>{subtitle}</h4>}
+            {subtitle && <h3>{subtitle}</h3>}
 
-            {checkContentFormat(content) && content.map((item, index) => (
+            {blockContent && blockContent.map((item, index) => (
                 <div key={index}>
                   {typeof item === 'string' || Array.isArray(item) ? (
                     <p className={lineClamp ? lineClamp : ''}>{item}</p>
@@ -64,7 +62,6 @@ const Text = ({
               ))}
           </div>
       </motion.div>
-    </BlockWrapper>
   );
 };
 

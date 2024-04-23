@@ -6,12 +6,13 @@ const BlockWrapper = ({
     customClasses,
     padded = true,
     container = true,
-    relative = true
+    relative = true,
+    noBackground = false
 }) => {
 
     const classes = [
         padded && 'pt-8 lg:pt-12 pb-8 lg:pb-12',
-        invert ? 'bg-blue' : 'bg-white',
+        invert && !noBackground ? 'bg-gradient-to-b from-blue to-blue-darker' : 'bg-white',
         customClasses && customClasses,
         relative && 'relative'
     ].filter(Boolean).join(' ')

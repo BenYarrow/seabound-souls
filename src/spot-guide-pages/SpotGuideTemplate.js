@@ -1,29 +1,34 @@
 import React, {useState} from'react'
 import StaticMasthead from'../components/StaticMasthead'
 import SpotOverview from'../components/SpotOverview'
-import Bulletpoints from'../components/Bulletpoints'
-import SplitImageText from'../components/SplitImageText'
 import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
 import Text from '../components/Text'
 import LiveWeatherData from '../components/api-weather-components/LiveWeatherData'
 import LeafletMap from '../components/maps/LeafletMap'
-import { checkContentFormat } from '../helpers/functions'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import UtilityBar from '../components/UtilityBar'
 import Gallery from '../components/Gallery'
-import Image from '../components/Image'
 import AreaChart from '../components/charts/AreaChart'
+import ImageAndText from '../components/ImageAndText'
+import ImageAndBullets from '../components/ImageAndBullets'
 
 const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}) => {
 
     const [isOpen, setIsOpen] = useState(false)
+    console.log(spotGuide.lessonHireImage)
     return (    
         <div>
             <SiteHelmet
                 customKeyWords={[spotGuide.title, spotGuide.location, spotGuide.metaKeyWords]}
+                customContent={[
+                    `Windsurfing in ${spotGuide.location}`,
+                    `Windsurfing in ${spotGuide.title}`,
+                    `${spotGuide.location} spot guide`,
+                    `${spotGuide.title} spot guide`,
+                ]}
             />
 
             <StaticMasthead image={spotGuide.masthead} title={spotGuide.title} subtitle={spotGuide.location}/>
@@ -73,9 +78,9 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
 
                 {spotGuide.intro && (
                     <BlockWrapper padded={false} customClasses="mg-8 lg:mb-12">
-                        <div className='border-y border-blue-lighter py-6'>
+                        <div className='border-y border-blue-lighter'>
                             <Text
-                                content={checkContentFormat(spotGuide.intro)}
+                                content={spotGuide.intro}
                                 centredText
                             />
                         </div>
@@ -98,49 +103,34 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     />
                 )}
 
-                {spotGuide.waterConditionDetails && (
-                    <Text 
-                        title="Water conditions"
-                        content={checkContentFormat(spotGuide.waterConditionDetails)}
-                    />
-                )}
-
-                {spotGuide.waterConditionImage && (
-                    <Image
+                {spotGuide.waterConditionImage && spotGuide.waterConditionDetails &&(
+                    <ImageAndText
                         image={spotGuide.waterConditionImage}
+                        title="Water conditions"
+                        content={spotGuide.waterConditionDetails}
                     />
                 )}
 
-                {spotGuide.windConditionDetails && (
-                    <Text 
-                        title="Wind conditions"
-                        content={checkContentFormat(spotGuide.windConditionDetails)}
-                    />
-                )}
-
-                {spotGuide.windConditionImage && (
-                    <Image
+                {spotGuide.windConditionImage && spotGuide.windConditionDetails && (
+                    <ImageAndText
                         image={spotGuide.windConditionImage}
+                        title="Wind conditions"
+                        content={spotGuide.windConditionDetails}
                     />
                 )}
                 
                 {spotGuide.whenToGoDetails && (
                     <Text 
                         title="When to go"
-                        content={checkContentFormat(spotGuide.whenToGoDetails)}
+                        content={spotGuide.whenToGoDetails}
                     />
                 )}
                 
-                {spotGuide.spots && (
-                    <Text 
-                        title="Spots"
-                        content={checkContentFormat(spotGuide.spots)}
-                    />
-                )}
-
-                {spotGuide.spotImage && (
-                    <Image
+                {spotGuide.spotImage && spotGuide.spots && (
+                    <ImageAndText
                         image={spotGuide.spotImage}
+                        title="Spots"
+                        content={spotGuide.spots}
                     />
                 )}
 
@@ -149,10 +139,10 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
                 
                 {spotGuide.lessonIntro && (
-                    <Bulletpoints 
+                    <ImageAndBullets
                         title='Lessons and Hire'
                         intro={spotGuide.lessonIntro}
-                        bulletListData={spotGuide.lessonBulletData}
+                        bullets={spotGuide.lessonBulletData}
                         image={spotGuide.lessonHireImage}
                         imageDescription={spotGuide.lessonHireImageDescription}
                         imageLink={spotGuide.lessonHireImageLink}
@@ -160,75 +150,50 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
 
                 {spotGuide.gettingHereText && (
-                    <Text 
+                    <ImageAndText 
+                        image={spotGuide.gettingHereImage}
                         title={`Getting to ${spotGuide.title}`}
                         content={spotGuide.gettingHereText}
                     />
                 )}
 
-                {spotGuide.gettingHereImage && (
-                    <Image
-                        image={spotGuide.gettingHereImage}
-                    />
-                )}
-
-                {spotGuide.travellingIntro && (
-                    <Bulletpoints
+                {spotGuide.travellingIntro && spotGuide.travellingImage && (
+                    <ImageAndBullets
+                        image={spotGuide.travellingImage}
                         title='Travelling around'
                         intro={spotGuide.travellingIntro}
-                        bulletListData={spotGuide.travellingBulletData}
-                    />
-                    )}
-
-                {spotGuide.travellingImage && (
-                    <Image
-                        image={spotGuide.travellingImage}
+                        bullets={spotGuide.travellingBulletData}
                     />
                 )}
+
 
                 {spotGuide.stayIntro && (                    
-                    <Bulletpoints 
-                        title='Where to stay'
-                        intro={spotGuide.stayIntro}
-                        bulletListData={spotGuide.whereToStayBulletData}
-                    />
-                )}
-
-                {spotGuide.stayImageDescription && (
-                    <Image
+                    <ImageAndBullets
                         image={spotGuide.stayImage}
                         imageDescription={spotGuide.stayImageDescription}
                         imageLink={spotGuide.stayImageLink}
-                    />
-                )}
-            
-                {spotGuide.whereToEatBulletData && (
-                    <Bulletpoints
-                        title='Where to eat'
-                        intro={checkContentFormat(spotGuide.eatIntro)}
-                        bulletListData={spotGuide.whereToEatBulletData}
+                        title='Where to stay'
+                        intro={spotGuide.stayIntro}
+                        bullets={spotGuide.whereToStayBulletData}
                     />
                 )}
 
-                {spotGuide.eatImage && (
-                    <Image
+                {spotGuide.whereToEatBulletData && (
+                    <ImageAndBullets
                         image={spotGuide.eatImage}
                         imageDescription={spotGuide.eatImageDescription}
                         imageLink={spotGuide.eatImageLink}
+                        title='Where to eat'
+                        intro={spotGuide.eatIntro}
+                        bullets={spotGuide.whereToEatBulletData}
                     />
                 )}
-
 
                 {spotGuide.otherActivityText && (
-                    <Text
-                        title='Other Activities'
-                        content={checkContentFormat(spotGuide.otherActivityText)}
-                    />
-                )}
-
-                {spotGuide.otherActivityImage && (
-                    <Image 
+                    <ImageAndText
                         image={spotGuide.otherActivityImage}
+                        title='Other Activities'
+                        content={spotGuide.otherActivityText}
                     />
                 )}
                 
