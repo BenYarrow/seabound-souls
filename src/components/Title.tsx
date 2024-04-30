@@ -1,5 +1,15 @@
 import React, {useRef, useEffect} from 'react';
 import { motion, useAnimation, useInView } from "framer-motion";
+import { ReactNode } from 'react';
+
+interface TitleProps {
+    title: string
+    subtitle: any
+    invert: boolean
+    h1: boolean
+    centreTitle: boolean
+    padded: boolean
+}
 
 const Title = ({
     title, 
@@ -8,7 +18,7 @@ const Title = ({
     h1 = false,
     centreTitle = false,
     padded = true
-}) => {
+}: TitleProps) => {
 
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
@@ -51,15 +61,11 @@ const Title = ({
                                     {title}
                                 </h1>
                             ) : (
-                                <>
-                                    {typeof title === 'string' ? (
-                                        <h2>
-                                            {title}
-                                        </h2>
-                                    ) : (
-                                        title()
-                                    )}
-                                </>
+                                
+                                <h2>
+                                    {title}
+                                </h2>
+                 
                             )}
                         </>
                     )}

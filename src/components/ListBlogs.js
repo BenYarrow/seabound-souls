@@ -25,11 +25,11 @@ const ListBlogs = ({
       mainControls.start('visible')
     }
   }, [isInView,  mainControls])
-
+  
   return (
       <BlockWrapper invert={invert}>
         <Title
-          title={title}
+          title={title.toString()}
           subtitle={subtitle}
           invert={invert}
           padded={false}
