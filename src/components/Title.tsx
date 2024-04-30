@@ -1,6 +1,5 @@
 import React, {useRef, useEffect} from 'react';
 import { motion, useAnimation, useInView } from "framer-motion";
-import { ReactNode } from 'react';
 
 interface TitleProps {
     title: string

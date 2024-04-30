@@ -1,13 +1,22 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import ButtonLink from "../components/ButtonLink"
 import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 
-const SwiperHeroSlider = ({images, title, subtitle}) => {
+interface SwiperHeroSliderProps {
+  images: {
+    sm: string
+    md: string
+    lg: string
+  }[] 
+  title: string
+  subtitle: string
+}
+
+const SwiperHeroSlider = ({images, title, subtitle}: SwiperHeroSliderProps) => {
 
   return (
     <Swiper
@@ -21,7 +30,7 @@ const SwiperHeroSlider = ({images, title, subtitle}) => {
       effect="fade"
       className="mySwiper"
     >
-      {images.map((slide, index) => {
+      {images.map((slide, index: number) => {
         return (
           <SwiperSlide key={index}>
             <div className="relative h-[calc(100vh-4rem)] lg:h-[calc(100vh-10rem)] bg-blue-lighter">
@@ -31,9 +40,10 @@ const SwiperHeroSlider = ({images, title, subtitle}) => {
                   <source media="(min-width: 641px) and (max-width: 1024px)" srcSet={slide.md} />
                   <source media="(min-width: 1025px)" srcSet={slide.lg} />
                   <img src={slide.sm} alt="Ben and Rachel windsurfing" 
-                    className='object-cover w-full h-full' fetchpriority={index === 0 ? 'high' : 'low'}
-                    loading={index !== 0 ? 'lazy' : ''}
-                    crossOrigin="true"
+                    className='object-cover w-full h-full' 
+                    fetchPriority={index === 0 ? 'high' : 'low'}
+                    loading={index !== 0 ? 'lazy' : 'eager'}
+                    crossOrigin="anonymous"
                   />
                 </picture>
               </div>
