@@ -1,10 +1,10 @@
 import React, {useRef, useEffect} from 'react';
 import { motion, useAnimation, useInView } from "framer-motion";
 import StaticMasthead from "../components/StaticMasthead";
-import GridImageDisplay from "../components/GridImageDisplay";
 import Text from "../components/Text";
 import Title from "../components/Title";
 import BlockWrapper from "../components/BlockWrapper";
+import Gallery from '../components/Gallery';
 
 
 const AboutUs = () => {
@@ -27,6 +27,44 @@ const AboutUs = () => {
       mainControls.start('visible')
     }
   }, [isTextInView,  mainControls])
+
+  const topGalleryImages = [
+    {
+      src: 'images/mauritius/ben-windsurfing-01.jpg',
+      alt: 'Ben windsurfing'
+    },
+    {
+      src: 'images/mastheads/homepage/windsurfing-together-01-desktop.jpg',
+      alt: 'Ben and Rachel windsurfing together'
+    },
+    {
+      src: 'images/mastheads/homepage/windsurfing-together-02-desktop.jpg',
+      alt: 'Ben and Rachel windsurfing together'
+    },
+    {
+      src: 'images/vassiliki/surf-hotel.jpg',
+      alt: 'Surf hotel, Vassiliki'
+    }
+  ]
+  
+  const bottomGalleryImages = [
+    {
+      src: '/images/mauritius/wedding-1.jpg',
+      alt: 'Getting married in Mauritius'
+    },
+    {
+      src: '/images/mauritius/rachel-windsurfing-01.jpg',
+      alt: 'Rachel windsurfing'
+    },
+    {
+      src: '/images/mauritius/mauritius.jpg',
+      alt: 'Mauritius'
+    },
+    {
+      src: '/images/mauritius/wedding-3.jpg',
+      alt: 'Getting married in Mauritius'
+    }
+  ]
 
   return (
     <div>
@@ -72,30 +110,27 @@ const AboutUs = () => {
           </div>
           
           <BlockWrapper container={false} >
-            <GridImageDisplay 
-              imageOne='images/mauritius/ben-windsurfing-01.jpg'
-              imageTwo='images/mastheads/homepage/windsurfing-together-01-desktop.jpg'
-              imageThree='images/mastheads/homepage/windsurfing-together-02-desktop.jpg'
-              imageFour='images/vassiliki/surf-hotel.jpg'
-            />
+            <Gallery images={topGalleryImages} thumbnailsOnlyState/>
           </BlockWrapper>
           
         </BlockWrapper>
 
-        <BlockWrapper invert >
-          <Text
-            title="Our Story"
-            largeHeading
-            centreHeading
-            content={[
-              "Our paths first crossed in the summer of 2019. Rachel was working as a watersports instructor in Vasiliki, Greece, while Ben travelled on a windsurfing trip to the same resort.",
-              "We remained in touch after the summer, but as we lived 200 miles apart neither of us thought a relationship was on the cards. As the pandemic hit in 2020, we decided to spend our time in lockdown together. Despite the challenges, the shared experience brought us closer together and within just a few weeks we knew this was the start of an awesome adventure together.",
-              "As the world gradually reopened, we made some significant life changes. Ben sold his house and moved across the country, where we established a home together. As the travel restriction eased, we were eager to return to the place where we first met. It was during this trip that we got engaged!",
-              "When it came to planning our wedding, we knew we wanted an low key beach ceremony in a warm and windy place. After researching various destinations, we settled on Le Morne in Mauritius — a place known for its warm winds and beautiful beaches. Fast forward to September 2022, and our dream wedding became a reality.",
-              "Now, with our shared passion for travel, we are eager to explore more of the incredible world we call home."
-            ]}
-            invert
-          />
+        <BlockWrapper invert container={false}>
+          <div className='container mx-auto'>
+            <Text
+              title="Our Story"
+              largeHeading
+              centreHeading
+              content={[
+                "Our paths first crossed in the summer of 2019. Rachel was working as a watersports instructor in Vasiliki, Greece, while Ben travelled on a windsurfing trip to the same resort.",
+                "We remained in touch after the summer, but as we lived 200 miles apart neither of us thought a relationship was on the cards. As the pandemic hit in 2020, we decided to spend our time in lockdown together. Despite the challenges, the shared experience brought us closer together and within just a few weeks we knew this was the start of an awesome adventure together.",
+                "As the world gradually reopened, we made some significant life changes. Ben sold his house and moved across the country, where we established a home together. As the travel restriction eased, we were eager to return to the place where we first met. It was during this trip that we got engaged!",
+                "When it came to planning our wedding, we knew we wanted an low key beach ceremony in a warm and windy place. After researching various destinations, we settled on Le Morne in Mauritius — a place known for its warm winds and beautiful beaches. Fast forward to September 2022, and our dream wedding became a reality.",
+                "Now, with our shared passion for travel, we are eager to explore more of the incredible world we call home."
+              ]}
+              invert
+            />
+          </div>
         </BlockWrapper>
 
         <BlockWrapper >
@@ -136,12 +171,7 @@ const AboutUs = () => {
           </div>
 
 
-              <GridImageDisplay 
-                  imageOne='/images/mauritius/wedding-1.jpg'
-                  imageTwo='/images/mauritius/rachel-windsurfing-01.jpg'
-                  imageThree='/images/mauritius/mauritius.jpg'
-                  imageFour='/images/mauritius/wedding-3.jpg'
-                />
+              <Gallery images={bottomGalleryImages}/>
         </BlockWrapper>
         
 

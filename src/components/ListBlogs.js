@@ -27,41 +27,44 @@ const ListBlogs = ({
   }, [isInView,  mainControls])
   
   return (
-      <BlockWrapper invert={invert}>
-        <Title
-          title={title.toString()}
-          subtitle={subtitle}
-          invert={invert}
-          padded={false}
-        />
-          <ul className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 pt-2 lg:pt-6'>
-            {featuredBlogs.map((blog) => {
-              return blog.blogLinkData.map((data, index) => {
-                return (
-                  <li key={index}>
-                    <BlogLink {...data} invert={invert}/>
-                  </li>
-                );
-              });
-            })}
-          </ul>
-          <div ref={buttonRef}>
-            <motion.div 
-              className='w-full py-8 flex justify-center'
-                variants={{
-                    hidden: {opacity: 0, y: 75},
-                    visible: {opacity: 1, y: 0},
-                  }}
-                  initial= 'hidden'
-                  animate={mainControls}
-                  transition={{
-                    duration: 0.5,
-                    delay: 0.5
-                  }}
-            >
-                <ButtonLink linkTo={buttonLink} title={buttonTitle} colour={invert ? "white-outline" : "blue-outline"}/>
-            </motion.div>
-          </div>
+      <BlockWrapper invert={invert} container={invert ? false : true}>
+        <div className={invert ? 'container mx-auto' : ''}>
+
+          <Title
+            title={title.toString()}
+            subtitle={subtitle}
+            invert={invert}
+            padded={false}
+          />
+            <ul className='grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 pt-2 lg:pt-6'>
+              {featuredBlogs.map((blog) => {
+                return blog.blogLinkData.map((data, index) => {
+                  return (
+                    <li key={index}>
+                      <BlogLink {...data} invert={invert}/>
+                    </li>
+                  );
+                });
+              })}
+            </ul>
+            <div ref={buttonRef}>
+              <motion.div 
+                className='w-full py-8 flex justify-center'
+                  variants={{
+                      hidden: {opacity: 0, y: 75},
+                      visible: {opacity: 1, y: 0},
+                    }}
+                    initial= 'hidden'
+                    animate={mainControls}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.5
+                    }}
+              >
+                  <ButtonLink linkTo={buttonLink} title={buttonTitle} colour={invert ? "white-outline" : "blue-outline"}/>
+              </motion.div>
+            </div>
+        </div>
       </BlockWrapper>
   )
 }

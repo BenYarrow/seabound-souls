@@ -7,7 +7,7 @@ const StaticMasthead = ({
 }) => {
        
     return (
-        <div className={`w-screen h-[60vh] relative overflow-hidden ${title && 'clipped-masthead'}`}>
+        <div className={`w-screen h-[60vh] lg:h-[80vh] relative overflow-hidden ${title && 'clipped-masthead'}`}>
             <picture>
                 {image.sm && <source media="(max-width: 640px)" srcSet={image.sm} />}
                 

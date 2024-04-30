@@ -9,13 +9,13 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 
-const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
+const Gallery = ({images, autoplayState = true, thumbnailsOnlyState = false}) => {
 
     const [thumbsSwiper, setThumbsSwiper] = useState();
     const autoplayDelay = autoplayState ? 5000 : 0
     
     return (
-        <div className="bg-gray-200">
+        <div>
             {images && (
                 <BlockWrapper>
                     {thumbnailsOnlyState ? (
@@ -41,13 +41,13 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
                         >
                             {images.map((image, index) => {
                                 return (
-                                    <SwiperSlide key={index}>
+                                    <SwiperSlide key={index} className="w-40 aspect-square overflow-hidden relative">
                                         <img
                                             src={image.src}
-                                            height=""
-                                            width=""
+                                            height="209"
+                                            width="209"
                                             alt={image.alt}
-                                            className='w-full'
+                                            className="absolute w-full h-full inset-0 object-cover cursor-pointer shadow-lg transition duration-300 bg-blue-lightest"
                                         />
                                     </SwiperSlide>
                                 )
@@ -93,10 +93,10 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState}) => {
                                         <SwiperSlide key={index} className="w-40 aspect-square overflow-hidden relative">
                                             <img
                                                 src={image.src}
-                                                height="200"
-                                                width="200"
+                                                height="209"
+                                                width="209"
                                                 alt={image.alt}
-                                                className=" absolute w-full h-full inset-0 object-cover cursor-pointer mx-auto shadow-lg transition duration-300 bg-blue-lightest"
+                                                className="absolute w-full h-full inset-0 object-cover cursor-pointer mx-auto shadow-lg transition duration-300 bg-blue-lightest"
                                             />
                                         </SwiperSlide>
                                     )
