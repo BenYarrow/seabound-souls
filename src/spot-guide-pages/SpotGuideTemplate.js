@@ -1,6 +1,6 @@
 import React, {useState} from'react'
 import StaticMasthead from'../components/StaticMasthead'
-import SpotOverview from'../components/SpotOverview'
+import SpotOverview from'../components/SpotOverview.tsx'
 import ButtonLink from'../components/ButtonLink'
 import SiteHelmet from'../components/SiteHelmet'
 import BlockWrapper from "../components/BlockWrapper"
