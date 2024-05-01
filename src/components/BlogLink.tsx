@@ -1,16 +1,24 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Text from "../components/Text.js"
 import { useEffect, useRef } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { defaultProseClasses } from  "../helpers/functions"
+
+interface BlogLinkProps {
+  linkTo: string
+  location: string
+  blogIntro: string
+  blogLinkImgSrc: string
+  invert?: boolean
+}
 
 const BlogLink = ({
     linkTo,
     location,
     blogIntro,
     blogLinkImgSrc,
-    invert
-   }) => {
+    invert = false
+   }: BlogLinkProps) => {
 
     const ref = useRef(null)
     const isInView = useInView(ref, {once: true})
@@ -48,15 +56,15 @@ const BlogLink = ({
             alt={location}
             className="aspect-[5/4] w-full group-hover:scale-105 transition duration-300 object-cover"
             loading="lazy"
-            crossOrigin="true"
+            crossOrigin="anonymous"
           />
-          <div className="pt-8">
-            <Text 
-              title={location}
-              content={[blogIntro]}
-              invert={invert}
-              lineClamp="line-clamp-4"
-            />
+          <div className="pt-12">
+            <div className={`"pt-8 ${defaultProseClasses(invert)}`}>
+              <h2>{location}</h2>
+              <p>
+                {blogIntro}
+              </p>
+            </div>
           </div>
         </motion.div>
       </Link>
