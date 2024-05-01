@@ -1,13 +1,14 @@
 import React, {useRef, useEffect} from 'react';
 import { motion, useAnimation, useInView } from "framer-motion";
+import {defaultProseClasses} from "../helpers/functions"
 
 interface TitleProps {
     title: string
-    subtitle: any
-    invert: boolean
-    h1: boolean
-    centreTitle: boolean
-    padded: boolean
+    subtitle?: any
+    invert?: boolean
+    h1?: boolean
+    centreTitle?: boolean
+    padded?: boolean
 }
 
 const Title = ({
@@ -30,16 +31,12 @@ const Title = ({
       }
     }, [isInView,  mainControls])
 
-    const classes = [
-        padded && 'pt-8 lg:pt-12',
-        'prose prose:bg-colour-transparent prose-headings:uppercase prose-headings:my-0 prose-headings:text-2xl prose-headings:md:3xl prose-headings:lg:text-4xl prose-headings:xl-text-5xl',
-        'max-w-none',
-        invert ? 'prose-headings:text-white prose-p:text-white' : 'prose-headings:text-blue prose-p:text-blue',
-        centreTitle && 'prose-headings:text-center prose-h1:text-center',
-    ].filter(Boolean).join(' ')
     
     return (
-            <div className={classes} ref={ref}>
+            <div className={padded ? 'pt-8 lg:pt-12' : ''} ref={ref}>
+                <div className={defaultProseClasses({invert, centreTitle})}>
+
+                </div>
                 <motion.div
                     variants={{
                         hidden: {opacity: 0, y: 75},

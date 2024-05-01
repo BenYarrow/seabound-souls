@@ -38,7 +38,7 @@ const BlogLink = ({
     return(
       <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group'>
         <motion.div 
-          className=""
+          className="space-y-8"
           variants={{
               hidden: {opacity: 0, y: 75},
               visible: {opacity: 1, y: 0},
@@ -50,22 +50,22 @@ const BlogLink = ({
               delay: 0.5
             }}
         >
-          <img src={blogImageSrc}
-            width="480"
-            height="480"
-            alt={location}
-            className="aspect-[5/4] w-full group-hover:scale-105 transition duration-300 object-cover"
-            loading="lazy"
-            crossOrigin="anonymous"
-          />
-          <div className="pt-12">
-            <div className={`"pt-8 ${defaultProseClasses(invert)}`}>
+          <div className="overflow-hidden">
+            <img src={blogImageSrc}
+              width="480"
+              height="480"
+              alt={location}
+              className="aspect-square object-cover mb-8 hover:scale-105 transition duration-300"
+              loading="lazy"
+              crossOrigin="anonymous"
+            />
+          </div>
+            <div className={defaultProseClasses({invert, lineClamp: true})}>
               <h2>{location}</h2>
-              <p>
+              <p className="line-clamp-4">
                 {blogIntro}
               </p>
             </div>
-          </div>
         </motion.div>
       </Link>
     )
