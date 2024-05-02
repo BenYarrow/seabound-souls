@@ -29,7 +29,6 @@ const ListBlogs = ({
   return (
       <BlockWrapper invert={invert} container={invert ? false : true}>
         <div className={invert ? 'container mx-auto' : ''}>
-
           <Title
             title={title.toString()}
             subtitle={subtitle}
