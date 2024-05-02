@@ -150,7 +150,7 @@ const Destinations = () => {
           {activeFilter.map((blog) =>
             blog.blogLinkData.map((data, index) => (
               <li key={index}>
-                <BlogLink {...data} index={index} />
+                <BlogLink {...data}/>
               </li>
             ))
           )}

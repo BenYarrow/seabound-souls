@@ -7,7 +7,7 @@ export let spotGuideLinks = [
         isVisible: true,
         blogLinkData: [
             {
-                title: 'Windsurfing in Mauritius',
+                title: 'Le Morne, Mauritius',
                 location: 'Le Morne, Mauritius',
                 linkTo: '/destinations/le-morne-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/mauritius/mauritius-spotguide-desktop.jpg',
@@ -23,7 +23,7 @@ export let spotGuideLinks = [
         isVisible: true,
         blogLinkData: [
             {
-                title: 'Windsurfing in Dahab',
+                title: 'Dahab, Egypt',
                 location: 'Dahab, Egypt',
                 linkTo: '/destinations/dahab-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/dahab/dahab-spotguide-desktop.jpg',
@@ -40,7 +40,7 @@ export let spotGuideLinks = [
         isVisible: true,
         blogLinkData: [
             {
-                title: 'Windsurfing in Vasiliki',
+                title: 'Vassiliki, Lefkada',
                 location: 'Vassiliki, Lefkada',
                 linkTo: '/destinations/vassiliki-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-desktop.jpg',
@@ -59,7 +59,7 @@ export let spotGuideLinks = [
         blogLinkData: [
             {
                 
-                title: 'Windsurfing in Risco Del Paso',
+                title: 'Risco Del Paso, Fuerteventura',
                 location: 'Risco Del Paso, Fuerteventura',
                 linkTo: '/destinations/risco-del-paso-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/risco/risco-spotguide-desktop.jpg',
@@ -77,7 +77,7 @@ export let spotGuideLinks = [
         isVisible: true,
         blogLinkData: [
             {
-                title: 'Windsurfing in Langebaan',
+                title: 'Langebaan, South Africa',
                 location: 'Langebaan, South Africa',
                 linkTo: '/destinations/langebaan-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/langebaan/langebaan-spotguide-desktop.jpg',

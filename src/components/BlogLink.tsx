@@ -6,7 +6,7 @@ import { defaultProseClasses } from  "../helpers/functions"
 
 interface BlogLinkProps {
   linkTo: string
-  location: string
+  title: string
   blogIntro: string
   blogLinkImgSrc: string
   invert?: boolean
@@ -14,7 +14,7 @@ interface BlogLinkProps {
 
 const BlogLink = ({
     linkTo,
-    location,
+    title,
     blogIntro,
     blogLinkImgSrc,
     invert = false
@@ -36,7 +36,7 @@ const BlogLink = ({
     const blogImageSrc = blogLinkImgSrc ? blogLinkImgSrc : fallbackImage
     
     return(
-      <Link ref={ref} to={linkTo} aria-label={`Read about our time in ${location}`} className='group'>
+      <Link ref={ref} to={linkTo} className='group'>
         <motion.div 
           className="space-y-8"
           variants={{
@@ -54,14 +54,14 @@ const BlogLink = ({
             <img src={blogImageSrc}
               width="480"
               height="480"
-              alt={location}
-              className="aspect-square object-cover mb-8 hover:scale-105 transition duration-300"
+              alt={title}
+              className="w-full aspect-square object-cover mb-8 hover:scale-105 transition duration-300"
               loading="lazy"
               crossOrigin="anonymous"
             />
           </div>
             <div className={defaultProseClasses({invert, lineClamp: true})}>
-              <h2>{location}</h2>
+              <h2>{title}</h2>
               <p className="line-clamp-4">
                 {blogIntro}
               </p>

@@ -14,6 +14,7 @@ import Navbar from './nav-bar-pages/Navbar';
     import RiscoDelPasoSpotGuide from './spot-guide-pages/RiscoDelPasoSpotGuide';
     import LangebaanSpotGuide from './spot-guide-pages/LangebaanSpotGuide';
   import Blog from './nav-bar-pages/Blog';
+    import TyingTheKnotInTropicalParadise from './blog/TyingTheKnotInTropicalParadise'
   import ContactUs from './nav-bar-pages/ContactUs';  
 import Footer from './Footer';
 import NotFound from './404/NotFound';
@@ -41,6 +42,8 @@ function App() {
                 <Route path='/destinations/langebaan-spot-guide' element={<LangebaanSpotGuide />} />
 
               <Route path='/blog' element={<Blog />}/>
+                <Route path='/blog/tying-the-knot-in-tropical-paradise' element={<TyingTheKnotInTropicalParadise />} />
+
               <Route path="*" element={<NotFound />} />
             </Routes>
           <Footer />  
