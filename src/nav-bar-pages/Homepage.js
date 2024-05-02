@@ -1,5 +1,6 @@
 import React from 'react'
 import { spotGuideLinks } from "../Data/spot-guide-links";
+import { blogLinks } from '../Data/blog-links';
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";
 import BlockWrapper from "../components/BlockWrapper";
@@ -28,6 +29,22 @@ function Homepage() {
     .filter((featured) => featured.featured === true);
   
   featuredSpotGuideLinks.sort((a, b) => {
+    if (a.featuredOrder < b.featuredOrder) {
+      return -1
+    } else if (a.featuredOrder > b.featuredOrder) {
+      return 1
+    } else {
+      return 0
+    }
+  })
+  
+  const featuredBlogs = blogLinks
+    .map((blog) => {
+      return blog;
+    })
+    .filter((featured) => featured.featured === true);
+  
+  featuredBlogs.sort((a, b) => {
     if (a.featuredOrder < b.featuredOrder) {
       return -1
     } else if (a.featuredOrder > b.featuredOrder) {
@@ -90,10 +107,10 @@ function Homepage() {
       />
 
       <ListBlogs
-        title="Destinations"
-        subtitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip."
-        featuredBlogs={featuredSpotGuideLinks}
-        buttonLink="/destinations"
+        title="Blogs"
+        subtitle=""
+        featuredBlogs={featuredBlogs}
+        buttonLink="/blog"
         buttonTitle="View More"
       />
 

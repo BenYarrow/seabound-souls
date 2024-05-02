@@ -5,11 +5,20 @@ import { checkContentFormat } from '../helpers/functions'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 
+interface BulletpointsProps {
+    title: string
+    intro?: string
+    bullets: {
+        title: string
+        link?: string
+    }[]
+}
+
 const Bulletpoints = ({
     title, 
     intro, 
     bullets = [],
-}) => {
+}: BulletpointsProps) => {
 
     return (
         <BlockWrapper >
