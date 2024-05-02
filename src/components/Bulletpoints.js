@@ -8,7 +8,7 @@ import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
 const Bulletpoints = ({
     title, 
     intro, 
-    bulletListData = [],
+    bullets = [],
 }) => {
 
     return (
@@ -22,9 +22,9 @@ const Bulletpoints = ({
                     />
                 )}
                 <div className='flex flex-col space-y-2'>
-                    {bulletListData && (
+                    {bullets && (
                         <ul className="pl-12 flex flex-col space-y-2">
-                            {bulletListData.map((list, index) => {
+                            {bullets.map((list, index) => {
                                 return (
                                     <li key={index} className={`list-disc prose lg:prose-lg max-w-none ${list.link !== null ? 'marker:text-orange' : 'marker:text-blue'}`}>
                                         {list.title != null &&  (

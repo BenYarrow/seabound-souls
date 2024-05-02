@@ -23,6 +23,7 @@ const Text = ({
       mainControls.start('visible')
     }
   }, [isTextInView,  mainControls])
+  
   const blockContent = checkContentFormat(content) 
 
   return (

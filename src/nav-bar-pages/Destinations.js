@@ -11,7 +11,7 @@ import { spotGuideCoordinates } from "../Data/spot-guide-coordinate-data";
 import Select from 'react-select'
 
 const InfoModelContent = () => (
-  <div class="flex flex-col gap-y-2">
+  <div className="flex flex-col gap-y-2">
     <p>
       Use our interactive map to navigate the earth to find the location you're looking for. Click on a marker to view the name of the location, from there you can navigate to that specific spot guide.
     </p>
