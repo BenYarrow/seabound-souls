@@ -20,7 +20,7 @@ const ContactUs = () => {
       <StaticMasthead image={mastheadImage}/>
 
       <BlockWrapper>
-        <Title title='Contact us' h1 centreTitle />
+        <Title title='Contact us' h1 centreHeading />
 
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 pt-8 lg:pt-12">
           <div className="w-full  flex flex-col items-center gap-y-8">

@@ -27,7 +27,7 @@ const BlockWrapper = ({
         invert && !noBackground ? 'bg-gradient-to-b from-blue to-blue-darker' : 'bg-white',
         customClasses && customClasses,
         relative && 'relative',
-        containerClasses // Add container classes here
+        containerClasses
     ].filter(Boolean).join(' ');
 
     return (

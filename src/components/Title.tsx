@@ -7,7 +7,7 @@ interface TitleProps {
     subtitle?: any
     invert?: boolean
     h1?: boolean
-    centreTitle?: boolean
+    centreHeading?: boolean
     padded?: boolean
 }
 
@@ -16,7 +16,7 @@ const Title = ({
     subtitle,
     invert = false,
     h1 = false,
-    centreTitle = false,
+    centreHeading = false,
     padded = true
 }: TitleProps) => {
 
@@ -31,25 +31,22 @@ const Title = ({
       }
     }, [isInView,  mainControls])
 
-    
+    console.log(centreHeading)
     return (
-            <div className={padded ? 'pt-8 lg:pt-12' : ''} ref={ref}>
-                <div className={defaultProseClasses({invert, centreTitle})}>
-
-                </div>
-                <motion.div
-                    variants={{
-                        hidden: {opacity: 0, y: 75},
-                        visible: {opacity: 1, y: 0},
-                    }}
-                    initial= 'hidden'
-                    animate={mainControls}
-                    transition={{
-                        duration: 0.5,
-                        delay: 0.5
-                    }}
-                >
-
+        <motion.div
+            variants={{
+                hidden: {opacity: 0, y: 75},
+                visible: {opacity: 1, y: 0},
+            }}
+            initial= 'hidden'
+            animate={mainControls}
+            transition={{
+                duration: 0.5,
+                delay: 0.5
+            }}
+        >
+            <div className={defaultProseClasses({ invert })} ref={ref}>
+                <div className={`${padded ? 'pt-8 lg:pt-12' : ''} ${centreHeading ? 'text-center' : 'text-left'}`}>
                     {title && (
                         <>
                             {h1 ? (
@@ -61,7 +58,7 @@ const Title = ({
                                 <h2>
                                     {title}
                                 </h2>
-                 
+                
                             )}
                         </>
                     )}
@@ -70,8 +67,9 @@ const Title = ({
                             {subtitle}
                         </p>
                     )}
-                </motion.div>
+                </div>
             </div>
+        </motion.div>
     )
 }
 

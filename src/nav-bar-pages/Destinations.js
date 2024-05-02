@@ -107,7 +107,7 @@ const Destinations = () => {
 
       <StaticMasthead image={mastheadImages} />
 
-      <Title title="Destination spot guides" h1 centreTitle/>
+      <Title title="Destination spot guides" h1 centreHeading/>
       
       <LeafletMap
         lat={10}

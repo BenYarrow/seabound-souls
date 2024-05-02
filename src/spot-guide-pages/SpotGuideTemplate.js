@@ -170,25 +170,42 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     />
                 )}
 
-                {spotGuide.waterConditionImage && spotGuide.waterConditionDetails && (
+                {spotGuide.waterConditionImage && spotGuide.waterConditionDetails ? (
                     <div id="water-conditions">
                         <ImageAndText
                             image={spotGuide.waterConditionImage}
                             title="Water conditions"
                             content={spotGuide.waterConditionDetails}
-                        />
+                            />
                     </div>
+                ) : (
+                    spotGuide.waterConditionDetails && (
+                        <Text 
+                            title="Water conditions"
+                            content={spotGuide.waterConditionDetails}
+                        />
+                    )
                 )}
 
-                {spotGuide.windConditionImage && spotGuide.windConditionDetails && (
-                    <div id="wind-conditions">
+                <div id="wind-conditions">
+                    {spotGuide.windConditionImage && spotGuide.windConditionDetails ? (
                         <ImageAndText
                             image={spotGuide.windConditionImage}
                             title="Wind conditions"
                             content={spotGuide.windConditionDetails}
                         />
-                    </div>
-                )}
+                    ) : (
+                        spotGuide.windConditionDetails && (
+                            <BlockWrapper>
+                                <Text
+                                    title="Wind conditions"
+                                    content={spotGuide.windConditionDetails}
+                                />  
+                            </BlockWrapper>
+                        ) 
+
+                    )}
+                </div>
                 
                 {spotGuide.whenToGoDetails && (
                     <div id="when-to-go">
@@ -215,7 +232,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     <AreaChart data={windData} title="Wind statistics"/>
                 )}
                 
-                {spotGuide.lessonIntro && (
+                {spotGuide.lessonIntro && spotGuide.lessonHireImage && (
                     <div id="lessons-and-hire">
                         <ImageAndBullets
                             title='Lessons and Hire'
@@ -228,14 +245,23 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     </div>
                 )}
 
-                {spotGuide.gettingHereText && (
+                {spotGuide.gettingHereImage && spotGuide.gettingHereText ? (
                     <div id={`getting-to-${spotGuide.title}`}>
                         <ImageAndText 
                             image={spotGuide.gettingHereImage}
                             title={`Getting to ${spotGuide.title}`}
                             content={spotGuide.gettingHereText}
-                        />
+                            />
                     </div>
+                ) : (
+                    spotGuide.gettingHereText && (
+                        <BlockWrapper>
+                            <Text 
+                                title={`Getting to ${spotGuide.title}`}
+                                content={spotGuide.gettingHereText}
+                            />
+                        </BlockWrapper>
+                    )
                 )}
 
                 {spotGuide.travellingIntro && spotGuide.travellingImage && (
@@ -276,14 +302,23 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     </div>
                 )}
 
-                {spotGuide.otherActivityText && (
+                {spotGuide.otherActivityText && spotGuide.otherActivityImage ? (
                     <div id="other-activities">
                         <ImageAndText
                             image={spotGuide.otherActivityImage}
                             title='Other Activities'
                             content={spotGuide.otherActivityText}
-                        />
+                            />
                     </div>
+                ) : (
+                    spotGuide.otherActivityText && (
+                        <BlockWrapper>
+                            <Text
+                                title='Other Activities'
+                                content={spotGuide.otherActivityText}
+                            />
+                        </BlockWrapper>
+                    )
                 )}
                 
                 {coordinates && (

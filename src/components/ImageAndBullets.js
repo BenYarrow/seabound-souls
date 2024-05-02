@@ -18,12 +18,12 @@ const ImageAndBullets = ({
             <Image image={image} imageDescription={imageDescription} imageLink={imageLink}/>
         )}
         <div className='-translate-y-20 lg:-translate-y-40 container mx-auto'>
-            <div className='p-4 lg:p-8 bg-gradient-to-b from-white/80 to-white-darker via-white via-80% shadow-2xl shadow-white-darker'>
+            <div className='p-4 lg:p-8 bg-gradient-to-b from-white/80 to-white-darker via-white via-80% shadow-2xl shadow-white-darker lg:mx-16'>
                 <div className='flex flex-col space-y-2'>
                     {title && (
                         <Text title={title} content={intro && intro}/>
                     )}
-                    <ul className="pl-12 flex flex-col space-y-2">
+                    <ul className="pl-12 flex flex-col space-y-2 ">
                         {bullets.map((list, index) => {
                             return (
                                 <li key={index} className={`list-disc prose lg:prose-lg max-w-none ${list.link !== null ? 'marker:text-orange' : 'marker:text-blue'}`}>

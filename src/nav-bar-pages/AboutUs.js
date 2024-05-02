@@ -72,9 +72,10 @@ const AboutUs = () => {
       <StaticMasthead image={masthead}/>
 
       <BlockWrapper id='content' >
+          
           <Title title='About us'
             h1
-            centreTitle
+            centreHeading
           />
           
           <div ref={textRef}>

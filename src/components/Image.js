@@ -14,29 +14,27 @@ const Image = ({
   const imageLinkWrapperClasses = 'w-full h-full flex items-end justify-start group group-hover:underline'
   const imageDescriptionText = imageDescription ? imageDescription :  'Seabound Souls'
   const href = imageLink ? imageLink : 'https://www.instagram.com/seabound.souls/'
-
+  
   return (
     <BlockWrapper container={container}>
-      <div className="lg:container lg:mx-auto">
-        {image && (
-          <div className="relative group w-full aspect-square lg:aspect-video overflow-hidden lg:shadow-2xl">
+      {image && (
+        <div className="relative w-full h-screen lg:h-[80vh]">
               <img src={image}
                   width="400"
                   height="400"
                   alt=""
-                  className='w-full absolute inset-0 object-cover group-hover:scale-105 transition duration-300'
+                  className='w-full h-full absolute inset-0 object-cover lg:container lg:mx-auto'
               />
-              <div className='w-full text-blue'>
-                  <a href={href} target="_blank" rel="nofollow external noopener noreferrer" className={imageLinkWrapperClasses}>
-                      <p href={imageLink} className="bg-white/80 hover:bg-white-darker/80 z-10 w-full p-4 flex justify-between items-center text-sm group">
-                          {imageDescriptionText}
-                          <FontAwesomeIcon icon={faExternalLink}/>
-                      </p>
-                  </a>
-              </div>
-          </div>
-        )}
-      </div>
+            <div className='w-full text-blue lg:container lg:mx-auto'>
+                <a href={href} target="_blank" rel="nofollow external noopener noreferrer" className={imageLinkWrapperClasses}>
+                    <p href={imageLink} className="bg-white/80 hover:bg-white-darker/80 z-10 w-full p-4 flex justify-between items-center text-sm group">
+                        {imageDescriptionText}
+                        <FontAwesomeIcon icon={faExternalLink}/>
+                    </p>
+                </a>
+            </div>
+        </div>
+      )}
     </BlockWrapper>
   )
 }
