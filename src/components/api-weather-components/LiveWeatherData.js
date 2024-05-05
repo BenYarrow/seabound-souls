@@ -172,10 +172,10 @@ const LiveWeatherData = ({
                         </>
 
                      )}
-                    <div className='flex justify-between'>
-                        {windCheckboxInputs.map(check => {
+                    <ul className='flex justify-between'>
+                        {windCheckboxInputs.map((check, index) => {
                             return (
-                                <div className='flex items-center gap-x-2'>
+                                <li className='flex items-center gap-x-2' key={index}>
                                     <input
                                         type="checkbox"
                                         id={check.id}
@@ -184,11 +184,11 @@ const LiveWeatherData = ({
                                         checked={windUnitChecked === check.id}
                                         onChange={(e) => handleWindCheckboxChange(e)}
                                     />
-                                    <label for={check.id}>{check.label}</label>
-                                </div>
+                                    <label htmlFor={check.id}>{check.label}</label>
+                                </li>
                             )
                         })}
-                    </div>
+                    </ul>
                 </div>
                 <div className='bg-blue/80 shadow-xl p-6 flex flex-col gap-y-4'>
                     <h3 className='text-lg font-bold'>
@@ -224,10 +224,10 @@ const LiveWeatherData = ({
                         </>
 
                      )}
-                    <div className='flex justify-between'>
-                        {tempCheckboxInputs.map(check => {
+                    <ul className='flex justify-between'>
+                        {tempCheckboxInputs.map((check, index) => {
                             return (
-                                <div className='flex items-center gap-x-2'>
+                                <li className='flex items-center gap-x-2' key={index}>
                                     <input
                                         type="checkbox"
                                         id={check.id}
@@ -236,11 +236,11 @@ const LiveWeatherData = ({
                                         checked={tempUnitChecked === check.id}
                                         onChange={(e) => handleTempCheckboxChange(e)}
                                     />
-                                    <label for={check.id}>{check.label}</label>
-                                </div>
+                                    <label htmlFor={check.id}>{check.label}</label>
+                                </li>
                             )
                         })}
-                    </div>
+                    </ul>
                 </div>
             </div>   
                 {weatherStats.generalConditions && weatherStats.generalConditions.sunrise && weatherStats.generalConditions.sunset && (
