@@ -20,58 +20,58 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
 
     const [isOpen, setIsOpen] = useState(false)
     
-    const spotGuideNavigationLinks = [
-        {
-            title: `Water Conditions`,
-            href: "#water-conditions",
-            dependancy: spotGuide.waterConditionDetails ?? null
-        },
-        {
-            title: `Wind Conditions`,
-            href: "#wind-conditions",
-            dependancy: spotGuide.windConditionDetails ?? null
-        }, 
-        {
-            title: `When to go`,
-            href: "#when-to-go",
-            dependancy: spotGuide.whenToGoDetails ?? null
-        },
-        {
-            title: `Spots`,
-            href: "#spots",
-            dependancy: spotGuide.spots ?? null
-        }, 
-        {
-            title: `Lessons and Hire`,
-            href: "#lessons-and-hire",
-            dependancy: spotGuide.lessonBulletData | spotGuide.lessonIntro ?? null
-        }, 
-        {
-            title: `Getting to ${spotGuide.title}`,
-            href: `#getting-to-${spotGuide.title}`,
-            dependancy: spotGuide.gettingHereText ?? null
-        },
-        {
-            title: `Travelling around`,
-            href: `#travelling-around`,
-            dependancy: spotGuide.travellingIntro | spotGuide.travellingIntro ?? null
-        },
-        {
-            title: `Where to stay`,
-            href: `#where-to-stay`,
-            dependancy: spotGuide.whereToStayBulletData ?? null
-        },
-        {
-            title: `Where to eat`,
-            href: `#where-to-eat`,
-            dependancy: spotGuide.whereToEatBulletData ?? null
-        },
-        {
-            title: `Other Activities`,
-            href: `#other-activities`,
-            dependancy: spotGuide.otherActivityText ?? null
-        } 
-    ]
+    // const spotGuideNavigationLinks = [
+    //     {
+    //         title: `Water Conditions`,
+    //         href: "#water-conditions",
+    //         dependancy: spotGuide.waterConditionDetails ?? null
+    //     },
+    //     {
+    //         title: `Wind Conditions`,
+    //         href: "#wind-conditions",
+    //         dependancy: spotGuide.windConditionDetails ?? null
+    //     }, 
+    //     {
+    //         title: `When to go`,
+    //         href: "#when-to-go",
+    //         dependancy: spotGuide.whenToGoDetails ?? null
+    //     },
+    //     {
+    //         title: `Spots`,
+    //         href: "#spots",
+    //         dependancy: spotGuide.spots ?? null
+    //     }, 
+    //     {
+    //         title: `Lessons and Hire`,
+    //         href: "#lessons-and-hire",
+    //         dependancy: spotGuide.lessonBulletData || spotGuide.lessonIntro ?? null
+    //     }, 
+    //     {
+    //         title: `Getting to ${spotGuide.title}`,
+    //         href: `#getting-to-${spotGuide.title}`,
+    //         dependancy: spotGuide.gettingHereText ?? null
+    //     },
+    //     {
+    //         title: `Travelling around`,
+    //         href: `#travelling-around`,
+    //         dependancy: spotGuide.travellingIntro || spotGuide.travellingIntro ?? null
+    //     },
+    //     {
+    //         title: `Where to stay`,
+    //         href: `#where-to-stay`,
+    //         dependancy: spotGuide.whereToStayBulletData ?? null
+    //     },
+    //     {
+    //         title: `Where to eat`,
+    //         href: `#where-to-eat`,
+    //         dependancy: spotGuide.whereToEatBulletData ?? null
+    //     },
+    //     {
+    //         title: `Other Activities`,
+    //         href: `#other-activities`,
+    //         dependancy: spotGuide.otherActivityText ?? null
+    //     } 
+    // ]
 
     return (    
         <div>
@@ -250,7 +250,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     <AreaChart data={windData} title="Wind statistics"/>
                 )}
                 
-                {(spotGuide.lessonBulletData | spotGuide.lessonIntro) && spotGuide.lessonHireImage ? (
+                {(spotGuide.lessonBulletData || spotGuide.lessonIntro) && spotGuide.lessonHireImage ? (
                     <div id="lessons-and-hire">
                         <ImageAndBullets
                             title='Lessons and Hire'
@@ -262,7 +262,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                         />
                     </div>
                 ) : (
-                    (spotGuide.lessonBulletData | spotGuide.lessonIntro) && (
+                    (spotGuide.lessonBulletData || spotGuide.lessonIntro) && (
                         <div id="lessons-and-hire">
                             <Bulletpoints 
                                 title='Lessons and Hire'
@@ -294,17 +294,17 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     )
                 )}
 
-                {(spotGuide.travellingIntro | spotGuide.travellingBulletData) && spotGuide.travellingImage ? (
+                {(spotGuide.travellingIntro || spotGuide.travellingBulletData) && spotGuide.travellingImage ? (
                     <div id="travelling-around">
                         <ImageAndBullets
                             image={spotGuide.travellingImage}
                             title='Travelling around'
                             intro={spotGuide.travellingIntro}
                             bullets={spotGuide.travellingBulletData}
-                            />
+                        />
                     </div>
                 ) : (
-                    spotGuide.travellingIntro | spotGuide.travellingBulletData && (
+                    spotGuide.travellingIntro || spotGuide.travellingBulletData && (
                         <div id="travelling-around">
                             <Bulletpoints 
                                 title='Travelling around'
@@ -316,7 +316,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                 )}
 
 
-                {(spotGuide.stayIntro | spotGuide.whereToStayBulletData) && spotGuide.stayImage ? (          
+                {(spotGuide.stayIntro || spotGuide.whereToStayBulletData) && spotGuide.stayImage ? (          
                     <div id="where-to-stay">
                         <ImageAndBullets
                             image={spotGuide.stayImage}
@@ -328,7 +328,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                             />
                     </div>          
                 ) : (
-                    (spotGuide.stayIntro | spotGuide.whereToStayBulletData) && (
+                    (spotGuide.stayIntro || spotGuide.whereToStayBulletData) && (
                         <div id="where-to-stay">
                             <Bulletpoints 
                                 title='Where to stay'
@@ -339,7 +339,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     )
                 )}
 
-                {(spotGuide.whereToEatBulletData | spotGuide.eatIntro) &&  spotGuide.eatImage ? (
+                {(spotGuide.whereToEatBulletData || spotGuide.eatIntro) &&  spotGuide.eatImage ? (
                     <div id="where-to-eat">
                         <ImageAndBullets
                             image={spotGuide.eatImage}
@@ -351,7 +351,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                         />
                     </div>
                 ) : (
-                    (spotGuide.eatIntro | spotGuide.whereToEatBulletData) && (
+                    (spotGuide.eatIntro || spotGuide.whereToEatBulletData) && (
                         <div id="where-to-eat">
                             <Bulletpoints 
                                 title='Where to eat'
@@ -362,7 +362,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                     )
                 )}
 
-                {(spotGuide.otherActivityText && spotGuide.otherActivityImage) ? (
+                {/* {(spotGuide.otherActivityText && spotGuide.otherActivityImage) ? (
                     <div id="other-activities">
                         <ImageAndText
                             image={spotGuide.otherActivityImage}
@@ -381,7 +381,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
                             </BlockWrapper>
                         </div>
                     )
-                )}
+                )} */}
                 
                 {coordinates && (
                     <UtilityBar title="Current Conditions" isOpen={isOpen} setIsOpen={setIsOpen}>

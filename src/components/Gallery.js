@@ -13,7 +13,7 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState = false}) =>
 
     const [thumbsSwiper, setThumbsSwiper] = useState();
     const autoplayDelay = autoplayState ? 5000 : 0
-    
+
     return (
         <div>
             {images && (

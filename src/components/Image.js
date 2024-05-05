@@ -18,7 +18,7 @@ const Image = ({
   return (
     <BlockWrapper container={container}>
       {image && (
-        <div className="relative w-full h-screen lg:h-[80vh]">
+        <div className="relative w-full h-screen ">
               <img src={image}
                   width="400"
                   height="400"
