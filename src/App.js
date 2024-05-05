@@ -41,6 +41,7 @@ function App() {
                 <Route path='/destinations/risco-del-paso-spot-guide' element={<RiscoDelPasoSpotGuide />} />
                 <Route path='/destinations/langebaan-spot-guide' element={<LangebaanSpotGuide />} />
 
+              {/* Blogs */}
               <Route path='/blog' element={<Blog />}/>
                 <Route path='/blog/tying-the-knot-in-tropical-paradise' element={<TyingTheKnotInTropicalParadise />} />
 
