@@ -9,7 +9,7 @@ const EmbedYoutubeVideo = ({
 }: EmbedYoutubeVideoProps) => {
   return (
     <div>
-      <iframe
+      {/* <iframe
         src={src}
         title="YouTube video player"
         frameBorder="0"
@@ -19,7 +19,17 @@ const EmbedYoutubeVideo = ({
         loading="lazy"
         className="w-full h-[60vh] lg:h-[80vh]"
         
-        ></iframe>
+    ></iframe> */}
+        <iframe 
+            id="ytplayer" 
+            src={src}
+            type="text/html" 
+            width="720" 
+            height="405"
+            frameborder="0" 
+            className="w-full h-[60vh] lg:h-[80vh]"
+            allowfullscreen>
+        </iframe>
 
     </div>
   )

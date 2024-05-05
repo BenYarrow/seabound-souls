@@ -8,7 +8,7 @@ import Bulletpoints from '../components/Bulletpoints'
 const TyingTheKnotInTropicalParadise = () => {
   return (
     <div>
-        {/* <EmbedYoutubeVideo src="https:www.youtube.com/embed/vUo9_iPpqWE?si=tLTGXc9DakoRUB1B&mute=1&showinfo=0&controls=0&loop=1"/> */}
+        <EmbedYoutubeVideo src="https://www.youtube.com/embed/vUo9_iPpqWE?si=hRjPhax7aHErftU4?autoplay=1&controls=0&loop=1&color=white"/>
         
         <Title 
             title="Tying the knot in tropical paradise" 
