@@ -76,6 +76,7 @@ const SpotGuideTemplate = ({spotGuide, windData, coordinates, markers, timeZone}
     return (    
         <div>
             <SiteHelmet
+                preloadMastheadSrc={spotGuide.masthead.sm}
                 customKeyWords={[spotGuide.title, spotGuide.location, spotGuide.metaKeyWords]}
                 customContent={[
                     `Windsurfing in ${spotGuide.location}`,

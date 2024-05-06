@@ -31,7 +31,6 @@ const Title = ({
       }
     }, [isInView,  mainControls])
 
-    console.log(centreHeading)
     return (
         <motion.div
             variants={{

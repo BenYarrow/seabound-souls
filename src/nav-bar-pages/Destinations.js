@@ -97,6 +97,7 @@ const Destinations = () => {
   return (
     <div>
       <SiteHelmet
+        preloadMastheadSrc={mastheadImages.sm}
         customKeyWords={[
           uniqueContinents.map((continent) => `Windsurfing in ${continent}`),
           windsurfingBlogs.map((blog) => {
@@ -150,7 +151,7 @@ const Destinations = () => {
           {activeFilter.map((blog) =>
             blog.blogLinkData.map((data, index) => (
               <li key={index}>
-                <BlogLink {...data}/>
+                <BlogLink {...data} index={index} />
               </li>
             ))
           )}

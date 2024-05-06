@@ -57,7 +57,9 @@ function Homepage() {
   return (
     <div className="relative">
 
-      <SiteHelmet/>
+      <SiteHelmet
+        preloadMastheadSrc={heroImages[0].sm}
+      />
       
       <SwiperHeroSlider images={heroImages} title="Memories are made where the wind meets the waves"/>
 
