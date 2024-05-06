@@ -5,6 +5,7 @@ import Text from "../components/Text";
 import Title from "../components/Title";
 import BlockWrapper from "../components/BlockWrapper";
 import Gallery from '../components/Gallery';
+import SiteHelmet from '../components/SiteHelmet';
 
 
 const AboutUs = () => {
@@ -69,6 +70,7 @@ const AboutUs = () => {
   return (
     <div>
 
+      <SiteHelmet preloadMastheadSrc={masthead.sm}/>
       <StaticMasthead image={masthead}/>
 
       <BlockWrapper id='content' >
