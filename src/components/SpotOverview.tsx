@@ -2,34 +2,30 @@ import React from 'react'
 import BlockWrapper from './BlockWrapper';
 
 interface OverviewContentProps {
-    index: number
     svg: string,
     title: string
     text: string
-    svgClasses: string
 }
 
 const OverviewContent = ({
-    index,
     svg,
     title,
     text,
-    svgClasses
 }: OverviewContentProps) => {
     
     return (
-        <div className={`flex items-center gap-x-4 `}>
+        <div className={`flex items-center space-x-4 `}>
             <img src={svg}
-                width="20"
-                height="20"
+                width="40"
+                height="40"
                 alt='Spot overview icon'
-                className={svgClasses}
+                className=''
                 suppressHydrationWarning
                 loading="lazy"
                 crossOrigin="anonymous"
             />
-            <p className="text-sm lg:text-xl font-bold whitespace-nowrap text-blue">
-                {title}: <span className='text-sm lg:text-xl font-normal md:block whitespace-normal text-black'>{text}</span>
+            <p className="font-bold whitespace-nowrap text-blue">
+                {title}: <span className='text-sm md:block whitespace-normal text-black'>{text}</span>
             </p>
         </div>
     )
@@ -53,7 +49,6 @@ const SpotOverview = ({
     launchZone,
 }: SailingOverviewProps) => {
 
-    const svgClasses = 'size-10 lg:size-16'
 
     const spotItemData = [
         {
@@ -95,20 +90,14 @@ const SpotOverview = ({
                 Overview
             </h2>
             
-            <ul className='grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 lg:gap-12'>
-                {spotItemData.slice(0, 3).map((data, index: number) => 
+            <ul className='grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 lg:gap-12'>
+                {spotItemData.map((data, index: number) => 
                     <li key={index}>
-                        <OverviewContent {...data} index={index} svgClasses={svgClasses}/>
+                        <OverviewContent {...data}/>
                     </li>
                 )}
             </ul>
-            <ul className='grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-6 lg:gap-12'>
-                {spotItemData.slice(3, 6).map((data, index) =>
-                    <li key={index}>
-                        <OverviewContent {...data} index={index} svgClasses={svgClasses}/>
-                    </li>
-                )}
-            </ul>
+            
         </div>
     </BlockWrapper>
   )

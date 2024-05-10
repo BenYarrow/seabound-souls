@@ -1,6 +1,18 @@
 import React from "react";
 
-const StaticMasthead = ({ image, title, subtitle }) => {
+interface StaticMastheadProps {
+    image: {
+        sm: string 
+        md: string
+        lg: string
+        alt: string
+        customClasses?: string
+    }
+    title?: string
+    subtitle?: string
+}
+
+const StaticMasthead = ({ image, title, subtitle }: StaticMastheadProps) => {
   return (
     <div
       className={`w-screen h-[60vh] lg:h-[80vh] relative overflow-hidden ${

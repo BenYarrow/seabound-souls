@@ -52,8 +52,8 @@ const BlogLink = ({
         >
           <div className="overflow-hidden">
             <img src={blogImageSrc}
-              width="361"
-              height="361"
+              width="328"
+              height="328"
               alt={title}
               className="w-full aspect-square object-cover mb-8 hover:scale-105 transition duration-300"
               loading="lazy"

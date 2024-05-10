@@ -5,7 +5,7 @@ import { metaData } from "../Data/site-data";
 interface SiteHelmetProps {
   customKeyWords?: string | string[];
   customContent?: string | string[];
-  preloadMastheadSrc?: string;
+  preloadMastheadSrc?: string | string[]
 }
 
 const SiteHelmet = ({
@@ -20,8 +20,10 @@ const SiteHelmet = ({
       <meta name="description" content={metaData.siteMetaContent} />
       <meta name="author" content="Seabound Souls" />
 
-      {preloadMastheadSrc && (
-        <link rel="preload" href={preloadMastheadSrc} as="image" />
+      {Array.isArray(preloadMastheadSrc) ? preloadMastheadSrc.map((imageSrc, index: number) => {
+          <link key={index} rel="preload" href={imageSrc} as="image" />
+        }) : (
+          <link rel="preload" href={preloadMastheadSrc} as="image" />
       )}
 
       {Array.isArray(customKeyWords) ? (
