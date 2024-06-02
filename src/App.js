@@ -13,6 +13,7 @@ import Navbar from './nav-bar-pages/Navbar';
     import VassilikiSpotGuide from './spot-guide-pages/VassilikiSpotGuide';
     import RiscoDelPasoSpotGuide from './spot-guide-pages/RiscoDelPasoSpotGuide';
     import LangebaanSpotGuide from './spot-guide-pages/LangebaanSpotGuide';
+    import DakhlaSpotGuide from './spot-guide-pages/DakhlaSpotGuide';
   import Blog from './nav-bar-pages/Blog';
     import TyingTheKnotInTropicalParadise from './blog/TyingTheKnotInTropicalParadise'
   import ContactUs from './nav-bar-pages/ContactUs';  
@@ -40,6 +41,7 @@ function App() {
                 <Route path='/destinations/vassiliki-spot-guide' element={<VassilikiSpotGuide />} />
                 <Route path='/destinations/risco-del-paso-spot-guide' element={<RiscoDelPasoSpotGuide />} />
                 <Route path='/destinations/langebaan-spot-guide' element={<LangebaanSpotGuide />} />
+                <Route path='/destinations/dakhla-spot-guide' element={<DakhlaSpotGuide/>} />
 
               {/* Blogs */}
               <Route path='/blog' element={<Blog />}/>

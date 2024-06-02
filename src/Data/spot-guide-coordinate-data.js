@@ -236,5 +236,17 @@ export let spotGuideCoordinates = {
                 link: 'https://www.facebook.com/capesport.co.za'
             },
         ]
+    },   
+    dakhla: {
+        marker: {
+            title: 'Dakhla',
+            link: '/destinations/dakhla-spot-guide',
+            coordinates: {
+                lat: 23.908873,
+                long: -15.772811
+            },
+        },
+        timeZone: 'Africa/Casablanca',
+        markers: null,
     }   
 }
