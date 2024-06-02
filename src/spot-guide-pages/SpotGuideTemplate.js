@@ -436,7 +436,7 @@ const SpotGuideTemplate = ({
           )
         )}
 
-        {/* {(spotGuide.otherActivityText && spotGuide.otherActivityImage) ? (
+        {(spotGuide.otherActivityText && spotGuide.otherActivityImage) ? (
                     <div id="other-activities">
                         <ImageAndText
                             image={spotGuide.otherActivityImage}
@@ -455,7 +455,7 @@ const SpotGuideTemplate = ({
                             </BlockWrapper>
                         </div>
                     )
-                )} */}
+                )}
 
         {coordinates && (
           <UtilityBar
