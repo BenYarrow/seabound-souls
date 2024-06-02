@@ -6,7 +6,7 @@ import AnimateHeight from 'react-animate-height'
 const UtilityBar = ({ children, title, isOpen, setIsOpen }) => {
 
     const wrapperClasses = [
-        'w-full fixed bottom-0 bg-gradient-to-r from-blue to-blue-darker z-50 transition text-white',
+        'w-full fixed bottom-0 bg-blue-darker z-50 transition text-white',
     ].join(' ');
 
     return (

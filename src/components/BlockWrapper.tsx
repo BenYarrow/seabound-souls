@@ -22,7 +22,7 @@ const BlockWrapper = ({
 
     const classes = [
         padded && 'pt-8 lg:pt-12 pb-8 lg:pb-12',
-        invert ? 'bg-gradient-to-b from-blue to-blue-darker' : 'bg-white',
+        invert ? 'bg-blue' : 'bg-white',
         customClasses && customClasses,
         relative && 'relative',
     ].filter(Boolean).join(' ');
