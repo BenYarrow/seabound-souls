@@ -21,7 +21,7 @@ const BlockWrapper = ({
     const containerClasses = container ? 'container mx-auto' : '';
 
     const classes = [
-        padded && 'pt-8 lg:pt-12 pb-8 lg:pb-12',
+        padded && 'pt-8  pb-8 lg:pb-12',
         invert ? 'bg-blue' : 'bg-white',
         customClasses && customClasses,
         relative && 'relative',

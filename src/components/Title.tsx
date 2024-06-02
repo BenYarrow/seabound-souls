@@ -45,7 +45,7 @@ const Title = ({
             }}
         >
             <div className={defaultProseClasses({ invert })} ref={ref}>
-                <div className={`${padded ? 'pt-8 lg:pt-12' : ''} ${centreHeading ? 'text-center' : 'text-left'}`}>
+                <div className={`${padded ? 'pt-8 lg:pt-12' : ''} ${centreHeading ? 'text-center' : 'text-left'} prose-h1:mb-0 prose-headings:pb-0`}>
                     {title && (
                         <>
                             {h1 ? (

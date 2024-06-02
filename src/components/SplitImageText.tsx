@@ -25,7 +25,7 @@ const SplitImageText = ({
     content
 }: SplitImageTextProps) => {
 
-    const imageLinkWrapperClasses = 'absolute bottom-0 w-full h-full flex items-end justify-start group-    hover:underline transition duration-300'
+    const imageLinkWrapperClasses = 'absolute top-0 w-full flex items-end justify-start group-hover:underline transition duration-300'
 
     return (
         <BlockWrapper>
@@ -36,7 +36,7 @@ const SplitImageText = ({
                 />
                 
                 {image && (
-                    <div className={`${reverse ? 'lg:order-last' : 'lg:order-first'} relative group w-full h-80 md:h-96 lg:h-[600px] overflow-hidden`}>
+                    <div className={`${reverse ? 'lg:order-last' : 'lg:order-first'} relative group w-full h-full overflow-hidden`}>
                         <img src={image.src}
                             width="400"
                             height="400"

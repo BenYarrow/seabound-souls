@@ -22,7 +22,7 @@ function Homepage() {
   ];
 
   const introImage = {
-    src: '/images/mastheads/about-us/fuerteventura-beach-tablet.jpg',
+    src: '/images/homepage/ben-and-rachel-fuerte-beach-square.jpg',
     alt: 'Ben and Rachel on the beach in fuerteventura'
   }
 
