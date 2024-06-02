@@ -86,4 +86,21 @@ export let spotGuideLinks = [
             }
         ]
     },
+    {
+        continent: 'africa',
+        blogTitle: 'Dakhla',
+        featured: false,
+        featuredOrder: false,
+        isVisible: true,
+        blogLinkData: [
+            {
+                title: 'Dakhla, Morocco',
+                location: 'Dakhla, Morocco',
+                linkTo: '/destinations/dakhla-spot-guide',
+                blogLinkImgSrc: null,
+                blogLinkImgAlt: 'Dakhla',
+                blogIntro: null,
+            }
+        ]
+    },
 ]
