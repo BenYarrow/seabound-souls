@@ -25,7 +25,6 @@ export let spotGuideLinks = [
             {
                 title: 'Dahab, Egypt',
                 location: 'Dahab, Egypt',
-                linkTo: '/destinations/dahab-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/dahab/dahab-spotguide-desktop.jpg',
                 blogLinkImgAlt: 'Dahab, Egypt.',
                 blogIntro: `Nestled in Egypt, Dahab offers ideal conditions for all windsurfing disciplines, offering consistent winds and clear turquoise waters, making it a great spot for both beginners and seasoned sailors.`,
@@ -42,7 +41,6 @@ export let spotGuideLinks = [
             {
                 title: 'Vassiliki, Lefkada',
                 location: 'Vassiliki, Lefkada',
-                linkTo: '/destinations/vassiliki-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/vassiliki/vassiliki-spotguide-desktop.jpg',
                 blogLinkImgAlt: '',
                 blogIntro: `Vassiliki is a dream for water sports lovers. The bay is renowned for its epic windsurfing conditions - reliable winds, warm waters, and stunning views that call to riders of all levels.`,
@@ -61,7 +59,6 @@ export let spotGuideLinks = [
                 
                 title: 'Risco Del Paso, Fuerteventura',
                 location: 'Risco Del Paso, Fuerteventura',
-                linkTo: '/destinations/risco-del-paso-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/risco/risco-spotguide-desktop.jpg',
                 blogLinkImgAlt: 'Risco Del Paso',
                 blogIntro: `Risco del Paso is a perfect playground for windsurfing in Fuerteventura. The combination of trade winds, azure waters and varied conditions make it a must-visit spot for windsurfers of all levels.`,
@@ -79,7 +76,6 @@ export let spotGuideLinks = [
             {
                 title: 'Langebaan, South Africa',
                 location: 'Langebaan, South Africa',
-                linkTo: '/destinations/langebaan-spot-guide',
                 blogLinkImgSrc: '/images/Spot-Guides/langebaan/langebaan-spotguide-desktop.jpg',
                 blogLinkImgAlt: 'Langebaan',
                 blogIntro: `Situated along the breathtaking western cape coastline, Langebaan offers incredible conditions for windsurfers. The area's stunning natural beauty make it a place you simply cannot miss.`,
@@ -96,7 +92,6 @@ export let spotGuideLinks = [
             {
                 title: 'Dakhla, Morocco',
                 location: 'Dakhla, Morocco',
-                linkTo: '/destinations/dakhla-spot-guide',
                 blogLinkImgSrc: null,
                 blogLinkImgAlt: 'Dakhla',
                 blogIntro: null,

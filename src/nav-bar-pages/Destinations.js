@@ -148,12 +148,16 @@ const Destinations = () => {
 
       <BlockWrapper>
         <ul className={blogGridClasses}>
-          {activeFilter.map((blog) =>
-            blog.blogLinkData.map((data, index) => (
-              <li key={index}>
-                <BlogLink {...data} index={index} />
-              </li>
-            ))
+          {activeFilter.map((blog) => {
+            
+            const title = blog.blogTitle.replace(/ /g, '-').toLowerCase()
+
+            return blog.blogLinkData.map((data, index) => (
+                <li key={index}>
+                  <BlogLink {...data} linkTo={`/destinations/${title}-spot-guide`} index={index} />
+                </li>
+              ))
+          }
           )}
         </ul>
       </BlockWrapper>

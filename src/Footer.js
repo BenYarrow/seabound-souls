@@ -2,6 +2,7 @@ import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { siteData } from "./Data/site-data";
 import BlockWrapper from "./components/BlockWrapper";
+import Title from "./components/Title";
 
 const Footer = () => {
 
@@ -11,16 +12,16 @@ const Footer = () => {
     const instagramLink = siteData.socialMedia.map(data => data.link).filter(value => value.includes("instagram"));
 
     return (
-        <BlockWrapper invert padded container={false}>
-            <footer>
+        <footer>
+            <BlockWrapper invert padded>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div className="flex flex-col justify-center gap-4 lg:gap-8">
-                        <h3 className="uppercase text-4xl text-center text-white">
-                            Contact us
-                        </h3>
 
-                        <div className="flex flex-col justify-center">
-                            <p className="text-center text-white pb-2">
+                        <div className="flex flex-col justify-center items-center">
+                            <Title title="Contact us" invert padded={false}/>
+                            
+                            <p className="text-center text-white pb-2 max-w-sm">
                                 Have any questions, suggestions or want to collaborate?
                             </p>
                             <p className="text-center text-white">
@@ -67,8 +68,8 @@ const Footer = () => {
                         />
                     </a>
                 </div>
-            </footer>
-        </BlockWrapper>
+            </BlockWrapper>
+        </footer>
     )
 };
 

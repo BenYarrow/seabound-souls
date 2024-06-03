@@ -15,7 +15,7 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState = false}) =>
     const autoplayDelay = autoplayState ? 5000 : 0
 
     return (
-        <div>
+        <>
             {images && (
                 <BlockWrapper>
                     {thumbnailsOnlyState ? (
@@ -62,7 +62,7 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState = false}) =>
                                 thumbs={{swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null}}
                                 effect="fade"
                                 autoplay={{delay: autoplayDelay}}
-                                className='w-full h-96 lg:h-screen relative'
+                                className='w-full max-h-full aspect-square relative'
                             >
                                 {images.map((image, index) => {
                                     return (
@@ -106,7 +106,7 @@ const Gallery = ({images, autoplayState = true, thumbnailsOnlyState = false}) =>
                     )}
                 </BlockWrapper>
             )}
-        </div>
+        </>
     )
 }
 

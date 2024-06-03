@@ -173,9 +173,9 @@ const AboutUs = () => {
             />
           </div>
 
-
-              <Gallery images={bottomGalleryImages}/>
         </BlockWrapper>
+        
+        <Gallery images={bottomGalleryImages}/>
         
 
     </div>    
