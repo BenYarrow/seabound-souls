@@ -23,7 +23,7 @@ const siteData = {
   ],
   openWeatherMap: {
     key: '892146bf65e94e39baf9ed6b81ad82a5',
-    urlBase: "https://api.openweathermap.org/Data/2.5/weather?q=",
+    urlBase: "https://api.openweathermap.org/data/2.5/weather?q=",
     urlPreKey: '&appid=',
     urlAfterKey: '&units=metric'
   },

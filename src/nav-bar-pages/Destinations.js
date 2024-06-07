@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { spotGuideLinks } from "../Data/spot-guide-links";
+import { spotGuideLinks } from "../data/spot-guide-links";
 import BlogLink from "../components/BlogLink";
 import StaticMasthead from "../components/StaticMasthead";
 import Title from "../components/Title";
@@ -7,7 +7,7 @@ import SiteHelmet from "../components/SiteHelmet";
 import BlockWrapper from "../components/BlockWrapper";
 import { capitalizeFirstLetter } from "../helpers/functions";
 import LeafletMap from "../components/maps/LeafletMap";
-import { spotGuideCoordinates } from "../Data/spot-guide-coordinate-data";
+import { spotGuideCoordinates } from "../data/spot-guide-coordinate-data";
 import Select from 'react-select'
 
 const InfoModelContent = () => (

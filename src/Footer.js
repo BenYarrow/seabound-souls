@@ -1,6 +1,6 @@
 import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { siteData } from "./Data/site-data";
+import { siteData } from "./data/site-data";
 import BlockWrapper from "./components/BlockWrapper";
 import Title from "./components/Title";
 

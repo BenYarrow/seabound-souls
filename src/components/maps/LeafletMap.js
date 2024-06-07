@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import BlockWrapper from '../BlockWrapper';
-import { siteData } from '../../Data/site-data';
+import { siteData } from '../../data/site-data';
 import InfoModal from "../InfoModal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";

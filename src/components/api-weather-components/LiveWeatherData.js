@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { siteData } from '../../Data/site-data';
+import { siteData } from '../../data/site-data';
 import { mpsToKnotsFormatter, mpsToMphFormatter, tempFormatterFromCelciusToRoundedCelcius, tempFormatterFromCelciusToFahrenheit, formatUnixTimeInTimeZone } from '../../helpers/functions';
 import BeatLoader from 'react-spinners/BeatLoader'
 import { fetchWeatherData } from '../../helpers/functions';
@@ -25,7 +25,7 @@ const LiveWeatherData = ({
     const [windUnitChecked, setWindUnitChecked] = useState('knots')
     
     const API_KEY = siteData.openWeatherMap['key'];
-    const weatherUrl = `https://api.openweathermap.org/Data/3.0/onecall?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`;
+    const weatherUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`;
 
     useEffect(() => {
         fetchWeatherData({weatherUrl, setWeatherData, setIsLoading}) ;
