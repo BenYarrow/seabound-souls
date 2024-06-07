@@ -2,7 +2,7 @@ import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { siteData } from '../data/site-data';
+import { siteData } from '../Data/site-data';
 import BeatLoader from 'react-spinners/BeatLoader';
 
 export const ContactForm = () => {

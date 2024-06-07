@@ -1,7 +1,7 @@
 import React from 'react'
-import { langebaan } from '../data/spot-guides/langebaan'
+import { langebaan } from '../Data/spot-guides/langebaan'
 import SpotGuideTemplate from './SpotGuideTemplate'
-import { spotGuideCoordinates } from '../data/spot-guide-coordinate-data'
+import { spotGuideCoordinates } from '../Data/spot-guide-coordinate-data'
 
 const LangebaanSpotGuide = () => {
 

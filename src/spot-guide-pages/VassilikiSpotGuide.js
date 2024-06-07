@@ -1,7 +1,7 @@
 import React from 'react'
-import { vassiliki } from '../data/spot-guides/vassiliki'
+import { vassiliki } from '../Data/spot-guides/vassiliki'
 import SpotGuideTemplate from './SpotGuideTemplate'
-import { spotGuideCoordinates } from '../data/spot-guide-coordinate-data'
+import { spotGuideCoordinates } from '../Data/spot-guide-coordinate-data'
 
 const VassilikiSpotGuide = () => {
 
