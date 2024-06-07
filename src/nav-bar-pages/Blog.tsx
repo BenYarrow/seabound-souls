@@ -1,7 +1,7 @@
 import React from "react";
 import BlockWrapper from "../components/BlockWrapper";
 import Title from "../components/Title";
-import { blogLinks } from "../Data/blog-links";
+import { blogLinks } from "../data/blog-links";
 import BlogLink from "../components/BlogLink";
 
 const Blog = () => {

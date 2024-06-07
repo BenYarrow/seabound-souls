@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { siteData } from '../../Data/site-data';
+import { siteData } from '../../data/site-data';
 import { mpsToKnotsFormatter, mpsToMphFormatter, tempFormatterFromCelciusToRoundedCelcius, tempFormatterFromCelciusToFahrenheit, formatUnixTimeInTimeZone } from '../../helpers/functions';
 import BeatLoader from 'react-spinners/BeatLoader'
 import { fetchWeatherData } from '../../helpers/functions';
