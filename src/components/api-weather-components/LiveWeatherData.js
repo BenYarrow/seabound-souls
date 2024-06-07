@@ -25,7 +25,7 @@ const LiveWeatherData = ({
     const [windUnitChecked, setWindUnitChecked] = useState('knots')
     
     const API_KEY = siteData.openWeatherMap['key'];
-    const weatherUrl = `https://api.openweathermap.org/Data/3.0/onecall?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`;
+    const weatherUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${long}&units=metric&appid=${API_KEY}`;
 
     useEffect(() => {
         fetchWeatherData({weatherUrl, setWeatherData, setIsLoading}) ;
