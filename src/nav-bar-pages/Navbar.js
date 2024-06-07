@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { navListItems } from "../data/site-data";
+import { navListItems } from "../Data/site-data";
 
 const Navbar = () => {
   

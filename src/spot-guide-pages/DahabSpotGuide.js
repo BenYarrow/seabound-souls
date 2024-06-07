@@ -1,7 +1,7 @@
 import React from 'react'
-import { dahab } from '../data/spot-guides/dahab'
+import { dahab } from '../Data/spot-guides/dahab'
 import SpotGuideTemplate from './SpotGuideTemplate'
-import { spotGuideCoordinates } from '../data/spot-guide-coordinate-data'
+import { spotGuideCoordinates } from '../Data/spot-guide-coordinate-data'
 
 const DahabSpotGuide = () => {
 

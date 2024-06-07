@@ -1,7 +1,7 @@
 import React from 'react'
-import { dakhla } from '../data/spot-guides/dakhla'
+import { dakhla } from '../Data/spot-guides/dakhla'
 import SpotGuideTemplate from './SpotGuideTemplate'
-import { spotGuideCoordinates } from '../data/spot-guide-coordinate-data'
+import { spotGuideCoordinates } from '../Data/spot-guide-coordinate-data'
 
 const DakhlaSpotGuide = () => {
 

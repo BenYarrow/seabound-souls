@@ -1,8 +1,8 @@
 import React from 'react'
-import { leMorne } from '../data/spot-guides/leMorne'
+import { leMorne } from '../Data/spot-guides/leMorne'
 import SpotGuideTemplate from './SpotGuideTemplate'
-import { windData } from '../data/spot-guide-wind-data'
-import { spotGuideCoordinates } from '../data/spot-guide-coordinate-data'
+import { windData } from '../Data/spot-guide-wind-data'
+import { spotGuideCoordinates } from '../Data/spot-guide-coordinate-data'
 
 const LeMorneSpotGuide = () => {
 
