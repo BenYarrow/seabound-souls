@@ -3,7 +3,7 @@ import { spotGuideLinks } from "../Data/spot-guide-links";
 import { blogLinks } from "../Data/blog-links";
 import SwiperHeroSlider from "../components/SwiperHeroSlider";
 import SiteHelmet from "../components/SiteHelmet";
-import ListBlogs from "../components/ListBlogs";
+import ListPages from "../components/ListPages";
 import SplitImageText from "../components/SplitImageText";
 
 function Homepage() {
@@ -57,7 +57,7 @@ function Homepage() {
       return 0;
     }
   });
-
+  
   return (
     <div className="relative">
       <SiteHelmet preloadMastheadSrc={[heroImages[0].sm, heroImages[1].sm]} />
@@ -91,19 +91,19 @@ function Homepage() {
         ]}
       />
 
-      <ListBlogs
+      <ListPages
         title="Destinations"
         subtitle="Ultimate spot guides, advice and travel tips for windsurfers to help you plan your next windsurf trip."
         invert
-        featuredBlogs={featuredSpotGuideLinks}
+        pages={featuredSpotGuideLinks}
         buttonLink="/destinations"
         buttonTitle="View More"
       />
 
-      <ListBlogs
+      <ListPages
         title="Blogs"
         subtitle=""
-        featuredBlogs={featuredBlogs}
+        pages={featuredBlogs}
         buttonLink="/blog"
         buttonTitle="View More"
       />

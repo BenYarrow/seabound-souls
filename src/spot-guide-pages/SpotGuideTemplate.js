@@ -15,10 +15,10 @@ import AreaChart from "../components/charts/AreaChart";
 import ImageAndText from "../components/ImageAndText";
 import ImageAndBullets from "../components/ImageAndBullets";
 import Bulletpoints from "../components/Bulletpoints";
+import { windData } from '../Data/spot-guide-wind-data'
 
 const SpotGuideTemplate = ({
   spotGuide,
-  windData,
   coordinates,
   markers,
   timeZone,
@@ -77,6 +77,8 @@ const SpotGuideTemplate = ({
   //         dependancy: spotGuide.otherActivityText ?? null
   //     }
   // ]
+
+  const chartData = windData[spotGuide.title]
 
   return (
     <div>
@@ -318,7 +320,7 @@ const SpotGuideTemplate = ({
           )
         )}
 
-        {windData && <AreaChart data={windData} title="Wind statistics" />}
+        {chartData && <AreaChart data={chartData} title="Wind statistics" />}
 
         {(spotGuide.lessonBulletData || spotGuide.lessonIntro) &&
         spotGuide.lessonHireImage ? (
@@ -437,26 +439,26 @@ const SpotGuideTemplate = ({
         )}
 
         {(spotGuide.otherActivityText && spotGuide.otherActivityImage) ? (
-                    <div id="other-activities">
-                        <ImageAndText
-                            image={spotGuide.otherActivityImage}
+            <div id="other-activities">
+                <ImageAndText
+                    image={spotGuide.otherActivityImage}
+                    title='Other Activities'
+                    content={spotGuide.otherActivityText}
+                    />
+            </div>
+        ) : (
+            spotGuide.otherActivityText && (
+                <div id="other-activities">
+                    <BlockWrapper>
+                        <Text
                             title='Other Activities'
                             content={spotGuide.otherActivityText}
-                            />
-                    </div>
-                ) : (
-                    spotGuide.otherActivityText && (
-                        <div id="other-activities">
-                            <BlockWrapper>
-                                <Text
-                                    title='Other Activities'
-                                    content={spotGuide.otherActivityText}
-                                />
-                            </BlockWrapper>
-                        </div>
-                    )
-                )}
-
+                        />
+                    </BlockWrapper>
+                </div>
+            )
+        )}
+        
         {coordinates && (
           <UtilityBar
             title="Current Conditions"

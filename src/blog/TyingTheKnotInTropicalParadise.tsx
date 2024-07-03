@@ -5,6 +5,9 @@ import Text from '../components/Text'
 import BlockWrapper from '../components/BlockWrapper'
 import Bulletpoints from '../components/Bulletpoints'
 import Gallery from '../components/Gallery'
+import SplitImageText from '../components/SplitImageText'
+import ListPages from "../components/ListPages";
+import { spotGuideLinks } from "../Data/spot-guide-links";
 
 const TyingTheKnotInTropicalParadise = () => {
 
@@ -19,6 +22,8 @@ const TyingTheKnotInTropicalParadise = () => {
         },
     ]
 
+    const relatedSpotGuide = spotGuideLinks.find(spotGuide => spotGuide.blogTitle === 'Le Morne')
+
     return (
         <div>
             <EmbedYoutubeVideo src="https://www.youtube.com/embed/vUo9_iPpqWE?si=hRjPhax7aHErftU4?autoplay=1&controls=0&loop=1&color=white"/>
@@ -30,16 +35,19 @@ const TyingTheKnotInTropicalParadise = () => {
                 centreHeading
             />
 
-            <BlockWrapper invert>
-                <Text 
-                    invert
-                    content={[
-                        "Getting married abroad can be an exciting and memorable experience, especially in a location as beautiful as Mauritius.",
-                        "When we began planning our wedding, we imagined our wedding ceremony taking place on the beach, somewhere sunny, warm and windy. After researching a number of destinations, Le Morne, located on the southern tip of Mauritius ticked every box and it was an easy choice for us.",
-                        "Whilst the experience was stress-free and exceeded most of our expectations, there are a few things we would do differently if we could. So, if you’re thinking about saying “I do” in Mauritius, here are some useful tips and insights to help ensure your destination wedding is absolutely perfect."
-                    ]}
-                />
-            </BlockWrapper>
+            
+            <SplitImageText 
+                image={{
+                    src: '/images/mauritius/wedding-1.jpg',
+                    alt: 'Ben and Rachel on the beach on their wedding day in Mauritius'
+                }}
+                content={[
+                    "Getting married abroad can be an exciting and memorable experience, especially in a location as beautiful as Mauritius.",
+                    "When we began planning our wedding, we imagined our wedding ceremony taking place on the beach, somewhere sunny, warm and windy. After researching a number of destinations, Le Morne, located on the southern tip of Mauritius ticked every box and it was an easy choice for us.",
+                    "Whilst the experience was stress-free and exceeded most of our expectations, there are a few things we would do differently if we could. So, if you’re thinking about saying “I do” in Mauritius, here are some useful tips and insights to help ensure your destination wedding is absolutely perfect."
+                ]}
+            />
+            
             
             <Gallery images={images} />
 
@@ -69,9 +77,8 @@ const TyingTheKnotInTropicalParadise = () => {
                     }
                 ]}
             />
-            <BlockWrapper invert>
+            <BlockWrapper >
                 <Text 
-                    invert
                     content={[
                         "If you're planning a religious ceremony, additional documentation and time constraints may apply, depending on your religion.",
                         "You need to give notice of your intention to marry at the Civil Status Office in Port Louis This should be done at least ten days before the wedding. Most resorts will have a wedding co-ordinator to file the paperwork on your behalf.",
@@ -81,22 +88,26 @@ const TyingTheKnotInTropicalParadise = () => {
                 />
             </BlockWrapper>
 
+            
+            <SplitImageText 
+                title="Planning your perfect day"
+                invert
+                reverse
+                content={[
+                    "Many resorts and hotels in Mauritius offer wedding packages that include everything from the ceremony venue to catering and photography. These packages simplify the planning process and ensure that all aspects of your wedding are taken care of.",
+                    "We chose to get married at LUX* Le Morne, and found our package could be customised to suit our wishes. Once we arrived in resort, we met with our wedding co-ordinator to pick our flowers and wedding breakfast menu.",
+                    "This approach made the process completely stress free, but we found some of the services a little on the basic side. So, if you’re looking for perfection, you may want to research your own vendors such a photographers, videographers, musicians, florists etc. online or on social media, to find the best fit for you.",
+                    "We chose to hire the team from Backlight Studio for our wedding photos and video, and we’re so pleased we did! Especially as it was just the two of us and we wanted to capture the special moments to share with our families once we returned home. ",
+                    "There are a couple of things we would do differently and organise ourselves given the chance for a do over. These include flowers, which were not to our taste and hiring a hair and make up artist to make for a more relaxing experience."
+                ]} image={{
+                    src: '/images/mauritius/wedding-3.jpg',
+                    alt: 'Ben and rachel on their wedding day'
+                }}
+            />
+            
+        
             <BlockWrapper>
                 <Text 
-                    title="Planning your perfect day"
-                    content={[
-                        "Many resorts and hotels in Mauritius offer wedding packages that include everything from the ceremony venue to catering and photography. These packages simplify the planning process and ensure that all aspects of your wedding are taken care of.",
-                        "We chose to get married at LUX* Le Morne, and found our package could be customised to suit our wishes. Once we arrived in resort, we met with our wedding co-ordinator to pick our flowers and wedding breakfast menu.",
-                        "This approach made the process completely stress free, but we found some of the services a little on the basic side. So, if you’re looking for perfection, you may want to research your own vendors such a photographers, videographers, musicians, florists etc. online or on social media, to find the best fit for you.",
-                        "We chose to hire the team from Backlight Studio for our wedding photos and video, and we’re so pleased we did! Especially as it was just the two of us and we wanted to capture the special moments to share with our families once we returned home. ",
-                        "There are a couple of things we would do differently and organise ourselves given the chance for a do over. These include flowers, which were not to our taste and hiring a hair and make up artist to make for a more relaxing experience."
-                    ]}
-                />
-            </BlockWrapper>
-        
-            <BlockWrapper invert>
-                <Text 
-                    invert 
                     title="Location and weather conditions "
                     content={[
                         "You’ll be spoilt for choice when it comes to picking a location for your wedding. Mauritius is known for combining breathtaking natural beauty with luxurious amenities and incredible service.",
@@ -107,8 +118,9 @@ const TyingTheKnotInTropicalParadise = () => {
                 />
             </BlockWrapper>
 
-            <BlockWrapper>
+            <BlockWrapper invert>
                 <Text 
+                    invert
                     title="Budget"
                     content={[
                         "In 2023, the average cost of a wedding in the UK was £20,700! Our wedding and two-week luxury all-inclusive honeymoon cost less than half that figure. Even if we had wanted a big white wedding, we simply could not justify spending that amount of money on one day.",
@@ -120,10 +132,9 @@ const TyingTheKnotInTropicalParadise = () => {
                 />
             </BlockWrapper>
 
-            <BlockWrapper invert>
+            <BlockWrapper>
                 <Text 
-                    invert
-                    title="Other cnosiderations"
+                    title="Other considerations"
                     content={[
                         "Whilst having a destination wedding does remove some of the stresses and strains associated with a traditional wedding, tying the knot abroad does present its own set of challenges. Such as language barriers, cultural differences, logistics and the feeling of having limited control over the details.",
                         "For the bride, one of the most exciting moments is choosing your wedding dress. If you’re thinking about getting married in a warmer climate, think about your choice of dress and it’s suitability for your wedding location. When it comes to travelling with your wedding dress, most airlines will allow additional baggage for wedding dresses but it’s reassuring if your dress travels well and can be placed in your hand luggage for safe keeping.",
@@ -131,6 +142,11 @@ const TyingTheKnotInTropicalParadise = () => {
                     ]}
                 />
             </BlockWrapper>
+
+            <ListPages
+                title="Related content"
+                pages={relatedSpotGuide}
+            />
         </div>
     )
 }

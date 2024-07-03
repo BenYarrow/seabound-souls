@@ -10,6 +10,7 @@ import LeafletMap from "../components/maps/LeafletMap";
 import { spotGuideCoordinates } from "../Data/spot-guide-coordinate-data";
 import Select from 'react-select'
 
+
 const InfoModelContent = () => (
   <div className="flex flex-col gap-y-2">
     <p>
@@ -33,6 +34,8 @@ const Destinations = () => {
     customClasses:
       "object-cover object-centre lg:object-bottom lg:object-centre",
   };
+
+  const [filterByMonth, setFilterByMonth] = useState(false)
 
   const windsurfingBlogs = spotGuideLinks.filter(
     (link) => link.isVisible === true
@@ -110,29 +113,32 @@ const Destinations = () => {
 
       <Title title="Destination spot guides" h1 centreHeading/>
       
-      <LeafletMap
+      {/* <LeafletMap
         lat={10}
         long={20}
         zoom={2}
         markers={mapMarkers}
         infoModalContent={<InfoModelContent />}
-      />
+      /> */}
 
-      <BlockWrapper>
-        <div className={blogGridClasses}>
-          <div className="w-full">
-            <Select 
-              options={allOptions} 
-              onChange={handleFilterChange} 
-              theme={(theme) => ({
-                ...theme,
-                colors: {
-                  ...theme.colors,
-                  ...customSelectThemeColours,
-                },
-              })}
-            />
+      <BlockWrapper customClasses="">
+        <div class="relative w-16 h-8 bg-blue-lighter mb-8 rounded-full">
+          <div className="absolute w-6 h-6 rounded-full right-1 top-1/2 bg-white -translate-y-1/2">
+
           </div>
+        </div>
+        <div className={blogGridClasses}>
+          <Select 
+            options={allOptions} 
+            onChange={handleFilterChange} 
+            theme={(theme) => ({
+              ...theme,
+              colors: {
+                ...theme.colors,
+                ...customSelectThemeColours,
+              },
+            })}
+          />
           
           <div className="flex items-end lg:col-span-2">
             <p>

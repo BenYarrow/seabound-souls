@@ -246,7 +246,7 @@ export let spotGuideCoordinates = {
                 long: -15.772811
             },
         },
-        timeZone: 'Africa/Casablanca',
+        timeZone: 'Africa/El_Aaiun',
         markers: null,
     }   
 }

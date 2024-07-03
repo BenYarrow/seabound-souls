@@ -2,11 +2,9 @@ import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import { siteData } from "./Data/site-data";
 import BlockWrapper from "./components/BlockWrapper";
-import Title from "./components/Title";
+import { defaultProseClasses } from "./helpers/functions";
 
 const Footer = () => {
-
-    const subheadingClasses = 'text-center text-white text-4xl uppercase'
 
     const afterClasses = 'relative after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-500'
     const instagramLink = siteData.socialMedia.map(data => data.link).filter(value => value.includes("instagram"));
@@ -16,44 +14,50 @@ const Footer = () => {
             <BlockWrapper invert padded>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div className="flex flex-col justify-center gap-4 lg:gap-8">
 
-                        <div className="flex flex-col justify-center items-center">
-                            <Title title="Contact us" invert padded={false}/>
+                    <div className={defaultProseClasses({ invert: true })}>
+                        <div className="flex flex-col items-center">
+                            <h2>
+                                <a href="/contact-us" className="no-underline">
+                                    Contact us
+                                </a>
+                            </h2>
                             
-                            <p className="text-center text-white pb-2 max-w-sm">
-                                Have any questions, suggestions or want to collaborate?
-                            </p>
-                            <p className="text-center text-white">
-                                Get in touch...
+                            <p className="text-center">
+                                Are you looking to book your next adventure and would like some advice? Or maybe you'd like to collaborate with us?
+                                <a href="/contact-us" className="block text-center no-underline">
+                                    Get in touch...
+                                </a>
                             </p>
                         </div>
 
                         <div className="flex flex-col items-center">
-                            <h4 className={subheadingClasses}>
+                            <h2>
                                 Email
-                            </h4>
-                            <a href={`mailto:${siteData.email}`} className={`${afterClasses} text-white`}>
+                            </h2>
+
+                            <a href={`mailto:${siteData.email}`} className={`${afterClasses} no-underline`}>
                                 {siteData.email}
                             </a>
                         </div>
 
-                        <div className="flex flex-col items-center space-y-2">
-                            <h4 className={subheadingClasses}>
+                        <div className="flex flex-col items-center mt-8">
+                            <h2>
                                 Get social
-                            </h4>
-                            <ul className="flex items-center space-x-4">
+                            </h2>
+                            
+                            <ul className="flex items-center space-x-4 -translate-x-4">
                                 {siteData.socialMedia.map((social, index) => (
-                                    <li key={index}>
+                                    <li key={index} className="list-none">
                                         <a href={social.link} target="_blank" aria-label="Visit our social media" rel="nofollow external noopener noreferrer">
-                                            <FontAwesomeIcon icon={social.icon} className='text-4xl text-white'/>
+                                            <FontAwesomeIcon icon={social.icon} className='text-4xl'/>
                                         </a>
                                     </li>
                                 ))}
                             </ul>
                         </div>
-
                     </div>
+
 
                     <a href={instagramLink} className="flex items-center justify-center" rel="nofollow external noopener noreferrer" target="_blank">
                         <img 

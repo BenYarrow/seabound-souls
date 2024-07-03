@@ -53,6 +53,7 @@ const fetchWeatherData = async ({weatherUrl, setWeatherData, setIsLoading}) => {
         const data = await response.json()
         setWeatherData(data);
         setIsLoading(false)
+        console.log(data)
     } catch (error) {
         console.error('Error fetching data:', error);
     }
@@ -62,13 +63,15 @@ const defaultProseClasses = ({
     invert = false, 
     centredText = false, 
     centreHeading = false, 
-    lineClamp = false
+    lineClamp = false,
+    customClasses,
 }) => [
     'prose lg:prose-lg prose-headings:uppercase prose-a:text-orange prose-a:font-bold prose-headings:mt-0 max-w-none prose-h3:text-xl prose-pt-0 prose-p:pt-0',
     invert ? 'prose-headings:text-white prose-p:text-white prose-a:text-white' : 'prose-headings:text-blue prose-p:text-black prose-a:text-orange',
     centredText && 'prose-p:text-center',
     centreHeading && 'prose-h2:text-center',
-    lineClamp ? 'prose-p:line-clamp-4' : ''
+    lineClamp ? 'prose-p:line-clamp-4' : '',
+    customClasses ? customClasses : '',
   ].filter(Boolean).join(' ');
 
 
