@@ -1,57 +1,59 @@
+import { React } from 'react';
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Homepage from './Homepage';
-import ContactUs from './NavBar-Pages/ContactUs';
-import Navbar from './NavBar-Pages/Navbar';
-  import Travel from './NavBar-Pages/Travel';
-  import AboutUs from './NavBar-Pages/AboutUs';
+import ScrollToTop from './components/ScrollToTop';
+import Homepage from './nav-bar-pages/Homepage';
+import Navbar from './nav-bar-pages/Navbar';
+  import AboutUs from './nav-bar-pages/AboutUs';
+  import Destinations from './nav-bar-pages/Destinations';
+    import DahabSpotGuide from './spot-guide-pages/DahabSpotGuide';
+    import LeMorneSpotGuide from './spot-guide-pages/LeMorneSpotGuide';
+    import VassilikiSpotGuide from './spot-guide-pages/VassilikiSpotGuide';
+    import RiscoDelPasoSpotGuide from './spot-guide-pages/RiscoDelPasoSpotGuide';
+    import LangebaanSpotGuide from './spot-guide-pages/LangebaanSpotGuide';
+    import DakhlaSpotGuide from './spot-guide-pages/DakhlaSpotGuide';
+  import Blog from './nav-bar-pages/Blog';
+    import TyingTheKnotInTropicalParadise from './blog/TyingTheKnotInTropicalParadise'
+  import ContactUs from './nav-bar-pages/ContactUs';  
 import Footer from './Footer';
-
-import Mauritius from './Countries/Mauritius';
-  import WindsurfingInMauritius from './MauritiusComponents/WindsurfingInMauritius';
-  import StayingAtLux from './MauritiusComponents/StayingAtLux';
-  import ThingsToDoInMauritius from './MauritiusComponents/ThingsToDoInMauritius';
-
-import SouthAfrica from './Countries/SouthAfrica';
-import Egypt from './Countries/Egypt';
-  import WindsurfingInEgypt from './EgyptComponents/WindsurfingInEgypt';
-import Canada from './Countries/Canada';
-import Greece from './Countries/Greece';
-import England from './Countries/England';
-import Wales from './Countries/Wales';
-import Iceland from './Countries/Iceland';
-import CzechRepublic from './Countries/CzechRepublic';
+import NotFound from './404/NotFound';
 
 function App() {
-
   return (
-      <Router>
-          <Navbar /> 
-        <Routes>
-          {/* Nav Components */}
-            <Route index element={<Homepage />}/>
-            <Route path='/Homepage' element={<Homepage />}/>
-            <Route path='/Travel' element={<Travel />}/>
-            <Route path='/AboutUs' element={<AboutUs />}/>
-            <Route path='/ContactUs' element={<ContactUs />}/>
-          {/* DestinationComponents */}
-            <Route path='/Mauritius' element={<Mauritius />}/>
-              <Route path='/WindsurfingInMauritius' element={<WindsurfingInMauritius />}/>
-              <Route path='/StayingAtLux' element={<StayingAtLux />}/>
-              <Route path='/ThingsToDoInMauritius' element={<ThingsToDoInMauritius />}/>
-            <Route path='/SouthAfrica' element={<SouthAfrica />}/>
-            <Route path='/Egypt' element={<Egypt />}/>
-              <Route path='/WindsurfingInEgypt' element={<WindsurfingInEgypt />}/>
-            <Route path='/Canada' element={<Canada />}/>
-            <Route path='/England' element={<England />}/>
-            <Route path='/Wales' element={<Wales />}/>
-            <Route path='/Iceland' element={<Iceland />}/>
-            <Route path='/CzechRepublic' element={<CzechRepublic />}/>
-            <Route path='/Greece' element={<Greece />}/>
+      <div className='bg-white'>
+        <Router>
+          <ScrollToTop />
+            
+            <Navbar /> 
+            <Routes>
+              {/* Nav Components */}
+              <Route index element={<Homepage />}/>
+              <Route path='/' element={<Homepage />}/>
+              <Route path='/about-us' element={<AboutUs />}/>
+              <Route path='/contact-us' element={<ContactUs />}/>
 
-          </Routes>
-        <Footer />  
-      </Router>
+              {/* Spot Guides */}
+              <Route path='/destinations' element={<Destinations />}/>
+                <Route path='/destinations/dahab-spot-guide' element={<DahabSpotGuide />} />
+                <Route path='/destinations/le-morne-spot-guide' element={<LeMorneSpotGuide />} />
+                <Route path='/destinations/vassiliki-spot-guide' element={<VassilikiSpotGuide />} />
+                <Route path='/destinations/risco-del-paso-spot-guide' element={<RiscoDelPasoSpotGuide />} />
+                <Route path='/destinations/langebaan-spot-guide' element={<LangebaanSpotGuide />} />
+                <Route path='/destinations/dakhla-spot-guide' element={<DakhlaSpotGuide/>} />
+
+              {/* Blogs */}
+              <Route path='/blog' element={<Blog />}/>
+                <Route path='/blog/tying-the-knot-in-tropical-paradise' element={<TyingTheKnotInTropicalParadise />} />
+
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          <Footer />  
+        </Router>
+        <Analytics />
+        <SpeedInsights />
+      </div>
   );
 }
 

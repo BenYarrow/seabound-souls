@@ -1,72 +1,78 @@
 import React from "react";
-import {Link} from 'react-router-dom';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import { faPhone, faEnvelope} from "@fortawesome/free-solid-svg-icons"
-import { faInstagram } from '@fortawesome/free-brands-svg-icons'
-import { IconBase } from "react-icons";
+import { siteData } from "./Data/site-data";
+import BlockWrapper from "./components/BlockWrapper";
+import { defaultProseClasses } from "./helpers/functions";
 
-function Footer() {
+const Footer = () => {
 
-    const subheadingClasses = 'text-center text-4xl font-title uppercase'
-
-    const socialLinks = [
-        {
-            title: 'Instagram',
-            linkTo: 'https://www.instagram.com/seabound.souls/',
-            icon: faInstagram,
-        },
-    ]
+    const afterClasses = 'relative after:absolute after:bottom-0 after:right-0 after:h-[1px] after:w-0 hover:after:w-full hover:after:left-0 after:bg-white after:transition-all after:duration-500'
+    const instagramLink = siteData.socialMedia.map(data => data.link).filter(value => value.includes("instagram"));
 
     return (
-        <footer className="w-full py-20 bg-blue text-white">
-            <div className="container mx-auto grid grid-cols-1 gap-8 md:grid-cols-2">
-                <div className="flex flex-col items-center justify-center gap-8">
-                    <h3 className="font-title uppercase text-6xl">
-                        Contact us
-                    </h3>
-                    <div>
-                        <p className="text-center max-w-sm pb-2">
-                            Have any questions, suggestions or want to collaborate?
-                        </p>
-                        <p className="text-center">
-                            Get in touch...
-                        </p>
-                    </div>
-                    <div>
-                        <h4 className={subheadingClasses}>
-                            Email
-                        </h4>
-                        <a href="mailto:yarrowtravels@outlook.com">
-                            seabound.souls@outlook.com
-                        </a>
-                    </div>
-                    <div className="max-w-sm">
-                        <h4 className={subheadingClasses}>
-                            Get social
-                        </h4>
-                        <ul className="flex justify-center">
-                            {socialLinks.map(link => {
-                                
-                                const linkClasses = 'text-4xl text-white'
+        <footer>
+            <BlockWrapper invert padded>
 
-                                return (
-                                    <li>
-                                        <Link to={link.linkTo} target="_blank">
-                                            <FontAwesomeIcon icon={link.icon} className={linkClasses}/>
-                                        </Link>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <div className={defaultProseClasses({ invert: true })}>
+                        <div className="flex flex-col items-center">
+                            <h2>
+                                <a href="/contact-us" className="no-underline">
+                                    Contact us
+                                </a>
+                            </h2>
+                            
+                            <p className="text-center">
+                                Are you looking to book your next adventure and would like some advice? Or maybe you'd like to collaborate with us?
+                                <a href="/contact-us" className="block text-center no-underline">
+                                    Get in touch...
+                                </a>
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col items-center">
+                            <h2>
+                                Email
+                            </h2>
+
+                            <a href={`mailto:${siteData.email}`} className={`${afterClasses} no-underline`}>
+                                {siteData.email}
+                            </a>
+                        </div>
+
+                        <div className="flex flex-col items-center mt-8">
+                            <h2>
+                                Get social
+                            </h2>
+                            
+                            <ul className="flex items-center space-x-4 -translate-x-4">
+                                {siteData.socialMedia.map((social, index) => (
+                                    <li key={index} className="list-none">
+                                        <a href={social.link} target="_blank" aria-label="Visit our social media" rel="nofollow external noopener noreferrer">
+                                            <FontAwesomeIcon icon={social.icon} className='text-4xl'/>
+                                        </a>
                                     </li>
-                                )
-                            })}
-                        </ul>
+                                ))}
+                            </ul>
+                        </div>
                     </div>
 
-                </div>
-                <div className="flex items-center justify-center">
-                    <img src="/Personal-Images/logo.png" alt="Seabound souls logo" className="w-1/2 md:w-full max-w-md"/>
 
+                    <a href={instagramLink} className="flex items-center justify-center" rel="nofollow external noopener noreferrer" target="_blank">
+                        <img 
+                            src={siteData.logo} 
+                            alt="Seabound souls logo" 
+                            className="w-1/2 md:w-full max-w-xs" 
+                            width="350" 
+                            height="350"
+                            fetchpriority="low"
+                            loading="lazy"
+                            crossOrigin="true"
+                        />
+                    </a>
                 </div>
-            </div>
-
+            </BlockWrapper>
         </footer>
     )
 };

@@ -1,0 +1,64 @@
+import React from 'react'
+import Text from "./Text"
+import BlockWrapper from './BlockWrapper'
+import { checkContentFormat } from '../helpers/functions'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faExternalLink } from '@fortawesome/free-solid-svg-icons';
+
+interface BulletpointsProps {
+    title: string
+    intro?: string
+    bullets: {
+        title: string
+        link?: string
+    }[]
+}
+
+const Bulletpoints = ({
+    title, 
+    intro, 
+    bullets = [],
+}: BulletpointsProps) => {
+
+    return (
+        <BlockWrapper >
+            <div>
+                {title && intro && (
+                    <Text
+                        title={title}
+                        content={checkContentFormat(intro)}
+                        container={false}
+                    />
+                )}
+                <div className='flex flex-col space-y-2'>
+                    {bullets && (
+                        <ul className="pl-12 flex flex-col space-y-2">
+                            {bullets.map((list, index) => {
+                                return (
+                                    <li key={index} className={`list-disc prose lg:prose-lg max-w-none ${list.link !== null ? 'marker:text-orange' : 'marker:text-blue'}`}>
+                                        {list.title != null &&  (
+                                            <>
+                                                {list.link != null ? (
+                                                    <a href={list.link} target="_blank" rel="nofollow external noopener noreferrer" className='font-bold hover:underline text-orange flex gap-x-2 items-center'>
+                                                        {list.title}
+                                                        <FontAwesomeIcon icon={faExternalLink}/>
+                                                    </a>
+                                                ) : (
+                                                    <span key={index}>
+                                                        {list.title}
+                                                    </span>
+                                                )}
+                                            </>
+                                        )}
+                                    </li>
+                                )
+                            })}
+                        </ul>
+                    )}
+                </div>
+            </div>
+        </BlockWrapper>
+    )
+}
+
+export default Bulletpoints

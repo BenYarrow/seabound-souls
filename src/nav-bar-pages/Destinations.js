@@ -1,0 +1,175 @@
+import React, { useState } from "react";
+import { spotGuideLinks } from "../Data/spot-guide-links";
+import BlogLink from "../components/BlogLink";
+import StaticMasthead from "../components/StaticMasthead";
+import Title from "../components/Title";
+import SiteHelmet from "../components/SiteHelmet";
+import BlockWrapper from "../components/BlockWrapper";
+import { capitalizeFirstLetter } from "../helpers/functions";
+import LeafletMap from "../components/maps/LeafletMap";
+import { spotGuideCoordinates } from "../Data/spot-guide-coordinate-data";
+import Select from 'react-select'
+
+
+const InfoModelContent = () => (
+  <div className="flex flex-col gap-y-2">
+    <p>
+      Use our interactive map to navigate the earth to find the location you're looking for. Click on a marker to view the name of the location, from there you can navigate to that specific spot guide.
+    </p>
+    <p>
+        The light blue is representative of land, with borders being seperated via the white lines. The darker blue areas are national parks, and the black lines are road networks.
+    </p>
+    <small>
+        This map is powered by by Mapbox.
+    </small>
+  </div>
+)
+
+const Destinations = () => {
+  const mastheadImages = {
+    sm: "/images/mastheads/destinations/ben-vulcan-vassiliki-tablet.jpg",
+    md: "/images/mastheads/destinations/ben-vulcan-vassiliki-tablet.jpg",
+    lg: "/images/mastheads/destinations/ben-vulcan-vassiliki-desktop.jpg",
+    alt: "Ben windsrurfing in Vassiliki",
+    customClasses:
+      "object-cover object-centre lg:object-bottom lg:object-centre",
+  };
+
+  const [filterByMonth, setFilterByMonth] = useState(false)
+
+  const windsurfingBlogs = spotGuideLinks.filter(
+    (link) => link.isVisible === true
+  );
+
+  // Extract unique countries from SpotGuideLinks
+  const uniqueContinents = Array.from(
+    new Set(windsurfingBlogs.map((blog) => blog.continent))
+  );
+
+  // Generate an array of objects with location and filter
+  const windsurfingLocations = uniqueContinents.map((continent) => ({
+    location: continent,
+    filter: windsurfingBlogs.filter(
+      (location) => location.continent === continent
+    ),
+  }));
+
+  windsurfingLocations.sort((a, b) => a.location.localeCompare(b.location));
+
+  const blogGridClasses = [
+    "grid grid-cols-1 lg:grid-cols-3",
+    "gap-8 lg:gap-12 xl:gap-12",
+  ].join(" ");
+
+  const [activeFilter, setActiveFilter] = useState(windsurfingBlogs);
+  
+  const handleFilterChange = (selectedOption) => {
+    const selectedLocation = selectedOption.value;
+    if (selectedLocation === "all") {
+      setActiveFilter(windsurfingBlogs);
+    } else {
+      const filteredBlogs = windsurfingLocations.find(
+        (location) => location.location === selectedLocation
+      )?.filter;
+      setActiveFilter(filteredBlogs || []);
+    }
+  };
+  
+  const mapMarkers = Object.values(spotGuideCoordinates).map(location => location.marker)
+
+  const options = windsurfingLocations.map(location => {
+    return {
+      label: location.location.toUpperCase(),
+      value: location.location
+    }
+  })
+  const allOptions = [
+    {
+      label: "All",
+      value: 'all'
+    },
+    ...options
+  ]
+
+  const customSelectThemeColours = {
+    primary25: 'hsl(185, 36%, 70%)',
+    primary50: 'hsl(192, 91%, 25%)',
+    primary: 'hsl(192, 91%, 25%)',
+  }
+
+  return (
+    <div>
+      <SiteHelmet
+        preloadMastheadSrc={mastheadImages.sm}
+        customKeyWords={[
+          uniqueContinents.map((continent) => `Windsurfing in ${continent}`),
+          windsurfingBlogs.map((blog) => {
+            return blog.blogTitle;
+          }),
+        ]}
+      />
+
+      <StaticMasthead image={mastheadImages} />
+
+      <Title title="Destination spot guides" h1 centreHeading/>
+      
+      {/* <LeafletMap
+        lat={10}
+        long={20}
+        zoom={2}
+        markers={mapMarkers}
+        infoModalContent={<InfoModelContent />}
+      /> */}
+
+      <BlockWrapper customClasses="">
+        <div class="relative w-16 h-8 bg-blue-lighter mb-8 rounded-full">
+          <div className="absolute w-6 h-6 rounded-full right-1 top-1/2 bg-white -translate-y-1/2">
+
+          </div>
+        </div>
+        <div className={blogGridClasses}>
+          <Select 
+            options={allOptions} 
+            onChange={handleFilterChange} 
+            theme={(theme) => ({
+              ...theme,
+              colors: {
+                ...theme.colors,
+                ...customSelectThemeColours,
+              },
+            })}
+          />
+          
+          <div className="flex items-end lg:col-span-2">
+            <p>
+              Showing <span className="font-bold text-orange">
+                {activeFilter.length}
+              </span> spot guides <span className="font-bold text-orange">
+                {activeFilter.length !== windsurfingBlogs.length && `from ${capitalizeFirstLetter(activeFilter[0].continent)}`}
+              </span>
+            </p>
+          </div>
+        </div>
+      </BlockWrapper>
+
+      <BlockWrapper>
+        <ul className={blogGridClasses}>
+          {activeFilter.map((blog) => {
+            
+            const title = blog.blogTitle.replace(/ /g, '-').toLowerCase()
+
+            return blog.blogLinkData.map((data, index) => (
+                <li key={index}>
+                  <BlogLink {...data} linkTo={`/destinations/${title}-spot-guide`} index={index} />
+                </li>
+              ))
+          }
+          )}
+        </ul>
+      </BlockWrapper>
+      
+    </div>
+  );
+};
+
+export default Destinations;
